@@ -1,0 +1,18 @@
+kartrider archive
+
+메인 참고
+
+velog https://velog.io/
+지적측량 바로처리센터 https://baro.lx.or.kr/main.do
+넥슨 카트라이더 개발자센터 https://developers.nexon.com/kart
+카트라이더 e스포츠 https://kartrideresports.nexon.com/Main/Index
+카트라이더 TMI https://tmi.nexon.com/kart
+카트라이더 드리프트 https://kartdrift.nexon.com/kartdrift/ko/main
+
+
+사용 폰트
+
+Noto Sans
+NexonLv1Gothic Regular
+TmonMonsori Black
+Azonix Regular
