@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Kartrider-archive
+카트라이더를 기억하고, 기록하는 공간. 카트라이더 아카이브
+
+디자인 : https://www.figma.com/file/qYIvf9SGHXZzqOvyfqfQuB/KARTRIDER-ARCHIVE?node-id=29%3A153&t=pTPgmPkWqcSNZFE2-1
+>>>>>>> a85d2b5236d53f61e6e047b0d9f2ca3b3363f192
