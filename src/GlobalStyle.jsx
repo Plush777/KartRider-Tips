@@ -2,7 +2,7 @@ import { createGlobalStyle  } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
-body,html{width: 100%;height: 100%;margin: 0;padding: 0; color: #000; user-select: none; overflow: hidden;}
+body,html{width: 100%;height: 100%;margin: 0;padding: 0; color: #000;}
 :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary){
   margin:0;padding:0;border:0;
 }  

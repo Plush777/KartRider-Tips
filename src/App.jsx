@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyle from './GlobalStyle';
-import './index.css';
+import './index.scss';
 import Main from './components/Main';
 
 const App = () => {

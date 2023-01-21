@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logoWhite from '../components/svg/ico-kart-logo-black.svg';
+import logoBlack from '../svg/ico-kart-logo-black.svg';
 import { Link } from 'react-router-dom';
 
 const Headers = styled.header`
@@ -62,7 +62,7 @@ const Header = () => {
                 <HeaderInner>
                     <Logo>
                         <Link to="/">
-                            <img src={logoWhite} alt="로고"/>
+                            <img src={logoBlack} alt="카트라이더 아카이브 로고"/>
                         </Link>
                     </Logo>
                     <Gnb>
