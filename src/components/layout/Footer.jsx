@@ -8,7 +8,7 @@ const FooterWrap = styled.footer`
     background: #fafafa;
 `
 
-const FooterInner = styled.footer`
+const FooterInner = styled.div`
     width: 1300px;
     margin: 0 auto;
     display: flex;

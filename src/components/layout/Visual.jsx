@@ -36,7 +36,8 @@ const Visual = () => {
                 spaceBetween={0}
                 loop={true}
                 autoplay={{delay: 3000}}
-                effect={"fade"}>
+                effect={"fade"}
+                allowTouchMove={false}>
 
                 {slideImg.map((item, index) => {
                     return (

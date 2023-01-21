@@ -3,9 +3,14 @@ import logoBlack from '../svg/ico-kart-logo-black.svg';
 import { Link } from 'react-router-dom';
 
 const Headers = styled.header`
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     width: 100%;
     height: 50px;
     background-color: #fff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 `
 
 const HeaderInner = styled.div`
@@ -36,6 +41,7 @@ const GnbList = styled.ul`
 `
 
 const GnbItem = styled.li`
+    position: relative;
     font-size: 14px;
     font-family: 'Noto Sans';
     color: #000;
@@ -54,7 +60,6 @@ const ShortLink = styled.a`
     display: flex;
     justify-content: flex-end;
 `
-
 const Header = () => {
     return(
        <>

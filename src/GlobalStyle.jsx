@@ -15,7 +15,7 @@ button{display: inline-block;border: none;background-color: transparent;cursor: 
 caption,hr{display:none;}
 pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
-img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; display: block;}
+img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block;}
 svg{fill: currentColor;}
 .hidden{display: block; width: 0;height: 0; margin: 0; padding: 0; line-height: 0; font-size: 0;overflow: hidden;}
 

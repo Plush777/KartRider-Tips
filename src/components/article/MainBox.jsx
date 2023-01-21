@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const ContentWrap = styled.main`
+    position: relative;
+`
+
 const MainBoxWrap = styled.div`
     padding: 105px 0;
     width: 1300px;
@@ -109,7 +113,7 @@ const box = [
 
 const MainBox = () => {
     return (  
-        <>
+        <ContentWrap>
             <MainBoxWrap>
                 <MainBoxList>
                     {box.map((item, index) => {
@@ -128,7 +132,7 @@ const MainBox = () => {
                     })}
                 </MainBoxList>
             </MainBoxWrap>    
-        </>
+        </ContentWrap>
     );
 }
 
