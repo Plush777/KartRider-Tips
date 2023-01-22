@@ -60,7 +60,8 @@ const ShortLink = styled.a`
     display: flex;
     justify-content: flex-end;
 `
-const Header = () => {
+
+const Header = (props) => {
     return(
        <>
          <Headers>
@@ -72,18 +73,13 @@ const Header = () => {
                     </Logo>
                     <Gnb>
                         <GnbList>
-                            <GnbItem>
-                                <Link to="/mode">모드</Link>
-                            </GnbItem>
-                            <GnbItem>
-                                <Link to="/kart">카트바디</Link>
-                            </GnbItem>
-                            <GnbItem>
-                                <Link to="/character">캐릭터</Link>
-                            </GnbItem>
-                            <GnbItem>
-                                <Link to="/track">트랙</Link>
-                            </GnbItem>
+                            {props.gnbList.map((item, index) => {
+                                return(
+                                    <GnbItem key={index}>
+                                        <Link to={item.link}>{item.name}</Link>
+                                    </GnbItem>
+                                )})
+                            }
                         </GnbList>
                     </Gnb>
                     <ShortArea>

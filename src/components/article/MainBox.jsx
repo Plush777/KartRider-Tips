@@ -89,7 +89,7 @@ const box = [
         title: "모드",
         desc: "카트라이더 모드들에 대해 설명하고, 각 모드에서 쓰이는 용어들을 알려드려요.",
         className: "mode",
-        link: "/mode"
+        link: "/mode/spped"
     },
     {
         title: "카트바디",

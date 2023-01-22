@@ -1,13 +1,13 @@
 import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import './index.scss';
-import Main from './components/Main';
+import CommonRoute from './Routes/CommonRoute';
 
 const App = () => {
   return (
     <>
         <GlobalStyle/>
-        <Main/>
+        <CommonRoute/>
     </>  
   );
 }
