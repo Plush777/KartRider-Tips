@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import tabData from '../../data/tab/tab.json';
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const TabWrap = styled.div`
     width: 100%;
@@ -33,6 +37,19 @@ const TabInfoTxt = styled.span`
     font-family: 'nexonLv1Gothic';
     color: #626262;
 
+    &::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background-image: ${props => `url('../images/common/ico-tab0${props.num}.svg')`};
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     &::after{
         content: '';
         position: absolute;
@@ -47,43 +64,59 @@ const TabInfoTxt = styled.span`
 
 const TabList = styled.ul`
     display: flex;
+    margin-left: 20px;
 `
 
 const TabItem = styled.li`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 110px;
     height: 50px;
     border-radius: 25px;
-    font-size: 18px;
-    font-family: 'nexonLv1Gothic';
-    color: #767676;
-`
 
-const TabBtn = styled.button.attrs({type: "button"})`
-
-`
-
-const tabName = [
-    {
-        name: "스피드전"
-    },
-    {
-        name: "아이템전"
+    >a{
+        font-family: 'nexonLv1Gothic';
+        font-size: 18px;
+        color: #333;
     }
-]
 
+    &.active{
+        >a{
+            color: #fff;
+        }
+        background-color: #333;
+    }
+`
 
 const SubTab = () => {
+
+    const {pathname} = useLocation();
+    let [isActive,setIsActive] = useState(0);
+    let [imgNum,setImgNum] = useState('');
+
+    useEffect(() => {
+        if(pathname.startsWith('/mode')){
+            setImgNum('1');
+        }
+    },[pathname])
+
+    const handleItemClick = idx => {
+        setIsActive(idx);
+    }
+
     return ( 
         <TabWrap>
             <TabWrapInner>
                 <TabInfo>
-                    <TabInfoTxt>모드</TabInfoTxt>
+                    <TabInfoTxt num={imgNum}>모드</TabInfoTxt>
                 </TabInfo>
                 <TabList>
-                    {tabName.map((item, index) => {
+                    {tabData.mode.map((item, index) => {
                         return (
-                            <TabItem key={index}>
-                                <TabBtn>{item.name}</TabBtn>
+                            <TabItem key={index} className={isActive === index ? "active" : ''} 
+                            onClick={() => handleItemClick(index)}>
+                                <Link to={item.route}>{item.name}</Link>
                             </TabItem>
                         )})
                     }

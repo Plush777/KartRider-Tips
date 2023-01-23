@@ -89,13 +89,13 @@ const box = [
         title: "모드",
         desc: "카트라이더 모드들에 대해 설명하고, 각 모드에서 쓰이는 용어들을 알려드려요.",
         className: "mode",
-        link: "/mode/spped"
+        link: "/mode/speed"
     },
     {
         title: "카트바디",
         desc: "카트라이더 카트바디들에 대해 설명하고, 각 카트바디의 장단점들을 알려드려요.",
         className: "cartBody",
-        link: "/cart"
+        link: "/cartBody"
     },
     {
         title: "캐릭터",

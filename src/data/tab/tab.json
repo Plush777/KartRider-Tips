@@ -1,0 +1,21 @@
+{
+    "mode": [
+        {
+            "name": "스피드전",
+            "route": "/mode/speed"
+        },
+        {
+            "name": "아이템전",
+            "route": "/mode/speed"
+        }
+    ],
+
+    "cartBody": [
+        {
+            "name": "코튼"
+        },
+        {
+            "name": "세이버"
+        }
+    ]
+}

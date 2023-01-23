@@ -73,7 +73,7 @@ const Header = (props) => {
                     </Logo>
                     <Gnb>
                         <GnbList>
-                            {props.gnbList.map((item, index) => {
+                            {props.gnb.map((item, index) => {
                                 return(
                                     <GnbItem key={index}>
                                         <Link to={item.link}>{item.name}</Link>

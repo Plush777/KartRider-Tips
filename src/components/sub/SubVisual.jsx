@@ -1,4 +1,4 @@
-import { useState , useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -33,19 +33,24 @@ const SubVisualTitle = styled.h2`
 const SubVisual = (props) => {
 
     const { pathname } = useLocation();
-    let [visualTitle, setVisualTitle] = useState('');
 
     useEffect(() => {
         if(pathname.startsWith('/mode')){
-            setVisualTitle('모드');
+            props.setSubTitle('모드');
+        } else if(pathname.startsWith('/cartbody')){
+            props.setSubTitle('카트바디');
+        } else if(pathname.startsWith('/character')){
+            props.setSubTitle('캐릭터');
+        } else if(pathname.startsWith('/track')){
+            props.setSubTitle('트랙');
         }
-    }, [pathname]);
+    }, [pathname,props]);
 
     return ( 
         <SubVisualWrap>
             <SubViusalInner>
                 <SubVisualTitleArea>
-                    <SubVisualTitle>{visualTitle}</SubVisualTitle>
+                    <SubVisualTitle>{props.subTitle}</SubVisualTitle>
                 </SubVisualTitleArea>
             </SubViusalInner>
         </SubVisualWrap>

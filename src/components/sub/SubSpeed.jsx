@@ -2,20 +2,23 @@ import React from 'react';
 import SubTab from './SubTab';
 import SubVisual from './SubVisual';
 import Header from '../layout/Header';
+import gnbData from '../../data/gnb/gnb.js';
 import { useState } from 'react';
-import gnb from '../../data/gnb/gnb.js';
+import SubContents from './SubConents';
 
-const Sub = () => {
-
-    let [gnbList] = useState(gnb);
+const SubSpeed = () => {
+   
+    let [subTitle, setSubTitle] = useState('');
+    let [gnb] = useState(gnbData);
 
     return ( 
         <>
-            <Header gnbList={gnbList}/>
-            <SubVisual gnbList={gnbList}/>
+            <Header gnb={gnb}/>
+            <SubVisual gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>
             <SubTab/>
+            <SubContents/>
         </>
      );
 }
 
-export default Sub;
+export default SubSpeed;
