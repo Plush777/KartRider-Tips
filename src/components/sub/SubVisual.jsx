@@ -1,34 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import styled from "styled-components";
-
-const SubVisualWrap = styled.div`
-    width: 100%;
-    height: 250px;
-    margin-top: 50px;
-`
-
-const SubViusalInner = styled.div`
-    position: relative;
-    height: 100%;
-    background-image: url('../images/bg/bg-sub-visual-mode.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-`
-
-const SubVisualTitleArea = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-`
-
-const SubVisualTitle = styled.h2`
-    font-family: 'Noto Sans B';
-    font-size: 60px;
-    color: #fff;
-`
+import * as SubVisualstyled from '../style/SubVisual.style';
 
 const SubVisual = (props) => {
 
@@ -47,13 +19,13 @@ const SubVisual = (props) => {
     }, [pathname,props]);
 
     return ( 
-        <SubVisualWrap>
-            <SubViusalInner>
-                <SubVisualTitleArea>
-                    <SubVisualTitle>{props.subTitle}</SubVisualTitle>
-                </SubVisualTitleArea>
-            </SubViusalInner>
-        </SubVisualWrap>
+        <SubVisualstyled.SubVisualWrap>
+            <SubVisualstyled.SubViusalInner>
+                <SubVisualstyled.SubVisualTitleArea>
+                    <SubVisualstyled.SubVisualTitle>{props.subTitle}</SubVisualstyled.SubVisualTitle>
+                </SubVisualstyled.SubVisualTitleArea>
+            </SubVisualstyled.SubViusalInner>
+        </SubVisualstyled.SubVisualWrap>
     );
 }
 

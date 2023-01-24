@@ -1,23 +1,9 @@
-import styled from "styled-components";
-import { Swiper , SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import "swiper/css/effect-fade";
 import VisualCenter from "../article/VisualCenter";
-
-const VisualWrap = styled.div`
-    width: 100%;
-    height: 600px;
-`
-const StyledSwiper = styled(Swiper)`
-    position: relative;
-    height: 100%;
-`
-const ImgStyle = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-`
+import * as Visualstyled from "../style/Visual.style";
 
 const slideImg = [
     {src: "../images/bg/bg-visual-01.png"},
@@ -30,8 +16,8 @@ const Visual = () => {
     SwiperCore.use([Autoplay, EffectFade]);
     
     return ( 
-        <VisualWrap>
-            <StyledSwiper
+        <Visualstyled.VisualWrap>
+            <Visualstyled.StyledSwiper
                 slidesPerView={1}
                 spaceBetween={0}
                 loop={true}
@@ -42,13 +28,13 @@ const Visual = () => {
                 {slideImg.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
-                            <ImgStyle src={item.src} alt="메인 비주얼 이미지"/>
+                            <Visualstyled.ImgStyle src={item.src} alt="메인 비주얼 이미지"/>
                             <VisualCenter/>
                         </SwiperSlide>
                     )
                 })}
-            </StyledSwiper>
-        </VisualWrap>
+            </Visualstyled.StyledSwiper>
+        </Visualstyled.VisualWrap>
      );
 }
 

@@ -1,88 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-const ContentWrap = styled.main`
-    position: relative;
-`
-
-const MainBoxWrap = styled.div`
-    padding: 105px 0;
-    width: 1300px;
-    margin: 0 auto;
-`
-
-const MainBoxList = styled.ul`
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-`
-
-const MainBoxItems = styled.li`
-    position: relative;
-    z-index: 10;
-    width: 49.2%;
-    height: 310px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: .3s ease-in-out;
-
-    &.mode{background-image: url('../images/bg/bg-box-01.png');}
-    &.cartBody{background-image: url('../images/bg/bg-box-02.png');}
-    &.character{background-image: url('../images/bg/bg-box-03.png');}
-    &.track{background-image: url('../images/bg/bg-box-04.png');}
-    &::after{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        border-radius: 12px;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
-    >a{
-        display: flex; 
-        flex-direction: column;
-        height: 100%;
-    }
-
-    &:hover{
-        transform: translateY(-5px);
-    }
-`
-
-const MainBoxInner = styled.div`
-    padding: 40px;
-    height: inherit;
-`
-
-const TxtBox = styled.div`
-    position: relative;
-    z-index: 10;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-`
-
-const Title = styled.h3`
-    font-size: 30px;
-    font-family: 'Noto Sans M';
-    color: #fff;
-    margin-bottom: 10px;
-`
-
-const Desc = styled.p`
-    font-size: 16px;
-    font-family: 'Noto Sans';
-    color: #fff;
-`
+import * as MainBoxstyled from '../style/MainBox.style';
 
 const box = [
     {
@@ -113,26 +31,26 @@ const box = [
 
 const MainBox = () => {
     return (  
-        <ContentWrap>
-            <MainBoxWrap>
-                <MainBoxList>
+        <MainBoxstyled.ContentWrap>
+            <MainBoxstyled.MainBoxWrap>
+                <MainBoxstyled.MainBoxList>
                     {box.map((item, index) => {
                         return (
-                            <MainBoxItems className={item.className} key={index}>
+                            <MainBoxstyled.MainBoxItems className={item.className} key={index}>
                                 <Link to={item.link}>
-                                    <MainBoxInner>
-                                        <TxtBox>
-                                            <Title>{item.title}</Title>
-                                            <Desc>{item.desc}</Desc>
-                                        </TxtBox> 
-                                    </MainBoxInner>
+                                    <MainBoxstyled.MainBoxInner>
+                                        <MainBoxstyled.TxtBox>
+                                            <MainBoxstyled.Title>{item.title}</MainBoxstyled.Title>
+                                            <MainBoxstyled.Desc>{item.desc}</MainBoxstyled.Desc>
+                                        </MainBoxstyled.TxtBox> 
+                                    </MainBoxstyled.MainBoxInner>
                                 </Link>
-                            </MainBoxItems>
+                            </MainBoxstyled.MainBoxItems>
                         )
                     })}
-                </MainBoxList>
-            </MainBoxWrap>    
-        </ContentWrap>
+                </MainBoxstyled.MainBoxList>
+            </MainBoxstyled.MainBoxWrap>    
+        </MainBoxstyled.ContentWrap>
     );
 }
 
