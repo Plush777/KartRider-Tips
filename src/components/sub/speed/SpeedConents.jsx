@@ -1,5 +1,6 @@
 import parse from 'html-react-parser';
 import * as Substyled from '../../style/Sub.style';
+import BtnTop from '../../article/BtnTop';
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
 const pointData2 = ["포인트","10","8","6","5","4","3","2","1","0"];
@@ -97,7 +98,8 @@ const SubContents = (props) => {
                         )})
                     }
                 </Substyled.SubContentsInner>
-            </Substyled.SubContentsWrap> 
+            </Substyled.SubContentsWrap>
+            <BtnTop/> 
         </>
      );
 }

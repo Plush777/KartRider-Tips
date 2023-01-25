@@ -5,14 +5,15 @@ import "swiper/css/effect-fade";
 import VisualCenter from "../article/VisualCenter";
 import * as Visualstyled from "../style/Visual.style";
 
-const slideImg = [
-    {src: "../images/bg/bg-visual-01.png"},
-    {src: "../images/bg/bg-visual-02.jpg"},
-    {src: "../images/bg/bg-visual-03.jpg"},
-    {src: "../images/bg/bg-visual-04.jpg"}
-];
-
 const Visual = () => {
+
+    const slideImg = [
+        {src: "../images/bg/bg-visual-01.jpg"},
+        {src: "../images/bg/bg-visual-02.jpg"},
+        {src: "../images/bg/bg-visual-03.jpg"},
+        {src: "../images/bg/bg-visual-04.jpg"}
+    ];
+
     SwiperCore.use([Autoplay, EffectFade]);
     
     return ( 

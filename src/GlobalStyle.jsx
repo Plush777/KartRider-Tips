@@ -2,7 +2,7 @@ import { createGlobalStyle  } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
-body,html{width: 100%;height: 100%;margin: 0;padding: 0; color: #000;}
+body,html{margin: 0;padding: 0; color: #000;}
 :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary){
   margin:0;padding:0;border:0;
 }  
@@ -44,6 +44,19 @@ table{width: 100%;
         }
       }
     }
+  }
+}
+
+.swiper-slide{
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.3);
   }
 }
 `;

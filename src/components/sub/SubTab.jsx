@@ -1,5 +1,5 @@
 import tabData from '../../data/tab/tab.json';
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useLocation , NavLink } from "react-router-dom";
 import * as SubTabstyled from '../style/SubTab.style';
 
@@ -9,7 +9,7 @@ const SubTab = () => {
     let [isActive,setIsActive] = useState(0);
     let [imgNum,setImgNum] = useState('');
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
             setImgNum('1');
         }

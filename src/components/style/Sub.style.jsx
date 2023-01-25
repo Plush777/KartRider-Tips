@@ -12,7 +12,7 @@ export const SubContentsInner = styled.div`
 `
 
 export const SubContainer = styled.div`
-
+   
 `
 
 export const TitleArea = styled.div`
@@ -33,14 +33,21 @@ export const SubDesc = styled.p`
     color: #333;
 `
 
+export const GroupContainer = styled.div`
+
+`
 export const ImgWrap = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+
+    +${GroupContainer}{
+        margin-top: 60px;
+    }
 `
 
 export const GroupBox = styled.div`
-    
+    &+&{margin-top: 60px;}
 `
 
 export const SmallTitle = styled.h4`
@@ -148,4 +155,102 @@ export const Td = styled.td`
     border-bottom-color: ${(props) => props.bbc};
     color: ${(props) => props.color};
     background-color: ${(props) => props.bg};
+`
+
+export const ListContainer = styled.div`
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+`
+
+export const ListContainerInner = styled.div`
+    padding: 50px 60px 50px 60px;
+    border-radius: 4px;
+    background-color: #fff;
+`
+
+export const ListWrap = styled.div`
+
+`
+
+export const ListBox = styled.ul`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+`
+
+export const ListItem = styled.li`
+   display: flex;
+   align-items: center;
+   column-gap: 25px;
+   width: calc(100% / 2);
+`
+
+export const ItemImgBox = styled.div`
+    position: relative;
+    width: 126px;
+    height: 126px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    z-index: 10;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #eee;
+        z-index: 1;
+    }
+`
+
+export const ItemImg = styled.img`
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+`
+
+export const ItemBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+`
+
+export const ItemName = styled.strong` 
+    font-size: 18px;
+    font-family: 'nexonLv1Gothic';
+    color: #333;
+`
+
+export const ItemDesc = styled.p`
+    font-size: 14px;
+    font-family: 'nexonLv1Gothic';
+    color: #888;
+    line-height: 19px;
+`
+
+export const ItemTip = styled.span`
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'nexonLv1Gothic';
+    color: #999;
+
+    &::before{
+        content: '*';
+        display: inline-block;
+        margin-right: 3px;
+        color: #FF0000;
+    }
 `

@@ -1,6 +1,7 @@
 import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import './index.scss';
+import './font.scss';
 import CommonRoute from './Routes/CommonRoute';
 
 const App = () => {
