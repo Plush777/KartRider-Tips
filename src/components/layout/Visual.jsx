@@ -7,12 +7,18 @@ import * as Visualstyled from "../style/Visual.style";
 
 const Visual = () => {
 
+    /* https://stackoverflow.com/questions/72493824/how-to-preload-images-in-react */
     const slideImg = [
-        {src: "../images/bg/bg-visual-01.jpg"},
-        {src: "../images/bg/bg-visual-02.jpg"},
-        {src: "../images/bg/bg-visual-03.jpg"},
-        {src: "../images/bg/bg-visual-04.jpg"}
+        "../images/bg/bg-visual-01.jpg",
+        "../images/bg/bg-visual-02.jpg",
+        "../images/bg/bg-visual-03.jpg",
+        "../images/bg/bg-visual-04.jpg"
     ];
+
+    for (const img of slideImg){
+        const imageElement = new Image();
+        imageElement.src = img;
+    }
 
     SwiperCore.use([Autoplay, EffectFade]);
     
@@ -29,7 +35,7 @@ const Visual = () => {
                 {slideImg.map((item, index) => {
                     return (
                         <SwiperSlide key={index}>
-                            <Visualstyled.ImgStyle src={item.src} alt="메인 비주얼 이미지"/>
+                            <Visualstyled.ImgStyle src={item} alt="메인 비주얼 이미지"/>
                             <VisualCenter/>
                         </SwiperSlide>
                     )
