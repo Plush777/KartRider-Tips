@@ -23,7 +23,6 @@ export const SubVisualTitleArea = styled.div`
 `
 
 export const SubVisualTitle = styled.h2`
-    font-family: 'Noto Sans B';
-    font-size: 60px;
+    font-size: 62px;
     color: #fff;
 `

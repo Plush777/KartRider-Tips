@@ -17,12 +17,17 @@ export const VisualCenterWrap = styled.div`
 
 export const Vtitle = styled.h2`
     font-size: 48px;
-    font-family: 'tmon';
+    font-family: 'Recipekorea'; 
     color: #fff;
 `
 
 export const VlogoArea = styled.div`
     margin-top: 55px;
+
+    >img{
+        width: 301px;
+        height: 108px;
+    }
 `
 
 export const VDescArea = styled.div`
@@ -35,13 +40,14 @@ export const VDescArea = styled.div`
 `
 
 export const VDescBold = styled.strong`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
     font-size: 18px;
-    font-family: 'Noto Sans B';
     color: #fff;
 `
 
 export const VDescRegular = styled.p`
     font-size: 14px;
-    font-family: 'Noto Sans';
     color: #fff;
 `

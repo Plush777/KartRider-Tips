@@ -11,6 +11,6 @@ export const StyledSwiper = styled(Swiper)`
 `
 export const ImgStyle = styled.img`
     width: 100%;
-    height: 100%;
+    height: 600px;
     object-fit: cover;
 `

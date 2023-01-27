@@ -20,7 +20,10 @@ export const HeaderInner = styled.div`
 `
 
 export const Logo = styled.h1`
-    
+    img{
+        width: 86px;
+        height: 32px;
+    }
 `
 
 export const Gnb = styled.nav`
@@ -41,7 +44,6 @@ export const GnbList = styled.ul`
 export const GnbItem = styled.li`
     position: relative;
     font-size: 14px;
-    font-family: 'Noto Sans';
     color: #000;
 `
 
@@ -49,8 +51,8 @@ export const ShortArea = styled.div`
     display: flex;
     width: 100%;
     font-size: 12px;
-    font-family: 'Noto Sans';
     color: #6C7A89;
+    font-family: 'nexonLv1Gothic';
 `
 
 export const ShortLink = styled.a`

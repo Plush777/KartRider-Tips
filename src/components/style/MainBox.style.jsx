@@ -71,13 +71,11 @@ export const TxtBox = styled.div`
 
 export const Title = styled.h3`
     font-size: 30px;
-    font-family: 'Noto Sans M';
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 `
 
 export const Desc = styled.p`
-    font-size: 16px;
-    font-family: 'Noto Sans';
+    font-size: 18px;
     color: #fff;
 `
