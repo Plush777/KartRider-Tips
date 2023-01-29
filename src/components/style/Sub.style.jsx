@@ -33,7 +33,23 @@ export const SubDesc = styled.p`
     color: #333;
 `
 
+export const SmallDesc = styled.p`
+    font-family: 'nexonLv1Gothic';
+    margin-top: 20px;
+    line-height: 23px;
+    font-size: 16px;
+    color: #333;
+`
+
+export const GroupList = styled.ul`
+
+`
+
 export const GroupContainer = styled.div`
+    &+&{margin-top: 60px;}
+    ${GroupList}{
+        margin-top: 25px;
+    }
 
 `
 export const ImgWrap = styled.div`
@@ -48,6 +64,27 @@ export const ImgWrap = styled.div`
 
 export const GroupBox = styled.div`
     &+&{margin-top: 60px;}
+`
+
+export const GroupItem = styled.li`
+    position: relative;
+    margin-top: ${(props) => props.mt};
+    
+    ${SmallDesc}{
+        padding-left: ${(props) => props.bullet && '15px'};
+        margin-top: ${(props) => props.bullet && '0'};
+    }
+
+    &::before{
+        content: ${(props) => props.bullet};
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #000;
+    }
 `
 
 export const SmallTitle = styled.h4`
@@ -68,12 +105,14 @@ export const SmallTitle = styled.h4`
     }
 `
 
-export const SmallDesc = styled.p`
+export const MediumTitle = styled.h5`
+    font-size: 20px;
     font-family: 'nexonLv1Gothic';
-    margin-top: 20px;
-    line-height: 23px;
-    font-size: 16px;
     color: #333;
+
+    +${SmallDesc}{
+        margin-top: 10px;
+    }
 `
 
 export const ImgBox = styled.figure`
@@ -162,6 +201,10 @@ export const ListContainer = styled.div`
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-top: 20px;
+
+    +${GroupContainer}{
+        margin-top: 60px;
+    }
 `
 
 export const ListContainerInner = styled.div`

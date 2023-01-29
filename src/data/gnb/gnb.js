@@ -7,7 +7,7 @@ const gnb = [
     {
         id: 2,
         name: '카트바디',
-        link: '/cartbody',
+        link: '/kartbody/common',
     },
     {
         id: 3,

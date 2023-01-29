@@ -10,12 +10,26 @@
         }
     ],
 
-    "cartBody": [
+    "kartbody": [
         {
-            "name": "코튼"
+            "name": "일반",
+            "route": "/kartbody/common"
         },
         {
-            "name": "세이버"
+            "name": "고급",
+            "route": "/kartbody/advanced"
+        },
+        {
+            "name": "희귀",
+            "route": "/kartbody/rare"
+        },
+        {
+            "name": "영웅",
+            "route": "/kartbody/epic"
+        },
+        {
+            "name": "레전드",
+            "route": "/kartbody/legend"
         }
     ]
 }

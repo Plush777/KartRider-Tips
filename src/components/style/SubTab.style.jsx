@@ -17,6 +17,8 @@ export const TabWrapInner = styled.div`
 export const TabInfo = styled.div`
     min-width: 125px;
     height: 50px;
+    padding: 20px;
+    box-sizing: border-box;
     border-radius: 25px;
     border: 1px solid #ddd;
     background-color: #f2f2f2;
@@ -35,12 +37,10 @@ export const TabInfoTxt = styled.span`
 
     &::before{
         content: '';
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: inline-flex;
         width: 22px;
         height: 22px;
+        margin-right: 5px;
         background-image: ${props => `url('../images/common/ico-tab0${props.num}.svg')`};
         background-repeat: no-repeat;
         background-position: center;
@@ -48,12 +48,10 @@ export const TabInfoTxt = styled.span`
 
     &::after{
         content: '';
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: inline-flex;
         width: 22px;
         height: 22px;
+        margin-left: 10px;
         background: url('../images/common/ico-arrow-right.svg') no-repeat center;
     }
 `

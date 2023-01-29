@@ -7,11 +7,29 @@ const SubTab = () => {
 
     const {pathname} = useLocation();
     let [isActive,setIsActive] = useState(0);
-    let [imgNum,setImgNum] = useState('');
+    let [categoryName,setCategoryName] = useState(
+        {
+            imgNum: '',
+            tabInfoTxt: '',
+            tabDataState: []
+        }
+    );
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
-            setImgNum('1');
+            setCategoryName(
+                {
+                    imgNum: '1',
+                    tabInfoTxt: '모드',
+                    tabDataState: tabData.mode
+                }
+            );
+        } else if(pathname.startsWith('/kartbody')){
+            setCategoryName({
+                imgNum: '2',
+                tabInfoTxt: '카트바디',
+                tabDataState: tabData.kartbody
+            });
         }
     },[pathname])
 
@@ -23,10 +41,10 @@ const SubTab = () => {
         <SubTabstyled.TabWrap>
             <SubTabstyled.TabWrapInner>
                 <SubTabstyled.TabInfo>
-                    <SubTabstyled.TabInfoTxt num={imgNum}>모드</SubTabstyled.TabInfoTxt>
+                    <SubTabstyled.TabInfoTxt num={categoryName.imgNum}>{categoryName.tabInfoTxt}</SubTabstyled.TabInfoTxt>
                 </SubTabstyled.TabInfo>
                 <SubTabstyled.TabList>
-                    {tabData.mode.map((item, index) => {
+                    {categoryName.tabDataState.map((item, index) => {
                         return (
                             <SubTabstyled.TabItem key={index} onClick={() => handleItemClick(index)}>
                                 <NavLink to={item.route} className={ ({isActive}) => isActive ? 'active' : ''}>{item.name}</NavLink>

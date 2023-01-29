@@ -9,7 +9,7 @@ const SubVisual = (props) => {
     useEffect(() => {
         if(pathname.startsWith('/mode')){
             props.setSubTitle('모드');
-        } else if(pathname.startsWith('/cartbody')){
+        } else if(pathname.startsWith('/kartbody')){
             props.setSubTitle('카트바디');
         } else if(pathname.startsWith('/character')){
             props.setSubTitle('캐릭터');
