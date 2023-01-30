@@ -120,6 +120,11 @@ export const ImgBox = styled.figure`
     margin-top: ${(props) => props.mt};
 `
 
+export const CommonImg = styled.img`
+    width: ${(props) => props.wd01 ? '80%' : '100%'};
+    transition: all 0.3s ease-in-out;
+`
+
 export const ImgCaption = styled.figcaption`
 
 `
@@ -233,6 +238,9 @@ export const ListItem = styled.li`
 
 export const ItemImgBox = styled.div`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 126px;
     height: 126px;
     border: 1px solid #eee;
@@ -259,8 +267,8 @@ export const ItemImg = styled.img`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width:57px;
+    height:57px;
     object-fit: none;
 `
 

@@ -9,10 +9,10 @@ const Visual = () => {
 
     /* https://stackoverflow.com/questions/72493824/how-to-preload-images-in-react */
     const slideImg = [
-        "../images/bg/bg-visual-01.jpg",
-        "../images/bg/bg-visual-02.jpg",
-        "../images/bg/bg-visual-03.jpg",
-        "../images/bg/bg-visual-04.jpg"
+        "../images/bg/bg-visual-01.webp",
+        "../images/bg/bg-visual-02.webp",
+        "../images/bg/bg-visual-03.webp",
+        "../images/bg/bg-visual-04.webp"
     ];
 
     for (const img of slideImg){
