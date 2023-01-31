@@ -28,7 +28,7 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group2.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
                                     <Substyled.ImgBox mt="20px" ml="-7px">
-                                        <img src={item.group2.img} alt={item.group2.alt} />
+                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
                                         <Substyled.ImgCaption>{item.group2.caption}</Substyled.ImgCaption>
                                     </Substyled.ImgBox>
                                 </Substyled.ImgWrap>
@@ -39,11 +39,11 @@ const SubContents = (props) => {
                                     </Substyled.GroupBox>
                                     <Substyled.ImgGroup>
                                         <Substyled.ImgBox ml="-7px">
-                                            <img src={item.group3.img} alt={item.group3.alt} />
+                                            <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
                                             <Substyled.ImgCaption>{item.group3.caption}</Substyled.ImgCaption>
                                         </Substyled.ImgBox>
                                         <Substyled.ImgBox ml="-7px">
-                                            <img src={item.group3.img2} alt={item.group3.alt2} />
+                                            <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
                                             <Substyled.ImgCaption>{item.group3.caption2}</Substyled.ImgCaption>
                                         </Substyled.ImgBox>
                                     </Substyled.ImgGroup>

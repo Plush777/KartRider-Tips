@@ -7,6 +7,7 @@ import SubCommonKartbody from "../components/sub/kartbody/common/SubCommonKartbo
 import itemContentsData from '../data/mode/itemMode/contents.json';
 import speedContentsData from '../data/mode/speedMode/contents.json';
 import gnbData from '../data/gnb/gnb';
+import Notfound from "../components/Notfound";
 
 const CommonRoute = () => {
 
@@ -24,7 +25,7 @@ const CommonRoute = () => {
             setSubTitle={setSubTitle} gnb={gnb}/>}/>
             <Route path="/kartbody/common" element={<SubCommonKartbody gnb={gnb} subTitle={subTitle}
             setSubTitle={setSubTitle}/>}/>
-            <Route path="*" element={<div>안돼 돌아가</div>} />
+            <Route path="*" element={<Notfound/>} />
         </Routes>
      );
 }

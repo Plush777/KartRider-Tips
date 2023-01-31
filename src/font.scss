@@ -6,64 +6,9 @@
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 200;
-    src: url('./fonts/notoSans/woff/NotoSansKR-Regular-Hestia.woff') format('woff'),
-    url('./fonts/notoSans/woff2/NotoSansKR-Regular-Hestia.woff2') format('woff2');
-}
-  
-@font-face {
-    font-family: 'Noto Sans M';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./fonts/notoSans/woff/NotoSansKR-Medium-Hestia.woff') format('woff'),
-    url('./fonts/notoSans/woff2/NotoSansKR-Medium-Hestia.woff2') format('woff2');
-    font-display: swap;
-}
-  
-@font-face {
-    font-family: 'Noto Sans B';
-    font-style: normal;
-    font-weight: 600;
-    src: url('./fonts/notoSans/woff/NotoSansKR-Bold-Hestia.woff') format('woff'),
-    url('./fonts/notoSans/woff2/NotoSansKR-Bold-Hestia.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'tmon';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/tmon/woff/TmonMonsori.woff') format('woff'),
-    url('./fonts/tmon/woff2/TmonMonsori.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'nexonLv1Gothic';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/WEB_NEXON_Lv1_Gothic/woff/NEXON_Lv1_Gothic.woff') format('woff'),
-    url('./fonts/WEB_NEXON_Lv1_Gothic/woff2/NEXON_Lv1_Gothic.woff2') format('woff2');
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'nexonLv1Gothic B';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/WEB_NEXON_Lv1_Gothic/woff/NEXON_Lv1_Gothic_Bold.woff') format('woff'),
-    url('./fonts/WEB_NEXON_Lv1_Gothic/woff2/NEXON_Lv1_Gothic_Bold.woff2') format('woff2');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'nexonLv1Gothic L';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/WEB_NEXON_Lv1_Gothic/woff/NEXON_Lv1_Gothic_Light.woff') format('woff'),
-    url('./fonts/WEB_NEXON_Lv1_Gothic/woff2/NEXON_Lv1_Gothic_Light.woff2') format('woff2');
     font-display: swap;
 }

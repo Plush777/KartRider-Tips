@@ -9,7 +9,7 @@
            "group2": {
                 "title": "개인전",
                 "description": "팀 신경 안쓰고 오로지 자기자신의 주행에만 몰입할 수 있어요.<br/>부스터 게이지를 다 모으면 부스터 하나를 획득해요.",
-                "img": "../../images/screenShots/bg-screenShots-01.png",
+                "img": "../../images/screenShots/bg-screenShots-01.webp",
                 "alt": "스피드 개인전 예시 이미지",
                 "caption": "인게임 스피드 개인전 예시"
             },
@@ -17,8 +17,8 @@
             "group3": {
                 "title": "팀전",
                 "description": "나 혼자만 잘해서 되는게 아니라, 팀과 합을 맞추고 전략을 세워야 이길 수 있어요.<br/>팀전에서는 내 부스터를 채울 수 있는 게이지와 팀 부스터를 채울 수 있는 게이지가 있어요.<br/>일반 부스터를 가지고 있다가 팀 게이지가 다 채워지면 부스터가 팀 부스터로 업그레이드 돼요.",
-                "img": "../../images/screenShots/bg-screenShots-02.png",
-                "img2": "../../images/screenShots/bg-screenShots-03.png",
+                "img": "../../images/screenShots/bg-screenShots-02.webp",
+                "img2": "../../images/screenShots/bg-screenShots-03.webp",
                 "alt": "스피드 팀전 예시 이미지 1",
                 "alt2": "스피드 팀전 예시 이미지 2",
                 "caption": "팀 부스터 게이지 모습",
