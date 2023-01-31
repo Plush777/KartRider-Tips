@@ -14,12 +14,12 @@ if(container.hasChildNodes()){
     ReactDOM.hydrateRoot(
         container,
         <React.StrictMode>
-            <HelmetProvider>
-                <BrowserRouter>
+            <BrowserRouter>
+                <HelmetProvider>
                     <RouteScroll/>
                     <App/>
-                </BrowserRouter>
-            </HelmetProvider>
+                </HelmetProvider>
+            </BrowserRouter>
         </React.StrictMode>
     );
 } else {

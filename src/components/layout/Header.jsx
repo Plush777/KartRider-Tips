@@ -24,7 +24,7 @@ const Header = (props) => {
                         </Headerstyled.GnbList>
                     </Headerstyled.Gnb>
                     <Headerstyled.ShortArea>
-                        <Headerstyled.ShortLink href="https://kartdrift.nexon.com/kartdrift/ko/main" target="_blank" rel='noopener noreferrer'>카트라이더 홈페이지 바로가기</Headerstyled.ShortLink>
+                        <a href="https://kartdrift.nexon.com/kartdrift/ko/main" target="_blank" rel='noopener noreferrer'>카트라이더 홈페이지 바로가기</a>
                     </Headerstyled.ShortArea>    
                 </Headerstyled.HeaderInner>
             </Headerstyled.Headers>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
+import Meta from '../Meta/MetaTag';
 
 const FlexContainer = styled.div`
     display: flex;
@@ -43,7 +44,7 @@ const BtnArea = styled.div`
 
 const BtnRedirect = styled.button.attrs({type: 'button'})`
     height: 40px;
-    padding: 0 10px;
+    padding: 0 15px;
     border-radius: 4px;
     font-size: 16px;
     color: #fff;
@@ -55,8 +56,14 @@ const Notfound = () => {
 
     const navigate = useNavigate();
 
+    const metaData = {
+        title: '카트라이더 아카이브 | 404',
+        robots: 'noindex, nofollow'
+    }
+
     return ( 
         <>
+            <Meta data={metaData}/>
             <FlexContainer>
                 <ImgArea>
                     <ErrorImg src="../../images/common/img-notfound01.webp" alt="에러 이미지" />

@@ -48,15 +48,8 @@ export const GnbItem = styled.li`
 `
 
 export const ShortArea = styled.div`
-    display: flex;
-    width: 100%;
+    white-space: nowrap;
     font-size: 12px;
     color: #6C7A89;
     font-family: 'nexonLv1Gothic';
-`
-
-export const ShortLink = styled.a`
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
 `
