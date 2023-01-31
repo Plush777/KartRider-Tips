@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useState , useEffect } from "react"
+import React, { useState , useEffect, useRef } from "react"
 
 const BtnArea = styled.div`
     position: fixed;
@@ -24,8 +24,12 @@ const TopBtn = styled.button.attrs({type: 'button'})`
 
 const BtnTop = () => {
 
+    const ref = useRef(null);
+
+   const executeScroll = () => ref.current.scrollIntoView()    
+
     const scrollToTop = () => {
-        window.scrollTo({
+        window.scroll({
             top: 0,
             behavior: 'smooth'
         });
@@ -35,10 +39,10 @@ const BtnTop = () => {
 
     useEffect(() => {
         const handleShowButton = () => {
-            if (window.pageYOffset > 500) {
+            if (window.scrollY > 500) {
                 setIsShow(true)
             } else {
-                setIsShow(false)
+                setIsShow(false);
             }
         }
 

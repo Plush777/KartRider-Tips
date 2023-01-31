@@ -21,6 +21,8 @@ svg{fill: currentColor;}
 figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
 
+#root{min-height: 100%;}
+
 .sc{
     &::-webkit-scrollbar{width: 8px; height: 8px;}
     &::-webkit-scrollbar-button,&::-webkit-scrollbar-track {display: none;}
