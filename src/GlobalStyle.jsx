@@ -22,12 +22,9 @@ figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
 
 #root{min-height: 100%;}
-
-.sc{
-    &::-webkit-scrollbar{width: 8px; height: 8px;}
-    &::-webkit-scrollbar-button,&::-webkit-scrollbar-track {display: none;}
-    &::-webkit-scrollbar-thumb {border-radius: 20px; background: #575757;}
-}
+&::-webkit-scrollbar{width: 6px; height: 6px;}
+&::-webkit-scrollbar-button,&::-webkit-scrollbar-track {display: none;}
+&::-webkit-scrollbar-thumb {border-radius: 20px; background: #9FA0A8;}
 
 table{width: 100%;
   td{height: 40px; font-size: 16px; font-family: 'nexonLv1Gothic'; text-align: center; 

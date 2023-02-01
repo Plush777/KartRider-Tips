@@ -61,6 +61,12 @@ const Notfound = () => {
         robots: 'noindex, nofollow'
     }
 
+    const errData = {
+        title: '찾을 수 없는 페이지입니다.',
+        desc: '요청하신 페이지가 사라졌거나, 잘못된 경로를 이용하신 것 같아요.',
+        link: '홈으로 이동'
+    }
+
     return ( 
         <>
             <Meta data={metaData}/>
@@ -69,11 +75,11 @@ const Notfound = () => {
                     <ErrorImg src="../../images/common/img-notfound01.webp" alt="에러 이미지" />
                 </ImgArea>
                 <TxtArea>
-                    <ErrorTitle>찾을 수 없는 페이지입니다.</ErrorTitle>
-                    <ErrorDesc>요청하신 페이지가 사라졌거나, 잘못된 경로를 이용하신 것 같아요.</ErrorDesc>
+                    <ErrorTitle>{errData.title}</ErrorTitle>
+                    <ErrorDesc>{errData.desc}</ErrorDesc>
                 </TxtArea>
                 <BtnArea>
-                    <BtnRedirect onClick={() => navigate('/')}>홈으로 이동</BtnRedirect>
+                    <BtnRedirect onClick={() => navigate('/')}>{errData.link}</BtnRedirect>
                 </BtnArea>
             </FlexContainer>
         </>

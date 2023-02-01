@@ -1,8 +1,7 @@
 import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import './font.scss';
-import { useState , useEffect } from 'react';
-import Loading from './components/Loading';
+import { useState } from 'react';
 import Main from './components/Main';
 import { Route, Routes } from "react-router-dom";
 import SubSpeed from "./components/sub/speed/SubSpeed";
@@ -12,21 +11,16 @@ import itemContentsData from './data/mode/itemMode/contents.json';
 import speedContentsData from './data/mode/speedMode/contents.json';
 import gnbData from './data/gnb/gnb';
 import Notfound from "./components/Notfound";
+import CssBaseline from '@mui/material/CssBaseline';
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
     let [speedContents] = useState(speedContentsData);
     let [subTitle, setSubTitle] = useState('');
     let [gnb] = useState(gnbData);
-	const [loading,setLoading] = useState(true);
-
-	useEffect(() => {
-        setLoading(false);
-    },[loading])
-
 	return (
 		<>
-			{loading && <Loading/>}
+			<CssBaseline />
 			<GlobalStyle/>
 			<Routes>
 				<Route path="/" element={<Main gnb={gnb}/>}/>
