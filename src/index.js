@@ -13,25 +13,21 @@ const root = ReactDOM.createRoot(container);
 if(container.hasChildNodes()){
     ReactDOM.hydrateRoot(
         container,
-        <React.StrictMode>
-            <BrowserRouter>
-                <HelmetProvider>
-                    <RouteScroll/>
-                    <App/>
-                </HelmetProvider>
-            </BrowserRouter>
-        </React.StrictMode>
+        <BrowserRouter>
+            <HelmetProvider>
+                <RouteScroll/>
+                <App/>
+            </HelmetProvider>
+        </BrowserRouter>
     );
 } else {
     root.render(
-        <React.StrictMode>
+        <BrowserRouter>
             <HelmetProvider>
-                <BrowserRouter>
-                    <RouteScroll/>
-                    <App/>
-                </BrowserRouter>
+                <RouteScroll/>
+                <App/>
             </HelmetProvider>
-        </React.StrictMode>
+        </BrowserRouter>
     )
 }
 

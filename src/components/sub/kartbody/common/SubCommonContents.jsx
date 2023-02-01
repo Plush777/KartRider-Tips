@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import BtnTop from '../../../article/BtnTop';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SubCommonContents = (props) => {
 
@@ -21,6 +22,30 @@ const SubCommonContents = (props) => {
                             </Substyled.SubContainer>
                         )
                     })}
+                    <Substyled.TabWrap>
+                        <Substyled.TabInner>
+                            {Object.entries(props.commonContents).map(([key,values]) => (
+                                <>
+                                    {console.log(values)}
+                                    {values.map(item => (
+                                        <>
+                                            {console.log(item.list)}
+                                        </>
+                                    ))}
+                                </>
+                            ))}
+
+                            {/* {Object.entries(build).map(([key, values]) => (
+                                <F>
+                                    <div className="key">{key}</div>
+                                    {values.map(row => (
+                                        <div key={row.label}>{row.label}</div>
+                                    ))}
+                                </F>
+                            ))} */}
+                            
+                        </Substyled.TabInner>
+                    </Substyled.TabWrap>
                 </Substyled.SubContentsInner>
             </Substyled.SubContentsWrap>
             <BtnTop/>

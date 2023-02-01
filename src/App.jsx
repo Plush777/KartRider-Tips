@@ -30,7 +30,9 @@ const App = () => {
 				<Route path="/mode/item" element={<SubItem itemContents={itemContents} subTitle={subTitle}
 				setSubTitle={setSubTitle} gnb={gnb}/>}/>
 				<Route path="/kartbody/common" element={<SubCommonKartbody commonContents={commonContents} 
-				gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}/>
+				gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}>
+					<Route path=":id" element={<SubCommonKartbody/>}/>
+				</Route>
 				<Route path="*" element={<Notfound/>} />
         	</Routes>
 		</>  

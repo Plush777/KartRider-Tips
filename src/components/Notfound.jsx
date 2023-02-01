@@ -72,7 +72,7 @@ const Notfound = () => {
             <Meta data={metaData}/>
             <FlexContainer>
                 <ImgArea>
-                    <ErrorImg src="../../images/common/img-notfound01.webp" alt="에러 이미지" />
+                    <ErrorImg src="%PUBLIC_URL%/img-notfound.webp" alt="에러 이미지" />
                 </ImgArea>
                 <TxtArea>
                     <ErrorTitle>{errData.title}</ErrorTitle>

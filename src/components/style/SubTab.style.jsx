@@ -41,7 +41,7 @@ export const TabInfoTxt = styled.span`
         width: 22px;
         height: 22px;
         margin-right: 5px;
-        background-image: ${props => `url('../images/common/ico-tab0${props.num}.svg')`};
+        background-image: ${props => `url('/images/common/ico-tab0${props.num}.svg')`};
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -52,7 +52,7 @@ export const TabInfoTxt = styled.span`
         width: 22px;
         height: 22px;
         margin-left: 10px;
-        background: url('../images/common/ico-arrow-right.svg') no-repeat center;
+        background: url('/images/common/ico-arrow-right.svg') no-repeat center;
     }
 `
 
@@ -74,6 +74,8 @@ export const TabItem = styled.li`
         color: #333;
 
         &.disabled{
+            user-select: none;
+            pointer-events: none;
             color: #CED4DA;
         }
 

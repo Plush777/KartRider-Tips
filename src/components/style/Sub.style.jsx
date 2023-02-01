@@ -305,3 +305,42 @@ export const ItemTip = styled.span`
         color: #FF0000;
     }
 `
+
+export const TabWrap = styled.div`
+    border-top: 7px solid #dedede;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #EEEDED;
+`
+
+export const TabInner = styled.div`
+    padding: 20px;
+`
+
+export const TabList = styled.ul`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+`
+
+export const TabItem = styled.li`
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DBDBDB;
+    border-radius: 20px;
+    padding: 10px;
+
+    >a{
+        font-size: 18px;
+        font-family: 'nexonLv1Gothic';
+        color: #000;
+        background-color: #E4E3E3;
+
+        &.active{
+            background-color: #fff;
+        }
+    }
+`

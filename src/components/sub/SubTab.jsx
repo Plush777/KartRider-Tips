@@ -1,11 +1,13 @@
 import tabData from '../../data/tab/tab.json';
 import { useLayoutEffect, useState } from "react";
+// import { useEffect } from 'react';
 import { useLocation , NavLink } from "react-router-dom";
 import * as SubTabstyled from '../style/SubTab.style';
 
 const SubTab = () => {
 
     const {pathname} = useLocation();
+    // const [currentFirstUrl,setCurrentFirstUrl] = useState(null);
     let [isActive,setIsActive] = useState(0);
     let [categoryName,setCategoryName] = useState(
         {
@@ -14,6 +16,14 @@ const SubTab = () => {
             tabDataState: []
         }
     );
+
+    // useEffect(() => {
+    //     const splitUrl = pathname?.split('/') ?? null;
+    //     const location = splitUrl?.length > 1 ? splitUrl[1] : null;
+    //     setCurrentFirstUrl(location);
+    // },[pathname]);
+
+    // console.log(currentFirstUrl);
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){

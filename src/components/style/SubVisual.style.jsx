@@ -9,7 +9,7 @@ export const SubVisualWrap = styled.div`
 export const SubViusalInner = styled.div`
     position: relative;
     height: 100%;
-    background-image: url('../images/bg/bg-sub-visual-mode.webp');
+    background-image: ${props => `url('/images/bg/bg-sub-visual-${props.visualName}.webp')`};
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
