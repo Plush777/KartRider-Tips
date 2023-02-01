@@ -47,7 +47,7 @@ const SubTab = () => {
                     {categoryName.tabDataState.map((item, index) => {
                         return (
                             <SubTabstyled.TabItem key={index} onClick={() => handleItemClick(index)}>
-                                <NavLink to={item.route} className={ ({isActive}) => isActive ? 'active' : ''}>{item.name}</NavLink>
+                                <NavLink to={item.route} className={ ({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
                             </SubTabstyled.TabItem>
                         )})
                     }

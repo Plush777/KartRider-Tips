@@ -2,34 +2,41 @@
     "mode": [
         {
             "name": "스피드전",
-            "route": "/mode/speed"
+            "route": "/mode/speed",
+            "className": "default"
         },
         {
             "name": "아이템전",
-            "route": "/mode/item"
+            "route": "/mode/item",
+            "className": "default"
         }
     ],
 
     "kartbody": [
         {
             "name": "일반",
-            "route": "/kartbody/common"
+            "route": "/kartbody/common",
+            "className": "default"
         },
         {
             "name": "고급",
-            "route": "/kartbody/advanced"
+            "route": "/kartbody/advanced",
+            "className": "disabled"
         },
         {
             "name": "희귀",
-            "route": "/kartbody/rare"
+            "route": "/kartbody/rare",
+            "className": "disabled"
         },
         {
             "name": "영웅",
-            "route": "/kartbody/epic"
+            "route": "/kartbody/epic",
+            "className": "disabled"
         },
         {
             "name": "레전드",
-            "route": "/kartbody/legend"
+            "route": "/kartbody/legend",
+            "className": "disabled"
         }
     ]
 }

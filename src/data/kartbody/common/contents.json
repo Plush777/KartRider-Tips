@@ -1,0 +1,129 @@
+{
+    "kartbody": [
+        {
+            "title": "카트바디"  
+        },
+        {
+            "common": {
+                "classification": "(일반)",
+                "list": [
+                    {
+                        "id": "1",
+                        "name": "프로토",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "2",
+                        "name": "연습카트",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "3",
+                        "name": "해적 거북",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "4",
+                        "name": "코튼",
+                        "className": "cotton"
+                    },
+                    {
+                        "id": "5",
+                        "name": "버스트",
+                        "className": "burst"
+                    },
+                    {
+                        "id": "6",
+                        "name": "솔리드",
+                        "className": "solid"
+                    },
+                    {
+                        "id": "7",
+                        "name": "마라톤",
+                        "className": "marathon"
+                    },
+                    {
+                        "id": "8",
+                        "name": "세이버",
+                        "className": "saver"
+                    },
+                    {
+                        "id": "9",
+                        "name": "스톰",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "10",
+                        "name": "에이스",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "11",
+                        "name": "소방차",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "12",
+                        "name": "오로라",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "13",
+                        "name": "저스티스",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "14",
+                        "name": "광산 수레",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "15",
+                        "name": "플레이 카트",
+                        "className": "play"
+                    },
+                    {
+                        "id": "16",
+                        "name": "넥슨 카트",
+                        "className": "nexon"
+                    },
+                    {
+                        "id": "17",
+                        "name": "에이블 카트",
+                        "className": "ios"
+                    },
+                    {
+                        "id": "18",
+                        "name": "스파이크",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "19",
+                        "name": "타이탄",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "20",
+                        "name": "브루터스",
+                        "className": "empty"
+                    },
+                    {
+                        "id": "21",
+                        "name": "슈가레빗",
+                        "className": "empty"
+                    }
+                ],
+                "desc": [
+                    {
+                        "kartName": "프로토",
+                        "kartDesc": "미래를 관통하는 카트바디.<br/>새로운 엔진과 최적화를 예고한다.",
+                        "path": "기본 지급",
+                        "popularity": "1",
+                        "characteristic": "앞면에 체커 무늬와 프로토의<br/>상징인 P 알파벳이<br/>박혀있음.",
+                        "date": "2019년 11월 15일<br/>(1차 CBT)"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -73,6 +73,10 @@ export const TabItem = styled.li`
         font-size: 18px;
         color: #333;
 
+        &.disabled{
+            color: #CED4DA;
+        }
+
         &.active{
             color: #fff;
             background-color: #333;

@@ -19,7 +19,7 @@ const SubCommonKartbody = (props) => {
             <Header gnb={props.gnb}/>
             <SubVisual gnb={props.gnb} subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
             <SubTab/>
-            <SubCommonContents/>
+            <SubCommonContents commonContents={props.commonContents}/>
             <Footer/>
         </>
      );
