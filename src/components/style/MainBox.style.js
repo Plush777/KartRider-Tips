@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mixins from './mixins';
 
 export const ContentWrap = styled.main`
     position: relative;
@@ -11,8 +12,7 @@ export const MainBoxWrap = styled.div`
 `
 
 export const MainBoxList = styled.ul`
-    display: flex;
-    align-items: center;
+    ${mixins.aic}
     gap: 20px;
     flex-wrap: wrap;
 `
@@ -24,9 +24,8 @@ export const MainBoxItems = styled.li`
     height: 310px;
     border-radius: 12px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: ${({theme}) => theme.colors.fff};
+    ${mixins.bgOption}
     transition: .3s ease-in-out;
 
     &.mode{background-image: url('../images/bg/bg-box-01.webp');}
@@ -38,16 +37,14 @@ export const MainBoxItems = styled.li`
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        ${mixins.whFull}
         z-index: 0;
         border-radius: 12px;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: ${({theme}) => theme.colors.rgbaBlack};
     }
 
     >a{
-        display: flex; 
-        flex-direction: column;
+        ${mixins.fcol}
         height: 100%;
     }
 
@@ -63,19 +60,18 @@ export const MainBoxInner = styled.div`
 
 export const TxtBox = styled.div`
     position: relative;
+    ${mixins.fcol}
     z-index: 10;
-    display: flex;
     height: 100%;
-    flex-direction: column;
 `
 
 export const Title = styled.h3`
-    font-size: 30px;
+    font-size: ${({theme}) => theme.fontSizes.t30};
     color: #fff;
     margin-bottom: 12px;
 `
 
 export const Desc = styled.p`
-    font-size: 18px;
+    font-size: ${({theme}) => theme.fontSizes.d18};
     color: #fff;
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import mixins from './mixins';
 
 export const FooterWrap = styled.footer`
     width: 100%;
@@ -9,14 +10,12 @@ export const FooterWrap = styled.footer`
 export const FooterInner = styled.div`
     width: 1300px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
+    ${mixins.aic}
     padding: 30px 15px;
 `
 
 export const LogoArea = styled.div`
-    display: flex;
-    align-items: center;
+    ${mixins.aic}
     &::after{
         content: '';
         display: inline-flex;
@@ -28,14 +27,12 @@ export const LogoArea = styled.div`
 `
 
 export const CopyRightArea = styled.div`
-    font-size: 12px;
-    font-family: 'nexonLv1Gothic';
-    color: #a1a1a1;
+    font-size: ${({theme}) => theme.fontSizes.d12};
+    ${mixins.font('nexonLv1Gothic','#a1a1a1')}
 `
 
 export const Copy = styled.p`
-    display: flex;
-    align-items: center;
+    ${mixins.aic}
     &::before{
         content: 'ⓒ';
         margin-right: 3px;

@@ -2,8 +2,7 @@ import * as Substyled from '../../../style/Sub.style';
 import parse from 'html-react-parser';
 import BtnTop from '../../../article/BtnTop';
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useParams,NavLink } from 'react-router-dom';
 
 const SubCommonContents = (props) => {
 
@@ -22,28 +21,17 @@ const SubCommonContents = (props) => {
                             </Substyled.SubContainer>
                         )
                     })}
-                    <Substyled.TabWrap>
+                    <Substyled.TabWrap mt="20px">
                         <Substyled.TabInner>
-                            {Object.entries(props.commonContents).map(([key,values]) => (
-                                <>
-                                    {console.log(values)}
-                                    {values.map(item => (
-                                        <>
-                                            {console.log(item.list)}
-                                        </>
-                                    ))}
-                                </>
-                            ))}
-
-                            {/* {Object.entries(build).map(([key, values]) => (
-                                <F>
-                                    <div className="key">{key}</div>
-                                    {values.map(row => (
-                                        <div key={row.label}>{row.label}</div>
-                                    ))}
-                                </F>
-                            ))} */}
-                            
+                            <Substyled.TabList>
+                                {props.commonContents.tabList.map((items,index) => {
+                                    return(
+                                        <Substyled.TabItem key={index}>
+                                            <NavLink to={`/kartbody/common/${items.id}`} className={ ({isActive}) => isActive ? 'active' : items.className}>{items.name}</NavLink>
+                                        </Substyled.TabItem>
+                                    )
+                                })}
+                            </Substyled.TabList>
                         </Substyled.TabInner>
                     </Substyled.TabWrap>
                 </Substyled.SubContentsInner>

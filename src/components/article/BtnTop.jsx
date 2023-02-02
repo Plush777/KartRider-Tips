@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import React, { useState , useEffect, useRef } from "react"
+import React, { useState , useEffect } from "react"
+import mixins from "../../components/style/mixins"
 
 const BtnArea = styled.div`
     position: fixed;
@@ -13,20 +14,13 @@ const BtnArea = styled.div`
 `
 
 const TopBtn = styled.button.attrs({type: 'button'})`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: url('../../../images/common/ico-top-arrow.svg') no-repeat center;
+    ${mixins.fc}
+    ${mixins.whFull}
+    background: url('/images/common/ico-top-arrow.svg') no-repeat center;
     background-size: 20px 20px;
 `
 
 const BtnTop = () => {
-
-    const ref = useRef(null);
-
-   const executeScroll = () => ref.current.scrollIntoView()    
 
     const scrollToTop = () => {
         window.scroll({

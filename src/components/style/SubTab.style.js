@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import mixins from './mixins';
 
 export const TabWrap = styled.div`
     width: 100%;
     height: 80px;
-    background-color: #fff;
+    background-color: ${({theme}) => theme.colors.fff};
 `
 
 export const TabWrapInner = styled.div`
@@ -20,20 +21,16 @@ export const TabInfo = styled.div`
     padding: 20px;
     box-sizing: border-box;
     border-radius: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({theme}) => theme.colors.ddd};
     background-color: #f2f2f2;
 `
 
 export const TabInfoTxt = styled.span`
+    ${mixins.fc}
+    ${mixins.whFull}
+    ${mixins.font('nexonLv1Gothic','#626262')}
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
-    font-family: 'nexonLv1Gothic';
-    color: #626262;
+    font-size: ${({theme}) => theme.fontSizes.d14};
 
     &::before{
         content: '';
@@ -42,8 +39,7 @@ export const TabInfoTxt = styled.span`
         height: 22px;
         margin-right: 5px;
         background-image: ${props => `url('/images/common/ico-tab0${props.num}.svg')`};
-        background-repeat: no-repeat;
-        background-position: center;
+        ${mixins.bgOption}
     }
 
     &::after{
@@ -63,15 +59,12 @@ export const TabList = styled.ul`
 
 export const TabItem = styled.li`
     >a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        ${mixins.fc}
+        ${mixins.font('nexonLv1Gothic','#333')}
         width: 110px;
         height: 50px;
         border-radius: 25px;
-        font-family: 'nexonLv1Gothic';
-        font-size: 18px;
-        color: #333;
+        font-size: ${({theme}) => theme.fontSizes.d18};
 
         &.disabled{
             user-select: none;
@@ -81,7 +74,7 @@ export const TabItem = styled.li`
 
         &.active{
             color: #fff;
-            background-color: #333;
+            background-color: ${({theme}) => theme.colors.c333};
         }
     }
 `

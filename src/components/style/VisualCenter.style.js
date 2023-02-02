@@ -1,24 +1,17 @@
 import styled from "styled-components";
+import mixins from './mixins';
 
 export const VisualCenterWrap = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    ${mixins.posCenter}
+    ${mixins.fcc}
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     z-index: 1010;
 `
 
 export const Vtitle = styled.h2`
-    font-size: 48px;
-    font-family: 'Recipekorea'; 
-    color: #fff;
+    ${mixins.font('Recipekorea', '#fff')}
+    font-size: ${({theme}) => theme.fontSizes.t48};
 `
 
 export const VlogoArea = styled.div`
@@ -40,14 +33,13 @@ export const VDescArea = styled.div`
 `
 
 export const VDescBold = styled.strong`
-    display: flex;
-    justify-content: center;
+    ${mixins.jcc}
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: ${({theme}) => theme.fontSizes.d18};
     color: #fff;
 `
 
 export const VDescRegular = styled.p`
-    font-size: 14px;
+    font-size: ${({theme}) => theme.fontSizes.d14};
     color: #fff;
 `

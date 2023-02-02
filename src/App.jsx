@@ -12,6 +12,9 @@ import speedContentsData from './data/mode/speedMode/contents.json';
 import kartbodyCommonContentsData from './data/kartbody/common/contents.json'
 import gnbData from './data/gnb/gnb';
 import Notfound from "./components/Notfound";
+import { ThemeProvider } from 'styled-components';
+import theme from './components/style/theme';
+import mixins from './components/style/mixins';
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
@@ -23,18 +26,20 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyle/>
-			<Routes>
-				<Route path="/" element={<Main gnb={gnb}/>}/>
-				<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents} subTitle={subTitle}
-				setSubTitle={setSubTitle} gnb={gnb}/>}/>
-				<Route path="/mode/item" element={<SubItem itemContents={itemContents} subTitle={subTitle}
-				setSubTitle={setSubTitle} gnb={gnb}/>}/>
-				<Route path="/kartbody/common" element={<SubCommonKartbody commonContents={commonContents} 
-				gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}>
-					<Route path=":id" element={<SubCommonKartbody/>}/>
-				</Route>
-				<Route path="*" element={<Notfound/>} />
-        	</Routes>
+			<ThemeProvider theme={theme} mixins={mixins}>
+				<Routes>
+					<Route path="/" element={<Main gnb={gnb}/>}/>
+					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents} subTitle={subTitle}
+					setSubTitle={setSubTitle} gnb={gnb}/>}/>
+					<Route path="/mode/item" element={<SubItem itemContents={itemContents} subTitle={subTitle}
+					setSubTitle={setSubTitle} gnb={gnb}/>}/>
+					<Route path={`/kartbody/common/1`} element={<SubCommonKartbody commonContents={commonContents} 
+					gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}/>
+					<Route path="/kartbody/common/:id" element={<SubCommonKartbody commonContents={commonContents} 
+					gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}/>
+					<Route path="*" element={<Notfound/>} />
+        		</Routes>
+			</ThemeProvider>
 		</>  
 	);
 }
