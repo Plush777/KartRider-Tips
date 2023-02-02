@@ -1,17 +1,14 @@
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
 import Meta from '../Meta/MetaTag';
+import mixins from "./style/mixins";
 
 const FlexContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    ${mixins.fcc}
     height: 100%;
 `
 const ImgArea = styled.div`
-    display: flex;
-    justify-content: center;
+    ${mixins.jcc}
 `
 
 const ErrorImg = styled.img`
@@ -24,21 +21,18 @@ const TxtArea = styled.div`
 `
 
 const ErrorTitle = styled.h1`
-    font-size: 32px;
-    font-family: 'nexonLv1Gothic';
-    color: #333;
+    ${mixins.font('nexonLv1Gothic','#333')}
+    font-size: 2rem;
 `
 
 const ErrorDesc = styled.p`
-    font-size: 18px;
-    font-family: 'nexonLv1Gothic';
-    color: #666;
+    ${mixins.font('nexonLv1Gothic','#666')}
+    font-size: 1.125rem;
     margin-top: 10px;
 `
 
 const BtnArea = styled.div`
-    display: flex;
-    justify-content: center;
+    ${mixins.jcc}
     margin-top: 40px;
 `
 
@@ -46,10 +40,9 @@ const BtnRedirect = styled.button.attrs({type: 'button'})`
     height: 40px;
     padding: 0 15px;
     border-radius: 4px;
-    font-size: 16px;
-    color: #fff;
-    font-family: 'nexonLv1Gothic';
+    font-size: 1rem;
     background-color: #333;
+    ${mixins.font('nexonLv1Gothic','#fff')}
 `
 
 const Notfound = () => {

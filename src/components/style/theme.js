@@ -6,6 +6,7 @@ const fontSizes = {
     t48: pixelToRem(48),
     t30: pixelToRem(30),
     st24: pixelToRem(24),
+    d20: pixelToRem(20),
     d18: pixelToRem(18),
     d16: pixelToRem(16),
     d14: pixelToRem(14),
@@ -18,7 +19,7 @@ const colors = {
     c000: "#000",
     c333: "#333",
     ddd: "#ddd",
-    dede: "dedede",
+    dede: "#dedede",
     rgbaBlack: "rgba(0,0,0,0.3)"
 }
 

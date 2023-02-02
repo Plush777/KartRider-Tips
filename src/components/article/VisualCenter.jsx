@@ -5,7 +5,7 @@ import * as VisualCenterstyled from '../style/VisualCenter.style';
 const VisualCenter = () => {
     return ( 
         <VisualCenterstyled.VisualCenterWrap>
-            <VisualCenterstyled.Vtitle>카트라이더를 기억하고,<br/>기록하는 공간</VisualCenterstyled.Vtitle>
+            <VisualCenterstyled.Vtitle>카트라이더를 기억하고<br/>기록하는 공간</VisualCenterstyled.Vtitle>
             <VisualCenterstyled.VlogoArea>
                 <img src={logoWhite} alt="카트라이더 아카이브 로고" />
             </VisualCenterstyled.VlogoArea>

@@ -34,6 +34,41 @@ const SubCommonContents = (props) => {
                             </Substyled.TabList>
                         </Substyled.TabInner>
                     </Substyled.TabWrap>
+
+                    <Substyled.TabContentWrap>
+                        <Substyled.TabContentInner>
+                            <Substyled.TabContnetBox>
+                                <Substyled.TabContent>
+                                    <Substyled.Top>
+                                        {props.commonContents.descList.map((items,index) => {
+                                            return(
+                                                <React.Fragment key={index}>
+                                                    <Substyled.SmallTitle fz1 bullet key={index}>{parse(items.title)}</Substyled.SmallTitle>
+                                                    <Substyled.SmallDesc>{parse(items.desc)}</Substyled.SmallDesc>
+                                                </React.Fragment>
+                                            )
+                                        })}
+                                    </Substyled.Top>
+                                    <Substyled.Bottom>
+                                        {props.commonContents.staticDesc.map((items,index) => {
+                                            return(
+                                                <Substyled.Row key={index}>
+                                                    <Substyled.RowDesc mwd>{items.name}</Substyled.RowDesc>
+                                                    <Substyled.RowDesc>{parse(items.name2)}</Substyled.RowDesc>
+                                                </Substyled.Row>
+                                            )
+                                        })}
+                                    </Substyled.Bottom>
+                                </Substyled.TabContent>
+
+                                <Substyled.TabContent>
+                                    <Substyled.PreviewArea>
+                                        
+                                    </Substyled.PreviewArea>
+                                </Substyled.TabContent>
+                            </Substyled.TabContnetBox>
+                        </Substyled.TabContentInner>
+                    </Substyled.TabContentWrap>
                 </Substyled.SubContentsInner>
             </Substyled.SubContentsWrap>
             <BtnTop/>

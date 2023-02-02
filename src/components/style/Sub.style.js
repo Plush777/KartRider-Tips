@@ -90,7 +90,7 @@ export const SmallTitle = styled.h4`
     ${mixins.font('nexonLv1Gothic','#000')}
 
     &::before{
-        content: '';
+        content: ${(props) => props.bullet ? 'none' : ''};
         display: inline-block;
         width: 16px;
         height: 4px;
@@ -356,15 +356,34 @@ export const TabContnetBox = styled.div`
     justify-content: space-between;
 `
 
-export const TabContentLeft = styled.div`
-
+export const TabContent = styled.div`
+    flex: 1;
 `
 
 export const Top = styled.div`
+    padding-bottom: 35px;
     border-bottom: 2px solid ${({theme}) => theme.colors.c000};
 `
 
 export const Bottom = styled.div`
     padding: 30px 0;
     border-bottom: 1px solid ${({theme}) => theme.colors.dede};
+`
+
+export const PreviewArea = styled.div`
+
+`
+
+export const Row = styled.div`
+    ${mixins.aic}
+    &+&{margin-top: 20px;}
+`
+export const Col = styled.div`
+    ${mixins.fcol}
+`
+
+export const RowDesc = styled.span`
+    display: block;
+    min-width: ${(props) => props.mwd ? '158px' : 'auto'};
+    font-size: ${({theme}) => theme.fontSizes.d20};
 `
