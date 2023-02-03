@@ -3,11 +3,13 @@ import parse from 'html-react-parser';
 import BtnTop from '../../../article/BtnTop';
 import React from 'react';
 import { useParams,NavLink } from 'react-router-dom';
+import Star from './Star';
 
 const SubCommonContents = (props) => {
 
     let {id} = useParams();
-
+    console.log(id);
+   
     return ( 
         <>
             <Substyled.SubContentsWrap>
@@ -40,21 +42,17 @@ const SubCommonContents = (props) => {
                             <Substyled.TabContnetBox>
                                 <Substyled.TabContent>
                                     <Substyled.Top>
-                                        {props.commonContents.descList.map((items,index) => {
-                                            return(
-                                                <React.Fragment key={index}>
-                                                    <Substyled.SmallTitle fz1 bullet key={index}>{parse(items.title)}</Substyled.SmallTitle>
-                                                    <Substyled.SmallDesc>{parse(items.desc)}</Substyled.SmallDesc>
-                                                </React.Fragment>
-                                            )
-                                        })}
+                                        <Substyled.SmallTitle fz1 bullet>{props.commonContents.descList[id].title}</Substyled.SmallTitle>
+                                        <Substyled.SmallDesc>{parse(props.commonContents.descList[id].desc)}</Substyled.SmallDesc>
                                     </Substyled.Top>
                                     <Substyled.Bottom>
                                         {props.commonContents.staticDesc.map((items,index) => {
                                             return(
                                                 <Substyled.Row key={index}>
                                                     <Substyled.RowDesc mwd>{items.name}</Substyled.RowDesc>
-                                                    <Substyled.RowDesc>{parse(items.name2)}</Substyled.RowDesc>
+                                                    <Substyled.RowDesc as={items.tag}>{
+                                                        items.tag === 'span' ? parse(items.name2) : <Star/>
+                                                    }</Substyled.RowDesc>
                                                 </Substyled.Row>
                                             )
                                         })}

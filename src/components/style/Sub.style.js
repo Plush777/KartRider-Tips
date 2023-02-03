@@ -378,12 +378,30 @@ export const Row = styled.div`
     ${mixins.aic}
     &+&{margin-top: 20px;}
 `
-export const Col = styled.div`
-    ${mixins.fcol}
-`
 
 export const RowDesc = styled.span`
     display: block;
     min-width: ${(props) => props.mwd ? '158px' : 'auto'};
     font-size: ${({theme}) => theme.fontSizes.d20};
+`
+
+export const StarWrap = styled.div`
+    position: relative;
+    width: 143px;
+    height: 31px;
+`
+
+export const StarArea = styled.div`
+    position: absolute;
+    width: ${(props) => props.width};
+    height: 100%;
+    top: 0;
+    overflow: ${(props) => props.overflow};
+    z-index: ${(props) => props.zIndex};
+`
+
+export const StarBox = styled.div`
+    ${mixins.whFull}
+    background-image: ${(props) => props.bgUrl};
+    ${mixins.bgOption};
 `
