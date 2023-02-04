@@ -331,9 +331,10 @@ export const TabItem = styled.li`
         &.saver::before{background-image: url('/images/common/ico-saver.webp')}
         &.burst::before{background-image: url('/images/common/ico-burst.webp')}
         &.solid::before{background-image: url('/images/common/ico-solid.webp')}
-        &.play::before{background-image: url('/images/common/ico-play.webp')}
+        &.play::before{background-image: url('/images/common/ico-play.webp'); background-size: 24px;}
         &.nexon::before{background-image: url('/images/common/ico-nexon.webp')}
-        &.ios::before{background-image: url('/images/common/ico-ios.webp')}
+        &.ios::before{background-image: url('/images/common/ico-ios.webp'); background-size: 28px;}
+        &.steam::before{background-image: url('/images/common/ico-steam.webp'); background-size: 32px;}
 
         &.active{
             background-color: ${({theme}) => theme.colors.fff};
@@ -354,6 +355,7 @@ export const TabContentInner = styled.div`
 export const TabContnetBox = styled.div`
     ${mixins.aic}
     justify-content: space-between;
+    column-gap: 90px;
 `
 
 export const TabContent = styled.div`
@@ -366,23 +368,35 @@ export const Top = styled.div`
 `
 
 export const Bottom = styled.div`
+    display: flex;
     padding: 30px 0;
     border-bottom: 1px solid ${({theme}) => theme.colors.dede};
 `
 
 export const PreviewArea = styled.div`
+    ${mixins.fc}
+    height: 305px;
+    border-radius: 4px;
+    background-color: #D9D9D9;
+    ${mixins.skeleton};
+`
 
+export const PreviewImg = styled.img`
+    ${mixins.whFull}
+    border-radius: inherit;
 `
 
 export const Row = styled.div`
-    ${mixins.aic}
-    &+&{margin-top: 20px;}
+    ${mixins.fcol}
 `
 
 export const RowDesc = styled.span`
     display: block;
     min-width: ${(props) => props.mwd ? '158px' : 'auto'};
+    min-height: 46px;
     font-size: ${({theme}) => theme.fontSizes.d20};
+    margin-top: ${(props) => props.mt};
+    ${mixins.font('nexonLv1Gothic','#000')};
 `
 
 export const StarWrap = styled.div`
@@ -395,7 +409,8 @@ export const StarArea = styled.div`
     position: absolute;
     width: ${(props) => props.width};
     height: 100%;
-    top: 0;
+    top: -5px;
+    left: ${(props) => props.left};
     overflow: ${(props) => props.overflow};
     z-index: ${(props) => props.zIndex};
 `

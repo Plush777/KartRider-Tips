@@ -50,6 +50,14 @@ export const font = (f,c) => css`
     color: ${c};
 `
 
+export const skeleton = css`
+    @keyframes skeleton-loading {
+        0% {opacity: .3;}
+        100% {opacity: .8;}   
+    }
+    animation: ${props => props.loading ? 'skeleton-loading 1s linear infinite alternate' : 'none'};
+`
+
 const mixins = {
     aic,
     jcc,
@@ -59,7 +67,8 @@ const mixins = {
     bgOption,
     posCenter,
     whFull,
-    font
+    font,
+    skeleton
 }
 
 export default mixins;
