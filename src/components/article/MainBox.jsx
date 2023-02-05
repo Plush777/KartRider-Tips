@@ -13,7 +13,7 @@ const box = [
         title: "카트바디",
         desc: "카트라이더 카트바디들에 대해 설명하고, 각 카트바디의 장단점들을 알려드려요.",
         className: "cartBody",
-        link: "/kartbody/common/1"
+        link: "/kartbody/common/:id"
     },
     {
         title: "캐릭터",

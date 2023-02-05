@@ -69,7 +69,7 @@ const SubCommonContents = (props) => {
 
                                         <Substyled.Row>
                                             <Substyled.RowDesc>{kartId2.desc}</Substyled.RowDesc>
-                                            <Star commonContents={props.commonContents}/>
+                                            <Star commonContents={props.commonContents} starParam={id}/>
                                             <Substyled.RowDesc mt="15px">{parse(kartId2.desc2)}</Substyled.RowDesc>
                                             <Substyled.RowDesc mt="15px">{parse(kartId2.desc3)}</Substyled.RowDesc>
                                         </Substyled.Row>

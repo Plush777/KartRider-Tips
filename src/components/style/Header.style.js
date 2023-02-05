@@ -7,9 +7,9 @@ export const Headers = styled.header`
     left: 0;
     z-index: 1000;
     width: 100%;
-    height: 50px;
+    height: 65px;
+    border-bottom: 1px solid #E2E8F0;
     background-color: ${({theme}) => theme.colors.fff};
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 `
 
 export const HeaderInner = styled.div`
@@ -41,7 +41,12 @@ export const GnbList = styled.ul`
 export const GnbItem = styled.li`
     position: relative;
     font-size: ${({theme}) => theme.fontSizes.d14};
-    color: #000;
+    color: ${(props) => props.className === 'default' ? '#000' : '#CED4DA'};
+
+    &.disabled{
+        pointer-events: none;
+        user-select: none;
+    }
 `
 
 export const ShortArea = styled.div`

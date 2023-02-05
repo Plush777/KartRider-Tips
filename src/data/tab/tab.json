@@ -15,7 +15,7 @@
     "kartbody": [
         {
             "name": "일반",
-            "route": "/kartbody/common/1",
+            "route": "/kartbody/common/",
             "className": "default"
         },
         {

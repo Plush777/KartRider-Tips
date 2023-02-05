@@ -12,7 +12,6 @@ import speedContentsData from './data/mode/speedMode/contents.json';
 import kartbodyCommonContentsData from './data/kartbody/common/contents.json'
 import gnbData from './data/gnb/gnb';
 import Notfound from "./components/Notfound";
-import SubCommonContents from './components/sub/kartbody/common/SubCommonContents';
 import { ThemeProvider } from 'styled-components';
 import theme from './components/style/theme';
 import mixins from './components/style/mixins';

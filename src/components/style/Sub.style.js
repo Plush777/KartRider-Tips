@@ -378,6 +378,7 @@ export const PreviewArea = styled.div`
     height: 305px;
     border-radius: 4px;
     background-color: #D9D9D9;
+    box-shadow: 0px 5px 5px ${({theme}) => theme.colors.rgbaBlack};
     ${mixins.skeleton};
 `
 
@@ -418,5 +419,5 @@ export const StarArea = styled.div`
 export const StarBox = styled.div`
     ${mixins.whFull}
     background-image: ${(props) => props.bgUrl};
-    ${mixins.bgOption};
+    background-repeat: no-repeat;
 `
