@@ -5,6 +5,7 @@ import React, { useState , useEffect } from 'react';
 import { useParams,NavLink } from 'react-router-dom';
 import Star from './Star';
 import skeletonLogo from '../../../../components/svg/ico-kart-logo-grayscale.svg';
+import RouteScrollDisabled from '../../../../Routes/RouteScrollDisabled';
 
 const SubCommonContents = (props) => {
 
@@ -23,6 +24,7 @@ const SubCommonContents = (props) => {
 
     return ( 
         <>
+            <RouteScrollDisabled/>
             <Substyled.SubContentsWrap>
                 <Substyled.SubContentsInner>
                     {props.commonContents.kartbody.map((items,index) => {

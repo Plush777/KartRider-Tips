@@ -1,17 +1,12 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function RouteScroll() {
-  const { pathname } = useLocation();
-  const dontScrollToTopPaths = "/kartbody/";
+	const { pathname } = useLocation();
 
-  console.log(pathname);
-
-  useEffect(() => {
-    if(!pathname === dontScrollToTopPaths){
-      window.scrollTo(0, 0);
-    }
-  }, [pathname,dontScrollToTopPaths]);
+	useLayoutEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 
   return null;
 }

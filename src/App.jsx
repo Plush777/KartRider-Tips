@@ -1,4 +1,3 @@
-import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import './font.scss';
 import { useState } from 'react';
