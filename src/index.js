@@ -15,7 +15,6 @@ if(container.hasChildNodes()){
         container,
         <BrowserRouter>
             <HelmetProvider>
-                <RouteScroll/>
                 <App/>
             </HelmetProvider>
         </BrowserRouter>
@@ -24,7 +23,6 @@ if(container.hasChildNodes()){
     root.render(
         <BrowserRouter>
             <HelmetProvider>
-                <RouteScroll/>
                 <App/>
             </HelmetProvider>
         </BrowserRouter>

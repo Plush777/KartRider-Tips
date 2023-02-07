@@ -1,6 +1,6 @@
 import GlobalStyle from './GlobalStyle';
 import './font.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Main from './components/Main';
 import { Route, Routes } from "react-router-dom";
 import SubSpeed from "./components/sub/speed/SubSpeed";
@@ -14,6 +14,8 @@ import Notfound from "./components/Notfound";
 import { ThemeProvider } from 'styled-components';
 import theme from './components/style/theme';
 import mixins from './components/style/mixins';
+import RouteScroll from './Routes/RouteScroll';
+import { useLocation } from "react-router-dom";
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
@@ -21,9 +23,20 @@ const App = () => {
 	let [commonContents] = useState(kartbodyCommonContentsData);
     let [subTitle, setSubTitle] = useState('');
     let [gnb] = useState(gnbData);
+	let [scroll,setScroll] = useState(true);
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		if(pathname === '/'){
+			setScroll(true);
+		}
+	},[pathname]);
+
+	console.log(scroll);
 
 	return (
 		<>
+			{scroll && <RouteScroll/>}
 			<GlobalStyle/>
 			<ThemeProvider theme={theme} mixins={mixins}>
 				<Routes>
@@ -33,7 +46,7 @@ const App = () => {
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents} subTitle={subTitle}
 					setSubTitle={setSubTitle} gnb={gnb}/>}/>
 					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents} 
-					gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle}/>}/>
+					gnb={gnb} subTitle={subTitle} setSubTitle={setSubTitle} setScroll={setScroll}/>}/>
 					<Route path="*" element={<Notfound/>} />
         		</Routes>
 			</ThemeProvider>
