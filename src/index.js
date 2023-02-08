@@ -3,9 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
-import RouteScroll from './Routes/RouteScroll'
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -13,18 +14,22 @@ const root = ReactDOM.createRoot(container);
 if(container.hasChildNodes()){
     ReactDOM.hydrateRoot(
         container,
-        <BrowserRouter>
-            <HelmetProvider>
-                <App/>
-            </HelmetProvider>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <HelmetProvider>
+                    <App/>
+                </HelmetProvider>
+            </BrowserRouter>
+        </Provider>
     );
 } else {
     root.render(
         <BrowserRouter>
-            <HelmetProvider>
-                <App/>
-            </HelmetProvider>
+            <Provider store={store}>
+                <HelmetProvider>
+                    <App/>
+                </HelmetProvider>
+            </Provider>
         </BrowserRouter>
     )
 }

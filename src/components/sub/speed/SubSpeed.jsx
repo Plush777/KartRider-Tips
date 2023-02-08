@@ -16,9 +16,9 @@ const SubSpeed = (props) => {
     return ( 
         <>
             <Meta data={metaData}/>
-            <Header gnb={props.gnb}/>
-            <SubVisual gnb={props.gnb} subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
-            <SubTab/>
+            <Header/>
+            <SubVisual subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
+            <SubTab commonContents={props.commonContents} />
             <SpeedContents speedContents={props.speedContents}/>
             <Footer/>
         </>

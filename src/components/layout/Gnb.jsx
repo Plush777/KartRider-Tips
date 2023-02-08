@@ -1,10 +1,10 @@
 import * as Headerstyled from "../style/Header.style";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const Gnb = (props) => {
+const Gnb = () => {
 
-    const [gnbData] = useState(props.gnb);
+    let gnbData = useSelector(state => state.gnb);
 
     return ( 
         <>

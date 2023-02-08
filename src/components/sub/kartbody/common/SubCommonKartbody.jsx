@@ -16,8 +16,8 @@ const SubCommonKartbody = (props) => {
     return ( 
         <>
             <Meta data={metaData}/>
-            <Header gnb={props.gnb}/>
-            <SubVisual gnb={props.gnb} subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
+            <Header/>
+            <SubVisual subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
             <SubTab commonContents={props.commonContents}/>
             <SubCommonContents commonContents={props.commonContents} setScroll={props.setScroll}/>
             <Footer/>

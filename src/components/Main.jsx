@@ -14,7 +14,7 @@ const Main = (props) => {
     return ( 
         <>  
             <Meta data={metaData}/>
-            <Header gnb={props.gnb}/>
+            <Header/>
             <Visual/>
             <MainBox/>
             <Footer/>

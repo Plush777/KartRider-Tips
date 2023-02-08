@@ -17,7 +17,7 @@ const Header = (props) => {
                             <img src={logoBlack} alt="카트라이더 아카이브 로고"/>
                         </Link>
                     </Headerstyled.Logo>
-                    <Gnb gnb={props.gnb}/>
+                    <Gnb/>
                     <Headerstyled.ShortArea>
                         <a href="https://kartdrift.nexon.com/kartdrift/ko/main" target="_blank" rel='noopener noreferrer'>카트라이더 홈페이지 바로가기</a>
                     </Headerstyled.ShortArea>    

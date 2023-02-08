@@ -1,33 +1,37 @@
 import { useState,useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import * as SubVisualstyled from '../style/SubVisual.style';
+import { useDispatch , useSelector } from "react-redux";
+import { setSubVisualTitle } from "../../store/store";
 
-const SubVisual = (props) => {
+const SubVisual = () => {
 
     const { pathname } = useLocation();
     let [visualName,setVisualName] = useState('');
+    let dispatch = useDispatch();
+    let subVisualData = useSelector(state => state.subVisualTitle.value);
 
     useEffect(() => {
         if(pathname.startsWith('/mode')){
-            props.setSubTitle('모드');
+            dispatch(setSubVisualTitle({title:'모드'}));
             setVisualName('mode');
         } else if(pathname.startsWith('/kartbody')){
-            props.setSubTitle('카트바디');
+            dispatch(setSubVisualTitle({title:'카트바디'}));
             setVisualName('kartbody');
         } else if(pathname.startsWith('/character')){
-            props.setSubTitle('캐릭터');
+            dispatch(setSubVisualTitle({title:'캐릭터'}));
             setVisualName('character');
         } else if(pathname.startsWith('/track')){
-            props.setSubTitle('트랙');
+            dispatch(setSubVisualTitle({title:'카트바디'}));
             setVisualName('track');
         }
-    }, [pathname,props]);
+    }, [pathname,dispatch]);
 
     return ( 
         <SubVisualstyled.SubVisualWrap>
             <SubVisualstyled.SubViusalInner visualName={visualName}>
                 <SubVisualstyled.SubVisualTitleArea>
-                    <SubVisualstyled.SubVisualTitle>{props.subTitle}</SubVisualstyled.SubVisualTitle>
+                    <SubVisualstyled.SubVisualTitle>{subVisualData.title}</SubVisualstyled.SubVisualTitle>
                 </SubVisualstyled.SubVisualTitleArea>
             </SubVisualstyled.SubViusalInner>
         </SubVisualstyled.SubVisualWrap>

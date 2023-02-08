@@ -1,13 +1,11 @@
 import tabData from '../../data/tab/tab.json';
 import { useLayoutEffect, useState } from "react";
-// import { useEffect } from 'react';
 import { useLocation , NavLink , useParams } from "react-router-dom";
 import * as SubTabstyled from '../style/SubTab.style';
 
 const SubTab = (props) => {
 
     const {pathname} = useLocation();
-    // const [currentFirstUrl,setCurrentFirstUrl] = useState(null);
     let [isActive,setIsActive] = useState(0);
     let [categoryName,setCategoryName] = useState(
         {
@@ -16,18 +14,6 @@ const SubTab = (props) => {
             tabDataState: []
         }
     );
-    let [idData] = useState(props.commonContents.kartDescDepth);
-    let {id} = useParams();
-    id = parseInt(id);
-    idData = idData.find(x => x.id === id);
-
-    // useEffect(() => {
-    //     const splitUrl = pathname?.split('/') ?? null;
-    //     const location = splitUrl?.length > 1 ? splitUrl[1] : null;
-    //     setCurrentFirstUrl(location);
-    // },[pathname]);
-
-    // console.log(currentFirstUrl);
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
@@ -61,7 +47,7 @@ const SubTab = (props) => {
                     {categoryName.tabDataState.map((item, index) => {
                         return (
                             <SubTabstyled.TabItem key={index} onClick={() => handleItemClick(index)}>
-                                <NavLink to={item.route + idData.id} className={({isActive}) => isActive ? 'active' : 'disabled'}>{item.name}</NavLink>
+                                <NavLink to={item.route} className={({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
                             </SubTabstyled.TabItem>
                         )})
                     }
