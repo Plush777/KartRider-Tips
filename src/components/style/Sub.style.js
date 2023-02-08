@@ -326,15 +326,15 @@ export const TabItem = styled.li`
             ${mixins.bgOption};
         }
 
-        &.cotton::before{background-image: url('/images/common/ico-cotton.webp')}
-        &.marathon::before{background-image: url('/images/common/ico-marathon.webp')}
-        &.saver::before{background-image: url('/images/common/ico-saver.webp')}
-        &.burst::before{background-image: url('/images/common/ico-burst.webp')}
-        &.solid::before{background-image: url('/images/common/ico-solid.webp')}
-        &.play::before{background-image: url('/images/common/ico-play.webp'); background-size: 24px;}
-        &.nexon::before{background-image: url('/images/common/ico-nexon.webp')}
-        &.ios::before{background-image: url('/images/common/ico-ios.webp'); background-size: 28px;}
-        &.steam::before{background-image: url('/images/common/ico-steam.webp'); background-size: 32px;}
+        &[data-name="cotton"]::before{background-image: url('/images/common/ico-cotton.webp');}
+        &[data-name="marathon"]::before{background-image: url('/images/common/ico-marathon.webp')}
+        &[data-name="saver"]::before{background-image: url('/images/common/ico-saver.webp')}
+        &[data-name="burst"]::before{background-image: url('/images/common/ico-burst.webp')}
+        &[data-name="solid"]::before{background-image: url('/images/common/ico-solid.webp')}
+        &[data-name="play"]::before{background-image: url('/images/common/ico-play.webp'); background-size: 24px;}
+        &[data-name="nexon"]::before{background-image: url('/images/common/ico-nexon.webp')}
+        &[data-name="ios"]::before{background-image: url('/images/common/ico-ios.webp'); background-size: 28px;}
+        &[data-name="steam"]::before{background-image: url('/images/common/ico-steam.webp'); background-size: 32px;}
 
         &.active{
             background-color: ${({theme}) => theme.colors.fff};

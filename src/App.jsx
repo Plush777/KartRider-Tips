@@ -15,16 +15,13 @@ import theme from './components/style/theme';
 import mixins from './components/style/mixins';
 import RouteScroll from './Routes/RouteScroll';
 import { useLocation } from "react-router-dom";
-import tabData from './data/tab/tab.json';
-
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
     let [speedContents] = useState(speedContentsData);
 	let [commonContents] = useState(kartbodyCommonContentsData);
-	let [commonTabs,setCommonTabs] = useState(tabData);
-    
 	let [scroll,setScroll] = useState(true);
+	
 	const { pathname } = useLocation();
 
 	useEffect(() => {
@@ -42,8 +39,8 @@ const App = () => {
 			<ThemeProvider theme={theme} mixins={mixins}>
 				<Routes>
 					<Route path="/" element={<Main/>}/>
-					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>} commonContents={commonContents}/>
-					<Route path="/mode/item" element={<SubItem itemContents={itemContents} commonContents={commonContents} />}/>
+					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>
+					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
 					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents} setScroll={setScroll}/>}/>
 					<Route path="*" element={<Notfound/>} />
         		</Routes>

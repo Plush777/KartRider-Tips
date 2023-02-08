@@ -44,7 +44,8 @@ const SubCommonContents = (props) => {
                                 {props.commonContents.tabList.map((items,index) => {
                                     return(
                                         <Substyled.TabItem key={index}>
-                                            <NavLink to={`/kartbody/common/${items.id}`} className={ ({isActive}) => isActive ? 'active' : items.className} onClick={handleScrollState}>{items.name}</NavLink>
+                                            <NavLink to={`/kartbody/common/${items.id}`} className={ ({isActive}) => isActive ? 'active' : ''} 
+                                            onClick={handleScrollState} data-name={items.className}>{items.name}</NavLink>
                                         </Substyled.TabItem>
                                     )
                                 })}

@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import * as SubVisualstyled from '../style/SubVisual.style';
 import { useDispatch , useSelector } from "react-redux";
-import { setSubVisualTitle } from "../../store/store";
+import { setSubVisualTitle } from "../../redux/store/store";
 
 const SubVisual = () => {
 

@@ -1,5 +1,5 @@
 import { configureStore , createSlice } from "@reduxjs/toolkit";
-import gnbData from "../data/gnb/gnb";
+import gnbData from "../../data/gnb/gnb";
 
 let gnb = createSlice({
     name: 'gnb',
