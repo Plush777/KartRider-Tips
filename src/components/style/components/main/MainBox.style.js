@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mixins from './mixins';
+import mixins from '../../mixins';
 
 export const ContentWrap = styled.main`
     position: relative;
@@ -43,12 +43,24 @@ export const MainBoxItems = styled.li`
         background-color: ${({theme}) => theme.colors.rgbaBlack};
     }
 
+    &.disabled{
+        background-blend-mode: luminosity;
+        >a{
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &::after{
+            background-color: transparent;
+        }
+    }
+
     >a{
         ${mixins.fcol}
         height: 100%;
     }
 
-    &:hover{
+    &:hover:not(.disabled){
         transform: translateY(-5px);
     }
 `
@@ -66,12 +78,12 @@ export const TxtBox = styled.div`
 `
 
 export const Title = styled.h3`
-    font-size: ${({theme}) => theme.fontSizes.t30};
+    font-size: ${({theme}) => theme.fontSizes.f30};
     color: #fff;
     margin-bottom: 12px;
 `
 
 export const Desc = styled.p`
-    font-size: ${({theme}) => theme.fontSizes.d18};
+    font-size: ${({theme}) => theme.fontSizes.f18};
     color: #fff;
 `

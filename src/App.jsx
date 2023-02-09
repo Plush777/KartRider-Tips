@@ -15,33 +15,35 @@ import theme from './components/style/theme';
 import mixins from './components/style/mixins';
 import RouteScroll from './Routes/RouteScroll';
 import { useLocation } from "react-router-dom";
+import { useDispatch , useSelector } from "react-redux";
+import { setRouterScroll } from './redux/store/store';
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
     let [speedContents] = useState(speedContentsData);
 	let [commonContents] = useState(kartbodyCommonContentsData);
-	let [scroll,setScroll] = useState(true);
-	
 	const { pathname } = useLocation();
+	let dispatch = useDispatch();
+	let routerScroll = useSelector(state => state.routerScroll);
 
 	useEffect(() => {
-		if(pathname === '/'){
-			setScroll(true);
+		if(pathname === '/' || pathname.startsWith('/mode')){
+			dispatch(setRouterScroll(true));
 		}
-	},[pathname]);
+	},[pathname,dispatch]);
 
-	console.log(scroll);
+	console.log(routerScroll);
 
 	return (
 		<>
-			{scroll && <RouteScroll/>}
+			{routerScroll && <RouteScroll/>}
 			<GlobalStyle/>
 			<ThemeProvider theme={theme} mixins={mixins}>
 				<Routes>
 					<Route path="/" element={<Main/>}/>
 					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
-					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents} setScroll={setScroll}/>}/>
+					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents}/>}/>
 					<Route path="*" element={<Notfound/>} />
         		</Routes>
 			</ThemeProvider>

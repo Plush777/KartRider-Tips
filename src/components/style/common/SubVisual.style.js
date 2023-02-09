@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mixins from './mixins';
+import mixins from '../mixins';
 
 export const SubVisualWrap = styled.div`
     width: 100%;
@@ -30,6 +30,6 @@ export const SubVisualTitleArea = styled.div`
 `
 
 export const SubVisualTitle = styled.h2`
-    font-size: ${({theme}) => theme.fontSizes.t62};
+    font-size: ${({theme}) => theme.fontSizes.f62};
     color: #fff;
 `

@@ -1,42 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import * as MainBoxstyled from '../style/MainBox.style';
-
-const box = [
-    {
-        title: "모드",
-        desc: "카트라이더 모드들에 대해 설명하고, 각 모드에서 쓰이는 용어들을 알려드려요.",
-        className: "mode",
-        link: "/mode/speed"
-    },
-    {
-        title: "카트바디",
-        desc: "카트라이더 카트바디들에 대해 설명하고, 각 카트바디의 장단점들을 알려드려요.",
-        className: "cartBody",
-        link: "/kartbody/common/:id"
-    },
-    {
-        title: "캐릭터",
-        desc: "카트라이더 캐릭터들에 대해 알려드려요.",
-        className: "character",
-        link: "/character"
-    },
-    {
-        title: "트랙",
-        desc: "카트라이더 트랙들에 대해 설명하고, 사용되는 빌드나 드리프트 기술 등등 전반적인 난이도에 대해 알려드려요.",
-        className: "track",
-        link: "/track"
-    }
-];
+import * as MainBoxstyled from '../style/components/main/MainBox.style';
+import box from '../../data/main/box';
 
 const MainBox = () => {
+
+    let [boxData] = useState(box);
+
     return (  
         <MainBoxstyled.ContentWrap>
             <MainBoxstyled.MainBoxWrap>
                 <MainBoxstyled.MainBoxList>
-                    {box.map((item, index) => {
+                    {boxData.box.map((item, index) => {
                         return (
-                            <MainBoxstyled.MainBoxItems className={item.className} key={index}>
+                            <MainBoxstyled.MainBoxItems className={item.className} key={index} onClick={() => {index === 3 && alert('준비중인 콘텐츠에요.')}}>
                                 <Link to={item.link}>
                                     <MainBoxstyled.MainBoxInner>
                                         <MainBoxstyled.TxtBox>

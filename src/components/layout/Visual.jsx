@@ -3,7 +3,7 @@ import SwiperCore, { Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import "swiper/css/effect-fade";
 import VisualCenter from "../article/VisualCenter";
-import * as Visualstyled from "../style/Visual.style";
+import * as Visualstyled from "../style/components/main/Visual.style";
 
 const Visual = () => {
 

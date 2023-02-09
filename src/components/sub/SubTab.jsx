@@ -1,7 +1,7 @@
 import tabData from '../../data/tab/tab.json';
 import { useLayoutEffect, useState } from "react";
 import { useLocation , NavLink } from "react-router-dom";
-import * as SubTabstyled from '../style/SubTab.style';
+import * as SubTabstyled from '../style/common/Tab.style';
 
 const SubTab = (props) => {
 
@@ -47,7 +47,7 @@ const SubTab = (props) => {
                     {categoryName.tabDataState.map((item, index) => {
                         return (
                             <SubTabstyled.TabItem key={index} onClick={() => handleItemClick(index)}>
-                                <NavLink to={item.route} className={({isActive}) => isActive ? 'active' : 'disabled'}>{item.name}</NavLink>
+                                <NavLink to={item.route} className={({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
                             </SubTabstyled.TabItem>
                         )})
                     }

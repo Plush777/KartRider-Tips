@@ -1,4 +1,4 @@
-import * as Substyled from '../../../style/Sub.style';
+import * as Substyled from '../../../../components/style/components/sub/Star.style';
 import { useState } from 'react';
 
 const Star = (props) => {

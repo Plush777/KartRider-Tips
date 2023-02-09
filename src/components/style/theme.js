@@ -1,16 +1,16 @@
 const pixelToRem = (size) => `${size / 16}rem`; 
 
 const fontSizes = {
-    t62: pixelToRem(62),
-    t42: pixelToRem(42),
-    t48: pixelToRem(48),
-    t30: pixelToRem(30),
-    st24: pixelToRem(24),
-    d20: pixelToRem(20),
-    d18: pixelToRem(18),
-    d16: pixelToRem(16),
-    d14: pixelToRem(14),
-    d12: pixelToRem(12),
+    f62: pixelToRem(62),
+    f42: pixelToRem(42),
+    f48: pixelToRem(48),
+    f30: pixelToRem(30),
+    f24: pixelToRem(24),
+    f20: pixelToRem(20),
+    f18: pixelToRem(18),
+    f16: pixelToRem(16),
+    f14: pixelToRem(14),
+    f12: pixelToRem(12),
 }
 
 const colors = {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mixins from './mixins';
+import mixins from '../../mixins';
 
 export const VisualCenterWrap = styled.div`
     ${mixins.posCenter}
@@ -11,7 +11,7 @@ export const VisualCenterWrap = styled.div`
 
 export const Vtitle = styled.h2`
     ${mixins.font('Recipekorea', '#fff')}
-    font-size: ${({theme}) => theme.fontSizes.t48};
+    font-size: ${({theme}) => theme.fontSizes.f48};
 `
 
 export const VlogoArea = styled.div`
@@ -35,11 +35,11 @@ export const VDescArea = styled.div`
 export const VDescBold = styled.strong`
     ${mixins.jcc}
     margin-bottom: 5px;
-    font-size: ${({theme}) => theme.fontSizes.d18};
+    font-size: ${({theme}) => theme.fontSizes.f18};
     color: #fff;
 `
 
 export const VDescRegular = styled.p`
-    font-size: ${({theme}) => theme.fontSizes.d14};
+    font-size: ${({theme}) => theme.fontSizes.f14};
     color: #fff;
 `

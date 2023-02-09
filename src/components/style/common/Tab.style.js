@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mixins from './mixins';
+import mixins from '../mixins';
 
 export const TabWrap = styled.div`
     width: 100%;
@@ -30,7 +30,7 @@ export const TabInfoTxt = styled.span`
     ${mixins.whFull}
     ${mixins.font('nexonLv1Gothic','#626262')}
     position: relative;
-    font-size: ${({theme}) => theme.fontSizes.d14};
+    font-size: ${({theme}) => theme.fontSizes.f14};
 
     &::before{
         content: '';
@@ -64,7 +64,7 @@ export const TabItem = styled.li`
         width: 110px;
         height: 50px;
         border-radius: 25px;
-        font-size: ${({theme}) => theme.fontSizes.d18};
+        font-size: ${({theme}) => theme.fontSizes.f18};
 
         &.disabled{
             user-select: none;

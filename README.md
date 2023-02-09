@@ -13,7 +13,7 @@
 
 - article : 독립적으로 쓰이는 컴포넌트들
 - layout : 페이지를 구성하는 기본 요소들
-- style : 페이지의 스타일들을 정의한 폴더 (추후 sub style 다시 정리 필요)
+- style : 페이지의 스타일들을 정의한 폴더
 - sub : 서브 페이지들을 각 카테고리에 맞게 정의한 폴더
 - svg : svg 이미지들
 
@@ -48,16 +48,26 @@
  ┃ ┃ ┣ 📜Header.jsx
  ┃ ┃ ┗ 📜Visual.jsx
  ┃ ┣ 📂style
- ┃ ┃ ┣ 📜Footer.style.js
- ┃ ┃ ┣ 📜Header.style.js
- ┃ ┃ ┣ 📜MainBox.style.js
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┣ 📜Area.style.js
+ ┃ ┃ ┃ ┣ 📜SubVisual.style.js
+ ┃ ┃ ┃ ┗ 📜Tab.style.js
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📂main
+ ┃ ┃ ┃ ┃ ┣ 📜MainBox.style.js
+ ┃ ┃ ┃ ┃ ┣ 📜Visual.style.js
+ ┃ ┃ ┃ ┃ ┗ 📜VisualCenter.style.js
+ ┃ ┃ ┃ ┗ 📂sub
+ ┃ ┃ ┃ ┃ ┣ 📜Intro.style.js
+ ┃ ┃ ┃ ┃ ┣ 📜Item.style.js
+ ┃ ┃ ┃ ┃ ┣ 📜Star.style.js
+ ┃ ┃ ┃ ┃ ┣ 📜TabComponent.style.js
+ ┃ ┃ ┃ ┃ ┗ 📜Tip.style.js
+ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┣ 📜Footer.style.js
+ ┃ ┃ ┃ ┗ 📜Header.style.js
  ┃ ┃ ┣ 📜mixins.js
- ┃ ┃ ┣ 📜Sub.style.js
- ┃ ┃ ┣ 📜SubTab.style.js
- ┃ ┃ ┣ 📜SubVisual.style.js
- ┃ ┃ ┣ 📜theme.js
- ┃ ┃ ┣ 📜Visual.style.js
- ┃ ┃ ┗ 📜VisualCenter.style.js
+ ┃ ┃ ┗ 📜theme.js
  ┃ ┣ 📂sub
  ┃ ┃ ┣ 📂item
  ┃ ┃ ┃ ┣ 📜ItemContents.jsx
@@ -88,6 +98,8 @@
  ┃ ┃ ┣ 📂epic
  ┃ ┃ ┣ 📂legend
  ┃ ┃ ┗ 📂rare
+ ┃ ┣ 📂main
+ ┃ ┃ ┗ 📜box.json
  ┃ ┣ 📂mode
  ┃ ┃ ┣ 📂itemMode
  ┃ ┃ ┃ ┗ 📜contents.json

@@ -6,6 +6,18 @@ let gnb = createSlice({
     initialState: gnbData
 });
 
+let routerScroll = createSlice({
+    name: 'routerScroll',
+    initialState: true,
+
+    reducers: {
+        setRouterScroll: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+});
+
 let subVisualTitle = createSlice({
     name: 'subVisualTitle',
     initialState: {
@@ -20,10 +32,12 @@ let subVisualTitle = createSlice({
 });
 
 export const { setSubVisualTitle } = subVisualTitle.actions;
+export const { setRouterScroll } = routerScroll.actions;
 
 export default configureStore({
     reducer: {
         gnb: gnb.reducer,
-        subVisualTitle: subVisualTitle.reducer
+        subVisualTitle: subVisualTitle.reducer,
+        routerScroll: routerScroll.reducer
     },
 });

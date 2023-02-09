@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mixins from './mixins';
+import mixins from '../mixins';
 
 export const FooterWrap = styled.footer`
     width: 100%;
@@ -27,7 +27,7 @@ export const LogoArea = styled.div`
 `
 
 export const CopyRightArea = styled.div`
-    font-size: ${({theme}) => theme.fontSizes.d12};
+    font-size: ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#a1a1a1')}
 `
 

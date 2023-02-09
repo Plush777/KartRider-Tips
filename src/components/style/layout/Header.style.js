@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mixins from './mixins';
+import mixins from '../mixins';
 
 export const Headers = styled.header`
     position: fixed;
@@ -40,17 +40,24 @@ export const GnbList = styled.ul`
 
 export const GnbItem = styled.li`
     position: relative;
-    font-size: ${({theme}) => theme.fontSizes.d14};
+    font-size: ${({theme}) => theme.fontSizes.f14};
     color: ${(props) => props.className === 'default' ? '#000' : '#CED4DA'};
 
+    &:hover:not(.disabled){
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
     &.disabled{
-        pointer-events: none;
-        user-select: none;
+        >a{
+            pointer-events: none;
+            user-select: none;
+        }
     }
 `
 
 export const ShortArea = styled.div`
     white-space: nowrap;
-    font-size: ${({theme}) => theme.fontSizes.d12};
+    font-size: ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#6C7A89')}
 `

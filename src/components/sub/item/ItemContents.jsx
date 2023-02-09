@@ -1,21 +1,22 @@
-import * as Substyled from '../../style/Sub.style';
+import * as Substyled from '../../../components/style/common/Area.style';
+import * as Itemstyled from '../../../components/style/components/sub/Item.style'
 import parse from 'html-react-parser';
-import BtnTop from '../../article/BtnTop';
+import BtnTop from '../../article/BtnTop'; 
 import React from 'react';
 
 const ItemContents = (props) => {
     return ( 
         <>
-            <Substyled.SubContentsWrap>
-                <Substyled.SubContentsInner>
+            <Substyled.Wrap>
+                <Substyled.Inner>
                     {props.itemContents.item.map((items,index) => {
                         return(
-                            <Substyled.SubContainer key={index}>
+                            <div className="container" key={index}>
 
-                                <Substyled.TitleArea>
-                                    <Substyled.SubTitle>{items.group.title}</Substyled.SubTitle>
-                                    <Substyled.SubDesc>{parse(items.group.description)}</Substyled.SubDesc>
-                                </Substyled.TitleArea>
+                                <div className="titleArea">
+                                    <Substyled.Title>{items.group.title}</Substyled.Title>
+                                    <Substyled.Desc>{parse(items.group.description)}</Substyled.Desc>
+                                </div>
 
                                 <Substyled.ImgWrap>
                                     <Substyled.GroupBox>
@@ -24,7 +25,7 @@ const ItemContents = (props) => {
                                     </Substyled.GroupBox>
                                     <Substyled.ImgBox mt="20px" ml="-7px">
                                         <img src={items.group2.img} alt={items.group2.alt} />
-                                        <Substyled.ImgCaption>{items.group2.caption}</Substyled.ImgCaption>
+                                        <figcaption className="imgCaption">{items.group2.caption}</figcaption>
                                     </Substyled.ImgBox>
                                 </Substyled.ImgWrap>
 
@@ -42,31 +43,31 @@ const ItemContents = (props) => {
 
                                     <Substyled.ListContainer>
                                         <Substyled.ListContainerInner>
-                                            <Substyled.ListWrap>
+                                            <div className="listWrap">
                                                 <Substyled.ListBox>
                                                     {props.itemContents.itemList.map((items,index) => {
                                                         return(
                                                             <Substyled.ListItem key={index}>
-                                                                <Substyled.ItemImgBox>
-                                                                    <Substyled.ItemImg src={items.img} alt={items.alt}/>
-                                                                </Substyled.ItemImgBox>
-                                                                <Substyled.ItemBox>
-                                                                    <Substyled.ItemName>{items.name}</Substyled.ItemName>
-                                                                    <Substyled.ItemDesc>{parse(items.itemDesc)}</Substyled.ItemDesc>
-                                                                    <Substyled.ItemTip>{parse(items.tip)}</Substyled.ItemTip>
-                                                                </Substyled.ItemBox>
+                                                                <Itemstyled.ItemImgBox>
+                                                                    <Itemstyled.ItemImg src={items.img} alt={items.alt}/>
+                                                                </Itemstyled.ItemImgBox>
+                                                                <Itemstyled.ItemBox>
+                                                                    <Itemstyled.ItemName>{items.name}</Itemstyled.ItemName>
+                                                                    <Itemstyled.ItemDesc>{parse(items.itemDesc)}</Itemstyled.ItemDesc>
+                                                                    <Itemstyled.ItemTip>{parse(items.tip)}</Itemstyled.ItemTip>
+                                                                </Itemstyled.ItemBox>
                                                             </Substyled.ListItem>
                                                         )
                                                     })}
                                                 </Substyled.ListBox>
-                                            </Substyled.ListWrap>
+                                            </div>
                                         </Substyled.ListContainerInner>
                                     </Substyled.ListContainer>
                                 </Substyled.GroupContainer>
 
                                 <Substyled.GroupContainer>
                                     <Substyled.SmallTitle>{items.group5.title}</Substyled.SmallTitle>
-                                    <Substyled.GroupList>
+                                    <ul className="groupList">
                                         {props.itemContents.itemTips.map((items,index) => {
                                             return(
                                                 <Substyled.GroupItem key={index} mt="30px">
@@ -75,12 +76,12 @@ const ItemContents = (props) => {
                                                 </Substyled.GroupItem>
                                             )
                                         })}
-                                    </Substyled.GroupList>
+                                    </ul>
                                 </Substyled.GroupContainer>
 
                                 <Substyled.GroupContainer>
                                     <Substyled.SmallTitle>{items.group6.title}</Substyled.SmallTitle>
-                                    <Substyled.GroupList>
+                                    <ul className="groupList">
                                         {props.itemContents.itemTerm.map((items,index) => {
                                             return(
                                                 <Substyled.GroupItem key={index} bullet="''" mt="20px">
@@ -88,13 +89,13 @@ const ItemContents = (props) => {
                                                 </Substyled.GroupItem>
                                             )})
                                         }
-                                    </Substyled.GroupList>
+                                    </ul>
                                 </Substyled.GroupContainer>
-                            </Substyled.SubContainer>
+                            </div>
                         )
                     })}
-                </Substyled.SubContentsInner>
-            </Substyled.SubContentsWrap>
+                </Substyled.Inner>
+            </Substyled.Wrap>
             
             <BtnTop/>
         </>

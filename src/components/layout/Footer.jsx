@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Footerstyled from '../style/Footer.style';
+import * as Footerstyled from '../style/layout/Footer.style';
 import logoGray from '../svg/ico-kart-logo-grayscale.svg';
 
 const Footer = () => {

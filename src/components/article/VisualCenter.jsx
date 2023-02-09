@@ -1,6 +1,6 @@
 import React from 'react';
 import logoWhite from '../svg/ico-kart-logo-white.svg';
-import * as VisualCenterstyled from '../style/VisualCenter.style';
+import * as VisualCenterstyled from '../style/components/main/VisualCenter.style';
 
 const VisualCenter = () => {
     return ( 

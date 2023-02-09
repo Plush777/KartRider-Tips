@@ -1,0 +1,32 @@
+{
+    "box": [
+        {
+            "id": 1,
+            "title": "모드",
+            "desc": "카트라이더 모드들에 대해 설명하고, 각 모드들의 팁을 알려드려요.",
+            "className": "mode",
+            "link": "/mode/speed"
+        },
+        {
+            "id": 2,
+            "title": "카트바디",
+            "desc": "카트라이더 카트바디들에 대해 설명하고, 각 카트바디의 장단점들을 알려드려요.",
+            "className": "cartBody",
+            "link": "/kartbody/common/1"
+        },
+        {
+            "id": 3,
+            "title": "캐릭터",
+            "desc": "카트라이더 캐릭터를 소개합니다!",
+            "className": "character",
+            "link": "/character"
+        },
+        {
+            "id": 4,
+            "title": "트랙",
+            "desc": "카트라이더 트랙들을 소개하고 각 특징과 빌드들을 알려드려요.",
+            "className": "track disabled",
+            "link": "/track"
+        }
+    ]
+}
