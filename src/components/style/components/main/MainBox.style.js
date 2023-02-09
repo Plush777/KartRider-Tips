@@ -28,10 +28,10 @@ export const MainBoxItems = styled.li`
     ${mixins.bgOption}
     transition: .3s ease-in-out;
 
-    &.mode{background-image: url('../images/bg/bg-box-01.webp');}
-    &.cartBody{background-image: url('../images/bg/bg-box-02.webp');}
-    &.character{background-image: url('../images/bg/bg-box-03.webp');}
-    &.track{background-image: url('../images/bg/bg-box-04.webp');}
+    &.mode{background-image: url('/images/bg/bg-box-01.webp');}
+    &.cartBody{background-image: url('/images/bg/bg-box-02.webp');}
+    &.character{background-image: url('/images/bg/bg-box-03.webp');}
+    &.track{background-image: url('/images/bg/bg-box-04.webp');}
     &::after{
         content: '';
         position: absolute;
