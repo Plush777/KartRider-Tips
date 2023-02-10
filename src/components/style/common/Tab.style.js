@@ -67,9 +67,8 @@ export const TabItem = styled.li`
         font-size: ${({theme}) => theme.fontSizes.f18};
 
         &.disabled{
-            user-select: none;
-            pointer-events: none;
-            color: #CED4DA;
+            ${mixins.disabled}
+            color: rgba(0,0,0,0.6);
         }
 
         &.active{

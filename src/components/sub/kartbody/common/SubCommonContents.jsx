@@ -1,14 +1,14 @@
 import * as Substyled from '../../../../components/style/common/Area.style';
 import * as Tabstyled from '../../../style/components/sub/TabComponent.style';
 import * as Introstyled from '../../../style/components/sub/Intro.style';
+import ImgSkeleton from '../../../article/ImgSkeleton';
 import parse from 'html-react-parser';
 import BtnTop from '../../../article/BtnTop';
-import React, { useState , useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams,NavLink } from 'react-router-dom';
 import Star from './Star';
-import skeletonLogo from '../../../../components/svg/ico-kart-logo-grayscale.svg';
 import { useDispatch , useSelector } from 'react-redux';
-import { setRouterScroll } from '../../../../redux/store/store';
+import { setRouterScroll , setImgSkeleton } from '../../../../redux/store/store';
 
 const SubCommonContents = (props) => {
 
@@ -16,22 +16,21 @@ const SubCommonContents = (props) => {
     id = parseInt(id);
     let kartId = props.commonContents.kartDesc.find(x => x.id === id);
     let kartId2 = props.commonContents.kartDescDepth.find(x => x.id === id);
-    let [preview,setPreview] = useState(true);
     let dispatch = useDispatch();
-    let routerScroll = useSelector(state => state.routerScroll);
+    // let routerScroll = useSelector(state => state.routerScroll);
+    let imgSkeleton = useSelector(state => state.imgSkeleton);
+    console.log(imgSkeleton)
 
     useEffect(() => {
-        setTimeout(() => {
-            setPreview(false);
-            return() => {clearTimeout()}
-        },1200)
-    },[preview])
+        let timer = setTimeout(() => {
+            dispatch(setImgSkeleton(false));
+            return () => clearTimeout(timer);
+        },1500)
+    },[dispatch])
 
     const handleScrollState = () => {
         dispatch(setRouterScroll(false));
     }
-
-    console.log(routerScroll);
 
     return ( 
         <>
@@ -90,12 +89,13 @@ const SubCommonContents = (props) => {
                                 </Tabstyled.TabContent>
 
                                 <Tabstyled.TabContent>
-                                    {preview ?
+                                    {imgSkeleton ?
                                     
-                                    <Introstyled.PreviewArea loading="true">
-                                        <img src={skeletonLogo} alt="로딩 중" width="185" height="73"/>
-                                    </Introstyled.PreviewArea> :
-                                    <Introstyled.PreviewArea>
+                                    <Substyled.SkeletonArea ht="305px">
+                                        <ImgSkeleton/>
+                                    </Substyled.SkeletonArea> :
+
+                                    <Introstyled.PreviewArea ht="305px">
                                         <Introstyled.PreviewImg src={kartId2.img} alt={kartId2.alt} />
                                     </Introstyled.PreviewArea>
                                     }

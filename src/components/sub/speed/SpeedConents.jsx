@@ -1,7 +1,12 @@
 import parse from 'html-react-parser';
 import * as Substyled from '../../../components/style/common/Area.style';
-import * as Tipstyled from '../../../components/style/components/sub/Tip.style'
+import * as Tipstyled from '../../../components/style/components/sub/Tip.style';
+import ImgSkeleton from '../../article/ImgSkeleton';
 import BtnTop from '../../article/BtnTop';
+import { useDispatch , useSelector } from 'react-redux';
+import { setImgSkeleton } from '../../../redux/store/store';
+import { useEffect } from 'react';
+import React from 'react';
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
 const pointData2 = ["포인트","10","8","6","5","4","3","2","1","0"];
@@ -11,12 +16,22 @@ const colorStyles = ["#fff","#000","#000","#000","#000","#000","#000","#000","#0
 const bbcStyles = ["#fff","#000","#000","#000","#ddd","#ddd","#ddd","#ddd","#ddd","#000"];
 
 const SubContents = (props) => {
+
+    let dispatch = useDispatch();
+    let imgSkeleton = useSelector(state => state.imgSkeleton);
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+            dispatch(setImgSkeleton(false));
+            return () => clearTimeout(timer);
+        },1500)
+    },[dispatch])
+
     return ( 
         <>
             <Substyled.Wrap>
                 <Substyled.Inner>
                     {props.speedContents.speed.map((item, index) => {
-                        console.log(item);
                         return (
                             <div className="container" key={index}>
                                 <div className="titleArea">
@@ -28,10 +43,19 @@ const SubContents = (props) => {
                                         <Substyled.SmallTitle>{item.group2.title}</Substyled.SmallTitle>
                                         <Substyled.SmallDesc>{parse(item.group2.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
-                                    <Substyled.ImgBox mt="20px" ml="-7px">
-                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
-                                        <figcaption className="imgCaption">{item.group2.caption}</figcaption>
-                                    </Substyled.ImgBox>
+
+                                    {
+                                        imgSkeleton ?
+                                        <Substyled.SkeletonArea wd="1042px" ht="592px">
+                                            <ImgSkeleton/>
+                                        </Substyled.SkeletonArea>:
+
+                                        <Substyled.ImgBox mt="20px" ml="-7px">
+                                            <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
+                                            <figcaption className="imgCaption">{item.group2.caption}</figcaption>
+                                        </Substyled.ImgBox>
+                                    }
+                                    
                                 </Substyled.ImgWrap>
                                 <Substyled.ImgWrap>
                                     <Substyled.GroupBox>
@@ -39,14 +63,29 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group3.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
                                     <Substyled.ImgGroup>
-                                        <Substyled.ImgBox ml="-7px">
-                                            <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
-                                            <figcaption className="imgCaption">{item.group3.caption}</figcaption>
-                                        </Substyled.ImgBox>
-                                        <Substyled.ImgBox ml="-7px">
-                                            <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
-                                            <figcaption className="imgCaption">{item.group3.caption2}</figcaption>
-                                        </Substyled.ImgBox>
+                                        {
+                                            imgSkeleton ?
+                                            
+                                            <React.Fragment>
+                                                <Substyled.SkeletonArea wd="608px" ht="346px">
+                                                    <ImgSkeleton/>
+                                                </Substyled.SkeletonArea>
+                                                <Substyled.SkeletonArea wd="608px" ht="346px">
+                                                    <ImgSkeleton/>
+                                                </Substyled.SkeletonArea>
+                                            </React.Fragment>:
+
+                                             <React.Fragment>
+                                                <Substyled.ImgBox ml="-7px">
+                                                    <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
+                                                    <figcaption className="imgCaption">{item.group3.caption}</figcaption>
+                                                </Substyled.ImgBox>
+                                                <Substyled.ImgBox ml="-7px">
+                                                    <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
+                                                    <figcaption className="imgCaption">{item.group3.caption2}</figcaption>
+                                                </Substyled.ImgBox>
+                                             </React.Fragment>
+                                        }
                                     </Substyled.ImgGroup>
 
                                     <Tipstyled.TipGroup mt="35px">

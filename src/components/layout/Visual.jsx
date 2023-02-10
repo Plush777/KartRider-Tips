@@ -8,10 +8,10 @@ import * as Visualstyled from "../style/components/main/Visual.style";
 const Visual = () => {
 
     const slideImg = [
-        "../images/bg/bg-visual-01.webp",
-        "../images/bg/bg-visual-02.webp",
-        "../images/bg/bg-visual-03.webp",
-        "../images/bg/bg-visual-04.webp"
+        "/images/bg/bg-visual-01.webp",
+        "/images/bg/bg-visual-02.webp",
+        "/images/bg/bg-visual-03.webp",
+        "/images/bg/bg-visual-04.webp"
     ];
 
     SwiperCore.use([Autoplay, EffectFade]);

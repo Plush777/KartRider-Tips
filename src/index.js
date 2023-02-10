@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import store from './redux/store/store';
+import { autoA11yTest } from './utils/a11y';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -38,3 +39,7 @@ if(container.hasChildNodes()){
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// auto accessibility test (axe core)
+// https://www.npmjs.com/package/@axe-core/react
+autoA11yTest();

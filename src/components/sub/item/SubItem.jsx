@@ -17,10 +17,12 @@ const SubItem = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <SubVisual subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
-            <SubTab commonContents={props.commonContents}/>
-            <ItemContents itemContents={props.itemContents}/>
-            <Footer/>
+            <main role="main">
+                <SubVisual/>
+                <SubTab commonContents={props.commonContents}/>
+                <ItemContents itemContents={props.itemContents}/>
+                <Footer/>
+            </main>
         </>
     );
 }

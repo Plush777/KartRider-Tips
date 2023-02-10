@@ -50,7 +50,9 @@ const BtnTop = () => {
         <>
             {isShow &&
                 <BtnArea>
-                    <TopBtn onClick={scrollToTop}/>
+                    <TopBtn onClick={scrollToTop}>
+                        <span className="hidden">위로 올라가기</span>
+                    </TopBtn>
                 </BtnArea>
             }
         </>

@@ -41,17 +41,21 @@ export const GnbList = styled.ul`
 export const GnbItem = styled.li`
     position: relative;
     font-size: ${({theme}) => theme.fontSizes.f14};
-    color: ${(props) => props.className === 'default' ? '#000' : '#CED4DA'};
+    color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
+
+    >a{
+        &.active{
+            ${mixins.active}
+        }
+    }
 
     &:hover:not(.disabled){
-        text-decoration: underline;
-        text-underline-offset: 2px;
+        ${mixins.active}
     }
 
     &.disabled{
         >a{
-            pointer-events: none;
-            user-select: none;
+            ${mixins.disabled}
         }
     }
 `
@@ -59,5 +63,5 @@ export const GnbItem = styled.li`
 export const ShortArea = styled.div`
     white-space: nowrap;
     font-size: ${({theme}) => theme.fontSizes.f12};
-    ${mixins.font('nexonLv1Gothic','#6C7A89')}
+    ${mixins.font('nexonLv1Gothic','#666')}
 `

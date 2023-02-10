@@ -14,11 +14,11 @@ export const Bottom = styled.div`
 
 export const PreviewArea = styled.div`
     ${mixins.fc}
-    height: 305px;
+    width: ${(props) => props.wd};
+    height: ${(props) => props.ht};
     border-radius: 4px;
     background-color: #D9D9D9;
     box-shadow: 0px 5px 5px ${({theme}) => theme.colors.rgbaBlack};
-    ${mixins.skeleton};
 `
 
 export const PreviewImg = styled.img`

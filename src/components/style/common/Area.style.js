@@ -45,7 +45,7 @@ export const MediumTitle = styled.h5`
     }
 `
 
-export const Wrap = styled.main`
+export const Wrap = styled.div`
     width: 100%;
     background-color: #f2f2f2;
 `
@@ -54,6 +54,11 @@ export const Inner = styled.div`
     width: 1300px;
     margin: 0 auto;
     padding: 80px 0;
+`
+
+export const SkeletonArea = styled.div`
+    width: ${(props) => props.wd};
+    height: ${(props) => props.ht};
 `
 
 export const GroupContainer = styled.div`
@@ -74,6 +79,10 @@ export const ImgWrap = styled.div`
 
 export const GroupBox = styled.div`
     &+&{margin-top: 60px;}
+
+    +${SkeletonArea}{
+        margin-top: 20px;
+    }
 `
 
 export const GroupItem = styled.li`

@@ -31,13 +31,27 @@ let subVisualTitle = createSlice({
     }
 });
 
+let imgSkeleton = createSlice({
+    name: 'imgSkeleton',
+    initialState: true,
+
+    reducers: {
+        setImgSkeleton: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+})
+
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
+export const { setImgSkeleton } = imgSkeleton.actions;
 
 export default configureStore({
     reducer: {
         gnb: gnb.reducer,
         subVisualTitle: subVisualTitle.reducer,
-        routerScroll: routerScroll.reducer
+        routerScroll: routerScroll.reducer,
+        imgSkeleton: imgSkeleton.reducer
     },
 });

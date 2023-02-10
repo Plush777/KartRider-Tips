@@ -42,14 +42,14 @@ export const ItemName = styled.strong`
 
 export const ItemDesc = styled.p`
     font-size: ${({theme}) => theme.fontSizes.f14};
-    ${mixins.font('nexonLv1Gothic','#888')};
+    ${mixins.font('nexonLv1Gothic','#555')};
     line-height: 19px;
 `
 
 export const ItemTip = styled.span`
     ${mixins.aic};
     font-size: ${({theme}) => theme.fontSizes.f12};
-    ${mixins.font('nexonLv1Gothic','#999')};
+    ${mixins.font('nexonLv1Gothic','#666')};
 
     &::before{
         content: '*';

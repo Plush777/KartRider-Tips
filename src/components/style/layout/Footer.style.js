@@ -28,7 +28,7 @@ export const LogoArea = styled.div`
 
 export const CopyRightArea = styled.div`
     font-size: ${({theme}) => theme.fontSizes.f12};
-    ${mixins.font('nexonLv1Gothic','#a1a1a1')}
+    ${mixins.font('nexonLv1Gothic','#666')}
 `
 
 export const Copy = styled.p`

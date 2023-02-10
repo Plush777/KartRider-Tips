@@ -17,10 +17,12 @@ const SubSpeed = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <SubVisual subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
-            <SubTab commonContents={props.commonContents} />
-            <SpeedContents speedContents={props.speedContents}/>
-            <Footer/>
+            <main role="main">
+                <SubVisual/>
+                <SubTab commonContents={props.commonContents} />
+                <SpeedContents speedContents={props.speedContents}/>
+                <Footer/>
+            </main>
         </>
      );
 }

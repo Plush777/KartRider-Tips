@@ -32,8 +32,6 @@ const App = () => {
 		}
 	},[pathname,dispatch]);
 
-	console.log(routerScroll);
-
 	return (
 		<>
 			{routerScroll && <RouteScroll/>}

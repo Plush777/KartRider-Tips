@@ -1,5 +1,5 @@
 import * as Headerstyled from "../style/layout/Header.style";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Gnb = () => {
@@ -8,12 +8,13 @@ const Gnb = () => {
 
     return ( 
         <>
-            <Headerstyled.Gnb>
+            <Headerstyled.Gnb role="navigation">
                 <Headerstyled.GnbList>
                     {gnbData.map((item,index) => {
                         return(
-                            <Headerstyled.GnbItem className={item.className} key={index} onClick={() => {index === 3 && alert('준비중인 콘텐츠에요.')}}>
-                                <Link to={item.link}>{item.name}</Link>
+                            <Headerstyled.GnbItem className={item.className} key={index} 
+                            onClick={() => {index === 3 && alert('준비중인 콘텐츠에요.')}}>
+                                <NavLink to={item.link} title={item.name} className={({isActive}) => isActive ? 'active' : null}>{item.name}</NavLink>
                             </Headerstyled.GnbItem>
                         )
                     })}

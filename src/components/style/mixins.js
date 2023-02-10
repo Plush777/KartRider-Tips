@@ -50,12 +50,15 @@ export const font = (f,c) => css`
     color: ${c};
 `
 
-export const skeleton = css`
-    @keyframes skeleton-loading {
-        0% {opacity: .3;}
-        100% {opacity: .8;}   
-    }
-    animation: ${props => props.loading ? 'skeleton-loading 1s linear infinite alternate' : 'none'};
+export const active = css`
+    text-decoration: underline; 
+    text-underline-offset: 2px; 
+    font-weight: 600;
+`
+
+export const disabled = css`
+    pointer-events: none;
+    user-select: none;
 `
 
 const mixins = {
@@ -68,7 +71,8 @@ const mixins = {
     posCenter,
     whFull,
     font,
-    skeleton
+    active,
+    disabled
 }
 
 export default mixins;

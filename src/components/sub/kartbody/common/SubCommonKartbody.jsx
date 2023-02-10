@@ -17,10 +17,12 @@ const SubCommonKartbody = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <SubVisual subTitle={props.subTitle} setSubTitle={props.setSubTitle}/>
-            <SubTab commonContents={props.commonContents}/>
-            <SubCommonContents commonContents={props.commonContents} setScroll={props.setScroll}/>
-            <Footer/>
+            <main role="main">
+                <SubVisual/>
+                <SubTab commonContents={props.commonContents}/>
+                <SubCommonContents commonContents={props.commonContents} setScroll={props.setScroll}/>
+                <Footer/>
+            </main>
         </>
      );
 }
