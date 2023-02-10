@@ -44,13 +44,17 @@ export const GnbItem = styled.li`
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
 
     >a{
-        &.active{
-            ${mixins.active}
-        }
-    }
+        ${mixins.pseudoHover}
 
-    &:hover:not(.disabled){
-        ${mixins.active}
+        &:hover{
+            &::before{
+                width: 100%;
+            }
+        }
+
+        &.active{
+            ${mixins.active};
+        }
     }
 
     &.disabled{

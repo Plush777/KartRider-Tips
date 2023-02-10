@@ -50,9 +50,22 @@ export const font = (f,c) => css`
     color: ${c};
 `
 
+export const pseudoHover = css`
+    &::before{
+        content: '';
+        position: absolute;
+        top: 18px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: ${({theme}) => theme.colors.c000};
+        transition: .3s width ease-in-out;
+    }
+`
+
 export const active = css`
     text-decoration: underline; 
-    text-underline-offset: 2px; 
+    text-underline-offset: 4px; 
     font-weight: 600;
 `
 
@@ -72,6 +85,7 @@ const mixins = {
     whFull,
     font,
     active,
+    pseudoHover,
     disabled
 }
 
