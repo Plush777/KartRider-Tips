@@ -43,20 +43,6 @@ export const GnbItem = styled.li`
     font-size: ${({theme}) => theme.fontSizes.f14};
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
 
-    >a{
-        ${mixins.pseudoHover}
-
-        &:hover{
-            &::before{
-                width: 100%;
-            }
-        }
-
-        &.active{
-            ${mixins.active};
-        }
-    }
-
     &.disabled{
         >a{
             ${mixins.disabled}

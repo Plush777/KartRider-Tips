@@ -20,7 +20,7 @@ const SubCommonKartbody = (props) => {
             <main role="main">
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
-                <SubCommonContents commonContents={props.commonContents} setScroll={props.setScroll}/>
+                <SubCommonContents commonContents={props.commonContents}/>
                 <Footer/>
             </main>
         </>

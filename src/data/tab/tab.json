@@ -15,28 +15,33 @@
     "kartbody": [
         {
             "name": "일반",
-            "route": "/kartbody/common",
-            "className": "default"
+            "route": "/kartbody/common/",
+            "className": "default",
+            "dataName": "common"
         },
         {
             "name": "고급",
-            "route": "/kartbody/advanced",
-            "className": "disabled"
+            "route": "/kartbody/advanced/",
+            "className": "disabled",
+            "dataName": "advanced"
         },
         {
             "name": "희귀",
-            "route": "/kartbody/rare",
-            "className": "disabled"
+            "route": "/kartbody/rare/",
+            "className": "disabled",
+            "dataName": "rare"
         },
         {
             "name": "영웅",
-            "route": "/kartbody/epic",
-            "className": "disabled"
+            "route": "/kartbody/epic/",
+            "className": "disabled",
+            "dataName": "epic"
         },
         {
             "name": "레전드",
-            "route": "/kartbody/legend",
-            "className": "disabled"
+            "route": "/kartbody/legend/",
+            "className": "disabled",
+            "dataName": "legend"
         }
     ]
 }

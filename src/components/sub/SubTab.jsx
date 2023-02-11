@@ -1,6 +1,6 @@
 import tabData from '../../data/tab/tab.json';
-import { useLayoutEffect, useState } from "react";
-import { useLocation , NavLink } from "react-router-dom";
+import { useLayoutEffect, useState , useEffect } from "react";
+import { useLocation , NavLink , useParams } from "react-router-dom";
 import * as SubTabstyled from '../style/common/Tab.style';
 
 const SubTab = (props) => {
@@ -14,6 +14,9 @@ const SubTab = (props) => {
             tabDataState: []
         }
     );
+    let {id} = useParams();
+    id = parseInt(id);
+    let kartId = props.commonContents.kartDescDepth.find(x => x.id === id);
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
@@ -33,10 +36,6 @@ const SubTab = (props) => {
         }
     },[pathname])
 
-    const handleItemClick = idx => {
-        setIsActive(idx);
-    }
-
     return ( 
         <SubTabstyled.TabWrap>
             <SubTabstyled.TabWrapInner>
@@ -46,8 +45,13 @@ const SubTab = (props) => {
                 <SubTabstyled.TabList>
                     {categoryName.tabDataState.map((item, index) => {
                         return (
-                            <SubTabstyled.TabItem key={index} onClick={() => handleItemClick(index)}>
-                                <NavLink to={item.route} className={({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
+                            <SubTabstyled.TabItem key={index}>
+                                {
+                                    pathname.startsWith('/kartbody') ?
+                                    <NavLink to={item.route + kartId.id} className={({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
+                                    :
+                                    <NavLink to={item.route} className={({isActive}) => isActive ? 'active' : item.className}>{item.name}</NavLink>
+                                }
                             </SubTabstyled.TabItem>
                         )})
                     }

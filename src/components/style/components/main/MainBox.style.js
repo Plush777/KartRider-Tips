@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import mixins from '../../mixins';
 
-export const ContentWrap = styled.main`
+export const ContentWrap = styled.div`
     position: relative;
 `
 

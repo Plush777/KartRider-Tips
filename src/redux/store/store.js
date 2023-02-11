@@ -1,5 +1,6 @@
 import { configureStore , createSlice } from "@reduxjs/toolkit";
 import gnbData from "../../data/gnb/gnb";
+import kartbodyCommonData from "../../data/kartbody/common/contents.json"
 
 let gnb = createSlice({
     name: 'gnb',
@@ -41,7 +42,7 @@ let imgSkeleton = createSlice({
             return state;
         }
     }
-})
+});
 
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
@@ -52,6 +53,6 @@ export default configureStore({
         gnb: gnb.reducer,
         subVisualTitle: subVisualTitle.reducer,
         routerScroll: routerScroll.reducer,
-        imgSkeleton: imgSkeleton.reducer
+        imgSkeleton: imgSkeleton.reducer,
     },
 });

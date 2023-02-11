@@ -5,7 +5,7 @@ import Footer from './layout/Footer';
 import Header from './layout/Header';
 import Visual from './layout/Visual';
 
-const Main = (props) => {
+const Main = () => {
     const metaData = {
         title: '카트라이더 아카이브',
 		robots: 'index, follow'
@@ -15,8 +15,10 @@ const Main = (props) => {
         <>  
             <Meta data={metaData}/>
             <Header/>
-            <Visual/>
-            <MainBox/>
+            <main role="main">
+                <Visual/>
+                <MainBox/>
+            </main>
             <Footer/>
         </>
     );
