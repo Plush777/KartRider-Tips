@@ -19,7 +19,6 @@ const SubCommonContents = (props) => {
     let dispatch = useDispatch();
     // let routerScroll = useSelector(state => state.routerScroll);
     let imgSkeleton = useSelector(state => state.imgSkeleton);
-    
 
     useEffect(() => {
         let timer = setTimeout(() => {

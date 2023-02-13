@@ -19,7 +19,7 @@ const SubCommonKartbody = (props) => {
             <Header/>
             <main id='main' role="main">
                 <SubVisual/>
-                <SubTab commonContents={props.commonContents}/>
+                <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>
                 <Footer/>
             </main>

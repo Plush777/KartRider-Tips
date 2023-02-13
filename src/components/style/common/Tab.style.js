@@ -66,14 +66,14 @@ export const TabItem = styled.li`
         border-radius: 25px;
         font-size: ${({theme}) => theme.fontSizes.f18};
 
+        &[class*="Active"]{
+            color: #fff;
+            background-color: ${({theme}) => theme.colors.c333};
+        }
+
         &.disabled{
             ${mixins.disabled}
             color: rgba(0,0,0,0.6);
-        }
-
-        &.active{
-            color: #fff;
-            background-color: ${({theme}) => theme.colors.c333};
         }
     }
 `
