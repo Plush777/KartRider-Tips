@@ -17,7 +17,7 @@ const SubCommonKartbody = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main role="main">
+            <main id='main' role="main">
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
                 <SubCommonContents commonContents={props.commonContents}/>

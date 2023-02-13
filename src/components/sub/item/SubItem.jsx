@@ -17,7 +17,7 @@ const SubItem = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main role="main">
+            <main role="main" id='main'>
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
                 <ItemContents itemContents={props.itemContents}/>

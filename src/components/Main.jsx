@@ -15,7 +15,7 @@ const Main = () => {
         <>  
             <Meta data={metaData}/>
             <Header/>
-            <main role="main">
+            <main role="main" id='main'>
                 <Visual/>
                 <MainBox/>
             </main>

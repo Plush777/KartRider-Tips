@@ -17,6 +17,7 @@ import RouteScroll from './Routes/RouteScroll';
 import { useLocation } from "react-router-dom";
 import { useDispatch , useSelector } from "react-redux";
 import { setRouterScroll } from './redux/store/store';
+import SkipNavigation from './components/SkipNavigation';
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
@@ -34,6 +35,7 @@ const App = () => {
 
 	return (
 		<>
+			<SkipNavigation/>
 			{routerScroll && <RouteScroll/>}
 			<GlobalStyle/>
 			<ThemeProvider theme={theme} mixins={mixins}>
