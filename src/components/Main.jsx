@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Meta from '../Meta/MetaTag';
 import MainBox from './article/MainBox';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
 import Visual from './layout/Visual';
+import Started from '../components/Started';
+import { useDispatch , useSelector } from "react-redux";
+import { setStartState } from '../redux/store/store';
 
 const Main = () => {
+    let dispatch = useDispatch();
+    let started = useSelector(state => state.startState);
+
+    useEffect(() => {
+        let timer = setTimeout(() => {
+            dispatch(setStartState(false));
+            return () => clearTimeout(timer);
+        }, 3000);
+    },[dispatch])
+
     const metaData = {
         title: '카트라이더 아카이브',
 		robots: 'index, follow'
@@ -13,13 +26,19 @@ const Main = () => {
 
     return ( 
         <>  
-            <Meta data={metaData}/>
-            <Header/>
-            <main role="main" id='main'>
-                <Visual/>
-                <MainBox/>
-            </main>
-            <Footer/>
+            {
+                started ? <Started/> 
+                :
+                <React.Fragment>
+                    <Meta data={metaData}/>
+                    <Header/>
+                    <main role="main" id='main'>
+                        <Visual/>
+                        <MainBox/>
+                    </main>
+                    <Footer/>
+                </React.Fragment>
+            }
         </>
     );
 }

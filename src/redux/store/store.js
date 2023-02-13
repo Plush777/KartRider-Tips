@@ -44,9 +44,22 @@ let imgSkeleton = createSlice({
     }
 });
 
+let startState = createSlice({
+    name: 'startState',
+    initialState: true,
+
+    reducers: {
+        setStartState: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+})
+
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
 export const { setImgSkeleton } = imgSkeleton.actions;
+export const { setStartState } = startState.actions;
 
 export default configureStore({
     reducer: {
@@ -54,5 +67,6 @@ export default configureStore({
         subVisualTitle: subVisualTitle.reducer,
         routerScroll: routerScroll.reducer,
         imgSkeleton: imgSkeleton.reducer,
+        startState: startState.reducer
     },
 });
