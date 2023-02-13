@@ -1,7 +1,16 @@
 # kartrider archive
 
+## 인트로 참고
+<br/>
+
+Line | https://line.me/ko/<br/>
+NC SOFT | https://kr.ncsoft.com/kr/index.do
+
+<br/><br/>
+
 ## 메인 참고
 <br/>
+
 velog | https://velog.io/<br/>
 지적측량 바로처리센터 | https://baro.lx.or.kr/main.do<br/>
 넥슨 카트라이더 개발자센터 | https://developers.nexon.com/kart<br/>
@@ -16,7 +25,8 @@ velog | https://velog.io/<br/>
 크레이지 아케이드 | https://ca.nexon.com/Info/Character<br/>
 오리온 | https://www.orionworld.com/goods/view/26?page=1&goodsno=5&category=0101&keyname=&keyword=&badge=
 <br/>
-오버워치 | https://overwatch.blizzard.com/ko-kr/heroes/
+오버워치 | https://overwatch.blizzard.com/ko-kr/heroes/<br/>
+카카오 | https://www.kakaocorp.com/page/
 
 <br/><br/>
 
@@ -46,3 +56,9 @@ TmonMonsori Black<br/>
 Azonix Regular<br/>
 Recipe Korea<br/>
 Pretendard
+
+<br/><br/>
+
+## 파비콘
+
+Free Favicon Maker | https://formito.com/tools/favicon
