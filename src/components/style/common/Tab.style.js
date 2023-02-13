@@ -66,7 +66,7 @@ export const TabItem = styled.li`
         border-radius: 25px;
         font-size: ${({theme}) => theme.fontSizes.f18};
 
-        &[class*="Active"]{
+        &.active,&[class*="Active"]{
             color: #fff;
             background-color: ${({theme}) => theme.colors.c333};
         }
