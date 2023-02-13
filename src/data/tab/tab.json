@@ -16,31 +16,26 @@
         {
             "name": "일반",
             "route": "/kartbody/common/1",
-            "className": "default",
             "dataName": "common"
         },
         {
             "name": "고급",
             "route": "/kartbody/advanced/1",
-            "className": "disabled",
             "dataName": "advanced"
         },
         {
             "name": "희귀",
             "route": "/kartbody/rare/1",
-            "className": "disabled",
             "dataName": "rare"
         },
         {
             "name": "영웅",
             "route": "/kartbody/epic/1",
-            "className": "disabled",
             "dataName": "epic"
         },
         {
             "name": "레전드",
             "route": "/kartbody/legend/1",
-            "className": "disabled",
             "dataName": "legend"
         }
     ]

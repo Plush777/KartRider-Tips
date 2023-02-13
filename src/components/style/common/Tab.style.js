@@ -71,7 +71,7 @@ export const TabItem = styled.li`
             background-color: ${({theme}) => theme.colors.c333};
         }
 
-        &.disabled{
+        &.advanced,&.rare,&.epic,&.legend{
             ${mixins.disabled}
             color: rgba(0,0,0,0.6);
         }
