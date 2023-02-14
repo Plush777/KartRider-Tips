@@ -20,7 +20,7 @@ const Main = () => {
     },[dispatch])
 
     const metaData = {
-        title: '카트라이더 아카이브',
+        title: 'KartRider Tips',
 		robots: 'index, follow'
     }
 

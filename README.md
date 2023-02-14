@@ -1,13 +1,11 @@
-# Kartrider-archive
-카트라이더를 기억하고 기록하는 공간. 카트라이더 아카이브
+# KartRider-Tips
+카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.
 
 디자인 : https://www.figma.com/file/qYIvf9SGHXZzqOvyfqfQuB/KARTRIDER-ARCHIVE?node-id=29%3A153&t=pTPgmPkWqcSNZFE2-1 <br/><br/>
 
 목표 배포일 : 4월 2일
 <br/><br/>
 ## 📁폴더 구조
-
-<br/>
 
 ### ✨components : 한 페이지에 쓰이는 레이아웃들을 역할별로 쪼개서 넣어둔 폴더
 

@@ -22,7 +22,6 @@ export const HeaderInner = styled.div`
 export const Logo = styled.h1`
     img{
         width: 86px;
-        height: 32px;
     }
 `
 

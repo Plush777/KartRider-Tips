@@ -24,6 +24,9 @@ export const LogoArea = styled.div`
         margin: 0 10px;
         background-color: #ccc;
     }
+    >img{
+        width: 86px;
+    }
 `
 
 export const CopyRightArea = styled.div`

@@ -9,7 +9,7 @@ import Meta from '../../../Meta/MetaTag';
 const SubSpeed = (props) => {
 
     const metaData = {
-        title: '카트라이더 아카이브 | 모드 | 스피드전',
+        title: 'KartRider Tips | 모드 | 스피드전',
         robots: 'index, follow'
     }
     

@@ -9,7 +9,7 @@ import Meta from '../../../../Meta/MetaTag';
 const SubCommonKartbody = (props) => {
 
     const metaData = {
-        title: '카트라이더 아카이브 | 카트바디 | 일반',
+        title: 'KartRider Tips | 카트바디 | 일반',
         robots: 'index, follow'
     }
 

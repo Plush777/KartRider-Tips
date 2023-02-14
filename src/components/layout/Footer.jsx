@@ -8,10 +8,10 @@ const Footer = () => {
             <Footerstyled.FooterWrap>
                 <Footerstyled.FooterInner>
                     <Footerstyled.LogoArea>
-                        <img src={logoGray} alt="푸터 카트라이더 아카이브 로고"/>
+                        <img src={logoGray} alt="푸터 카트라이더 팁스 로고"/>
                     </Footerstyled.LogoArea>
                     <Footerstyled.CopyRightArea>
-                        <Footerstyled.Copy>2023 KARTRIDER ARCHIVE</Footerstyled.Copy>
+                        <Footerstyled.Copy>2023 KARTRIDER TIPS</Footerstyled.Copy>
                     </Footerstyled.CopyRightArea>
                 </Footerstyled.FooterInner>
             </Footerstyled.FooterWrap>
