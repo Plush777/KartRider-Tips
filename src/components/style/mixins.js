@@ -45,6 +45,11 @@ export const whFull = css`
     height: 100%;
 `
 
+export const inner = css`
+    width: 1300px;
+    margin: 0 auto;
+`
+
 export const font = (f,c) => css`
     font-family: ${f};
     color: ${c};
@@ -64,6 +69,7 @@ const mixins = {
     bgOption,
     posCenter,
     whFull,
+    inner,
     font,
     disabled
 }

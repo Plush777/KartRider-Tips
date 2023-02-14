@@ -8,8 +8,7 @@ export const FooterWrap = styled.footer`
 `
 
 export const FooterInner = styled.div`
-    width: 1300px;
-    margin: 0 auto;
+    ${mixins.inner}
     ${mixins.aic}
     padding: 30px 15px;
 `

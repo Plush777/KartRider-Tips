@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Meta from '../Meta/MetaTag';
 import MainBox from './article/MainBox';
+import FootDonate from './article/FootDonate';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
 import Visual from './layout/Visual';
@@ -36,6 +37,7 @@ const Main = () => {
                         <Visual/>
                         <MainBox/>
                     </main>
+                    <FootDonate/>
                     <Footer/>
                 </React.Fragment>
             }

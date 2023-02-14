@@ -5,6 +5,7 @@ import Header from '../../../layout/Header';
 import Footer from '../../../layout/Footer';
 import SubCommonContents from './SubCommonContents';
 import Meta from '../../../../Meta/MetaTag';
+import FootDonate from '../../../article/FootDonate';
 
 const SubCommonKartbody = (props) => {
 
@@ -21,6 +22,7 @@ const SubCommonKartbody = (props) => {
                 <SubVisual/>
                 <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>
+                <FootDonate/>
                 <Footer/>
             </main>
         </>

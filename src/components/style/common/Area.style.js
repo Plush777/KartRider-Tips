@@ -51,8 +51,7 @@ export const Wrap = styled.div`
 `
 
 export const Inner = styled.div`
-    width: 1300px;
-    margin: 0 auto;
+    ${mixins.inner}
     padding: 80px 0;
 `
 

@@ -9,9 +9,8 @@ export const TabWrap = styled.div`
 
 export const TabWrapInner = styled.div`
     display: flex;
-    width: 1300px;
+    ${mixins.inner}
     height: 100%;
-    margin: 0 auto;
     padding: 15px 0;
 `
 

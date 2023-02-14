@@ -58,7 +58,7 @@ const Started = () => {
                     <Img src={logoBlack} alt="logo"/>
                 </div>
                 <TxtArea>
-                    <Txt>카트라이더를 기억하고<br/>기록하는 공간</Txt>
+                    <Txt>카트라이더 초심자를 위한<br/>여러가지 정보들을 제공합니다.</Txt>
                 </TxtArea>
             </Contents>
         </Wrap>

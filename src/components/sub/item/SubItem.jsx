@@ -5,6 +5,7 @@ import Header from '../../layout/Header';
 import Footer from '../../layout/Footer';
 import ItemContents from './ItemContents';
 import Meta from '../../../Meta/MetaTag';
+import FootDonate from '../../article/FootDonate';
 
 const SubItem = (props) => {
 
@@ -21,6 +22,7 @@ const SubItem = (props) => {
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
                 <ItemContents itemContents={props.itemContents}/>
+                <FootDonate/>
                 <Footer/>
             </main>
         </>

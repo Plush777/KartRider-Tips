@@ -50,7 +50,7 @@ const Notfound = () => {
     const navigate = useNavigate();
 
     const metaData = {
-        title: '카트라이더 아카이브 | 404',
+        title: 'KartRider Tips | 404',
         robots: 'noindex, nofollow'
     }
 

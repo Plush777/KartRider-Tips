@@ -14,9 +14,8 @@ export const Headers = styled.header`
 
 export const HeaderInner = styled.div`
     ${mixins.aic}
-    width: 1300px;
+    ${mixins.inner}
     height: 100%;
-    margin: 0 auto;
 `
 
 export const Logo = styled.h1`
