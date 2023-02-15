@@ -14,7 +14,7 @@ const gnb = [
     {
         id: 3,
         name: '캐릭터',
-        link: '/character',
+        link: '/character/common',
         className: 'default'
     },
     {

@@ -24,7 +24,7 @@ figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; mar
 #root{min-height: 100%;}
 &::-webkit-scrollbar{width: 9px; height: 9px;}
 &::-webkit-scrollbar-button,&::-webkit-scrollbar-track {display: none;}
-&::-webkit-scrollbar-thumb {border-radius: 20px; background: #ccc;}
+&::-webkit-scrollbar-thumb {border-radius: 20px; background: rgba(0,0,0,.2);}
 
 table{width: 100%;
   td{height: 40px; font-size: 16px; font-family: 'nexonLv1Gothic'; text-align: center; 

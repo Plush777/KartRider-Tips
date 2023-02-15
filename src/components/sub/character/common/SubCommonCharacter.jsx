@@ -1,16 +1,15 @@
-import React from 'react';
-import SubTab from '../../SubTab';
-import SubVisual from '../../SubVisual';
+import SubTab from "../../SubTab";
+import SubVisual from "../../SubVisual";
 import Header from '../../../layout/Header';
 import Footer from '../../../layout/Footer';
-import SubCommonContents from './SubCommonContents';
 import Meta from '../../../../Meta/MetaTag';
 import FootSupport from '../../../article/FootSupport';
+import Character from "./Character";
 
-const SubCommonKartbody = (props) => {
+const SubCommonCharacter = props => {
 
     const metaData = {
-        title: 'KartRider Tips | 카트바디 | 일반',
+        title: 'KartRider Tips | 캐릭터 | 일반',
         robots: 'index, follow'
     }
 
@@ -21,12 +20,12 @@ const SubCommonKartbody = (props) => {
             <main id='main' role="main">
                 <SubVisual/>
                 <SubTab/>
-                <SubCommonContents commonContents={props.commonContents}/>
+                <Character characterCommonContents={props.characterCommonContents}/>
                 <FootSupport/>
                 <Footer/>
             </main>
         </>
-     );
+    );
 }
 
-export default SubCommonKartbody;
+export default SubCommonCharacter;

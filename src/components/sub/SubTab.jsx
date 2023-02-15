@@ -30,6 +30,12 @@ const SubTab = () => {
                 tabInfoTxt: '카트바디',
                 tabDataState: tabData.kartbody
             });
+        } else if(pathname.startsWith('/character')){
+            setCategoryName({
+                imgNum: '3',
+                tabInfoTxt: '캐릭터',
+                tabDataState: tabData.character
+            });
         }
     },[pathname])
 

@@ -159,3 +159,7 @@ export const Td = styled.td`
     color: ${(props) => props.color};
     background-color: ${(props) => props.bg};
 `
+export const TitleArea = styled.div`
+    padding-bottom: ${(props) => props.pb && '20px'};
+    border-bottom: ${(props) => props.bb && '7px solid #dedede'};
+`

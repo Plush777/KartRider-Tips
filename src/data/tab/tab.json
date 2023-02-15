@@ -38,5 +38,33 @@
             "route": "/kartbody/legend/1",
             "dataName": "legend"
         }
+    ],
+
+    "character": [
+        {
+            "name": "일반",
+            "route": "/character/common",
+            "dataName": "common"
+        },
+        {
+            "name": "고급",
+            "route": "/character/advanced",
+            "dataName": "advanced"
+        },
+        {
+            "name": "희귀",
+            "route": "/character/rare",
+            "dataName": "rare"
+        },
+        {
+            "name": "영웅",
+            "route": "/character/epic",
+            "dataName": "epic"
+        },
+        {
+            "name": "레전드",
+            "route": "/character/legend",
+            "dataName": "legend"
+        }
     ]
 }

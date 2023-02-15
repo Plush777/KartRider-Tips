@@ -5,7 +5,7 @@ import Header from '../../layout/Header';
 import Footer from '../../layout/Footer';
 import SpeedContents from './SpeedConents';
 import Meta from '../../../Meta/MetaTag';
-import FootDonate from '../../article/FootDonate';
+import FootSupport from '../../article/FootSupport';
 
 const SubSpeed = (props) => {
 
@@ -22,7 +22,7 @@ const SubSpeed = (props) => {
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents} />
                 <SpeedContents speedContents={props.speedContents}/>
-                <FootDonate/>
+                <FootSupport/>
                 <Footer/>
             </main>
         </>

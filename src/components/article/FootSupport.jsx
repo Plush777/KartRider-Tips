@@ -18,12 +18,12 @@ const Txt = styled(Link)`
     >strong{margin-right: 3px;}
 `
 
-const FootDonate = () => {
+const FootSupport = () => {
     return ( 
         <Bar>
-            <Txt to="/donate"><strong>KartRider Tips</strong>후원하기</Txt>
+            <Txt to="#"><strong>KartRider Tips Beta</strong>피드백 남기기</Txt>
         </Bar>
     );
 }
 
-export default FootDonate;
+export default FootSupport;

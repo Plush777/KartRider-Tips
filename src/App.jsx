@@ -6,9 +6,11 @@ import { Route, Routes } from "react-router-dom";
 import SubSpeed from "./components/sub/speed/SubSpeed";
 import SubItem from "./components/sub/item/SubItem";
 import SubCommonKartbody from "./components/sub/kartbody/common/SubCommonKartbody";
+import SubCommonCharacter from "./components/sub/character/common/SubCommonCharacter";
 import itemContentsData from './data/mode/itemMode/contents.json';
 import speedContentsData from './data/mode/speedMode/contents.json';
-import kartbodyCommonContentsData from './data/kartbody/common/contents.json'
+import kartbodyCommonContentsData from './data/kartbody/common/contents.json';
+import characterCommonContentsData from './data/character/common/contents.json';
 import Notfound from "./components/Notfound";
 import { ThemeProvider } from 'styled-components';
 import theme from './components/style/theme';
@@ -23,6 +25,7 @@ const App = () => {
 	let [itemContents] = useState(itemContentsData);
     let [speedContents] = useState(speedContentsData);
 	let [commonContents] = useState(kartbodyCommonContentsData);
+	let [characterCommonContents] = useState(characterCommonContentsData);
 	const { pathname } = useLocation();
 	let dispatch = useDispatch();
 	let routerScroll = useSelector(state => state.routerScroll);
@@ -44,6 +47,7 @@ const App = () => {
 					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
 					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents}/>}/>
+					<Route path="/character/common" element={<SubCommonCharacter characterCommonContents={characterCommonContents}/>}/>
 					<Route path="*" element={<Notfound/>} />
         		</Routes>
 			</ThemeProvider>

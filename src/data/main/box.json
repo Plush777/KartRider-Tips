@@ -19,7 +19,7 @@
             "title": "캐릭터",
             "desc": "카트라이더 캐릭터를 소개합니다!",
             "className": "character",
-            "link": "/character"
+            "link": "/character/common"
         },
         {
             "id": 4,
