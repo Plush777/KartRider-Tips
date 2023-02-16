@@ -1,4 +1,5 @@
-import logoBlack from 'components/svg/ico-kart-logo-black.svg';
+// import logoBlack from 'components/svg/ico-kart-logo-black.svg';
+import logoBlackBeta from 'components/svg/ico-kart-logo-black-beta.svg';
 import { Link } from 'react-router-dom';
 import * as Headerstyled from "components/style/layout/Header.style";
 import Gnb from './Gnb';
@@ -6,11 +7,11 @@ import Gnb from './Gnb';
 const Header = () => {
 
     return(
-        <Headerstyled.Headers role="banner">
+        <Headerstyled.Headers>
             <Headerstyled.HeaderInner>
                 <Headerstyled.Logo>
-                    <Link to="/" title="카트라이더 아카이브 로고">
-                        <img src={logoBlack} alt="카트라이더 아카이브 로고"/>
+                    <Link to="/" title="카트라이더 팁스 로고">
+                        <img src={logoBlackBeta} alt="카트라이더 팁스 로고"/>
                     </Link>
                 </Headerstyled.Logo>
                 <Gnb/>

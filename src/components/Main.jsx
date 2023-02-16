@@ -33,7 +33,7 @@ const Main = () => {
                 <React.Fragment>
                     <Meta data={metaData}/>
                     <Header/>
-                    <main role="main" id='main'>
+                    <main id='main'>
                         <Visual/>
                         <MainBox/>
                     </main>

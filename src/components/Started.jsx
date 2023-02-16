@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import mixins from "components/style/mixins";
-import logoBlack from 'components/svg/ico-kart-logo-black.svg';
+// import logoBlack from 'components/svg/ico-kart-logo-black.svg';
+import logoBlackBeta from 'components/svg/ico-kart-logo-black-beta.svg';
 
 const Wrap = styled.div`
     position: fixed;
@@ -55,7 +56,7 @@ const Started = () => {
         <Wrap>
             <Contents>
                 <div className="imgArea">
-                    <Img src={logoBlack} alt="logo"/>
+                    <Img src={logoBlackBeta} alt="logo"/>
                 </div>
                 <TxtArea>
                     <Txt>카트라이더 초심자를 위한<br/>여러가지 정보들을 제공합니다.</Txt>
