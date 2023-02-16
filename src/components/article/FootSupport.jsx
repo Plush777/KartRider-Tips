@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import mixins from 'components/style/mixins';
 
 const Bar = styled.div`
@@ -8,7 +7,7 @@ const Bar = styled.div`
     background-color: #4A8FE1;
 `
 
-const Txt = styled(Link)`
+const Txt = styled.a`
     ${mixins.whFull}
     ${mixins.aic}
     ${mixins.inner}
@@ -21,7 +20,7 @@ const Txt = styled(Link)`
 const FootSupport = () => {
     return ( 
         <Bar>
-            <Txt to="#"><strong>KartRider Tips Beta</strong>피드백 남기기</Txt>
+            <Txt href="https://map64wlb3a2.typeform.com/to/vGp6k1Nc" target="_blank" rel="noopener noreferrer"><strong>KartRider Tips Beta</strong>피드백 남기기</Txt>
         </Bar>
     );
 }
