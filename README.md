@@ -1,6 +1,6 @@
 # KartRider-Tips
 
-![image](https://user-images.githubusercontent.com/87457620/219304105-084c77e8-c12a-4268-a130-6c565db14e1e.png)
+![프로젝트 썸네일](https://user-images.githubusercontent.com/87457620/219304397-dee7f30f-7e9e-46fe-90af-b1d0d54bfb0f.png)
 
 <br>
 
