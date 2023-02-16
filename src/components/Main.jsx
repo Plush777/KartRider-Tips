@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import Meta from '../Meta/MetaTag';
-import MainBox from './article/MainBox';
-import FootSupport from './article/FootSupport';
-import Footer from './layout/Footer';
-import Header from './layout/Header';
-import Visual from './layout/Visual';
-import Started from '../components/Started';
+import Meta from 'Meta/MetaTag';
+import MainBox from 'components/article/MainBox';
+import FootSupport from 'components/article/FootSupport';
+import Footer from 'components/layout/Footer';
+import Header from 'components/layout/Header';
+import Visual from 'components/layout/Visual';
+import Started from 'components/Started';
 import { useDispatch , useSelector } from "react-redux";
-import { setStartState } from '../redux/store/store';
+import { setStartState } from 'redux/store/store';
 
 const Main = () => {
     let dispatch = useDispatch();

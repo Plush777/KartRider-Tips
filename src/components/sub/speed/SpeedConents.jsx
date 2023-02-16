@@ -1,10 +1,10 @@
 import parse from 'html-react-parser';
-import * as Substyled from '../../../components/style/common/Area.style';
-import * as Tipstyled from '../../../components/style/components/sub/Tip.style';
-import ImgSkeleton from '../../article/ImgSkeleton';
-import BtnTop from '../../article/BtnTop';
+import * as Substyled from 'components/style/common/Area.style';
+import * as Tipstyled from 'components/style/components/sub/Tip.style';
+import ImgSkeleton from 'components/article/ImgSkeleton';
+import BtnTop from 'components/article/BtnTop';
 import { useDispatch , useSelector } from 'react-redux';
-import { setImgSkeleton } from '../../../redux/store/store';
+import { setImgSkeleton } from 'redux/store/store';
 import { useEffect } from 'react';
 import React from 'react';
 

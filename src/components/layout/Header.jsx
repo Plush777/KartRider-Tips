@@ -1,6 +1,6 @@
-import logoBlack from '../svg/ico-kart-logo-black.svg';
+import logoBlack from 'components/svg/ico-kart-logo-black.svg';
 import { Link } from 'react-router-dom';
-import * as Headerstyled from "../style/layout/Header.style";
+import * as Headerstyled from "components/style/layout/Header.style";
 import Gnb from './Gnb';
 
 const Header = () => {

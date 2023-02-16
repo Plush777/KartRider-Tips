@@ -1,7 +1,7 @@
-import * as Substyled from '../../../components/style/common/Area.style';
-import * as Itemstyled from '../../../components/style/components/sub/Item.style'
+import * as Substyled from 'components/style/common/Area.style';
+import * as Itemstyled from 'components/style/components/sub/Item.style'
 import parse from 'html-react-parser';
-import BtnTop from '../../article/BtnTop'; 
+import BtnTop from 'components/article/BtnTop'; 
 import React from 'react';
 
 const ItemContents = (props) => {

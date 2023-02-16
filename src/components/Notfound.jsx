@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
-import Meta from '../Meta/MetaTag';
-import mixins from "./style/mixins";
+import Meta from 'Meta/MetaTag';
+import mixins from "components/style/mixins";
 
 const FlexContainer = styled.div`
     ${mixins.fcc}

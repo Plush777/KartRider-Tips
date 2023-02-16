@@ -2,16 +2,16 @@ import { SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, EffectFade } from 'swiper';
 import 'swiper/css';
 import "swiper/css/effect-fade";
-import VisualCenter from "../article/VisualCenter";
-import * as Visualstyled from "../style/components/main/Visual.style";
+import VisualCenter from "components/article/VisualCenter";
+import * as Visualstyled from "components/style/components/main/Visual.style";
 
 const Visual = () => {
 
     const slideImg = [
-        "/images/bg/bg-visual-01.webp",
-        "/images/bg/bg-visual-02.webp",
-        "/images/bg/bg-visual-03.webp",
-        "/images/bg/bg-visual-04.webp"
+        "images/bg/bg-visual-01.webp",
+        "images/bg/bg-visual-02.webp",
+        "images/bg/bg-visual-03.webp",
+        "images/bg/bg-visual-04.webp"
     ];
 
     SwiperCore.use([Autoplay, EffectFade]);

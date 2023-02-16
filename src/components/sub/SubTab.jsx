@@ -1,7 +1,7 @@
 import tabData from '../../data/tab/tab.json';
 import { useLayoutEffect, useState } from "react";
 import { useLocation , NavLink } from "react-router-dom";
-import * as SubTabstyled from '../style/common/Tab.style';
+import * as SubTabstyled from 'components/style/common/Tab.style';
 
 const SubTab = () => {
 

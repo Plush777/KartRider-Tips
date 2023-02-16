@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
-import BtnTop from '../../../article/BtnTop';
-import * as Substyled from '../../../../components/style/common/Area.style';
-import * as Cardstyled from '../../../../components/style/components/sub/Card.style';
+import BtnTop from 'components/article/BtnTop';
+import * as Substyled from 'components/style/common/Area.style';
+import * as Cardstyled from 'components/style/components/sub/Card.style';
 
 const Character = props => {
     return ( 

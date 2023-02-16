@@ -1,4 +1,4 @@
-import * as Headerstyled from "../style/layout/Header.style";
+import * as Headerstyled from "components/style/layout/Header.style";
 import { useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
 

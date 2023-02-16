@@ -1,14 +1,14 @@
-import * as Substyled from '../../../../components/style/common/Area.style';
-import * as Tabstyled from '../../../style/components/sub/TabComponent.style';
-import * as Introstyled from '../../../style/components/sub/Intro.style';
-import ImgSkeleton from '../../../article/ImgSkeleton';
+import * as Substyled from 'components/style/common/Area.style';
+import * as Tabstyled from 'components/style/components/sub/TabComponent.style';
+import * as Introstyled from 'components/style/components/sub/Intro.style';
+import ImgSkeleton from 'components/article/ImgSkeleton';
 import parse from 'html-react-parser';
-import BtnTop from '../../../article/BtnTop';
+import BtnTop from 'components/article/BtnTop';
 import React, { useEffect } from 'react';
 import { useParams,NavLink } from 'react-router-dom';
-import Star from './Star';
+import Star from 'components/sub/kartbody/common/Star';
 import { useDispatch , useSelector } from 'react-redux';
-import { setRouterScroll , setImgSkeleton } from '../../../../redux/store/store';
+import { setRouterScroll , setImgSkeleton } from 'redux/store/store';
 
 const SubCommonContents = (props) => {
 

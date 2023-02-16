@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import * as MainBoxstyled from '../style/components/main/MainBox.style';
-import box from '../../data/main/box';
+import * as MainBoxstyled from 'components/style/components/main/MainBox.style';
+import box from 'data/main/box';
 
 const MainBox = () => {
 

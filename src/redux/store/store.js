@@ -1,6 +1,5 @@
 import { configureStore , createSlice } from "@reduxjs/toolkit";
-import gnbData from "../../data/gnb/gnb";
-import kartbodyCommonData from "../../data/kartbody/common/contents.json"
+import gnbData from "data/gnb/gnb";
 
 let gnb = createSlice({
     name: 'gnb',

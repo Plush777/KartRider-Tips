@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import React, { useState , useEffect } from "react"
-import mixins from "../../components/style/mixins"
+import mixins from "components/style/mixins"
 
 const BtnArea = styled.div`
     position: fixed;

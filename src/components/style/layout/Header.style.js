@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import mixins from '../mixins';
+import mixins from 'components/style/mixins';
 
 export const Headers = styled.header`
     position: fixed;

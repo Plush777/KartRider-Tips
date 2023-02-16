@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import mixins from '../style/mixins';
+import mixins from 'components/style/mixins';
 
 const Bar = styled.div`
     width: 100%;
