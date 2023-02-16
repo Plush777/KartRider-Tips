@@ -1,4 +1,9 @@
 # KartRider-Tips
+
+![image](https://user-images.githubusercontent.com/87457620/219304105-084c77e8-c12a-4268-a130-6c565db14e1e.png)
+
+<br>
+
 카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.
 
 디자인 : https://www.figma.com/file/qYIvf9SGHXZzqOvyfqfQuB/KARTRIDER-ARCHIVE?node-id=29%3A153&t=pTPgmPkWqcSNZFE2-1 <br/><br/>
