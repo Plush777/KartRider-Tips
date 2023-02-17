@@ -20,6 +20,7 @@ svg{fill: currentColor;}
 .hidden{display: block; width: 0;height: 0; margin: 0; padding: 0; line-height: 0; font-size: 0;overflow: hidden;}
 figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
 
 #root{min-height: 100%;}
 &::-webkit-scrollbar{width: 14px;}
