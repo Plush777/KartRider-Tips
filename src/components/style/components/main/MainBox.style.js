@@ -81,6 +81,7 @@ export const Title = styled.h3`
     font-size: ${({theme}) => theme.fontSizes.f30};
     color: #fff;
     margin-bottom: 12px;
+    font-weight: 600;
 `
 
 export const Desc = styled.p`

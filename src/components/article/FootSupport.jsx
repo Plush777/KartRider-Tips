@@ -4,7 +4,7 @@ import mixins from 'components/style/mixins';
 const Bar = styled.div`
     width: 100%;
     height: 48px;
-    background-color: #4A8FE1;
+    background-color: #1C559C;
 `
 
 const Txt = styled.a`
@@ -13,8 +13,8 @@ const Txt = styled.a`
     ${mixins.inner}
     ${mixins.font('nexonLv1Gothic','#fff')}
     font-size: .875rem;
-
-    >strong{margin-right: 3px;}
+    
+    >strong{margin-right: 3px;font-weight: normal;}
 `
 
 const FootSupport = () => {

@@ -10,7 +10,7 @@
         {
             "id": 2,
             "title": "카트바디",
-            "desc": "카트라이더 카트바디들에 대해 설명하고, 각 카트바디의 장단점들을 알려드려요.",
+            "desc": "카트라이더 카트바디들을 소개해드려요.",
             "className": "cartBody",
             "link": "/kartbody/common/1"
         },
@@ -24,7 +24,7 @@
         {
             "id": 4,
             "title": "트랙",
-            "desc": "카트라이더 트랙들을 소개하고 각 특징과 빌드들을 알려드려요.",
+            "desc": "준비중인 콘텐츠에요.",
             "className": "track disabled",
             "link": "/track"
         }

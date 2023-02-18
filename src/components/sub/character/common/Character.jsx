@@ -20,10 +20,11 @@ const Character = props => {
 
                     <Cardstyled.CardWrap>
                         <Cardstyled.CardList>
-                            {props.characterCommonContents.frontCard.map((items,index) => {
+                            
+                            {props.characterCommonContents.card.map((items,index) => {
                                 return(
                                     <Cardstyled.CardItemBox key={index}>
-                                        <Cardstyled.Card data-name={items.engName}>
+                                        <Cardstyled.Card data-index={index}>
                                             <Cardstyled.CardItem>
                                                 <Cardstyled.CardInner>
                                                     <Cardstyled.NameBox>
@@ -33,24 +34,22 @@ const Character = props => {
                                                 </Cardstyled.CardInner>
                                             </Cardstyled.CardItem>
                                         </Cardstyled.Card>
+
+                                        <Cardstyled.Card data-index={index} key={index}>
+                                            <Cardstyled.CardItem back>
+                                                <Cardstyled.CardInner>
+                                                    <Cardstyled.DescBox>
+                                                        <Cardstyled.Desc as="h5" ko>{items.acq}</Cardstyled.Desc>
+                                                        <Cardstyled.Desc lineHeight>{parse(items.desc)}</Cardstyled.Desc>
+                                                        <Cardstyled.Desc bold quote lineHeight>{parse(items.speech)}</Cardstyled.Desc>
+                                                    </Cardstyled.DescBox>
+                                                </Cardstyled.CardInner>
+                                            </Cardstyled.CardItem>
+                                        </Cardstyled.Card>
                                     </Cardstyled.CardItemBox>
                                 )
                             })}
-
-                            {/* {props.characterCommonContents.backCard.map((items,index) => {
-                                return(
-                                    <Cardstyled.Card data-name={items.engName} key={index}>
-                                        <Cardstyled.CardItem back>
-                                            <Cardstyled.CardInner>
-                                                <Cardstyled.NameBox>
-                                                    <Cardstyled.Name as="h5" ko>뒷면</Cardstyled.Name>
-                                                    <Cardstyled.Name as="span">{items.engName}</Cardstyled.Name>
-                                                </Cardstyled.NameBox>
-                                            </Cardstyled.CardInner>
-                                        </Cardstyled.CardItem>
-                                    </Cardstyled.Card>
-                                )
-                            })} */}
+                        
                         </Cardstyled.CardList>
                     </Cardstyled.CardWrap>
                 </Substyled.Inner>

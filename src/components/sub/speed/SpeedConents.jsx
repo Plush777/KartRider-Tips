@@ -3,9 +3,10 @@ import * as Substyled from 'components/style/common/Area.style';
 import * as Tipstyled from 'components/style/components/sub/Tip.style';
 import ImgSkeleton from 'components/article/ImgSkeleton';
 import BtnTop from 'components/article/BtnTop';
+import SpeedVideo from 'components/video/SpeedVideo';
 import { useDispatch , useSelector } from 'react-redux';
 import { setImgSkeleton } from 'redux/store/store';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
@@ -19,6 +20,7 @@ const SubContents = (props) => {
 
     let dispatch = useDispatch();
     let imgSkeleton = useSelector(state => state.imgSkeleton);
+    let [isExShow,setIsExShow] = useState(false);
 
     useEffect(() => {
         let timer = setTimeout(() => {
@@ -26,6 +28,10 @@ const SubContents = (props) => {
             return () => clearTimeout(timer);
         },1500)
     },[dispatch])
+
+    const exShow = () => {
+        setIsExShow(true);
+    }
 
     return ( 
         <>
@@ -93,7 +99,7 @@ const SubContents = (props) => {
                                             <Tipstyled.TipBox>
                                                 <Tipstyled.TipTxt red>{parse(item.tip1.txt)}</Tipstyled.TipTxt>
                                                 <Tipstyled.ExArea mt="10px">
-                                                    <Tipstyled.ExTxt video>{item.tip1.ex}</Tipstyled.ExTxt>
+                                                    <Tipstyled.ExTxt video onClick={exShow}>{item.tip1.ex}</Tipstyled.ExTxt>
                                                 </Tipstyled.ExArea>
                                             </Tipstyled.TipBox>
                                         </Tipstyled.TipWrap>
@@ -143,6 +149,11 @@ const SubContents = (props) => {
                 </Substyled.Inner>
             </Substyled.Wrap>
             <BtnTop/> 
+
+            {
+                isExShow &&
+                <SpeedVideo setIsExShow={setIsExShow}/>
+            }
         </>
      );
 }

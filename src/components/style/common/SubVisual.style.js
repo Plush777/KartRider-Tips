@@ -33,5 +33,6 @@ export const SubVisualTitleArea = styled.div`
 
 export const SubVisualTitle = styled.h2`
     font-size: ${({theme}) => theme.fontSizes.f62};
+    font-weight: 600;
     color: #fff;
 `
