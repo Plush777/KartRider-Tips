@@ -6,12 +6,6 @@ export const Top = styled.div`
     border-bottom: 2px solid ${({theme}) => theme.colors.c000};
 `
 
-export const Bottom = styled.div`
-    display: flex;
-    padding: 30px 0;
-    border-bottom: 1px solid ${({theme}) => theme.colors.dede};
-`
-
 export const PreviewArea = styled.div`
     ${mixins.fc}
     width: ${(props) => props.wd};
@@ -22,19 +16,27 @@ export const PreviewArea = styled.div`
 `
 
 export const PreviewImg = styled.img`
-    ${mixins.whFull}
     border-radius: inherit;
 `
 
-export const Row = styled.div`
-    ${mixins.fcol}
+export const RowList = styled.dl`
+    ${mixins.fcol};
+    padding: 30px 0;
+    border-bottom: 1px solid ${({theme}) => theme.colors.dede};
+    row-gap: 20px;
 `
 
-export const RowDesc = styled.span`
-    display: block;
-    min-width: ${(props) => props.mwd ? '158px' : 'auto'};
-    min-height: 46px;
+export const Row = styled.div`
+    display: flex;
+    column-gap: 85px;
+`
+
+export const RowTitle = styled.dt`
+    min-width: 76px;
     font-size: ${({theme}) => theme.fontSizes.f20};
-    margin-top: ${(props) => props.mt};
     ${mixins.font('nexonLv1Gothic','#000')};
+`
+
+export const RowDesc = styled(RowTitle)`
+
 `

@@ -66,23 +66,22 @@ const SubCommonContents = (props) => {
                                         <Substyled.SmallTitle fz1 bullet>{kartId.title}</Substyled.SmallTitle>
                                         <Substyled.SmallDesc>{parse(kartId.desc)}</Substyled.SmallDesc>
                                     </Introstyled.Top>
-                                    <Introstyled.Bottom>
-                                        <Introstyled.Row>
-                                            {props.commonContents.staticDesc.map((items,index) => {
-                                                return(
-                                                    <React.Fragment key={index}>
-                                                        <Introstyled.RowDesc mwd mt={items.mt}>{items.name}</Introstyled.RowDesc>
-                                                    </React.Fragment>
-                                                )
-                                            })}
-                                        </Introstyled.Row>
-
-                                        <Introstyled.Row>
-                                            <Introstyled.RowDesc>{kartId2.desc}</Introstyled.RowDesc>
-                                            <Introstyled.RowDesc mt="15px">{parse(kartId2.desc2)}</Introstyled.RowDesc>
-                                            <Introstyled.RowDesc mt="15px">{parse(kartId2.desc3)}</Introstyled.RowDesc>
-                                        </Introstyled.Row>
-                                    </Introstyled.Bottom>
+                                    <div className="bottom">
+                                        <Introstyled.RowList>
+                                            <Introstyled.Row>
+                                                <Introstyled.RowTitle>{kartId2.title}</Introstyled.RowTitle>
+                                                <Introstyled.RowDesc as="dd">{kartId2.desc}</Introstyled.RowDesc>
+                                            </Introstyled.Row>
+                                            <Introstyled.Row>
+                                                <Introstyled.RowTitle>{kartId2.title2}</Introstyled.RowTitle>
+                                                <Introstyled.RowDesc as="dd">{parse(kartId2.desc2)}</Introstyled.RowDesc>
+                                            </Introstyled.Row>
+                                            <Introstyled.Row>
+                                                <Introstyled.RowTitle>{kartId2.title3}</Introstyled.RowTitle>
+                                                <Introstyled.RowDesc as="dd">{parse(kartId2.desc3)}</Introstyled.RowDesc>
+                                            </Introstyled.Row>
+                                        </Introstyled.RowList>
+                                    </div>
                                 </Tabstyled.TabContent>
 
                                 <Tabstyled.TabContent>
@@ -93,7 +92,9 @@ const SubCommonContents = (props) => {
                                     </Substyled.SkeletonArea> :
 
                                     <Introstyled.PreviewArea ht="305px">
-                                        <Introstyled.PreviewImg src={kartId2.img} alt={kartId2.alt} />
+                                        <Introstyled.PreviewImg src={
+                                            kartId2.img === "" ? "/images/common/img-no-image.webp" : kartId2.img
+                                        } alt={kartId2.alt}/>
                                     </Introstyled.PreviewArea>
                                     }
                                 </Tabstyled.TabContent>

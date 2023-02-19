@@ -34,7 +34,7 @@ const Character = props => {
                                                 </Cardstyled.CardInner>
                                             </Cardstyled.CardItem>
                                         </Cardstyled.Card>
-
+`
                                         <Cardstyled.Card data-index={index} key={index}>
                                             <Cardstyled.CardItem back>
                                                 <Cardstyled.CardInner>

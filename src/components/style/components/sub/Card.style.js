@@ -15,7 +15,7 @@ export const CardList = styled.ul`
 export const CardItem = styled.div`
     position: absolute;
     left: 0;
-    top: ${(props) => props.back && '-288px'};
+    top: ${(props) => props.back && '0'};
     ${mixins.whFull};
     padding: 12px;
     border-radius: 4px;
@@ -26,6 +26,8 @@ export const CardItem = styled.div`
 `
 
 export const Card = styled.div`
+    position: absolute;
+    top: 0;
     transform-style: preserve-3d;
     transition: all 1s;
     ${mixins.whFull}

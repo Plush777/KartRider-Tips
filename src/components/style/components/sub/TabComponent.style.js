@@ -72,7 +72,7 @@ export const TabContentInner = styled.div`
 `
 
 export const TabContnetBox = styled.div`
-    ${mixins.aic}
+    ${mixins.aifs}
     justify-content: space-between;
     column-gap: 90px;
 `

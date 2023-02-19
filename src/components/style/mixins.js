@@ -5,6 +5,11 @@ export const aic = css`
     align-items: center;
 `
 
+export const aifs = css`
+    display: flex;
+    align-items: flex-start;
+`
+
 export const jcc = css`
     display: flex;
     justify-content: center;
@@ -62,6 +67,7 @@ export const disabled = css`
 
 const mixins = {
     aic,
+    aifs,
     jcc,
     fcol,
     fc,

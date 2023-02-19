@@ -31,7 +31,7 @@ export const SmallTitle = styled.h4`
 `
 
 export const SmallDesc = styled.p`
-    margin-top: 20px;
+    margin-top: 10px;
     line-height: 23px;
     font-size: ${(props) => props.fz1 ? '18px' : '16px'};
     ${mixins.font('nexonLv1Gothic','#333')}
