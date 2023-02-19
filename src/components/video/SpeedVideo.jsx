@@ -1,8 +1,10 @@
 import * as Exstyled from 'components/style/components/sub/ex.style';
+import speedVideo from 'components/video/files/video-mode-speed.mp4';
 
 const SpeedVideo = props => {
     const exHide = () => {
         props.setIsExShow(false);
+        props.openScroll();
     }
 
     return ( 
@@ -14,8 +16,8 @@ const SpeedVideo = props => {
                     </Exstyled.Btn>
                 </Exstyled.BtnArea>
                 <Exstyled.VideoBox>
-                        <Exstyled.Video>
-                            <source src='/video/video-mode-speed.mp4' type='video/mp4'/>
+                        <Exstyled.Video poster='/images/thumbnail/img-speed-video-thumbnail.png'>
+                            <source src={speedVideo} type='video/mp4'/>
                         </Exstyled.Video>
                     </Exstyled.VideoBox>
             </Exstyled.VideoBox>

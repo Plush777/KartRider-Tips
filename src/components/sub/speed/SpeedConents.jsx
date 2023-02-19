@@ -8,6 +8,7 @@ import { useDispatch , useSelector } from 'react-redux';
 import { setImgSkeleton } from 'redux/store/store';
 import { useEffect, useState } from 'react';
 import React from 'react';
+import useBodyScrollLock from 'hooks/useBodyScrollLock';
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
 const pointData2 = ["포인트","10","8","6","5","4","3","2","1","0"];
@@ -21,6 +22,7 @@ const SubContents = (props) => {
     let dispatch = useDispatch();
     let imgSkeleton = useSelector(state => state.imgSkeleton);
     let [isExShow,setIsExShow] = useState(false);
+    const { lockScroll , openScroll } = useBodyScrollLock();
 
     useEffect(() => {
         let timer = setTimeout(() => {
@@ -31,6 +33,7 @@ const SubContents = (props) => {
 
     const exShow = () => {
         setIsExShow(true);
+        lockScroll();
     }
 
     return ( 
@@ -118,7 +121,7 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group4.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
                                     <Substyled.GroupBox>
-                                        <Substyled.TableArea mt="35px">
+                                        <Substyled.TableArea>
                                             <table className="style01">
                                                 <caption>{item.tableGroup.caption}</caption>
                                                 <tbody>
@@ -152,7 +155,7 @@ const SubContents = (props) => {
 
             {
                 isExShow &&
-                <SpeedVideo setIsExShow={setIsExShow}/>
+                <SpeedVideo setIsExShow={setIsExShow} openScroll={openScroll}/>
             }
         </>
      );

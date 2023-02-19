@@ -10,7 +10,7 @@ export const FooterWrap = styled.footer`
 export const FooterInner = styled.div`
     ${mixins.inner}
     ${mixins.aic}
-    padding: 30px 15px;
+    padding: 30px 0;
 `
 
 export const LogoArea = styled.div`

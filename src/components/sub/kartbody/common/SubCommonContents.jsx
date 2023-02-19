@@ -6,7 +6,6 @@ import parse from 'html-react-parser';
 import BtnTop from 'components/article/BtnTop';
 import React, { useEffect } from 'react';
 import { useParams,NavLink } from 'react-router-dom';
-import Star from 'components/sub/kartbody/common/Star';
 import { useDispatch , useSelector } from 'react-redux';
 import { setRouterScroll , setImgSkeleton } from 'redux/store/store';
 
@@ -80,7 +79,6 @@ const SubCommonContents = (props) => {
 
                                         <Introstyled.Row>
                                             <Introstyled.RowDesc>{kartId2.desc}</Introstyled.RowDesc>
-                                            <Star commonContents={props.commonContents} starParam={id}/>
                                             <Introstyled.RowDesc mt="15px">{parse(kartId2.desc2)}</Introstyled.RowDesc>
                                             <Introstyled.RowDesc mt="15px">{parse(kartId2.desc3)}</Introstyled.RowDesc>
                                         </Introstyled.Row>

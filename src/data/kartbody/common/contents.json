@@ -116,10 +116,6 @@
             "mt": "0"
         },
         {
-            "name": "인기도",
-            "mt": "0"
-        },
-        {
             "name": "특징" ,
             "mt": "0"
         },
@@ -253,7 +249,6 @@
             "desc": "기본 지급",
             "desc2": "앞면에 체커 무늬와 프로토의<br/>상징인 P 알파벳이 박혀있음.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 2,
             "img": "/images/screenShots/img-proto.webp",
             "alt": "프로토 이미지"
         },
@@ -262,7 +257,6 @@
             "desc": "기본 지급",
             "desc2": "전형적인 연습카트 디자인.<br/>원작의 L2 연습카트와 비슷하게 생김.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 2,
             "img": "/images/screenShots/img-practice-kart.webp",
             "alt": "연습카트 이미지"
         },
@@ -271,7 +265,6 @@
             "desc": "기본 지급",
             "desc2": "원작에서는 거북이의 업그레이드 버전인 거붕이였다.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 4,
             "img": "/images/screenShots/img-pirate-turtle.webp",
             "alt": "해적거북 이미지"
         },
@@ -280,7 +273,6 @@
             "desc": "기본 지급",
             "desc2": "부드러운 밸런스를 가지고 있는 정규 라인업.<br/>가운데에 코튼 로고가 박혀있다.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 4,
             "img": "/images/screenShots/img-cotton.webp",
             "alt": "코튼 이미지"
         },
@@ -289,7 +281,6 @@
             "desc": "기본 지급",
             "desc2": "폭발적인 가속도를 자랑하는 정규 라인업. 가운데에 버스트 로고가 박혀있다.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 4,
             "img": "/images/screenShots/img-burst.webp",
             "alt": "버스트 이미지"
         },
@@ -298,7 +289,6 @@
             "desc": "기본 지급",
             "desc2": "강력한 몸싸움을 가진 정규 라인업. 특유의 체크무늬가 인상적이다.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 2,
             "img": "/images/screenShots/img-solid.webp",
             "alt": "솔리드 이미지"
         },
@@ -307,7 +297,6 @@
             "desc": "기본 지급",
             "desc2": "길고 강한 지속력을 가진 정규 라인업.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 2,
             "img": "/images/screenShots/img-marathon.webp",
             "alt": "마라톤 이미지"
         },
@@ -316,7 +305,6 @@
             "desc": "기본 지급",
             "desc2": "민첩한 코너링을 가진 정규 라인업. 가운데에 세이버 로고가 박혀있다.",
             "desc3": "2019년 11월 15일<br/>(1차 CBT)",
-            "star": 2,
             "img": "/images/screenShots/img-saver.webp",
             "alt": "세이버 이미지"
         },
@@ -325,7 +313,6 @@
             "desc": "프리시즌 리버리 스타터 패키지 구매",
             "desc2": "전면부에 녹색 라이트가 매력적이다.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 6,
             "img": "/images/screenShots/img-storm.webp",
             "alt": "스톰 이미지"
         },
@@ -334,7 +321,6 @@
             "desc": "프리시즌 에이스 패키지 구매",
             "desc2": "원작 에이스 HT와 같은 디자인을 하고있다.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 10,
             "img": "/images/screenShots/img-ace.webp",
             "alt": "에이스 이미지"
         },
@@ -343,7 +329,6 @@
             "desc": "프리시즌 레이싱 패스 레벨 10 프리미엄 보상",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 6,
             "img": "/images/screenShots/img-fire-truck.webp",
             "alt": "소방차 이미지"
         },
@@ -352,7 +337,6 @@
             "desc": "프리시즌 레이싱 패스 레벨 20 일반 보상",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 6,
             "img": "/images/screenShots/img-orora.webp",
             "alt": "오로라 이미지"
         },
@@ -361,7 +345,6 @@
             "desc": "프리시즌 레이싱 패스 레벨 40 프리미엄 보상",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 6,
             "img": "/images/screenShots/img-justis.webp",
             "alt": "저스티스 이미지"
         },
@@ -370,7 +353,6 @@
             "desc": "2차 CBT 보상",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 10,
             "img": "/images/screenShots/img-mine-kart.webp",
             "alt": "광산 수레 이미지"
         },
@@ -379,7 +361,6 @@
             "desc": "안드로이드 플랫폼에서 접속",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 2,
             "img": "/images/screenShots/img-play.webp",
             "alt": "플레이 카트 이미지"
         },
@@ -388,7 +369,6 @@
             "desc": "넥슨 플랫폼에서 접속",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 2,
             "img": "/images/screenShots/img-nexon-kart.webp",
             "alt": "넥슨 카트 이미지"
         },
@@ -397,7 +377,6 @@
             "desc": "IOS 플랫폼에서 접속",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 2,
             "img": "",
             "alt": ""
         },
@@ -406,7 +385,6 @@
             "desc": "Steam 플랫폼에서 접속",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 2,
             "img": "",
             "alt": ""
         },
@@ -415,7 +393,6 @@
             "desc": "프리시즌 오픈 기념 출석체크 3일차 보상",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 12일<br/>(프리시즌)",
-            "star": 2,
             "img": "/images/screenShots/img-spike.webp",
             "alt": "스파이크 이미지"
         },
@@ -424,7 +401,6 @@
             "desc": "프리시즌 타이탄 패키지 구매",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 19일<br/>(프리시즌)",
-            "star": 6,
             "img": "",
             "alt": ""
         },
@@ -433,7 +409,6 @@
             "desc": "프리시즌 브루터스 패키지 구매",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 19일<br/>(프리시즌)",
-            "star": 4,
             "img": "/images/screenShots/img-brutus.webp",
             "alt": "브루터스 이미지"
         },
@@ -442,7 +417,6 @@
             "desc": "2023년 설날 접속 이벤트",
             "desc2": "설명이 없어요.",
             "desc3": "2023년 01월 23일<br/>(프리시즌)",
-            "star": 6,
             "img": "/images/screenShots/img-sugar-rabbit.webp",
             "alt": "슈가레빗 이미지"
         },
@@ -451,7 +425,6 @@
             "desc": "프리시즌 비밀 변기 패키지 구매",
             "desc2": "원작의 루루와 같은 디자인.",
             "desc3": "2023년 02월 02일<br/>(프리시즌)",
-            "star": 2,
             "img": "",
             "alt": ""
         }
