@@ -52,5 +52,11 @@
     "@axe-core/react": "^4.6.0",
     "@svgr/cli": "^6.5.1",
     "@svgr/webpack": "^6.5.1"
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   }
 }
