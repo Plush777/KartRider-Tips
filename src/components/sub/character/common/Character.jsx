@@ -25,7 +25,7 @@ const Character = props => {
                                 return(
                                     <Cardstyled.CardItemBox key={index}>
                                         <Cardstyled.Card data-index={index}>
-                                            <Cardstyled.CardItem>
+                                            <Cardstyled.CardItem> 
                                                 <Cardstyled.CardInner>
                                                     <Cardstyled.NameBox>
                                                         <Cardstyled.Name ko>{items.name}</Cardstyled.Name>
