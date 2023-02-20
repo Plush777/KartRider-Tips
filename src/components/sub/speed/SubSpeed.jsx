@@ -6,6 +6,7 @@ import Footer from 'components/layout/Footer';
 import SpeedContents from 'components/sub/speed/SpeedConents';
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
+import FootNotice from 'components/article/FootNotice';
 
 const SubSpeed = (props) => {
 
@@ -23,6 +24,7 @@ const SubSpeed = (props) => {
                 <SubTab commonContents={props.commonContents} />
                 <SpeedContents speedContents={props.speedContents}/>
                 <FootSupport/>
+                <FootNotice/>
                 <Footer/>
             </main>
         </>

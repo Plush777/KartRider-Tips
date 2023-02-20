@@ -6,6 +6,7 @@ import Footer from 'components/layout/Footer';
 import ItemContents from 'components/sub/item/ItemContents';
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
+import FootNotice from 'components/article/FootNotice';
 
 const SubItem = (props) => {
 
@@ -23,6 +24,7 @@ const SubItem = (props) => {
                 <SubTab commonContents={props.commonContents}/>
                 <ItemContents itemContents={props.itemContents}/>
                 <FootSupport/>
+                <FootNotice/>
                 <Footer/>
             </main>
         </>

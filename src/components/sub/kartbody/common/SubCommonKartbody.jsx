@@ -6,6 +6,7 @@ import Footer from 'components/layout/Footer';
 import SubCommonContents from 'components/sub/kartbody/common/SubCommonContents';
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
+import FootNotice from 'components/article/FootNotice';
 
 const SubCommonKartbody = (props) => {
 
@@ -23,6 +24,7 @@ const SubCommonKartbody = (props) => {
                 <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>
                 <FootSupport/>
+                <FootNotice/>
                 <Footer/>
             </main>
         </>

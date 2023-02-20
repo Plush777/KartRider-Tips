@@ -8,6 +8,7 @@ import Visual from 'components/layout/Visual';
 import Started from 'components/Started';
 import { useDispatch , useSelector } from "react-redux";
 import { setStartState } from 'redux/store/store';
+import FootNotice from './article/FootNotice';
 
 const Main = () => {
     let dispatch = useDispatch();
@@ -39,6 +40,7 @@ const Main = () => {
                         <MainBox/>
                     </main>
                     <FootSupport/>
+                    <FootNotice/>
                     <Footer/>
                 </React.Fragment>
             }

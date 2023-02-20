@@ -5,6 +5,7 @@ import Footer from 'components/layout/Footer';
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import Character from "components/sub/character/common/Character";
+import FootNotice from "components/article/FootNotice";
 
 const SubCommonCharacter = props => {
 
@@ -22,6 +23,7 @@ const SubCommonCharacter = props => {
                 <SubTab/>
                 <Character characterCommonContents={props.characterCommonContents}/>
                 <FootSupport/>
+                <FootNotice/>
                 <Footer/>
             </main>
         </>
