@@ -51,7 +51,7 @@ export const whFull = css`
 `
 
 export const inner = css`
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
 `
 

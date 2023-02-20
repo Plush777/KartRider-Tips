@@ -27,11 +27,12 @@ const Main = () => {
 
     return ( 
         <>  
+            <Meta data={metaData}/>
+            
             {
                 started ? <Started/> 
                 :
                 <React.Fragment>
-                    <Meta data={metaData}/>
                     <Header/>
                     <main id='main'>
                         <Visual/>
