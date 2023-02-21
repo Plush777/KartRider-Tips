@@ -31,10 +31,21 @@ export const SmallTitle = styled.h4`
 `
 
 export const SmallDesc = styled.p`
+    display: ${props => props.openInNew && 'inline-flex'};
+    align-items: ${props => props.openInNew && 'center'};
     margin-top: 10px;
     line-height: 23px;
     font-size: ${(props) => props.fz1 ? '18px' : '16px'};
     ${mixins.font('nexonLv1Gothic','#333')}
+
+    &::after{
+        content: ${props => props.openInNew ? "''" : 'none'};
+        width: 16px;
+        height: 16px;
+        margin-top: -2.5px;
+        margin-left: 5px;
+        background: url('/images/common/ico-open-in-new.svg') no-repeat center;
+    }
 `
 
 export const MediumTitle = styled.h5`

@@ -16,7 +16,7 @@ const Header = () => {
                 </Headerstyled.Logo>
                 <Gnb/>
                 <Headerstyled.ShortArea>
-                    <a href="https://kartdrift.nexon.com/kartdrift/ko/main" target="_blank" rel='noopener noreferrer' title='카트라이더 홈페이지 바로가기 새 창 열림'>카트라이더 홈페이지 바로가기</a>
+                    <a href="https://kartdrift.nexon.com/kartdrift/ko/main" target="_blank" rel='noopener noreferrer'>카트라이더 홈페이지 바로가기</a>
                 </Headerstyled.ShortArea>    
             </Headerstyled.HeaderInner>
         </Headerstyled.Headers>

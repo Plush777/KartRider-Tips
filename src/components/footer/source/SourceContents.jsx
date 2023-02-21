@@ -15,12 +15,38 @@ const SourceContents = props => {
                                 </Substyled.TitleGroup>
 
                                 <Substyled.GroupContainer>
-                                    <Substyled.SmallTitle>{item.group4.title}</Substyled.SmallTitle>
+                                    <Substyled.SmallTitle>{item.group2.title}</Substyled.SmallTitle>
                                     <ul className="groupList">
-                                        {props.sourceData.list.map((items,index) => {
+                                        {props.sourceData.list.map((item,index) => {
                                             return(
                                                 <Substyled.GroupItem key={index} bullet="''">
-                                                    <Substyled.SmallDesc>{parse(items.details)}</Substyled.SmallDesc>
+                                                    <Substyled.SmallDesc as="a" href={item.link} target="_blank" rel='noopener noreferrer' openInNew>{parse(item.details)}</Substyled.SmallDesc>
+                                                </Substyled.GroupItem>
+                                            )})
+                                        }
+                                    </ul>
+                                </Substyled.GroupContainer>
+
+                                <Substyled.GroupContainer>
+                                    <Substyled.SmallTitle>{item.group3.title}</Substyled.SmallTitle>
+                                    <ul className="groupList">
+                                        {props.sourceData.list2.map((item,index) => {
+                                            return(
+                                                <Substyled.GroupItem key={index} bullet="''">
+                                                    <Substyled.SmallDesc as="a" href={item.link} target="_blank" rel='noopener noreferrer' openInNew>{parse(item.details)}</Substyled.SmallDesc>
+                                                </Substyled.GroupItem>
+                                            )})
+                                        }
+                                    </ul>
+                                </Substyled.GroupContainer>
+
+                                <Substyled.GroupContainer>
+                                    <Substyled.SmallTitle>{item.group4.title}</Substyled.SmallTitle>
+                                    <ul className="groupList">
+                                        {props.sourceData.list3.map((item,index) => {
+                                            return(
+                                                <Substyled.GroupItem key={index} bullet="''">
+                                                    <Substyled.SmallDesc>{parse(item.details)}</Substyled.SmallDesc>
                                                 </Substyled.GroupItem>
                                             )})
                                         }

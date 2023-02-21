@@ -1,6 +1,6 @@
 # KartRider-Tips
 
-![프로젝트 썸네일](https://user-images.githubusercontent.com/87457620/219304397-dee7f30f-7e9e-46fe-90af-b1d0d54bfb0f.png)
+![프로젝트 썸네일](https://user-images.githubusercontent.com/87457620/220294694-aa8ec852-03fa-4ae6-b6a4-a8796e1c824a.png)
 
 <br>
 
@@ -8,11 +8,30 @@
 
 디자인 : https://www.figma.com/file/qYIvf9SGHXZzqOvyfqfQuB/KARTRIDER-ARCHIVE?node-id=29%3A153&t=pTPgmPkWqcSNZFE2-1 <br/><br/>
 
-목표 배포일 : 4월 2일
+최종 완성 : 4월 2일까지
+<br/><br/>
+
+## 기술스택
+
+- React (v18)
+- Redux toolkit
+- Styled components
+
+<br/>
+
+## 라이브러리
+
+- React router (v18)
+- React responsive
+- React helmet & React snap
+- html react paser
+- React axe core
+- Swiper
+
 <br/><br/>
 ## 📁폴더 구조
 
-### ✨components : 한 페이지에 쓰이는 레이아웃들을 역할별로 쪼개서 넣어둔 폴더
+### components : 한 페이지에 쓰이는 레이아웃들을 역할별로 쪼개서 넣어둔 폴더
 
 - article : 독립적으로 쓰이는 컴포넌트들
 - layout : 페이지를 구성하는 기본 요소들
@@ -22,7 +41,7 @@
 
 <br/>
 
-### 📒data : 페이지마다 쓰이는 데이터들을 역할별로 쪼개서 넣어둔 폴더
+### data : 페이지마다 쓰이는 데이터들을 역할별로 쪼개서 넣어둔 폴더
 
 - gnb : gnb 데이터
 - kartbody : 카트바디 페이지에 쓰이는 데이터
@@ -31,11 +50,10 @@
 
 <br/>
 
-### 🛠️Meta : 페이지마다 쓰이는 메타데이터들 모아둔 폴더
+### Meta : 페이지마다 쓰이는 메타데이터들 모아둔 폴더
 
-### 🎇redux : 공통으로 쓰이는 상태들 모아둔 폴더
-- 상태가 많아지면 추후에 폴더 세분화할 예정
-### 🔋Routes : 라우트와 관련된 컴포넌트 모아둔 폴더
+### redux : 공통으로 쓰이는 상태들 모아둔 폴더
+### Routes : 라우트와 관련된 컴포넌트 모아둔 폴더
 <br/>
 
 ```
