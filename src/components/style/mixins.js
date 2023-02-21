@@ -15,6 +15,11 @@ export const jcc = css`
     justify-content: center;
 `
 
+export const jcsb = css`
+    display: flex;
+    justify-content: space-between;
+`
+
 export const fcol = css`
     display: flex;
     flex-direction: column;
@@ -69,6 +74,7 @@ const mixins = {
     aic,
     aifs,
     jcc,
+    jcsb,
     fcol,
     fc,
     fcc,

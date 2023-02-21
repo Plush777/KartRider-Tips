@@ -25,6 +25,14 @@ export const SubViusalInner = styled.div`
         background-color: ${({theme}) => theme.colors.rgbaBlack};
         z-index: 0;
     }
+
+    &.gray{
+        background-image: none;
+        background-color: #444;
+        background-size: auto;
+
+        &::before{display: none;}
+    }
 `
 
 export const SubVisualTitleArea = styled.div`

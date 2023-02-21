@@ -7,7 +7,7 @@ const Gnb = () => {
     let gnbData = useSelector(state => state.gnb);
 
     return ( 
-        <Headerstyled.Gnb role="navigation" id="gnb">
+        <Headerstyled.Gnb id="gnb">
             <Headerstyled.GnbList>
                 {gnbData.map((item,index) => {
                     return(

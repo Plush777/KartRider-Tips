@@ -147,9 +147,11 @@ export const CardItemBox = styled.li`
     height: 288px;
     perspective: 2000px;
 
-    &:hover{
-        ${Card}{
-            transform: rotateY(180deg);
+    @media (hover: hover) {
+        &:hover{
+            ${Card}{
+                transform: rotateY(180deg);
+            }
         }
     }
 

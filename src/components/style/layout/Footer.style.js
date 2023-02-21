@@ -31,7 +31,25 @@ export const LogoArea = styled.div`
 export const CopyRightArea = styled.div`
     font-size: ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#666')}
+    flex: 1;
 `
+
+export const BottomMenu = styled.ul`
+    ${mixins.aic};
+    column-gap: 15px;
+`
+
+export const BottomItem = styled(CopyRightArea)`
+    white-space: nowrap;
+    >a{
+        @media (hover: hover) {
+            &:hover{
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+        }
+    }
+`;
 
 export const Copy = styled.p`
     ${mixins.aic}

@@ -1,5 +1,6 @@
 import { configureStore , createSlice } from "@reduxjs/toolkit";
 import gnbData from "data/gnb/gnb";
+import footerData from "data/etc/footer.json";
 
 let gnb = createSlice({
     name: 'gnb',
@@ -55,6 +56,11 @@ let startState = createSlice({
     }
 })
 
+let footer = createSlice({
+    name: 'footer',
+    initialState: footerData.data
+})
+
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
 export const { setImgSkeleton } = imgSkeleton.actions;
@@ -66,6 +72,7 @@ export default configureStore({
         subVisualTitle: subVisualTitle.reducer,
         routerScroll: routerScroll.reducer,
         imgSkeleton: imgSkeleton.reducer,
-        startState: startState.reducer
+        startState: startState.reducer,
+        footer: footer.reducer
     },
 });

@@ -1,4 +1,4 @@
-# kartrider archive
+# Kartrider Tips
 
 ## 인트로 참고
 <br/>

@@ -164,3 +164,8 @@ export const TitleArea = styled.div`
     padding-bottom: ${(props) => props.pb && '20px'};
     border-bottom: ${(props) => props.bb && '7px solid #dedede'};
 `
+export const TitleGroup = styled.div`
+    +${GroupContainer}{
+        margin-top: 20px;
+    }
+`

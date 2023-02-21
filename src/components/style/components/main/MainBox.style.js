@@ -60,8 +60,10 @@ export const MainBoxItems = styled.li`
         height: 100%;
     }
 
-    &:hover:not(.disabled){
-        transform: translateY(-5px);
+    @media (hover: hover) {
+        &:hover:not(.disabled){
+            transform: translateY(-5px);
+        }
     }
 `
 

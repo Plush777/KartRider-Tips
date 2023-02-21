@@ -10,6 +10,10 @@ export const Headers = styled.header`
     height: 65px;
     border-bottom: 1px solid #E2E8F0;
     background-color: ${({theme}) => theme.colors.fff};
+
+    ${({ theme }) => theme.laptop `
+        background-color: red;
+    `};
 `
 
 export const HeaderInner = styled.div`

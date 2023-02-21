@@ -8,7 +8,7 @@ import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import FootNotice from 'components/article/FootNotice';
 
-const SubCommonKartbody = (props) => {
+const SubCommonKartbody = props => {
 
     const metaData = {
         title: 'KartRider Tips | 카트바디 | 일반',
@@ -19,7 +19,7 @@ const SubCommonKartbody = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main id='main' role="main">
+            <main id='main'>
                 <SubVisual/>
                 <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>

@@ -8,7 +8,7 @@ import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import FootNotice from 'components/article/FootNotice';
 
-const SubItem = (props) => {
+const SubItem = props => {
 
     const metaData = {
         title: 'KartRider Tips | 모드 | 아이템전',
@@ -19,7 +19,7 @@ const SubItem = (props) => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main role="main" id='main'>
+            <main id='main'>
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
                 <ItemContents itemContents={props.itemContents}/>

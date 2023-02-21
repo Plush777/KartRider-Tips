@@ -18,7 +18,7 @@ const SubCommonCharacter = props => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main id='main' role="main">
+            <main id='main'>
                 <SubVisual/>
                 <SubTab/>
                 <Character characterCommonContents={props.characterCommonContents}/>

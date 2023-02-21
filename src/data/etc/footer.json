@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "사이트 목적",
+            "link": "/purpose"
+        },
+        {
+            "id": 2,
+            "name": "출처",
+            "link": "/source"
+        },
+        {
+            "id": 3,
+            "name": "피드백",
+            "link": "https://map64wlb3a2.typeform.com/to/vGp6k1Nc"
+        }
+    ]
+}
