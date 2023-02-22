@@ -5,6 +5,9 @@ import Header from "components/layout/Header";
 import SubVisual from "components/sub/SubVisual";
 import Meta from 'Meta/MetaTag';
 import SourceContents from "./SourceContents";
+import Alert from "components/mobile/Alert";
+import BottomNavigation from "components/mobile/BottomNavigation";
+import { useSelector } from "react-redux";
 
 const Source = props => {
 
@@ -13,17 +16,21 @@ const Source = props => {
         robots: 'index, follow'
     }
 
+    let openInNewAlert = useSelector(state => state.openInNew);
+
     return ( 
         <>
             <Meta data={metaData}/>
             <Header/>
             <main id="main">
                 <SubVisual/>
-                <SourceContents sourceData={props.sourceData}/>
+                <SourceContents source={props.source}/>
                 <FootSupport/>
                 <FootNotice/>
                 <Footer/>
             </main>
+            <BottomNavigation/>
+            {openInNewAlert && <Alert/>}
         </>
     );
 }

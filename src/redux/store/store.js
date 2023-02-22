@@ -54,17 +54,47 @@ let startState = createSlice({
             return state;
         }
     }
-})
+});
+
+let openInNew = createSlice({
+    name: 'openInNew',
+    initialState: false,
+
+    reducers: {
+        setOpenInNew: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+});
 
 let footer = createSlice({
     name: 'footer',
     initialState: footerData.data
-})
+});
+
+let categoryName = createSlice({
+    name: 'categoryName',
+    initialState: {
+        imgNum: '',
+        tabInfoTxt: '',
+        tabDataState: []
+    },
+
+    reducers: {
+        setCategoryName: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+});
 
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
 export const { setImgSkeleton } = imgSkeleton.actions;
 export const { setStartState } = startState.actions;
+export const { setOpenInNew } = openInNew.actions;
+export const { setCategoryName } = categoryName.actions;
 
 export default configureStore({
     reducer: {
@@ -73,6 +103,8 @@ export default configureStore({
         routerScroll: routerScroll.reducer,
         imgSkeleton: imgSkeleton.reducer,
         startState: startState.reducer,
-        footer: footer.reducer
+        footer: footer.reducer,
+        openInNew: openInNew.reducer,
+        categoryName: categoryName.reducer
     },
 });

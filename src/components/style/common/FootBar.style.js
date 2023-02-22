@@ -4,7 +4,12 @@ import mixins from 'components/style/mixins';
 export const Bar = styled.div`
     width: 100%;
     height: 48px;
+    padding: 0 16px;
     background-color: ${props => props.backgroundColor};
+
+    ${({ theme }) => theme.tablet`
+        height: 40px;
+    `};
 `;
 
 export const Txt = styled.a`
@@ -12,7 +17,10 @@ export const Txt = styled.a`
     ${mixins.aic}
     ${mixins.inner}
     ${mixins.font('nexonLv1Gothic','#fff')}
-    font-size: .875rem;
+    font-size: ${({ theme }) => theme.fontSizes.f14};
     
     >strong{margin-right: 3px;font-weight: normal;}
+    ${({ theme }) => theme.tablet`
+        font-size: ${({ theme }) => theme.fontSizes.f12};
+    `};
 `

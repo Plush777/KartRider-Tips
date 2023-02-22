@@ -6,6 +6,8 @@ import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import Character from "components/sub/character/common/Character";
 import FootNotice from "components/article/FootNotice";
+import Alert from "components/mobile/Alert";
+import { useSelector } from "react-redux";
 
 const SubCommonCharacter = props => {
 
@@ -13,6 +15,8 @@ const SubCommonCharacter = props => {
         title: 'KartRider Tips | 캐릭터 | 일반',
         robots: 'index, follow'
     }
+
+    let openInNewAlert = useSelector(state => state.openInNew);
 
     return ( 
         <>
@@ -26,6 +30,7 @@ const SubCommonCharacter = props => {
                 <FootNotice/>
                 <Footer/>
             </main>
+            {openInNewAlert && <Alert/>}
         </>
     );
 }

@@ -5,6 +5,10 @@ export const Title = styled.h3`
     font-size: ${({theme}) => theme.fontSizes.f42};
     font-weight: 600;
     ${mixins.font('nexonLv1Gothic','#000')}
+
+    ${({ theme }) => theme.tablet`
+       font-size: ${({theme}) => theme.fontSizes.f24};
+    `};
 `
 
 export const Desc = styled.p`
@@ -12,12 +16,20 @@ export const Desc = styled.p`
     margin-top: 20px;
     ${mixins.font('nexonLv1Gothic','#333')}
     font-size: ${({theme}) => theme.fontSizes.f16};
+
+    ${({ theme }) => theme.tablet`
+       font-size: ${({theme}) => theme.fontSizes.f14};
+    `};
 `
 
 export const SmallTitle = styled.h4`
     ${mixins.aic};
     font-size: ${(props) => props.fz1 ? '28px' : '24px'};
     ${mixins.font('nexonLv1Gothic','#000')}
+
+    ${({ theme }) => theme.tablet`
+       font-size: ${({theme}) => theme.fontSizes.f18};
+    `};
 
     &::before{
         content: ${(props) => props.bullet ? 'none' : ''};
@@ -38,14 +50,20 @@ export const SmallDesc = styled.p`
     font-size: ${(props) => props.fz1 ? '18px' : '16px'};
     ${mixins.font('nexonLv1Gothic','#333')}
 
+    
+
     &::after{
         content: ${props => props.openInNew ? "''" : 'none'};
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         margin-top: -2.5px;
         margin-left: 5px;
         background: url('/images/common/ico-open-in-new.svg') no-repeat center;
     }
+
+    ${({ theme }) => theme.tablet`
+        font-size: ${({theme}) => theme.fontSizes.f14};
+    `};
 `
 
 export const MediumTitle = styled.h5`
@@ -64,28 +82,16 @@ export const Wrap = styled.div`
 
 export const Inner = styled.div`
     ${mixins.inner}
-    padding: 80px 0;
+    padding: 80px 16px;
+
+    ${({ theme }) => theme.tablet`
+        padding: 36px 16px;
+    `};
 `
 
 export const SkeletonArea = styled.div`
     width: ${(props) => props.wd};
     height: ${(props) => props.ht};
-`
-
-export const GroupContainer = styled.div`
-    &+&{margin-top: 60px;}
-    .groupList{
-        margin-top: 25px;
-    }
-
-`
-export const ImgWrap = styled.div`
-    ${mixins.fcol};
-    margin-top: 60px;
-
-    +${GroupContainer}{
-        margin-top: 60px;
-    }
 `
 
 export const GroupBox = styled.div`
@@ -114,6 +120,33 @@ export const GroupItem = styled.li`
         height: 5px;
         border-radius: 50%;
         background-color: #000;
+    }
+`
+
+export const GroupContainer = styled.div`
+    &+&{margin-top: 60px;}
+    .groupList{
+        margin-top: 25px;
+
+        ${({ theme }) => theme.tablet`
+            margin-top: 15px;
+        `};
+
+        &.fir ${GroupItem}{
+            &:first-child ${SmallDesc}{
+                margin-top: 0;
+            }
+        }
+    }
+
+`
+
+export const ImgWrap = styled.div`
+    ${mixins.fcol};
+    margin-top: 60px;
+
+    +${GroupContainer}{
+        margin-top: 60px;
     }
 `
 
@@ -171,12 +204,14 @@ export const Td = styled.td`
     color: ${(props) => props.color};
     background-color: ${(props) => props.bg};
 `
+
 export const TitleArea = styled.div`
     padding-bottom: ${(props) => props.pb && '20px'};
     border-bottom: ${(props) => props.bb && '7px solid #dedede'};
 `
+
 export const TitleGroup = styled.div`
     +${GroupContainer}{
-        margin-top: 20px;
+        margin-top: 50px;
     }
 `

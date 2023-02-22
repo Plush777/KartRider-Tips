@@ -7,6 +7,8 @@ import SubCommonContents from 'components/sub/kartbody/common/SubCommonContents'
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import FootNotice from 'components/article/FootNotice';
+import Alert from "components/mobile/Alert";
+import { useSelector } from "react-redux";
 
 const SubCommonKartbody = props => {
 
@@ -14,6 +16,8 @@ const SubCommonKartbody = props => {
         title: 'KartRider Tips | 카트바디 | 일반',
         robots: 'index, follow'
     }
+
+    let openInNewAlert = useSelector(state => state.openInNew);
 
     return ( 
         <>
@@ -27,6 +31,7 @@ const SubCommonKartbody = props => {
                 <FootNotice/>
                 <Footer/>
             </main>
+            {openInNewAlert && <Alert/>}
         </>
      );
 }

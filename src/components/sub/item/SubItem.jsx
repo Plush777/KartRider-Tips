@@ -7,6 +7,8 @@ import ItemContents from 'components/sub/item/ItemContents';
 import Meta from 'Meta/MetaTag';
 import FootSupport from 'components/article/FootSupport';
 import FootNotice from 'components/article/FootNotice';
+import Alert from "components/mobile/Alert";
+import { useSelector } from "react-redux";
 
 const SubItem = props => {
 
@@ -14,6 +16,8 @@ const SubItem = props => {
         title: 'KartRider Tips | 모드 | 아이템전',
         robots: 'index, follow'
     }
+
+    let openInNewAlert = useSelector(state => state.openInNew);
 
     return (  
         <>
@@ -27,6 +31,7 @@ const SubItem = props => {
                 <FootNotice/>
                 <Footer/>
             </main>
+            {openInNewAlert && <Alert/>}
         </>
     );
 }

@@ -12,6 +12,7 @@ import speedContentsData from 'data/mode/speedMode/contents.json';
 import kartbodyCommonContentsData from 'data/kartbody/common/contents.json';
 import characterCommonContentsData from 'data/character/common/contents.json';
 import sourceData from 'data/etc/source.json';
+import purposeData from 'data/etc/purpose.json';
 import Notfound from "components/Notfound";
 import { ThemeProvider } from 'styled-components';
 import theme from 'components/style/theme';
@@ -30,6 +31,8 @@ const App = () => {
     let [speedContents] = useState(speedContentsData);
 	let [commonContents] = useState(kartbodyCommonContentsData);
 	let [characterCommonContents] = useState(characterCommonContentsData);
+	let [source] = useState(sourceData);
+	let [purpose] = useState(purposeData);
 	const { pathname } = useLocation();
 	let dispatch = useDispatch();
 	let routerScroll = useSelector(state => state.routerScroll);
@@ -52,8 +55,8 @@ const App = () => {
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
 					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents}/>}/>
 					<Route path="/character/common" element={<SubCommonCharacter characterCommonContents={characterCommonContents}/>}/>
-					<Route path="/purpose" element={<Purpose/>} />
-					<Route path="/source" element={<Source sourceData={sourceData}/>} />
+					<Route path="/purpose" element={<Purpose purpose={purpose}/>} />
+					<Route path="/source" element={<Source source={source}/>} />
 					<Route path="*" element={<Notfound/>} />
         		</Routes>
 			</ThemeProvider>

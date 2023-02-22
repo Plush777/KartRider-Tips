@@ -8,11 +8,16 @@ export const Headers = styled.header`
     z-index: 1000;
     width: 100%;
     height: 65px;
+    padding: 0 16px;
     border-bottom: 1px solid #E2E8F0;
     background-color: ${({theme}) => theme.colors.fff};
 
-    ${({ theme }) => theme.laptop `
-        background-color: red;
+    ${({ theme }) => theme.tablet`
+        height: 55px;
+
+        ~ #main{
+            padding-bottom: 55px;
+        }
     `};
 `
 
@@ -20,11 +25,21 @@ export const HeaderInner = styled.div`
     ${mixins.aic}
     ${mixins.inner}
     height: 100%;
+
+    ${({ theme }) => theme.tablet`
+        position: relative;
+        justify-content: center;
+    `};
 `
 
 export const Logo = styled.h1`
     img{
         width: 130px;
+
+        ${({ theme }) => theme.tablet`
+            width: 45%;
+            margin: 0 auto;
+        `};
     }
 `
 
@@ -32,6 +47,9 @@ export const Gnb = styled.nav`
     ${mixins.aic}
     ${mixins.whFull}
     margin-left: 40px;
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `};
 `
 
 export const GnbList = styled.ul`
@@ -56,4 +74,22 @@ export const ShortArea = styled.div`
     white-space: nowrap;
     font-size: ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#666')}
+
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `};
+`
+
+export const OpenInNewArea = styled.div`
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+`
+
+export const BtnOpenInNew = styled.button.attrs({ type: 'button' })`
+    ${mixins.aic}
+    width: 18px;
+    height: 18px;
+    background: url('/images/common/ico-open-in-new.svg') no-repeat center;
 `

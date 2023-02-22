@@ -1,43 +1,42 @@
 import tabData from '../../data/tab/tab.json';
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation , NavLink } from "react-router-dom";
 import * as SubTabstyled from 'components/style/common/Tab.style';
+import { useDispatch , useSelector } from "react-redux";
+import { setCategoryName } from 'redux/store/store';
 
 const SubTab = () => {
-
+    let dispatch = useDispatch();
+    let category = useSelector(state => state.categoryName);
     const {pathname} = useLocation();
-    let [isActive,setIsActive] = useState(0);
-    let [categoryName,setCategoryName] = useState(
-        {
-            imgNum: '',
-            tabInfoTxt: '',
-            tabDataState: []
-        }
-    );
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
-            setCategoryName(
+            dispatch(setCategoryName(
                 {
                     imgNum: '1',
                     tabInfoTxt: '모드',
                     tabDataState: tabData.mode
                 }
-            );
+            ))
         } else if(pathname.startsWith('/kartbody')){
-            setCategoryName({
-                imgNum: '2',
-                tabInfoTxt: '카트바디',
-                tabDataState: tabData.kartbody
-            });
+            dispatch(setCategoryName(
+                {
+                    imgNum: '2',
+                    tabInfoTxt: '카트바디',
+                    tabDataState: tabData.kartbody
+                }
+            ))
         } else if(pathname.startsWith('/character')){
-            setCategoryName({
-                imgNum: '3',
-                tabInfoTxt: '캐릭터',
-                tabDataState: tabData.character
-            });
+            dispatch(setCategoryName(
+                {
+                    imgNum: '3',
+                    tabInfoTxt: '캐릭터',
+                    tabDataState: tabData.character
+                }
+            ))
         }
-    },[pathname])
+    },[pathname,dispatch])
 
     const getDataName = (dataName) => {
         if(pathname.startsWith('/kartbody/common') && dataName === 'common'){
@@ -59,10 +58,10 @@ const SubTab = () => {
         <SubTabstyled.TabWrap>
             <SubTabstyled.TabWrapInner>
                 <SubTabstyled.TabInfo>
-                    <SubTabstyled.TabInfoTxt num={categoryName.imgNum}>{categoryName.tabInfoTxt}</SubTabstyled.TabInfoTxt>
+                    <SubTabstyled.TabInfoTxt num={category.imgNum}>{category.tabInfoTxt}</SubTabstyled.TabInfoTxt>
                 </SubTabstyled.TabInfo>
                 <SubTabstyled.TabList>
-                    {categoryName.tabDataState.map((item, index) => {
+                    {category.tabDataState.map((item, index) => {
                         return (
                             <SubTabstyled.TabItem key={index}>
                                 <NavLink to={item.route} className={getDataName(item.dataName)}

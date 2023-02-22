@@ -4,7 +4,12 @@ import mixins from 'components/style/mixins';
 export const SubVisualWrap = styled.div`
     width: 100%;
     height: 250px;
-    margin-top: 50px;
+    margin-top: 65px;
+
+    ${({ theme }) => theme.tablet`
+        height: 200px;
+        margin-top: 55px;
+    `};
 `
 
 export const SubViusalInner = styled.div`
@@ -15,6 +20,7 @@ export const SubViusalInner = styled.div`
     background-position: center 65px;
     background-size: 100%;
     background-attachment: fixed;
+    padding: 0 16px;
 
     &::before{
         content: '';
@@ -43,4 +49,8 @@ export const SubVisualTitle = styled.h2`
     font-size: ${({theme}) => theme.fontSizes.f62};
     font-weight: 600;
     color: #fff;
+
+    ${({ theme }) => theme.tablet`
+        font-size: ${({theme}) => theme.fontSizes.f42};
+    `};
 `

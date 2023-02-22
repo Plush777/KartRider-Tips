@@ -5,12 +5,16 @@ export const FooterWrap = styled.footer`
     width: 100%;
     height: 100px;
     background: #fafafa;
+
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `};
 `
 
 export const FooterInner = styled.div`
     ${mixins.inner}
     ${mixins.aic}
-    padding: 30px 0;
+    padding: 30px 16px;
 `
 
 export const LogoArea = styled.div`
