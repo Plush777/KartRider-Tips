@@ -71,9 +71,13 @@ export const GnbItem = styled.li`
 `
 
 export const ShortArea = styled.div`
-    white-space: nowrap;
     font-size: ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#666')}
+
+    >a{
+        display: block;
+        min-width: 156px;
+    }
 
     ${({ theme }) => theme.tablet`
         display: none;

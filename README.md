@@ -21,7 +21,7 @@
 
 ## 라이브러리
 
-- React router (v18)
+- React router (v6)
 - React responsive
 - React helmet & React snap
 - html react paser
@@ -37,7 +37,7 @@
     - Material Design Icons
     - SkewDat
 
-    <br/><br/>
+- Photoshop
 
 <br/>
 

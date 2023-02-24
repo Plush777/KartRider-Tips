@@ -158,6 +158,10 @@ export const ImgBox = styled.figure`
 export const CommonImg = styled.img`
     width: ${(props) => props.wd01 ? '80%' : '100%'};
     transition: all 0.3s ease-in-out;
+
+    ${({ theme }) => theme.laptopL`
+        width: 100%;
+    `};
 `
 
 export const ImgGroup = styled.div`
@@ -197,6 +201,15 @@ export const ListItem = styled.li`
 
 export const TableArea = styled.div`
     margin-top: ${(props) => props.mt};
+
+    ${({ theme }) => theme.tablet`
+        overflow-x: auto;
+        max-width: calc(100vw - 32px);
+        table{
+            width: 768px;
+            
+        }
+    `};
 `
 
 export const Td = styled.td`

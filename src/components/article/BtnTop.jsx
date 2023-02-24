@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import React, { useState , useEffect } from "react"
 import mixins from "components/style/mixins"
+import { ReactComponent as SCtopArrow } from "static/svg/ico-top-arrow.svg"
 
 const BtnArea = styled.div`
     position: fixed;
@@ -16,8 +17,6 @@ const BtnArea = styled.div`
 const TopBtn = styled.button.attrs({type: 'button'})`
     ${mixins.fc}
     ${mixins.whFull}
-    background: url('/images/common/ico-top-arrow.svg') no-repeat center;
-    background-size: 20px 20px;
 `
 
 const BtnTop = () => {
@@ -51,6 +50,7 @@ const BtnTop = () => {
             {isShow &&
                 <BtnArea>
                     <TopBtn onClick={scrollToTop}>
+                        <SCtopArrow width="20px" height="20px" fill="#000"/>
                         <span className="hidden">위로 올라가기</span>
                     </TopBtn>
                 </BtnArea>

@@ -1,5 +1,6 @@
 import * as Exstyled from 'components/style/components/sub/ex.style';
 import speedVideo from 'components/video/files/video-mode-speed.mp4';
+import { ReactComponent as SCclose } from 'static/svg/ico-close.svg';
 
 const SpeedVideo = props => {
     const exHide = () => {
@@ -12,14 +13,15 @@ const SpeedVideo = props => {
             <Exstyled.VideoBox>
                 <Exstyled.BtnArea>
                     <Exstyled.Btn onClick={exHide}>
+                        <SCclose width="40px" height="40px"/>
                         <span className="hidden">닫기</span>
                     </Exstyled.Btn>
                 </Exstyled.BtnArea>
-                <Exstyled.VideoBox>
+                <Exstyled.VideoDiv>
                         <Exstyled.Video poster='/images/thumbnail/img-speed-video-thumbnail.png'>
                             <source src={speedVideo} type='video/mp4'/>
                         </Exstyled.Video>
-                    </Exstyled.VideoBox>
+                    </Exstyled.VideoDiv>
             </Exstyled.VideoBox>
         </Exstyled.VideoWrap>
      );

@@ -9,6 +9,7 @@ import { setImgSkeleton } from 'redux/store/store';
 import { useEffect, useState } from 'react';
 import React from 'react';
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
+import { ReactComponent as SCvideo } from 'static/svg/ico-video.svg';
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
 const pointData2 = ["포인트","10","8","6","5","4","3","2","1","0"];
@@ -102,7 +103,10 @@ const SubContents = (props) => {
                                             <Tipstyled.TipBox>
                                                 <Tipstyled.TipTxt red>{parse(item.tip1.txt)}</Tipstyled.TipTxt>
                                                 <Tipstyled.ExArea mt="10px">
-                                                    <Tipstyled.ExTxt video onClick={exShow}>{item.tip1.ex}</Tipstyled.ExTxt>
+                                                    <Tipstyled.ExTxt onClick={exShow}>
+                                                        <SCvideo/>
+                                                        {item.tip1.ex}
+                                                    </Tipstyled.ExTxt>
                                                 </Tipstyled.ExArea>
                                             </Tipstyled.TipBox>
                                         </Tipstyled.TipWrap>

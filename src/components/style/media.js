@@ -5,6 +5,7 @@ const sizes = {
     mobile: 500,
     tablet: 768,
     laptop: 1024,
+    laptopL: 1440,
 }
 
 export default Object.keys(sizes).reduce((acc, label) => {

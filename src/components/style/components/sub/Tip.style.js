@@ -43,12 +43,7 @@ export const ExTxt = styled.button.attrs({type: 'button'})`
     ${({theme}) => theme.fontSizes.f12};
     ${mixins.font('nexonLv1Gothic','#555')};
 
-    &::before{
-        content: '';
-        display: inline-block;
-        width: 14px;
-        height: 14px;
+    >svg{
         margin-right: 5px;
-        background: ${(props) => props.video && 'url(/images/common/ico-video.svg) no-repeat center'};
     }
 `

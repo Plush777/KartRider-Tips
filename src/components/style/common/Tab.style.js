@@ -11,7 +11,7 @@ export const TabWrapInner = styled.div`
     display: flex;
     ${mixins.inner}
     height: 100%;
-    padding: 15px 0;
+    padding: 15px 16px;
 `
 
 export const TabInfo = styled.div`
