@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import mixins from "components/style/mixins";
 // import logoBlack from 'components/svg/ico-kart-logo-black.svg';
-import logoBlackBeta from 'components/svg/ico-kart-logo-black-beta.svg';
+import logoBlackBeta from 'components/svg/files/ico-kart-logo-black-beta.svg';
 
 const Wrap = styled.div`
     position: fixed;

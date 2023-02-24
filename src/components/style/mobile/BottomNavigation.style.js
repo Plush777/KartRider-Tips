@@ -18,12 +18,15 @@ export const MenuList = styled.ul`
 `
 
 export const MenuLink = styled(NavLink)`
-    display: flex;
-    align-items: flex-end;
+    ${mixins.fcc};
+    row-gap: 2px;
     font-size: ${({ theme }) => theme.fontSizes.f12};
     font-family: 'nexonLv1Gothic';
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
-    background: ${props => `url(/images/common/ico-tab0${props.num}.svg)`} no-repeat center 2px;
+
+    &.disabled{
+        ${mixins.disabled}; 
+    }
 `
 
 export const MenuItem = styled.li`
@@ -31,10 +34,4 @@ export const MenuItem = styled.li`
     flex: 1;
     height: 55px;
     padding: 6px 0;
-
-    &.disabled{
-        ${MenuLink}{
-            ${mixins.disabled}; 
-        }
-    }
 `

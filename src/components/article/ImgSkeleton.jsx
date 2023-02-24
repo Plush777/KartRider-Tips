@@ -1,5 +1,5 @@
 import * as Skeletonstyled from 'components/style/common/skeleton.style'
-import skeletonLogo from 'components/svg/ico-kart-logo-grayscale.svg';
+import skeletonLogo from 'components/svg/files/ico-kart-logo-grayscale.svg';
 
 const ImgSkeleton = () => {
     return ( 

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Footerstyled from 'components/style/layout/Footer.style';
-import logoGray from 'components/svg/ico-kart-logo-grayscale.svg';
+import logoGray from 'components/svg/files/ico-kart-logo-grayscale.svg';
 import { Link } from 'react-router-dom';
 import { useSelector } from "react-redux";
 

@@ -4,6 +4,10 @@ import { useLocation , NavLink } from "react-router-dom";
 import * as SubTabstyled from 'components/style/common/Tab.style';
 import { useDispatch , useSelector } from "react-redux";
 import { setCategoryName } from 'redux/store/store';
+import { ReactComponent as SCmode } from 'static/svg/ico-tab01.svg';
+import { ReactComponent as SCkartbody } from 'static/svg/ico-tab02.svg';
+import { ReactComponent as SCcharacter } from 'static/svg/ico-tab03.svg';
+import { ReactComponent as SCtrack } from 'static/svg/ico-tab04.svg';
 
 const SubTab = () => {
     let dispatch = useDispatch();
@@ -58,7 +62,13 @@ const SubTab = () => {
         <SubTabstyled.TabWrap>
             <SubTabstyled.TabWrapInner>
                 <SubTabstyled.TabInfo>
-                    <SubTabstyled.TabInfoTxt num={category.imgNum}>{category.tabInfoTxt}</SubTabstyled.TabInfoTxt>
+                    {category.imgNum === '1' ? <SCmode fill="#818181"/>
+                    : category.imgNum === '2' ? <SCkartbody fill="#818181"/>
+                    : category.imgNum === '3' ? <SCcharacter fill="#818181"/>
+                    : category.imgNum === '4' ? <SCtrack fill="#818181"/>
+                    : null 
+                    }
+                    <SubTabstyled.TabInfoTxt>{category.tabInfoTxt}</SubTabstyled.TabInfoTxt>
                 </SubTabstyled.TabInfo>
                 <SubTabstyled.TabList>
                     {category.tabDataState.map((item, index) => {

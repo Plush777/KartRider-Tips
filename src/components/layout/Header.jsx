@@ -1,5 +1,5 @@
 // import logoBlack from 'components/svg/ico-kart-logo-black.svg';
-import logoBlackBeta from 'components/svg/ico-kart-logo-black-beta.svg';
+import logoBlackBeta from 'components/svg/files/ico-kart-logo-black-beta.svg';
 import { Link } from 'react-router-dom';
 import * as Headerstyled from "components/style/layout/Header.style";
 import Gnb from './Gnb';

@@ -15,6 +15,7 @@ export const TabWrapInner = styled.div`
 `
 
 export const TabInfo = styled.div`
+    ${mixins.aic};
     min-width: 125px;
     height: 50px;
     padding: 20px;
@@ -22,24 +23,20 @@ export const TabInfo = styled.div`
     border-radius: 25px;
     border: 1px solid ${({theme}) => theme.colors.ddd};
     background-color: #f2f2f2;
+
+    >svg{
+        overflow: visible;
+        width: 20px;
+    }
 `
 
 export const TabInfoTxt = styled.span`
     ${mixins.fc}
-    ${mixins.whFull}
+    width: 100%;
     ${mixins.font('nexonLv1Gothic','#626262')}
     position: relative;
     font-size: ${({theme}) => theme.fontSizes.f14};
-
-    &::before{
-        content: '';
-        display: inline-flex;
-        width: 22px;
-        height: 22px;
-        margin-right: 5px;
-        background-image: ${props => `url('/images/common/ico-tab0${props.num}.svg')`};
-        ${mixins.bgOption}
-    }
+    margin-left: 5px;
 
     &::after{
         content: '';
