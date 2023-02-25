@@ -23,9 +23,14 @@ const colors = {
     rgbaBlack: "rgba(0,0,0,0.3)"
 }
 
+const variables = {
+    videoResWidth: "85%",
+}
+
 const theme = {
     fontSizes,
     colors,
+    variables
 }
 
 export default theme;

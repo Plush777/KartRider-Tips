@@ -46,7 +46,8 @@ const SubContents = (props) => {
                             <div className="container" key={index}>
                                 <div className="titleArea">
                                     <Substyled.Title>{item.group.title}</Substyled.Title>
-                                    <Substyled.Desc>{parse(item.group.description)}</Substyled.Desc>
+                                    <Substyled.Desc>{item.group.description}</Substyled.Desc>
+                                    <Substyled.Desc>{item.group.description2}</Substyled.Desc>
                                 </div>
                                 <Substyled.ImgWrap>
                                     <Substyled.GroupBox>

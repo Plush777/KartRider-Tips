@@ -20,6 +20,10 @@ export const Desc = styled.p`
     ${({ theme }) => theme.tablet`
        font-size: ${({theme}) => theme.fontSizes.f14};
     `};
+
+    &+&{
+        margin-top: 0;
+    }
 `
 
 export const SmallTitle = styled.h4`
@@ -207,7 +211,6 @@ export const TableArea = styled.div`
         max-width: calc(100vw - 32px);
         table{
             width: 768px;
-            
         }
     `};
 `
@@ -221,6 +224,10 @@ export const Td = styled.td`
 export const TitleArea = styled.div`
     padding-bottom: ${(props) => props.pb && '20px'};
     border-bottom: ${(props) => props.bb && '7px solid #dedede'};
+`
+
+export const DescArea = styled.div`
+
 `
 
 export const TitleGroup = styled.div`

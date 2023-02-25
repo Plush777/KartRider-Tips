@@ -65,6 +65,11 @@ export const inner = css`
     margin: 0 auto;
 `
 
+export const resWidth = css`
+    width: 100%;
+    max-width: calc(100vw - 32px);
+`
+
 export const font = (f,c) => css`
     font-family: ${f};
     color: ${c};
@@ -88,6 +93,7 @@ const mixins = {
     posCenter,
     whFull,
     inner,
+    resWidth,
     font,
     disabled
 }

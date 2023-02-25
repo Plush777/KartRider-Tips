@@ -8,7 +8,11 @@ const sizes = {
     laptopL: 1440,
 }
 
-export default Object.keys(sizes).reduce((acc, label) => {
+const heights = {
+    hLarge: 850
+}
+
+const sizeObj = Object.keys(sizes).reduce((acc, label) => {
     acc[label] = (...args) => css`
         @media screen and (max-width: ${sizes[label]}px) {
             ${css(...args)};
@@ -17,3 +21,20 @@ export default Object.keys(sizes).reduce((acc, label) => {
 
     return acc;
 }, {});
+
+const heightObj = Object.keys(heights).reduce((acc, label) => {
+    acc[label] = (...args) => css`
+        @media screen and (max-height: ${heights[label]}px) {
+            ${css(...args)};
+        }
+    `;
+
+    return acc;
+}, {});
+
+const media = {
+    ...sizeObj,
+    ...heightObj
+}
+
+export default media;

@@ -12,6 +12,12 @@ const BtnArea = styled.div`
     border-radius: 50%;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.15);
     background-color: #fff;
+
+    ${({ theme }) => theme.laptopL`
+        position: sticky;
+        margin-left: auto;
+        margin-bottom: 20px;
+    `};
 `
 
 const TopBtn = styled.button.attrs({type: 'button'})`

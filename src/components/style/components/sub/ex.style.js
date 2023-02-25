@@ -26,12 +26,17 @@ export const VideoDiv = styled.div`
 
 export const BtnArea = styled.div`
     ${mixins.jcfe}
-    width: calc(100% - 35px);
+    width: 100%;
     margin: 0 auto 20px auto;
 
-    ${({ theme }) => theme.tablet`
-        
+    ${({ theme }) => theme.laptopL`
+       width: ${({ theme }) => theme.variables.videoResWidth};
+       margin: 0 auto 20px auto;
     `};
+
+    ${({ theme }) => theme.tablet`
+        ${mixins.resWidth}
+    `}; 
 `
 
 export const Btn = styled.button.attrs({type: 'button'})`
@@ -46,14 +51,20 @@ export const Video = styled.video.attrs({
     display:block;
     width: calc(100% - 35px);
     border-radius: 6px;
-    margin: 0 auto;
+    ${mixins.whFull}
+    
 
     ${({ theme }) => theme.laptopL`
-        width: 85%;
+        width: ${({ theme }) => theme.variables.videoResWidth};
+        margin: 0 auto;
     `};
 
     ${({ theme }) => theme.tablet`
-        width: 100%;
-        max-width: calc(100vw - 32px);
+        ${mixins.resWidth}
+    `}; 
+
+    ${({ theme }) => theme.hLarge`
+        height: calc(100vh - 110px);
+        object-fit: initial;
     `}; 
 `

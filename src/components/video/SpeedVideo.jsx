@@ -18,10 +18,10 @@ const SpeedVideo = props => {
                     </Exstyled.Btn>
                 </Exstyled.BtnArea>
                 <Exstyled.VideoDiv>
-                        <Exstyled.Video poster='/images/thumbnail/img-speed-video-thumbnail.png'>
-                            <source src={speedVideo} type='video/mp4'/>
-                        </Exstyled.Video>
-                    </Exstyled.VideoDiv>
+                    <Exstyled.Video poster='/images/thumbnail/img-speed-video-thumbnail.png'>
+                        <source src={speedVideo} type='video/mp4'/>
+                    </Exstyled.Video>
+                </Exstyled.VideoDiv>
             </Exstyled.VideoBox>
         </Exstyled.VideoWrap>
      );

@@ -1,5 +1,5 @@
 import GlobalStyle from 'GlobalStyle';
-import 'font.scss';
+import 'scss/font.scss';
 import { useEffect, useState } from 'react';
 import Main from 'components/Main';
 import { Route, Routes } from "react-router-dom";
