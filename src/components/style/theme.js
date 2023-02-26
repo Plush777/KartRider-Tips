@@ -11,6 +11,7 @@ const fontSizes = {
     f16: pixelToRem(16),
     f14: pixelToRem(14),
     f12: pixelToRem(12),
+    f11: pixelToRem(11),
 }
 
 const colors = {
@@ -24,7 +25,7 @@ const colors = {
 }
 
 const variables = {
-    videoResWidth: "85%",
+    videoResWidth: "85%"
 }
 
 const theme = {

@@ -20,7 +20,8 @@ const SubTab = () => {
                 {
                     imgNum: '1',
                     tabInfoTxt: '모드',
-                    tabDataState: tabData.mode
+                    tabDataState: tabData.mode,
+                    tabClass: 'default'
                 }
             ))
         } else if(pathname.startsWith('/kartbody')){

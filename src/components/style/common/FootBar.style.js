@@ -23,4 +23,8 @@ export const Txt = styled.a`
     ${({ theme }) => theme.tablet`
         font-size: ${({ theme }) => theme.fontSizes.f12};
     `};
+
+    ${({ theme }) => theme.small`
+        font-size: ${({ theme }) => theme.fontSizes.f11};
+    `};
 `

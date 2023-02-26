@@ -59,7 +59,7 @@ const SubContents = (props) => {
 
                                     {
                                         imgSkeleton ?
-                                        <Substyled.SkeletonArea wd="1042px" ht="592px">
+                                        <Substyled.SkeletonArea wd="1020px" ht="584px">
                                             <ImgSkeleton/>
                                         </Substyled.SkeletonArea>:
 
@@ -104,7 +104,7 @@ const SubContents = (props) => {
                                     <Tipstyled.TipGroup mt="35px">
                                         <Tipstyled.TipWrap>
                                             <Tipstyled.TipBox>
-                                                <Tipstyled.TextInner width="59%">
+                                                <Tipstyled.TextInner>
                                                     <Tipstyled.TipTxt bullet red>{item.tip1.txt}</Tipstyled.TipTxt>
                                                 </Tipstyled.TextInner>
                                                

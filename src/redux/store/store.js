@@ -78,7 +78,8 @@ let categoryName = createSlice({
     initialState: {
         imgNum: '',
         tabInfoTxt: '',
-        tabDataState: []
+        tabDataState: [],
+        tabClass: ''
     },
 
     reducers: {

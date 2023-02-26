@@ -53,9 +53,7 @@ export const SmallDesc = styled.p`
     line-height: 23px;
     font-size: ${(props) => props.fz1 ? '18px' : '16px'};
     ${mixins.font('nexonLv1Gothic', '#333')}
-
     
-
     &::after{
         content: ${props => props.openInNew ? "''" : 'none'};
         width: 18px;
@@ -88,14 +86,23 @@ export const Inner = styled.div`
     ${mixins.inner}
     padding: 80px 16px;
 
-    ${({ theme }) => theme.tablet`
+    ${({ theme }) => theme.laptopL`
         padding: 36px 16px 20px 16px;
+    `};
+
+    ${({ theme }) => theme.small`
+        padding: 26px 10px 16px 10px;
     `};
 `
 
 export const SkeletonArea = styled.div`
     width: ${(props) => props.wd};
     height: ${(props) => props.ht};
+
+    ${({ theme }) => theme.laptopL`
+        width: 100%;
+        height: inherit;
+    `};
 `
 
 export const GroupBox = styled.div`
@@ -183,6 +190,15 @@ export const ImgGroup = styled.div`
 
     ${({ theme }) => theme.tablet`
         column-gap: 20px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        overflow-x: auto;
+        margin-top: 10px;
+
+        ${CommonImg}{
+            width: calc(100vw - 32px);
+        }
     `};
 `
 

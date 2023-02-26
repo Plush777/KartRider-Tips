@@ -15,14 +15,16 @@ const BtnArea = styled.div`
 
     ${({ theme }) => theme.laptopL`
         position: sticky;
+        margin-top: 30px;
         margin-left: auto;
-        margin-bottom: 20px;
     `};
 
     ${({ theme }) => theme.tablet`
         bottom: 70px;
-        margin-bottom: 0;
-        margin-top: 30px;
+    `};
+
+    ${({ theme }) => theme.small`
+        margin-top: 20px;
     `};
 `
 

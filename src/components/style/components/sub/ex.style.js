@@ -62,9 +62,4 @@ export const Video = styled.video.attrs({
     ${({ theme }) => theme.tablet`
         ${mixins.resWidth}
     `}; 
-
-    ${({ theme }) => theme.hLarge`
-        height: calc(100vh - 110px);
-        object-fit: initial;
-    `}; 
 `

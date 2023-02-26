@@ -5,11 +5,17 @@ export const TabWrap = styled.div`
     width: 100%;
     height: 80px;
     background-color: ${({theme}) => theme.colors.fff};
+
+    ${({ theme }) => theme.tablet`
+        height: 60px;
+    `};
 `
 
 export const TabWrapInner = styled.div`
-    display: flex;
+    position: relative;
+    ${mixins.aic}
     ${mixins.inner}
+    column-gap: 20px;
     height: 100%;
     padding: 15px 16px;
 `
@@ -28,6 +34,22 @@ export const TabInfo = styled.div`
         overflow: visible;
         width: 20px;
     }
+
+    ${({ theme }) => theme.tablet`
+        min-width: 90px;
+        height: 40px;
+        padding: 0 16px;
+        justify-content: center;
+
+        >svg{
+            width: 18px;
+            height: 18px;
+        }
+    `};
+
+    ${({ theme }) => theme.mobile`
+        display: none;
+    `};
 `
 
 export const TabInfoTxt = styled.span`
@@ -46,11 +68,30 @@ export const TabInfoTxt = styled.span`
         margin-left: 10px;
         background: url('/images/common/ico-arrow-right.svg') no-repeat center;
     }
+
+    ${({ theme }) => theme.tablet`
+        width: auto;
+        font-size: ${({theme}) => theme.fontSizes.f12};
+        margin-left: 3px;
+
+        &::after{
+            width: 18px;
+            height: 18px;
+            background-size: 18px;
+        }
+    `};
 `
 
 export const TabList = styled.ul`
     display: flex;
-    margin-left: 20px;
+    ${({ theme }) => theme.tablet`
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    `};
 `
 
 export const TabItem = styled.li`
@@ -72,4 +113,13 @@ export const TabItem = styled.li`
             color: rgba(0,0,0,0.6);
         }
     }
+
+    ${({ theme }) => theme.tablet`
+        ${mixins.aic};
+        >a{
+            width: 90px;
+            height: 40px;
+            font-size: ${({theme}) => theme.fontSizes.f14};
+        }   
+    `};
 `

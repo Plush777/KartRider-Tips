@@ -6,11 +6,14 @@ export const TipGroup = styled.div`
     flex-direction: column;
     margin-top: ${(props) => props.mt};
     row-gap: 10px;
-    width: calc(100% - 40px);
 `
 
 export const TipWrap = styled.div`
     display: flex;
+    width: 60%;
+    ${({ theme }) => theme.tablet`
+        width: 100%;
+    `};
 `
 
 export const TipBox = styled.div`
@@ -53,7 +56,7 @@ export const ExTxt = styled.button.attrs({ type: 'button' })`
 export const TextInner = styled.div`
     width: ${props => props.width};
     display: inline-block;
-     ${({ theme }) => theme.tablet`
+    ${({ theme }) => theme.tablet`
         
     `};
 `
