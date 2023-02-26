@@ -1,7 +1,7 @@
 import GlobalStyle from 'GlobalStyle';
 import 'scss/font.scss';
 import { useEffect, useState } from 'react';
-import Main from 'components/Main';
+import Main from 'components/Main'; 
 import { Route, Routes } from "react-router-dom";
 import SubSpeed from "components/sub/speed/SubSpeed";
 import SubItem from "components/sub/item/SubItem";
@@ -13,7 +13,7 @@ import kartbodyCommonContentsData from 'data/kartbody/common/contents.json';
 import characterCommonContentsData from 'data/character/common/contents.json';
 import sourceData from 'data/etc/source.json';
 import purposeData from 'data/etc/purpose.json';
-import Notfound from "components/Notfound";
+import Notfound from "components/Notfound"; 
 import { ThemeProvider } from 'styled-components';
 import theme from 'components/style/theme';
 import media from 'components/style/media';
@@ -43,7 +43,7 @@ const App = () => {
 		}
 	},[pathname,dispatch]);
 
-	return (
+	return ( 
 		<>
 			<SkipNavigation/>
 			{routerScroll && <RouteScroll/>}

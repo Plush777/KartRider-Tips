@@ -18,6 +18,12 @@ const BtnArea = styled.div`
         margin-left: auto;
         margin-bottom: 20px;
     `};
+
+    ${({ theme }) => theme.tablet`
+        bottom: 70px;
+        margin-bottom: 0;
+        margin-top: 30px;
+    `};
 `
 
 const TopBtn = styled.button.attrs({type: 'button'})`

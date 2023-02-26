@@ -8,6 +8,7 @@ import SourceContents from "./SourceContents";
 import Alert from "components/mobile/Alert";
 import BottomNavigation from "components/mobile/BottomNavigation";
 import { useSelector } from "react-redux";
+import { M768 } from 'components/style/mobile/MediaQuery';
 
 const Source = props => {
 
@@ -29,7 +30,9 @@ const Source = props => {
                 <FootNotice/>
                 <Footer/>
             </main>
-            <BottomNavigation/>
+            <M768>
+                <BottomNavigation/>
+            </M768>
             {openInNewAlert && <Alert/>}
         </>
     );

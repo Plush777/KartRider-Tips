@@ -2,23 +2,23 @@ import styled from "styled-components";
 import mixins from 'components/style/mixins';
 
 export const Title = styled.h3`
-    font-size: ${({theme}) => theme.fontSizes.f42};
+    font-size: ${({ theme }) => theme.fontSizes.f42};
     font-weight: 600;
-    ${mixins.font('nexonLv1Gothic','#000')}
+    ${mixins.font('nexonLv1Gothic', '#000')}
 
     ${({ theme }) => theme.tablet`
-       font-size: ${({theme}) => theme.fontSizes.f24};
+       font-size: ${({ theme }) => theme.fontSizes.f24};
     `};
 `
 
 export const Desc = styled.p`
     line-height: 23px;
     margin-top: 20px;
-    ${mixins.font('nexonLv1Gothic','#333')}
-    font-size: ${({theme}) => theme.fontSizes.f16};
+    ${mixins.font('nexonLv1Gothic', '#333')}
+    font-size: ${({ theme }) => theme.fontSizes.f16};
 
     ${({ theme }) => theme.tablet`
-       font-size: ${({theme}) => theme.fontSizes.f14};
+       font-size: ${({ theme }) => theme.fontSizes.f14};
     `};
 
     &+&{
@@ -29,10 +29,10 @@ export const Desc = styled.p`
 export const SmallTitle = styled.h4`
     ${mixins.aic};
     font-size: ${(props) => props.fz1 ? '28px' : '24px'};
-    ${mixins.font('nexonLv1Gothic','#000')}
+    ${mixins.font('nexonLv1Gothic', '#000')}
 
     ${({ theme }) => theme.tablet`
-       font-size: ${({theme}) => theme.fontSizes.f18};
+       font-size: ${({ theme }) => theme.fontSizes.f18};
     `};
 
     &::before{
@@ -52,7 +52,7 @@ export const SmallDesc = styled.p`
     margin-top: 10px;
     line-height: 23px;
     font-size: ${(props) => props.fz1 ? '18px' : '16px'};
-    ${mixins.font('nexonLv1Gothic','#333')}
+    ${mixins.font('nexonLv1Gothic', '#333')}
 
     
 
@@ -66,13 +66,13 @@ export const SmallDesc = styled.p`
     }
 
     ${({ theme }) => theme.tablet`
-        font-size: ${({theme}) => theme.fontSizes.f14};
+        font-size: ${({ theme }) => theme.fontSizes.f14};
     `};
 `
 
 export const MediumTitle = styled.h5`
-    ${({theme}) => theme.fontSizes.f20};
-    ${mixins.font('nexonLv1Gothic','#333')}
+    ${({ theme }) => theme.fontSizes.f20};
+    ${mixins.font('nexonLv1Gothic', '#333')}
 
     +${SmallDesc}{
         margin-top: 10px;
@@ -89,7 +89,7 @@ export const Inner = styled.div`
     padding: 80px 16px;
 
     ${({ theme }) => theme.tablet`
-        padding: 36px 16px;
+        padding: 36px 16px 20px 16px;
     `};
 `
 
@@ -104,6 +104,10 @@ export const GroupBox = styled.div`
     +${SkeletonArea}{
         margin-top: 20px;
     }
+
+    ${({ theme }) => theme.tablet`
+        &+&{margin-top: 30px;}
+    `};
 `
 
 export const GroupItem = styled.li`
@@ -157,6 +161,10 @@ export const ImgWrap = styled.div`
 export const ImgBox = styled.figure`
     margin-left: ${(props) => props.ml};
     margin-top: ${(props) => props.mt};
+
+    ${({ theme }) => theme.tablet`
+        margin-top: 10px;
+    `};
 `
 
 export const CommonImg = styled.img`
@@ -172,11 +180,15 @@ export const ImgGroup = styled.div`
     ${mixins.aic};
     column-gap: 30px;
     margin-top: 20px;
+
+    ${({ theme }) => theme.tablet`
+        column-gap: 20px;
+    `};
 `
 
 export const ListContainer = styled.div`
     width: 100%;
-    border: 1px solid ${({theme}) => theme.colors.ddd};
+    border: 1px solid ${({ theme }) => theme.colors.ddd};
     border-radius: 4px;
     margin-top: 20px;
 
@@ -188,7 +200,7 @@ export const ListContainer = styled.div`
 export const ListContainerInner = styled.div`
     padding: 50px 60px 50px 60px;
     border-radius: 4px;
-    background-color: ${({theme}) => theme.colors.fff};
+    background-color: ${({ theme }) => theme.colors.fff};
 `
 
 export const ListBox = styled.ul`

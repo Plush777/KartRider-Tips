@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
 import { ReactComponent as SCvideo } from 'static/svg/ico-video.svg';
+import { M768 } from 'components/style/mobile/MediaQuery';
+import BottomNavigation from "components/mobile/BottomNavigation";
 
 const pointData = ["순위","1st","2nd","3rd","4th","5th","6th","7th","8th","Retire"];
 const pointData2 = ["포인트","10","8","6","5","4","3","2","1","0"];
@@ -102,7 +104,10 @@ const SubContents = (props) => {
                                     <Tipstyled.TipGroup mt="35px">
                                         <Tipstyled.TipWrap>
                                             <Tipstyled.TipBox>
-                                                <Tipstyled.TipTxt red>{parse(item.tip1.txt)}</Tipstyled.TipTxt>
+                                                <Tipstyled.TextInner width="59%">
+                                                    <Tipstyled.TipTxt bullet red>{item.tip1.txt}</Tipstyled.TipTxt>
+                                                </Tipstyled.TextInner>
+                                               
                                                 <Tipstyled.ExArea mt="10px">
                                                     <Tipstyled.ExTxt onClick={exShow}>
                                                         <SCvideo/>
@@ -114,7 +119,7 @@ const SubContents = (props) => {
 
                                         <Tipstyled.TipWrap>
                                             <Tipstyled.TipBox>
-                                                <Tipstyled.TipTxt red>{parse(item.tip2.txt)}</Tipstyled.TipTxt>
+                                                <Tipstyled.TipTxt bullet red>{item.tip2.txt}</Tipstyled.TipTxt>
                                             </Tipstyled.TipBox>
                                         </Tipstyled.TipWrap>
                                     </Tipstyled.TipGroup>
@@ -154,9 +159,14 @@ const SubContents = (props) => {
                             </div>
                         )})
                     }
+                    <BtnTop/>
                 </Substyled.Inner>
+                
             </Substyled.Wrap>
-            <BtnTop/> 
+             
+            <M768>
+                <BottomNavigation/>
+            </M768>
 
             {
                 isExShow &&
