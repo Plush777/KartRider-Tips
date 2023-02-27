@@ -1,12 +1,9 @@
 import parse from 'html-react-parser';
 import * as Substyled from 'components/style/common/Area.style';
 import * as Tipstyled from 'components/style/components/sub/Tip.style';
-import ImgSkeleton from 'components/article/ImgSkeleton';
 import BtnTop from 'components/article/BtnTop';
 import SpeedVideo from 'components/video/SpeedVideo';
-import { useDispatch , useSelector } from 'react-redux';
-import { setImgSkeleton } from 'redux/store/store';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
 import { ReactComponent as SCvideo } from 'static/svg/ico-video.svg';
@@ -22,17 +19,8 @@ const bbcStyles = ["#fff","#000","#000","#000","#ddd","#ddd","#ddd","#ddd","#ddd
 
 const SubContents = (props) => {
 
-    let dispatch = useDispatch();
-    let imgSkeleton = useSelector(state => state.imgSkeleton);
     let [isExShow,setIsExShow] = useState(false);
     const { lockScroll , openScroll } = useBodyScrollLock();
-
-    useEffect(() => {
-        let timer = setTimeout(() => {
-            dispatch(setImgSkeleton(false));
-            return () => clearTimeout(timer);
-        },1500)
-    },[dispatch])
 
     const exShow = () => {
         setIsExShow(true);
@@ -57,17 +45,10 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group2.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
 
-                                    {
-                                        imgSkeleton ?
-                                        <Substyled.SkeletonArea wd="1020px" ht="584px">
-                                            <ImgSkeleton/>
-                                        </Substyled.SkeletonArea>:
-
-                                        <Substyled.ImgBox mt="20px" ml="-7px">
-                                            <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
-                                            <figcaption className="imgCaption">{item.group2.caption}</figcaption>
-                                        </Substyled.ImgBox>
-                                    }
+                                    <Substyled.ImgBox mt="20px" ml="-7px">
+                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
+                                        <figcaption className="imgCaption">{item.group2.caption}</figcaption>
+                                    </Substyled.ImgBox>
                                     
                                 </Substyled.ImgWrap>
                                 <Substyled.ImgWrap>
@@ -76,29 +57,14 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group3.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
                                     <Substyled.ImgGroup>
-                                        {
-                                            imgSkeleton ?
-                                            
-                                            <React.Fragment>
-                                                <Substyled.SkeletonArea wd="608px" ht="346px">
-                                                    <ImgSkeleton/>
-                                                </Substyled.SkeletonArea>
-                                                <Substyled.SkeletonArea wd="608px" ht="346px">
-                                                    <ImgSkeleton/>
-                                                </Substyled.SkeletonArea>
-                                            </React.Fragment>:
-
-                                             <React.Fragment>
-                                                <Substyled.ImgBox ml="-7px">
-                                                    <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
-                                                    <figcaption className="imgCaption">{item.group3.caption}</figcaption>
-                                                </Substyled.ImgBox>
-                                                <Substyled.ImgBox ml="-7px">
-                                                    <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
-                                                    <figcaption className="imgCaption">{item.group3.caption2}</figcaption>
-                                                </Substyled.ImgBox>
-                                             </React.Fragment>
-                                        }
+                                        <Substyled.ImgBox ml="-7px">
+                                            <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
+                                            <figcaption className="imgCaption">{item.group3.caption}</figcaption>
+                                        </Substyled.ImgBox>
+                                        <Substyled.ImgBox ml="-7px">
+                                            <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
+                                            <figcaption className="imgCaption">{item.group3.caption2}</figcaption>
+                                        </Substyled.ImgBox>
                                     </Substyled.ImgGroup>
 
                                     <Tipstyled.TipGroup mt="35px">

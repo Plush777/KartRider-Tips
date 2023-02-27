@@ -7,6 +7,8 @@ import Meta from 'Meta/MetaTag';
 import PurposeContents from "./PurposeContents";
 import Alert from "components/mobile/Alert";
 import { useSelector } from "react-redux";
+import { M768 } from 'components/style/mobile/MediaQuery';
+import BottomNavigation from "components/mobile/BottomNavigation";
 
 const Purpose = props => {
 
@@ -28,6 +30,9 @@ const Purpose = props => {
                 <FootNotice/>
                 <Footer/>
             </main>
+            <M768>
+                <BottomNavigation/>
+            </M768>
             {openInNewAlert && <Alert/>}
         </>
     );

@@ -8,9 +8,11 @@ const fontSizes = {
     f24: pixelToRem(24),
     f20: pixelToRem(20),
     f18: pixelToRem(18),
+    f17: pixelToRem(17),
     f16: pixelToRem(16),
     f14: pixelToRem(14),
     f12: pixelToRem(12),
+    f13: pixelToRem(13),
     f11: pixelToRem(11),
 }
 

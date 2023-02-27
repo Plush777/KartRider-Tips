@@ -47,8 +47,8 @@ const App = () => {
 		<>
 			<SkipNavigation/>
 			{routerScroll && <RouteScroll/>}
-			<GlobalStyle/>
 			<ThemeProvider theme={{...theme,...media}} mixins={mixins}>
+				<GlobalStyle/>
 				<Routes>
 					<Route path="/" element={<Main/>}/>
 					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>

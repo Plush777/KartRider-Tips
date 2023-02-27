@@ -18,8 +18,10 @@ export const Txt = styled.a`
     ${mixins.inner}
     ${mixins.font('nexonLv1Gothic','#fff')}
     font-size: ${({ theme }) => theme.fontSizes.f14};
+    word-break: keep-all;
     
     >strong{margin-right: 3px;font-weight: normal;}
+
     ${({ theme }) => theme.tablet`
         font-size: ${({ theme }) => theme.fontSizes.f12};
     `};

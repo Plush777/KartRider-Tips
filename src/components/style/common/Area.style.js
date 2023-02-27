@@ -12,13 +12,21 @@ export const Title = styled.h3`
 `
 
 export const Desc = styled.p`
-    line-height: 23px;
+    line-height: 27px;
     margin-top: 20px;
     ${mixins.font('nexonLv1Gothic', '#333')}
     font-size: ${({ theme }) => theme.fontSizes.f16};
 
+    ${({ theme }) => theme.laptopL`
+       word-break: keep-all;
+    `};
+
     ${({ theme }) => theme.tablet`
        font-size: ${({ theme }) => theme.fontSizes.f14};
+    `};
+
+    ${({ theme }) => theme.tablet`
+        margin-top: 10px;
     `};
 
     &+&{
@@ -28,15 +36,15 @@ export const Desc = styled.p`
 
 export const SmallTitle = styled.h4`
     ${mixins.aic};
-    font-size: ${(props) => props.fz1 ? '28px' : '24px'};
+    font-size: ${(props) => props.fz1 ? '1.75rem' : '1.5rem'};
     ${mixins.font('nexonLv1Gothic', '#000')}
 
     ${({ theme }) => theme.tablet`
-       font-size: ${({ theme }) => theme.fontSizes.f18};
+       font-size: ${({ theme }) => theme.fontSizes.f20};
     `};
 
     &::before{
-        content: ${(props) => props.bullet ? 'none' : ''};
+        content: ${(props) => props.bullet ? 'none' : "''"};
         display: inline-block;
         width: 16px;
         height: 4px;
@@ -50,31 +58,47 @@ export const SmallDesc = styled.p`
     display: ${props => props.openInNew && 'inline-flex'};
     align-items: ${props => props.openInNew && 'center'};
     margin-top: 10px;
-    line-height: 23px;
-    font-size: ${(props) => props.fz1 ? '18px' : '16px'};
+    line-height: 27px;
+    font-size: ${(props) => props.fz1 ? '1.125rem' : '1rem'};
     ${mixins.font('nexonLv1Gothic', '#333')}
+    word-break: keep-all;
     
     &::after{
-        content: ${props => props.openInNew ? "''" : 'none'};
+        content: ${props => props.openInNew ? "'새창 열림'" : 'none'};
         width: 18px;
         height: 18px;
+        font-size: 0;
+        color: transparent;
         margin-top: -2.5px;
         margin-left: 5px;
         background: url('/images/common/ico-open-in-new.svg') no-repeat center;
     }
 
     ${({ theme }) => theme.tablet`
+        font-size: ${({ theme }) => theme.fontSizes.f16};
+    `};
+
+    ${({ theme }) => theme.mobile`
         font-size: ${({ theme }) => theme.fontSizes.f14};
     `};
 `
 
 export const MediumTitle = styled.h5`
-    ${({ theme }) => theme.fontSizes.f20};
+    font-size: ${({ theme }) => theme.fontSizes.f20};
+    font-weight: 600;
     ${mixins.font('nexonLv1Gothic', '#333')}
 
     +${SmallDesc}{
         margin-top: 10px;
     }
+
+    ${({ theme }) => theme.tablet`
+        font-size: ${({ theme }) => theme.fontSizes.f18};
+    `};
+    
+    ${({ theme }) => theme.mobile`
+        font-size: ${({ theme }) => theme.fontSizes.f16};
+    `};
 `
 
 export const Wrap = styled.div`
@@ -153,12 +177,15 @@ export const GroupContainer = styled.div`
             }
         }
     }
-
 `
 
 export const ImgWrap = styled.div`
     ${mixins.fcol};
     margin-top: 60px;
+
+    ${({ theme }) => theme.mobile`
+        margin-top: 50px;
+    `};
 
     +${GroupContainer}{
         margin-top: 60px;
@@ -170,7 +197,11 @@ export const ImgBox = styled.figure`
     margin-top: ${(props) => props.mt};
 
     ${({ theme }) => theme.tablet`
+        width: 100%;
         margin-top: 10px;
+        margin-left: 0;
+
+        &+&{margin-top: 0;}
     `};
 `
 
@@ -189,16 +220,14 @@ export const ImgGroup = styled.div`
     margin-top: 20px;
 
     ${({ theme }) => theme.tablet`
-        column-gap: 20px;
+        ${mixins.fcol};
+        column-gap: 0;
+        row-gap: 15px;
     `};
 
     ${({ theme }) => theme.mobile`
-        overflow-x: auto;
         margin-top: 10px;
-
-        ${CommonImg}{
-            width: calc(100vw - 32px);
-        }
+        row-gap: 5px;
     `};
 `
 
@@ -214,21 +243,77 @@ export const ListContainer = styled.div`
 `
 
 export const ListContainerInner = styled.div`
-    padding: 50px 60px 50px 60px;
+    padding: 50px 60px;
     border-radius: 4px;
     background-color: ${({ theme }) => theme.colors.fff};
+
+    ${({ theme }) => theme.laptopL`
+        padding: 40px;
+    `};
+
+    ${({ theme }) => theme.laptop`
+        padding: 33px;
+    `};
+
+    ${({ theme }) => theme.tablet`
+        padding: 30px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        padding: 16px;
+    `};
 `
 
 export const ListBox = styled.ul`
     ${mixins.aic};
     flex-wrap: wrap;
     row-gap: 50px;
+
+    ${({ theme }) => theme.laptopL`
+        column-gap: 60px;
+    `};
+
+    ${({ theme }) => theme.tablet`
+        column-gap: 40px;
+        justify-content: space-between;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        row-gap: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+    `};
 `
 
 export const ListItem = styled.li`
    ${mixins.aic};
    column-gap: 25px;
    width: calc(100% / 2);
+
+    ${({ theme }) => theme.laptopL`
+        width: calc(100% / 2 - 60px);
+    `};
+
+    ${({ theme }) => theme.laptop`
+        &:nth-child(even){
+            width: 50%;
+        }
+    `};
+
+    ${({ theme }) => theme.tablet`
+        flex-direction: column;
+        column-gap: 0;
+        height: 300px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        width: 100%;
+        height: auto;
+
+        &:nth-child(even){
+            width: 100%;
+        }
+    `};
 `
 
 export const TableArea = styled.div`

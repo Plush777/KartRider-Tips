@@ -18,6 +18,10 @@ export const TabWrapInner = styled.div`
     column-gap: 20px;
     height: 100%;
     padding: 15px 16px;
+
+    ${({ theme }) => theme.small`
+        padding: 15px 10px;
+    `};
 `
 
 export const TabInfo = styled.div`

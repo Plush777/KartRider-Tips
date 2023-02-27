@@ -29,7 +29,7 @@ const AccNav = styled.div`
             height:auto; 
             padding:5px 0;
             background:#444;
-            font-size: 14px;
+            font-size: 0.875rem;
             color:#fff;
             font-weight:700;
         }

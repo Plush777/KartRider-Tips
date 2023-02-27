@@ -9,6 +9,8 @@ import FootSupport from 'components/article/FootSupport';
 import FootNotice from 'components/article/FootNotice';
 import Alert from "components/mobile/Alert";
 import { useSelector } from "react-redux";
+import { M768 } from 'components/style/mobile/MediaQuery';
+import BottomNavigation from "components/mobile/BottomNavigation";
 
 const SubItem = props => {
 
@@ -32,6 +34,9 @@ const SubItem = props => {
                 <Footer/>
             </main>
             {openInNewAlert && <Alert/>}
+            <M768>
+                <BottomNavigation/>
+            </M768>
         </>
     );
 }

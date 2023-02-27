@@ -2,7 +2,8 @@ import { createGlobalStyle  } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
-body,html{margin: 0;padding: 0; color: #000;}
+body,html{margin: 0;padding: 0; color: #000; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust : none; -o-text-size-adjust : none;}
 :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary){
   margin:0;padding:0;border:0;
 }  
@@ -21,7 +22,6 @@ figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
 
-#root{min-height: 100%;}
 &::-webkit-scrollbar{width: 14px;}
 &::-webkit-scrollbar-button{display: none;}
 &::-webkit-scrollbar-track{background: transparent;}
@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 border-radius: 8px; box-shadow: rgb(0 0 0 / 11%) 0px 0px 100px inset;}
 
 table{width: 100%;
-  td{height: 40px; font-size: 16px; font-family: 'nexonLv1Gothic'; text-align: center; 
+  td{height: 40px; font-size: 1rem; font-family: 'nexonLv1Gothic'; text-align: center; 
   border: 1px solid #ddd; border-top: 0;}
 
   &.style01{
@@ -60,6 +60,14 @@ table{width: 100%;
     background-color: rgba(0,0,0,0.3);
   }
 }
+
+${({ theme }) => theme.laptopL`
+    br{
+      display: inline-block;
+      content: " ";
+      padding: 0 2px;
+    }
+`};
 `;
 
 export default GlobalStyle;

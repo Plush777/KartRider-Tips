@@ -8,7 +8,7 @@ export const BottomNavWrap = styled.aside`
     bottom: 0;
     width: 100%;
     height: 55px;
-    border-top: #ececec;
+    border-top: 1px solid #ececec;
     background-color: ${({ theme }) => theme.colors.fff};
     z-index: 1000;
 `
@@ -27,6 +27,21 @@ export const MenuLink = styled(NavLink)`
     &.disabled{
         ${mixins.disabled}; 
     }
+
+    ${({ theme }) => theme.mobile`
+        >svg{
+            width: 22px;
+            height: 22px;
+        }
+    `};
+
+    ${({ theme }) => theme.small`
+        font-size: ${({ theme }) => theme.fontSizes.f11};
+        >svg{
+            width: 20px;
+            height: 20px;
+        }
+    `};
 `
 
 export const MenuItem = styled.li`
