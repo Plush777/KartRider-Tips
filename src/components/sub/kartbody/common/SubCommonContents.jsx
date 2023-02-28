@@ -6,6 +6,9 @@ import BtnTop from 'components/article/BtnTop';
 import { useParams,NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setRouterScroll } from 'redux/store/store';
+import { M768 } from 'components/style/mobile/MediaQuery';
+import Select from 'components/mobile/Select';
+import * as Previewstyled from 'components/style/mobile/Preview.style';
 
 const SubCommonContents = (props) => {
 
@@ -48,13 +51,21 @@ const SubCommonContents = (props) => {
                         </Tabstyled.TabInner>
                     </Tabstyled.TabWrap>
 
+                    <M768>
+                        <Select commonContents={props.commonContents}/>
+                        <Previewstyled.Wrap>
+                            <Previewstyled.Img src={kartId2.img === "" ? "/images/common/img-no-image.webp" : kartId2.img} 
+                            alt={kartId2.alt}/>
+                        </Previewstyled.Wrap>
+                    </M768>
+
                     <Tabstyled.TabContentWrap>
                         <Tabstyled.TabContentInner>
                             <Tabstyled.TabContnetBox>
                                 <Tabstyled.TabContent>
                                     <Introstyled.Top>
-                                        <Substyled.SmallTitle fz1 bullet>{kartId.title}</Substyled.SmallTitle>
-                                        <Substyled.SmallDesc>{parse(kartId.desc)}</Substyled.SmallDesc>
+                                        <Introstyled.Title>{kartId.title}</Introstyled.Title>
+                                        <Introstyled.Desc>{parse(kartId.desc)}</Introstyled.Desc>
                                     </Introstyled.Top>
                                     <div className="bottom">
                                         <Introstyled.RowList>
@@ -84,9 +95,10 @@ const SubCommonContents = (props) => {
                             </Tabstyled.TabContnetBox>
                         </Tabstyled.TabContentInner>
                     </Tabstyled.TabContentWrap>
+                    
+                    <BtnTop/>
                 </Substyled.Inner>
             </Substyled.Wrap>
-            <BtnTop/>
         </>
      );
 }

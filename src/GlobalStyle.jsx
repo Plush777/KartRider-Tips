@@ -22,11 +22,16 @@ figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
 
-&::-webkit-scrollbar{width: 14px;}
-&::-webkit-scrollbar-button{display: none;}
-&::-webkit-scrollbar-track{background: transparent;}
-&::-webkit-scrollbar-thumb {border: solid transparent; background-clip: padding-box; 
+::-webkit-scrollbar{width: 14px;}
+::-webkit-scrollbar-button{display: none;}
+::-webkit-scrollbar-track{background: transparent;}
+::-webkit-scrollbar-thumb {border: solid transparent; background-clip: padding-box; 
 border-radius: 8px; box-shadow: rgb(0 0 0 / 11%) 0px 0px 100px inset;}
+
+.scY{overflow-y: auto;
+  &::-webkit-scrollbar {width: 5px;}
+  &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: ${({theme}) => theme.colors.rgbaBlack}}
+}
 
 table{width: 100%;
   td{height: 40px; font-size: 1rem; font-family: 'nexonLv1Gothic'; text-align: center; 

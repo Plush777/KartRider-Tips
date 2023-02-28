@@ -2,8 +2,9 @@ const pixelToRem = (size) => `${size / 16}rem`;
 
 const fontSizes = {
     f62: pixelToRem(62),
-    f42: pixelToRem(42),
     f48: pixelToRem(48),
+    f42: pixelToRem(42),
+    f36: pixelToRem(36),
     f30: pixelToRem(30),
     f24: pixelToRem(24),
     f20: pixelToRem(20),

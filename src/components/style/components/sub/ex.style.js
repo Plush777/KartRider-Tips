@@ -6,7 +6,7 @@ export const VideoWrap = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 1000;
+    z-index: 1010;
     width: 100%;
     height: 101%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -36,6 +36,21 @@ export const BtnArea = styled.div`
 
     ${({ theme }) => theme.tablet`
         ${mixins.resWidth}
+    `}; 
+
+    ${({ theme }) => theme.mobile`
+        margin: 0 auto 10px auto;
+        >button svg{
+            width: 30px;
+            height: 30px;
+        }
+    `}; 
+
+    ${({ theme }) => theme.small`
+        >button svg{
+            width: 26px;
+            height: 26px;
+        }
     `}; 
 `
 

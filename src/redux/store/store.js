@@ -90,12 +90,25 @@ let categoryName = createSlice({
     }
 });
 
+let ariaBoolean = createSlice({
+    name: 'ariaBoolean',
+    initialState: false,
+
+    reducers: {
+        setAriaBoolean: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+})
+
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
 export const { setImgSkeleton } = imgSkeleton.actions;
 export const { setStartState } = startState.actions;
 export const { setOpenInNew } = openInNew.actions;
 export const { setCategoryName } = categoryName.actions;
+export const { setAriaBoolean } = ariaBoolean.actions;
 
 export default configureStore({
     reducer: {
@@ -106,6 +119,7 @@ export default configureStore({
         startState: startState.reducer,
         footer: footer.reducer,
         openInNew: openInNew.reducer,
-        categoryName: categoryName.reducer
+        categoryName: categoryName.reducer,
+        ariaBoolean: ariaBoolean.reducer
     },
 });

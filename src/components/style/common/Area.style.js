@@ -6,6 +6,14 @@ export const Title = styled.h3`
     font-weight: 600;
     ${mixins.font('nexonLv1Gothic', '#000')}
 
+    ${({ theme }) => theme.laptopL`
+       font-size: ${({ theme }) => theme.fontSizes.f36};
+    `};
+
+    ${({ theme }) => theme.laptop`
+       font-size: ${({ theme }) => theme.fontSizes.f30};
+    `};
+
     ${({ theme }) => theme.tablet`
        font-size: ${({ theme }) => theme.fontSizes.f24};
     `};
@@ -111,11 +119,11 @@ export const Inner = styled.div`
     padding: 80px 16px;
 
     ${({ theme }) => theme.laptopL`
-        padding: 36px 16px 20px 16px;
+        padding: 36px 16px;
     `};
 
     ${({ theme }) => theme.small`
-        padding: 26px 10px 16px 10px;
+        padding: 26px 10px;
     `};
 `
 
