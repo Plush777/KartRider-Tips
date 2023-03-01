@@ -29,7 +29,6 @@ const Main = () => {
     return ( 
         <>  
             <Meta data={metaData}/>
-            
             {
                 started ? <Started/> 
                 :

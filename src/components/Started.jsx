@@ -17,6 +17,7 @@ const Contents = styled.main`
     display: grid;
     place-items: center;
     height: 100%;
+    padding: 0 16px;
     animation: fadeIn 1.5s ease-in-out;
 
     @keyframes fadeIn {
@@ -30,7 +31,7 @@ const Contents = styled.main`
 `
 
 const Img = styled.img`
-    width: 370px;
+    width: 100%;
     margin: 0 auto;
 `
 
@@ -47,8 +48,23 @@ const Txt = styled.p`
     ${mixins.font('nexonLv1Gothic','#333')}
     font-size: 1.75rem;
     text-align: center;
-    white-space: nowrap;
     line-height: 35px;
+    word-break: keep-all;
+
+    ${({ theme }) => theme.tablet`
+       font-size: 1.125rem;
+       line-height: 25px;
+    `}
+
+    ${({ theme }) => theme.mobile`
+       font-size: 0.875rem;
+       line-height: 21px;
+    `}
+
+    ${({ theme }) => theme.small`
+       font-size: 0.75rem;
+       line-height: 17.5px;
+    `}
 `
 
 const Started = () => {

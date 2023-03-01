@@ -13,3 +13,24 @@ code {
 #root:not(:empty) ~ #loadWrap{
   display: none;
 }
+
+#loadWrap img{
+  @media screen and (max-width: 768px){
+    width: 138px;
+    height: 128px;
+    top: -142px;
+  }
+}
+
+#load{
+  @media screen and (max-width: 768px){
+    height: 8px;
+    margin-top: 0;	
+  }
+}
+
+.loadTxt{
+  @media screen and (max-width: 768px){
+    font-size: 0.875rem;
+  }
+}

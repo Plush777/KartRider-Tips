@@ -6,25 +6,41 @@ export const ContentWrap = styled.div`
 `
 
 export const MainBoxWrap = styled.div`
-    padding: 105px 0;
-    width: 1300px;
-    margin: 0 auto;
+    padding: 105px 16px;
+    ${mixins.inner}
+
+    ${({ theme }) => theme.laptop`
+        padding: 70px 16px;
+    `}
+
+    ${({ theme }) => theme.tablet`
+        padding: 36px 16px;
+    `}
 `
 
 export const MainBoxList = styled.ul`
     ${mixins.aic}
     gap: 20px;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 1200px){
+        gap: 16px;
+    }
+
+    ${({ theme }) => theme.laptop`
+        flex-direction: column;
+        gap: 10px;
+    `}
 `
 
 export const MainBoxItems = styled.li`
     position: relative;
     z-index: 10;
-    width: 49.2%;
+    width: calc(100% / 2 - 20px);
     height: 310px;
     border-radius: 12px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: ${({theme}) => theme.colors.fff};
+    background-color: ${({ theme }) => theme.colors.fff};
     ${mixins.bgOption}
     transition: .3s ease-in-out;
 
@@ -40,7 +56,7 @@ export const MainBoxItems = styled.li`
         ${mixins.whFull}
         z-index: 0;
         border-radius: 12px;
-        background-color: ${({theme}) => theme.colors.rgbaBlack};
+        background-color: ${({ theme }) => theme.colors.rgbaBlack};
     }
 
     &.disabled{
@@ -65,11 +81,29 @@ export const MainBoxItems = styled.li`
             transform: translateY(-5px);
         }
     }
+
+    @media screen and (max-width: 1200px){
+        height: 270px;
+    }
+
+    ${({ theme }) => theme.laptop`
+        width: 100%;
+        height: 260px;
+        background-size: cover;
+    `}
+
+    ${({ theme }) => theme.mobile`
+        height: 200px;
+    `}
 `
 
 export const MainBoxInner = styled.div`
     padding: 40px;
     height: inherit;
+
+    @media screen and (max-width: 1200px){
+        padding: 30px;
+    }
 `
 
 export const TxtBox = styled.div`
@@ -80,13 +114,29 @@ export const TxtBox = styled.div`
 `
 
 export const Title = styled.h3`
-    font-size: ${({theme}) => theme.fontSizes.f30};
+    font-size: ${({ theme }) => theme.fontSizes.f30};
     color: #fff;
     margin-bottom: 12px;
     font-weight: 600;
+
+    @media screen and (max-width: 1200px){
+        font-size: 1.625rem;
+    }
+
+    ${({ theme }) => theme.mobile`
+        font-size: ${({ theme }) => theme.fontSizes.f20};
+    `}
 `
 
 export const Desc = styled.p`
-    font-size: ${({theme}) => theme.fontSizes.f18};
+    font-size: ${({ theme }) => theme.fontSizes.f18};
     color: #fff;
+
+    @media screen and (max-width: 1200px){
+        font-size: 1rem;
+    }
+
+    ${({ theme }) => theme.mobile`
+        font-size: ${({ theme }) => theme.fontSizes.f14};
+    `}
 `

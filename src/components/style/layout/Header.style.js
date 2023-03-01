@@ -10,14 +10,10 @@ export const Headers = styled.header`
     height: 65px;
     padding: 0 16px;
     border-bottom: 1px solid #E2E8F0;
-    background-color: ${({theme}) => theme.colors.fff};
+    background-color: ${({ theme }) => theme.colors.fff};
 
     ${({ theme }) => theme.tablet`
         height: 55px;
-
-        ~ #main{
-            padding-bottom: 55px;
-        }
     `};
 `
 
@@ -60,7 +56,7 @@ export const GnbList = styled.ul`
 
 export const GnbItem = styled.li`
     position: relative;
-    font-size: ${({theme}) => theme.fontSizes.f14};
+    font-size: ${({ theme }) => theme.fontSizes.f14};
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
 
     &.disabled{
@@ -71,8 +67,8 @@ export const GnbItem = styled.li`
 `
 
 export const ShortArea = styled.div`
-    font-size: ${({theme}) => theme.fontSizes.f12};
-    ${mixins.font('nexonLv1Gothic','#666')}
+    font-size: ${({ theme }) => theme.fontSizes.f12};
+    ${mixins.font('nexonLv1Gothic', '#666')}
 
     >a{
         display: block;
