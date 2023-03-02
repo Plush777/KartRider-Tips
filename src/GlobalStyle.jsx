@@ -23,7 +23,7 @@ figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; mar
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
 
 /* mobile scroll */
-::-webkit-scrollbar {-webkit-appearance: none;}
+::-webkit-scrollbar {-webkit-appearance: none; -webkit-overflow-scrolling: auto;}
 ::-webkit-scrollbar:vertical {width: 14px;}
 ::-webkit-scrollbar:horizontal {height: 14px;}
 /*---*/

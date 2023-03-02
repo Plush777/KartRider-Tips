@@ -46,7 +46,7 @@ const SubContents = (props) => {
                                     </Substyled.GroupBox>
 
                                     <Substyled.ImgBox mt="20px" ml="-7px">
-                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt} />
+                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt}/>
                                         <figcaption className="imgCaption">{item.group2.caption}</figcaption>
                                     </Substyled.ImgBox>
                                     
