@@ -11,6 +11,7 @@ import Alert from "components/mobile/Alert";
 import { useSelector } from "react-redux";
 import { M768 } from 'components/style/mobile/MediaQuery';
 import BottomNavigation from "components/mobile/BottomNavigation";
+import * as Substyled from 'components/style/common/Area.style';
 
 const SubCommonKartbody = props => {
 
@@ -28,14 +29,14 @@ const SubCommonKartbody = props => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main id='main'>
+            <Substyled.Main id='main'>
                 <SubVisual/>
                 <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>
                 <FootSupport/>
                 <FootNotice/>
                 <Footer/>
-            </main>
+            </Substyled.Main>
             <M768>
                 <BottomNavigation/>
             </M768>

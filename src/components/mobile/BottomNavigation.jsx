@@ -10,7 +10,7 @@ const BottomNavigation = () => {
     let gnbData = useSelector(state => state.gnb);
 
     return ( 
-        <BottomNavigationstyled.BottomNavWrap>
+        <BottomNavigationstyled.BottomNavWrap id="aside">
            <div className="menuArea">
                 <BottomNavigationstyled.MenuList>
                 {gnbData.map((item,index) => {

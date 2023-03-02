@@ -356,3 +356,9 @@ export const TitleGroup = styled.div`
         margin-top: 50px;
     }
 `
+
+export const Main = styled.main`
+    ${({ theme }) => theme.tablet`
+        padding-bottom: 55px;
+    `};
+`

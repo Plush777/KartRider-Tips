@@ -22,6 +22,12 @@ figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
 
+/* mobile scroll */
+::-webkit-scrollbar {-webkit-appearance: none;}
+::-webkit-scrollbar:vertical {width: 14px;}
+::-webkit-scrollbar:horizontal {height: 14px;}
+/*---*/
+
 ::-webkit-scrollbar{width: 14px;}
 ::-webkit-scrollbar-button{display: none;}
 ::-webkit-scrollbar-track{background: transparent;}

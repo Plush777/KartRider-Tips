@@ -10,13 +10,14 @@ import Alert from "components/mobile/Alert";
 import { useSelector } from "react-redux";
 import { M768 } from 'components/style/mobile/MediaQuery';
 import BottomNavigation from "components/mobile/BottomNavigation";
+import * as Substyled from 'components/style/common/Area.style';
 
 const SubCommonCharacter = props => {
 
     const metaData = {
         title: 'KartRider Tips | 캐릭터 | 일반',
         robots: 'index, follow',
-        image: '/og/og-charracter.jpg',
+        image: '/og/og-character.jpg',
         width: '1200',
         height: '630',
     }
@@ -27,14 +28,14 @@ const SubCommonCharacter = props => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main id='main'>
+            <Substyled.Main id='main'>
                 <SubVisual/>
                 <SubTab/>
                 <Character characterCommonContents={props.characterCommonContents}/>
                 <FootSupport/>
                 <FootNotice/>
                 <Footer/>
-            </main>
+            </Substyled.Main>
             <M768>
                 <BottomNavigation/>
             </M768>

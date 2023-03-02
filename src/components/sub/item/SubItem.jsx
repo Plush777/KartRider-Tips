@@ -11,6 +11,7 @@ import Alert from "components/mobile/Alert";
 import { useSelector } from "react-redux";
 import { M768 } from 'components/style/mobile/MediaQuery';
 import BottomNavigation from "components/mobile/BottomNavigation";
+import * as Substyled from 'components/style/common/Area.style';
 
 const SubItem = props => {
 
@@ -28,14 +29,14 @@ const SubItem = props => {
         <>
             <Meta data={metaData}/>
             <Header/>
-            <main id='main'>
+            <Substyled.Main id='main'>
                 <SubVisual/>
                 <SubTab commonContents={props.commonContents}/>
                 <ItemContents itemContents={props.itemContents}/>
                 <FootSupport/>
                 <FootNotice/>
                 <Footer/>
-            </main>
+            </Substyled.Main>
             {openInNewAlert && <Alert/>}
             <M768>
                 <BottomNavigation/>

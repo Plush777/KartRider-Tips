@@ -3,7 +3,7 @@ import * as Substyled from 'components/style/common/Area.style';
 import * as Tipstyled from 'components/style/components/sub/Tip.style';
 import BtnTop from 'components/article/BtnTop';
 import SpeedVideo from 'components/video/SpeedVideo';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import React from 'react';
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
 import { ReactComponent as SCvideo } from 'static/svg/ico-video.svg';
@@ -130,10 +130,6 @@ const SubContents = (props) => {
                 
             </Substyled.Wrap>
              
-            <M768>
-                <BottomNavigation/>
-            </M768>
-
             {
                 isExShow &&
                 <SpeedVideo setIsExShow={setIsExShow} openScroll={openScroll}/>
