@@ -23,7 +23,10 @@ const Main = () => {
 
     const metaData = {
         title: 'KartRider Tips',
-		robots: 'index, follow'
+		robots: 'index, follow',
+        image: '/og/og.png',
+        width: '1200',
+        height: '630',
     }
 
     return ( 

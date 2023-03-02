@@ -16,7 +16,10 @@ const SubItem = props => {
 
     const metaData = {
         title: 'KartRider Tips | 모드 | 아이템전',
-        robots: 'index, follow'
+        robots: 'index, follow',
+        image: '/og/og-mode.jpg',
+        width: '1200',
+        height: '630',
     }
 
     let openInNewAlert = useSelector(state => state.openInNew);

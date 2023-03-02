@@ -16,7 +16,10 @@ const SubCommonKartbody = props => {
 
     const metaData = {
         title: 'KartRider Tips | 카트바디 | 일반',
-        robots: 'index, follow'
+        robots: 'index, follow',
+        image: '/og/og-kart.jpg',
+        width: '1200',
+        height: '630',
     }
 
     let openInNewAlert = useSelector(state => state.openInNew);
