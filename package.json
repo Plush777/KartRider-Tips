@@ -29,7 +29,7 @@
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap rimraf build/static/**/*.map"
   },
   "eslintConfig": {
     "extends": [
