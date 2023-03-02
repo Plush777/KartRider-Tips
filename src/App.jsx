@@ -14,7 +14,7 @@ import characterCommonContentsData from 'data/character/common/contents.json';
 import sourceData from 'data/etc/source.json';
 import purposeData from 'data/etc/purpose.json';
 import Notfound from "components/Notfound"; 
-import { ThemeProvider } from 'styled-components'; 
+import { ThemeProvider } from 'styled-components';  
 import theme from 'components/style/theme';
 import media from 'components/style/media';
 import mixins from 'components/style/mixins';
