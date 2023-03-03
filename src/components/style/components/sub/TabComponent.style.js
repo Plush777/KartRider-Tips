@@ -47,6 +47,7 @@ export const TabItem = styled.li`
             width: 32px;
             height: 32px;
             ${mixins.bgOption};
+            border-radius: 50%;
         }
 
         &[data-name="cotton"]::before{background-image: url('/images/common/ico-cotton.webp');}

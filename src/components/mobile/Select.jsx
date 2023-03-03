@@ -1,17 +1,28 @@
 import * as Selectstyled from 'components/style/common/Select.style';
 import { useLayoutEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 import { ReactComponent as SCarrowDown } from 'static/svg/ico-select-arrow-down.svg';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setRouterScroll } from 'redux/store/store';
-import { setAriaBoolean } from 'redux/store/store';
 
-const Select = props => {
+const Select = () => {
 
     let [toggle,setToggle] = useState(false);
     let [selected,setSelected] = useState(null);
+    let [selectState,setSelectState] = useState(null);
     let getSelectedValue = localStorage.getItem('selected');
     let dispatch = useDispatch();
-    let ariaSelected = useSelector(state => state.ariaBoolean);
+    const { pathname } = useLocation();
+    let commonKartbodyDesc = useSelector(state => state.kartbodyCommon);
+    let commonCharacterName = useSelector(state => state.characterCommonName);
+
+    useLayoutEffect(() => {
+        if(pathname.startsWith('/kartbody')){
+            setSelectState(commonKartbodyDesc);
+        } else if(pathname.startsWith('/character')){
+            setSelectState(commonCharacterName);
+        }
+    },[pathname,commonKartbodyDesc,commonCharacterName])
 
     useLayoutEffect(() => {
         if(getSelectedValue === null){
@@ -20,6 +31,7 @@ const Select = props => {
             setSelected(getSelectedValue);
         }
     },[getSelectedValue]);
+   
 
     const handleClick = e => {
         setSelected(e.target.textContent);
@@ -39,16 +51,10 @@ const Select = props => {
                 <SCarrowDown width="20px" height="20px" fill="#333"/>
             </Selectstyled.Select>
             <Selectstyled.OptionList className="scY" maxHeight="150px" show={toggle}>
-                {props.commonContents.kartDesc.map((item, index) => {
+                {selectState.map((item, index) => {
                     return(
                         <Selectstyled.OptionItem key={index}>
-                            <Selectstyled.OptionTxt 
-                            to={`/kartbody/common/${item.id}`} 
-                            onClick={handleClick}
-                            data-id={item.id}
-                            aria-selected={ariaSelected}>
-                                {item.title}
-                            </Selectstyled.OptionTxt>
+                            <Selectstyled.OptionTxt to={`/kartbody/common/${item.id}`} onClick={handleClick}>{item.title}</Selectstyled.OptionTxt>
                         </Selectstyled.OptionItem>
                     )
                 })}

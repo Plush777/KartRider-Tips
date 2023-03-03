@@ -2,8 +2,14 @@ import parse from 'html-react-parser';
 import BtnTop from 'components/article/BtnTop';
 import * as Substyled from 'components/style/common/Area.style';
 import * as Cardstyled from 'components/style/components/sub/Card.style';
+import { M768 } from 'components/style/mobile/MediaQuery';
+import Select from 'components/mobile/Select';
+import { useSelector } from 'react-redux';
 
 const Character = props => {
+
+    let commonCharacterName = useSelector(state => state.characterCommonName);
+
     return ( 
         <>
             <Substyled.Wrap>
@@ -21,7 +27,7 @@ const Character = props => {
                     <Cardstyled.CardWrap>
                         <Cardstyled.CardList>
                             
-                            {props.characterCommonContents.card.map((items,index) => {
+                            {commonCharacterName.map((items,index) => {
                                 return(
                                     <Cardstyled.CardItemBox key={index}>
                                         <Cardstyled.Card data-index={index}>
@@ -34,7 +40,7 @@ const Character = props => {
                                                 </Cardstyled.CardInner>
                                             </Cardstyled.CardItem>
                                         </Cardstyled.Card>
-`
+
                                         <Cardstyled.Card data-index={index} key={index}>
                                             <Cardstyled.CardItem back>
                                                 <Cardstyled.CardInner>
@@ -49,7 +55,10 @@ const Character = props => {
                                     </Cardstyled.CardItemBox>
                                 )
                             })}
-                        
+
+                            <M768>
+                                <Select/>
+                            </M768>
                         </Cardstyled.CardList>
                     </Cardstyled.CardWrap>
                 </Substyled.Inner>

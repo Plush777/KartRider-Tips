@@ -34,7 +34,7 @@ export const Logo = styled.h1`
         height: 29px;
 
         ${({ theme }) => theme.tablet`
-            width: 45%;
+            width: 100%;
             margin: 0 auto;
         `};
     }

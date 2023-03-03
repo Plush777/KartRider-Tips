@@ -8,6 +8,7 @@ import { ReactComponent as SCmode } from 'static/svg/ico-tab01.svg';
 import { ReactComponent as SCkartbody } from 'static/svg/ico-tab02.svg';
 import { ReactComponent as SCcharacter } from 'static/svg/ico-tab03.svg';
 import { ReactComponent as SCtrack } from 'static/svg/ico-tab04.svg';
+import { ReactComponent as SCbgArrowRight } from 'static/svg/ico-arrow-right.svg';
 
 const SubTab = () => {
     let dispatch = useDispatch();
@@ -70,6 +71,7 @@ const SubTab = () => {
                     : null 
                     }
                     <SubTabstyled.TabInfoTxt>{category.tabInfoTxt}</SubTabstyled.TabInfoTxt>
+                    <SCbgArrowRight width="22px" height="22px"/>
                 </SubTabstyled.TabInfo>
                 <SubTabstyled.TabList>
                     {category.tabDataState.map((item, index) => {

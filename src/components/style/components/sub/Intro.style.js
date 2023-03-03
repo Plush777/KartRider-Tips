@@ -12,10 +12,9 @@ export const Top = styled.div`
 
 export const PreviewArea = styled.div`
     ${mixins.fc}
-    width: ${(props) => props.wd};
-    height: ${(props) => props.ht};
+    height: 305px;
     border-radius: 4px;
-    background-color: #D9D9D9;
+    background-color: ${({ theme }) => theme.colors.d9d9};
     box-shadow: 0px 5px 5px ${({theme}) => theme.colors.rgbaBlack};
 
     ${({ theme }) => theme.laptop`
@@ -29,6 +28,11 @@ export const PreviewArea = styled.div`
 
 export const PreviewImg = styled.img`
     border-radius: inherit;
+
+    &.auto{
+        width: auto; 
+        aspect-ratio: ${props => props.ratio};
+    }
 
     ${({ theme }) => theme.laptop`
         ${mixins.whFull};    

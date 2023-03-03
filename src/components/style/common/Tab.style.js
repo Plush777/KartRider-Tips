@@ -34,7 +34,7 @@ export const TabInfo = styled.div`
     border: 1px solid ${({theme}) => theme.colors.ddd};
     background-color: #f2f2f2;
 
-    >svg{
+    svg{
         overflow: visible;
         width: 20px;
     }
@@ -63,26 +63,12 @@ export const TabInfoTxt = styled.span`
     position: relative;
     font-size: ${({theme}) => theme.fontSizes.f14};
     margin-left: 5px;
-
-    &::after{
-        content: '';
-        display: inline-flex;
-        width: 22px;
-        height: 22px;
-        margin-left: 10px;
-        background: url('/images/common/ico-arrow-right.svg') no-repeat center;
-    }
+    margin-right: 10px;
 
     ${({ theme }) => theme.tablet`
         width: auto;
         font-size: ${({theme}) => theme.fontSizes.f12};
         margin-left: 3px;
-
-        &::after{
-            width: 18px;
-            height: 18px;
-            background-size: 18px;
-        }
     `};
 `
 

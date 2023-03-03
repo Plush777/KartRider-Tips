@@ -1,6 +1,8 @@
 import { configureStore , createSlice } from "@reduxjs/toolkit";
 import gnbData from "data/gnb/gnb";
 import footerData from "data/etc/footer.json";
+import kartbodyCommonData from "data/kartbody/common/contents.json";
+import characterCommonData from "data/character/common/contents.json";
 
 let gnb = createSlice({
     name: 'gnb',
@@ -90,6 +92,16 @@ let categoryName = createSlice({
     }
 });
 
+let kartbodyCommon = createSlice({
+    name: 'kartbodyCommon',
+    initialState: kartbodyCommonData.kartDesc
+});
+
+let characterCommonName = createSlice({
+    name: 'characterCommonName',
+    initialState: characterCommonData.card
+});
+
 let ariaBoolean = createSlice({
     name: 'ariaBoolean',
     initialState: false,
@@ -120,6 +132,8 @@ export default configureStore({
         footer: footer.reducer,
         openInNew: openInNew.reducer,
         categoryName: categoryName.reducer,
+        kartbodyCommon: kartbodyCommon.reducer,
+        characterCommonName: characterCommonName.reducer,
         ariaBoolean: ariaBoolean.reducer
     },
 });

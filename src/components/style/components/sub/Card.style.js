@@ -10,6 +10,22 @@ export const CardList = styled.ul`
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 32px;
+
+    ${({ theme }) => theme.laptopL`
+        grid-template-columns: repeat(4,228px);
+        gap: 22px;
+        justify-content: center;
+    `};
+
+    ${({ theme }) => theme.laptop`
+        grid-template-columns: repeat(3,228px);
+        gap: 16px;
+    `};
+
+    ${({ theme }) => theme.tablet`
+        display: flex;
+        gap: 0;
+    `};
 `
 
 export const CardItem = styled.div`
@@ -146,6 +162,10 @@ export const CardItemBox = styled.li`
     width: 100%;
     height: 288px;
     perspective: 2000px;
+
+    ${({ theme }) => theme.tablet`
+        display: none;
+    `};
 
     @media (hover: hover) {
         &:hover{

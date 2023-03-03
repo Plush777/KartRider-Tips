@@ -86,10 +86,13 @@ const SubCommonContents = (props) => {
                                 </Tabstyled.TabContent>
 
                                 <Tabstyled.TabContent>
-                                    <Introstyled.PreviewArea ht="305px">
-                                        <Introstyled.PreviewImg src={
-                                            kartId2.img === "" ? "/images/common/img-no-image.webp" : kartId2.img
-                                        } alt={kartId2.alt}/>
+                                    <Introstyled.PreviewArea>
+                                        {
+                                            kartId2.img === '' ? 
+                                            <Introstyled.PreviewImg src="/images/common/img-no-image.webp" alt="" ratio="136/136" className="auto"/>
+                                            :
+                                            <Introstyled.PreviewImg src={kartId2.img} alt={kartId2.alt} ratio="445/305" className="auto"/>
+                                        }
                                     </Introstyled.PreviewArea>
                                 </Tabstyled.TabContent>
                             </Tabstyled.TabContnetBox>
