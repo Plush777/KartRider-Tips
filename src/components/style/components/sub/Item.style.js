@@ -52,6 +52,11 @@ export const ItemImg = styled.img`
     width:57px;
     height:57px;
     object-fit: none;
+    
+
+   
+        background-color: ${({ theme }) => theme.colors.d9d9};
+   
 
     ${({ theme }) => theme.laptop`
         width: 50px;

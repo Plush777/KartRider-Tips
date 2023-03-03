@@ -200,8 +200,15 @@ export const ImgWrap = styled.div`
     }
 `
 
+export const CommonImg = styled.img`
+    aspect-ratio: ${props => props.ratio};
+    transition: all 0.3s ease-in-out;
+    border-radius: 6px;
+    background: ${({ theme }) => theme.colors.d9d9};
+`
+
 export const ImgBox = styled.figure`
-    margin-left: ${(props) => props.ml};
+    flex: 1;
     margin-top: ${(props) => props.mt};
 
     ${({ theme }) => theme.tablet`
@@ -210,15 +217,6 @@ export const ImgBox = styled.figure`
         margin-left: 0;
 
         &+&{margin-top: 0;}
-    `};
-`
-
-export const CommonImg = styled.img`
-    width: ${(props) => props.wd01 ? '80%' : '100%'};
-    transition: all 0.3s ease-in-out;
-
-    ${({ theme }) => theme.laptopL`
-        width: 100%;
     `};
 `
 

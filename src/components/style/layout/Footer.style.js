@@ -48,6 +48,7 @@ export const LogoArea = styled.div`
 
 export const Logo = styled.img`
     width: 86px;
+    height: 24px;
 `
 
 export const CopyRightArea = styled.div`

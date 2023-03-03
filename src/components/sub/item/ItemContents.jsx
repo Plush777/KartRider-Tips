@@ -22,8 +22,8 @@ const ItemContents = (props) => {
                                     <Substyled.SmallTitle>{items.group2.title}</Substyled.SmallTitle>
                                     <Substyled.SmallDesc>{parse(items.group2.description)}</Substyled.SmallDesc>
                                 </Substyled.GroupBox>
-                                <Substyled.ImgBox mt="20px" ml="-7px">
-                                    <Substyled.CommonImg src={items.group2.img} alt={items.group2.alt} />
+                                <Substyled.ImgBox mt="20px">
+                                    <Substyled.CommonImg ratio="634/357" src={items.group2.img} alt={items.group2.alt} />
                                     <figcaption className="imgCaption">{items.group2.caption}</figcaption>
                                 </Substyled.ImgBox>
                             </Substyled.ImgWrap>

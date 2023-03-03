@@ -31,6 +31,7 @@ export const HeaderInner = styled.div`
 export const Logo = styled.h1`
     img{
         width: 130px;
+        height: 29px;
 
         ${({ theme }) => theme.tablet`
             width: 45%;

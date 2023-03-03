@@ -24,6 +24,7 @@ const colors = {
     c333: "#333",
     ddd: "#ddd",
     dede: "#dedede",
+    d9d9: "#d9d9d9",
     rgbaBlack: "rgba(0,0,0,0.3)"
 }
 

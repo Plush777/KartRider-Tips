@@ -45,8 +45,8 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group2.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
 
-                                    <Substyled.ImgBox mt="20px" ml="-7px">
-                                        <Substyled.CommonImg wd01 src={item.group2.img} alt={item.group2.alt}/>
+                                    <Substyled.ImgBox mt="20px">
+                                        <Substyled.CommonImg ratio="1275/718" src={item.group2.img} alt={item.group2.alt}/>
                                         <figcaption className="imgCaption">{item.group2.caption}</figcaption>
                                     </Substyled.ImgBox>
                                     
@@ -57,12 +57,12 @@ const SubContents = (props) => {
                                         <Substyled.SmallDesc>{parse(item.group3.description)}</Substyled.SmallDesc>
                                     </Substyled.GroupBox>
                                     <Substyled.ImgGroup>
-                                        <Substyled.ImgBox ml="-7px">
-                                            <Substyled.CommonImg src={item.group3.img} alt={item.group3.alt} />
+                                        <Substyled.ImgBox>
+                                            <Substyled.CommonImg ratio="300/169" src={item.group3.img} alt={item.group3.alt}/>
                                             <figcaption className="imgCaption">{item.group3.caption}</figcaption>
                                         </Substyled.ImgBox>
-                                        <Substyled.ImgBox ml="-7px">
-                                            <Substyled.CommonImg src={item.group3.img2} alt={item.group3.alt2} />
+                                        <Substyled.ImgBox>
+                                            <Substyled.CommonImg ratio="300/169" src={item.group3.img2} alt={item.group3.alt2}/>
                                             <figcaption className="imgCaption">{item.group3.caption2}</figcaption>
                                         </Substyled.ImgBox>
                                     </Substyled.ImgGroup>

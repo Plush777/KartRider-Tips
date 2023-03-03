@@ -16,7 +16,8 @@ button{display: inline-block;border: none;background-color: transparent;cursor: 
 caption,hr{display:none;}
 pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
-img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block;}
+img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block;
+width: 100%; height: auto;}
 .hidden{display: block; width: 0;height: 0; margin: 0; padding: 0; line-height: 0; font-size: 0;overflow: hidden;}
 figure{margin: 0;}
 figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;}
