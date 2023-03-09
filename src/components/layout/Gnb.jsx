@@ -13,7 +13,7 @@ const Gnb = () => {
                     return(
                         <Headerstyled.GnbItem className={item.className} key={index} 
                         onClick={() => {index === 3 && alert('준비중인 콘텐츠에요.')}}>
-                            <NavLink to={item.link} title={item.name} className={({isActive}) => isActive ? 'active' : null}>{item.name}</NavLink>
+                            <NavLink to={item.link} title={item.name} className={({isActive}) => isActive ? 'active' : ''}>{item.name}</NavLink>
                         </Headerstyled.GnbItem>
                     )
                 })}

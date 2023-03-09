@@ -60,6 +60,44 @@ export const GnbItem = styled.li`
     font-size: ${({ theme }) => theme.fontSizes.f14};
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
 
+    
+
+    >a{
+        position: relative;
+        transition: .3s ease-in-out;
+
+        &::before{
+            content: ''; 
+            position: absolute; 
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 1px; 
+            transition: .3s width ease-in-out;
+            background-color: #1C559C;
+        }
+
+        &.active{
+            color: #1C559C; 
+            font-weight: bold;
+
+            &::before{
+                width: 100%;
+            }
+        }
+
+        @media (hover: hover){
+            &:hover{
+                color: #1C559C; 
+                font-weight: bold;
+
+                &::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     &.disabled{
         >a{
             ${mixins.disabled}
