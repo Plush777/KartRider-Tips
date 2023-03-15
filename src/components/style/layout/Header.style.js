@@ -60,7 +60,16 @@ export const GnbItem = styled.li`
     font-size: ${({ theme }) => theme.fontSizes.f14};
     color: ${(props) => props.className === 'default' ? '#000' : 'rgba(0, 0, 0, 0.6)'};
 
-    
+    &.active{
+        >a{
+            color: #1C559C; 
+            font-weight: bold;
+
+            &::before{
+                width: 100%;
+            }
+        }
+    }
 
     >a{
         position: relative;
@@ -75,15 +84,6 @@ export const GnbItem = styled.li`
             height: 1px; 
             transition: .3s width ease-in-out;
             background-color: #1C559C;
-        }
-
-        &.active{
-            color: #1C559C; 
-            font-weight: bold;
-
-            &::before{
-                width: 100%;
-            }
         }
 
         @media (hover: hover){

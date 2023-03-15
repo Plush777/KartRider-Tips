@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState,useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import * as SubVisualstyled from 'components/style/common/SubVisual.style';
 import { useDispatch , useSelector } from "react-redux";
@@ -11,7 +11,7 @@ const SubVisual = () => {
     let dispatch = useDispatch();
     let subVisualData = useSelector(state => state.subVisualTitle.value);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
             dispatch(setSubVisualTitle({title:'모드'}));
             setVisualName('mode');
