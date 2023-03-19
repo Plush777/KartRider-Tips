@@ -89,7 +89,7 @@ export const GnbItem = styled.li`
         @media (hover: hover){
             &:hover{
                 color: #1C559C; 
-                font-weight: bold;
+                text-shadow: 0 0 .01px #1C559C, 0 0 .01px #1C559C, 0 0 .01px #1C559C;
 
                 &::before{
                     width: 100%;

@@ -9,6 +9,18 @@ let gnb = createSlice({
     initialState: gnbData
 });
 
+let gnbActive = createSlice({
+    name: 'gnbActive',
+    initialState: null,
+
+    reducers: {
+        setGnbActive: (state, action) => {
+            state = action.payload;
+            return state;
+        }
+    }
+});
+
 let routerScroll = createSlice({
     name: 'routerScroll',
     initialState: true,
@@ -112,10 +124,11 @@ let ariaBoolean = createSlice({
             return state;
         }
     }
-})
+});
 
 export const { setSubVisualTitle } = subVisualTitle.actions;
 export const { setRouterScroll } = routerScroll.actions;
+export const { setGnbActive } = gnbActive.actions;
 export const { setImgSkeleton } = imgSkeleton.actions;
 export const { setStartState } = startState.actions;
 export const { setOpenInNew } = openInNew.actions;
@@ -125,6 +138,7 @@ export const { setAriaBoolean } = ariaBoolean.actions;
 export default configureStore({
     reducer: {
         gnb: gnb.reducer,
+        gnbActive: gnbActive.reducer,
         subVisualTitle: subVisualTitle.reducer,
         routerScroll: routerScroll.reducer,
         imgSkeleton: imgSkeleton.reducer,

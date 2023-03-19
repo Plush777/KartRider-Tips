@@ -1,5 +1,5 @@
 import * as Selectstyled from 'components/style/common/Select.style';
-import { useLayoutEffect, useState } from 'react';
+import { useCallback, useLayoutEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 import { ReactComponent as SCarrowDown } from 'static/svg/ico-select-arrow-down.svg';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,6 +16,7 @@ const Select = () => {
         {kart: null},
         {character: null}
     )
+    
     let getSelectedKartValue = localStorage.getItem('selectedKartbody');
     let getSelectedCharacterValue = localStorage.getItem('selectedCharacter');
     let dispatch = useDispatch();
@@ -23,39 +24,40 @@ const Select = () => {
     let commonKartbodyDesc = useSelector(state => state.kartbodyCommon);
     let commonCharacterName = useSelector(state => state.characterCommonName);
 
-    useLayoutEffect(() => {
-        if(pathname.startsWith('/kartbody')){
-            setSelectState({kart: commonKartbodyDesc})
-        } else if(pathname.startsWith('/character')){
-            setSelectState({character: commonCharacterName});
-        }
-    },[pathname,commonKartbodyDesc,commonCharacterName])
-
-    useLayoutEffect(() => {
+    const getSelectedKart = useCallback(() => {
         if(getSelectedKartValue === null){
+            setSelectState({kart: commonKartbodyDesc});
             setSelected({kart: '프로토'});
         } else {
             setSelected({kart: getSelectedKartValue});
         }
-    },[getSelectedKartValue])
+    },[commonKartbodyDesc,getSelectedKartValue]);
 
-    useLayoutEffect(() => {
+    const getSelectedCharacter = useCallback(() => {
         if(getSelectedCharacterValue === null){
+            setSelectState({character: commonCharacterName});
             setSelected({character: '배찌'});
         } else {
             setSelected({character: getSelectedCharacterValue});
         }
-    },[getSelectedCharacterValue])
+    },[commonCharacterName,getSelectedCharacterValue]);
+
+    useLayoutEffect(() => {
+        if(pathname.startsWith('/kartbody')){
+            getSelectedKart();
+        } else if(pathname.startsWith('/character')){
+            getSelectedCharacter();
+        }
+    },[pathname,getSelectedKart,getSelectedCharacter])
+
 
     const handleClick = e => {
         setSelected(
             {kart: e.target.textContent},
             {character: e.target.textContent}
         )
-        localStorage.setItem(
-            'selectedKartbody',e.target.textContent,
-            'selectedCharacter',e.target.textContent
-        )
+        localStorage.setItem('selectedKartbody',e.target.textContent);
+        localStorage.setItem('selectedCharacter',e.target.textContent);
         dispatch(setRouterScroll(false));
         setToggle(false);
     }

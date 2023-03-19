@@ -1,38 +1,40 @@
 import * as Headerstyled from "components/style/layout/Header.style";
-import { useSelector } from 'react-redux';
+import { useSelector , useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
-import { useLayoutEffect,useState } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { setGnbActive } from "redux/store/store";
 
 const Gnb = () => {
 
     let gnbData = useSelector(state => state.gnb);  
-    let [countIndex, setCountIndex] = useState(null);
+    let gnbActiveState = useSelector(state => state.gnbActive);
+    const dispatch = useDispatch();
 
     const handleClick = (e,index) => {
-        setCountIndex(index);
+        dispatch(setGnbActive(index));
     }
 
     const { pathname } = useLocation();
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
-            setCountIndex(0);
+            dispatch(setGnbActive(0));
         } else if(pathname.startsWith('/kartbody')){
-            setCountIndex(1);
+            dispatch(setGnbActive(1));
         } else if(pathname.startsWith('/character')){
-            setCountIndex(2);
+            dispatch(setGnbActive(2));
         } else if (pathname.startsWith('/track')){
-            setCountIndex(3);
+            dispatch(setGnbActive(3));
         }
-    },[pathname])
+    },[pathname,dispatch])
 
     return ( 
         <Headerstyled.Gnb id="gnb">
             <Headerstyled.GnbList>
                 {gnbData.map((item,index) => {
                     return(
-                        <Headerstyled.GnbItem className={countIndex === index ? 'active' : item.className} 
+                        <Headerstyled.GnbItem className={gnbActiveState === index ? 'active' : item.className} 
                         key={index} onClick={e => handleClick(e, index)}>
                             <Link to={item.link} title={item.name} >{item.name}</Link>
                         </Headerstyled.GnbItem>
