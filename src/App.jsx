@@ -53,7 +53,7 @@ const App = () => {
 					<Route path="/" element={<Main/>}/>
 					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
-					<Route path={`/kartbody/common/:id`} element={<SubCommonKartbody commonContents={commonContents}/>}/>
+					<Route path={`/kartbody/:id`} element={<SubCommonKartbody commonContents={commonContents}/>}/>
 					<Route path="/character/common" element={<SubCommonCharacter characterCommonContents={characterCommonContents}/>}/>
 					<Route path="/purpose" element={<Purpose purpose={purpose}/>} />
 					<Route path="/source" element={<Source source={source}/>} />

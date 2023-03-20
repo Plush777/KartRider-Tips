@@ -7,10 +7,21 @@ import useBodyScrollLock from 'hooks/useBodyScrollLock';
 const Alert = () => {
     const { openScroll } = useBodyScrollLock();
     const dispatch = useDispatch();
+
     const handleClose = () => {
         dispatch(setOpenInNew(false));
         openScroll();
     }
+
+    const gotoNewPage = () => {
+        window.open('https://kartdrift.nexon.com/kartdrift/ko/main','_blank');
+
+        let timer = setTimeout(() => {
+            handleClose();
+        }, 1000);
+        
+        return () => {clearTimeout(timer)};
+    }    
 
     return ( 
         <Alertstyled.Wrap>
@@ -24,10 +35,7 @@ const Alert = () => {
                 </div>
                 <Alertstyled.BtnArea>
                     <Buttonstyled.BtnMType color="#000" background="#ccc" onClick={handleClose}>아니요</Buttonstyled.BtnMType>
-                    <Buttonstyled.BtnMType color="#fff" background="#333" 
-                    onClick={() => window.open('https://kartdrift.nexon.com/kartdrift/ko/main','_blank')}>
-                        이동할래요
-                    </Buttonstyled.BtnMType>
+                    <Buttonstyled.BtnMType color="#fff" background="#333" onClick={gotoNewPage}>이동할래요</Buttonstyled.BtnMType>
                 </Alertstyled.BtnArea>
             </Alertstyled.Inner>
         </Alertstyled.Wrap>

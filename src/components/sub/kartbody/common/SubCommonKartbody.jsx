@@ -31,7 +31,6 @@ const SubCommonKartbody = props => {
             <Header/>
             <Substyled.Main id='main'>
                 <SubVisual/>
-                <SubTab/>
                 <SubCommonContents commonContents={props.commonContents}/>
                 <FootSupport/>
                 <FootNotice/>

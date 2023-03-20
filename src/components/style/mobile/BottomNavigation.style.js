@@ -28,6 +28,15 @@ export const MenuLink = styled(NavLink)`
         ${mixins.disabled}; 
     }
 
+    &.active{
+        color: #1C559C; 
+        font-weight: bold;
+        
+        >svg{
+            fill: #1C559C;
+        }
+    }
+
     ${({ theme }) => theme.mobile`
         >svg{
             width: 22px;
