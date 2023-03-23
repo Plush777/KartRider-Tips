@@ -25,6 +25,7 @@ import { setRouterScroll } from 'redux/store/store';
 import SkipNavigation from 'components/SkipNavigation';
 import Source from 'components/footer/source/Source';
 import Purpose from 'components/footer/purpose/Purpose';
+import RouteChangeTracker from 'Routes/RouteTracker';
 
 const App = () => {
 	let [itemContents] = useState(itemContentsData);
@@ -42,6 +43,8 @@ const App = () => {
 			dispatch(setRouterScroll(true));
 		}
 	},[pathname,dispatch]);
+
+	RouteChangeTracker();
 
 	return ( 
 		<>
