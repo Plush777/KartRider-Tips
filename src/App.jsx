@@ -42,7 +42,7 @@ const App = () => {
 		if(pathname === '/' || pathname.startsWith('/mode')){
 			dispatch(setRouterScroll(true));
 		}
-	},[pathname,dispatch]);
+	},[pathname,dispatch]); 
 
 	RouteChangeTracker();
 
