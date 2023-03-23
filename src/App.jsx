@@ -32,7 +32,7 @@ const App = () => {
     let [speedContents] = useState(speedContentsData);
 	let [commonContents] = useState(kartbodyCommonContentsData);
 	let [characterCommonContents] = useState(characterCommonContentsData);
-	let [source] = useState(sourceData);
+	let [source] = useState(sourceData);  
 	let [purpose] = useState(purposeData);
 	const { pathname } = useLocation();
 	let dispatch = useDispatch();
