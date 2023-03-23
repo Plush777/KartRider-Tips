@@ -8,6 +8,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import store from './redux/store/store';
 import { autoA11yTest } from './utils/a11y';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize("G-YXN4TJH29H");
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
