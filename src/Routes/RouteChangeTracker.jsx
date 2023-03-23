@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import ReactGA4 from 'react-ga4';
-
+import ReactGA4 from 'react-ga4';   
+  
 const RouteChangeTracker = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const unlisten = navigate((location) => {
