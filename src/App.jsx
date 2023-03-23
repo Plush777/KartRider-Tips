@@ -41,7 +41,7 @@ const App = () => {
 	useEffect(() => {
 		if(pathname === '/' || pathname.startsWith('/mode')){
 			dispatch(setRouterScroll(true));
-		}
+		} 
 	},[pathname,dispatch]); 
 
 	RouteChangeTracker();
