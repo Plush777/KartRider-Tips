@@ -52,7 +52,7 @@ const App = () => {
 			{routerScroll && <RouteScroll/>}
 			<ThemeProvider theme={{...theme,...media}} mixins={mixins}>
 				<GlobalStyle/>
-				<Routes>
+				<Routes> 
 					<Route path="/" element={<Main/>}/>
 					<Route path="/mode/speed" element={<SubSpeed speedContents={speedContents}/>}/>
 					<Route path="/mode/item" element={<SubItem itemContents={itemContents}/>}/>
