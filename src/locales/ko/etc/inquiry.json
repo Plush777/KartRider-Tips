@@ -1,0 +1,26 @@
+{
+    "inquiry": {
+        "group1": {
+            "title": "문의",
+            "description": "문의는 밑 링크로 부탁드려요 😊"
+        }
+    },
+
+    "listInquiry": {
+        "group1" :{
+            "info": "mail",
+            "name": "sky11916@naver.com",
+            "link": "mailto:sky11916@naver.com"
+        },
+        "group2" :{
+            "info": "github",
+            "name": "Plush777",
+            "link": "https://github.com/Plush777/KartRider-Tips"
+        },
+        "group3" :{
+            "info": "instagram",
+            "name": "tjrbdud_02",
+            "link": "https://www.instagram.com/tjrbdud_02/"
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "source": {
+        "group1": {
+            "title": "Source",
+            "description": "The source of images, fonts, and all other materials used in this project."
+        },
+        "group2": {
+            "title": "Image"
+        },
+        "group3": {
+            "title": "Content"
+        },
+        "group4": {
+            "title": "Font"
+        }
+    },
+
+    "list": {
+        "group1" :{
+            "details": "KartRider Drift artwork",
+            "link": "https://kartdrift.nexon.com/kartdrift/en/media/artwork"
+        },
+        "group2" :{
+            "details": "Received Kartrider transparent wall report",
+            "link": "https://kart.nexon.com/events/2022/0630/Event2.aspx"
+        },
+        "group3" :{
+            "details": "KartRider RunRider",
+            "link": "https://kart.nexon.com/Events/2016/April/index.aspx"
+        },
+        "group4" :{
+            "details": "Kartrider emblem",
+            "link": "https://kart.nexon.com/Kart/Ranking/Emblem/Index.aspx"
+        },
+        "group5" :{
+            "details": "KartRider Drift Guide | Items and Speed Battles",
+            "link": "https://forum.nexon.com/kartdrift-us/board_view?board=1876&thread=1970458"
+        },
+        "group6" :{
+            "details": "KartRider X Jin Ramen",
+            "link": "https://kart.nexon.com/events/2022/0811/Event.aspx"
+        }
+    },
+        
+
+    "list2": {
+        "group1" :{
+            "details": "Namuwiki | Crazy Racing Kart Rider/Game Mode",
+            "link": "https://namu.wiki/w/%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%EB%A0%88%EC%9D% B4%EC%8B%B1%20%EC%B9%B4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EB%8D%94/%EA%B2%8C%EC%9E %84%20%EB%AA%A8%EB%93%9C"
+        },
+        "group2" :{
+            "details": "Kartrider | Learn game",
+            "link": "https://kart.nexon.com/Kart/Guide/learn/Index.aspx"
+        }
+    },
+        
+    "list3": {
+        "group1" :{
+            "details": "NexonLv1Gothic Regular"
+        },
+        "group2" :{
+            "details": "Pretendard"
+        },
+        "group3" :{
+            "details": "Maplestory Bold"
+        },
+        "group4" :{
+            "details": "Maplestory Light"
+        }
+    }
+    
+}

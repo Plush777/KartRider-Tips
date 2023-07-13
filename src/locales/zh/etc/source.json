@@ -1,0 +1,72 @@
+{
+    "source": [
+        {
+            "group": {
+                "title": "Source",
+                "description": "The source of images, fonts, and all other materials used in this project."
+            },
+            "group2": {
+                "title": "image"
+            },
+            "group3": {
+                "title": "content"
+            },
+            "group4": {
+                "title": "Font"
+            }
+        }
+    ],
+
+    "list": [
+        {
+            "details": "KartRider Drift artwork",
+            "link": "https://kartdrift.nexon.com/kartdrift/en/media/artwork"
+        },
+        {
+            "details": "Received Kartrider transparent wall report",
+            "link": "https://kart.nexon.com/events/2022/0630/Event2.aspx"
+        },
+        {
+            "details": "KartRider RunRider",
+            "link": "https://kart.nexon.com/Events/2016/April/index.aspx"
+        },
+        {
+            "details": "Kartrider emblem",
+            "link": "https://kart.nexon.com/Kart/Ranking/Emblem/Index.aspx"
+        },
+        {
+            "details": "KartRider Drift Guide | Items and Speed Battles",
+            "link": "https://forum.nexon.com/kartdrift-us/board_view?board=1876&thread=1970458"
+        },
+        {
+            "details": "KartRider X Jin Ramen",
+            "link": "https://kart.nexon.com/events/2022/0811/Event.aspx"
+        }
+    ],
+
+    "list2": [
+        {
+            "details": "Namuwiki | Crazy Racing Kart Rider/Game Mode",
+            "link": "https://namu.wiki/w/%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%EB%A0%88%EC%9D% B4%EC%8B%B1%20%EC%B9%B4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EB%8D%94/%EA%B2%8C%EC%9E %84%20%EB%AA%A8%EB%93%9C"
+        },
+        {
+            "details": "Kartrider | Learn game",
+            "link": "https://kart.nexon.com/Kart/Guide/learn/Index.aspx"
+        }
+    ],
+
+    "list3": [
+        {
+            "details": "NexonLv1Gothic Regular"
+        },
+        {
+            "details": "Pretendard"
+        },
+        {
+            "details": "Maplestory Bold"
+        },
+        {
+            "details": "Maplestory Light"
+        }
+    ]
+}

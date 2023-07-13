@@ -1,0 +1,38 @@
+{
+    "speed": {
+        "name": "스피드전"
+    },
+    "item": {
+        "name": "아이템전"
+    },
+    "grandprix": {
+        "name": "그랑프리"
+    },
+    "timeattack": {
+        "name": "타임어택"
+    },
+    "customgame": {
+        "name": "커스텀 게임"
+    },
+    "license": {
+        "name": "라이센스"
+    },
+    "event": {
+        "name": "이벤트"
+    },
+    "common": {
+        "name": "일반"
+    },
+    "rare": {
+        "name": "고급"
+    },
+    "advenced": {
+        "name": "희귀"
+    },
+    "epic": {
+        "name": "영웅"
+    },
+    "legend": {
+        "name": "전설"
+    }
+}

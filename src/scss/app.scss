@@ -1,0 +1,412 @@
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &[data-theme="light"]{
+        --bgColor: #fff;
+        --subBgColor: #f2f2f2;
+        --headerBg: #fff;
+        --gnbText: #000;
+        --utilTooltipBg: #fff;
+        --utilTooltipText: #000;
+        --settingBg: #fff;
+        --settingStorke: #ddd;
+        --settingTitle: #000;
+        --settingButtonBg: #fff;
+        --settingButtonText: #333;
+        --settingButtonStroke: #333;
+        --settingButtonActiveBg: #333;
+        --settingButtonActiveText: #fff;
+        --settingButtonActiveStroke: #333;
+        --title: #000;
+        --text: #333;
+        --videoDesc: #626262;
+        --tipText: #111;
+        --tipBg: #DEDDDD;
+        --tipSvg: #333;
+        --footerBg: #FAFAFA;
+        --footerText: #666;
+        --bulletBg: #333;
+        --skeletonBg: #d9d9d9;
+        --tabGroupBg: #fff;
+        --tabText: #333;
+        --tabActiveBg: #333;
+        --tabActiveColor: #fff;
+        --infoBg: #f2f2f2;
+        --infoText: #626262;
+        --infoStroke: #ddd;
+        --infoSvg: #818181;
+        --infoRect: #d9d9d9;
+        --itemListBg: #fff;
+        --itemListStroke: #ddd;
+        --itemListTitle: #333;
+        --itemListDesc: #888;
+        --itemListTip: #999;
+        --itemBg: #eee;
+        --itemStroke: #eee;
+        --tabKartGroupStroke: #dedede;
+        --tabKartGroupBg: #EEEDED;
+        --tabKartBg: #E4E3E3;
+        --tabKartStroke: #DBDBDB;
+        --tabKartActiveBg: #fff;
+        --tabKartTextColor: #000;
+        --kartIntroTopStroke: #000;
+        --kartIntroBottomStroke: #DEDEDE;
+        --kartIntroHeadText: #000;
+        --kartIntroDescText: #222;
+        --kartRankToastBg: #121212;
+        --kartRankBg: #fff;
+        --kartRankStorke: #333;
+        --kartRankSvg: #000;
+        --dimmed: rgba(0, 0, 0, 0.3);
+        --scrollbar: #A6A6A6;
+        --scrollbarTrack: transparent;
+        --mobileSelectBg: #fff;
+        --mobileSelectStroke: #ddd;
+        --mobileSelectText: #000;
+        --commonButtonBg: #333;
+        --commonButtonText: #fff;
+        --commonSvgFill: #000;
+        --activeColor: #1C559C;
+        --disabledColor: rgba(0, 0, 0, 0.6);
+        --bottomNavigationBg: #fff;
+        --bottomSheetBg1: #f3f3f3;
+
+        .error{
+            &Title{
+                color: #333;
+            }
+
+            &Desc{
+                color: #666;
+            }
+        }
+
+        .loadTxt{
+            color: #333;
+        }
+    }
+
+    &[data-theme="dark"]{
+        --bgColor: #121212;
+        --subBgColor: #121212;
+        --headerBg: #292A2D;
+        --gnbText: #F8F8FA;
+        --utilTooltipBg: #353637;
+        --utilTooltipText: #F8F8FA;
+        --settingBg: #2B2C2D;
+        --settingStorke: #383C3C;
+        --settingTitle: #F8F8FA;
+        --settingButtonBg: #3C3E3E;
+        --settingButtonText: #F8F8FA;
+        --settingButtonStroke: #3C3E3E;
+        --settingButtonActiveBg: #fff;
+        --settingButtonActiveText: #000;
+        --settingButtonActiveStroke: #fff;
+        --title: #F8F8FA;
+        --text: #ECECEC;
+        --videoDesc: #BBBBBF;
+        --tipText: #ECECEC;
+        --tipBg: #1E1E1E;
+        --tipSvg: #ececec;
+        --footerBg: #292A2D;
+        --footerText: #ececec;
+        --bulletBg: #F8F8FA;
+        --skeletonBg: #292A2D;
+        --tabGroupBg: #1E1F21;
+        --tabText: #F8F8FA;
+        --tabActiveBg: rgba(255, 255, 255, 0.95);
+        --tabActiveColor: #000;
+        --infoBg: #2B2C2D;
+        --infoText: #F8F8FA;
+        --infoStroke: #3C3E3E;
+        --infoSvg: #ECECEC;
+        --infoRect: #404245;
+        --itemListBg: #2B2C2D;
+        --itemListStroke: #383C3C;
+        --itemListTitle: #ECECEC;
+        --itemListDesc: rgba(255, 255, 255, 0.90);
+        --itemListTip: #EFBC39;
+        --itemBg: #555;
+        --itemStroke: #ECECEC;
+        --tabKartGroupStroke: #252525;
+        --tabKartGroupBg: #2B2C2D;
+        --tabKartBg: #3C3E3E;
+        --tabKartStroke: #3C3E3E;
+        --tabKartActiveBg: rgba(255, 255, 255, 0.95);
+        --tabKartTextColor: #F8F8FA;
+        --kartIntroTopStroke: #333;
+        --kartIntroBottomStroke: #333;
+        --kartIntroHeadText: #ECECEC;
+        --kartIntroDescText: #ddd;
+        --kartRankToastBg: #2B2C2D;
+        --kartRankBg: #2B2C2D;
+        --kartRankStorke: #383C3C;
+        --kartRankSvg: #ececec;
+        --dimmed: rgba(0, 0, 0, 0.3);
+        --scrollbar: #aaa;
+        --scrollbarTrack: #121212;
+        --mobileSelectBg: #1E1E1E;
+        --mobileSelectStroke: #2A2A2A;
+        --mobileSelectText: #ececec;
+        --commonButtonBg: #333;
+        --commonButtonText: #fff;
+        --commonSvgFill: #fff;
+        --activeColor: #0094ff;
+        --disabledColor: rgba(255,255,255,.55);
+        --bottomNavigationBg: #1E1F21;
+        --bottomSheetBg1: #414141;
+
+        .error{
+            &Title{
+                color: #fff;
+            }
+
+            &Desc{
+                color: #ececec;
+            }
+        }
+
+        .loadTxt{
+            color: #ececec;
+        }
+    }
+}
+
+#loadWrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100vw - 32px);
+    max-width: 300px;
+    z-index: 99999;
+
+    img{
+        width: 158px;
+        height: 148px;
+        position: inherit; 
+        top: -150px; 
+        left: inherit;
+        transform: translateX(-50%); 
+        z-index: inherit;
+
+        @media screen and (max-width: 768px){
+            width: 138px;
+            height: 128px;
+            top: -142px;
+        }
+    }
+}
+
+#load{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #9e9e9e;
+    height: 10px;
+    margin-top: 10px;
+
+    @media screen and (max-width: 768px){
+        height: 8px;
+        margin-top: 0;	
+    }
+}
+
+.loadRoot{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    z-index: 0;
+    border-radius: 25px;
+}
+
+.loadRoot::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: currentColor;
+       opacity: .3;
+}
+
+.loadBar1,.loadBar2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transition: transform 0.2s linear;
+    transform-origin: left;
+    background-color: currentColor;
+    width: auto;
+    animation: a01 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.loadBar2{
+    animation: a02 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s infinite;
+}
+
+.txtArea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.loadTxt{
+    font-size: 1rem;
+    font-family: 'nexonLv1Gothic';
+    color: #333;
+    word-break: keep-all;
+    text-align: center;
+
+    @media screen and (max-width: 768px){
+        font-size: 0.875rem;
+    }
+}
+
+@keyframes a01 {
+    0%{
+        left: -35%;
+        right: 100%;
+    }
+    60%{
+        left: 100%;
+        right: -90%;
+    }
+    100%{
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes a02 {
+    0%{
+        left: -200%;
+        right: 100%;
+    }
+    60%{
+        left: 107%;
+        right: -8%;
+    }
+    100%{
+        left: 107%;
+        right: -8%;
+    }
+}
+  
+.swiper-button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999999999999;
+    transition: .3s ease-in-out;
+    padding-top: 65px;
+}
+
+.image-swiper-button{
+    &-next{
+        left: 40px;
+
+        @media (hover: hover){
+            &:hover{
+                left: 35px;
+            }
+            
+        }
+    }
+
+    &-prev{
+        right: 40px;
+
+        @media (hover: hover){
+            &:hover{
+                right: 35px;
+            }
+        }
+    }
+}
+
+
+.swiper-pagination{
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        background-color: #c4c4c4;
+        opacity: 1;
+
+        &-active{
+            background-color: #309ED5;
+        }
+    }
+}
+
+.swiper-slide{
+    position: relative;
+    background: #d9d9d9;
+}
+
+
+@media (max-width: 1440px){
+    .image-swiper-button{
+        &-next{
+            left: 25px;
+            
+            &:hover{
+                left: 20px;
+            }
+        }
+
+        &-prev{
+            right: 25px;
+
+            &:hover{
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .image-swiper-button{
+        &-next,&-prev{
+            svg{
+                width: 38px; 
+                height: 38px;
+             }
+        }
+
+        &-next{
+            left: 10px;
+            
+            &:hover{
+                left: 5px;
+            }
+        }
+
+        &-prev{
+            right: 10px;
+
+            &:hover{
+                right: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .image-swiper-button{
+        &-next,&-prev{display: none;}
+    }
+
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

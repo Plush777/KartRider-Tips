@@ -1,0 +1,55 @@
+{
+    "mode": [
+        {
+            "id": 1,
+            "name": "Speed Mode"
+        },
+        {
+            "id": 2,
+            "name": "item Mode"
+        },
+        {
+            "id": 3,
+            "name": "Grand Prize"
+        },
+        {
+            "id": 4,
+            "name": "Time Attack"
+        },
+        {
+            "id": 5,
+            "name": "Custom Game"
+        },
+        {
+            "id": 6,
+            "name": "License"
+        },
+        {
+            "id": 7,
+            "name": "Event"
+        }
+    ],
+
+    "character": [
+        {
+            "id": 1,
+            "name": "Common"
+        },
+        {
+            "id": 2,
+            "name": "Advanced"
+        },
+        {
+            "id": 3,
+            "name": "Rare"
+        },
+        {
+            "id": 4,
+            "name": "Epic"
+        },
+        {
+            "id": 5,
+            "name": "Legend"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "menus" : [
+        {
+            "id": 1,
+            "name": "Mode"
+        },
+        {
+            "id": 2,
+            "name": "Kartbody"
+        },
+        {
+            "id": 3,
+            "name": "More"
+        },
+        {
+            "id": 4,
+            "name": "Character"
+        },
+        {
+            "id": 5,
+            "name": "Track"
+        },
+        {
+            "id": 6,
+            "name": "Glossary"
+        },
+        {
+            "id": 7,
+            "name": "Skill"
+        }
+    ]
+}

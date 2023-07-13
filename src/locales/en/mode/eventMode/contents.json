@@ -1,0 +1,165 @@
+{
+    "evItem": {
+        "evDepth1" :{
+            "group1": {
+                "title": "Event",
+                "description": "These are mods that can only be played for a certain period of time."
+            },
+            "group2": {
+                "title": "Season 1: New World Factory Run",
+                "description": "Factory Run is only available during Season 1,",
+                "description2": "This is a PVE-only game mode where 4 racers team up against 36 androids (AI).",
+                "caption": "What the in-game factory run looks like",
+                "alt": "In-game image"
+            },
+            "group3": {
+                "title": "Rules",
+                "subTitle": "1) Fixed character and cart body",
+                "description": "In Factory Run mode, you drive with a fixed character and cart body."
+            },
+            "group4": {
+                "item1": "category",
+                "item2": "character",
+                "item3": "Kartbody"
+            },
+            "group5": {
+                "item1": "racer 1",
+                "item2": "Dao",
+                "item3": "Drill"
+            },
+            "group6": {
+                "item1": "Racer 2",
+                "item2": "Bazzi",
+                "item3": "Plasma PT"
+            },
+            "group7": {
+                "item1": "Racer 3",
+                "item2": "Bibi",
+                "item3": "Roller"
+            },
+            "group8": {
+                "item1": "Racer 4",
+                "item2": "Marid",
+                "item3": "Night Woofer"
+            },
+            "group9": {
+                "title": "2) Run 5 laps & the bottom 8 on each lap are eliminated",
+                "description": "A total of 5 laps will be driven, and the bottom 8 will be eliminated in each lap except for the last lap."
+            },
+            "group10": {
+                "item1": "Change to an obstacle that hinders driving when Android (AI) is eliminated",
+                "item2": "If the racer is eliminated, the racer is changed to an android, and the race continues as an Android team<br/>(*All items obtained while in the racer team are reset)",
+                "item3": "If a racer is in the bottom 8 after being changed to the Android team, they will not be eliminated and the next rank will be eliminated"
+            },
+            "group11": {
+                "title": "3) The maximum speed of the kart body increases with each lap, and the size of the android (AI) increases."
+            },
+            "group12": {
+                "title": "4) No minimap, rearview mirror or rearview radar."
+            },
+            "group13": {
+                "title": "mod only item",
+                "description": "Factory Run is based on the item battle mode, and the items that appear are limited.",
+                "description2": "The newly added Siren item can also be found in this mode."
+            },
+            "group14": {
+                "item1": "image",
+                "item2": "item name",
+                "item3": "Description"
+            },
+            "group15": {
+                "item1": "/images/common/ico-siren.webp",
+                "item2": "siren",
+                "item3": "Beep-beep-beware all the racers ahead of you! Temporarily run at high speed, and any racer you bump into will slip and spin."
+            },
+            "group16": {
+                "etc": "View item details"
+            },
+            "group17": {
+                "title": "Items obtainable while playing the mod"
+            },
+            "group18": {
+                "item1": "Category",
+                "item2": "Name of obtainable item"
+            },
+            "group19": {
+                "item1": "Racer team",
+                "item2": "Angel"
+            },
+            "group20": {
+                "item1": "Missile",
+                "item2": "Water bomb",
+                "item3": "Water fly",
+                "item4": "Siren"
+            },
+            "group21": {
+                "item1": "Android Team<br/> (Racer)",
+                "item2": "Shield"
+            },
+            "group22": {
+                "item1": "Banana",
+                "item2": "Booster",
+                "item3": "Siren"
+            },
+            "group23": {
+                "item1": "Android Team<br/> (AI)",
+                "item2": "Barricade"
+            },
+            "group24": {
+                "item1": "Water bomb",
+                "item2": "Siren"
+            },
+            "group25": {
+                "title": "Victory and defeat conditions"
+            },
+            "group26": {
+                "title": "Victory",
+                "description": "The racer's team wins if the racer's team finishes in 1st place"
+            },
+            "group27": {
+                "title": "Defeat"
+            },
+            "group28": {
+                "item1": "1) End the game and lose when all racers change to Android team",
+                "item2": "2) If the android team scores 1st place in the last 5 laps, it loses<br/>(Although the racer changed to AI and Android team scores 1st place, it loses)",
+                "item3": "3) Racer changed to Android team"
+            }
+        },
+
+        "evDepth2": {
+            "group1": {
+                "title": "Season 2: World Kart Championship Infinite Booster Match",
+                "description": "Endless Booster Battle, which can be experienced in the Mod Lab, can only be enjoyed during Season 2,",
+                "description2": "This mode allows you to enjoy the race at a more exhilarating speed as you can obtain a booster gauge more easily than in normal speed battles.",
+                "caption": "KartRider Drift Booster look",
+                "alt": "In-game image"
+            },
+            "group2": {
+                "title": "Infinite Booster Battle Guide",
+                "description": "Guide can be found in Mod Lab - Infinite Booster Guide.",
+                "description2": "Setting detailed matching options is not possible, and tracks are matched separately depending on whether or not the racer has a B1 license.",
+                "subTitle": "Exclusive Rules for Infinite Boosters",
+                "subTitle2": "Endless Boost Match Matching Settings",
+                "subTitle3": "Notes",
+                "caption": "Endless booster battle mode selection screen",
+                "alt": "In-game image"
+             },
+             "group3": {
+                 "item1": "In the infinite booster match, the better the starting booster timing, the booster gauge will be charged proportionally.",
+                 "item2": "The booster gauge automatically recharges while driving. (It does not charge at speeds below 100 km/h.)",
+                 "item3": "The Booster Gauge recharges when Instant Booster or Draft is activated.",
+                 "item4": "The booster gauge does not deplete when colliding with a wall while drifting.",
+                 "item5": "The booster gauge automatically replenishes while using a booster."
+             },
+             "group4": {
+                 "item1": "Endless Booster Match is available in Solo/Squad mode. (Duo mode not supported)",
+                 "item2": "Quick matching and party play are both possible in Infinite Booster Battle.",
+                 "item3": "Parties of 2 or more are automatically matched in squad mode."
+             },
+             "group5": {
+                 "item1": "Does not have B1 license => Matches track difficulty 2 or lower",
+                 "item2": "Have a B1 license => match the difficulty of the entire track"
+             }
+         }
+     }
+}

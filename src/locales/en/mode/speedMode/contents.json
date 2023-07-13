@@ -1,0 +1,48 @@
+{
+    "speed": {
+        "depth1" :{
+           "group": {
+                "title": "Speed",
+                "description": "If you want the exhilarating speed of a kart rider, enjoy the speed mode where you race faster by filling boosters with drifts.",
+                "description2": "Depending on how long and when you press Shift, you can feel the thrill of real-life drifting."
+           },
+          
+           "group2": {
+                "title": "Solo exhibition",
+                "description": "You can focus only on your own driving without worrying about the team.<br/>You get one booster when you fill up the booster gauge.",
+                "img": "../../images/screenShots/bg-screenShots-01.webp",
+                "alt": "Example image of speed individual exhibition",
+                "caption": "Example of in-game speed solo exhibition"
+            },
+
+            "group3": {
+                "title": "Team",
+                "description": "You can't win by doing well alone, but by teaming up with your team and strategizing.<br/>In team battles, there is a gauge to fill your booster and a gauge to fill your team booster.<br />Have a normal booster, and when the team gauge is full, the booster will be upgraded to a team booster.",
+                "img": "../../images/screenShots/bg-screenShots-02.webp",
+                "img2": "../../images/screenShots/bg-screenShots-03.webp",
+                "alt": "Example image 1 of speed team match",
+                "alt2": "Speed team battle example image 2",
+                "caption": "What the team booster gauge looks like",
+                "caption2": "A normal booster turned into a team booster"
+            },
+
+            "tip1": {
+                "txt": "There is a delay of about 1 second when switching from a normal booster to a team booster, but the booster that is being switched cannot be used at this time. To remove the delay, press the left ALT right before the normal booster changes to a team booster. Change slots to use regular boosters first!",
+                "ex": "See example"
+            },
+            "tip2": {
+                "txt": "Team boosters last about 1.5 times longer than normal boosters."
+            },
+
+            "group4": {
+                "title": "Winning method",
+                "description": "In the speed team match, points are awarded according to the ranking of our team as follows, and the team with the higher combined points wins.<br/>(If the combined score is tied, the user who came in first place belongs to The team wins.)"
+            },
+
+            "tableGroup": {
+                "caption": "This is a tie-breaking table that provides rankings and point information based on rankings.",
+                "scope": "col"
+            }
+        }
+    }
+}

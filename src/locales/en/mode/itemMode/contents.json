@@ -1,0 +1,247 @@
+{
+    "item": {
+        "depth1" :{
+            "group1": {
+                "title": "Item",
+                "description": "Exciting attacks using a variety of items - Enjoy the fun of defense and the fun of dynamic racing at the same time.<br/>In the item battle, where rankings change with a single attack, the moment you cross the finish line is one moment at a time. It will also make you unstoppable."
+            },
+
+            "group2": {
+                "title": "Escape quickly",
+                "description": "If you get hit by a water bomb or water fly, press the left and right arrow keys quickly!<br/>You can escape quickly, and after escaping, press the front key again to activate an instant booster.",
+                "img": "../../images/screenShots/bg-screenShots-04.webp",
+                "alt": "Example image of item exhibition",
+                "caption": "Example image of quick escape before in-game items"
+            },
+
+            "group3": {
+                "title": "Winning method",
+                "description": "In an item match, if you or your teammate finishes in first place, that team wins.<br/>(Same for duos and squads)"
+            },
+
+            "group4": {
+                "title": "Item type before item"
+            },
+           
+            "group5": {
+                "title": "Tips for using the item"
+            },
+
+            "group6": {
+                "title": "Terms related to the item war"
+            }
+        }
+    },
+
+    "itemList": {
+        "group1" :{
+             "name" : "Booster",
+             "itemDesc": "Enables you to temporarily sprint at high speed when used.",
+             "tip": "It usually appears in the lower ranks.",
+             "img": "../../../../../images/common/ico-n2o.webp",
+             "alt": "booster item"
+        },
+        "group2" :{
+            "name" : "Banana",
+            "itemDesc": "If you step on a banana, it will slide and spin.<br/> (My team can step on it too.)",
+            "tip": "Only appears in 1st place in solo matches and 3rd place in team matches.",
+            "img": "../../../../../images/common/ico-bba.webp",
+            "alt": "banana item"
+        },
+        "group3" :{
+            "name" : "Magnet",
+            "itemDesc": "Using the power of a strong magnetic field, you can<br/>approach your target racer at high speed.",
+            "tip": "It usually appears in the lower ranks.",
+            "img": "../../../../../images/common/ico-magnet.webp",
+            "alt": "magnet item"
+        },
+        "group4" :{
+            "name" : "Missile",
+            "itemDesc": "Aim! Fire! Aim the racer ahead of you so you can<br/>blow it away.<br/> (My team is unaffected)",
+            "tip": "Mainly appears in the middle ranks.",
+            "img": "../../../../../images/common/ico-missile.webp",
+            "alt": "missile item"
+        },
+        "group5" :{
+            "name" : "Barricade",
+            "itemDesc": "A barricade appears in front of the No. 1 racer!<br/>Immediately blocks the route of the No. 1 racer and hinders driving.<br/>(Your team can also get in the way in a team battle.) ",
+            "tip": "Mostly from the middle to the bottom ranks.",
+            "img": "../../../../../images/common/ico-bari.webp",
+            "alt": "barricade item"
+        },
+        "group6" :{
+            "name" : "Spaceship",
+            "itemDesc": "A spaceship descends and picks up the <br/>racer who is running in first place, disrupting the run.<br/> (My team is unaffected)",
+            "tip": "Mostly from mid to low ranks.",
+            "img": "../../../../../images/common/ico-space.webp",
+            "alt": "ship item"
+        },
+        "group7" :{
+            "name" : "Water bomb",
+            "itemDesc": "Throws water bombs forward! Can trap racers a certain distance in front of them<br/><br/>(Your team can get stuck too in team fights)",
+            "tip": "Mostly from 2nd to mid-table.",
+            "img": "../../../../../images/common/ico-waterBomb.webp",
+            "alt": "water bomb item"
+        },
+        "group8" :{
+            "name" : "Water fly",
+            "itemDesc": "Wheein~ I can get a racer running right ahead of me<br/>get stuck in a drop.<br/>(My team is unaffected)",
+            "tip": "Mostly from mid to low ranks.",
+            "img": "../../../../../images/common/ico-waterFly.webp",
+            "alt": "waterfly item"
+        },
+        "group9" :{
+            "name" : "Thunderbolt",
+            "itemDesc": "Jijijik, thunderbolts down all racers ahead of me<br/>interferes with their driving.<br/>(Only affects the opposing team, it's best to use it at the bottom.)",
+            "tip": "Mainly appears in the middle ranks.",
+            "img": "../../../../../images/common/ico-thunderbolt.webp",
+            "alt": "thunderbolt item"
+        },
+        "group10" :{
+            "name" : "Electromagnetic waves",
+            "itemDesc": "Block the spaceship's attack with electromagnetic waves! You can cut off the <br/>communication of the spaceship and quickly escape from the obstacle.",
+            "tip": "He usually appears in the upper ranks, and in teamfights he appears in the middle ranks.",
+            "img": "../../../../../images/common/ico-no-space.webp",
+            "alt": "electronic item"
+       },
+       "group11" :{
+            "name" : "Shield",
+            "itemDesc": "Attacks are nullified for a certain period of time! Blocks an opponent's specific attack once.",
+            "tip": "Mostly at the top.",
+            "img": "../../../../../images/common/ico-shield.webp",
+            "alt": "shield item"
+        },
+        "group12" :{
+            "name" : "Angel",
+            "itemDesc": "Under the protection of an angel, our team racer<br/>cannot be attacked by any attack for a certain period of time.<br/>(This is an item that only appears in team battles.)",
+            "tip": "Appears from 2nd to 8th.",
+            "img": "../../../../../images/common/ico-angel.webp",
+            "alt": "angel item"
+        },
+        "group13":{
+            "name" : "Siren",
+            "itemDesc": "Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.",
+            "tip": "This item is exclusive to Factory Run.",
+            "img": "../../../../../images/common/ico-siren.webp",
+            "alt": "siren item"
+        }
+    },
+
+     "itemTips": {
+        "group1" :{
+            "title": "1. Use angels right away",
+            "desc": "Unless you're on the phone with your teammates for a status briefing, it's best to use angels as soon as you get them.<br/>Since you don't know each other's status."
+        },
+        "group2" :{
+            "title": "2. Let's have electromagnetic waves just in case",
+            "desc": "If your teammate is in first place, it's good to have someone on your team with microwaves.<br/>Because you never know when the other side will launch the ship."
+        },
+        "group3" :{
+            "title": "3. Must have boosters or magnets on easy maps",
+            "desc": "On maps with a long last straight line, such as Village Canal, Desert Veggie Market, and Ice Halfpipe,<br/>opponents often reverse with boosters or magnets at the end.<br/>So it's really urgent. If not, it's good to keep boosters and magnets until the end of the game."
+        },
+        "group4" :{
+            "title": "4. Be careful with water bombs, bananas, and barricades that can team kill",
+            "desc": "Items like water bombs, bananas, and barricades affect our teammates, so we have to use them while monitoring the situation.<br/>Alternatively, using angels first and then water bombs can be a good idea."
+        }
+     },
+
+    "itemTerm": {
+        "group1" :{
+            "id": 1,
+            "detail": "Scratch, Scrape: An act of sweeping all item boxes in a line by one person, a kind of bad manners that prevents other users from acquiring items."
+        },
+        "group2" :{
+            "id": 2,
+            "detail": "Tight Water: The track before the normal item is wider than the water bomb range, so if you drive on both ends (sides), you can avoid water bomb attacks.<br/>But if the road is not wide, the water bomb There are cases where it falls within the range, and it is a word that refers to this."
+        },
+        "group3" :{
+            "id": 3,
+            "detail": "Sangcheon: Means the opponent used an angel."
+        },
+        "group4" :{
+            "id": 4,
+            "detail": "Aloft: A call to indicate when a missile hit will lift you into the air."
+        },
+        "group5" :{
+            "id": 5,
+            "detail": "End missile: The act of shooting a missile at the end of the game when 1st place finished.<br/>In the original Kartrider 1, it was a bad manners."
+        },
+        "group6" :{
+            "id": 6,
+            "detail": "meogcheon: To use immediately upon obtaining an angel."
+        },
+        "group7" :{
+            "id": 7,
+            "detail": "Water: A water bomb or water fly item, a notification that you have been hit by a water bomb or water fly.<br/>However, in the case of a water fly, it is said to be a fly, so it is more commonly used to refer to water bombs."
+        },
+        "group8" :{
+            "id": 8,
+            "detail": "Teamwater: A term used to refer to a teammate's water bomb."
+        },
+        "group9" :{
+            "id": 9,
+            "detail": "Distance: The distance at which the water bomb is thrown. Usually, it depends on the sense, but among the dead people, memorize the distance by track and position<br/> and throw the water bomb. Or, when there is a large difference in distance, It can also be expressed as a few differences."
+        },
+        "group10" :{
+            "id": 10,
+            "detail": "Buzzed: A case in which a missile or magnet item is being aimed, but fails to aim and the item is blown away.<br/>It is expressed as “the missile is beeping”, “the magnet is beeping”, etc."
+        },
+        "group11" :{
+            "id": 11,
+            "detail": "Mischief or Mijik: only aiming missiles or magnetic items."
+        },
+        "group12" :{
+            "id": 12,
+            "detail": "Barri: A barricade item."
+        },
+        "group13" :{
+            "id": 13,
+            "detail": "Bbar: Banana items."
+        },
+        "group14" :{
+            "id": 14,
+            "detail": "Burn: Thunderbolt item. The official name is Thunderbolt, but it is called Lightning for convenience."
+        },
+        "group15" :{
+            "id": 15,
+            "detail": "Wall Beauty: Shooting a missile through a wall. When the aiming point turns red, it fires at the enemy through walls or obstacles."
+        },
+        "group16" :{
+            "id": 16,
+            "detail": "Sucking: If you hit a magnet item, or if your opponent uses a magnet item."
+        },
+        "group17" :{
+            "id": 17,
+            "detail": "Center shield: Abbreviation for center shield, the act of anticipating an opponent's attack and using the shield in advance. It is mainly used in narrow tight sections,<br/>before shortcuts, jump sections, and before the finish line."
+        },
+        "group18" :{
+            "id": 18,
+            "detail": "Cloth: An angel item. Also used to ask team members to use an angel item when briefing."
+        },
+        "group19" :{
+            "id": 19,
+            "detail": "Reset (R): Called R for convenience because the default rearrangement is R. Used to drag opponents back when they suck a magnet in front of the finish line."
+        },
+        "group20" :{
+            "id": 20,
+            "detail": "Ilmi: Short for first class missile, meaning that the missile was fired at the first class. Ilpa (first class water fly) has the same meaning.<br/>(In the original work, the first class missile item is sometimes shortened. )"
+        },
+        "group21" :{
+            "id": 21,
+            "detail": "Inbba: Since bananas are laid on the in-course, it means to dig the line outside so that you don't step on it."
+        },
+        "group22" :{
+            "id": 22,
+            "detail": "Jjabu: Combining magnets and boosters."
+        },
+        "group23" :{
+            "id": 23,
+            "detail": "Calmul: A water bomb that falls right over your head. A must-have technique when using a water bomb because it's hard to react."
+        },
+        "group24" :{
+            "id": 24,
+            "detail": "Termination: The official name is electromagnetic waves, but for convenience it is called space termination or termination."
+        }
+    }
+}

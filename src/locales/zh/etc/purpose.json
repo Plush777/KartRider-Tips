@@ -1,0 +1,22 @@
+{
+     "purpose": [
+         {
+             "group": {
+                 "title": "Purpose",
+                 "description": "This site is intended to:"
+             }
+         }
+     ],
+
+     "list": [
+         {
+             "details": "1. Guides and hidden tips for those who are new to karting or want to do well."
+         },
+         {
+             "details": "2. This site is <a href='https://member.nexon.com/policy/gameipguide.aspx?date=20210622' className='openInNew' target='_blank' style='margin: 0 4px' rel='noopener noreferrer'><strong>We comply with Nexon Game IP User Guide (as of 2021.06.22)</strong></a> Therefore, we do not generate revenue or advertise through this at all. ."
+         },
+         {
+             "details": "3. I made this site because I was very sad to hear the news that the service of the original Kartrider was finalized and I wished for the success of Kartrider Drift.<br/>Since it is a simple project made for the hobby of a producer, Nexon It has nothing to do with Korea."
+         }
+     ]
+}

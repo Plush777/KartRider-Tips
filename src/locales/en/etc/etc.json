@@ -1,0 +1,10 @@
+{
+    "skip": {
+        "group1":{
+            "txt": "Go to the main"
+        },
+        "group2":{
+            "txt": "Go to the menu"
+        }
+    }
+}

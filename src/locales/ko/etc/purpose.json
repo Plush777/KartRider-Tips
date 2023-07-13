@@ -1,0 +1,20 @@
+{
+    "purpose": {
+        "group1": {
+            "title": "목적",
+            "description": "이 사이트는 다음과 같은 목적을 가지고 있습니다."
+        }
+    },
+
+    "listPurpose": {
+        "group1": {
+            "details": "1. 카트라이더 초심자 또는 잘하고 싶으신 분들을 위한 가이드 및 숨겨진 팁들을 제공합니다."
+        },
+        "group2": {
+            "details": "2. 이 사이트는<a href='https://member.nexon.com/policy/gameipguide.aspx?date=20210622' className='openInNew' target='_blank' style='margin: 0 4px' rel='noopener noreferrer'><strong>넥슨 게임IP사용가이드 (2021.06.22 기준)</strong></a>를 준수하고 있습니다. 따라서, 이를 통한 수익창출이나 광고 등은 일체 하지않습니다."
+        },
+        "group3": {
+            "details": "3. 원작 카트라이더의 서비스 종료 확정 소식을 듣고 너무 아쉬운 마음과 카트라이더 드리프트 흥행을 바라는 마음에 이 사이트를 만들게 되었습니다.<br/>단순 제작자의 취미 목적으로 만든 프로젝트이므로, 넥슨 코리아와는 아무런 관계가 없습니다."
+        }
+    }
+}

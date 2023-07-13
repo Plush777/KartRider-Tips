@@ -1,0 +1,55 @@
+{
+    "mode": {
+        "group1" :{
+            "id": 1,
+            "name": "스피드전"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "아이템전"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "그랑프리"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "타임어택"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "커스텀 게임"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "라이센스"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "이벤트"
+        }
+    },
+
+    "character": {
+        "group1" :{
+            "id": 1,
+            "name": "일반"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "고급"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "희귀"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "영웅"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "레전드"
+        }
+    }
+}

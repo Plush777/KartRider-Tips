@@ -1,0 +1,46 @@
+{
+    "trackList": {
+        "itemMode":{
+            "item1": "Mine: Mother Lode",
+            "item2": "Mine: Magma Cavern",
+            "item3": "Factory: Brodi's Gloom",
+            "item4": "Factory: Cogwheel Crush",
+            "item5": "Desert: Pharaoh's Pass",
+            "item6": "Forest: Mushroom Caves",
+            "item7": "Desert: Sphinx's Riddle",
+            "item8": "Forest: Rocky Roadway",
+            "item9": "Glacier: Polar Halfpipe",
+            "item10": "Wolrd Tour: Istanbul Sunset Plaza",
+            "item11": "Wolrd Tour: Gangnam Streets",
+            "item12": "World Tour: London Night",
+            "item13": "Forest: Panda Village",
+            "item14": "Desert: Abandoned Oasis",
+            "item15": "Desert: Dusty Bazaar",
+            "item16": "Forest: Lumberjack Lane",
+            "item17": "Glacier: Shark's Wake",
+            "item18": "Glacier: Icebreaker Pass",
+            "item19": "Factory: First Steps"
+        },
+        "speedMode":{
+            "item1": "Desert: Construction Chaos",
+            "item2": "Glacier: Snowbound Slopes",
+            "item3": "Mine: Winding Slopes",
+            "item4": "Village: Boom Hill Tunnel",
+            "item5": "Factory: Facility 5",
+            "item6": "Desert: Ancient Aqueducts",
+            "item7": "Forest: Zigzag Timberland",
+            "item8": "Glacier: Extreme Stadium",
+            "item9": "Mine: Three Shortcuts",
+            "item10": "Wolrd Tour: New York Rally",
+            "item11": "Wolrd Tour: Rio de Ja-nitro",
+            "item12": "Wolrd Tour: Terracotta Twister",
+            "item13": "Forest: Log Leap",
+            "item14": "Mine: Rickety Rails",
+            "item15": "Mine: Gold Rush",
+            "item16": "Wolrd Tour: Boostwood",
+            "item17": "Desert: Pharaoh's Pass",
+            "item18": "Village: Bayside Bridge Run",
+            "item19": ""
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "category" : {
+        "group1": {
+            "id": 1,
+            "name": "Mode"
+        },
+        "group2": {
+            "id": 2,
+            "name": "Kartbody"
+        },
+        "group3": {
+            "id": 3,
+            "name": "Character"
+        },
+        "group4": {
+            "id": 4,
+            "name": "Track"
+        },
+        "group5": {
+            "id": 5,
+            "name": "Glossary"
+        },
+        "group6": {
+            "id": 6,
+            "name": "Technology"
+        },
+        "group7": {
+            "id": 7,
+            "name": "Site purpose"
+        },
+        "group8": {
+            "id": 8,
+            "name": "Source"
+        },
+        "group9": {
+            "id": 9,
+            "name": "Inquiry"
+        }
+    }
+}

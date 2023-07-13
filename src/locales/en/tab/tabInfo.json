@@ -1,0 +1,28 @@
+{
+    "info": {
+        "group1": {
+            "id": "1",
+            "name": "Mode"
+        },
+        "group2": {
+            "id": "2",
+            "name": "KartBody"
+        },
+        "group3": {
+            "id": "3",
+            "name": "Character"
+        },
+        "group4": {
+            "id": "4",
+            "name": "Track"
+        },
+        "group5": {
+            "id": "5",
+            "name": "Glossary"
+        },
+        "group6": {
+            "id": "6",
+            "name": "Technology"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "taItem": {
+       "taDepth1": {
+            "group1": {
+                "title": "Time Attack",
+                "description": "I can practice and record tracks by myself.",
+                "description2": "Speed mode only, no autonomous driving."
+            },
+            "group2": {
+                "title": "Time Attack Challenge",
+                "description": "You can challenge personal records,",
+                "description2": "You can also play together using your high-score shadow.",
+                "caption": "Time Attack challenge in-game look",
+                "alt": "In-game image"
+            },
+            "group3": {
+                "title": "Check Shadow File",
+                "description": "Shadow files can be found in Users > Local > KartDrift > Saved > SaveGames,",
+                "description2": "Deleting a file also deletes its shadow.",
+                "caption": "Path to shadow file",
+                "alt": "path image"
+            },
+            "group4" : {
+                "title": "Challenge Ranker",
+                "description": "You can challenge the record by selecting the ranker you want for each track.",
+                "description2": "Racing with the ranker's shadow to see how the ranker plays",
+                "description3": "You can drive.",
+                "caption": "In-game appearance of challenging Time Attack ranker",
+                "alt": "In-game image"
+            }
+       }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "mode": {
+        "group1":{
+            "id": 1,
+            "name": "Speed"
+        },
+        "group2":{
+            "id": 2,
+            "name": "Item"
+        },
+        "group3":{
+            "id": 3,
+            "name": "GP"
+        },
+        "group4":{
+            "id": 4,
+            "name": "TA"
+        },
+        "group5":{
+            "id": 5,
+            "name": "Custom"
+        },
+        "group6":{
+            "id": 6,
+            "name": "License"
+        },
+        "group7":{
+            "id": 7,
+            "name": "Event"
+        }
+    },
+
+    "character": {
+        "group1":{
+            "id": 1,
+            "name": "Common"
+        },
+        "group2":{
+            "id": 2,
+            "name": "Advanced"
+        },
+        "group3":{
+            "id": 3,
+            "name": "Rare"
+        },
+        "group4":{
+            "id": 4,
+            "name": "Epic"
+        },
+        "group5":{
+            "id": 5,
+            "name": "Legend"
+        }
+    }
+}

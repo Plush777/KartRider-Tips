@@ -1,0 +1,55 @@
+{
+    "mode": {
+        "group1" :{
+            "id": 1,
+            "name": "スピード戦"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "アイテム展"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "グランプリ"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "タイムアタック"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "カスタムゲーム"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "ライセンス"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "イベント"
+        }
+    },
+
+    "character": {
+        "group1" :{
+            "id": 1,
+            "name": "一般"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "詳細"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "珍しい"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "ヒーロー"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "レジェンド"
+        }
+    }
+}

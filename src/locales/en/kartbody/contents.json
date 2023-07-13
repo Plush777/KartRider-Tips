@@ -1,0 +1,453 @@
+{
+    "kartbody": {
+        "group1":{
+            "title": "Kartbody"
+        }
+    },
+
+    "kartName": {
+        "group1":{
+            "id": 1,
+            "name": "Proto"
+        },
+        "group2":{
+            "id": 2,
+            "name": "Practice Kart"
+        },
+        "group3":{
+            "id": 3,
+            "name": "Shellback Raider"
+        },
+        "group4":{
+            "id": 4,
+            "name": "Cotton"
+        },
+        "group5":{
+            "id": 5,
+            "name": "Burst"
+        },
+        "group6":{
+            "id": 6,
+            "name": "Solid"
+        },
+        "group7":{
+            "id": 7,
+            "name": "Marathon"
+        },
+        "group8":{
+            "id": 8,
+            "name": "Saber"
+        },
+        "group9":{
+            "id": 9,
+            "name": "Storm"
+        },
+        "group10":{
+            "id": 10,
+            "name": "Ace"
+        },
+        "group11":{
+            "id": 11,
+            "name": "Fire engine"
+        },
+        "group12":{
+            "id": 12,
+            "name": "Aurora"
+        },
+        "group13":{
+            "id": 13,
+            "name": "Justice"
+        },
+        "group14":{
+            "id": 14,
+            "name": "Mine Cart"
+        },
+        "group15":{
+            "id": 15,
+            "name": "Play Kart"
+        },
+        "group16":{
+            "id": 16,
+            "name": "Nexon Kart"
+        },
+        "group17":{
+            "id": 17,
+            "name": "Able Kart"
+        },
+        "group18":{
+            "id": 18,
+            "name": "Comet Muscle"
+        },
+        "group19":{
+            "id": 19,
+            "name": "Spike"
+        },
+        "group20":{
+            "id": 20,
+            "name": "Titan"
+        },
+        "group21":{
+            "id": 21,
+            "name": "Brutus"
+        },
+        "group22":{
+            "id": 22,
+            "name": "Sugar rabbit"
+        },
+        "group23":{
+            "id": 23,
+            "name": "Deuce Coupe"
+        }
+    },
+
+    "kartDesc": {
+        "group1":{
+            "id": 1,
+            "desc": "Kartbody through the future.<br/>Heralds a new engine and optimizations."
+        },
+        "group2":{
+            "id": 2,
+            "desc": "The first step towards becoming a pro<br/>Practice makes a pro."
+        },
+        "group3":{
+            "id": 3,
+            "desc": "Not just a turtle.<br/>A pirate to conquer both the sea and the tracks."
+        },
+        "group4":{
+            "id": 4,
+            "desc": "Excellent balance!<br/>A well-balanced performance."
+        },
+        "group5":{
+            "id": 5,
+            "desc": "Explosive acceleration!<br/>Rush from the start."
+        },
+        "group6":{
+            "id": 6,
+            "desc": "Excellent top speed!<br/>Dominates the straight course."
+        },
+        "group7":{
+            "id": 7,
+            "desc": "42.195.<br/>Runs a hundred times a thousand times without tiring even for a moment."
+        },
+        "group8":{
+            "id": 8,
+            "desc": "A nimble drift!<br/>Saber's skid marks are always special."
+        },
+        "group9":{
+            "id": 9,
+            "desc": "Relentless storm rush!<br/>Even the worst weather is no problem."
+        },
+        "group10":{
+            "id": 10,
+            "desc": "The return of the biplane, the return of the ace!<br/>The missile bombardment will begin soon."
+        },
+        "group11":{
+            "id": 11,
+            "desc": "Emergency, go!<br/>Hold the track and make sure lives are saved.."
+        },
+        "group12":{
+            "id": 12,
+            "desc": "God's veil to light up a dark world.<br/>Runs down the track in fantastic beauty."
+        },
+        "group13":{
+            "id": 13,
+            "desc": "A dark hero on the track.<br/>Relentlessly dominating the race."
+        },
+        "group14":{
+            "id": 14,
+            "desc": "A cart off the rails.<br/>Runs down the track, breaking the limits of tying wheels."
+        },
+        "group15":{
+            "id": 15,
+            "desc": "Original ideas and colorful fun.<br/>Color the track with happiness."
+        },
+        "group16":{
+            "id": 16,
+            "desc": "Excitingly, more thrillingly!<br/>Anyone can run happily anywhere, anytime."
+        },
+        "group17":{
+            "id": 17,
+            "desc": "A description is being prepared."
+        },
+        "group18":{
+            "id": 18,
+            "desc": "A description is being prepared."
+        },
+        "group19":{
+            "id": 19,
+            "desc": "Nothing more than air resistance!<br/>Nothing gets in the way of racing."
+        },
+        "group20":{
+            "id": 20,
+            "desc": "A description is being prepared."
+        },
+        "group21":{
+            "id": 21,
+            "desc": "Overwhelming engine, overwhelming power.<br/>Overwhelms the race!"
+        },
+        "group22":{
+            "id": 22,
+            "desc": "The power of sweet carrots!<br/>Powerful boosters spring from the soles of your feet."
+        },
+        "group23":{
+            "id": 23,
+            "desc": "A secret weapon disguised as a toilet.<br/>At last... it's finally out!"
+        }
+    },
+
+    "kartDescDepth": {
+        "group1":{
+            "id": 1,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "The front has a checkered pattern and the letter P, the symbol of Proto.",
+            "desc3": "November 15, 2019<br/>(1st CBT)",
+            "img": "/images/screenShots/img-proto.webp",
+            "alt": "proto image"
+        },
+        "group2":{
+            "id": 2,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "Classic training cart design. Looks like the original L2 training cart.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-practice-kart.webp",
+            "alt": "Practice cart image"
+        },
+        "group3":{
+            "id": 3,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "In the original version, it was an upgraded version of a turtle.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-pirate-turtle.webp",
+            "alt": "Pirate Turtle Image"
+        },
+        "group4":{
+            "id": 4,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "The regular lineup with a soft balance. The cotton logo is embedded in the center.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-cotton.webp",
+            "alt": "cotton image"
+        },
+        "group5":{
+            "id": 5,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "The regular lineup boasts explosive acceleration. The burst logo is embedded in the center.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-burst.webp",
+            "alt": "burst image"
+        },
+        "group6":{
+            "id": 6,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "The regular lineup with strong physical fights. The distinctive checkered pattern is impressive.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-solid.webp",
+            "alt": "solid image"
+        },
+        "group7":{
+            "id": 7,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "A regular lineup that lasts long and strong.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-marathon.webp",
+            "alt": "marathon image"
+        },
+        "group8":{
+            "id": 8,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Basic payment",
+            "desc2": "Regular lineup with nimble cornering. Saber logo emblazoned in the middle.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-saber.webp",
+            "alt": "saber image"
+        },
+        "group9":{
+            "id": 9,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the pre-season livery starter package",
+            "desc2": "The green light on the front is attractive.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-storm.webp",
+            "alt": "Storm Image"
+        },
+        "group10":{
+            "id": 10,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the pre-season ace package",
+            "desc2": "It has the same design as the original Ace HT.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-ace.webp",
+            "alt": "Ace Image"
+        },
+        "group11":{
+            "id": 11,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Pre-season racing pass level 10 premium reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-fire-truck.webp",
+            "alt": "fire engine image"
+        },
+        "group12":{
+            "id": 12,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Pre-season Racing Pass Level 20 General Reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-orora.webp",
+            "alt": "Aurora images"
+        },
+        "group13":{
+            "id": 13,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Pre-season racing pass level 40 premium reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-justis.webp",
+            "alt": "Justice Image"
+        },
+        "group14":{
+            "id": 14,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Second CBT reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-mine-kart.webp",
+            "alt": "minecart image"
+        },
+        "group15":{
+            "id": 15,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access on the Android platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        "group16":{
+            "id": 16,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access from Nexon platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-nexon-kart.webp",
+            "alt": "Nexon cart image"
+        },
+        "group17":{
+            "id": 17,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access on IOS platforms",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        "group18":{
+            "id": 18,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access from the Steam platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        "group19":{
+            "id": 19,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Reward for the 3rd day of pre-season open commemorative attendance check",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-spike.webp",
+            "alt": "Spike image"
+        },
+        "group20":{
+            "id": 20,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the preseason titan package",
+            "desc2": "No description.",
+            "desc3": "Jan 19, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        "group21":{
+            "id": 21,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the Pre-Season Brutus Pack",
+            "desc2": "No description.",
+            "desc3": "Jan 19, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-brutus.webp",
+            "alt": "brutus image"
+        },
+        "group22":{
+            "id": 22,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Lunar New Year 2023 login event",
+            "desc2": "No description.",
+            "desc3": "Jan 23, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-sugar-rabbit.webp",
+            "alt": "Sugar Rabbit Image"
+        },
+        "group23":{
+            "id": 23,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase secret pre-season potty packages",
+            "desc2": "Same design as the original Lulu.",
+            "desc3": "Feb 02, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-lulu.webp",
+            "alt": "secret toilet image"
+        }
+    }
+}

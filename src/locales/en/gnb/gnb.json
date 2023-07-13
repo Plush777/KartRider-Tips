@@ -1,0 +1,32 @@
+{
+    "menus" : {
+        "group1":{
+            "id": 1,
+            "name": "Mode"
+        },
+        "group2":{
+            "id": 2,
+            "name": "Kartbody"
+        },
+        "group3":{
+            "id": 3,
+            "name": "More"
+        },
+        "group4":{
+            "id": 4,
+            "name": "Character"
+        },
+        "group5":{
+            "id": 5,
+            "name": "Track"
+        },
+        "group6":{
+            "id": 6,
+            "name": "Glossary"
+        },
+        "group7":{
+            "id": 7,
+            "name": "Technology"
+        }
+    }
+}
