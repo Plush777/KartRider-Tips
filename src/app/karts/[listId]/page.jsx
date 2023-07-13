@@ -14,7 +14,7 @@ export const generateMetadata = async ({ params }) => {
                     alt: 'KartRider Tips Kart',
                 }
             ]
-        },
+        }, 
 
         twitter: {
             title: `KartRiderTips | 카트바디`,
