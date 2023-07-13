@@ -28,3 +28,4 @@ export const generateMetadata = async ({ params }) => {
 export default function page({ params }) {
     return <Character params={params}/>
 }
+

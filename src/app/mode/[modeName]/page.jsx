@@ -13,7 +13,7 @@ export const generateMetadata = async ({ params }) => {
                     url: '/og-mode.jpg',
                     width: 1200,
                     height: 630,
-                    alt: 'KartRider Tips Mode', 
+                    alt: 'KartRider Tips Mode',
                 }
             ]
         },
