@@ -1,0 +1,453 @@
+{
+    "kartbody": [
+        {
+            "title": "Kartbody"
+        }
+    ],
+
+    "kartName": [
+        {
+            "id": 1,
+            "name": "proto"
+        },
+        {
+            "id": 2,
+            "name": "Practice cart"
+        },
+        {
+            "id": 3,
+            "name": "Pirate Turtle"
+        },
+        {
+            "id": 4,
+            "name": "cotton"
+        },
+        {
+            "id": 5,
+            "name": "burst"
+        },
+        {
+            "id": 6,
+            "name": "solid"
+        },
+        {
+            "id": 7,
+            "name": "marathon"
+        },
+        {
+            "id": 8,
+            "name": "Saber"
+        },
+        {
+            "id": 9,
+            "name": "Storm"
+        },
+        {
+            "id": 10,
+            "name": "Ace"
+        },
+        {
+            "id": 11,
+            "name": "fire engine"
+        },
+        {
+            "id": 12,
+            "name": "Aurora"
+        },
+        {
+            "id": 13,
+            "name": "Justice"
+        },
+        {
+            "id": 14,
+            "name": "minecart"
+        },
+        {
+            "id": 15,
+            "name": "play cart"
+        },
+        {
+            "id": 16,
+            "name": "nexon cart"
+        },
+        {
+            "id": 17,
+            "name": "able cart"
+        },
+        {
+            "id": 18,
+            "name": "Comet Muscle"
+        },
+        {
+            "id": 19,
+            "name": "Spike"
+        },
+        {
+            "id": 20,
+            "name": "Titan"
+        },
+        {
+            "id": 21,
+            "name": "Brutus"
+        },
+        {
+            "id": 22,
+            "name": "sugar rabbit"
+        },
+        {
+            "id": 23,
+            "name": "secret toilet"
+        }
+    ],
+
+    "kartDesc": [
+        {
+            "id": 1,
+            "desc": "Kartbody through the future.<br/>Heralds a new engine and optimizations."
+        },
+        {
+            "id": 2,
+            "desc": "The first step towards becoming a pro<br/>Practice makes a pro."
+        },
+        {
+            "id": 3,
+            "desc": "Not just a turtle.<br/>A pirate to conquer both the sea and the tracks."
+        },
+        {
+            "id": 4,
+            "desc": "Excellent balance!<br/>A well-balanced performance."
+        },
+        {
+            "id": 5,
+            "desc": "Explosive acceleration!<br/>Rush from the start."
+        },
+        {
+            "id": 6,
+            "desc": "Excellent top speed!<br/>Dominates the straight course."
+        },
+        {
+            "id": 7,
+            "desc": "42.195.<br/>Runs a hundred times a thousand times without tiring even for a moment."
+        },
+        {
+            "id": 8,
+            "desc": "A nimble drift!<br/>Saber's skid marks are always special."
+        },
+        {
+            "id": 9,
+            "desc": "Relentless storm rush!<br/>Even the worst weather is no problem."
+        },
+        {
+            "id": 10,
+            "desc": "The return of the biplane, the return of the ace!<br/>The missile bombardment will begin soon."
+        },
+        {
+            "id": 11,
+            "desc": "Emergency, go!<br/>Hold the track and make sure lives are saved.."
+        },
+        {
+            "id": 12,
+            "desc": "God's veil to light up a dark world.<br/>Runs down the track in fantastic beauty."
+        },
+        {
+            "id": 13,
+            "desc": "A dark hero on the track.<br/>Relentlessly dominating the race."
+        },
+        {
+            "id": 14,
+            "desc": "A cart off the rails.<br/>Runs down the track, breaking the limits of tying wheels."
+        },
+        {
+            "id": 15,
+            "desc": "Original ideas and colorful fun.<br/>Color the track with happiness."
+        },
+        {
+            "id": 16,
+            "desc": "Excitingly, more thrillingly!<br/>Anyone can run happily anywhere, anytime."
+        },
+        {
+            "id": 17,
+            "desc": "A description is being prepared."
+        },
+        {
+            "id": 18,
+            "desc": "A description is being prepared."
+        },
+        {
+            "id": 19,
+            "desc": "Nothing more than air resistance!<br/>Nothing gets in the way of racing."
+        },
+        {
+            "id": 20,
+            "desc": "A description is being prepared."
+        },
+        {
+            "id": 21,
+            "desc": "Overwhelming engine, overwhelming power.<br/>Overwhelms the race!"
+        },
+        {
+            "id": 22,
+            "desc": "The power of sweet carrots!<br/>Powerful boosters spring from the soles of your feet."
+        },
+        {
+            "id": 23,
+            "desc": "A secret weapon disguised as a toilet.<br/>At last... it's finally out!"
+        }
+    ],
+
+    "kartDescDepth": [
+        {
+            "id": 1,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "The front has a checkered pattern and the letter P, the<br/>symbol of Proto.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-proto.webp",
+            "alt": "proto image"
+        },
+        {
+            "id": 2,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "Classic training cart design.<br/>Looks like the original L2 training cart.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-practice-kart.webp",
+            "alt": "Practice cart image"
+        },
+        {
+            "id": 3,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "In the original version, it was an upgraded version of a turtle.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-pirate-turtle.webp",
+            "alt": "Pirate Turtle Image"
+        },
+        {
+            "id": 4,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "The regular lineup with a soft balance. The cotton logo is embedded in the center.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-cotton.webp",
+            "alt": "cotton image"
+        },
+        {
+            "id": 5,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "The regular lineup boasts explosive acceleration. The burst logo is embedded in the center.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-burst.webp",
+            "alt": "burst image"
+        },
+        {
+            "id": 6,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "The regular lineup with strong physical fights. The distinctive checkered pattern is impressive.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-solid.webp",
+            "alt": "solid image"
+        },
+        {
+            "id": 7,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "A regular lineup that lasts long and strong.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-marathon.webp",
+            "alt": "marathon image"
+        },
+        {
+            "id": 8,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "basic payment",
+            "desc2": "Regular lineup with nimble cornering. Saber logo emblazoned in the middle.",
+            "desc3": "November 15, 2019<br/> (1st CBT)",
+            "img": "/images/screenShots/img-saber.webp",
+            "alt": "saber image"
+        },
+        {
+            "id": 9,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the pre-season livery starter package",
+            "desc2": "The green light on the front is attractive.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-storm.webp",
+            "alt": "Storm Image"
+        },
+        {
+            "id": 10,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the pre-season ace package",
+            "desc2": "It has the same design as the original Ace HT.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-ace.webp",
+            "alt": "Ace Image"
+        },
+        {
+            "id": 11,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "preseason racing pass level 10 premium reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-fire-truck.webp",
+            "alt": "fire engine image"
+        },
+        {
+            "id": 12,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Preseason Racing Pass Level 20 General Reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-orora.webp",
+            "alt": "Aurora images"
+        },
+        {
+            "id": 13,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "preseason racing pass level 40 premium reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-justis.webp",
+            "alt": "Justice Image"
+        },
+        {
+            "id": 14,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Second CBT reward",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-mine-kart.webp",
+            "alt": "minecart image"
+        },
+        {
+            "id": 15,
+            "title": "acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "access on the Android platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        {
+            "id": 16,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access from Nexon platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-nexon-kart.webp",
+            "alt": "Nexon cart image"
+        },
+        {
+            "id": 17,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "access on IOS platforms",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        {
+            "id": 18,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Access from the Steam platform",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        {
+            "id": 19,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Reward for the 3rd day of pre-season open commemorative attendance check",
+            "desc2": "No description.",
+            "desc3": "Jan 12, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-spike.webp",
+            "alt": "Spike image"
+        },
+        {
+            "id": 20,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the preseason titan package",
+            "desc2": "No description.",
+            "desc3": "Jan 19, 2023<br/> (pre-season)",
+            "img": "",
+            "alt": ""
+        },
+        {
+            "id": 21,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase the Pre-Season Brutus Pack",
+            "desc2": "No description.",
+            "desc3": "Jan 19, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-brutus.webp",
+            "alt": "brutus image"
+        },
+        {
+            "id": 22,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Lunar New Year 2023 login event",
+            "desc2": "No description.",
+            "desc3": "January 23, 2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-sugar-rabbit.webp",
+            "alt": "Sugar Rabbit Image"
+        },
+        {
+            "id": 23,
+            "title": "Acquisition path",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Purchase secret pre-season potty packages",
+            "desc2": "Same design as the original Lulu.",
+            "desc3": "02/02/2023<br/> (pre-season)",
+            "img": "/images/screenShots/img-lulu.webp",
+            "alt": "secret toilet image"
+        }
+    ]
+}

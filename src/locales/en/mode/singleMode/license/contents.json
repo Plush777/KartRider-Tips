@@ -1,0 +1,35 @@
+{
+    "lcItem": {
+        "lcDepth1": {
+            "group1": {
+                "title": "License",
+                "description": "Learn solid basics with a license!"
+            },
+            "group2": {
+                "title": "License screen",
+                "description": "You can take turns starting with license B2.",
+                "description2": "Single player only, learn about various situations that can happen, physics engine, etc.",
+                "caption": "License screen in-game look",
+                "alt": "In-game image"
+            },
+            "group3": {
+                "title": "Mission Clear Reward",
+                "caption": "License mission clear reward in-game look",
+                "alt": "In-game image"
+            },
+            "group4": {
+                "item1": "① License mission information: You can check the license mission name and clear level (stars).",
+                "item2": "② Stars Earned / Maximum Stars Earned: You can see the current number of stars earned and the maximum number of stars earned.",
+                "item3": "③ Mission clear conditions: You can check the mission goal and the number of stars that can be obtained for each score.",
+                "item4": "④ Mission Clear Reward: You can check the rewards that can be obtained by clearing level",
+                "item5": "⑤ License clear level: Depending on the number of stars collected, the license level is divided into Bronze / Silver / Gold."
+            },
+            "group5": {
+                "title": "License Acquisition Reward",
+                "description": "You can view the license acquisition rewards by clicking the View Rewards button.",
+                "caption": "Licensing reward in-game look",
+                "alt": "In-game image"
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "difficultyList": {
+        "itemMode":{
+            "diff1": 2.5,
+            "diff2": 2.5,
+            "diff3": 2.5,
+            "diff4": 2.5,
+            "diff5": 1.72,
+            "diff6": 1.72,
+            "diff7": 1.72,
+            "diff8": 1.72,
+            "diff9": 1.72,
+            "diff10": 1.72,
+            "diff11": 1.72,
+            "diff12": 1.72,
+            "diff13": 1.72,
+            "diff14": 1.72,
+            "diff15": 0.9,
+            "diff16": 0.9,
+            "diff17": 0.9,
+            "diff18": 0.9
+        },
+
+        "sppedMode":{
+            "diff1": 5,
+            "diff2": 5,
+            "diff3": 5,
+            "diff4": 5,
+            "diff5": 5,
+            "diff6": 4,
+            "diff7": 4,
+            "diff8": 4,
+            "diff9": 4,
+            "diff10": 4,
+            "diff11": 4,
+            "diff12": 3,
+            "diff13": 2.5,
+            "diff14": 2.5,
+            "diff15": 2.5,
+            "diff16": 2.5,
+            "diff17": 2.5,
+            "diff18": 1.72
+        }
+    }
+        
+}

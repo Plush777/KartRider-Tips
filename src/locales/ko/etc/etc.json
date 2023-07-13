@@ -1,0 +1,68 @@
+{
+    "skip": {
+        "group1":{
+            "txt": "본문 바로가기"
+        },
+        "group2":{
+            "txt": "메뉴 바로가기"
+        }
+    },
+
+    "settingTitles": {
+        "group1": {
+            "txt1": "언어 설정",
+            "txt2": "글자 크기 설정",
+            "txt3": "테마 설정"
+        }
+    },
+
+    "settingButtons": {
+        "group1": {
+            "btn1": "작게",
+            "btn2": "기본",
+            "btn3": "크게"
+        },
+        "group2": {
+            "btn1": "라이트",
+            "btn2": "다크"
+        }
+    },
+
+    "util": {
+        "group1": {
+            "txt1": "커뮤니티",
+            "txt2": "공식 홈페이지",
+            "txt3": "설정"
+        }
+    },
+
+    "video": {
+        "group1": {
+            "txt1": "이런 영상은 어때요?",
+            "txt2": "KARTRIDER TIPS의 추천 영상들을 만나보세요."
+        }
+    },
+
+    "start": {
+        "group1": {
+            "txt1": "카트라이더 초심자를 위한",
+            "txt2": "여러가지 정보들을 제공합니다."
+        }
+    },
+
+    "copys": {
+        "group1": {
+            "txt": "2023 KARTRIDER TIPS",
+            "alt": "푸터 카트라이더 팁스 로고"
+        }
+    },
+
+    "rotate": {
+        "txt": "카드 뒤집기"
+    },
+
+    "bottomSheet": {
+        "txt1": "더보기",
+        "txt2": "닫기"
+    }
+}

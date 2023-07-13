@@ -1,0 +1,138 @@
+{
+    "characterTitle": {
+        "group1":{
+            "title": "Character"
+        }
+    },
+
+    "card": {
+        "group1":{
+            "id": "0",
+            "name": "Bazzi",
+            "engName": "bazzi",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A nonchalant racer who enjoys speed.<br/>Sometimes he gets into trouble<br/>by his erratic behavior<br/>but luck always<br/>with him.",
+            "speech": "Don't bother, I'll just leave... Huh?<br/>Found the villain!"
+        },
+        "group2":{
+            "id": "1",
+            "name": "Dao",
+            "engName": "dao",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "An orthodox racer with a sense of justice.<br/>sometimes hesitant<br/>but <br/>overcomes anything with great enthusiasm.",
+            "speech": "I'm going to be the best racer in the world!"
+        },
+        "group3":{
+            "id": "2",
+            "name": "Dizini",
+            "engName": "dizini",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A girl with excellent empathy.<br/>He is affectionate and careful.<br/>She can't hold back her anger and explodes<br/>turns 180 degrees.",
+            "speech": "Watch out for slowdown and cornering...<br/>I told you!!!"
+        },
+        "group4":{
+            "id": "3",
+            "name": "Marid",
+            "engName": "marid",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A confident and luxurious girl.<br/>She believes she can do anything<br/>if she puts her mind to it.<br/>even get Dao's attention",
+            "speech": "Hmph, if you put your mind to it, it's not even possible to get first place"
+        },
+        "group5":{
+            "id": "4",
+            "name": "Brodi",
+            "engName": "brodi",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "The factory manager wrapped in a veil.<br/>He puts out an unusual figure<br/>but when the cart is finished<br/>he jumps up like a child and loves it.",
+            "speech": "Nyahahaha! That's a perfect cart!"
+        },
+        "group6":{
+            "id": "5",
+            "name": "Chris",
+            "engName": "chris",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A genius hacker who just wants to have fun<br/>.<br/>Runs his own tracks.<br/>Black Company just<br/>joined just for fun.",
+            "speech": "Noisy! Enough with the fun!"
+        },
+        "group7":{
+            "id": "6",
+            "name": "Neo",
+            "engName": "neo",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "The hero of Moonhill City.<br/>Leaving behind the dark path of the past<br/>he became a hero<br/>his identity is hidden.",
+            "speech": "Follow me. I will guide you to safety."
+        },
+        "group8":{
+            "id": "7",
+            "name": "Sophia",
+            "engName": "sophia",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A hacker from France.<br/>He's as good at hacking as Chris.<br/>He has a blunt personality and stays at home<br/>, giving off a dark aura<br/> No malice whatsoever.",
+            "speech": "...is annoying."
+        },
+        "group9":{
+            "id": "8",
+            "name": "Mos",
+            "engName": "mos",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "An engineer and racer<br/>who loves karts.<br/>He values smooth races<br/>and offers effective practice.",
+            "speech": "Leave the maintenance and practice to me!"
+        },
+        "group10":{
+            "id": "9",
+            "name": "Uni",
+            "engName": "uni",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A young but gifted<br/>little racer.<br/>The goal is to win the race and order a special cart<br/> that fits your<br/>body type.",
+            "speech": "Whoopeeeeeee... Wooeeeeeee!"
+        },
+        "group11":{
+            "id": "10",
+            "name": "Airi",
+            "engName": "airi",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A bubbly engineer from Brazil.<br/>He sets out to steer his criminal friend Chris<br/>on the right path.",
+            "speech": "My friend, stop Chris!"
+        },
+        "group12":{
+            "id": "11",
+            "name": "Eihi",
+            "engName": "eihi",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A schoolboy<br/>racer who learned how to kart from books.<br/>As a sensible technician, he<br/>tested karts he designed himself<br/>and built up his skills.",
+            "speech": "Hey guys, check out this book! Don't yawn..."
+        },
+        "group13":{
+            "id": "12",
+            "name": "Rex",
+            "engName": "rex",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "The villain of Moonhill City.<br/>The strongest racer among the Rathaimen created by Mayor Zippy.",
+            "speech": "Neo is a hero?<br/>Traitors can't be heroes!"
+        },
+        "group14":{
+            "id": "13",
+            "name": "Kephi",
+            "engName": "kephi",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A cowardly gluttonous racer who likes to eat as much as a cart.<br/>No matter how rough the road, if there is a donut at the end<br/><br/>it will jump at any risk.",
+            "speech": "I love donuts~ I love donuts~ hehe"
+        },
+        "group15":{
+            "id": "14",
+            "name": "Brian",
+            "engName": "brian",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A hot-blooded detective from England.<br/>Ready to run to the end of the earth<br/>to eradicate crime.<br/>He is usually friendly, but he can be a single-minded individual when it comes to investigations<br/> do.",
+            "speech": "Cooperate with the investigation! Now!"
+        },
+        "group16":{
+            "id": "15",
+            "name": "Raive",
+            "engName": "raive",
+            "acq": "Acquisition path: Basic payment",
+            "desc": "A rising star who appeared like a comet! <br/> She <br/> rocks her tracks with upbeat music, but <br/> her private life <br/> is kept under a veil." ,
+            "speech": "All that matters is that I'm enjoying myself."
+        }
+    }
+}

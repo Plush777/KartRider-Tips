@@ -1,0 +1,67 @@
+{
+    "rank": {
+        "group1": {
+            "item": "ランク"
+        },
+        "group2": {
+            "item": "1st"
+        },
+        "group3": {
+            "item": "2nd"
+        },
+        "group4": {
+            "item": "3rd"
+        },
+        "group5": {
+            "item": "4th"
+        },
+        "group6": {
+            "item": "5th"
+        },
+        "group7": {
+            "item": "6th"
+        },
+        "group8": {
+            "item": "7th"
+        },
+        "group9": {
+            "item": "8th"
+        },
+        "group10": {
+            "item": "Retire"
+        }
+    },
+
+    "point": {
+        "group1": {
+            "item": "ポイント"
+        },
+        "group2": {
+            "item":"10"
+        },
+        "group3": {
+            "item": "8"
+        },
+        "group4": {
+            "item": "6"
+        },
+        "group5": {
+            "item":"5"
+        },
+        "group6": {
+            "item": "4"
+        },
+        "group7": {
+            "item": "3"
+        },
+        "group8": {
+            "item": "2"
+        },
+        "group9": {
+            "item": "1"
+        },
+        "group10": {
+            "item": "-1"
+        }
+    }
+}

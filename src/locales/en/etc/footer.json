@@ -1,0 +1,28 @@
+{
+    "data": {
+        "group1":{
+            "id": 1,
+            "name": "Site purpose"
+        },
+        "group2":{
+            "id": 2,
+            "name": "Source"
+        },
+        "group3":{
+            "id": 3,
+            "name": "Feedback"
+        },
+        "group4":{
+            "id": 4,
+            "name": "Inquiry"
+        },
+        "group5":{
+            "id": 5,
+            "name": "Shortcut Link"
+        },
+        "group6":{
+            "id": 6,
+            "name": "Today's number of the day"
+        }
+    }
+}

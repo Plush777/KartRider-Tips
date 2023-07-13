@@ -1,0 +1,16 @@
+{
+    "slide": [
+        {
+            "group1": {
+                "id": 1,
+                "title": "I want to be a good karting rider<br/>what should I do?",
+                "desc": "Learn from KARTRIDER TIPS!<br/>We offer a variety of tips for those who are new to Kartrider or want to get better at it."
+            },
+            "group2": {
+                "id": 2,
+                "title": "KARTRIDER TIPS Feedback in progress!",
+                "desc": "We are actively accepting your feedback to improve the site.<br/>Please leave your comments by clicking the button below 😊"
+            }
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "gpItem": {
+        "gpDepth1":{
+            "group1": {
+                "title": "Grand Prix",
+                "description": "This is a mode where you can compete with other racers and raise your rank.<br/>Every season, an item/speed grand prix is held, all run solo."
+            },
+            "group2" : {
+                "title": "Rating",
+                "description": "Racers start the Grand Prix at 1,500 GPP, and depending on the change in GPP thereafter,<br/>it is divided into 5 grades and 15 detailed grades.<br/>There is also a separate placement process. If you play the first round of Grand Prix without a rating, you will receive a grade immediately.",
+                "image": "/images/screenShots/img-ranks.webp"
+            },
+            "group3": {
+                "title1": "Bronze",
+                "title2": "Silver",
+                "title3": "Gold",
+                "title4": "Master",
+                "title5": "Grand Master"
+            },
+            "group4" : {
+                "tHeader": "Score",
+                "tHeader2": "Rating",
+                "tHeader3": "Item Grand Prix",
+                "tHeader4": "Speed Grand Prix"
+            },
+            "group5" : {
+                "bronze3": "800 ~ 1,199",
+                "bronze2": "400 ~ 799",
+                "bronze1": "~ 399"
+            },
+            "group6" : {
+                "silver3": "2,000 ~ 2,399",
+                "silver2": "1,000 ~ 1,599",
+                "silver1": "1,200 ~ 1,599"
+            },
+            "group7" : {
+                "gold3": "3,200 ~ 3,599",
+                "gold2": "2,800 ~ 3,199",
+                "gold1": "2,400 ~ 2,799"
+            },
+            "group8" : {
+                "master3": "4,400 ~ 4,799",
+                "master2": "4,000 ~ 4,399",
+                "master1": "3,600 ~ 3,999"
+            },
+            "group9" : {
+                "grandmaster3": "5,600 ~",
+                "grandmaster2": "5,200 ~ 5,599",
+                "grandmaster1": "4,800 ~ 5,19"
+            },
+            "group10" : {
+                "bronze3": "bronze III",
+                "bronze2": "bronze II",
+                "bronze1": "bronze I"
+            },
+            "group11": {
+                "silver3": "Silver III",
+                "silver2": "Silver II",
+                "silver1": "Silver I"
+            },
+            "group12": {
+                "gold3": "Gold III",
+                "gold2": "gold II",
+                "gold1": "gold I"
+            },
+            "group13": {
+                "master3": "Master III",
+                "master2": "master II",
+                "master1": "master I"
+            },
+            "group14": {
+                "grandmaster3": "Grandmaster III",
+                "grandmaster2": "Grandmaster II",
+                "grandmaster1": "Grandmaster I"
+            },
+            "group15": {
+                "title": "Win streak bonus",
+                "description": "You can get additional GPP through winning streaks (1st place) for players below Master rank.<br/>The winning streak bonus does not apply from Grand Master rank onwards."
+            },
+            "group16": {
+                "title": "Track",
+                "description": "Depending on the mode, you can play within the set tracks, and the difficulty level 5 track does not appear in gold or lower tiers."
+            },
+            "group17": {
+                "title" : "Season Reward",
+                "description": "You can get additional GPP through winning streaks (1st place) for players below Master rank.<br/>The winning streak bonus does not apply from Grand Master rank onwards."
+            },
+            "group18": {
+                "titleS01": "Season 1: New World (2023.03.09 ~ 05.04)",
+                "titleS02": "Season 2: Wolrd Kart Championship (2023.05.11 ~ 07.06)",
+                "title2": "Ranking Rewards",
+                "title3": "Tier Rewards"
+            },
+            "group19" : {
+                "item": "monocular marid",
+                "item2": "Mass-produced Tobi",
+                "item3": "1,000 K-COIN",
+                "item4": "London Clock Tower (Sticker)",
+                "item5": "Istanbul prayer (sticker)",
+                "item6": "Gangnam Style (Sticker)",
+                "item7": "Steam Classic",
+                "item8": "mass-produced mobility",
+                "item9": "Rio's Passion (Sticker)",
+                "item10": "The thrill of LA (sticker)",
+                "item11": "Exciting New York (sticker)",
+                "item12": "5,000 Lucci",
+                "item13": "3,000 Lucci",
+                "item14": "S1 item legend emblem",
+                "item15": "(Advanced) Hall of Fame Certificate",
+                "item16": "S1 item hero emblem",
+                "item17": "(Intermediate) Hall of Fame Certificate",
+                "item18": "S1 Item Special Emblem (Lesser)",
+                "item19": "S1 Speed Legend Emblem",
+                "item20": "(Advanced) Hall of Fame Certificate",
+                "item21": "S1 Speed Hero Emblem",
+                "item22": "(Intermediate) Hall of Fame Certificate",
+                "item23": "S1 Speed Special Emblem (Lesser)"
+            },
+            "group20": {
+                "top": "1st to 3rd",
+                "middle": "4th to 100th",
+                "bottom": "ranks 101 - 500"
+            },
+            "group21": {
+                 "item": "Wild Chris",
+                 "item2": "Wild Dust",
+                 "item3": "Sky Racer Dao",
+                 "item4": "skyrocket",
+                 "item5": "Haechi in Gangnam (Sticker)",
+                 "item6": "Liberty in New York (Sticker)",
+                 "item7": "London Guards (stickers)",
+                 "item8": "Rio's Tucan (Sticker)",
+                 "item9": "Cat of Istanbul (Sticker)",
+                 "item10": "Cyan's Dream (Sticker)",
+                 "item11": "S2 Item Legend Emblem",
+                 "item12": "S2 Item Hero Emblem",
+                 "item13": "S2 item special emblem",
+                 "item14": "S2 Speed Legend Emblem",
+                 "item15": "S2 Speed Hero Emblem",
+                 "item16": "S2 Speed Special Emblem"
+             }
+        }
+    }
+}

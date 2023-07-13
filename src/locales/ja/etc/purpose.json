@@ -1,0 +1,20 @@
+{
+    "purpose": {
+        "group1": {
+            "title": "目的",
+            "description": "このサイトには次の目的があります。"
+        }
+    },
+
+    "listPurpose": {
+        "group1": {
+            "details": "1. カートライダーの初心者やよくやりたい人のためのガイドと隠されたヒントを提供します。"
+        },
+        "group2": {
+            "details": "2. このサイトは<a href='https://member.nexon.com/policy/gameipguide.aspx?date=20210622' className='openInNew' target='_blank' style='margin: 0 4px' rel='noopener noreferrer'><strong>ネクソンゲームIP利用ガイド(2021.06.22基準）</strong></a>に準拠しています。"
+        },
+        "group3": {
+            "details": "3. 原作カートライダーのサービス終了確定のお知らせを聞き、とても惜しい心とカートライダードリフト興行を願う心にこのサイトを作ることになりました。<br/>シンプルメーカーの趣味目的で作ったプロジェクトなので、ネクソン 韓国とは何の関係もありません。"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "menus" : {
+        "group1":{
+            "id": 1,
+            "name": "모드"
+        },
+        "group2":{
+            "id": 2,
+            "name": "카트바디"
+        },
+        "group3":{
+            "id": 3,
+            "name": "더보기"
+        },
+        "group4":{
+            "id": 4,
+            "name": "캐릭터"
+        },
+        "group5":{
+            "id": 5,
+            "name": "트랙"
+        },
+        "group6":{
+            "id": 6,
+            "name": "용어사전"
+        },
+        "group7":{
+            "id": 7,
+            "name": "기술"
+        }
+    }
+}

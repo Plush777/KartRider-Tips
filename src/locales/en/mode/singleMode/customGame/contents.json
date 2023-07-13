@@ -1,0 +1,55 @@
+{
+    "cgItem": {
+        "cgDepth1" :{
+            "group1": {
+                "title": "Custom Game",
+                "description": "Players can create and play their own game rooms.",
+                "description2": "(You must enter the custom key consisting of 6 digits issued at the time of opening to enter.)"
+            },
+            "group2": {
+                "title": "Create a custom game",
+                "description": "Click Create Custom Game to create your own.",
+                "caption": "Create a custom game in-game look",
+                "alt": "In-game image"
+            },
+            "group3": {
+                "title": "Join Custom Games",
+                "description": "A friend told me about it",
+                "strong": "custom key",
+                "description2": "You can join a friend's custom game by entering ",
+                "caption": "Custom game in-game look",
+                "alt": "In-game image"
+            },
+            "group4" : {
+                "title": "Invite friends and AI",
+                "description": "The host of a custom game can invite a friend or AI by tapping an empty slot.",
+                "description2": "In Duos and Squads, the AI and Racer cannot be on the same team.",
+                "paltform": "PC environment",
+                "paltform2": "mobile environment",
+                "caption": "In-game appearance of inviting friends and AI",
+                "alt": "In-game image"
+            },
+            "group5" : {
+                "title": "Moderator Permissions",
+                "description": "The moderator can transfer teams of racers who have entered a custom game, and can delegate moderator authority.",
+                "description2": "You can change the racing track through the track change menu and also change the mode of your custom game.",
+                "paltform": "PC environment",
+                "paltform2": "mobile environment",
+                "caption": "Moderator rights in-game appearance",
+                "alt": "In-game image"
+            },
+            "group6" : {
+                "title": "Track",
+                "description": "Like regular games, the tracks you can play are gradually unlocked according to the licenses you acquire.",
+                "caption": "",
+                "alt": "random track image",
+                "subTitle": "Random Common Track",
+                "subDescription": "One of the common tracks available for both item and speed battles will appear randomly.",
+                "subDescription2": "(Difficulty tracks 1-3)",
+                "subTitle2": "Random Speed Only",
+                "subDescription3": "This can only be selected when the game mode is Speed Battle, and one of the speed-only tracks appears randomly.",
+                "subDescription4": "(Difficulty tracks 2-5)"
+            }
+        }
+    }
+}

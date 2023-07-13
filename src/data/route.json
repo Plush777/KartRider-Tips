@@ -1,0 +1,105 @@
+{
+    "routeList": [
+        {
+            "id": 1,
+            "link": "/mode/speed"
+        },
+        {
+            "id": 2,
+            "link": "/karts/1"
+        },
+        {
+            "id": 3,
+            "link": "#none"
+        },
+        {
+            "id": 4,
+            "link": "/character/common"
+        },
+        {
+            "id": 5,
+            "link": "/track"
+        },
+        {
+            "id": 6,
+            "link": "/glossary"
+        },
+        {
+            "id": 7,
+            "link": "/technology"
+        }
+    ],
+
+    "tabRoute": [
+        {
+            "id": 1,
+            "link": "/mode/speed"
+        },
+        {
+            "id": 2,
+            "link": "/mode/item"
+        },
+        {
+            "id": 3,
+            "link": "/mode/grandPrize"
+        },
+        {
+            "id": 4,
+            "link": "/mode/timeAttack"
+        },
+        {
+            "id": 5,
+            "link": "/mode/customGame"
+        },
+        {
+            "id": 6,
+            "link": "/mode/license"
+        },
+        {
+            "id": 7,
+            "link": "/mode/eventMode"
+        }
+    ],
+
+    "characterRoute": [
+        {
+            "id": 1,
+            "link": "/character/common"
+        },
+        {
+            "id": 2,
+            "link": "/character/advanced"
+        },
+        {
+            "id": 3,
+            "link": "/character/rare"
+        },
+        {
+            "id": 4,
+            "link": "/character/epic"
+        },
+        {
+            "id": 5,
+            "link": "/character/legend"
+        }
+    ],
+
+    "footerRoute": [
+        {
+            "id": 1,
+            "link": "/purpose"
+        },
+        {
+            "id": 2,
+            "link": "/credit"
+        },
+        {
+            "id": 3,
+            "link": "https://forms.gle/4i8vvDYz9VbLbJGN9"
+        },
+        {
+            "id": 4,
+            "link": "/inquiry"
+        }
+    ]
+}

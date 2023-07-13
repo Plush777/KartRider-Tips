@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Site purpose"
+        },
+        {
+            "id": 2,
+            "name": "Source"
+        },
+        {
+            "id": 3,
+            "name": "Feedback"
+        },
+        {
+            "id": 4,
+            "name": "Inquiry"
+        }
+    ]
+}

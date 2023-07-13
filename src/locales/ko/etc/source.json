@@ -1,0 +1,70 @@
+{
+    "source": {
+        "group1": {
+            "title": "출처",
+            "description": "해당 프로젝트에서 사용된 이미지와 폰트, 그리고 그 외의 모든 자료들의 출처입니다."
+        },
+        "group2": {
+            "title": "이미지"
+        },
+        "group3": {
+            "title": "내용"
+        },
+        "group4": {
+            "title": "폰트"
+        }
+    },
+
+    "list": {
+        "group1" :{
+            "details": "카트라이더 드리프트 아트웍",
+            "link": "https://kartdrift.nexon.com/kartdrift/ko/media/artwork"
+        },
+        "group2" :{
+            "details": "카트라이더 투명벽 제보를 받습니다",
+            "link": "https://kart.nexon.com/events/2022/0630/Event2.aspx"
+        },
+        "group3" :{
+            "details": "카트라이더 뛰라이더",
+            "link": "https://kart.nexon.com/Events/2016/April/index.aspx"
+        },
+        "group4" :{
+            "details": "카트라이더 엠블럼",
+            "link": "https://kart.nexon.com/Kart/Ranking/Emblem/Index.aspx"
+        },
+        "group5" :{
+            "details": "카트라이더 드리프트 가이드 | 아이템과 스피드전",
+            "link": "https://forum.nexon.com/kartdrift-kr/board_view?board=1876&thread=1970458"
+        },
+        "group6" :{
+            "details": "카트라이더 X 진라면",
+            "link": "https://kart.nexon.com/events/2022/0811/Event.aspx"
+        }
+    },
+
+    "list2": {
+        "group1" :{
+            "details": "나무위키 | 크레이지레이싱 카트라이더/게임 모드",
+            "link": "https://namu.wiki/w/%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%EB%A0%88%EC%9D%B4%EC%8B%B1%20%EC%B9%B4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EB%8D%94/%EA%B2%8C%EC%9E%84%20%EB%AA%A8%EB%93%9C"
+        },
+        "group2" :{
+            "details": "카트라이더 | 게임배우기",
+            "link": "https://kart.nexon.com/Kart/Guide/learn/Index.aspx"
+        }
+    },
+
+    "list3": {
+        "group1" :{
+            "details": "NexonLv1Gothic Regular"
+        },
+        "group2" :{
+            "details": "Pretendard"
+        },
+        "group3" :{
+            "details": "Maplestory Bold"
+        },
+        "group4" :{
+            "details": "Maplestory Light"
+        }
+    }
+}

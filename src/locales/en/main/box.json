@@ -1,0 +1,34 @@
+{
+    "box": {
+        "group1":{
+            "id": 1,
+            "title": "Mode",
+            "desc": "Explains the Kartrider mods and gives tips for each mode."
+        },
+        "group2":{
+            "id": 2,
+            "title": "Kartbody",
+            "desc": "Introducing Kartrider Kartbodies."
+        },
+        "group3":{
+            "id": 3,
+            "title": "Character",
+            "desc": "Introducing the Kartrider character!"
+        },
+        "group4":{
+            "id": 4,
+            "title": "Track",
+            "desc": "Content in preparation."
+        },
+        "group5":{
+            "id": 5,
+            "title": "Glossary",
+            "desc": "Content in preparation."
+        },
+        "group6":{
+            "id": 6,
+            "title": "Technology",
+            "desc": "Content in preparation."
+        }
+    }
+}

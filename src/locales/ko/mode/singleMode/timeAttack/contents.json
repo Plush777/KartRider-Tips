@@ -1,0 +1,33 @@
+{
+    "taItem": {
+       "taDepth1": {
+            "group1" : {
+                "title": "타임어택",
+                "description": "혼자서 트랙을 연습하고 기록을 남길 수 있어요.",
+                "description2": "스피드 모드만 제공되며, 자율 주행을 지원하지 않아요."
+            },
+            "group2" : {
+                "title": "타임어택 도전",
+                "description": "개인 기록에 도전할 수 있으며,",
+                "description2": "자신의 최고기록 쉐도우를 사용하여 함께 플레이할 수도 있어요.",
+                "caption": "타임어택 도전 인게임 모습",
+                "alt": "인게임 이미지"
+            },
+            "group3" : {
+                "title": "쉐도우 파일 확인",
+                "description": "쉐도우 파일은 사용자 > Local > KartDrift > Saved > SaveGames 에서 확인 할 수 있으며,",
+                "description2": "파일을 지우면 쉐도우도 같이 지워져요.",
+                "caption": "쉐도우 파일 경로",
+                "alt": "경로 이미지"
+            },
+            "group4" : {
+                "title": "랭커에게 도전",
+                "description": "트랙 별로 원하는 랭커를 선택하여 기록에 도전할 수 있으며,",
+                "description2": "랭커의 쉐도우와 함께 레이스를 하여 랭커의 플레이를 직접 확인하면서",
+                "description3": "주행이 가능해요.",
+                "caption": "타임어택 랭커에게 도전 인게임 모습",
+                "alt": "인게임 이미지"
+            }
+       }
+    }
+}
