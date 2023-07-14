@@ -3,10 +3,13 @@
 import SCtopArrow from "svg/ico-top-arrow.svg"
 import * as Stickystyled from "components/style/common/Sticky.style"
 import useSticky from "hooks/useSticky"
+import etc from 'locales/ko/etc/etc.json'
+import { useTranslation } from 'react-i18next';
 
 const BtnTop = () => {
 
     const [isShow] = useSticky();
+    const { t } = useTranslation();
 
     const scrollToTop = () => {
         window.scroll({
@@ -21,7 +24,7 @@ const BtnTop = () => {
                 <Stickystyled.BtnArea className="type01">
                     <Stickystyled.TopBtn onClick={scrollToTop}>
                         <SCtopArrow width="20px" height="20px" fill="#000"/>
-                        <span className="hidden">위로 올라가기</span>
+                        <span className="hidden">{t(`topButton.txt`)}</span>
                     </Stickystyled.TopBtn>
                 </Stickystyled.BtnArea>
             }

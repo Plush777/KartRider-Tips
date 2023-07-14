@@ -64,5 +64,19 @@
     "bottomSheet": {
         "txt1": "더보기",
         "txt2": "닫기"
+    },
+
+    "clipBoard": {
+        "txt": "현재 페이지 URL 클립보드에 복사"
+    },
+
+    "topButton": {
+        "txt": "위로 올라가기"
+    },
+
+    "mainSlide": {
+        "prev": "이전으로",
+        "next": "다음으로",
+        "alt": "메인 슬라이드 이미지"
     }
 }

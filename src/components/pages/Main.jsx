@@ -7,18 +7,15 @@ import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
 import Visual from 'components/layout/Visual';
 import Started from 'components/contents/common/Started';
-import { useDispatch , useSelector } from "react-redux";
-import { setStartState } from 'redux/store/store';
 import FootNotice from 'components/article/FootNotice';
 
 export default function Main({ videoIds }) {
-    let dispatch = useDispatch();
-    let started = useSelector(state => state.startState);
+    const [started, setStarted] = useState(true);
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
 
     useEffect(() => {
         let timer = setTimeout(() => {
-            dispatch(setStartState(false)); 
+            setStarted(false);
             return () => clearTimeout(timer);
         }, 3000);
 
@@ -29,7 +26,7 @@ export default function Main({ videoIds }) {
             document.body.classList.remove('noScroll');
             window.scrollTo(0,0);
         }
-    },[dispatch,started])
+    },[started])
 
     return(
         <>  

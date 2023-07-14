@@ -33,8 +33,14 @@ const Contents = styled.main`
 `
 
 const Img = styled.img`
-    width: 100%;
+    width: 316px !important;
+    height: 70px !important;
     margin: 0 auto;
+
+    ${({ theme }) => theme.tablet`
+        width: 250px !important;
+        height: 50px !important;
+    `}
 `
 
 const TxtArea = styled.div`
@@ -80,9 +86,9 @@ const Started = ({ themeMode }) => {
                 <div className="imgArea">
                     {
                         themeMode === 'dark' ?
-                        <Img src="/ico-kart-logo-white-beta.svg" alt="logo"/>
+                        <Img src="/ico-kart-logo-white-beta.svg" alt="logo" width="316" height="70"/>
                         :
-                        <Img src="/ico-kart-logo-black-beta.svg" alt="logo"/>
+                        <Img src="/ico-kart-logo-black-beta.svg" alt="logo" width="316" height="70"/>
                     }
                 </div>
                 <TxtArea>

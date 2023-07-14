@@ -14,6 +14,7 @@ import SCarrowSlidePrev from 'svg/ico-arrow-slide-prev.svg';
 import { useState , useEffect } from 'react';
 import parse from 'html-react-parser';
 import { useTranslation } from 'react-i18next';
+import etc from 'locales/ko/etc/etc.json';
 
 const Visual = () => {
 
@@ -53,15 +54,17 @@ const Visual = () => {
             <Visualstyled.StyledSwiper onSwiper={setSwiper} {...params}>
 
                     <button type="button" className="swiper-button image-swiper-button-next">
+                        <span className='hidden'>{t(`mainSlide.next`)}</span>
                         <SCarrowSlidePrev width="50px" height="50px" fill="#fff"/>
                     </button>
                     <button type="button" className="swiper-button image-swiper-button-prev">
+                        <span className='hidden'>{t(`mainSlide.prev`)}</span>
                         <SCarrowSlideNext width="50px" height="50px" fill="#fff"/>
                     </button>
 
                     <SwiperSlide>
                         <Visualstyled.VisualInner>
-                            <Visualstyled.ImgStyle src="images/bg/bg-visual-01.webp" alt="메인 비주얼 이미지"/>
+                            <Visualstyled.ImgStyle src="images/bg/bg-visual-01.webp" alt={t(`mainSlide.alt`)}/>
                             <VisualCenterstyled.VisualCenterWrap>
                                 <VisualCenterstyled.VtxtArea>
                                     <VisualCenterstyled.Vtitle>{parse(t(`slide.group1.title`))}</VisualCenterstyled.Vtitle>
@@ -73,7 +76,7 @@ const Visual = () => {
 
                     <SwiperSlide>
                         <Visualstyled.VisualInner>
-                            <Visualstyled.ImgStyle src="images/bg/bg-visual-02.webp" alt="메인 비주얼 이미지"/>
+                            <Visualstyled.ImgStyle src="images/bg/bg-visual-02.webp" alt={t(`mainSlide.alt`)}/>
                             <VisualCenterstyled.VisualCenterWrap>
                                 <VisualCenterstyled.VtxtArea>
                                     <VisualCenterstyled.Vtitle>{parse(t(`slide.group2.title`))}</VisualCenterstyled.Vtitle>

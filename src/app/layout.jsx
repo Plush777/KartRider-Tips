@@ -7,9 +7,7 @@ import PreloadResources from './PreloadResources';
 import AnalyticsProvider from './AnalyticsProvider';
 import RouterScrollProvider from './RouterScrollProvider';
 import 'scss/app.scss';
-import Script from 'next/script';
 import BeforeThemeRender from './BeforeThemeRender';
-import Head from 'next/head';
 
 export const metadata = {
     title: {

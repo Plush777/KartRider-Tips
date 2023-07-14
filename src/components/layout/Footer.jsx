@@ -8,11 +8,11 @@ import { M500 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
 import { usePathname } from 'next/navigation';
 import etc from 'locales/ko/etc/etc.json';
+import inquiryData from "locales/ko/etc/inquiry.json";
+import footerData from "locales/ko/etc/footer.json";
 
 const Footer = ({ themeMode }) => {
 
-    let footerData = useSelector(state => state.footer);
-    let inquiryData = useSelector(state => state.inquiry);
     let route = useSelector(state => state.commonRoute);
     const { t } = useTranslation();
     const pathname = usePathname();
@@ -61,7 +61,7 @@ const Footer = ({ themeMode }) => {
                     <Footerstyled.Row>
                         <Footerstyled.Hits>
                             <a href="https://hits.sh/kartrider-tips.vercel.app/hits/">
-                                <img alt="Hits" src="https://hits.sh/kartrider-tips.vercel.app/hits.svg?view=today-total&style=for-the-badge&label=today&color=309ED5&labelColor=222"/>
+                                <img alt="Hits" src="https://hits.sh/kartrider-tips.vercel.app/hits.svg?view=today-total&style=for-the-badge&label=today&color=309ED5&labelColor=222" width="181" height="26"/>
                                 <span className="hidden">{t(`data.group6.name`)}</span>
                             </a>
                         </Footerstyled.Hits>

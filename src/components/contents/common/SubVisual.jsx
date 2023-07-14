@@ -3,8 +3,6 @@
 import { useState,useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import * as SubVisualstyled from 'components/style/common/SubVisual.style';
-import { useDispatch , useSelector } from "react-redux";
-import { setSubVisualTitle } from "redux/store/store";
 import { useTranslation } from 'react-i18next';
 
 const SubVisual = () => {
@@ -12,35 +10,34 @@ const SubVisual = () => {
     const pathname = usePathname();
     const { t } = useTranslation();
     let [visualName,setVisualName] = useState('');
-    let dispatch = useDispatch();
-    let subVisualData = useSelector(state => state.subVisualTitle.value);
+    let [visualTitle,setVisualTitle] = useState('');
 
     useLayoutEffect(() => {
         if(pathname.startsWith('/mode')){
-            dispatch(setSubVisualTitle({title:t('category.group1.name')}));
+            setVisualTitle(t('category.group1.name'));
             setVisualName('mode');
         } else if(pathname.startsWith('/karts')){
-            dispatch(setSubVisualTitle({title:t('category.group2.name')}));
+            setVisualTitle(t('category.group2.name'));
             setVisualName('kartbody');
         } else if(pathname.startsWith('/character')){
-            dispatch(setSubVisualTitle({title:t('category.group3.name')}));
+            setVisualTitle(t('category.group3.name'));
             setVisualName('character');
         } else if(pathname.startsWith('/track')){
-            dispatch(setSubVisualTitle({title:t('category.group4.name')}));
+            setVisualTitle(t('category.group4.name'));
             setVisualName('track');
         } else if(pathname.startsWith('/purpose')){
-            dispatch(setSubVisualTitle({title:t('category.group7.name')}));
+            setVisualTitle(t('category.group7.name'));
             setVisualName('');
         } else if(pathname.startsWith('/credit')){
-            dispatch(setSubVisualTitle({title:t('category.group8.name')}));
+            setVisualTitle(t('category.group8.name'));
             setVisualName('');
         }  else if(pathname.startsWith('/inquiry')){
-            dispatch(setSubVisualTitle({title:t('category.group9.name')}));
+            setVisualTitle(t('category.group9.name'));
             setVisualName('');
         } 
 
         
-    }, [pathname,dispatch,t]);
+    }, [pathname,t]);
 
     return ( 
         <SubVisualstyled.SubVisualWrap>
@@ -48,7 +45,7 @@ const SubVisual = () => {
             pathname.startsWith('/credit') || pathname.startsWith('/purpose') || pathname.startsWith('/inquiry') ? 'gray' : null} 
             visualName={visualName}>
                 <SubVisualstyled.SubVisualTitleArea>
-                    <SubVisualstyled.SubVisualTitle>{subVisualData.title}</SubVisualstyled.SubVisualTitle>
+                    <SubVisualstyled.SubVisualTitle>{visualTitle}</SubVisualstyled.SubVisualTitle>
                 </SubVisualstyled.SubVisualTitleArea>
             </SubVisualstyled.SubViusalInner>
         </SubVisualstyled.SubVisualWrap>

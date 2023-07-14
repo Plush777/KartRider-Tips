@@ -4,12 +4,12 @@ import * as Selectstyled from 'components/style/common/Select.style';
 import { usePathname } from "next/navigation";
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSelectIndex , setCardRotate } from 'redux/store/store';
+import { setSelectIndex } from 'redux/store/store';
 import { useSelect } from 'hooks/useSelect';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 
-const Select = () => {
+const Select = ({ setCardRotateState }) => {
 
     let commonKartbodyDesc = useSelector(state => state.kartbodyCommon);
     let commonCharacterName = useSelector(state => state.characterCommonName);
@@ -37,7 +37,7 @@ const Select = () => {
             characterIndex: index,
             langIndex: 0
         }));
-        dispatch(setCardRotate(null));
+        setCardRotateState(null);
     }
 
     return ( 

@@ -8,7 +8,6 @@ import { M768 , Min768 } from 'components/style/mobile/MediaQuery';
 import Select from 'components/mobile/Select';
 import { useSelector , useDispatch } from 'react-redux';
 import * as Buttonstyled from "components/style/common/Button.style";
-import { setCardRotate } from 'redux/store/store';
 import ClipBoardAlert from 'components/article/ClipBoardAlert';
 import BtnClipBoard from 'components/article/BtnClipBoard';
 import { useTranslation } from 'react-i18next';
@@ -19,14 +18,14 @@ const CharacterCommonContents = ({ characterCommon }) => {
 
     let commonCharacterName = useSelector(state => state.characterCommonName);
     let selectIndex = useSelector(state => state.selectIndex);
-    let cardRotate = useSelector(state => state.cardRotate);
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
+    let [cardRotateState, setCardRotateState] = useState(null);
     const dispatch = useDispatch();
     const { t } = useTranslation();
     const language = useSelector(state => state.language);
 
     const onRotate = () => {
-        cardRotate === null ? dispatch(setCardRotate('rotate')) : dispatch(setCardRotate(null));
+        cardRotateState === null ? setCardRotateState('rotate') : setCardRotateState(null);
     }
 
     return ( 
@@ -51,10 +50,10 @@ const CharacterCommonContents = ({ characterCommon }) => {
 
                         {/* 모바일 카드 */}
                         <M768>
-                            <Select/>
+                            <Select setCardRotateState={setCardRotateState}/>
 
                             <Cardstyled.CardList>
-                                <Cardstyled.CardItemBox className={cardRotate}>
+                                <Cardstyled.CardItemBox className={cardRotateState}>
                                     <Cardstyled.Card data-index={selectIndex.characterIndex}>
                                         <Cardstyled.CardItem> 
                                             <Cardstyled.CardInner>

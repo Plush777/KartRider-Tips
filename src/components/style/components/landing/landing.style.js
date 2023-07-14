@@ -29,7 +29,7 @@ export const Section = styled.section`
     padding-top: 150px;
 
     ${({ theme }) => theme.tablet`
-        padding-top: 130px;
+        padding-top: 100px;
     `}
 
     &.type01{
@@ -144,6 +144,10 @@ export const TitleTxtArea = styled.div`
         flex-wrap: wrap;
         justify-content: center;
     `}
+
+    ${({ theme }) => theme.mobile`
+        margin-top: 0;
+    `}
 `
 
 export const TitleTxt = styled(Title)`
@@ -214,7 +218,7 @@ export const TitleTxt = styled(Title)`
         }
 
         &:last-of-type{
-            margin-top: 10px;
+            margin-top: 5px;
         }
     }
 `
@@ -300,6 +304,14 @@ export const Obj = styled.div`
                 width: 250px;
             }
         }
+
+        ${({ theme }) => theme.mobile`
+            top: 510px;
+            
+            img{
+                width: 200px;
+            }
+        `}
     `}
 
     ${props => props.obj3 && css`

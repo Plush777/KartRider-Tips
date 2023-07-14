@@ -17,6 +17,10 @@ export const Headers = styled.header`
         position: absolute;
     }
 
+    @media (max-width: 1200px){
+        padding: 0 30px;
+    }
+
     ${({ theme }) => theme.tablet`
         height: 55px;
         top: -65px;

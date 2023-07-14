@@ -1,12 +1,10 @@
 'use client';
 
 import tabData from 'locales/ko/tab/tab.json';
-import { useLayoutEffect, useState , useCallback, useRef, useEffect } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import * as SubTabstyled from 'components/style/common/Tab.style';
-import { useDispatch , useSelector } from "react-redux";
-import { setCategoryName, setPageActive } from 'redux/store/store';
 import SCmode from 'svg/ico-tab01.svg';
 import SCkartbody from 'svg/ico-tab02.svg';
 import SCcharacter from 'svg/ico-tab03.svg';
@@ -16,89 +14,94 @@ import { useTranslation } from 'react-i18next';
 import { SwiperSlide } from 'swiper/react';
 
 const SubTab = () => {
-    let dispatch = useDispatch();
-    let category = useSelector(state => state.categoryName);
-    let route = useSelector(state => state.commonRoute);
-    let pageActiveState = useSelector(state => state.pageActive);
-    let [routePage, setRoutePage] = useState([]);
     let [routeDisabled, setRouteDisabled] = useState('');
+    let [pageActive, setPageActive] = useState({
+        mode: null,
+        character: null,
+    });
+    let [categoryName, setCategoryName] = useState({
+        imgNum: '',
+        txtNum: '',
+        tabDataState: [],
+    });
     const currentPathname = usePathname();
     const { t } = useTranslation();
 
-    const tabRoute = useCallback(() => {
-        return route.tabRoute.map(item => item.link);
-    }, [route.tabRoute]);
-      
-    const characterRoute = useCallback(() => {
-        return route.characterRoute.map(item => item.link);
-    }, [route.characterRoute]);
+    const modes = {
+        '/mode/speed': { mode: 0 },
+        '/mode/item': { mode: 1 },
+        '/mode/grandprix': { mode: 2 },
+        '/mode/timeattack': { mode: 3 },
+        '/mode/customgame': { mode: 4 },
+        '/mode/license': { mode: 5 },
+        '/mode/event': { mode: 6 },
+    }
 
-    const modeRoutes = ['speed','item','grandprix','timeattack','customgame','license','event'];
-    const characterRoutes = ['common','rare','advenced','epic','legend',]
+    const characters = {
+        '/character/common': { character: 0 },
+        '/character/rare': { character: 1 },
+        '/character/advenced': { character: 2 },
+        '/character/epic': { character: 3 },
+        '/character/legend': { character: 4 },
+    }
 
-    useLayoutEffect(() => {
-        if(currentPathname.startsWith('/mode/speed')){
-            dispatch(setPageActive({mode: 0}));
-        } else if(currentPathname.startsWith('/mode/item')){
-            dispatch(setPageActive({mode: 1}));
-        } else if(currentPathname.startsWith('/mode/grandprix')){
-            dispatch(setPageActive({mode: 2}));
-        } else if(currentPathname.startsWith('/mode/timeattack')){
-            dispatch(setPageActive({mode: 3}));
-        } else if(currentPathname.startsWith('/mode/customgame')){
-            dispatch(setPageActive({mode: 4}));
-        } else if(currentPathname.startsWith('/mode/license')){
-            dispatch(setPageActive({mode: 5}));
-        } else if(currentPathname.startsWith('/mode/event')){
-            dispatch(setPageActive({mode: 6}));
+    const categoryNames = {
+        '1': {
+            imgNum: '1',
+            txtNum: '1',
+            tabDataState: 'mode'
+        },
+        '2': {
+            imgNum: '2',
+            txtNum: null,
+            tabDataState: null
+        },
+        '3': {
+            imgNum: '3',
+            txtNum: '3',
+            tabDataState: 'character'
         }
-    },[currentPathname,dispatch]);
+    }
 
-    useLayoutEffect(() => {
-        if(currentPathname.startsWith('/character/common')){
-            dispatch(setPageActive({character: 0}));
-        } else if(currentPathname.startsWith('/character/rare')){
-            dispatch(setPageActive({character: 1}));
-        } else if(currentPathname.startsWith('/character/advenced')){
-            dispatch(setPageActive({character: 2}));
-        } else if(currentPathname.startsWith('/character/epic')){
-            dispatch(setPageActive({character: 3}));
-        } else if(currentPathname.startsWith('/character/legend')){
-            dispatch(setPageActive({character: 4}));
-        }
-    },[currentPathname,dispatch]);
+    const tabDataObjs = {
+        mode: {
+            routes: ['speed','item','grandprix','timeattack','customgame','license','event'],
+            activePage: pageActive.mode,
+            routePrefix: 'mode',
+            translationPrefix: 'mode.group',
+        },
+        character: {
+            routes: ['common','rare','advenced','epic','legend'],
+            activePage: pageActive.character,
+            routePrefix: 'character',
+            translationPrefix: 'character.group',
+        },
+    };
+    
+    const activeTabData = tabDataObjs[categoryName.tabDataState];
+
+    const handlePageActive = (page) => {
+        const pageActive = page || {};
+        setPageActive(pageActive);
+    }
+    
+    const handleCategoryName = (category) => {
+        const categoryName = category || {};
+        setCategoryName(categoryName);
+    }
 
     useLayoutEffect(() => {
         if(currentPathname.startsWith('/mode')){
-            dispatch(setCategoryName(
-                {
-                    imgNum: '1',
-                    txtNum: '1',
-                    tabDataState: 'mode'
-                }
-            ));
-            setRoutePage(tabRoute);
+            handlePageActive(modes[currentPathname]);
+            handleCategoryName(categoryNames['1']);
         } else if(currentPathname.startsWith('/karts')){
-            dispatch(setCategoryName(
-                {
-                    imgNum: '2',
-                    txtNum: null,
-                    tabDataState: null
-                }
-            ));
-            setRoutePage([]);
+            handleCategoryName(categoryNames['2']);
         } else if(currentPathname.startsWith('/character')){
-            dispatch(setCategoryName(
-                {
-                    imgNum: '3',
-                    txtNum: '3',
-                    tabDataState: 'character'
-                }
-            ));
-            setRoutePage(characterRoute);
+            handlePageActive(characters[currentPathname]);
+            handleCategoryName(categoryNames['3']);
             setRouteDisabled('disabled');
         }
-    },[currentPathname,dispatch,tabRoute,characterRoute]);
+    },[currentPathname]);
 
     const params = {
         watchOverflow: true,
@@ -127,7 +130,7 @@ const SubTab = () => {
     }
 
     const imgNumbersRender = () => {
-        return imgNumbers[category.imgNum];
+        return imgNumbers[categoryName.imgNum];
     }
 
     return ( 
@@ -135,28 +138,25 @@ const SubTab = () => {
             <SubTabstyled.TabWrapInner>
                 <SubTabstyled.TabInfo>
                     {imgNumbersRender()}
-                    <SubTabstyled.TabInfoTxt>{t(`info.group${category.imgNum}.name`)}</SubTabstyled.TabInfoTxt>
+                    <SubTabstyled.TabInfoTxt>{t(`info.group${categoryName.imgNum}.name`)}</SubTabstyled.TabInfoTxt>
                     <SCbgArrowRight width="22px" height="22px"/>
                 </SubTabstyled.TabInfo>
 
                 <SubTabstyled.TabListSwipe {...params} onSwiper={(swiper) => setSwiper(swiper)}>
-                    {category.tabDataState === 'mode' &&
-                        Object.keys(tabData.mode).map((item, index) => {
-                            return (
-                                <SwiperSlide key={index} onClick={() => handleChangeSlide(index)} className={pageActiveState.mode === index ? 'active' : null}>
-                                    <Link href={`/mode/[modeName]`} as={`/mode/${modeRoutes[index]}`}>{t(`mode.group${index+1}.name`)}</Link>
-                                </SwiperSlide>
-                        )})
-                    }
 
-                    {category.tabDataState === 'character' &&
-                        Object.keys(tabData.character).map((item, index) => {
-                            return (
-                                <SwiperSlide onClick={() => handleChangeSlide(index)} className={`${index > 0 && routeDisabled} ${pageActiveState.character === index ? 'active' : null}`} key={index}>
-                                    <Link href={`/character/[characterName]`} as={`/character/${characterRoutes[index]}`}>{t(`character.group${index+1}.name`)}</Link>
-                                </SwiperSlide>
-                        )})
-                    }
+                    {Object.keys(tabData[categoryName.tabDataState]).map((item, index) => {
+                        return(
+                            <SwiperSlide 
+                            key={index} 
+                            onClick={() => handleChangeSlide(index)}
+                            className={`${index > 0 && routeDisabled} ${activeTabData.activePage === index ? 'active' : ''}`}>
+                                
+                                <Link href={`/${activeTabData.routePrefix}/[${activeTabData.routePrefix}Name]`}>
+                                    {t(`${activeTabData.translationPrefix}${index + 1}.name`)}
+                                </Link>
+                            </SwiperSlide>
+                        )
+                    })}
                 </SubTabstyled.TabListSwipe>
             </SubTabstyled.TabWrapInner>
         </SubTabstyled.TabWrap>

@@ -5,7 +5,6 @@ import * as Skeletonstyled from 'components/style/common/Skeleton.style';
 import * as Substyled from 'components/style/common/Area.style';
 import * as Tipstyled from 'components/style/components/sub/Tip.style';
 import BtnTop from 'components/article/BtnTop';
-import SpeedVideo from 'components/video/SpeedVideo';
 import { useState } from 'react';
 import React from 'react'; 
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
@@ -18,6 +17,9 @@ import { useSelector } from 'react-redux';
 import { Min768 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
 import rankData from 'locales/ko/etc/rank';
+import Portal from 'components/layout/Portal';
+import dynamic from 'next/dynamic';
+import LoadingSpinner from 'components/article/LoadingSpinner';
 
 const SpeedContents = () => {
 
@@ -32,13 +34,17 @@ const SpeedContents = () => {
         lockScroll();
     }
 
+    const SpeedVideo = dynamic(() => import('components/video/SpeedVideo'),{
+        loading: () => <LoadingSpinner/>,
+        ssr: false
+    });
+
     return ( 
         <>
             <Min768>
                 <ClipBoardAlert active={clipBoardDisplay && 'active'}/>
             </Min768>
-            
-            
+
             <Substyled.Wrap>
                 <Substyled.Inner>
                     <div className="container">
@@ -150,7 +156,9 @@ const SpeedContents = () => {
              
             {
                 isExShow &&
-                <SpeedVideo setIsExShow={setIsExShow} openScroll={openScroll}/>
+                <Portal>
+                    <SpeedVideo setIsExShow={setIsExShow} openScroll={openScroll}/>
+                </Portal>
             }
         </>
      );

@@ -6,11 +6,11 @@ import ClipBoardAlert from 'components/article/ClipBoardAlert';
 import { useSelector } from 'react-redux';
 import BtnClipBoard from 'components/article/BtnClipBoard';
 import { useTranslation } from 'react-i18next';
+import inquiryData from "locales/ko/etc/inquiry.json";
 
 const InquiryContents = ({ themeMode }) => {
 
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
-    let inquiryData = useSelector(state => state.inquiry);
     const { t } = useTranslation();
 
     const infoList = ['mail','github','instagram'];

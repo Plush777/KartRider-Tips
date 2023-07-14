@@ -7,12 +7,14 @@ import useClipBoard from "hooks/useClipBoard";
 import { useDispatch, useSelector } from 'react-redux';
 import { setToggle } from "redux/store/store";
 import useTimeout from 'hooks/useTimeout';
+import { useTranslation } from 'react-i18next';
 
 const BtnClipBoard = () => {
 
     const dispatch = useDispatch();
     const [isShow] = useSticky();
     const [onCopy] = useClipBoard();
+    const { t } = useTranslation();
     let { clipBoard } = useSelector(state => state.toggle);
     
     const handleCilpBoard = () => {
@@ -34,7 +36,7 @@ const BtnClipBoard = () => {
                 <Stickystyled.BtnArea className="type02">
                     <Stickystyled.TopBtn onClick={handleCilpBoard}>
                         <SCclip width="20px" height="20px" fill="#000"/>
-                        <span className="hidden">현재 페이지 url 클립보드에 복사</span>
+                        <span className="hidden">{t(`clipBoard.txt`)}</span>
                     </Stickystyled.TopBtn>
                 </Stickystyled.BtnArea>
             }

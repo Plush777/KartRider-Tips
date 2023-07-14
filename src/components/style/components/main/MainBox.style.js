@@ -83,6 +83,7 @@ export const MainBoxItems = styled.li`
     }
 
     @media screen and (max-width: 1200px){
+        width: calc(100% / 2 - 8px);
         height: 270px;
     }
 

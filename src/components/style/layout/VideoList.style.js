@@ -38,7 +38,6 @@ export const Title = styled.h2`
 
     ${({ theme }) => theme.laptop`
         font-size: 1.75rem;
-        padding-left: 40px;
 
         &::before{
             width: 32px;
@@ -49,7 +48,6 @@ export const Title = styled.h2`
 
     ${({ theme }) => theme.tablet`
         font-size: 1.375rem;
-        padding-left: 33px;
 
         &::before{
             width: 26px;
