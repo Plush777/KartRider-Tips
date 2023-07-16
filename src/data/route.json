@@ -41,15 +41,15 @@
         },
         {
             "id": 3,
-            "link": "/mode/grandPrize"
+            "link": "/mode/grandprix"
         },
         {
             "id": 4,
-            "link": "/mode/timeAttack"
+            "link": "/mode/timeattack"
         },
         {
             "id": 5,
-            "link": "/mode/customGame"
+            "link": "/mode/customgame"
         },
         {
             "id": 6,
@@ -57,7 +57,7 @@
         },
         {
             "id": 7,
-            "link": "/mode/eventMode"
+            "link": "/mode/event"
         }
     ],
 

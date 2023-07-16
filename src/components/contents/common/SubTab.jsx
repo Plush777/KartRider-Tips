@@ -12,8 +12,34 @@ import SCtrack from 'svg/ico-tab04.svg';
 import SCbgArrowRight from 'svg/ico-arrow-right.svg';
 import { useTranslation } from 'react-i18next';
 import { SwiperSlide } from 'swiper/react';
+import routes from 'data/route.json';
 
 const SubTab = () => {
+    const tabDataObjs = {
+        mode: {
+            translationPrefix: 'mode.group'
+        },
+        character: {
+            translationPrefix: 'character.group'
+        },
+        numbers: {
+            '1': {
+                imgNum: '1',
+                txtNum: '1',
+                name: 'mode'
+            },
+            '2': {
+                imgNum: '2',
+                txtNum: null,
+            },
+            '3': {
+                imgNum: '3',
+                txtNum: '3',
+                name: 'character'
+            }
+        }
+    };
+
     let [routeDisabled, setRouteDisabled] = useState('');
     let [pageActive, setPageActive] = useState({
         mode: null,
@@ -22,7 +48,11 @@ const SubTab = () => {
     let [categoryName, setCategoryName] = useState({
         imgNum: '',
         txtNum: '',
-        tabDataState: [],
+        name: ''
+    });
+    let [categoryData, setCategoryData] = useState({
+        data: '',
+        route: ''
     });
     const currentPathname = usePathname();
     const { t } = useTranslation();
@@ -45,65 +75,31 @@ const SubTab = () => {
         '/character/legend': { character: 4 },
     }
 
-    const categoryNames = {
-        '1': {
-            imgNum: '1',
-            txtNum: '1',
-            tabDataState: 'mode'
-        },
-        '2': {
-            imgNum: '2',
-            txtNum: null,
-            tabDataState: null
-        },
-        '3': {
-            imgNum: '3',
-            txtNum: '3',
-            tabDataState: 'character'
-        }
-    }
-
-    const tabDataObjs = {
-        mode: {
-            routes: ['speed','item','grandprix','timeattack','customgame','license','event'],
-            activePage: pageActive.mode,
-            routePrefix: 'mode',
-            translationPrefix: 'mode.group',
-        },
-        character: {
-            routes: ['common','rare','advenced','epic','legend'],
-            activePage: pageActive.character,
-            routePrefix: 'character',
-            translationPrefix: 'character.group',
-        },
-    };
-    
-    const activeTabData = tabDataObjs[categoryName.tabDataState];
-
     const handlePageActive = (page) => {
         const pageActive = page || {};
         setPageActive(pageActive);
     }
-    
-    const handleCategoryName = (category) => {
-        const categoryName = category || {};
-        setCategoryName(categoryName);
-    }
 
+    const handleCategoryName = (category) => {
+        setCategoryName(category);
+    }
+    
     useLayoutEffect(() => {
         if(currentPathname.startsWith('/mode')){
             handlePageActive(modes[currentPathname]);
-            handleCategoryName(categoryNames['1']);
+            handleCategoryName(tabDataObjs.numbers['1']);
+            setCategoryData({data: tabData.mode, route: routes.tabRoute});
         } else if(currentPathname.startsWith('/karts')){
-            handleCategoryName(categoryNames['2']);
+            handleCategoryName(tabDataObjs.numbers['2']);
         } else if(currentPathname.startsWith('/character')){
             handlePageActive(characters[currentPathname]);
-            handleCategoryName(categoryNames['3']);
+            handleCategoryName(tabDataObjs.numbers['3']);
+            setCategoryData({data: tabData.character, route: routes.characterRoute});
             setRouteDisabled('disabled');
         }
     },[currentPathname]);
 
-    const params = {
+    const swiperParams = {
         watchOverflow: true,
         slidesPerView: "auto",
         freeMode: true
@@ -133,6 +129,10 @@ const SubTab = () => {
         return imgNumbers[categoryName.imgNum];
     }
 
+    const routeList = Object.values(categoryData.route).map((item, index) => {
+        return item.link;
+    });
+
     return ( 
         <SubTabstyled.TabWrap> 
             <SubTabstyled.TabWrapInner>
@@ -142,17 +142,17 @@ const SubTab = () => {
                     <SCbgArrowRight width="22px" height="22px"/>
                 </SubTabstyled.TabInfo>
 
-                <SubTabstyled.TabListSwipe {...params} onSwiper={(swiper) => setSwiper(swiper)}>
+                <SubTabstyled.TabListSwipe {...swiperParams} onSwiper={(swiper) => setSwiper(swiper)}>
 
-                    {Object.keys(tabData[categoryName.tabDataState]).map((item, index) => {
+                    {Object.keys(categoryData.data).map((item, index) => {
                         return(
                             <SwiperSlide 
                             key={index} 
                             onClick={() => handleChangeSlide(index)}
-                            className={`${index > 0 && routeDisabled} ${activeTabData.activePage === index ? 'active' : ''}`}>
+                            className={`${index > 0 && routeDisabled} ${pageActive[categoryName.name] === index ? 'active' : ''}`}>
                                 
-                                <Link href={`/${activeTabData.routePrefix}/[${activeTabData.routePrefix}Name]`}>
-                                    {t(`${activeTabData.translationPrefix}${index + 1}.name`)}
+                                <Link href={routeList[index]}>
+                                    {t(`${tabDataObjs[categoryName.name].translationPrefix}${index + 1}.name`)}
                                 </Link>
                             </SwiperSlide>
                         )
