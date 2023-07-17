@@ -19,6 +19,7 @@ import { Min768 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import Image from 'next/image';
+import useScrollPosition from 'hooks/useScrollPosition';
 
 const KartbodyCommonContents = ({ kartData , params }) => {
 
@@ -29,6 +30,7 @@ const KartbodyCommonContents = ({ kartData , params }) => {
     const [loading, handleLoad] = useImageLoading();
     const listId = params.listId;
     const [activeIndex, setActiveIndex] = useState(null);
+    const { divRef, handleScroll } = useScrollPosition();
 
     const handleScrollState = () => {
         dispatch(setRouterScroll(false));
@@ -48,7 +50,65 @@ const KartbodyCommonContents = ({ kartData , params }) => {
         16: 'nexon',
         17: 'ios',
         18: 'steam',
+        26: 'porsche',
+        31: 'bt21',
+        32: 'bt21',
+        46: 'ps',
+        47: 'xbox',
+        48: 'porsche',
+        51: 'porsche'
     };
+
+    const sizeMap = {
+        57: {
+            width: '270',
+            height: '184'
+        },
+        58: {
+            width: '230',
+            height: '206'
+        },
+        59: {
+            width: '260',
+            height: '146'
+        },
+        60: {
+            width: '250',
+            height: '149'
+        },
+        73: {
+            width: '320',
+            height: '203'
+        }
+    }
+
+    /* 
+        이미지 사이즈
+        1 ~ 56 : 270 * 251
+        57 ~ 60 : custom
+        61 ~ : 270 * 251
+    */
+    const widthCondition = (width) => {
+        if (listId >= 1 && listId <= 56) {
+            return width;
+        } else if (listId >= 61) {
+            return width;
+        } else {
+            return '';
+        }
+    }
+
+    const heightCondition = (height) => {
+        if (listId >= 1 && listId <= 56) {
+            return height;
+        } else if (listId >= 61) {
+            return height;
+        } else {
+            return '';
+        }
+    }
+
+    const listIdCondition = listId >= 57 && listId <= 60
 
     return ( 
         <>
@@ -66,7 +126,7 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                     
                     <Tabstyled.TabWrap mt="20px">
                         <Tabstyled.TabInner>
-                            <Tabstyled.TabList>
+                            <Tabstyled.TabList ref={divRef} onScroll={handleScroll}>
                                 {Object.keys(kartData.kartName).map((items,index) => {
                                     const itemId = kartData.kartName[items].id;
                                     const isActive = activeIndex === index ;
@@ -96,7 +156,10 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                         <Select/>
                         
                         <Previewstyled.Wrap>
-                            <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt} width={300} height={280}/>
+                            <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt}
+                            width={listIdCondition ? sizeMap[listId].width: widthCondition('270')} 
+                            height={listIdCondition ? sizeMap[listId].height: heightCondition('251')}
+                            />
                         </Previewstyled.Wrap>
                         
                     </M768>
@@ -123,6 +186,12 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                                                 <Introstyled.RowTitle>{t(`kartDescDepth.group${listId}.title3`)}</Introstyled.RowTitle>
                                                 <Introstyled.RowDesc as="dd">{parse(t(`kartDescDepth.group${listId}.desc3`))}</Introstyled.RowDesc>
                                             </Introstyled.Row>
+                                            {kartDescDepth[listId - 1].title4 &&
+                                                 <Introstyled.Row>
+                                                    <Introstyled.RowTitle>{t(`kartDescDepth.group${listId}.title4`)}</Introstyled.RowTitle>
+                                                    <Introstyled.RowDesc as="dd">{parse(t(`kartDescDepth.group${listId}.type`))}</Introstyled.RowDesc>
+                                                </Introstyled.Row>
+                                            }
                                         </Introstyled.RowList>
                                     </div>
                                 </Tabstyled.TabContent>
@@ -130,7 +199,10 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                                 <Tabstyled.TabContent>
                                    
                                     <Introstyled.PreviewArea>
-                                        <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt} width={300} height={279} />
+                                        <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt} 
+                                        width={listIdCondition ? sizeMap[listId].width: widthCondition('270')} 
+                                        height={listIdCondition ? sizeMap[listId].height: heightCondition('251')} 
+                                        />
                                     </Introstyled.PreviewArea>
                                 </Tabstyled.TabContent>
                             </Tabstyled.TabContnetBox>

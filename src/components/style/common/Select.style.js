@@ -70,4 +70,9 @@ export const OptionTxt = styled.span`
     font-family: 'nexonLv1Gothic';
     color: ${props => props.type01 ? 'var(--mobileSelectText)' : '#333'};
     font-size: ${props => props.type01 ? '0.875rem' : '0.75rem'};
+
+    >a{
+        width: 100%;
+        display: block;
+    }
 `

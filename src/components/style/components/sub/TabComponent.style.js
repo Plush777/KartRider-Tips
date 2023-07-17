@@ -20,6 +20,12 @@ export const TabList = styled.ul`
     ${mixins.aic}
     gap: 10px;
     flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 280px;
+
+    &::-webkit-scrollbar-track{
+        display: none;
+    }
 `
 
 export const TabItemImg = styled.img`
@@ -27,6 +33,17 @@ export const TabItemImg = styled.img`
     left: 10px;
     width: 32px !important;
     height: 32px !important;
+
+    &.porsche{
+        width: 50px !important;
+        height: 30px !important;
+        object-position: -14px 0;
+    }
+    
+    &.bt21{
+        width: 38px !important;
+        height: 17px !important;
+    }
 `
 
 export const TabItem = styled.li`
@@ -39,6 +56,21 @@ export const TabItem = styled.li`
         ${TabItemImg}{
             width: 27px !important;
             height: 27px !important;
+        }
+    }
+
+    &:nth-child(26){
+        >a{
+            padding: 0 62px;
+            text-align: center;
+
+            ${({ theme }) => theme.laptopL`
+                padding: 0 22px;
+            `}
+
+            ${({ theme }) => theme.laptop`
+                padding: 0 42px;
+            `}
         }
     }
 
@@ -75,6 +107,10 @@ export const TabItem = styled.li`
             &[data-name="steam"]::before{background-size: 28px;}
         }
     `};
+
+    @media (max-width: 900px){
+        width: calc(100% / 3 - 10px);
+    }
 `
 
 export const TabContentWrap = styled.div`
