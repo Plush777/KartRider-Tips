@@ -51,5 +51,48 @@
             "id": 5,
             "name": "레전드"
         }
+    },
+
+    "track": {
+        "group1" :{
+            "id": 1,
+            "name": "빌리지"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "사막"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "포레스트"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "아이스"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "광산"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "월드"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "팩토리"
+        },
+        "group8" :{
+            "id": 8,
+            "name": "WKC"
+        },
+        "group9" :{
+            "id": 9,
+            "name": "공동묘지"
+        },
+        "group10" :{
+            "id": 10,
+            "name": "문힐시티"
+        }
     }
 }

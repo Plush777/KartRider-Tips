@@ -1,0 +1,44 @@
+{
+    "trackFactory": {
+        "group1": {
+            "id": 1,
+            "name": "팩토리 모험의 시작",
+            "date": "공개일 : 2023년 3월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group2": {
+            "id": 2,
+            "name": "팩토리 브로디의 심술",
+            "date": "공개일 : 2023년 3월 9일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        },
+        "group3": {
+            "id": 3,
+            "name": "팩토리 거대 톱니의 위협",
+            "date": "공개일 : 2023년 3월 9일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        },
+        "group4": {
+            "id": 4,
+            "name": "팩토리 미완성 5구역",
+            "date": "공개일 : 2023년 3월 9일",
+            "lap": "랩 : 1바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "10"
+        }
+    }
+}

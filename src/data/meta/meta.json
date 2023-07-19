@@ -34,5 +34,35 @@
     },
     "legend": {
         "name": "전설"
+    },
+    "village": {
+        "name": "빌리지"
+    },
+    "desert": {
+        "name": "사막"
+    },
+    "forest": {
+        "name": "포레스트"
+    },
+    "ice": {
+        "name": "아이스"
+    },
+    "mine": {
+        "name": "광산"
+    },
+    "world": {
+        "name": "월드"
+    },
+    "factory": {
+        "name": "팩토리"
+    },
+    "wkc": {
+        "name": "WKC"
+    },
+    "graveyard": {
+        "name": "공동묘지"
+    },
+    "moonhill": {
+        "name": "문힐시티"
     }
 }

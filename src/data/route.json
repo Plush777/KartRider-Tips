@@ -18,7 +18,7 @@
         },
         {
             "id": 5,
-            "link": "/track"
+            "link": "/track/village"
         },
         {
             "id": 6,
@@ -81,6 +81,49 @@
         {
             "id": 5,
             "link": "/character/legend"
+        }
+    ],
+
+    "trackRoute": [
+        {
+            "id": 1,
+            "link": "/track/village"
+        },
+        {
+            "id": 2,
+            "link": "/track/desert"
+        },
+        {
+            "id": 3,
+            "link": "/track/forest"
+        },
+        {
+            "id": 4,
+            "link": "/track/ice"
+        },
+        {
+            "id": 5,
+            "link": "/track/mine"
+        },
+        {
+            "id": 6,
+            "link": "/track/world"
+        },
+        {
+            "id": 7,
+            "link": "/track/factory"
+        },
+        {
+            "id": 8,
+            "link": "/track/wkc"
+        },
+        {
+            "id": 9,
+            "link": "/track/graveyard"
+        },
+        {
+            "id": 10,
+            "link": "/track/moonhill"
         }
     ],
 

@@ -1,0 +1,74 @@
+{
+    "trackVillage": {
+        "group1": {
+            "id": 1,
+            "name": "빌리지 운하",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group2": {
+            "id": 2,
+            "name": "빌리지 산들바람 공원",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group3": {
+            "id": 3,
+            "name": "빌리지 시계탑",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "4"
+        },
+        "group4": {
+            "id": 4,
+            "name": "빌리지 시청광장",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "4"
+        },
+        "group5": {
+            "id": 5,
+            "name": "빌리지 고가의 질주",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "speed",
+            "difficulty": "4"
+        },
+        "group6": {
+            "id": 6,
+            "name": "빌리지 손가락",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "speed",
+            "difficulty": "4"
+        },
+        "group7": {
+            "id": 7,
+            "name": "빌리지 붐힐터널",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 1바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "10"
+        }
+    }
+}

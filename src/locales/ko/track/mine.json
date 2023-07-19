@@ -1,0 +1,64 @@
+{
+    "trackMine": {
+        "group1": {
+            "id": 1,
+            "name": "광산 보석 채굴장",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        },
+        "group2": {
+            "id": 2,
+            "name": "광산 뽀글뽀글 용암동굴",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        },
+        "group3": {
+            "id": 3,
+            "name": "광산 아슬아슬 궤도전차",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group4": {
+            "id": 4,
+            "name": "광산 골드러쉬",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group5": {
+            "id": 5,
+            "name": "광산 3개의 지름길",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "7.8"
+        },
+        "group6": {
+            "id": 6,
+            "name": "광산 꼬불꼬불 다운힐",
+            "date": "공개일 : 2022년 9월 1일",
+            "lap": "랩 : 1바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "10"
+        }
+    }
+}

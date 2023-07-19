@@ -51,6 +51,16 @@ import enLicense from 'locales/en/mode/singleMode/license/contents';
 import koEvent from 'locales/ko/mode/eventMode/contents';
 import enEvent from 'locales/en/mode/eventMode/contents';
 import koLanding from 'locales/ko/landing/contents';
+import koVillage from 'locales/ko/track/village';
+import koDesert from 'locales/ko/track/desert';
+import koIce from 'locales/ko/track/ice';
+import koForest from 'locales/ko/track/forest';
+import koMine from 'locales/ko/track/mine';
+import koWorld from 'locales/ko/track/world';
+import koFactory from 'locales/ko/track/factory';
+import koWkc from 'locales/ko/track/wkc';
+import koGraveyard from 'locales/ko/track/graveyard';
+import koMoonhill from 'locales/ko/track/moonhill';
 
 /* ja */
 import jaSlide from 'locales/ja/main/slide';
@@ -136,7 +146,17 @@ const resources = {
             ...koCustomGame,
             ...koLicense,
             ...koEvent,
-            ...koLanding
+            ...koLanding,
+            ...koVillage,
+            ...koDesert,
+            ...koIce,
+            ...koForest,
+            ...koMine,
+            ...koWorld,
+            ...koFactory,
+            ...koWkc,
+            ...koGraveyard,
+            ...koMoonhill
         }
     },
     ja: {

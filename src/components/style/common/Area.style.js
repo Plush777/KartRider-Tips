@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import mixins from 'components/style/mixins';
+import { ItemBox } from "../components/sub/Item.style";
 
 export const Title = styled.h3`
     font-size: ${({ theme }) => theme.fontSizes.f42};
@@ -457,6 +458,10 @@ export const ListItem = styled.li`
    ${mixins.aic};
    column-gap: 25px;
    width: calc(100% / 2);
+
+    ${ItemBox}{
+        flex: 1;
+    }
 
     ${({ theme }) => theme.laptopL`
         width: calc(100% / 2 - 60px);

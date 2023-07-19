@@ -1,0 +1,64 @@
+{
+    "trackIce": {
+        "group1": {
+            "id": 1,
+            "name": "아이스 상어의 무덤",
+            "date": "공개일 : 2022년 9월 1일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group2": {
+            "id": 2,
+            "name": "아이스 투명동굴",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group3": {
+            "id": 3,
+            "name": "아이스 하프파이프",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "4"
+        },
+        "group4": {
+            "id": 4,
+            "name": "아이스 360 타워",
+            "date": "공개일 : 2023년 7월 13일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group5": {
+            "id": 5,
+            "name": "아이스 익스트림 경기장",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "7.8"
+        },
+        "group6": {
+            "id": 6,
+            "name": "아이스 설산 다운힐",
+            "date": "공개일 : 2022년 9월 1일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "10"
+        }
+    }
+}

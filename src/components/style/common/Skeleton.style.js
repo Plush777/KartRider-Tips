@@ -37,6 +37,7 @@ export const Wrap = styled.div`
     &.type02{
         width: 57px;
         height: 57px;
+        max-width: none;
 
         ${({ theme }) => theme.laptop`
             width: 50px;
@@ -58,6 +59,13 @@ export const Wrap = styled.div`
         border-radius: 50%;
         z-index: 10;
         box-shadow: none;
+    }
+
+    &.absolute2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 
     &.type03{

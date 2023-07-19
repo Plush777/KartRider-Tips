@@ -1,0 +1,64 @@
+{
+    "trackDesert": {
+        "group1": {
+            "id": 1,
+            "name": "사막 버려진 오아시스",
+            "date": "공개일 : 2022년 9월 1일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group2": {
+            "id": 2,
+            "name": "사막 베거이 시장",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group3": {
+            "id": 3,
+            "name": "사막 스핑크스 수수께끼",
+            "date": "공개일 : 2021년 12월 9일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "4"
+        },
+        "group4": {
+            "id": 4,
+            "name": "사막 피라미드 탐험",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        },
+        "group5": {
+            "id": 5,
+            "name": "사막 오래된 송수관",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "7.8"
+        },
+        "group6": {
+            "id": 6,
+            "name": "사막 빙글빙글 공사장",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "10"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "trackWkc": {
+        "group1": {
+            "id": 1,
+            "name": "WKC 싱가포르 서킷",
+            "date": "공개일 : 2023년 5월 11일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group2": {
+            "id": 2,
+            "name": "WKC 코리아 서킷",
+            "date": "공개일 : 2023년 5월 11일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group3": {
+            "id": 3,
+            "name": "WKC 일본 서킷",
+            "date": "공개일 : 2023년 5월 11일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "5.9"
+        },
+        "group4": {
+            "id": 4,
+            "name": "WKC 브라질 서킷",
+            "date": "공개일 : 2023년 5월 11일",
+            "lap": "랩 : 2바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "speed",
+            "difficulty": "7.8"
+        }
+    }
+}

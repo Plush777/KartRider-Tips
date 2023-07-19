@@ -47,7 +47,7 @@ export const metadata = {
         locale: 'ko_KR',
         images: [
             {
-                url: '/og-season2.png',
+                url: '/og-season3.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'KartRider Tips',
@@ -59,7 +59,7 @@ export const metadata = {
         card: 'summary_large_image',
         title: 'KartRider Tips',
         description: '카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.',
-        images: ['/og-season2.png']
+        images: ['/og-season3.jpg']
     },
 }
 

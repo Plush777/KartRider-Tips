@@ -1,0 +1,34 @@
+{
+    "trackGraveyard": {
+        "group1": {
+            "id": 1,
+            "name": "공동묘지 유령습격",
+            "date": "공개일 : 2019년 12월 6일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "2"
+        },
+        "group2": {
+            "id": 2,
+            "name": "공동묘지 공포의 외길",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "all",
+            "mode": "all",
+            "difficulty": "4"
+        },
+        "group3": {
+            "id": 3,
+            "name": "공동묘지 유령의 계곡",
+            "date": "공개일 : 2020년 6월 4일",
+            "lap": "랩 : 3바퀴",
+            "txt": "주행 영상보기",
+            "license": "b1",
+            "mode": "all",
+            "difficulty": "5.9"
+        }
+    }
+}

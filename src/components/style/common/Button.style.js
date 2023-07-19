@@ -49,6 +49,44 @@ export const White = styled.span`
     font-weight: 500;
     background-color: #fff;
 
+    &.sm{
+        display: inline-flex;
+        min-width: 126px;
+        height: 36px;
+        font-size: ${({ theme }) => theme.fontSizes.f14};
+        padding: 0 12px;
+        width: 100%;
+        max-width: 126px;
+
+        &::after{
+            width: 18px;
+            background-size: 20px;
+            animation: none;
+        }
+
+        ${({ theme }) => theme.tablet`
+            min-width: 110px;
+            padding: 0 8px;
+
+            &::after{
+                width: 16px;
+                background-size: 18px;
+                margin-left: 5px;
+            }
+        `}
+
+        ${({ theme }) => theme.mobile`
+            max-width: 110px;
+            font-size: ${({ theme }) => theme.fontSizes.f12};
+
+            &::after{
+                width: 16px;
+                background-size: 18px;
+                margin-left: 5px;
+            }
+        `}
+    }
+
     @keyframes xMove {
         0%{
             transform: translateX(0px);

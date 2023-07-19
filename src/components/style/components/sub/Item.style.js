@@ -54,14 +54,14 @@ export const ItemImg = styled.img`
     object-fit: none;
 
     ${({ theme }) => theme.laptop`
-        width: 50px;
-        height: 50px;
+        width: 50px !important;
+        height: 50px !important;
         object-fit: contain;
     `};
 
     ${({ theme }) => theme.mobile`
-        width: 38px;
-        height: 38px;
+        width: 38px !important;
+        height: 38px !important;
     `};
 `
 

@@ -22,6 +22,9 @@ const SubTab = () => {
         character: {
             translationPrefix: 'character.group'
         },
+        track: {
+            translationPrefix: 'track.group'
+        },
         numbers: {
             '1': {
                 imgNum: '1',
@@ -36,7 +39,12 @@ const SubTab = () => {
                 imgNum: '3',
                 txtNum: '3',
                 name: 'character'
-            }
+            },
+            '4': {
+                imgNum: '4',
+                txtNum: '4',
+                name: 'track'
+            },
         }
     };
 
@@ -75,6 +83,19 @@ const SubTab = () => {
         '/character/legend': { character: 4 },
     }
 
+    const tracks = {
+        '/track/village': { track: 0 },
+        '/track/desert': { track: 1 },
+        '/track/forest': { track: 2 },
+        '/track/ice': { track: 3 },
+        '/track/mine': { track: 4 },
+        '/track/world': { track: 5 },
+        '/track/factory': { track: 6 },
+        '/track/wkc': { track: 7 },
+        '/track/graveyard': { track: 8 },
+        '/track/moonhill': { track: 9 },
+    }
+
     const handlePageActive = (page) => {
         const pageActive = page || {};
         setPageActive(pageActive);
@@ -96,6 +117,10 @@ const SubTab = () => {
             handleCategoryName(tabDataObjs.numbers['3']);
             setCategoryData({data: tabData.character, route: routes.characterRoute});
             setRouteDisabled('disabled');
+        } else if(currentPathname.startsWith('/track')){
+            handlePageActive(tracks[currentPathname]);
+            handleCategoryName(tabDataObjs.numbers['4']);
+            setCategoryData({data: tabData.track, route: routes.trackRoute});
         }
     },[currentPathname]);
 
