@@ -25,17 +25,19 @@ const SubVisual = () => {
         } else if(pathname.startsWith('/track')){
             setVisualTitle(t('category.group4.name'));
             setVisualName('track');
+        } else if(pathname.startsWith('/glossary')){
+                setVisualTitle(t('category.group5.name'));
+                setVisualName('glossary');
         } else if(pathname.startsWith('/purpose')){
             setVisualTitle(t('category.group7.name'));
             setVisualName('');
         } else if(pathname.startsWith('/credit')){
             setVisualTitle(t('category.group8.name'));
             setVisualName('');
-        }  else if(pathname.startsWith('/inquiry')){
+        } else if(pathname.startsWith('/inquiry')){
             setVisualTitle(t('category.group9.name'));
             setVisualName('');
         } 
-
         
     }, [pathname,t]);
 

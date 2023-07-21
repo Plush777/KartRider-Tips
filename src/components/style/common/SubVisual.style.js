@@ -18,7 +18,7 @@ export const SubViusalInner = styled.div`
     background-image: ${props => `url('/images/bg/bg-sub-visual-${props.visualName}.webp')`};
     ${mixins.bgOption}
     background-position: center 65px;
-    background-size: 1920px 250px;
+    background-size: 1940px 250px;
     background-attachment: fixed;
     padding: 0 16px;
 

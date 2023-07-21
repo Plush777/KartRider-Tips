@@ -5,6 +5,7 @@ export const BtnArea = styled.div`
     ${mixins.jcc};
     width: 100%;
     margin-top: 25px;
+    column-gap: ${props => props.cg};
 `
 
 export const Btn = styled.button.attrs({ type: 'button' })`

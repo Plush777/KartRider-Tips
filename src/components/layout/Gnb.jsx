@@ -35,6 +35,10 @@ const Gnb = () => {
             dispatch(setGnbActive(3));
         } else if (pathname.startsWith('/track')){
             dispatch(setGnbActive(4));
+        } else if (pathname.startsWith('/glossary')){
+            dispatch(setGnbActive(5));
+        } else if(pathname.startsWith('/technology')){
+            dispatch(setGnbActive(6));
         } else if(pathname.startsWith('/')){
             dispatch(setGnbActive(null));
         }
@@ -48,7 +52,7 @@ const Gnb = () => {
                     const itemId = gnbData.menus[item].id;
 
                     return(
-                        itemId !== 3 && (<Headerstyled.GnbItem className={`${gnbActiveState === index ? 'active' : ''}${itemId > 5 ? 'disabled' : ''}`} 
+                        itemId !== 3 && (<Headerstyled.GnbItem className={`${gnbActiveState === index ? 'active' : ''}${itemId > 6 ? 'disabled' : ''}`} 
                         key={index} onClick={e => handleClick(e, index)}>
                             <Link href={routeFilter[index]} title={t(`menus.group${index+1}.name`)}>{t(`menus.group${index+1}.name`)}</Link>
                         </Headerstyled.GnbItem>)

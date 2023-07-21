@@ -49,6 +49,7 @@ export const Top = styled.div`
     @media (max-width: 1330px){
         >img{
             width: 100%;
+            object-fit: fill;
         }
     }
 

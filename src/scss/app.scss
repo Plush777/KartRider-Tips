@@ -350,6 +350,107 @@ body {
     background: #d9d9d9;
 }
 
+.htmlFlipBook{
+    margin-right: 410px;
+    transition: margin-right,margin-left .3s ease-in-out;
+
+    &.viewer{
+        margin: 100px auto;
+
+        @media (max-width: 768px){
+            margin-left: 0;
+
+            .stf__page{
+                top: 65.5px !important;
+                
+                &.front{
+                    display: block !important;
+                    box-shadow: none;
+                    padding: 10px 110px 0 110px;
+                    transform-origin: left !important;
+                    backface-visibility: hidden !important;
+                    transition: 1s ease-in-out !important;
+
+                    &.active{
+                        transform: rotateY(-180deg) !important;
+                    }
+                }
+
+                &.left,&.right{
+                    box-shadow: none;
+                    padding: 10px 110px 0 110px;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 410px;
+                        height: 500px;
+                        box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.253);
+                    }
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 410px;
+                    height: 500px;
+                    box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.253);
+                }
+            }
+        }
+    }
+
+    &.active{
+        margin-right: 0;
+    }
+
+    @media (max-width: 1300px){
+        margin-right: 0;
+        margin-left: -390px;
+
+        &.active{
+            margin-left: 0;
+        }
+    }
+
+    .stf__{
+        &parent{
+            position: relative;
+            margin: 0 auto;
+        }
+
+        &page{
+            &.front{
+                box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.253);
+                background: url('/images/common/img-book-front.jpg') no-repeat center;
+                background-size: 410px 500px;
+            }
+
+            &.back{
+                background: url('/images/common/img-book-back.webp') no-repeat center;
+                background-size: auto 500px;
+            }
+
+            &.left,&.right{
+                background: url('/images/common/img-paper.webp') no-repeat center;
+            }
+
+            &.left{
+                box-shadow: 1px 10px 10px rgba(0,0,0,0.253);
+            }
+
+            &.right{
+                box-shadow: -1px 10px 10px rgba(0,0,0,0.253);
+            }
+        }
+    }
+}
 
 @media (max-width: 1440px){
     .image-swiper-button{

@@ -82,5 +82,11 @@
 
     "trackTitle": {
         "txt": "트랙"
+    },
+
+    "book": {
+        "prev": "이전으로",
+        "next": "다음으로",
+        "unfold": "펼치기"
     }
 }
