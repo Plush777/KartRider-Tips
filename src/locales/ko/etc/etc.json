@@ -88,5 +88,10 @@
         "prev": "이전으로",
         "next": "다음으로",
         "unfold": "펼치기"
+    },
+
+    "glossaryTitle": {
+        "detail1": "스피드전",
+        "detail2": "아이템전"
     }
 }

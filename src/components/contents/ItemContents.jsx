@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 import { Min768 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
 
-const ItemContents = ({ itemContentsData }) => {
+const ItemContents = ({ itemContentsData, itemTermsData }) => {
     
     const [loading, handleLoad] = useImageLoading();
     const [isReady, setReady] = useState(false);
@@ -113,10 +113,10 @@ const ItemContents = ({ itemContentsData }) => {
                         <Substyled.GroupContainer>
                             <Substyled.SmallTitle>{t(`item.depth1.group6.title`)}</Substyled.SmallTitle>
                             <ul className="groupList">
-                                {Object.keys(itemContentsData.itemTerm).map((items,index) => {
+                                {Object.keys(itemTermsData.glossary.itemTerm).map((items,index) => {
                                     return(
                                         <Substyled.GroupItem key={index} bullet="''" mt="20px">
-                                            <Substyled.SmallDesc>{parse(t(`itemTerm.group${index+1}.detail`))}</Substyled.SmallDesc>
+                                            <Substyled.SmallDesc>{parse(t(`glossary.itemTerm.group${index+1}.detail`))}</Substyled.SmallDesc>
                                         </Substyled.GroupItem>
                                     )})
                                 }

@@ -1,6 +1,20 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
+const Min1300 = ({ children }) => {
+    const is1300 = useMediaQuery({ 
+        query: "(min-width: 1300px)" 
+    });
+    return <React.Fragment>{is1300 && children}</React.Fragment>
+}
+
+const M1300 = ({ children }) => {
+    const is1300 = useMediaQuery({ 
+        query: "(max-width: 1300px)" 
+    });
+    return <React.Fragment>{is1300 && children}</React.Fragment>
+}
+
 const M1024 = ({ children }) => {
     const is1024 = useMediaQuery({ 
         query: "(max-width: 1024px)" 
@@ -36,4 +50,4 @@ const M375 = ({ children }) => {
     return <React.Fragment>{is375 && children}</React.Fragment>
 }
 
-export {M1024, M768, Min768, M500, M375}
+export {Min1300, M1300, M1024, M768, Min768, M500, M375}

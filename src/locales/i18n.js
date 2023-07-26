@@ -61,6 +61,7 @@ import koFactory from 'locales/ko/track/factory';
 import koWkc from 'locales/ko/track/wkc';
 import koGraveyard from 'locales/ko/track/graveyard';
 import koMoonhill from 'locales/ko/track/moonhill';
+import koGlossary from 'locales/ko/glossary/contents';
 
 /* ja */
 import jaSlide from 'locales/ja/main/slide';
@@ -156,7 +157,8 @@ const resources = {
             ...koFactory,
             ...koWkc,
             ...koGraveyard,
-            ...koMoonhill
+            ...koMoonhill,
+            ...koGlossary
         }
     },
     ja: {

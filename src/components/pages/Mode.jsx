@@ -23,6 +23,7 @@ import itemContentsData from 'locales/ko/mode/itemMode/contents';
 import grandPrizeData from 'locales/ko/mode/rankMode/contents';
 import licenseData from 'locales/ko/mode/singleMode/license/contents';
 import eventData from 'locales/ko/mode/eventMode/contents';
+import itemTermsData from "locales/ko/glossary/contents";
 
 /* params.modeName : 현재 경로 출력 */
 
@@ -37,7 +38,7 @@ export default function Mode({ params, searchParams }) {
                 <SubTab params={params}/>
                 
                 {params.modeName === 'speed' && <SpeedContents/>}
-                {params.modeName === 'item' && <ItemContents itemContentsData={itemContentsData}/>}
+                {params.modeName === 'item' && <ItemContents itemContentsData={itemContentsData} itemTermsData={itemTermsData}/>}
                 {params.modeName === 'grandprix' && <GrandPrizeContents grandPrizeData={grandPrizeData}/>}
                 {params.modeName === 'timeattack' && <TimeAttackContents/>}
                 {params.modeName === 'customgame' && <CustomGameContents/>}
