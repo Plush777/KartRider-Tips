@@ -89,7 +89,7 @@ export const Item = styled.li`
     ${mixins.aic};
     height: 68px;
     font-size: ${({ theme }) => theme.fontSizes.f16};
-    ${mixins.font('nexonLv1Gothic', '#000')};
+    ${mixins.font('nexonLv1Gothic', 'var(--text)')};
     transition: .3s ease-in-out;
     padding: 0 16px;
 

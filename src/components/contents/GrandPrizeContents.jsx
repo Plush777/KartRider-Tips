@@ -26,6 +26,7 @@ const GrandPrizeContents = ({ grandPrizeData }) => {
     const speedDifficulty = [10,10,10,10,10,7.5,7.5,7.5,7.5,7.5,7.5,7.5,5.7,5.7,5.7,5.7,5.7,4,0];
     const itemDifficultySpread = itemDifficulty.map((item,index) => item);
     const speedDifficultySpread = speedDifficulty.map((item,index) => item);
+    const grandprixImages= ["/images/screenShots/img-ranks.webp"]
     const { t } = useTranslation();
 
     const accordions = [
@@ -66,7 +67,7 @@ const GrandPrizeContents = ({ grandPrizeData }) => {
                                     <ImgSkeleton mwd="648px" ht="203"/>
                                 )}
                                 
-                                <Substyled.CommonImg ratio="648/203" src={t(`gpItem.gpDepth1.group2.image`)} alt="등급 이미지" onLoad={handleLoad} 
+                                <Substyled.CommonImg ratio="648/203" src={grandprixImages[0]} alt="등급 이미지" onLoad={handleLoad} 
                                 activeDisplay={loading ? 'none' : 'block'} className="transparent"/>
                                 <figcaption className="imgCaption">브론즈부터 그랜드 마스터까지</figcaption>
                             </Substyled.ImgBox>

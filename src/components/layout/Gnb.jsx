@@ -52,7 +52,7 @@ const Gnb = () => {
                     const itemId = gnbData.menus[item].id;
 
                     return(
-                        itemId !== 3 && (<Headerstyled.GnbItem className={`${gnbActiveState === index ? 'active' : ''}${itemId > 6 ? 'disabled' : ''}`} 
+                        itemId !== 3 && (<Headerstyled.GnbItem className={`${gnbActiveState === index ? 'active' : ''}`} 
                         key={index} onClick={e => handleClick(e, index)}>
                             <Link href={routeFilter[index]} title={t(`menus.group${index+1}.name`)}>{t(`menus.group${index+1}.name`)}</Link>
                         </Headerstyled.GnbItem>)

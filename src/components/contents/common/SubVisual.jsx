@@ -26,9 +26,13 @@ const SubVisual = () => {
             setVisualTitle(t('category.group4.name'));
             setVisualName('track');
         } else if(pathname.startsWith('/glossary')){
-                setVisualTitle(t('category.group5.name'));
-                setVisualName('glossary');
-        } else if(pathname.startsWith('/purpose')){
+            setVisualTitle(t('category.group5.name'));
+            setVisualName('glossary');
+        } else if(pathname.startsWith('/technology')){
+            setVisualTitle(t('category.group6.name'));
+            setVisualName('tech');
+        }
+        else if(pathname.startsWith('/purpose')){
             setVisualTitle(t('category.group7.name'));
             setVisualName('');
         } else if(pathname.startsWith('/credit')){

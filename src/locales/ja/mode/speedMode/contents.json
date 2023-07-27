@@ -10,7 +10,6 @@
            "group2": {
                 "title": "個人展",
                 "description": "チームを気にせず、自分自身の走行だけに没頭できます。",
-                "img": "../../images/screenShots/bg-screenShots-01.webp",
                 "alt": "スピード個展例画像",
                 "caption": "インゲームスピード個展例"
             },
@@ -18,8 +17,6 @@
             "group3": {
                 "title": "チーム戦",
                 "description": "自分だけでうまくいくわけではなく、チームと合わせて戦略を立てなければ勝つことができます。 />一般的なブースターを持っていてチームゲージがいっぱいになると、ブースターがチームブースターにアップグレードされます。",
-                "img": "../../images/screenShots/bg-screenShots-02.webp",
-                "img2": "../../images/screenShots/bg-screenShots-03.webp",
                 "alt": "スピードチーム戦のイメージ例 1",
                 "alt2": "スピードチーム戦のイメージ例 2",
                 "caption": "チームブースターゲージの外観",

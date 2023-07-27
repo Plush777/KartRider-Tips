@@ -8,6 +8,7 @@ import ImgSkeleton from 'components/article/ImgSkeleton';
 import React from 'react';
 import parse from 'html-react-parser';
 import SCarrowRight from 'svg/ico-arrow-right-type02.svg';
+import Link from 'next/link';
 
 const SeasonOne = ({ eventData }) => {
 
@@ -135,12 +136,10 @@ const SeasonOne = ({ eventData }) => {
 
                         <Tablestyled.Body>
                             <Tablestyled.Row>
-                                {Object.keys(depth1.group15).map((item,index) => {
-                                    const values = Object.values(depth1.group15);
-
+                                {Object.keys(depth1.group14).map((item,index) => {
                                     return(
                                         <Tablestyled.CellDescription padding="10px" as="td" key={index}>
-                                            {index === 0 ? <img src={values[0]} width="48" height="48" alt=""/> : <span>{t(`evItem.evDepth1.group15.item${index+1}`)}</span> }
+                                            {index === 0 ? <img src="/images/common/ico-siren.webp" width="48" height="48" alt=""/> : <span>{t(`evItem.evDepth1.group15.item${index}`)}</span> }
                                         </Tablestyled.CellDescription>
                                     )
                                 })}
@@ -148,10 +147,12 @@ const SeasonOne = ({ eventData }) => {
                         </Tablestyled.Body>
                     </Tablestyled.Table>
                 </Tablestyled.Wrap>
-
-                <Substyled.ArrowRightDesc to="/mode/item">
-                    {t(`evItem.evDepth1.group16.etc`)}
-                    <SCarrowRight width="24px" height="24px" fill="#000"/>
+                
+                <Substyled.ArrowRightDesc>
+                    <Link href="/mode/item" className='more'>
+                        {t(`evItem.evDepth1.group16.etc`)}
+                        <SCarrowRight width="24px" height="24px" fill="var(--commonSvgFill)"/>
+                    </Link>
                 </Substyled.ArrowRightDesc>
             </Substyled.ImgWrap>
 
@@ -240,7 +241,7 @@ const SeasonOne = ({ eventData }) => {
                 
                     {Object.keys(depth1.group28).map((item,index) => {
                         return(
-                            <Substyled.SmallDesc>{parse(t(`evItem.evDepth1.group28.item${index+1}`))}</Substyled.SmallDesc>
+                            <Substyled.SmallDesc key={index}>{parse(t(`evItem.evDepth1.group28.item${index+1}`))}</Substyled.SmallDesc>
                         )
                     })}
                 </Substyled.GroupBox>

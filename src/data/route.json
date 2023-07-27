@@ -26,7 +26,7 @@
         },
         {
             "id": 7,
-            "link": "/technology"
+            "link": "/technology/grip"
         }
     ],
 
@@ -124,6 +124,53 @@
         {
             "id": 10,
             "link": "/track/moonhill"
+        }
+    ],
+
+    "techRoute": [
+        {
+            "id": 1,
+            "link": "/technology/grip"
+        },
+        {
+            "id": 2,
+            "link": "/technology/drift"
+        },
+        {
+            "id": 3,
+            "link": "/technology/optimize"
+        },
+        {
+            "id": 4,
+            "link": "/technology/shortfull"
+        },
+        {
+            "id": 5,
+            "link": "/technology/repeat"
+        },
+        {
+            "id": 6,
+            "link": "/technology/double"
+        },
+        {
+            "id": 7,
+            "link": "/technology/cutting"
+        },
+        {
+            "id": 8,
+            "link": "/technology/screw"
+        },
+        {
+            "id": 9,
+            "link": "/technology/newcutting"
+        },
+        {
+            "id": 10,
+            "link": "/technology/long"
+        },
+        {
+            "id": 11,
+            "link": "/technology/spinturn"
         }
     ],
 

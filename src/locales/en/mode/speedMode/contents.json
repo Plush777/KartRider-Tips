@@ -10,7 +10,6 @@
            "group2": {
                 "title": "Solo exhibition",
                 "description": "You can focus only on your own driving without worrying about the team.<br/>You get one booster when you fill up the booster gauge.",
-                "img": "../../images/screenShots/bg-screenShots-01.webp",
                 "alt": "Example image of speed individual exhibition",
                 "caption": "Example of in-game speed solo exhibition"
             },
@@ -18,8 +17,6 @@
             "group3": {
                 "title": "Team",
                 "description": "You can't win by doing well alone, but by teaming up with your team and strategizing.<br/>In team battles, there is a gauge to fill your booster and a gauge to fill your team booster.<br />Have a normal booster, and when the team gauge is full, the booster will be upgraded to a team booster.",
-                "img": "../../images/screenShots/bg-screenShots-02.webp",
-                "img2": "../../images/screenShots/bg-screenShots-03.webp",
                 "alt": "Example image 1 of speed team match",
                 "alt2": "Speed team battle example image 2",
                 "caption": "What the team booster gauge looks like",

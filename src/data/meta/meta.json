@@ -64,5 +64,38 @@
     },
     "moonhill": {
         "name": "문힐시티"
+    },
+    "grip": {
+        "name": "그립"
+    },
+    "drift": {
+        "name": "드리프트"
+    },
+    "optimize": {
+        "name": "최적화"
+    },
+    "shortfull": {
+        "name": "숏풀"
+    },
+    "repeat": {
+        "name": "연타"
+    },
+    "double": {
+        "name": "더블"
+    },
+    "cutting": {
+        "name": "커팅"
+    },
+    "screw": {
+        "name": "비틀기"
+    },
+    "newcutting": {
+        "name": "뉴커팅"
+    },
+    "long": {
+        "name": "끌기"
+    },
+    "spinturn": {
+        "name": "스핀턴"
     }
 }

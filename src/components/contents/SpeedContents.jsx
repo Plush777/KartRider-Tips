@@ -39,6 +39,12 @@ const SpeedContents = () => {
         ssr: false
     });
 
+    const speedImages = [
+        "../../images/screenShots/bg-screenShots-01.webp",
+        "../../images/screenShots/bg-screenShots-02.webp",
+        "../../images/screenShots/bg-screenShots-03.webp"
+    ]
+
     return ( 
         <>
             <Min768>
@@ -63,7 +69,7 @@ const SpeedContents = () => {
                             {loading && (
                                 <ImgSkeleton mwd="none" pt="56.312"/>
                             )}
-                                <Substyled.CommonImg ratio="1275/718" src={t(`speed.depth1.group2.img`)} 
+                                <Substyled.CommonImg ratio="1275/718" src={speedImages[0]} 
                                 alt={t(`speed.depth1.group2.alt`)} onLoad={handleLoad} activeDisplay={loading ? 'none' : 'block'}/>
                                 <figcaption className="imgCaption">{t(`speed.depth1.group2.caption`)}</figcaption>
                             </Substyled.ImgBox>
@@ -82,12 +88,12 @@ const SpeedContents = () => {
                                 
                             <Substyled.ImgGroup>
                                 <Substyled.ImgBox>
-                                    <Substyled.CommonImg ratio="300/169" src={t(`speed.depth1.group3.img`)} 
+                                    <Substyled.CommonImg ratio="300/169" src={speedImages[1]} 
                                     alt={t(`speed.depth1.group3.alt`)} onLoad={handleLoad} activeDisplay={loading ? 'none' : 'block'}/>
                                     <figcaption className="imgCaption">{t(`speed.depth1.group3.caption`)}</figcaption>
                                 </Substyled.ImgBox>
                                 <Substyled.ImgBox>
-                                    <Substyled.CommonImg ratio="300/169" src={t(`speed.depth1.group3.img2`)} 
+                                    <Substyled.CommonImg ratio="300/169" src={speedImages[2]} 
                                     alt={t(`speed.depth1.group3.alt2`)} onLoad={handleLoad} 
                                     activeDisplay={loading ? 'none' : 'block'}/>
                                     <figcaption className="imgCaption">{t(`speed.depth1.group3.caption2`)}</figcaption>

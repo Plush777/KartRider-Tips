@@ -94,5 +94,52 @@
             "id": 10,
             "name": "문힐시티"
         }
+    },
+
+    "tech": {
+        "group1" :{
+            "id": 1,
+            "name": "그립"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "드리프트"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "촤적화"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "숏풀"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "연타"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "더블"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "커팅"
+        },
+        "group8" :{
+            "id": 8,
+            "name": "비틀기"
+        },
+        "group9" :{
+            "id": 9,
+            "name": "뉴커팅"
+        },
+        "group10" :{
+            "id": 10,
+            "name": "끌기"
+        },
+        "group11" :{
+            "id": 11,
+            "name": "스핀턴"
+        }
     }
 }

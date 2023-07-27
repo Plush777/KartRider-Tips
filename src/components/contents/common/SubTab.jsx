@@ -25,26 +25,33 @@ const SubTab = () => {
         track: {
             translationPrefix: 'track.group'
         },
+        tech: {
+            translationPrefix: 'tech.group'
+        },
         numbers: {
             '1': {
-                imgNum: '1',
-                txtNum: '1',
+                num: '1',
                 name: 'mode'
             },
             '2': {
-                imgNum: '2',
-                txtNum: null,
+                num: '2',
             },
             '3': {
-                imgNum: '3',
-                txtNum: '3',
+                num: '3',
                 name: 'character'
             },
             '4': {
-                imgNum: '4',
-                txtNum: '4',
+                num: '4',
                 name: 'track'
             },
+            '5': {
+                num: '5',
+                name: 'glossary'
+            },
+            '6': {
+                num: '6',
+                name: 'tech'
+            }
         }
     };
 
@@ -54,8 +61,7 @@ const SubTab = () => {
         character: null,
     });
     let [categoryName, setCategoryName] = useState({
-        imgNum: '',
-        txtNum: '',
+        num: '',
         name: ''
     });
     let [categoryData, setCategoryData] = useState({
@@ -96,6 +102,20 @@ const SubTab = () => {
         '/track/moonhill': { track: 9 },
     }
 
+    const techs = {
+        '/technology/grip': { tech: 0 },
+        '/technology/drift': { tech: 1 },
+        '/technology/optimize': { tech: 2 },
+        '/technology/shortfull': { tech: 3 },
+        '/technology/repeat': { tech: 4 },
+        '/technology/double': { tech: 5 },
+        '/technology/cutting': { tech: 6 },
+        '/technology/screw': { tech: 7 },
+        '/technology/newcutting': { tech: 8 },
+        '/technology/long': { tech: 9 },
+        '/technology/spinturn': { tech: 10 },
+    }
+
     const handlePageActive = (page) => {
         const pageActive = page || {};
         setPageActive(pageActive);
@@ -121,6 +141,10 @@ const SubTab = () => {
             handlePageActive(tracks[currentPathname]);
             handleCategoryName(tabDataObjs.numbers['4']);
             setCategoryData({data: tabData.track, route: routes.trackRoute});
+        } else if(currentPathname.startsWith('/technology')){
+            handlePageActive(techs[currentPathname]);
+            handleCategoryName(tabDataObjs.numbers['6']);
+            setCategoryData({data: tabData.tech, route: routes.techRoute});
         }
     },[currentPathname]);
 
@@ -151,7 +175,7 @@ const SubTab = () => {
     }
 
     const imgNumbersRender = () => {
-        return imgNumbers[categoryName.imgNum];
+        return imgNumbers[categoryName.num];
     }
 
     const routeList = Object.values(categoryData.route).map((item, index) => {
@@ -163,7 +187,7 @@ const SubTab = () => {
             <SubTabstyled.TabWrapInner>
                 <SubTabstyled.TabInfo>
                     {imgNumbersRender()}
-                    <SubTabstyled.TabInfoTxt>{t(`info.group${categoryName.imgNum}.name`)}</SubTabstyled.TabInfoTxt>
+                    <SubTabstyled.TabInfoTxt>{t(`info.group${categoryName.num}.name`)}</SubTabstyled.TabInfoTxt>
                     <SCbgArrowRight width="22px" height="22px"/>
                 </SubTabstyled.TabInfo>
 

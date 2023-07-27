@@ -20,6 +20,23 @@ const ItemContents = ({ itemContentsData, itemTermsData }) => {
     const [isReady, setReady] = useState(false);
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
     const { t } = useTranslation();
+    const itemImages = [
+        "../../images/screenShots/bg-screenShots-04.webp",
+        "../../../../../images/common/ico-n2o.webp",
+        "../../../../../images/common/ico-bba.webp",
+        "../../../../../images/common/ico-magnet.webp",
+        "../../../../../images/common/ico-missile.webp",
+        "../../../../../images/common/ico-bari.webp",
+        "../../../../../images/common/ico-space.webp",
+        "../../../../../images/common/ico-waterBomb.webp",
+        "../../../../../images/common/ico-waterFly.webp",
+        "../../../../../images/common/ico-thunderbolt.webp",
+        "../../../../../images/common/ico-no-space2.webp",
+        "../../../../../images/common/ico-shield.webp",
+        "../../../../../images/common/ico-angel.webp",
+        "../../../../../images/common/ico-siren.webp",
+        "../../../../../images/common/ico-mine.webp"
+    ]
 
     useTimeout(() => {
         setReady(true);
@@ -50,7 +67,7 @@ const ItemContents = ({ itemContentsData, itemTermsData }) => {
                                 {loading && (
                                     <ImgSkeleton mwd="none" pt="56.312"/>
                                 )}
-                                <Substyled.CommonImg ratio="634/357" src={t(`item.depth1.group2.img`)} alt={t(`item.depth1.group2.alt`)} 
+                                <Substyled.CommonImg ratio="634/357" src={itemImages[0]} alt={t(`item.depth1.group2.alt`)} 
                                 onLoad={handleLoad} activeDisplay={loading ? 'none' : 'block'}/>
                                 <figcaption className="imgCaption">{t(`item.depth1.group2.caption`)}</figcaption>
                             </Substyled.ImgBox>
@@ -76,7 +93,7 @@ const ItemContents = ({ itemContentsData, itemTermsData }) => {
                                                 return(
                                                     <Substyled.ListItem key={index}>
                                                         <Itemstyled.ItemImgBox>
-                                                            {isReady ? <Itemstyled.ItemImg src={t(`itemList.group${index+1}.img`)} 
+                                                            {isReady ? <Itemstyled.ItemImg src={itemImages[index+1]} 
                                                             alt={t(`itemList.group${index+1}.alt`)}/> 
                                                                 : 
                                                             <ImgSkeleton type="type02 absolute"/>
@@ -107,19 +124,6 @@ const ItemContents = ({ itemContentsData, itemTermsData }) => {
                                         </Substyled.GroupItem>
                                     )
                                 })}
-                            </ul>
-                        </Substyled.GroupContainer>
-
-                        <Substyled.GroupContainer>
-                            <Substyled.SmallTitle>{t(`item.depth1.group6.title`)}</Substyled.SmallTitle>
-                            <ul className="groupList">
-                                {Object.keys(itemTermsData.glossary.itemTerm).map((items,index) => {
-                                    return(
-                                        <Substyled.GroupItem key={index} bullet="''" mt="20px">
-                                            <Substyled.SmallDesc>{parse(t(`glossary.itemTerm.group${index+1}.detail`))}</Substyled.SmallDesc>
-                                        </Substyled.GroupItem>
-                                    )})
-                                }
                             </ul>
                         </Substyled.GroupContainer>
                     </div>

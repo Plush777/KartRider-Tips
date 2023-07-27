@@ -9,7 +9,6 @@
             "group2": {
                 "title": "Escape quickly",
                 "description": "If you get hit by a water bomb or water fly, press the left and right arrow keys quickly!<br/>You can escape quickly, and after escaping, press the front key again to activate an instant booster.",
-                "img": "../../images/screenShots/bg-screenShots-04.webp",
                 "alt": "Example image of item exhibition",
                 "caption": "Example image of quick escape before in-game items"
             },
@@ -38,91 +37,78 @@
              "name" : "Booster",
              "itemDesc": "Enables you to temporarily sprint at high speed when used.",
              "tip": "It usually appears in the lower ranks.",
-             "img": "../../../../../images/common/ico-n2o.webp",
              "alt": "booster item"
         },
         "group2" :{
             "name" : "Banana",
             "itemDesc": "If you step on a banana, it will slide and spin.<br/> (My team can step on it too.)",
             "tip": "Only appears in 1st place in solo matches and 3rd place in team matches.",
-            "img": "../../../../../images/common/ico-bba.webp",
             "alt": "banana item"
         },
         "group3" :{
             "name" : "Magnet",
             "itemDesc": "Using the power of a strong magnetic field, you can<br/>approach your target racer at high speed.",
             "tip": "It usually appears in the lower ranks.",
-            "img": "../../../../../images/common/ico-magnet.webp",
             "alt": "magnet item"
         },
         "group4" :{
             "name" : "Missile",
             "itemDesc": "Aim! Fire! Aim the racer ahead of you so you can<br/>blow it away.<br/> (My team is unaffected)",
             "tip": "Mainly appears in the middle ranks.",
-            "img": "../../../../../images/common/ico-missile.webp",
             "alt": "missile item"
         },
         "group5" :{
             "name" : "Barricade",
             "itemDesc": "A barricade appears in front of the No. 1 racer!<br/>Immediately blocks the route of the No. 1 racer and hinders driving.<br/>(Your team can also get in the way in a team battle.) ",
             "tip": "Mostly from the middle to the bottom ranks.",
-            "img": "../../../../../images/common/ico-bari.webp",
             "alt": "barricade item"
         },
         "group6" :{
             "name" : "Spaceship",
             "itemDesc": "A spaceship descends and picks up the <br/>racer who is running in first place, disrupting the run.<br/> (My team is unaffected)",
             "tip": "Mostly from mid to low ranks.",
-            "img": "../../../../../images/common/ico-space.webp",
             "alt": "ship item"
         },
         "group7" :{
             "name" : "Water bomb",
             "itemDesc": "Throws water bombs forward! Can trap racers a certain distance in front of them<br/><br/>(Your team can get stuck too in team fights)",
             "tip": "Mostly from 2nd to mid-table.",
-            "img": "../../../../../images/common/ico-waterBomb.webp",
             "alt": "water bomb item"
         },
         "group8" :{
             "name" : "Water fly",
             "itemDesc": "Wheein~ I can get a racer running right ahead of me<br/>get stuck in a drop.<br/>(My team is unaffected)",
             "tip": "Mostly from mid to low ranks.",
-            "img": "../../../../../images/common/ico-waterFly.webp",
             "alt": "waterfly item"
         },
         "group9" :{
             "name" : "Thunderbolt",
             "itemDesc": "Jijijik, thunderbolts down all racers ahead of me<br/>interferes with their driving.<br/>(Only affects the opposing team, it's best to use it at the bottom.)",
             "tip": "Mainly appears in the middle ranks.",
-            "img": "../../../../../images/common/ico-thunderbolt.webp",
             "alt": "thunderbolt item"
         },
         "group10" :{
             "name" : "Electromagnetic waves",
             "itemDesc": "Block the spaceship's attack with electromagnetic waves! You can cut off the <br/>communication of the spaceship and quickly escape from the obstacle.",
             "tip": "He usually appears in the upper ranks, and in teamfights he appears in the middle ranks.",
-            "img": "../../../../../images/common/ico-no-space.webp",
             "alt": "electronic item"
        },
        "group11" :{
             "name" : "Shield",
             "itemDesc": "Attacks are nullified for a certain period of time! Blocks an opponent's specific attack once.",
             "tip": "Mostly at the top.",
-            "img": "../../../../../images/common/ico-shield.webp",
             "alt": "shield item"
         },
         "group12" :{
             "name" : "Angel",
             "itemDesc": "Under the protection of an angel, our team racer<br/>cannot be attacked by any attack for a certain period of time.<br/>(This is an item that only appears in team battles.)",
             "tip": "Appears from 2nd to 8th.",
-            "img": "../../../../../images/common/ico-angel.webp",
             "alt": "angel item"
         },
         "group13":{
             "name" : "Siren",
             "itemDesc": "Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.",
             "tip": "This item is exclusive to Factory Run.",
-            "img": "../../../../../images/common/ico-siren.webp",
             "alt": "siren item"
         }
     },

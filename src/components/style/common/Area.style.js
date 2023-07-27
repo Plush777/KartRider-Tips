@@ -476,12 +476,13 @@ export const ListItem = styled.li`
     ${({ theme }) => theme.tablet`
         flex-direction: column;
         column-gap: 0;
-        height: 300px;
+        min-height: 300px;
     `};
 
     ${({ theme }) => theme.mobile`
         width: 100%;
         height: auto;
+        min-height: auto;
 
         &:nth-child(even){
             width: 100%;
@@ -688,11 +689,15 @@ export const GroupInnerBoxItem = styled.li`
     }
 `
 
-export const ArrowRightDesc = styled.a`
+export const ArrowRightDesc = styled.div`
     ${mixins.aic};
     justify-content: flex-end;
     ${mixins.font('nexonLv1Gothic', 'var(--title)')};
     margin-top: 7px;
     max-width: 513px;
     font-size: ${({ theme }) => theme.fontSizes.f14};
+
+    .more{
+        ${mixins.aic};
+    }
 `

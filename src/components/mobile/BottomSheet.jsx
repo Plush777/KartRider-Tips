@@ -64,7 +64,7 @@ const BottomSheet = () => {
                                 const routeLink = route.routeList.find(routeItem => routeItem.id === itemId).link;
 
                                 return(
-                                    <BottomSheetstyled.Item key={itemId} className="disabled">
+                                    <BottomSheetstyled.Item key={itemId}>
                                         <BottomSheetstyled.ListLink href={routeLink} title={t(`menus.group${index+6}.name`)}>
                                             {
                                                 itemId === 6 ? <Substyled.Ico zIndex="100" left="11px" top="23px"><SCdictionary width="20px" height="20px" fill="#666"/></Substyled.Ico>

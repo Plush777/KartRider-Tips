@@ -7,8 +7,7 @@
             },
             "group2" : {
                 "title": "Rating",
-                "description": "Racers start the Grand Prix at 1,500 GPP, and depending on the change in GPP thereafter,<br/>it is divided into 5 grades and 15 detailed grades.<br/>There is also a separate placement process. If you play the first round of Grand Prix without a rating, you will receive a grade immediately.",
-                "image": "/images/screenShots/img-ranks.webp"
+                "description": "Racers start the Grand Prix at 1,500 GPP, and depending on the change in GPP thereafter,<br/>it is divided into 5 grades and 15 detailed grades.<br/>There is also a separate placement process. If you play the first round of Grand Prix without a rating, you will receive a grade immediately."
             },
             "group3": {
                 "title1": "Bronze",

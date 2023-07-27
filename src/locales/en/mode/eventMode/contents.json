@@ -68,9 +68,8 @@
                 "item3": "Description"
             },
             "group15": {
-                "item1": "/images/common/ico-siren.webp",
-                "item2": "siren",
-                "item3": "Beep-beep-beware all the racers ahead of you! Temporarily run at high speed, and any racer you bump into will slip and spin."
+                "item1": "siren",
+                "item2": "Beep-beep-beware all the racers ahead of you! Temporarily run at high speed, and any racer you bump into will slip and spin."
             },
             "group16": {
                 "etc": "View item details"

@@ -53,6 +53,12 @@ export const ItemImg = styled.img`
     height:57px;
     object-fit: none;
 
+    &[src*="mine"]{
+        width: 60px;
+        height: 60px;
+        object-fit: fill;
+    }
+
     ${({ theme }) => theme.laptop`
         width: 50px !important;
         height: 50px !important;

@@ -31,6 +31,7 @@ const BottomNavigation = () => {
 
     const handleClick = (e,index) => { 
         dispatch(setGnbActive(index));
+        localStorage.setItem('tabActiveIndex', 0);
     }
 
     const handleBottomSheet = () => {
@@ -86,7 +87,7 @@ const BottomNavigation = () => {
 
                             return(
                                 <BottomNavigationstyled.MenuItem key={index} 
-                                className={`${gnbActiveState === index ? 'active' : ''}${itemId > 4 ? 'disabled' : ''}`}
+                                className={`${gnbActiveState === index ? 'active' : ''}`}
                                 >
                                     <BottomNavigationstyled.MenuLink href={routeList[index]} title={itemName}
                                     onClick={e => {
