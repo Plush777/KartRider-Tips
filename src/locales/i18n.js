@@ -62,6 +62,17 @@ import koWkc from 'locales/ko/track/wkc';
 import koGraveyard from 'locales/ko/track/graveyard';
 import koMoonhill from 'locales/ko/track/moonhill';
 import koGlossary from 'locales/ko/glossary/contents';
+import koGrip from 'locales/ko/tech/grip';
+import koDrift from 'locales/ko/tech/drift';
+import koOptimize from 'locales/ko/tech/optimize';
+import koShortfull from 'locales/ko/tech/shortfull';
+import koRepeat from 'locales/ko/tech/repeat';
+import koDouble from 'locales/ko/tech/double';
+import koCutting from 'locales/ko/tech/cutting';
+import koScrew from 'locales/ko/tech/screw';
+import koNewcutting from 'locales/ko/tech/newcutting';
+import koLong from 'locales/ko/tech/long';
+import koSpinturn from 'locales/ko/tech/spinturn';
 
 /* ja */
 import jaSlide from 'locales/ja/main/slide';
@@ -158,7 +169,18 @@ const resources = {
             ...koWkc,
             ...koGraveyard,
             ...koMoonhill,
-            ...koGlossary
+            ...koGlossary,
+            ...koGrip,
+            ...koDrift,
+            ...koOptimize,
+            ...koShortfull,
+            ...koRepeat,
+            ...koDouble,
+            ...koCutting,
+            ...koScrew,
+            ...koNewcutting,
+            ...koLong,
+            ...koSpinturn
         }
     },
     ja: {

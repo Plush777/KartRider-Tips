@@ -9,6 +9,7 @@ import SCmode from 'svg/ico-tab01.svg';
 import SCkartbody from 'svg/ico-tab02.svg';
 import SCcharacter from 'svg/ico-tab03.svg';
 import SCtrack from 'svg/ico-tab04.svg';
+import SCtech from 'svg/ico-tech.svg';
 import SCbgArrowRight from 'svg/ico-arrow-right.svg';
 import { useTranslation } from 'react-i18next';
 import { SwiperSlide } from 'swiper/react';
@@ -171,7 +172,8 @@ const SubTab = () => {
         1: <SCmode fill="#818181"/>,
         2: <SCkartbody fill="#818181"/>,
         3: <SCcharacter fill="#818181"/>,
-        4: <SCtrack fill="#818181"/>
+        4: <SCtrack fill="#818181"/>,
+        6: <SCtech width="20px" height="20px" fill="#818181"/>
     }
 
     const imgNumbersRender = () => {

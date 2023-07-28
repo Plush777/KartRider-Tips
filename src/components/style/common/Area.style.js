@@ -52,6 +52,16 @@ export const SmallTitle = styled.h4`
        font-size: ${({ theme }) => theme.fontSizes.f20};
     `};
 
+    ${props => props.type02 && css`
+        margin-bottom: 10px;
+        font-size: ${({ theme }) => theme.fontSizes.f16};
+        font-weight: 600;
+
+        ${({ theme }) => theme.tablet`
+            font-size: ${({ theme }) => theme.fontSizes.f14};
+        `};
+    `}
+
     &::before{
         content: ${(props) => props.bullet ? 'none' : "''"};
         display: inline-block;
@@ -71,6 +81,14 @@ export const SmallDesc = styled.p`
     font-size: ${(props) => props.fz1 ? '1.125rem' : '1rem'};
     ${mixins.font('nexonLv1Gothic', 'var(--text)')}
     word-break: keep-all;
+
+    .source{
+        margin-top: 60px;
+    }
+
+    >b{
+        margin: 0 5px;
+    }
     
     &::after{
         content: ${props => props.openInNew ? "'새창 열림'" : 'none'};
@@ -177,6 +195,10 @@ export const GroupBox = styled.div`
 
     ${props => props.type01 && css`
         ${SmallDesc}{
+            &.mt{
+                margin-top: 20px !important;
+            }
+
             +${SmallDesc}{
                 margin-top: 0;
             }
@@ -196,6 +218,20 @@ export const GroupBox = styled.div`
     ${props => props.inline && css`
         ${SmallDesc}{
             display: inline-block;
+        }
+    `}
+
+    ${props => props.counter && css`
+        margin-top: 15px !important;
+
+        ${SmallDesc}{
+            counter-increment:list-number;
+            margin-top: 0;
+
+            &::before{
+                content:counter(list-number)".";
+                margin-right: 5px;
+            }
         }
     `}
 
@@ -336,6 +372,11 @@ export const CommonImg = styled.img`
     &.transparent{
         background: transparent;
         width: auto;
+    }
+
+    &.custom{
+        width: ${props => props.width} !important;
+        height: ${props => props.height} !important;
     }
 `
 
@@ -700,4 +741,10 @@ export const ArrowRightDesc = styled.div`
     .more{
         ${mixins.aic};
     }
+`
+
+export const ColorDiv = styled.div`
+    display: block;
+    color: #888;
+    font-style: ${props => props.fontStyle};
 `
