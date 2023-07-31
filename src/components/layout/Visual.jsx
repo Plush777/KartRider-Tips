@@ -48,6 +48,10 @@ const Visual = () => {
             clickable: true,
         },
     }
+
+    const handleButtonClick = () => {
+        window.open('https://forms.gle/4i8vvDYz9VbLbJGN9', '_blank');
+    };
     
     return ( 
         <Visualstyled.VisualWrap>
@@ -82,8 +86,8 @@ const Visual = () => {
                                     <VisualCenterstyled.Vtitle>{parse(t(`slide.group2.title`))}</VisualCenterstyled.Vtitle>
                                     <VisualCenterstyled.Vdesc>{parse(t(`slide.group2.desc`))}</VisualCenterstyled.Vdesc>
                                     <Buttonstyled.Btn height="55px" radius="8px" padding="0 16px" color="#fff" 
-                                    fontSize="1.25rem" border="1px solid #fff" background="transparent" as="a" className="white"
-                                    href="https://map64wlb3a2.typeform.com/to/vGp6k1Nc" target="_blank" rel='noopener noreferrer'>{parse(t(`slide.group2.participate`))}</Buttonstyled.Btn>
+                                    fontSize="1.25rem" border="1px solid #fff" background="transparent" className="white"
+                                    onClick={handleButtonClick}>{parse(t(`slide.group2.participate`))}</Buttonstyled.Btn>
                                 </VisualCenterstyled.VtxtArea> 
                             </VisualCenterstyled.VisualCenterWrap>
                         </Visualstyled.VisualInner>

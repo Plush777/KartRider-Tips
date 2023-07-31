@@ -37,12 +37,8 @@ export const VtxtArea = styled.div`
        row-gap: 10px;
     `}
 
-    a{
-        max-width: 110px;
-
-        &:lang(ja){
-            max-width: 120px;
-        }
+    button{
+        max-width: 120px;
     }
 `
 

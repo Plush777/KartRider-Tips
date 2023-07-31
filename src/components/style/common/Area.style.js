@@ -205,12 +205,6 @@ export const GroupBox = styled.div`
         }
     `}
 
-    ${props => props.mt && css`
-        margin-top: 30px;
-
-        &+&{margin-top: 30px;}
-    `}
-
     ${props => props.mb && css`
         margin-bottom: 20px;
     `}
@@ -383,6 +377,12 @@ export const CommonImg = styled.img`
 export const ImgBox = styled.figure`
     flex: 1;
     margin-top: ${(props) => props.mt};
+
+    ${props => props.iframeRes && css`
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    `}
 
     ${props => props.hType01 && css`
         ${({ theme }) => theme.tablet`
@@ -748,3 +748,14 @@ export const ColorDiv = styled.div`
     color: #888;
     font-style: ${props => props.fontStyle};
 `
+
+export const VideoFrame = styled.iframe`
+    display: ${props => props.activeDisplay};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 4px;
+`;

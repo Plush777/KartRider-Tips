@@ -86,9 +86,10 @@ const GripContents = ({ gripData }) => {
                                 <Substyled.SmallDesc>{t(`techGrip.group4.desc`)}</Substyled.SmallDesc>
                             </Substyled.GroupBox>
 
-                            <Substyled.ImgBox mt="20px">
-                                <ImgSkeleton mwd="none" pt="56.312"/>
-                                {/* video */}
+                            <Substyled.ImgBox mt="20px" iframeRes>
+                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/17f0ef60-ec8b-4f41-9ae2-5c9c032a7ce2" allowFullScreen
+                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
 

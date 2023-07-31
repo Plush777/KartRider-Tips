@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 import { Min768 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
 
-const OptimizeContents = ({ optimizeData }) => {
+const ScrewContents = ({ screwData }) => {
 
     const [loading, handleLoad] = useImageLoading();
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
@@ -29,42 +29,46 @@ const OptimizeContents = ({ optimizeData }) => {
                 <Substyled.Inner>
                     <div className="container">
                         <div className="titleArea">
-                            <Substyled.Title>{t(`techOptimize.group1.title`)}</Substyled.Title>
-                            <Substyled.Desc>{t(`techOptimize.group1.desc`)}</Substyled.Desc>
-                            <Substyled.Desc>{t(`techOptimize.group1.desc2`)}</Substyled.Desc>
+                            <Substyled.Title>{t(`screw.group1.title`)}</Substyled.Title>
+                            <Substyled.Desc>{parse(t(`screw.group1.desc`))}</Substyled.Desc>
                         </div>
 
                         <Substyled.ImgWrap>
                             <Substyled.GroupBox>
-                                <Substyled.SmallTitle>{t(`techOptimize.group2.title`)}</Substyled.SmallTitle>
-                                <Substyled.SmallDesc>{t(`techOptimize.group2.desc`)}</Substyled.SmallDesc>
+                                <Substyled.SmallTitle>{t(`screw.group2.title`)}</Substyled.SmallTitle>
+                                <Substyled.SmallDesc>{t(`screw.group2.desc`)}</Substyled.SmallDesc>
                             </Substyled.GroupBox>
 
                             <Substyled.GroupBox>
-                                <Substyled.MediumTitle>{parse(t(`techOptimize.group3.subTitle`))}</Substyled.MediumTitle>
+                                <Substyled.MediumTitle>{parse(t(`screw.group3.subTitle`))}</Substyled.MediumTitle>
                             </Substyled.GroupBox>
 
                             <Substyled.GroupBox type01 counter>
-                                {Object.keys(optimizeData.techOptimize.group4).map((item,index) => {
+                                {Object.keys(screwData.screw.group4).map((item,index) => {
                                     return(
-                                        <Substyled.SmallDesc key={index}>{parse(t(`techOptimize.group4.item${index+1}`))}</Substyled.SmallDesc>
+                                        <Substyled.SmallDesc key={index}>{parse(t(`screw.group4.item${index+1}`))}</Substyled.SmallDesc>
                                     )
                                 })}
                             </Substyled.GroupBox>
 
                             <Substyled.GroupBox>
-                                <Substyled.SmallTitle type02>{parse(t(`techOptimize.group5.subTitle`))}</Substyled.SmallTitle>
+                                <Substyled.SmallTitle type02 bullet>{parse(t(`screw.group5.subTitle`))}</Substyled.SmallTitle>
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key1.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
                             <Substyled.GroupBox>
-                                <Substyled.SmallTitle type02>{parse(t(`techOptimize.group5.subTitle2`))}</Substyled.SmallTitle>
-                                <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
+                                <Substyled.SmallTitle type02 bullet>{parse(t(`screw.group5.subTitle2`))}</Substyled.SmallTitle>
+                                <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key4.webp' alt="" className='transparent custom'/>
+                            </Substyled.GroupBox>
+
+                            <Substyled.GroupBox>
+                                <Substyled.SmallTitle type02 bullet>{parse(t(`screw.group5.subTitle3`))}</Substyled.SmallTitle>
+                                <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key1.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
                             <Substyled.ImgBox mt="20px" iframeRes>
                                 {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/f7cd7273-a3ce-430b-bac8-03aac3c4159b" allowFullScreen
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/f85c4de4-a922-499e-a712-fb647098a39b" allowFullScreen
                                 activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
@@ -78,4 +82,4 @@ const OptimizeContents = ({ optimizeData }) => {
      );
 }
 
-export default OptimizeContents;
+export default ScrewContents;
