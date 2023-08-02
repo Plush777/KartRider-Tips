@@ -97,6 +97,206 @@
         "group23":{
             "id": 23,
             "name": "Deuce Coupe"
+        },
+        "group24":{
+            "id": 24,
+            "name": "New York Taxi"
+        },
+        "group25":{
+            "id": 25,
+            "name": "Drill"
+        },
+        "group26":{
+            "id": 26,
+            "name": "911 Turbo S Cabriolet"
+        },
+        "group27":{
+            "id": 27,
+            "name": "Plasma PT"
+        },
+        "group28":{
+            "id": 28,
+            "name": "Detective Couch"
+        },
+        "group29":{
+            "id": 29,
+            "name": "Hound"
+        },
+        "group30":{
+            "id": 30,
+            "name": "Milk Delivery"
+        },
+        "group31":{
+            "id": 31,
+            "name": "BT21 Camping Bus"
+        },
+        "group32":{
+            "id": 32,
+            "name": "BT21 Dream Car"
+        },
+        "group33":{
+            "id": 33,
+            "name": "Ice cream truck"
+        },
+        "group34":{
+            "id": 34,
+            "name": "Spectre"
+        },
+        "group35":{
+            "id": 35,
+            "name": "Black mark"
+        },
+        "group36":{
+            "id": 36,
+            "name": "Feira"
+        },
+        "group37":{
+            "id": 37,
+            "name": "New York Tour Bus"
+        },
+        "group38":{
+            "id": 38,
+            "name": "God of Study"
+        },
+        "group39":{
+            "id": 39,
+            "name": "Roller"
+        },
+        "group40":{
+            "id": 40,
+            "name": "Dark Guardian"
+        },
+        "group41":{
+            "id": 41,
+            "name": "Schooner"
+        },
+        "group42":{
+            "id": 42,
+            "name": "Plasma FT"
+        },
+        "group43":{
+            "id": 43,
+            "name": "Safety"
+        },
+        "group44":{
+            "id": 44,
+            "name": "Shark Hover"
+        },
+        "group45":{
+            "id": 45,
+            "name": "Flower Carriage"
+        },
+        "group46":{
+            "id": 46,
+            "name": "Quantum Muscle"
+        },
+        "group47":{
+            "id": 47,
+            "name": "Cosmic Muscle"
+        },
+        "group48":{
+            "id": 48,
+            "name": "718 Boxster"
+        },
+        "group49":{
+            "id": 49,
+            "name": "Indust"
+        },
+        "group50":{
+            "id": 50,
+            "name": "Smart Mobility"
+        },
+        "group51":{
+            "id": 51,
+            "name": "Macan GTS"
+        },
+        "group52":{
+            "id": 52,
+            "name": "Night Woofer"
+        },
+        "group53":{
+            "id": 53,
+            "name": "Excavator"
+        },
+        "group54":{
+            "id": 54,
+            "name": "Killer"
+        },
+        "group55":{
+            "id": 55,
+            "name": "Tow truck"
+        },
+        "group56":{
+            "id": 56,
+            "name": "Black dragon"
+        },
+        "group57":{
+            "id": 57,
+            "name": "Marin"
+        },
+        "group58":{
+            "id": 58,
+            "name": "Flamingo"
+        },
+        "group59":{
+            "id": 59,
+            "name": "GT60"
+        },
+        "group60":{
+            "id": 60,
+            "name": "Solar"
+        },
+        "group61":{
+            "id": 61,
+            "name": "Steam Classic"
+        },
+        "group62":{
+            "id": 62,
+            "name": "Production mobility"
+        },
+        "group63":{
+            "id": 63,
+            "name": "Wild Dust"
+        },
+        "group64":{
+            "id": 64,
+            "name": "Sky Rocket"
+        },
+        "group65":{
+            "id": 65,
+            "name": "Bolt"
+        },
+        "group66":{
+            "id": 66,
+            "name": "KDI Police Truck"
+        },
+        "group67":{
+            "id": 67,
+            "name": "F724"
+        },
+        "group68":{
+            "id": 68,
+            "name": "Racing Truck"
+        },
+        "group69":{
+            "id": 69,
+            "name": "Beetle"
+        },
+        "group70":{
+            "id": 70,
+            "name": "carrier"
+        },
+        "group71":{
+            "id": 71,
+            "name": "Solid Pro"
+        },
+        "group72":{
+            "id": 72,
+            "name": "Spider"
+        },
+        "group73":{
+            "id": 73,
+            "name": "King Octopus"
         }
     },
 
@@ -192,7 +392,207 @@
         "group23":{
             "id": 23,
             "desc": "A secret weapon disguised as a toilet.<br/>At last... it's finally out!"
-        }
+        },
+        "group24":{
+            "id": 24,
+            "desc": "Veteran who has conquered megacities<br/>Speedfully breaks through any destination."
+        },
+        "group25":{
+            "id": 25,
+            "desc": "Unimaginable destructive power<br/>There is no mercy for those who stand in their way."
+        },
+        "group26":{
+            "id": 26,
+            "desc": "A sports car with the Porsche philosophy<br/>providing a comfortable, everyday and amazing driving experience."
+        },
+        "group27":{
+            "id": 27,
+            "desc": "Futuristic power tuning<br/>rocks the track with unrivaled presence."
+        },
+        "group28":{
+            "id": 28,
+            "desc": "Sit down and solve the case!<br/>Go anywhere to solve mysteries."
+        },
+        "group29":{
+            "id": 29,
+            "desc": "A hound born to hunt<br/>today hunts for victory."
+        },
+        "group30":{
+            "id": 30,
+            "desc": "Morning duty in Boomhill Village<br/>Proud of fast and accurate delivery."
+        },
+        "group31":{
+            "id": 31,
+            "desc": "BT21's Guide to Relaxation!<br/>Come with me to the most comfortable place to relax anytime."
+        },
+        "group32":{
+            "id": 32,
+            "desc": "Enjoyable school life with BT21!<br/>Let's run together with the memories and dreams of our unforgettable school days."
+        },
+        "group33":{
+            "id": 33,
+            "desc": ""
+        },
+        "group34":{
+            "id": 34,
+            "desc": "Ghosts on the track<br/>A chilling sense of dread pervades the racing."
+        },
+        "group35":{
+            "id": 35,
+            "desc": "Explosive running machine<br/>That's the black mark."
+        },
+        "group36":{
+            "id": 36,
+            "desc": ""
+        },
+        "group37":{
+            "id": 37,
+            "desc": "Tour tickets sold out early!<br/>See, feel and enjoy New York."
+        },
+        "group38":{
+            "id": 38,
+            "desc": "Can't stop studying during a race.<br/>π=3.141592653589793238462..."
+        },
+        "group39":{
+            "id": 39,
+            "desc": "Giant Roller Attack!<br/>Crushes anything flat."
+        },
+        "group40":{
+            "id": 40,
+            "desc": "Deeper darkness above darkness<br/>approaches unnoticed and lifts the veil of darkness."
+        },
+        "group41":{
+            "id": 41,
+            "desc": "The pirate ship that ruled the seas<br/>transforms into a cart and raids the tracks!"
+        },
+        "group42":{
+            "id": 42,
+            "desc": "Perfect tuning success<br/>Complete the racing with flexible movements."
+        },
+        "group43":{
+            "id": 43,
+            "desc": "Familiarize yourself with the safety rules!<br/>Keep the track and everyone safe."
+        },
+        "group44":{
+            "id": 44,
+            "desc": "A shark reborn as a cart<br/>A savagery rocks the track."
+        },
+        "group45":{
+            "id": 45,
+            "desc": "Flower carriage signaling the beginning of spring<br/>The scent of flowers spreads across the track."
+        },
+        "group46":{
+            "id": 46,
+            "desc": "More than meets the eye. Victory is already yours."
+        },
+        "group47":{
+            "id": 47,
+            "desc": "The power of infinite possibilities. It pushes its way through the darkness of the universe."
+        },
+        "group48":{
+            "id": 48,
+            "desc": "A roadster that retains the core of a sports car<br/>makes everyday driving the ultimate pleasure."
+        },
+        "group49":{
+            "id": 49,
+            "desc": "The factory lord<br/>Gorgeous blizzards and icy roads are not even untitled."
+        },
+        "group50":{
+            "id": 50,
+            "desc": "Innovation in self-driving<br/>It does everything by itself."
+        },
+        "group51":{
+            "id": 51,
+            "desc": "A sports car in a compact SUV.<br/>Porsche DNA is immediately recognizable in the flyline."
+        },
+        "group52":{
+            "id": 52,
+            "desc": "Powerful bass that touches the heart.<br/>Colors the colorful city night with music."
+        },
+        "group53":{
+            "id": 53,
+            "desc": "Unusual rebellion of heavy equipment!<br/>Get out of the construction site and show off a new charm."
+        },
+        "group54":{
+            "id": 54,
+            "desc": "Death, death!<br/>Casts a shadow of death on the cart ahead."
+        },
+        "group55":{
+            "id": 55,
+            "desc": "Illegal stop, broken cart out!<br/>The race must go on."
+        },
+        "group56":{
+            "id": 56,
+            "desc": "Charisma that transcends time and space<br/>Unapproachable black spreads throughout the track."
+        },
+        "group57":{
+            "id": 57,
+            "desc": "An amphibious vehicle<br/>runs comfortably without limits anywhere."
+        },
+        "group58":{
+            "id": 58,
+            "desc": "The beautiful pink flamingo<br/>begins its graceful journey."
+        },
+        "group59":{
+            "id": 59,
+            "desc": "The GT car reincarnation that dominated the 1960s<br/>is back."
+        },
+        "group60":{
+            "id": 60,
+            "desc": "It runs hot, flashing the solar flare<br/> that heats up the track."
+        },
+        "group61":{
+            "id": 61,
+            "desc": "Steam power on!<br/>In the wake of the industrial revolution, revolutionizing racing."
+        },
+        "group62":{
+            "id": 62,
+            "desc": "Popularization of autonomous driving<br/>Anyone can easily meet it anywhere."
+        },
+        "group63":{
+            "id": 63,
+            "desc": ""
+        },
+        "group64":{
+            "id": 64,
+            "desc": ""
+        },
+        "group65":{
+            "id": 65,
+            "desc": ""
+        },
+        "group66":{
+            "id": 66,
+            "desc": ""
+        },
+        "group67":{
+            "id": 67,
+            "desc": "The beginning of Formula Kart.<br/>The historic prelude unfolds."
+        },
+        "group68":{
+            "id": 68,
+            "desc": "Transformation of the truck is innocent!<br/>Now I run with the desire to win."
+        },
+        "group69":{
+            "id": 69,
+            "desc": "Shedding adults<br/>stretching horns with all their might and charging!"
+        },
+        "group70":{
+            "id": 70,
+             "desc": ""
+         },
+         "group71":{
+             "id": 71,
+             "desc": "Overwhelming body feeling that goes beyond utilitarianism<br/>Adds focus to racing with unique stability."
+         },
+         "group72":{
+             "id": 72,
+             "desc": "A spider running down the track<br/>wraps in victory, flashing webs."
+         },
+         "group73":{
+             "id": 73,
+             "desc": ""
+         }
     },
 
     "kartDescDepth": {
@@ -448,6 +848,572 @@
             "desc3": "Feb 02, 2023<br/> (pre-season)",
             "img": "/images/screenShots/img-lulu.webp",
             "alt": "secret toilet image"
-        }
+        },
+        "group24":{
+            "id": 24,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 Shop Purchase or Kartrider Dream Shop",
+            "desc2": "Design with the New York logo on it.",
+            "desc3": "09 Mar 2023",
+            "img": "/images/karts/img-kart45.webp",
+            "alt": "New York taxi image"
+        },
+        "group25":{
+            "id": 25,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 Shop Purchase or Kartrider Dream Shop",
+            "desc2": "As the name suggests, the front part has a drill. Because of this, the front length is a bit long.",
+            "desc3": "09 Mar 2023",
+            "img": "/images/karts/img-kart87.webp",
+            "alt": "drill image"
+        },
+        "group26":{
+            "id": 26,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 Shop Purchase (Porsche Collaboration)",
+            "desc2": "Slim design inspired by the Porsche 911 model.",
+            "desc3": "03/16/2023",
+            "img": "/images/karts/img-kart99.webp",
+            "alt": "911 Porsche image"
+        },
+        "group27":{
+            "id": 27,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 shop purchase",
+            "desc2": "There is a small Plasma logo on the front.",
+            "desc3": "03/30/2023",
+            "img": "/images/karts/img-kart53.webp",
+            "alt": "Plasma PT image"
+        },
+        "group28":{
+            "id": 28,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 shop purchase",
+            "desc2": "Cute design overall thanks to the sofa.",
+            "desc3": "04/13/2023",
+            "img": "/images/karts/img-kart97.webp",
+            "alt": "detective couch image"
+        },
+        "group29":{
+            "id": 29,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "Designed with the motif of the original Hound HT.",
+            "desc3": "11 May 2023",
+            "img": "/images/karts/img-kart61.webp",
+            "alt": "hound image"
+        },
+        "group30":{
+            "id": 30,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "Bright design in mint and white.",
+            "desc3": "11 May 2023",
+            "img": "/images/karts/img-kart105.webp",
+            "alt": "Image of milk delivery"
+        },
+        "group31":{
+            "id": 31,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase (BT21 collab)",
+            "desc2": "Gives a cute feeling in yellow color.",
+            "desc3": "05/18/2023",
+            "img": "/images/karts/img-kart103.webp",
+            "alt": "Image of BT21 camping bus"
+        },
+        "group32":{
+            "id": 32,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase (BT21 collab)",
+            "desc2": "Lavender color gives a sophisticated feel, and the design is similar to that of a New York taxi.",
+            "desc3": "25 May 2023",
+            "img": "/images/karts/img-kart104.webp",
+            "alt": "BT21 dream image"
+        },
+        "group33":{
+            "id": 33,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "A cute overall design with mint color and ice cream lying on the roof.",
+            "desc3": "25 May 2023",
+            "img": "/images/karts/img-kart95.webp",
+            "alt": "ice cream truck image"
+        },
+        "group34":{
+            "id": 34,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "Many elements of the original Specter X have been brought in. A wolf is drawn instead of a ghost on the side, and the basic paint color is bright blue to differentiate it.",
+            "desc3": "June 08, 2023",
+            "img": "/images/karts/img-kart76.webp",
+            "alt": "specter image"
+        },
+        "group35":{
+            "id": 35,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "Designed with the motif of the original Black Mark Z7.",
+            "desc3": "22 Jun 2023",
+            "img": "/images/karts/img-kart55.webp",
+            "alt": "blackmark image"
+        },
+        "group36":{
+            "id": 36,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 2 shop purchase",
+            "desc2": "Designed with the motif of the original Payra HT.",
+            "desc3": "06 Jul 2023",
+            "img": "/images/karts/img-kart41.webp",
+            "alt": "Payra Image"
+        },
+        "group37":{
+            "id": 37,
+            "title": "Acquisition",
+            "title2": "Features",
+            "title3": "Release Date",
+            "desc": "Season 1 shop purchase",
+            "desc2": "The Statue of Liberty in New York is drawn on the side, and it is slim but long in the front and back.",
+            "desc3": "09 Mar 2023",
+            "img": "/images/karts/img-kart66.webp",
+            "alt": "New York tour bus image"
+        },
+        "group38":{
+            "id": 38,
+            "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 shop purchase",
+             "desc2": "It was created with the motif of a unique all-in-one desk.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart68.webp",
+             "alt": "God of study image"
+         },
+         "group39":{
+             "id": 39,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 shop purchase",
+             "desc2": "It was created with a real roller as a motif.",
+             "desc3": "03/30/2023",
+             "img": "/images/karts/img-kart82.webp",
+             "alt": "roller scene image"
+         },
+         "group40":{
+             "id": 40,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 shop purchase",
+             "desc2": "A sharp, dark design.",
+             "desc3": "04/13/2023",
+             "img": "/images/karts/img-kart98.webp",
+             "alt": "Dark Guardian Image"
+         },
+         "group41":{
+             "id": 41,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 shop purchase",
+             "desc2": "It was created with the motif of the original schooner.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart29.webp",
+             "alt": "Schooner Image"
+         },
+         "group42":{
+             "id": 42,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 shop purchase",
+             "desc2": "It was created with the motif of the original Plasma FT.",
+             "desc3": "05/18/2023",
+             "img": "/images/karts/img-kart52.webp",
+             "alt": "Plasma FT image"
+         },
+         "group43":{
+             "id": 43,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 shop purchase",
+             "desc2": "The design of the Mercedes-AMG GT used as an actual F1 safety car was heavily referenced.",
+             "desc3": "June 01, 2023",
+             "img": "/images/karts/img-kart65.webp",
+             "alt": "Safety Image"
+         },
+         "group44":{
+             "id": 44,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 shop purchase",
+             "desc2": "There are no wheels because it is a shark concept cart body. Overall, it has a cool design.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart107.webp",
+             "alt": "shark hover image",
+             "type": "booster accelerated"
+         },
+         "group45":{
+             "id": 45,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Acquire L2 License",
+             "desc2": "Pink color design. It has the feel of the original Love Me Z7.",
+             "desc3": "10 May 2023",
+             "img": "/images/karts/img-kart51.webp",
+             "alt": "flower carriage image"
+         },
+         "group46":{
+             "id": 46,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Access from the PlayStation platform",
+             "desc2": "Designed with a comet muscle and only the basic color changed. The appearance is the same.",
+             "desc3": "Jan 12, 2023<br/> (pre-season)",
+             "img": "/images/karts/img-kart89.webp",
+             "alt": "Quantum Muscle Image"
+         },
+         "group47":{
+             "id": 47,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "access on the XBOX platform",
+             "desc2": "Designed with a comet muscle and only the basic color changed. The appearance is the same.",
+             "desc3": "Jan 12, 2023<br/> (pre-season)",
+             "img": "/images/karts/img-kart91.webp",
+             "alt": "cosmic muscle image"
+         },
+         "group48":{
+             "id": 48,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Porsche Collaboration Access Event",
+             "desc2": "It was created with the motif of the Porsche 718 Boxster model.",
+             "desc3": "03/16/2023",
+             "img": "/images/karts/img-kart100.webp",
+             "alt": "718 Boxster images"
+         },
+         "group49":{
+             "id": 49,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Racing Pass Level 10 General Reward",
+             "desc2": "It was created with the motif of the original Indust HT.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart22.webp",
+             "alt": "indust image"
+         },
+         "group50":{
+             "id": 50,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Racing Pass Level 20 Premium Reward",
+             "desc2": "Design that looks like a robot, artificial intelligence AI.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart75.webp",
+             "alt": "Smart Mobility Image"
+         },
+         "group51":{
+             "id": 51,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Racing Pass Level 30 General Reward",
+             "desc2": "It was created with the motif of the Porsche Macan GTS model.",
+             "desc3": "03/16/2023",
+             "img": "/images/karts/img-kart101.webp",
+             "alt": "Porsche Macan GTS image"
+         },
+         "group52":{
+             "id":52,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Racing Pass Level 40 Premium Reward",
+             "desc2": "Colorful shape design.",
+             "desc3": "03/16/2023",
+             "img": "/images/karts/img-kart85.webp",
+             "alt": "Nightwoofer Image"
+         },
+         "group53":{
+             "id": 53,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Racing Pass Level 10 General Reward",
+             "desc2": "The first cart body where the character is not centered when riding. It looks like a real excavator.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart94.webp",
+             "alt": "excavator image"
+         },
+         "group54":{
+             "id": 54,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Racing Pass Level 20 Premium Reward",
+             "desc2": "It was created with the motif of the original Stalker 9.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart49.webp",
+             "alt": "killer image"
+         },
+         "group55":{
+             "id": 55,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Racing Pass Level 30 General Reward",
+             "desc2": "It was created with the motif of KG Rexton Sports, which is also widely used as a real wreck car.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart64.webp",
+             "alt": "reca image"
+         },
+         "group56":{
+             "id": 56,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Racing Pass Level 40 Premium Reward",
+             "desc2": "It was created with the motif of the original black dragon.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart56.webp",
+             "alt": "black dragon image"
+         },
+         "group57":{
+             "id": 57,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 Racing Pass Level 10 General Reward",
+             "desc2": "As the name suggests, it is designed with a marine feel throughout.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart109.webp",
+             "alt": "marine image",
+             "type": "speed type"
+         },
+         "group58":{
+             "id": 58,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 Racing Pass Level 20 Premium Reward",
+             "desc2": "A cute design reminiscent of a flamingo tube.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart110.webp",
+             "alt": "flamingo image",
+             "type": "accelerated"
+         },
+         "group59":{
+             "id": 59,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 Racing Pass Level 30 General Reward",
+             "desc2": "Similar to the original GT 250.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart111.webp",
+             "alt": "GT60 image",
+             "type": "booster time type"
+         },
+         "group60":{
+             "id": 60,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 Racing Pass Level 40 Premium Reward",
+             "desc2": "It was created with the motif of the original Solar 9.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart108.webp",
+             "alt": "solar image",
+             "type": "booster accelerated"
+         },
+         "group61":{
+             "id": 61,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Achieving Season 1 Speed Grand Prix Gold",
+             "desc2": "Classic design worthy of the name.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart69.webp",
+             "alt": "Steam Classic Images"
+         },
+         "group62":{
+             "id": 62,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Speed Grand Prix Achieved Silver",
+             "desc2": "A design that only changes the color of the exterior of the smart mobility.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart93.webp",
+             "alt": "mass-produced mobility image"
+         },
+         "group63":{
+             "id": 63,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Achieving Season 2 Item Grand Prix Master",
+             "desc2": "Brown colors were used a lot.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart74.webp",
+             "alt": "wild dust image"
+         },
+         "group64":{
+             "id": 64,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Achieved Grand Prix Gold for Season 2 items",
+             "desc2": "Similar to the original dementor. Like its name, it looks like it will fly away.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart106.webp",
+             "alt": "Skyrocket image"
+         },
+         "group65":{
+             "id": 65,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Achieved Season 3 Speed Grand Prix Master",
+             "desc2": "The front looks like the original Vault 9.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart12.webp",
+             "alt": "bolt image",
+             "type": "booster accelerated"
+         },
+         "group66":{
+             "id": 66,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Achieving Season 3 Speed Grand Prix Gold",
+             "desc2": "The overall design is dark in color. It is equipped with warning lights like a police car.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart70.webp",
+             "alt": "KDI police truck image",
+             "type": "speed type"
+         },
+         "group67":{
+             "id": 67,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 1 Twitch drops reward",
+             "desc2": "It was created with the motif of the original F724.",
+             "desc3": "09 Mar 2023",
+             "img": "/images/karts/img-kart32.webp",
+             "alt": "F724 Image"
+         },
+         "group68":{
+             "id": 68,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Twitch drops reward",
+             "desc2": "The default color is yellow, and the body is rather large because it is a truck.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart96.webp",
+             "alt": "Racing truck image"
+         },
+         "group69":{
+             "id": 69,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 2 Twitch drops reward",
+             "desc2": "As the name suggests, a design reminiscent of a rhinoceros beetle.",
+             "desc3": "11 May 2023",
+             "img": "/images/karts/img-kart58.webp",
+             "alt": "Rocket Beetle Image"
+         },
+         "group70":{
+             "id": 70,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "title4": "type",
+             "desc": "Season 3 Twitch drops reward",
+             "desc2": "A design reminiscent of a carrier, as the name suggests.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart120.webp",
+             "alt": "carrier image",
+             "type": "Balanced"
+         },
+         "group71":{
+             "id": 71,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Racer point event commemorating the end of Kartrider service",
+             "desc2": "It was created with the motif of the original Solid PRO.",
+             "desc3": "Jan 12, 2023<br/> (pre-season)",
+             "img": "/images/karts/img-kart102.webp",
+             "alt": "solid pro image"
+         },
+         "group72":{
+             "id": 72,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Season 3 boost coupon",
+             "desc2": "It was created with the motif of the original spider.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart50.webp",
+             "alt": "Spider Image"
+         },
+         "group73":{
+             "id": 73,
+             "title": "Acquisition",
+             "title2": "Features",
+             "title3": "Release Date",
+             "desc": "Final Reward for Season 3 Catch Flag Event",
+             "desc2": "It was created with the motif of the original king octopus.",
+             "desc3": "July 13, 2023",
+             "img": "/images/karts/img-kart10.webp",
+             "alt": "Royal octopus image"
+         }
     }
 }

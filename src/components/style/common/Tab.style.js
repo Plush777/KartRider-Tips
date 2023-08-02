@@ -28,7 +28,6 @@ export const TabWrapInner = styled.div`
 
 export const TabInfo = styled.div`
     ${mixins.aic};
-    min-width: 125px;
     height: 50px;
     padding: 20px;
     box-sizing: border-box;

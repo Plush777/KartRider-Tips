@@ -54,21 +54,12 @@ export const RowList = styled.dl`
 
 export const Row = styled.div`
     display: flex;
-    column-gap: 85px;
-
-    &:lang(en){
-       column-gap: 55px;
-    }
 `
 
 export const RowTitle = styled.dt`
-    min-width: 76px;
+    width: 100%;
     font-size: ${({ theme }) => theme.fontSizes.f20};
     ${mixins.font('nexonLv1Gothic', 'var(--kartIntroHeadText)')};
-
-    &:lang(en){
-        min-width: 131px;
-    }
 
     ${({ theme }) => theme.tablet`
        font-size: ${({ theme }) => theme.fontSizes.f16};

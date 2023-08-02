@@ -110,6 +110,12 @@
             "itemDesc": "Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.Beep- Beep- Watch out for all the racers ahead of you!<br/>Temporarily run at high speed, and the racer you bump into will slip and spin.",
             "tip": "This item is exclusive to Factory Run.",
             "alt": "siren item"
+        },
+        "group14":{
+            "name" : "Mine",
+            "itemDesc": "Places a mine on the track. When the racer steps on the mine, the mine explodes and the cart floats in the air for a short time.",
+            "tip": "This item is exclusive to Flag War.",
+            "alt": "Mine item"
         }
     },
 

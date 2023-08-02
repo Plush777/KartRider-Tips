@@ -124,25 +124,45 @@ export const Table = styled.table`
 
         ${Head}{
             display: block;
+
+            ${CellHeader}{
+                &:first-of-type{
+                    border-top-left-radius: 4px;
+                }
+                
+                &:last-of-type{
+                    border-top-right-radius: 4px;
+                }
+            }
         }
 
-        ${CellHeader}{
-            &:first-of-type{
-                border-top-left-radius: 4px;
-            }
-            
-            &:last-of-type{
-                border-top-right-radius: 4px;
+        ${Body}{
+            ${Row}{
+                &:first-of-type{
+                    ${CellDescription}{
+                        &:last-of-type{
+                            border-bottom-left-radius: 4px;
+                        }
+                    }
+                }
+
+                &:last-of-type{
+                    ${CellDescription}{
+                        &:last-of-type{
+                            border-bottom-right-radius: 4px;
+
+                            span{
+                                border-bottom-right-radius: inherit;
+                            }
+                        }
+                    }
+                }
             }
         }
 
         ${CellDescription}{
             display: block;
             line-height: ${props => props.lineHeight ? '20px' : '35px'};
-
-            &:last-of-type{
-                border-bottom-right-radius: 4px;
-            }
         }
     }
 

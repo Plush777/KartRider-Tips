@@ -1,10 +1,97 @@
 {
     "skip": {
         "group1":{
-            "txt": "Go to the main"
+            "txt": "Shortcut to text"
         },
         "group2":{
-            "txt": "Go to the menu"
+            "txt": "menu shortcut"
         }
+    },
+
+    "settingTitles": {
+        "group1": {
+            "txt1": "Language settings",
+            "txt2": "Set font size",
+            "txt3": "Theme Settings"
+        }
+    },
+
+    "settingButtons": {
+        "group1": {
+            "btn1": "small",
+            "btn2": "default",
+            "btn3": "big"
+        },
+        "group2": {
+            "btn1": "light",
+            "btn2": "dark"
+        }
+    },
+
+    "util": {
+        "group1": {
+            "txt1": "community",
+            "txt2": "official homepage",
+            "txt3": "settings"
+        }
+    },
+
+    "video": {
+        "group1": {
+            "txt1": "How about this video?",
+            "txt2": "Meet recommended videos from KARTRIDER TIPS."
+        }
+    },
+
+    "start": {
+        "group1": {
+            "txt1": "For new karting riders",
+            "txt2": "Gives you a lot of information."
+        }
+    },
+
+    "copys": {
+        "group1": {
+            "txt": "2023 KATRIDER TIPS",
+            "alt": "Footer Kartrider Tips logo"
+        }
+    },
+
+    "rotate": {
+        "txt": "reverse card"
+    },
+
+    "bottomSheet": {
+        "txt1": "More",
+        "txt2": "close"
+    },
+
+    "clipBoard": {
+        "txt": "Copy current page URL to clipboard"
+    },
+
+    "topButton": {
+        "txt": "move up"
+    },
+
+    "mainSlide": {
+        "prev": "Previous",
+        "next": "Next",
+        "alt": "main slide image"
+    },
+
+    "trackTitle": {
+        "txt": "track"
+    },
+
+    "book": {
+        "prev": "Previous",
+        "next": "Next",
+        "unfold": "unfold"
+    },
+
+    "glossaryTitle": {
+        "detail1": "Speed",
+        "detail2": "Item"
     }
 }

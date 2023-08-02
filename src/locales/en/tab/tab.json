@@ -10,15 +10,15 @@
         },
         "group3":{
             "id": 3,
-            "name": "GP"
+            "name": "GrandPrix"
         },
         "group4":{
             "id": 4,
-            "name": "TA"
+            "name": "Time Attack"
         },
         "group5":{
             "id": 5,
-            "name": "Custom"
+            "name": "Custom Game"
         },
         "group6":{
             "id": 6,
@@ -50,6 +50,96 @@
         "group5":{
             "id": 5,
             "name": "Legend"
+        }
+    },
+
+    "track": {
+        "group1" :{
+            "id": 1,
+            "name": "Village"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "Desert"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "Forest"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "Ice"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "Mine"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "World Tour"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "Factory"
+        },
+        "group8" :{
+            "id": 8,
+            "name": "WKC"
+        },
+        "group9" :{
+            "id": 9,
+            "name": "Graveyard"
+        },
+        "group10" :{
+            "id": 10,
+            "name": "Moonhill"
+        }
+    },
+
+    "tech": {
+        "group1" :{
+            "id": 1,
+            "name": "Grip"
+        },
+        "group2" :{
+            "id": 2,
+            "name": "Drift"
+        },
+        "group3" :{
+            "id": 3,
+            "name": "Optimize"
+        },
+        "group4" :{
+            "id": 4,
+            "name": "Short full"
+        },
+        "group5" :{
+            "id": 5,
+            "name": "Combo"
+        },
+        "group6" :{
+            "id": 6,
+            "name": "Double"
+        },
+        "group7" :{
+            "id": 7,
+            "name": "Cutting"
+        },
+        "group8" :{
+            "id": 8,
+            "name": "Screw"
+        },
+        "group9" :{
+            "id": 9,
+            "name": "New cutting"
+        },
+        "group10" :{
+            "id": 10,
+            "name": "Long"
+        },
+        "group11" :{
+            "id": 11,
+            "name": "Spin-turn"
         }
     }
 }

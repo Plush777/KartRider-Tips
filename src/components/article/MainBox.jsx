@@ -26,7 +26,7 @@ const MainBox = () => {
                 <MainBoxstyled.MainBoxList>
                     {Object.keys(boxData.box).map((item, index) => {
                         return (
-                            <MainBoxstyled.MainBoxItems className={index > 2 && 'disabled'} key={index}>
+                            <MainBoxstyled.MainBoxItems key={index}>
                                 <Link href={routeFilter[index]} onClick={handleClick}>
                                     <MainBoxstyled.MainBoxInner>
                                         <MainBoxstyled.TxtBox>

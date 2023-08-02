@@ -62,6 +62,7 @@ import koWkc from 'locales/ko/track/wkc';
 import koGraveyard from 'locales/ko/track/graveyard';
 import koMoonhill from 'locales/ko/track/moonhill';
 import koGlossary from 'locales/ko/glossary/contents';
+import enGlossary from 'locales/en/glossary/contents';
 import koGrip from 'locales/ko/tech/grip';
 import koDrift from 'locales/ko/tech/drift';
 import koOptimize from 'locales/ko/tech/optimize';
@@ -128,7 +129,8 @@ const resources = {
             ...enTimeAttack,
             ...enCustomGame,
             ...enLicense,
-            ...enEvent
+            ...enEvent,
+            ...enGlossary
         }
     },
     ko: {

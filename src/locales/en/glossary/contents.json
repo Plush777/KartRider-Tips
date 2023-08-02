@@ -1,0 +1,180 @@
+{
+    "glossary": {
+        "speedTerm": {
+            "group1": {
+                "id": 1,
+                "detail": "NEAL Build: A build that aims to eventually reduce records by pioneering places that are not normally possible to go on a non-traditional road. A Taiwanese pro gamer named 'NEAL' is the first to do this kind of build. After finding it, it was named NEAL Build, and now, even if NEAL doesn't find it, if it goes on an unusual path, it will be named NEAL Build."
+            },
+            "group2": {
+                "id": 2,
+                "detail": "drip, drip: drift."
+            },
+            "group3": {
+                "id": 3,
+                "detail": "Draft: Draft."
+            },
+            "group4": {
+                "id": 4,
+                "detail": "Shovel: Crashing into a wall, for example digging too hard an incourse."
+            },
+            "group5": {
+                "id": 5,
+                "detail": "Sapkill: When an opponent in front collides with a wall, but fails to avoid it and collides with the opponent who collided with the wall. Or deliberately colliding in-course to check the rank behind."
+            },
+            "group6": {
+                "id": 6,
+                "detail": "Sondeal: This is a self-deprecating term among users when the booster delay is so short that it is mistaken for a no-deal due to the fast multi-hit speed."
+            },
+            "group7": {
+                "id": 7,
+                "detail": "Nodeal: Pressing the booster key automatically using the 'No Delay' macro program. This reduces the delay between boosters, and when the delay is reduced, the deceleration during that time is consequently reduced. It is also a subject of much controversy because it is reduced."
+            },
+            "group8": {
+                "id": 8,
+                "detail": "Lip: Instantaneous booster."
+            },
+            "group9": {
+                "id": 9,
+                "detail": "Stop, stopcart: An act of intentionally stopping a cart to induce a collision in order to check the opponent in the back. In the past, it was bad manners, but now, if not stopping at all, it is recognized as a physical fight. Even in the league, it is backward. As long as you don't press a key, it's allowed."
+            },
+            "group10": {
+                "id": 10,
+                "detail": "Playground: A wide, mostly flat track. This makes it easy to poke around."
+            },
+            "group11": {
+                "id": 11,
+                "detail": "Ghost: If the player's Internet connection is unstable, the Kartrider system creates an afterimage of the player with the acceleration at the time of disconnection to make it look natural in terms of visuals. there is."
+            },
+            "group12": {
+                "id": 12,
+                "detail": "One-Two: One team finishes 1st and 2nd in a row in a speed team match. Even if the opposing team finishes 3-4-5-6 and 2 of our team fail to finish, we can win. "
+            },
+            "group13": {
+                "id": 13,
+                "detail": "Operation: Physically wrestling down an opponent's rank in a speed teamfight chain."
+            },
+            "group14": {
+                "id": 14,
+                "detail": "Title: Straight booster. A physical fighting technique that simply hits an opponent who is turning a corner in a straight line without turning the curve."
+            },
+            "group15": {
+                "id": 15,
+                "detail": "Keysug: When you hit a wall because the keyboard wasn't recognized even though you pressed it, or you lost your line because you couldn't drift."
+            },
+            "group16": {
+                "id": 16,
+                "detail": "Timbu: Teamfight booster (power booster)."
+            },
+            "group17": {
+                "id": 17,
+                "detail": "Team Deal, Deal: The waiting time for normal boosters to change to team boosters during speed team fights. During this waiting period, boosters cannot be used. It is important to use the slot changer at the right time to minimize delay. ."
+            },
+            "group18": {
+                "id": 18,
+                "detail": "Tok: A technique that accelerates the cart body by dragging the drift for a long time in the corner section."
+            },
+            "group19": {
+                "id": 19,
+                "detail": "Tubu: A technique to bring the line as far as possible to the center of the bend and pass it while using the booster in sections where you can go stably by turning off the booster, such as compound bends or sections with multiple sharp bends at 90 degrees. Pros also It is a skill that is very difficult to use. The tracks that mainly have the Tubu section include the Norteille Express, the desert round and round construction site, and the winding downhill in the mine."
+            }
+        },
+        "itemTerm": {
+            "group1":{
+                "id": 1,
+                "detail": "Scratch, Scratch, Scrape: An act of sweeping all item boxes in a line by one person, a kind of bad manners that prevents other users from acquiring items<br/>."
+            },
+            "group2":{
+                "id": 2,
+                "detail": "Tight Water: The track before the normal item is wider than the water bomb range, so if you drive on both ends (sides), you can avoid water bomb attacks.<br/>But if the road is not wide, the water bomb There are cases where it falls within the range, and it is a word that refers to this."
+            },
+            "group3":{
+                "id": 3,
+                "detail": "Aloft: A call to indicate when a missile hit will lift you into the air."
+            },
+            "group4":{
+                "id": 4,
+                "detail": "Sangcheon: Means the opponent used an angel."
+            },
+            "group5":{
+                "id": 5,
+                "detail": "End: The act of shooting a missile at the end of the game when 1st place finished.<br/>In the original Kartrider 1, it was a bad manners."
+            },
+            "group6":{
+                "id": 6,
+                "detail": "Eakcheon: To use immediately upon obtaining an angel."
+            },
+            "group7":{
+                "id": 7,
+                "detail": "Water: A water bomb or water fly item, a notification that you have been hit by a water bomb or water fly.<br/>However, in the case of a water fly, it is said to be a fly, so it is more commonly used to refer to water bombs."
+            },
+            "group8":{
+                "id": 8,
+                "detail": "Teamwater: A term used to refer to a teammate's water bomb."
+            },
+            "group9":{
+                "id": 9,
+                "detail": "Distance: The distance at which the water bomb is thrown. Usually, it depends on the sense, but among the dead people, memorize the distance by track and position<br/> and throw the water bomb. Or, when there is a large difference in distance, It can also be expressed as a few differences."
+            },
+            "group10":{
+                "id": 10,
+                "detail": "Buzzed: A case in which a missile or magnet item is being aimed, but fails to aim and the item is blown away.<br/>It is expressed as “the missile is beeping”, “the magnet is beeping”, etc."
+            },
+            "group11":{
+                "id": 11,
+                "detail": "Like or Trace: Just aiming at a missile or magnetic item."
+            },
+            "group12":{
+                "id": 12,
+                "detail": "Barri: A barricade item."
+            },
+            "group13":{
+                "id": 13,
+                "detail": "Bar: Banana items."
+            },
+            "group14":{
+                "id": 14,
+                "detail": "Burn: Thunderbolt item. The official name is Thunderbolt, but it is called Lightning for convenience."
+            },
+            "group15":{
+                "id": 15,
+                "detail": "Wall Beauty: Shooting a missile through a wall. When the aiming point turns red, it fires at the enemy through walls or obstacles."
+            },
+            "group16":{
+                "id": 16,
+                "detail": "Sucking: If you hit a magnet item, or if your opponent uses a magnet item."
+            },
+            "group17":{
+                "id": 17,
+                "detail": "Sensil: Abbreviation for center shield, the act of anticipating an opponent's attack and using the shield in advance. It is mainly used in narrow tight sections,<br/>before shortcuts, jump sections, and before the finish line."
+            },
+            "group18":{
+                "id": 18,
+                "detail": "Cloth: An angel item. Also used to ask team members to use an angel item when briefing."
+            },
+            "group19":{
+                "id": 19,
+                "detail": "Egg (R): Called R for convenience because the default rearrangement is R. Used to drag opponents back when they suck a magnet in front of the finish line."
+            },
+            "group20":{
+                "id": 20,
+                "detail": "Ilmi: Short for first class missile, meaning that the missile was fired at the first class. Ilpa (first class water fly) has the same meaning.<br/>(In the original work, the first class missile item is sometimes shortened. )"
+            },
+            "group21":{
+                "id": 21,
+                "detail": "Inpa: Since bananas are laid on the in-course, it means to dig the line outside so that you don't step on it."
+            },
+            "group22":{
+                "id": 22,
+                "detail": "Jjabu: Combining magnets and boosters."
+            },
+            "group23":{
+                "id": 23,
+                "detail": "Calmul: A water bomb that falls right over your head. A must-have technique when using a water bomb because it's hard to react."
+            },
+            "group24":{
+                "id": 24,
+                "detail": "Termination: The official name is electromagnetic waves, but for convenience it is called space termination or termination."
+            }
+        }
+    }
+}
