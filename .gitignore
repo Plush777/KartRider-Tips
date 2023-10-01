@@ -1,5 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# out (chrome extension build)
+/out
+
+# extension
+extension/*
+!extension/manifest.json
+
 # dependencies
 /node_modules
 /.pnp

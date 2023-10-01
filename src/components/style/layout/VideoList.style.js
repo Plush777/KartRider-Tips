@@ -2,19 +2,20 @@ import styled from 'styled-components';
 import mixins from 'components/style/mixins';
 
 export const Box = styled.div`
-    margin-top: 150px;
     &+&{margin-top: 150px;}
 
     ${({ theme }) => theme.laptop`
         margin-top: 100px;
 
-        &+&{margin-top: 100px;}
+        &+&{margin-top: 120px;}
     `};
 
     ${({ theme }) => theme.tablet`
         margin-top: 70px;
+    `};
 
-        &+&{margin-top: 70px;}
+    ${({ theme }) => theme.mobile`
+        margin-top: 0;
     `};
 `
 
@@ -27,13 +28,6 @@ export const Title = styled.h2`
 
     &:lang(ja){
         &::before{top: 4px;}
-    }
-
-    >div{margin-right: 7px;
-        svg{
-            width: 45px !important;
-            height: 45px !important;
-        }
     }
 
     ${({ theme }) => theme.laptop`
@@ -54,6 +48,57 @@ export const Title = styled.h2`
             height: 26px;
             background-size: 26px;
         }
+
+        margin-bottom: 10px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        flex-direction: column;
+    `};
+`
+
+export const TitleBox = styled.div`
+    position: relative;
+    width: 100%;
+    ${mixins.aic};
+
+    .lottieWrapper{
+        position: absolute;
+        top: -6px;
+        width: 45px;
+        height: 45px;
+
+        >div{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .text{padding-left: 55px;}
+
+    ${({ theme }) => theme.tablet`
+        .lottieWrapper {
+            width: 40px;
+            height: 40px;
+            top: -9px;
+
+            &.fire{
+                top: -20px;
+                left: -13px;
+                width: 55px;
+                height: 45px;
+
+                ~.text{padding-left: 40px;}
+            }
+
+            &.news{
+                left: -7px;
+
+                ~.text{padding-left: 40px;}
+            }
+        }
+
+        .text{padding-left: 50px;}
     `};
 `
 
@@ -124,7 +169,6 @@ export const BottomDescription = styled.p`
 
 export const Group = styled.ul`
     display: ${props => props.display};
-    align-items: center;
     grid-template-columns: ${props => props.gtc};
     column-gap: 20px;
     row-gap: ${props => props.rg};
@@ -169,4 +213,87 @@ export const Link = styled.a`
             ${Img}{transform: scale(1.05);}
         }
     }
+`
+
+export const ArticleWrap = styled.div`
+    border-top: 2px solid var(--title);
+`
+
+export const ArticleList = styled.ul`
+`
+
+export const nameDivision = styled.div`
+    ${mixins.aic};
+    justify-content: space-between;
+
+    ${({ theme }) => theme.tablet`
+        flex-direction: column;
+
+        .eps{
+            &.type01{
+                margin-top: 10px;
+                white-space: initial;
+               
+                >*{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    `};
+`
+
+export const InnerDivision = styled.div`
+    ${mixins.aic};
+
+    ${({ theme }) => theme.tablet`
+        width: 100%;
+    `};
+`
+
+export const ArticleLink = styled.a`
+    ${mixins.aic};
+    padding: 67.2px 32px;
+    border-bottom: 1px solid var(--infoStroke);
+    background-color: transparent;
+
+    ${({ theme }) => theme.tablet`
+        padding: 50px 0;
+    `};
+`
+
+export const ArticleCategory = styled.strong`
+    min-width: 80px;
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSizes.f20};
+    color: var(--activeColor);
+
+    ${({ theme }) => theme.tablet`
+        min-width: 57px;
+        font-size: ${({ theme }) => theme.fontSizes.f16};
+    `};
+`
+
+export const ArticleTitle = styled.p`
+    font-weight: 600;
+    font-size: ${({ theme }) => theme.fontSizes.f24};
+    color: var(--title);
+
+    ${({ theme }) => theme.tablet`
+        font-size: ${({ theme }) => theme.fontSizes.f20};
+        word-break: keep-all;
+        line-height: 30px;
+    `};
+`
+
+export const ArticleDate = styled.span`
+    white-space: nowrap;
+    color: var(--videoDesc);
+
+    ${({ theme }) => theme.tablet`
+        ${props => props.mobileDisplay && `display: none;`}
+        margin-top: 3px;
+        font-size: ${({ theme }) => theme.fontSizes.f12};
+    `};
 `

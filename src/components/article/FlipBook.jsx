@@ -4,15 +4,8 @@ import parse from 'html-react-parser';
 import { useEffect, useState } from "react";
 import * as Buttonstyled from "components/style/common/Button.style";
 import { useTranslation } from 'react-i18next';
-import { M768, Min768 } from "components/style/mobile/MediaQuery";
 import * as Bookstyled from "components/style/mobile/Book.style";
-import Portal from "components/layout/Portal";
-import SCarrowNext from 'svg/ico-arrow-slide-next.svg';
-import SCarrowPrev from 'svg/ico-arrow-slide-prev.svg';
-import SCclose from 'svg/ico-close.svg';
 import glossaryData from "locales/ko/glossary/contents.json";
-import etc from "locales/ko/etc/etc.json"
-import i18next from 'i18next';
 
 const FlipBook = () => {
 

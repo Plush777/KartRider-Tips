@@ -60,11 +60,10 @@ const ShortFullContents = ({ shortFullData }) => {
                                 <Substyled.SmallTitle type02 bullet>{parse(t(`short.group5.subTitle2`))}</Substyled.SmallTitle>
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/cc15551c-b523-4e3f-856a-5ad2f19fc707" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/cc15551c-b523-4e3f-856a-5ad2f19fc707" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
 
@@ -95,11 +94,10 @@ const ShortFullContents = ({ shortFullData }) => {
                                 <Substyled.SmallTitle type02 bullet>{parse(t(`full.group4.subTitle2`))}</Substyled.SmallTitle>
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/c8227718-49a7-4463-972b-3646087a0885" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/c8227718-49a7-4463-972b-3646087a0885" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
 
@@ -130,11 +128,10 @@ const ShortFullContents = ({ shortFullData }) => {
                                 <Substyled.SmallTitle type02 bullet>{parse(t(`shortfull.group2.desc4`))}</Substyled.SmallTitle>
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/38e27e1f-255d-462d-a775-5621ed65f603" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/38e27e1f-255d-462d-a775-5621ed65f603" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

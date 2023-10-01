@@ -379,6 +379,7 @@ export const ImgBox = styled.figure`
     margin-top: ${(props) => props.mt};
 
     ${props => props.iframeRes && css`
+        display: ${props => props.activeDisplay};
         position: relative;
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
@@ -750,7 +751,6 @@ export const ColorDiv = styled.div`
 `
 
 export const VideoFrame = styled.iframe`
-    display: ${props => props.activeDisplay};
     position: absolute;
     top: 0;
     left: 0;

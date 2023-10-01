@@ -38,8 +38,9 @@
 
     "video": {
         "group1": {
-            "txt1": "이런 영상은 어때요?",
-            "txt2": "KARTRIDER TIPS의 추천 영상들을 만나보세요."
+            "txt1": "최신 영상들을 만나보세요.",
+            "txt2": "KARTRIDER TIPS의 추천 영상들을 만나보세요.",
+            "txt3": "최신 뉴스들을 확인해보세요."
         }
     },
 
@@ -93,5 +94,10 @@
     "glossaryTitle": {
         "detail1": "스피드전",
         "detail2": "아이템전"
+    },
+
+    "rssState": {
+        "error": "데이터를 불러오는데 실패했어요.",
+        "loading": "데이터를 불러오는 중이에요..."
     }
 }

@@ -2,11 +2,14 @@
 const withImages = require('next-images');
 
 const nextConfig = {
+    // output: 'export',
     experimental: {
         appDir: true,
+        scrollRestoration: true,
     },
     images: {
-        disableStaticImages: true
+        disableStaticImages: true,
+        unoptimized: true
     },
     compiler: {
         styledComponents: true,
@@ -23,7 +26,15 @@ const nextConfig = {
 
         return config;
     },
-    withImages
+    withImages,
+    async rewrites() {
+        return [
+            {
+                source: "/api/:path*",
+                destination: "https://openapi.naver.com/:path*"
+            },
+        ];
+    }
 };
 
 module.exports = nextConfig;

@@ -66,10 +66,9 @@ const ScrewContents = ({ screwData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key1.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/f85c4de4-a922-499e-a712-fb647098a39b" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/f85c4de4-a922-499e-a712-fb647098a39b" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

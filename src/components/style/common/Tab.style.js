@@ -127,8 +127,15 @@ export const TabListSwipe = styled(Swiper)`
     overflow: hidden;
     width: 100%;
 
+    &.touchMoveActive{
+        .swiper-wrapper{
+            transition-duration: 300ms !important;
+        }
+    }
+
     .swiper-wrapper{
         display: flex;
+        transition-duration: 0ms !important;
     }
 
     .swiper-slide{

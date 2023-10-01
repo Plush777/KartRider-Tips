@@ -61,11 +61,9 @@ const LongDriftContents = ({ longDriftData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key5.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/7bb5f490-a4e9-4769-ae6b-fccd5dc4a501" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/7bb5f490-a4e9-4769-ae6b-fccd5dc4a501" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

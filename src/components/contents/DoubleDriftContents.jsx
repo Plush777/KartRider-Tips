@@ -66,10 +66,9 @@ const DoubleDriftContents = ({ doubleDriftData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key3.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/48e8f4df-8699-46fd-9425-7d533f41b4cf" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/48e8f4df-8699-46fd-9425-7d533f41b4cf" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

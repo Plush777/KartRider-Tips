@@ -71,11 +71,9 @@ const SpinTurnContents = ({ spinturnData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/88695ea8-d1b5-4857-93c7-4f89cd485d1a" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/88695ea8-d1b5-4857-93c7-4f89cd485d1a" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

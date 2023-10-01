@@ -61,10 +61,9 @@ const DriftContents = ({ driftData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/7df3adbc-3d23-4e7d-8c07-f34cbfbed2fb" allowFullscreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/7df3adbc-3d23-4e7d-8c07-f34cbfbed2fb" allowFullscreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
 
@@ -73,11 +72,10 @@ const DriftContents = ({ driftData }) => {
                                 <Substyled.SmallTitle>{t(`techDrift.group6.title`)}</Substyled.SmallTitle>
                                 <Substyled.SmallDesc>{parse(t(`techDrift.group6.desc`))}</Substyled.SmallDesc>
                             </Substyled.GroupBox>
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/b933eeb6-268c-4448-8ba3-0bd48c360df6" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/b933eeb6-268c-4448-8ba3-0bd48c360df6" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

@@ -1,6 +1,12 @@
 {
   "short_name": "Kart Tips",
-  "name": "KartRider Tips",
+  "name": "KartRider Tips Extension",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+      "newtab": "index.html"
+  },
+  "permissions": ["storage"],
   "icons":[
     {
       "src":"/android-icon-36x36.png",

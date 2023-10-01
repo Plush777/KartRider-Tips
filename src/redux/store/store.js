@@ -38,7 +38,8 @@ let selectIndex = createSlice({
     initialState: {
         kartIndex: 0,
         characterIndex: 0,
-        langIndex: 0
+        langIndex: 0,
+        channelIndex: 0
     },
 
     reducers: {

@@ -13,7 +13,7 @@ export default function RouterScrollProvider(){
     let routerScroll = useSelector(state => state.routerScroll);
 
     useEffect(() => {  
-		if(pathname === '/main'){ 
+		if(pathname.startsWith === '/main'){ 
 			dispatch(setRouterScroll(true));
 		} else {
             dispatch(setRouterScroll(false));

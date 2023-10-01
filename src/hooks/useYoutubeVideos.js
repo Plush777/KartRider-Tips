@@ -4,14 +4,13 @@ import axios from 'axios';
 const useYoutubeVideos = () => {
 
     const [videos, setVideos] = useState([]);
+    const [videoError, setVideoError] = useState();
+    const [videoIsLoading, setVideoIsLoading] = useState(true);
     const [videoIds] = useState([
-        'p8cn-0vpd4k&t=1',
-        '1hys9xKxUbo&t=1s',
-        'pVmspvQ4nrU&t=2s',
-        'xGrlxJaGn64',
+        'DtnAsdTSNXY',
         'KX5dAdwy1Xg&t=1s',
-        'WcM4R22Z7lE&t=2s',
         'PlELSGybTAU&t=80s',
+        'WcM4R22Z7lE&t=2s',
         'Dw0hqjbV0W4&t=3s',
         'P2211wKunWc&t=51s'
     ]);
@@ -23,7 +22,10 @@ const useYoutubeVideos = () => {
                 const responses = await Promise.all(videoUrls.map(url => axios.get(url)));
                 const videos = responses.map(response => response.data.items);
                 setVideos(videos);
+                setVideoIsLoading(false);
             } catch (error) {
+                setVideoError(error);
+                setVideoIsLoading(false);
                 console.error(error);
             }
         };
@@ -31,7 +33,7 @@ const useYoutubeVideos = () => {
         fetchVideos();
     }, [videoIds]);
 
-    return videos;
+    return { videos, videoError, videoIsLoading }
 }
 
 export default useYoutubeVideos;

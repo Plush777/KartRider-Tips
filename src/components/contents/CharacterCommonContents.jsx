@@ -50,7 +50,8 @@ const CharacterCommonContents = ({ characterCommon }) => {
 
                         {/* 모바일 카드 */}
                         <M768>
-                            <Select setCardRotateState={setCardRotateState}/>
+                            <Select setCardRotateState={setCardRotateState} width="100%" height="36px" padding="12px" border="1px solid var(--mobileSelectStroke)"
+                            radius="4px" color="var(--mobileSelectText)" fontSize="0.875rem" marginTop="16px" marginBottom="25px"/>
 
                             <Cardstyled.CardList>
                                 <Cardstyled.CardItemBox className={cardRotateState}>

@@ -73,6 +73,12 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 ::-webkit-scrollbar-thumb {border: solid transparent; background-clip: padding-box; 
 border-radius: 8px; background-color: var(--scrollbar);}
 
+.eps{width: 100%; max-width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+    &.type01{display: table; table-layout: fixed; width: 100%; white-space: nowrap;
+        >*{display: table-cell; overflow: hidden; text-overflow: ellipsis;}
+    }
+}
+
 .scY{overflow-y: auto;
   &::-webkit-scrollbar {width: 5px;}
   &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar);}

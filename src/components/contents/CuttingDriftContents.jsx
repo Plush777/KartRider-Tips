@@ -61,10 +61,9 @@ const CuttingDriftContents = ({ cuttingDriftData }) => {
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key4.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
 
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/83d51895-3e7c-42bd-bd8b-822ee82169c9" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/83d51895-3e7c-42bd-bd8b-822ee82169c9" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

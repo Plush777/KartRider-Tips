@@ -3,19 +3,31 @@ import mixins from 'components/style/mixins';
 
 export const SelectArea = styled.div`
     position: relative;
-    margin-top: ${props => props.type01 && '16px'};
-    margin-bottom: ${props => props.type01 && '25px'};
-    width: ${props => props.type01 && '100%'};
+    margin-top: ${props => props.marginTop};
+    margin-bottom: ${props => props.marginBottom};
+    width: ${props => props.width};
+
+    ${props => props.type === 'pc' && `
+        ${SelectTxt} ~ svg{
+            width: 24px !important;
+            height: 24px !important;
+        }
+    `}
+
+    ${({ theme }) => theme.mobile`
+        width: 100%;
+        margin-top: 15px;
+    `};
 `
 
 export const Select = styled.button.attrs({ type: 'button' })`
     ${mixins.aic};
     justify-content: space-between;
-    width: ${props => props.type01 ? '100%' : '80px'};
-    height: ${props => props.type01 ? '36px' : '28px'};
-    padding: ${props => props.type01 ? '12px' : '5px 5px 5px 10px'};
-    border: 1px solid ${props => props.type01 ? 'var(--mobileSelectStroke)' : '#333'};
-    border-radius: 4px;
+    width: ${props => props.width};
+    height: ${props => props.height};
+    padding: ${props => props.padding};
+    border: 1px solid ${props => props.border};
+    border-radius: ${props => props.radius};
     background-color: var(--mobileSelectBg);
 
     svg{
@@ -24,17 +36,19 @@ export const Select = styled.button.attrs({ type: 'button' })`
         }
     }
 
+    ${({ theme }) => theme.mobile`
+        width: 100%;
+    `};
+
     ${({ theme }) => theme.small`
-        min-width: ${props => !props.type01 && '70px'};
-        width: ${props => !props.type01 && 'auto'};
-        padding: ${props => !props.type01 && '0 7px'};
+        padding: ${props => props.padding && '0 7px'};
     `};
 `
 
 export const SelectTxt = styled.span`
     font-family: 'nexonLv1Gothic';
-    color: ${props => props.type01 ? 'var(--mobileSelectText)' : '#333'};
-    font-size: ${props => props.type01 ? '0.875rem' : '0.75rem'};
+    color: ${props => props.color};
+    font-size: ${props => props.fontSize};
 
     ${({ theme }) => theme.small`
          font-size: ${({ theme }) => theme.fontSizes.f11};
@@ -47,8 +61,8 @@ export const OptionList = styled.ul`
     left: 0;
     top: ${props => props.top};
     width: 100%;
-    border: 1px solid ${props => props.type01 ? 'var(--mobileSelectStroke)' : '#333'};
-    border-radius: 4px;
+    border: 1px solid ${props => props.border};
+    border-radius: ${props => props.radius};
     background-color: var(--mobileSelectBg);
     padding: 6px 12px;
     max-height: ${props => props.maxHeight};
@@ -63,13 +77,12 @@ export const OptionItem = styled.li`
 `
 
 export const OptionTxt = styled.span`
-    display: ${props => props.type02 ? 'flex' : 'block'};
-    align-items: ${props => props.type02 && 'center'};
+    ${mixins.aic};
     width: 100%;
-    height: ${props => props.type02 && '100%'};
+    height: 100%;
     font-family: 'nexonLv1Gothic';
-    color: ${props => props.type01 ? 'var(--mobileSelectText)' : '#333'};
-    font-size: ${props => props.type01 ? '0.875rem' : '0.75rem'};
+    color: ${props => props.color};
+    font-size: ${props => props.fontSize};
 
     >a{
         width: 100%;

@@ -10,19 +10,21 @@ export const useSelect = () => {
         {
             kart: '프로토',
             character: '배찌',
-            lang: '한국어'
+            lang: '한국어',
+            channel: '리버스'
         }
     );
 
     const handleSelectClick = (key, e) => {
         setSelected(prev => {
             return {
-            ...prev,
+                ...prev,
                 [key]: e.target.textContent
             }
         });
         dispatch(setRouterScroll(false));
         setToggle(false);
+        localStorage.setItem(key, e.target.textContent);
     };
 
     const handleToggleSelect = () => {

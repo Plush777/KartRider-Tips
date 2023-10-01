@@ -3,7 +3,6 @@
 import SCtopArrow from "svg/ico-top-arrow.svg"
 import * as Stickystyled from "components/style/common/Sticky.style"
 import useSticky from "hooks/useSticky"
-import etc from 'locales/ko/etc/etc.json'
 import { useTranslation } from 'react-i18next';
 
 const BtnTop = () => {

@@ -11,15 +11,13 @@ import { setRouterScroll } from 'redux/store/store';
 import { M768 } from 'components/style/mobile/MediaQuery';
 import Select from 'components/mobile/Select';
 import * as Previewstyled from 'components/style/mobile/Preview.style';
-import useImageLoading from 'hooks/useImageLoading';
-import ImgSkeleton from 'components/article/ImgSkeleton';
 import BtnClipBoard from 'components/article/BtnClipBoard';
 import ClipBoardAlert from 'components/article/ClipBoardAlert';
 import { Min768 } from 'components/style/mobile/MediaQuery';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import useScrollPosition from 'hooks/useScrollPosition';
+import useWindowScroll from 'hooks/useWindowScroll';
 
 const KartbodyCommonContents = ({ kartData , params }) => {
 
@@ -27,11 +25,10 @@ const KartbodyCommonContents = ({ kartData , params }) => {
     let kartDescDepth = Object.keys(kartData.kartDescDepth).map((item,index) => kartData.kartDescDepth[item]);
     let dispatch = useDispatch();
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
-    const [loading, handleLoad] = useImageLoading();
     const listId = params.listId;
     const [activeIndex, setActiveIndex] = useState(null);
-    const { divRef, handleScroll } = useScrollPosition();
-
+    const { handleScroll } = useWindowScroll();
+   
     const handleScrollState = () => {
         dispatch(setRouterScroll(false));
     }
@@ -89,26 +86,26 @@ const KartbodyCommonContents = ({ kartData , params }) => {
         61 ~ : 270 * 251
     */
     const widthCondition = (width) => {
-        if (listId >= 1 && listId <= 56) {
-            return width;
-        } else if (listId >= 61) {
-            return width;
-        } else {
-            return '';
-        }
+        if (listId >= 1 && listId <= 56) return width;
+            
+        if (listId >= 61) return width;
+            
+        return '';
     }
 
     const heightCondition = (height) => {
-        if (listId >= 1 && listId <= 56) {
-            return height;
-        } else if (listId >= 61) {
-            return height;
-        } else {
-            return '';
-        }
+        if (listId >= 1 && listId <= 56) return height;
+            
+        if (listId >= 61) return height;
+       
+        return '';
     }
 
-    const listIdCondition = listId >= 57 && listId <= 60
+    const listIdCondition = listId >= 57 && listId <= 60;
+
+    useEffect(() => {
+        handleScroll();
+    }, [params]);
 
     return ( 
         <>
@@ -126,7 +123,7 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                     
                     <Tabstyled.TabWrap mt="20px">
                         <Tabstyled.TabInner>
-                            <Tabstyled.TabList ref={divRef} onScroll={handleScroll}>
+                            <Tabstyled.TabList>
                                 {Object.keys(kartData.kartName).map((items,index) => {
                                     const itemId = kartData.kartName[items].id;
                                     const isActive = activeIndex === index ;
@@ -153,7 +150,8 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                     </Tabstyled.TabWrap>
 
                     <M768>
-                        <Select/>
+                        <Select width="100%" height="36px" padding="12px" border="1px solid var(--mobileSelectStroke)"
+                        radius="4px" color="var(--mobileSelectText)" fontSize="0.875rem" marginTop="16px" marginBottom="25px"/>
                         
                         <Previewstyled.Wrap>
                             <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt}
@@ -197,7 +195,6 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                                 </Tabstyled.TabContent>
 
                                 <Tabstyled.TabContent>
-                                   
                                     <Introstyled.PreviewArea>
                                         <Image src={kartDescDepth[listId - 1].img} alt={kartDescDepth[listId - 1].alt} 
                                         width={listIdCondition ? sizeMap[listId].width: widthCondition('270')} 

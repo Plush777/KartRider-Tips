@@ -61,11 +61,10 @@ const OptimizeContents = ({ optimizeData }) => {
                                 <Substyled.SmallTitle type02>{parse(t(`techOptimize.group5.subTitle2`))}</Substyled.SmallTitle>
                                 <Substyled.CommonImg width="277px" height="115px" src='../../../images/common/img-key2.webp' alt="" className='transparent custom'/>
                             </Substyled.GroupBox>
-
-                            <Substyled.ImgBox mt="20px" iframeRes>
-                                {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
-                                <Substyled.VideoFrame src="https://www.veed.io/embed/f7cd7273-a3ce-430b-bac8-03aac3c4159b" allowFullScreen
-                                activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}/>
+                            
+                            {loading && <ImgSkeleton mwd="none" pt="56.312"/>}
+                            <Substyled.ImgBox mt="20px" iframeRes activeDisplay={loading ? 'none' : 'block'} onLoad={handleLoad}>
+                                <Substyled.VideoFrame src="https://www.veed.io/embed/f7cd7273-a3ce-430b-bac8-03aac3c4159b" allowFullScreen/>
                             </Substyled.ImgBox>
                         </Substyled.ImgWrap>
                     </div>

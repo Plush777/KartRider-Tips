@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "components/style/theme";
 
 /* https://loading.io/css/ */
 

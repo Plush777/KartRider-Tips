@@ -14,7 +14,6 @@ import SCarrowSlidePrev from 'svg/ico-arrow-slide-prev.svg';
 import { useState , useEffect } from 'react';
 import parse from 'html-react-parser';
 import { useTranslation } from 'react-i18next';
-import etc from 'locales/ko/etc/etc.json';
 
 const Visual = () => {
 
@@ -68,7 +67,7 @@ const Visual = () => {
 
                     <SwiperSlide>
                         <Visualstyled.VisualInner>
-                            <Visualstyled.ImgStyle src="images/bg/bg-visual-01.webp" alt={t(`mainSlide.alt`)}/>
+                            <Visualstyled.ImgStyle src="/images/bg/bg-visual-01.webp" alt={t(`mainSlide.alt`)}/>
                             <VisualCenterstyled.VisualCenterWrap>
                                 <VisualCenterstyled.VtxtArea>
                                     <VisualCenterstyled.Vtitle>{parse(t(`slide.group1.title`))}</VisualCenterstyled.Vtitle>
@@ -80,7 +79,7 @@ const Visual = () => {
 
                     <SwiperSlide>
                         <Visualstyled.VisualInner>
-                            <Visualstyled.ImgStyle src="images/bg/bg-visual-02.webp" alt={t(`mainSlide.alt`)}/>
+                            <Visualstyled.ImgStyle src="/images/bg/bg-visual-02.webp" alt={t(`mainSlide.alt`)}/>
                             <VisualCenterstyled.VisualCenterWrap>
                                 <VisualCenterstyled.VtxtArea>
                                     <VisualCenterstyled.Vtitle>{parse(t(`slide.group2.title`))}</VisualCenterstyled.Vtitle>

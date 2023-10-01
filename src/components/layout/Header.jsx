@@ -17,6 +17,7 @@ import Portal from 'components/layout/Portal';
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import etc from 'locales/ko/etc/etc'
 import useStickyHeader from 'hooks/useStickyHeader';
+import useRssYoutube from 'hooks/useRssYoutube';
 
 const Header = ({ themeMode , setThemeMode }) => {
     const [settingToggle, setSettingToggle] = useState(false);
@@ -25,6 +26,7 @@ const Header = ({ themeMode , setThemeMode }) => {
     const pathname = usePathname();
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
+    const { getChannel } = useRssYoutube();
 
     const handleHeaderMenu = () => {
         setMenuToggle(prev => !prev);
@@ -64,7 +66,7 @@ const Header = ({ themeMode , setThemeMode }) => {
                 </M768>
 
                 <Headerstyled.Logo className={pathname === '/' && 'mr'}>
-                    <Link href={`/main`}title={t(`header.group1.title`)}>
+                    <Link href={`/main/${getChannel}`} title={t(`header.group1.title`)}>
                         {themeMode === 'light' ?
                             <img src="/ico-kart-logo-black-beta.svg" alt={t(`header.group1.title`)}/>
                             :

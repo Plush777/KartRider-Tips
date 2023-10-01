@@ -1,7 +1,7 @@
 'use client';
 
 import tabData from 'locales/ko/tab/tab.json';
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import * as SubTabstyled from 'components/style/common/Tab.style';
@@ -156,13 +156,22 @@ const SubTab = () => {
     }
 
     const [swiper, setSwiper] = useState();
+    const [touchMove, setTouchMove] = useState(false);
     const getTabActiveIndex = localStorage.getItem('tabActiveIndex');
 
     const handleChangeSlide = (index) => {
         localStorage.setItem('tabActiveIndex', index);
     }
 
-    useEffect(() => {
+    const handleTouchEnd = () => {
+        setTouchMove(true);
+
+        setTimeout(() => {
+            setTouchMove(false);
+        }, 300);
+    }
+
+    useLayoutEffect(() => {
         if(swiper){
             swiper.slideTo(getTabActiveIndex);
         }
@@ -193,8 +202,8 @@ const SubTab = () => {
                     <SCbgArrowRight width="22px" height="22px"/>
                 </SubTabstyled.TabInfo>
 
-                <SubTabstyled.TabListSwipe {...swiperParams} onSwiper={(swiper) => setSwiper(swiper)}>
-
+                <SubTabstyled.TabListSwipe {...swiperParams} onSwiper={(swiper) => setSwiper(swiper)}
+                onTouchEnd={handleTouchEnd} className={touchMove && 'touchMoveActive'}>
                     {Object.keys(categoryData.data).map((item, index) => {
                         return(
                             <SwiperSlide 

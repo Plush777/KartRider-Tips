@@ -21,24 +21,22 @@ export const metadata = {
     viewport: 'initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width',
     icons: {
         icon: '/favicon.ico',
-            apple: [
-                '/apple-icon-57x57.png',
-                '/apple-icon-60x60.png',
-                '/apple-icon-76x76.png',
-                '/apple-icon-114x114.png',
-                '/apple-icon-120x120.png',
-                '/apple-icon-144x144.png',
-                '/apple-icon-152x152.png',
-                '/apple-icon-180x180.png',
-            ],  
+        apple: [
+            '/apple-icon-57x57.png',
+            '/apple-icon-60x60.png',
+            '/apple-icon-76x76.png',
+            '/apple-icon-114x114.png',
+            '/apple-icon-120x120.png',
+            '/apple-icon-144x144.png',
+            '/apple-icon-152x152.png',
+            '/apple-icon-180x180.png',
+        ],  
 
-            favicon: [
-                '/favicon-96x96.png',
-                '/favicon-32x32.png',
-                '/favicon-16x16.png',
-            ],
-
-            manifest: '/manifest.json',
+        favicon: [
+            '/favicon-96x96.png',
+            '/favicon-32x32.png',
+            '/favicon-16x16.png',
+        ],
     },
 
     openGraph: {
@@ -61,6 +59,8 @@ export const metadata = {
         description: '카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.',
         images: ['/og-season3.jpg']
     },
+
+    manifest: '/manifest.json'
 }
 
 export default function RootLayout({ children }) {
@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
                 <Providers>
                     <HydrationProvider>
                         <ThemeProviders>
-                            <RouterScrollProvider/>
+                            {/* <RouterScrollProvider/> */}
                             <AnalyticsProvider/>
                             <GlobalProvider/>
                             <I18nProvider>
