@@ -19,7 +19,7 @@ import { M768 } from 'components/style/mobile/MediaQuery';
 const VideoList = () => {
     const { videos, videoError, videoIsLoading, fetchVideos } = useYoutubeVideos();
     const { items, date, title, newsIsLoading , newsError, fetchNews } = useGetNews();
-    const { rssItems, rssIsLoading, dateOnlyArray, rssError, fetchData } = useRssYoutube();
+    const { rssItems, rssIsLoading, dateOnlyArray, rssError, fetchData, getChannel } = useRssYoutube();
     const { handleScroll } = useWindowScroll();
     const { t } = useTranslation();
 
@@ -37,7 +37,7 @@ const VideoList = () => {
 
     useEffect(() => {
         fetchData();
-    }, [fetchData]);
+    }, [getChannel]);
 
     useEffect(() => {
         fetchVideos();

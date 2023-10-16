@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const useRssYoutube = () => {
@@ -11,7 +11,7 @@ const useRssYoutube = () => {
         if (!getChannel) return localStorage.setItem('channel', 'UCFBGBsvOMA2gbxmnxgotsmw');
     }, [getChannel]);
 
-    const fetchData = useCallback(async () => {
+    const fetchData = async () => {
         try {
             const res = await axios.get(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${getChannel}`);
             const data = await res.data;
@@ -24,7 +24,7 @@ const useRssYoutube = () => {
             setRssIsLoading(false);
             console.log(rssError);
         }
-    }, [getChannel]);
+    }
 
     const apiDate = rssItems.map((item) => (item.pubDate));
 
