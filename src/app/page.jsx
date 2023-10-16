@@ -12,7 +12,6 @@ import Link from 'next/link';
 import landingArrays from 'values/landingArray';
 import { useSectionInteraction , useItemInteraction , useEndInteraction } from 'values/interactionHook';
 import { useState } from 'react';
-import useRssYoutube from 'hooks/useRssYoutube';
 
 export default function Page() {
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
@@ -23,7 +22,6 @@ export default function Page() {
     const endInteraction = useEndInteraction();
     const { section2TitleRef, section2TitleInView, section2BoxRef, section2BoxInView, section3TitleRef,section3TitleInView } = sectionInteraction;
     const { endRef, endInView, endRef02, endInView02} = endInteraction;
-    const { getChannel } = useRssYoutube();
 
     useEffect(() => {
         document.body.classList.add('noScroll');   
@@ -65,7 +63,7 @@ export default function Page() {
                                 })}
                             </Landingstyled.TitleTxtArea>
                             <Landingstyled.ButtonArea>
-                                <Link href={`/main/${getChannel}`}>
+                                <Link href={`/main`}>
                                     <Buttonstyled.White>{t(`landing.depth1.etc.btn`)}</Buttonstyled.White>
                                 </Link>
                             </Landingstyled.ButtonArea>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import axios from 'axios';
 
 const useYoutubeVideos = () => {
@@ -15,25 +15,26 @@ const useYoutubeVideos = () => {
         'P2211wKunWc&t=51s'
     ]);
 
-    useEffect(() => {
-        const fetchVideos = async () => {
-            try {
-                const videoUrls = videoIds.map(id => `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.NEXT_PUBLIC_GOOGLE_YOUTUBE}`);
-                const responses = await Promise.all(videoUrls.map(url => axios.get(url)));
-                const videos = responses.map(response => response.data.items);
-                setVideos(videos);
-                setVideoIsLoading(false);
-            } catch (error) {
-                setVideoError(error);
-                setVideoIsLoading(false);
-                console.error(error);
-            }
-        };
+    const fetchVideos = useCallback(async () => {
 
-        fetchVideos();
+        if (videos.length > 5) {
+            return;
+        }
+
+        try {
+            const videoUrls = videoIds.map(id => `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.NEXT_PUBLIC_GOOGLE_YOUTUBE}`);
+            const responses = await Promise.all(videoUrls.map(url => axios.get(url)));
+            const videos = responses.map(response => response.data.items);
+            setVideos(videos);
+            setVideoIsLoading(false);
+        } catch (error) {
+            setVideoError(error);
+            setVideoIsLoading(false);
+            console.error(error);
+        }
     }, [videoIds]);
 
-    return { videos, videoError, videoIsLoading }
+    return { videos, videoError, videoIsLoading, fetchVideos }
 }
 
 export default useYoutubeVideos;

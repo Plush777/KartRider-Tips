@@ -7,7 +7,6 @@ import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
 import Visual from 'components/layout/Visual';
 import FootNotice from 'components/article/FootNotice';
-import Select from 'components/mobile/Select';
 
 export default function Main({ videoIds }) {
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));

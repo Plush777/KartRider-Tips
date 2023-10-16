@@ -7,7 +7,6 @@ import Footer from 'components/layout/Footer';
 import FootSupport from 'components/article/FootSupport';
 import CharacterCommonContents from "components/contents/CharacterCommonContents";
 import FootNotice from "components/article/FootNotice";
-import { useSelector } from "react-redux";
 import { M768 } from 'components/style/mobile/MediaQuery';
 import BottomNavigation from "components/mobile/BottomNavigation";
 import * as Substyled from 'components/style/common/Area.style';

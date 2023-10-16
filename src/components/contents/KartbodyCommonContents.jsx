@@ -6,8 +6,7 @@ import * as Introstyled from 'components/style/components/sub/Intro.style';
 import parse from 'html-react-parser';
 import BtnTop from 'components/article/BtnTop';
 import Link from 'next/link';
-import { useDispatch , useSelector } from 'react-redux';
-import { setRouterScroll } from 'redux/store/store';
+import { useSelector } from 'react-redux';
 import { M768 } from 'components/style/mobile/MediaQuery';
 import Select from 'components/mobile/Select';
 import * as Previewstyled from 'components/style/mobile/Preview.style';
@@ -23,16 +22,11 @@ const KartbodyCommonContents = ({ kartData , params }) => {
 
     const { t } = useTranslation();
     let kartDescDepth = Object.keys(kartData.kartDescDepth).map((item,index) => kartData.kartDescDepth[item]);
-    let dispatch = useDispatch();
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
     const listId = params.listId;
     const [activeIndex, setActiveIndex] = useState(null);
     const { handleScroll } = useWindowScroll();
    
-    const handleScrollState = () => {
-        dispatch(setRouterScroll(false));
-    }
-
     const handleActive = (index) => {
         setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
     }
@@ -133,7 +127,6 @@ const KartbodyCommonContents = ({ kartData , params }) => {
                                         <Tabstyled.TabItem key={index}>
                                             <Link href={`/karts/${itemId}`} 
                                             onClick={() => {
-                                                handleScrollState();
                                                 handleActive(index);
                                             }} className={`${isActive ? 'active' : ''} ${fixActive}`}>
                                                 {

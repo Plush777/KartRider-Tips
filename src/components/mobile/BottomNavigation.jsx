@@ -2,7 +2,7 @@
 
 import * as BottomNavigationstyled from 'components/style/mobile/BottomNavigation.style';
 import { useSelector , useDispatch } from 'react-redux';
-import { setGnbActive , setRouterScroll , setToggle} from "redux/store/store";
+import { setGnbActive , setToggle} from "redux/store/store";
 import { useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import SCmode from 'svg/ico-tab01.svg';
@@ -36,7 +36,6 @@ const BottomNavigation = () => {
 
     const handleBottomSheet = () => {
         lockScroll();
-        dispatch(setRouterScroll(false));
         dispatch(setToggle({
             bottomSheet: 'active'
         }));

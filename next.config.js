@@ -3,6 +3,7 @@ const withImages = require('next-images');
 
 const nextConfig = {
     // output: 'export',
+    reactStrictMode: false,
     experimental: {
         appDir: true,
         scrollRestoration: true,

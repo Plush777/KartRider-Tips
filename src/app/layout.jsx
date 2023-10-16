@@ -5,9 +5,8 @@ import HydrationProvider from './HydrationProvider';
 import GlobalProvider from './GlobalProvider';
 import PreloadResources from './PreloadResources';
 import AnalyticsProvider from './AnalyticsProvider';
-import RouterScrollProvider from './RouterScrollProvider';
-import 'scss/app.scss';
 import BeforeThemeRender from './BeforeThemeRender';
+import 'scss/app.scss';
 
 export const metadata = {
     title: {
@@ -94,7 +93,6 @@ export default function RootLayout({ children }) {
                 <Providers>
                     <HydrationProvider>
                         <ThemeProviders>
-                            {/* <RouterScrollProvider/> */}
                             <AnalyticsProvider/>
                             <GlobalProvider/>
                             <I18nProvider>

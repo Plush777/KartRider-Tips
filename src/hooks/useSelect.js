@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setRouterScroll } from 'redux/store/store';
 
 export const useSelect = () => {
 
-    const dispatch = useDispatch();
     const [toggle, setToggle] = useState(false);
-    const [selected,setSelected] = useState(
+    const [selected, setSelected] = useState(
         {
             kart: '프로토',
             character: '배찌',
@@ -22,7 +19,6 @@ export const useSelect = () => {
                 [key]: e.target.textContent
             }
         });
-        dispatch(setRouterScroll(false));
         setToggle(false);
         localStorage.setItem(key, e.target.textContent);
     };

@@ -72,7 +72,6 @@ export const OptionList = styled.ul`
 export const OptionItem = styled.li`
     ${mixins.aic}
     height: 30px;
-    cursor: pointer;
     width: 100%;
 `
 
@@ -85,7 +84,8 @@ export const OptionTxt = styled.span`
     font-size: ${props => props.fontSize};
 
     >a{
+        ${mixins.aic};
         width: 100%;
-        display: block;
+        height: 100%;
     }
 `

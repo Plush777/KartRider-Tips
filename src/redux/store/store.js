@@ -105,24 +105,11 @@ let tracks = createSlice({
     initialState: trackData,
 });
 
-let routerScroll = createSlice({
-    name: 'routerScroll',
-    initialState: true,
-
-    reducers: {
-        setRouterScroll: (state, action) => {
-            state = action.payload;
-            return state;
-        }
-    }
-});
-
 export const { setGnbActive } = gnbActive.actions;
 export const { setSelectIndex } = selectIndex.actions;
 export const { setOutside } = outside.actions;
 export const { setToggle } = toggle.actions;
 export const { setLanguage } = language.actions;
-export const { setRouterScroll } = routerScroll.actions;
 
 export default configureStore({
     reducer: {
@@ -136,7 +123,6 @@ export default configureStore({
         commonRoute: commonRoute.reducer,
         difficulty: difficulty.reducer,
         language: language.reducer,
-        tracks: tracks.reducer,
-        routerScroll: routerScroll.reducer
+        tracks: tracks.reducer
     },
 });

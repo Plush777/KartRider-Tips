@@ -17,9 +17,9 @@ import { useEffect } from 'react';
 import { M768 } from 'components/style/mobile/MediaQuery';
 
 const VideoList = () => {
-    const { videos, videoError, videoIsLoading } = useYoutubeVideos();
-    const { items, date, title, newsIsLoading , newsError} = useGetNews();
-    const { rssItems, rssIsLoading, dateOnlyArray, rssError, fetchData, getChannel } = useRssYoutube();
+    const { videos, videoError, videoIsLoading, fetchVideos } = useYoutubeVideos();
+    const { items, date, title, newsIsLoading , newsError, fetchNews } = useGetNews();
+    const { rssItems, rssIsLoading, dateOnlyArray, rssError, fetchData } = useRssYoutube();
     const { handleScroll } = useWindowScroll();
     const { t } = useTranslation();
 
@@ -37,11 +37,19 @@ const VideoList = () => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [fetchData]);
 
     useEffect(() => {
-        handleScroll();
-    }, [getChannel]);
+        fetchVideos();
+    }, [fetchVideos]);
+
+    useEffect(() => {
+        fetchNews();
+    }, [fetchNews]);
+
+    useEffect(() => {
+        handleScroll(); 
+    }, []);
 
     return ( 
         <>

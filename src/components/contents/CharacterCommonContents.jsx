@@ -6,13 +6,12 @@ import * as Substyled from 'components/style/common/Area.style';
 import * as Cardstyled from 'components/style/components/sub/Card.style';
 import { M768 , Min768 } from 'components/style/mobile/MediaQuery';
 import Select from 'components/mobile/Select';
-import { useSelector , useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import * as Buttonstyled from "components/style/common/Button.style";
 import ClipBoardAlert from 'components/article/ClipBoardAlert';
 import BtnClipBoard from 'components/article/BtnClipBoard';
 import { useTranslation } from 'react-i18next';
-import { useLayoutEffect, useState } from 'react';
-import etc from 'locales/ko/etc/etc.json';
+import { useState } from 'react';
 
 const CharacterCommonContents = ({ characterCommon }) => {
 
@@ -20,7 +19,6 @@ const CharacterCommonContents = ({ characterCommon }) => {
     let selectIndex = useSelector(state => state.selectIndex);
     let clipBoardDisplay = useSelector(state => state.toggle.clipBoard);
     let [cardRotateState, setCardRotateState] = useState(null);
-    const dispatch = useDispatch();
     const { t } = useTranslation();
     const language = useSelector(state => state.language);
 

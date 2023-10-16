@@ -9,7 +9,6 @@ import { useSelect } from 'hooks/useSelect';
 import { useTranslation } from 'react-i18next';
 import useRssYoutube from 'hooks/useRssYoutube';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 const Select = ({ setCardRotateState, width, height, padding, border, radius, color, fontSize, marginTop, marginBottom, type }) => {
 
@@ -27,8 +26,6 @@ const Select = ({ setCardRotateState, width, height, padding, border, radius, co
 
     const channels = ['리버스','정너굴','카트라이더: 드리프트'];
     const { getChannel } = useRssYoutube();
-
-    const router = useRouter();
 
     const handleSelectKart = index => {
         dispatch(setSelectIndex({
@@ -78,21 +75,21 @@ const Select = ({ setCardRotateState, width, height, padding, border, radius, co
         if(index === 2) return localStorage.setItem('channel','UCkPYxlKG9pF2gIE2HohqaeA');
     }
 
-    const handleRouter = () => {
-        router.push(`/main/${getChannel}`,undefined,{scroll:false});
+    const handleLink = (index) => {
+        if(index === 0) return 'UCFBGBsvOMA2gbxmnxgotsmw';
+        if(index === 1) return 'UC8Y0MrXoV4eocUBOYzYnCaw';
+        if(index === 2) return 'UCkPYxlKG9pF2gIE2HohqaeA';
     }
 
-    const handleOptionItemRendering = (index, dataParam, callback, href, text, state, handler, ignore) => {
+    const handleOptionItemRendering = (index, dataParam, callback, href, text, handler) => {
         return (
             <Selectstyled.OptionItem key={index}>
                 <Selectstyled.OptionTxt color={color} fontSize={fontSize} onClick={(e) => {
                     handleSelectClick(dataParam, e);
                     callback(index);
                     handler === 'true' ? handleRssId(index) : '';
-                    handleRouter();
                 }}>
-                    <Link onClick={ignore === 'true' ? (e) => e.preventDefault() : ''} href={href} 
-                    role={state === 'presentation' ? 'button' : ''}>{text}</Link>
+                    <Link scroll={false} href={href}>{text}</Link>
                 </Selectstyled.OptionTxt>
             </Selectstyled.OptionItem>
         )
@@ -101,7 +98,7 @@ const Select = ({ setCardRotateState, width, height, padding, border, radius, co
     const handleOptionItemCondition = () => {
         if(pathname.startsWith('/character')){
             return Object.keys(commonCharacterName).map((item,index) => {
-                return handleOptionItemRendering(index, 'character',handleSelectCharacter,'#!',t(`card.group${index+1}.name`),'presentation','false','true');
+                return handleOptionItemRendering(index, 'character', handleSelectCharacter, '#', t(`card.group${index+1}.name`), 'false');
             })
         }
 
@@ -109,13 +106,13 @@ const Select = ({ setCardRotateState, width, height, padding, border, radius, co
             return Object.keys(commonKartbodyDesc).map((item,index) => {
                 const kartId = commonKartbodyDesc[item].id;
 
-                return handleOptionItemRendering(index, 'kart',handleSelectKart,`/karts/${kartId}`,t(`kartName.group${index+1}.name`),'none','false','false');
+                return handleOptionItemRendering(index, 'kart', handleSelectKart, `/karts/${kartId}`, t(`kartName.group${index+1}.name`), 'false');
             })
         }
 
         if(pathname.startsWith('/main')){
             return channels.map((item,index) => {
-                return handleOptionItemRendering(index, 'channel',handleSelectChannel,'#!',item,'presentation','true','true');
+                return handleOptionItemRendering(index, 'channel', handleSelectChannel, `/main?select=${handleLink(index)}`, item, 'true');
             })
         }
 

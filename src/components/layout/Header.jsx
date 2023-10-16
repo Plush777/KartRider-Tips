@@ -5,7 +5,7 @@ import * as Headerstyled from "components/style/layout/Header.style";
 import * as Substyled from 'components/style/common/Area.style';
 import Gnb from './Gnb';
 import { M768, Min768 } from 'components/style/mobile/MediaQuery';
-import { useEffect, useMemo, useState , useRef } from 'react';
+import { useState , useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { usePathname } from "next/navigation";
 import SCchat from 'svg/ico-chat.svg';
@@ -17,7 +17,6 @@ import Portal from 'components/layout/Portal';
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import etc from 'locales/ko/etc/etc'
 import useStickyHeader from 'hooks/useStickyHeader';
-import useRssYoutube from 'hooks/useRssYoutube';
 
 const Header = ({ themeMode , setThemeMode }) => {
     const [settingToggle, setSettingToggle] = useState(false);
@@ -26,7 +25,6 @@ const Header = ({ themeMode , setThemeMode }) => {
     const pathname = usePathname();
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
-    const { getChannel } = useRssYoutube();
 
     const handleHeaderMenu = () => {
         setMenuToggle(prev => !prev);
@@ -66,7 +64,7 @@ const Header = ({ themeMode , setThemeMode }) => {
                 </M768>
 
                 <Headerstyled.Logo className={pathname === '/' && 'mr'}>
-                    <Link href={`/main/${getChannel}`} title={t(`header.group1.title`)}>
+                    <Link href={`/main`} title={t(`header.group1.title`)}>
                         {themeMode === 'light' ?
                             <img src="/ico-kart-logo-black-beta.svg" alt={t(`header.group1.title`)}/>
                             :
