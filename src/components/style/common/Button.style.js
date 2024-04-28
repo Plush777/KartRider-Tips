@@ -18,9 +18,8 @@ export const BtnArea = styled.div`
             top: 50%;
             transform: translateY(-50%);
             width: calc(100% / 2 - 62px);
-            height: 1px;
+            border-top: 1px solid var(--stroke2);
             z-index: -1;
-            background-color: var(--mobileSelectStroke);
         }
 
         &::before{
@@ -54,10 +53,10 @@ export const Button = styled.button`
     min-width: ${(props) => props.minWidth};
     height: 40px;
     border-radius: 6px;
-    border: 1px solid var(--mobileSelectStroke);
+    border: 1px solid var(--stroke1);
     font-size: .875rem;
-    color: var(--mobileSelectText);
-    background-color: var(--mobileSelectBg);
+    color: var(--text1);
+    background-color: var(--background2);
 
     ${props => props.hasIcon && `
         svg{
@@ -72,16 +71,15 @@ export const BtnSetting = styled.button.attrs({ type: 'button' })`
     justify-content: center;
     min-width: 54px;
     height: 28px;
+    border: 1px solid var(--stroke2);
     border-radius: 4px;
-    border: 1px solid var(--settingButtonStroke);
     font-size: .75rem;
-    color: var(--settingButtonText);
-    background-color: var(--settingButtonBg);
+    color: var(--text1);
+    background-color: var(--background4);
 
-    &.active, &.fixed{
-        border-color: var(--settingButtonActiveStroke);
-        color: var(--settingButtonActiveText);
-        background-color: var(--settingButtonActiveBg);
+    &.fixed{
+        color: var(--text3);
+        background-color: var(--active-background);
     }
 `
 
@@ -97,7 +95,7 @@ export const BtnArrowDown = styled.button.attrs({ type: 'button' })`
     padding: 0px 10px;
     height: 32px;
     border-radius: 100px;
-    background-color: var(--activeColor);
+    background-color: var(--active);
     font-weight: 600;
     min-width: 80px;
 

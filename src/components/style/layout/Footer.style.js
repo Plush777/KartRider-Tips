@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterWrap = styled.footer`
     width: 100%;
-    background: var(--footerBg);
+    background: var(--background1);
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
@@ -52,7 +52,7 @@ export const LogoArea = styled.div`
 
 export const CopyRightArea = styled.div`
     font-size: .75rem;
-    color: var(--footerText);
+    color: var(--text1);
     flex: 1;
 
     ${({ theme }) => theme.tablet`
@@ -123,7 +123,7 @@ export const BottomLogoArea = styled.div`
 
 export const BottomLogoTxt = styled.span`
     font-size: .75rem;
-    color: var(--footerText);
+    color: var(--text1);
     &::before{
         content: 'ⓒ';
         margin-right: 3px;

@@ -19,10 +19,10 @@ export const TabItem = styled.li`
 
 export const TabDiv = styled.div`
     font-size: 1.5rem;
-    color: var(--disabledColor);
+    color: var(--disabled);
 
     &.active{
         font-weight: 600;
-        color: var(--text);
+        color: var(--text1);
     }
 `

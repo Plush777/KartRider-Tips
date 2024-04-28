@@ -19,13 +19,13 @@ const Wrap = styled.div`
 const Mark = styled.span`
     position: relative;
     font-size: 1.375rem;
-    color: var(--text);
+    color: var(--text1);
     margin-bottom: 5px;
 `
 
 const Text = styled.p`
     font-size: .875rem;
-    color: var(--text);
+    color: var(--text1);
 `
 
 const Adult = () => {

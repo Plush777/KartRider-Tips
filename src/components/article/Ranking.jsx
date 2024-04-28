@@ -9,7 +9,7 @@ import styled, { css } from "styled-components";
 const RankDescription = styled.p`
     margin-top: auto;
     font-size: .8125rem;
-    color: var(--videoDesc);
+    color: var(--description);
     white-space: nowrap;
 `
 

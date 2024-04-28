@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContentWrap = styled.div`
     position: relative;
-    background-color: var(--bgColor);
+    background-color: var(--main-background);
     transition: background .3s ease-in-out;
 `
 

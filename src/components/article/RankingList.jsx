@@ -5,7 +5,7 @@ import SCrankArrowUp from 'svg/ico-rank-arrow-up.svg';
 import SCrankArrowDown from 'svg/ico-rank-arrow-down.svg';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
-import * as ButtonStyled from 'components/style/common/Button.style';
+import { usePathname } from "next/navigation";
 
 const RankWrap = styled.div`
     position: relative;
@@ -25,14 +25,14 @@ const RankBoxItem = styled.li`
     align-items: center;
     padding: 20px;
     border-radius: 8px;
-    background-color: var(--skeletonBackground);
+    background-color: var(--background5);
     column-gap: 20px;
     max-height: 100px;
     transition: .3s ease-in-out;
     transition-property: background-color;
 
     &.active{
-        background-color: #292A2D;
+        background-color: var(--background1);
     }
 `
 
@@ -61,13 +61,13 @@ const RankStatus = styled.div`
 const RankText = styled.span`
     ${props => props.number && css`
         font-size: 1.375rem;
-        color: var(--text);
+        color: var(--text1);
     `}
 
     ${props => props.status && css`
         margin-left: 1.5px;
         font-size: .8125rem;
-        color: var(--text);
+        color: var(--text1);
     `}
 
     ${props => props.icon && css`
@@ -75,7 +75,7 @@ const RankText = styled.span`
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.7px;
-        color: #ff4353;
+        color: var(--red);
     `}
 
     ${props => props.gameName && css`
@@ -84,11 +84,11 @@ const RankText = styled.span`
         height: 64px;
         padding-left: 20px;
         font-size: 1.25rem;
-        color: var(--text);
+        color: var(--text1);
     `}
 
     &:where([data-number="1"], [data-number="2"], [data-number="3"]){
-        color: #0094ff;
+        color: var(--active);
     }
 `
 
@@ -112,27 +112,25 @@ const RankingList = ({ data, loading }) => {
         }
     }
 
-    const myGameScroll = () => {
-        if (myGameRef.current) {
+    const focusScroll = () => {
+        if (!loading) {
+            setMyGameFocus('active');
             myGameRef.current.scrollIntoView({ 
-                behavior: "smooth", 
                 block: "center" 
             });
         }
     }
 
+    const pathname = usePathname();
+
     useEffect(() => {
-        if (myGameRef.current) {
-            setMyGameFocus('active');
+        if (pathname === '/') {
+            focusScroll();
         }
-    }, [myGameRef]);
+    }, [pathname]);
     
     return(
         <RankWrap>
-             <ButtonStyled.BtnArrowDown onClick={myGameScroll}>
-                <ButtonStyled.BtnArrowDownText>확인하기</ButtonStyled.BtnArrowDownText>
-            </ButtonStyled.BtnArrowDown>
-
             <RankList>
                 {data && data.map((list, index) => {
                     const { title, rank, rankChange, rankStatus, img } = list;
@@ -140,7 +138,6 @@ const RankingList = ({ data, loading }) => {
 
                     return(
                         <RankBoxItem key={index} className={ myTitle ? myGameFoucs : ''} ref={ myTitle ? myGameRef : null}>
-                            
                             <RankInnerBox direction="column" seq>
                                 <RankText number as="strong" data-number={index+1}>{rank}</RankText>
                                 {

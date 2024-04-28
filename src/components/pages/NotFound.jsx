@@ -43,6 +43,7 @@ const TxtArea = styled.div`
 const ErrorTitle = styled.h1`
     font-family: 'nexonLv1Gothic';
     font-size: 2rem;
+    color: var(--text2);
 
     ${({ theme }) => theme.laptopL`
        font-size: 1.75rem
@@ -57,6 +58,7 @@ const ErrorDesc = styled.p`
     font-family: 'nexonLv1Gothic';
     font-size: 1.125rem;
     margin-top: 10px;
+    color: var(--text1);
 
     ${({ theme }) => theme.laptopL`
        font-size: 1rem;

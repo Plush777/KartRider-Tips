@@ -2,104 +2,52 @@ body {
     --mainHeightDefault: 371px;
     --mainHeightWide: 802px;
     --mainHeightNews: 660px;
+    --dimmed: rgba(0, 0, 0, 0.3);
+    --live: #eb0400;
 
     &[data-theme="light"]{
-        --bgColor: #fff;
-        --subBgColor: #f2f2f2;
-        --headerBg: #fff;
-        --utilTooltipBg: #fff;
-        --utilTooltipText: #000;
-        --settingBg: #fff;
-        --settingStorke: #ddd;
-        --settingTitle: #000;
-        --settingButtonBg: #fff;
-        --settingButtonText: #333;
-        --settingButtonStroke: #333;
-        --settingButtonActiveBg: #333;
-        --settingButtonActiveText: #fff;
-        --settingButtonActiveStroke: #333;
+        --main-background: #f2f2f2;
+        --sub-background: #f2f2f2;
+        --background1: #fff;
+        --background2: #fff;
+        --background3: #000;
+        --background4: #ececec;
+        --background5: #f9f9f9;
+        --scrollbar-background: #A6A6A6;
+        --active-background: #000;
+        --stroke1: #ddd;
+        --stroke2: #c1c1c1;
+        --description: #626262;
+        --active: #309ED5;
+        --skeleton: #f5f5f5;
+        --disabled: rgba(0, 0, 0, 0.6);
         --title: #000;
-        --text: #333;
-        --videoDesc: #626262;
-        --footerBg: #FAFAFA;
-        --footerText: #666;
-        --bulletBg: #333;
-        --infoStroke: #ddd;
-        --dimmed: rgba(0, 0, 0, 0.3);
-        --scrollbar: #A6A6A6;
-        --scrollbarTrack: transparent;
-        --mobileSelectBg: #fff;
-        --mobileSelectStroke: #ddd;
-        --mobileSelectText: #000;
-        --commonButtonBg: #333;
-        --commonButtonText: #fff;
-        --commonSvgFill: #000;
-        --activeColor: #309ED5;
-        --disabledColor: rgba(0, 0, 0, 0.6);
-        --skeletonBackground: #f5f5f5;
-
-        .error{
-            &Title{
-                color: #333;
-            }
-
-            &Desc{
-                color: #666;
-            }
-        }
-
-        .loadTxt{
-            color: #333;
-        }
+        --text1: #333;
+        --text2: #333;
+        --text3: #fff;
+        --red: #ff0000;
     }
 
     &[data-theme="dark"]{
-        --bgColor: #121212;
-        --subBgColor: #121212;
-        --headerBg: #292A2D;
-        --utilTooltipBg: #353637;
-        --utilTooltipText: #F8F8FA;
-        --settingBg: #2B2C2D;
-        --settingStorke: #383C3C;
-        --settingTitle: #F8F8FA;
-        --settingButtonBg: #3C3E3E;
-        --settingButtonText: #F8F8FA;
-        --settingButtonStroke: #3C3E3E;
-        --settingButtonActiveBg: #fff;
-        --settingButtonActiveText: #000;
-        --settingButtonActiveStroke: #fff;
+        --main-background: #121212;
+        --sub-background: #121212;
+        --background1: #292A2D;
+        --background2: #1e1e1e;
+        --background3: #fff;
+        --background4: #1e1e1e;
+        --background5: #1e1e1e;
+        --scrollbar-background: #aaa;
+        --active-background: #fff;
+        --stroke1: #2A2A2A;
+        --stroke2: rgba(255,255,255,.2);
+        --description: #BBBBBF;
+        --active: #0094ff;
+        --skeleton: #1e1e1e;
+        --disabled: rgba(255,255,255,.55);
         --title: #F8F8FA;
-        --text: #ECECEC;
-        --videoDesc: #BBBBBF;
-        --footerBg: #292A2D;
-        --footerText: #ececec;
-        --bulletBg: #F8F8FA;
-        --infoStroke: #3C3E3E;
-        --dimmed: rgba(0, 0, 0, 0.3);
-        --scrollbar: #aaa;
-        --scrollbarTrack: #121212;
-        --mobileSelectBg: #1E1E1E;
-        --mobileSelectStroke: #2A2A2A;
-        --mobileSelectText: #ececec;
-        --commonButtonBg: #333;
-        --commonButtonText: #fff;
-        --commonSvgFill: #fff;
-        --activeColor: #0094ff;
-        --disabledColor: rgba(255,255,255,.55);
-        --skeletonBackground: #1e1e1e;
-
-        .error{
-            &Title{
-                color: #fff;
-            }
-
-            &Desc{
-                color: #ececec;
-            }
-        }
-
-        .loadTxt{
-            color: #ececec;
-        }
+        --text1: #ECECEC;
+        --text2: #fff;
+        --text3: #000;
+        --red: #ff4353;
     }
 }

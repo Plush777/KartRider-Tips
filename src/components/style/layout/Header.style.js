@@ -8,8 +8,8 @@ export const Headers = styled.header`
     width: 100%;
     height: 65px;
     padding: 0 16px;
-    border-bottom: 1px solid var(--infoStroke);
-    background-color: var(--headerBg);
+    border-bottom: 1px solid var(--stroke1);
+    background-color: var(--background1);
     transition: background .3s ease-in-out;
 
     @media (max-width: 1200px){
@@ -114,8 +114,8 @@ export const TooltipItem = styled.span`
     height: 32px;
     padding: 0 10px;
     border-radius: 16px;
-    color: var(--utilTooltipText);
-    background-color: var(--utilTooltipBg);
+    color: var(--text1);
+    background-color: var(--background1);
     font-size: .75rem;
 `
 
@@ -152,9 +152,10 @@ export const SettingWrap = styled.div`
     transform: translateX(-50%); */
     width: 100%;
     padding: 20px;
+    border: 1px solid var(--stroke2);
     border-radius: 16px;
-    box-shadow: 0 0 0 1px var(--settingStorke);
-    background-color: var(--settingBg);
+    box-shadow: 0 0 0 1px var(--stroke1);
+    background-color: var(--background1);
     transition: .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
@@ -188,14 +189,14 @@ export const SettingItem = styled.li`
             right: 0;
 
             svg{
-                fill: var(--commonSvgFill);
+                fill: var(--background3);
             }
         }
     `};
 `
 
 export const SettingTitle = styled.p`
-    color: var(--settingTitle);
+    color: var(--text1);
     font-size: 1rem;
 `
 
@@ -215,7 +216,7 @@ export const mobileHeaderMenuWrap = styled.div`
     left: -10px;
     top: 54px;
     width: 100vw;
-    background-color: var(--settingBg);
+    background-color: var(--background1);
     transition: max-height .3s ease-in-out;
     max-height: 0;
     overflow: hidden;
@@ -244,12 +245,12 @@ export const mobileHeaderMenuLink = styled.a`
     column-gap: 7.5px;
     width: 100%;
     height: 100%;
-    color: var(--settingTitle);
+    color: var(--text1);
     font-size: 1rem;
 
     svg{margin-top: -2.5px;
         path{
-            fill: var(--commonSvgFill);
+            fill: var(--background3);
         }
     }
 `
@@ -262,7 +263,7 @@ export const BtnHambuger = styled.button.attrs({ type: 'button' })`
 
     svg{
         path{
-            stroke: var(--commonSvgFill);
+            stroke: var(--background3);
         }
     }
 `

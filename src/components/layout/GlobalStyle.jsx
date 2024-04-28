@@ -36,9 +36,9 @@ figcaption{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; mar
 
 ::-webkit-scrollbar{width: 14px;}
 ::-webkit-scrollbar-button{display: none;}
-::-webkit-scrollbar-track{background-color: var(--scrollbarTrack);}
+::-webkit-scrollbar-track{background-color: transparent;}
 ::-webkit-scrollbar-thumb {border: solid transparent; background-clip: padding-box; 
-border-radius: 8px; background-color: var(--scrollbar);}
+border-radius: 8px; background-color: var(--scrollbar-background);}
 
 .hidden{display: block; width: 0;height: 0; margin: 0; padding: 0; line-height: 0; font-size: 0;overflow: hidden;}
 
@@ -50,7 +50,7 @@ border-radius: 8px; background-color: var(--scrollbar);}
 
 .scY{overflow-y: auto;
   &::-webkit-scrollbar {width: 5px;}
-  &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar);}
+  &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar-background);}
 }
 
 .dark{
@@ -86,7 +86,7 @@ ${({ theme }) => theme.laptopL`
 
 ${({ theme }) => theme.laptop`
    .mini{
-      &::-webkit-scrollbar-thumb {border-radius: 0; background-color: #C0C0C0;}
+      &::-webkit-scrollbar-thumb {border-radius: 0; background-color: var(--scrollbar-background);}
       
       &X{overflow-y: hidden;
         &::-webkit-scrollbar {height: 10px;}

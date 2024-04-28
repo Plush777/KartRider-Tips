@@ -21,7 +21,7 @@ export const Title = styled.h3`
 export const Desc = styled.p`
     line-height: 27px;
     font-size: 1rem;
-    color: var(--text);
+    color: var(--text1);
     word-break: keep-all;
 
     ${({ theme }) => theme.tablet`
@@ -32,7 +32,7 @@ export const Desc = styled.p`
 export const Wrap = styled.div`
     width: 100%;
     height: calc(100vh - 196px);
-    background-color: var(--subBgColor);
+    background-color: var(--sub-background);
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
@@ -89,7 +89,7 @@ export const TitleGroup = styled.div`
 
 export const TitleGroupDesc = styled.p`
     line-height: 27px;
-    color: var(--text);
+    color: var(--text1);
     font-size: 1rem;
 
     ${({ theme }) => theme.laptopL`
@@ -106,7 +106,7 @@ export const TitleGroupDesc = styled.p`
 `;
 
 export const blankLink = styled.div`
-    color: var(--text);
+    color: var(--text1);
     font-size: 1rem;
     word-break: keep-all;
 `
@@ -305,7 +305,7 @@ export const MainComponentBottomDescription = styled.p`
     display: flex;
     align-items: center;
     font-size: 1.25rem;
-    color: var(--videoDesc);
+    color: var(--description);
 
     @media (max-width: 1200px) {
         &::after{
@@ -318,7 +318,7 @@ export const MainComponentBottomDescription = styled.p`
         width: 1px;
         height: 18px;
         margin: 0 15px;
-        background-color: #626262;
+        background-color: var(--description);
     }
 
     +time::after{
@@ -387,7 +387,7 @@ export const MainComponentThumbnail = styled.div`
     padding-top: 56.19%;
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--skeletonBackground);
+    background-color: var(--skeleton);
 
     img{
         position: absolute;
@@ -470,7 +470,7 @@ export const MainComponentArticleLink = styled.a`
     display: flex;
     align-items: center;
     padding: 67.2px 32px;
-    border-bottom: 1px solid var(--infoStroke);
+    border-bottom: 1px solid var(--stroke2);
     background-color: transparent;
 
     ${({ theme }) => theme.tablet`
@@ -482,7 +482,7 @@ export const MainComponentArticleCategory = styled.strong`
     white-space: nowrap;
     font-weight: 500;
     font-size: 1.25rem;
-    color: var(--activeColor);
+    color: var(--active);
 
     ${({ theme }) => theme.tablet`
         min-width: 57px;
@@ -506,7 +506,7 @@ export const MainComponentArticleTitle = styled.p`
 
 export const MainComponentArticleDate = styled.span`
     white-space: nowrap;
-    color: var(--videoDesc);
+    color: var(--description);
 
     ${({ theme }) => theme.tablet`
         ${props => props.mobileDisplay && `display: none;`}
@@ -520,7 +520,7 @@ export const LoadText = styled.p`
     justify-content: center;
     line-height: 34px;
     font-size: 1rem;
-    color: var(--text);
+    color: var(--text1);
     margin-top: 30px;
     height: 34px;
 `
@@ -537,7 +537,7 @@ export const MainInner = styled.div`
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: var(--title);
+            background-color: var(--text1);
         }
     `}
 `

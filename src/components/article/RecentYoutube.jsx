@@ -19,8 +19,6 @@ const RecentYoutube = () => {
         queryFn: () => fetchRecentLists(selectKey),
     });
 
-    // console.log(recent);
-
     return(
         <Mainstyled.MainComponentBox>
             <MainTitle

@@ -17,12 +17,12 @@ export const Select = styled.button.attrs({ type: 'button' })`
     width: ${props => props.width};
     height: ${props => props.height};
     padding: 0 12px;
-    border: 1px solid var(--mobileSelectStroke);
+    border: 1px solid var(--stroke1);
     border-radius: 4px;
-    background-color: var(--mobileSelectBg);
+    background-color: var(--background2);
 
     svg{
-        fill: var(--commonSvgFill);
+        fill: var(--background3);
     }
 
     ${({ theme }) => theme.mobile`
@@ -35,7 +35,7 @@ export const Select = styled.button.attrs({ type: 'button' })`
 `
 
 export const SelectTxt = styled.span`
-    color: var(--mobileSelectText);
+    color: var(--text1);
     font-size: 0.875rem;
 
     ${({ theme }) => theme.small`
@@ -49,9 +49,9 @@ export const OptionList = styled.ul`
     left: 0;
     top: ${props => props.top};
     width: 100%;
-    border: 1px solid var(--mobileSelectStroke);
+    border: 1px solid var(--stroke1);
     border-radius: 4px;
-    background-color: var(--mobileSelectBg);
+    background-color: var(--background2);
     padding: 6px 12px;
     max-height: ${props => props.maxHeight};
     z-index: 1;

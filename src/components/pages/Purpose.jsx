@@ -12,7 +12,7 @@ export default function Purpose(){
     return ( 
         <>
             <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
-            <Substyled.Main id='main'>
+            <Substyled.Main>
                 <Suspense fallback={null}>
                     <PurposeContents themeMode={themeMode}/>
                 </Suspense>

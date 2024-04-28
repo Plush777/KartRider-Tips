@@ -16,7 +16,7 @@ const SeasonGroup = styled.div`
 
 const SeasonText = styled.span`
     display: block;
-    color: var(--text);
+    color: var(--text1);
     font-size: 1.125rem;
 
     ${props => props.head && css`
@@ -25,7 +25,7 @@ const SeasonText = styled.span`
     `}
 
     ${props => props.endDate && css`
-        color: #ff4353;
+        color: var(--red);
     `}
 `
 
@@ -46,7 +46,7 @@ const ErrorWrap = styled.div`
 `
 
 const ErrorText = styled.p`
-    color: var(--text);
+    color: var(--text1);
     font-size: 1rem;
 `
 

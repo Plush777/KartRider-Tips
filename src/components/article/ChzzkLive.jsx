@@ -95,7 +95,7 @@ const ChzzkLive = () => {
                 marginBottom="20px"
                 right={
                     <Refetch type="button" disabled={chzzkRefetching ? true : false} onClick={chzzkRefetch}>
-                        <SCrefresh width="30px" height="30px" fill="var(--text)"/>
+                        <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
                         <span className="hidden">새로고침</span>
                     </Refetch>
                 }

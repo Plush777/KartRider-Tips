@@ -40,7 +40,7 @@ const PlayerWrap = styled.div`
 const Text = styled.p`
     margin-top: 20px;
     font-size: 1rem;
-    color: var(--text);
+    color: var(--text1);
     text-align: center;
 
     ${({ theme }) => theme.mobile`

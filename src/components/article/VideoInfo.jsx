@@ -9,7 +9,7 @@ const InfoBox = styled.div`
     line-height: 22px;
     padding: 0 8px;
     border-radius: 6px;
-    background-color: #eb0400;
+    background-color: var(--live);
     z-index: 100;
 
     ${({ theme }) => theme.tablet`
