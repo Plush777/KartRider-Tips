@@ -7,8 +7,20 @@ import Select from 'components/common/Select';
 import MainTitle from 'components/article/MainTitle';
 import { fetchRecentLists } from 'scripts/api/rssYoutube';
 
-const RecentYoutube = () => {
-    let [selectKey, setSelectKey] = useState('UCJDEss5wA1ddrCBC40giO8A');
+const RecentYoutube = ({ sectionName }) => {
+    const keyArray = [
+        'UCJDEss5wA1ddrCBC40giO8A',
+        'UCFBGBsvOMA2gbxmnxgotsmw',
+        'UC8Y0MrXoV4eocUBOYzYnCaw',
+        'UCkPYxlKG9pF2gIE2HohqaeA'
+    ];
+
+    const getRandomKey = () => {
+        const randomIndex = Math.floor(Math.random() * keyArray.length);
+        return keyArray[randomIndex];
+    };
+
+    let [selectKey, setSelectKey] = useState(getRandomKey());
 
     const { 
         data: recent, 
@@ -20,13 +32,14 @@ const RecentYoutube = () => {
     });
 
     return(
-        <Mainstyled.MainComponentBox>
+        <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle
                 lottieName="youtube"
                 lottieSrc="https://lottie.host/0fa9e3a2-0b2c-45f6-a151-86b61f917e9a/WTN6JyfSj7.lottie"
                 title="최근 유튜브 영상들을 만나보세요"
                 marginBottom="20px"
-                right={<Select data="channels" selectKey={selectKey} setSelectKey={setSelectKey} width="190px" height="36px" />}
+                right={<Select data="channels" selectKey={selectKey} setSelectKey={setSelectKey} 
+                width="190px" height="36px" />}
             />
             
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">

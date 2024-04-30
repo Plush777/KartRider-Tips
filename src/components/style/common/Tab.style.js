@@ -9,6 +9,14 @@ export const TabList = styled.ul`
     display: flex;
     align-items: center;
     column-gap: 25px;
+
+    ${({ theme }) => theme.laptop`
+        column-gap: 15px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        column-gap: 10px;
+    `};
 `;
 
 export const TabItem = styled.li`
@@ -20,6 +28,14 @@ export const TabItem = styled.li`
 export const TabDiv = styled.div`
     font-size: 1.5rem;
     color: var(--disabled);
+
+    ${({ theme }) => theme.laptop`
+        font-size: 1.25rem;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        font-size: 1.125rem;
+    `};
 
     &.active{
         font-weight: 600;

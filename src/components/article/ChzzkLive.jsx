@@ -11,6 +11,7 @@ import MainTitle from 'components/article/MainTitle';
 import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import styled from 'styled-components';
+import { Min500 } from 'components/style/mobile/MediaQuery';
 
 const Refetch = styled.button`
     display: flex;
@@ -23,7 +24,7 @@ const Refetch = styled.button`
     }
 `
 
-const ChzzkLive = () => {
+const ChzzkLive = ({ sectionName }) => {
     let [click, setClick] = useState(false);
 
     const clickMoreButton = () => {
@@ -87,17 +88,19 @@ const ChzzkLive = () => {
     }
 
     return(
-        <Mainstyled.MainComponentBox>
+        <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle 
                 lottieName="live"
                 lottieSrc="https://lottie.host/27768715-a656-4bae-bc76-e4d7ac8c4992/sYc0G5Y6ST.lottie"
                 title="치지직에서 지금 라이브중!"
                 marginBottom="20px"
                 right={
-                    <Refetch type="button" disabled={chzzkRefetching ? true : false} onClick={chzzkRefetch}>
-                        <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
-                        <span className="hidden">새로고침</span>
-                    </Refetch>
+                    <Min500>
+                        <Refetch type="button" disabled={chzzkRefetching ? true : false} onClick={chzzkRefetch}>
+                            <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
+                            <span className="hidden">새로고침</span>    
+                        </Refetch>
+                    </Min500>
                 }
             />
            

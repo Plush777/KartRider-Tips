@@ -7,7 +7,7 @@ const Center = styled.div`
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 `;
@@ -16,15 +16,22 @@ const PlayerWrap = styled.div`
     ${props => props.state === 'error' && `
         width: 287px;
         height: 287px;
-        margin-bottom: 15%;
+        margin: 0 auto;
+        transform: translateY(-80px);
+
+        + ${Text} {
+            margin-top: -80px;
+        }
     `}
 
     ${props => props.state === 'loading' && `
         width: 409px;
         height: 307px;
-        
-        p {
-            margin-top: -42px;
+        margin: 0 auto;
+        transform: translateY(-90px);
+
+        + ${Text} {
+            margin-top: -120px;
         }
 
         &.item3{
@@ -34,7 +41,79 @@ const PlayerWrap = styled.div`
 
     ${props => props.state === 'empty' && `
         height: 60%;
+
+        @media (max-width: 1200px) {
+            height: 55%;
+        }
     `}
+
+    ${({ theme }) => theme.laptop`
+        ${props => props.state === 'empty' && `
+            height: 50%;
+        `}
+
+        ${props => props.state === 'loading' && `
+            width: auto;
+            height: 75%;
+            transform: translateY(-40px);
+
+            + ${Text} {
+                margin-top: -60px;
+                margin-bottom: auto;
+            }
+        `}
+    `};
+
+    ${({ theme }) => theme.tablet`
+        ${props => props.state === 'empty' && `
+            height: 70%;
+        `}
+
+        ${props => props.state === 'loading' && `
+            height: 115%;
+            transform: translateY(-55px);
+
+            + ${Text} {
+                margin-top: -85px;
+            }
+        `}
+
+        ${props => props.state === 'error' && `
+            width: auto;
+            height: 100%;
+            transform: translateY(-10px);
+
+            + ${Text} {
+                margin-top: -10px;
+            }
+        `}
+    `};
+
+    ${({ theme }) => theme.mobile`
+        ${props => props.state === 'loading' && `
+            height: 100%;
+            transform: translateY(-25px);
+
+            + ${Text} {
+                margin-top: -50px;
+            }
+        `}
+    `};
+
+    ${({ theme }) => theme.small`
+        ${props => props.state === 'empty' && `
+            height: 50%;
+        `}
+
+        ${props => props.state === 'loading' && `
+            height: 95%;
+            transform: translateY(-35px);
+
+            + ${Text} {
+                margin-top: -55px;
+            }
+        `}
+    `};
 `
 
 const Text = styled.p`
@@ -43,7 +122,7 @@ const Text = styled.p`
     color: var(--text1);
     text-align: center;
 
-    ${({ theme }) => theme.mobile`
+    ${({ theme }) => theme.tablet`
         font-size: .875rem;
     `};
 `;
@@ -72,8 +151,8 @@ const VideoState = ({ type, emptyText, styleClassName }) => {
                     autoplay
                     loop
                 />
-                <Text>{emptyText ? emptyText : handleTextCondition(type)}</Text>
             </PlayerWrap>
+            <Text>{emptyText ? emptyText : handleTextCondition(type)}</Text>
         </Center>
     )
 }

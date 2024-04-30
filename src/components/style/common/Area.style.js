@@ -113,8 +113,10 @@ export const blankLink = styled.div`
 
 export const Main = styled.main`
     padding-top: 65px;
+
     ${({ theme }) => theme.tablet`
-        padding-bottom: 55px;
+        padding-top: 55px;
+        padding-bottom: 0;
     `};
 `
 
@@ -126,10 +128,36 @@ export const GroupList = styled.ul`
 `
 
 export const MainComponentBox = styled.section`
-    &+&{margin-top: 150px;}
+    &+&{
+        margin-top: var(--section-gap);
+    }
+
+    +[data-section-name="recentYoutube"]{
+        margin-top: calc(var(--section-gap) / 2 + 20px);
+    }
 
     ${({ theme }) => theme.laptop`
-        &+&{margin-top: 120px;}
+        +[data-section-name="recentYoutube"]{
+            margin-top: calc(var(--section-gap) / 2 - 20px);
+        }
+    `};
+
+    ${({ theme }) => theme.tablet`
+        +[data-section-name="recentYoutube"]{
+            margin-top: calc(var(--section-gap) / 2 + 20px);
+        }
+    `};
+
+    ${({ theme }) => theme.mobile`
+        +[data-section-name="recentYoutube"]{
+            margin-top: calc(var(--section-gap) / 2 + 30px);
+        }
+    `};
+
+    ${({ theme }) => theme.small`
+        +[data-section-name="recentYoutube"]{
+            margin-top: calc(var(--section-gap) / 2);
+        }
     `};
 `
 
@@ -159,8 +187,6 @@ export const MainComponentTitle = styled.h2`
             height: 26px;
             background-size: 26px;
         }
-
-        margin-bottom: 10px;
     `};
 
     ${({ theme }) => theme.mobile`
@@ -179,15 +205,17 @@ export const LottieWrapper = styled.div`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 45px;
-    height: 45px;
 
-    +.text{padding-left: 55px;}
+    +.text{
+        word-break: keep-all;
+    }
 
     ${(props) => props.lottieName === 'youtube' && css`
         width: 85px;
         height: 85px;
         margin-left: -25px;
+
+        +.text{padding-left: 55px;}
     `}
 
     ${(props) => props.lottieName === 'news' && css`
@@ -195,6 +223,8 @@ export const LottieWrapper = styled.div`
         height: 100px;
         margin-top: -6px;
         margin-left: -31px;
+
+        +.text{padding-left: 55px;}
     `}
 
     ${(props) => props.lottieName === 'season' && css`
@@ -202,12 +232,45 @@ export const LottieWrapper = styled.div`
         height: 80px;
         margin-left: -27px;
 
-        +.text{padding-left: 45px;}
+        +.text{padding-left: 40px;}
     `}
 
+    ${(props) => props.lottieName === 'rank' && css`
+        width: 50px;
+        height: 50px;
+
+        +.text{padding-left: 55px;}
+    `}
+
+    ${(props) => props.lottieName === 'live' && css`
+        width: 45px;
+        height: 45px;
+
+        +.text{padding-left: 60px;}
+    `}
+
+    ${(props) => props.lottieName === 'fire' && css`
+        width: 50px;
+        height: 50px;
+        margin-top: -8px;
+        margin-left: -8px;
+
+        +.text{padding-left: 50px;}
+    `}
+
+    ${({ theme }) => theme.laptop`
+        ${(props) => props.lottieName === 'rank' && css`
+            transform: none;
+            top: -8px;
+        `}
+
+        ${(props) => props.lottieName === 'season' && css`
+            transform: none;
+            top: -25px;
+        `}
+    `};
+
     ${({ theme }) => theme.tablet`
-        width: 40px;
-        height: 40px;
         transform: none;
 
         ${(props) => props.lottieName === 'live' && css`
@@ -221,10 +284,10 @@ export const LottieWrapper = styled.div`
         ${(props) => props.lottieName === 'fire' && css`
             width: 35px;
             height: 35px;
-            top: -12px;
-            left: -7px;
+            top: -2px;
+            left: 3px;
 
-            +.text{padding-left: 33px;}
+            +.text{padding-left: 35px;}
         `}
 
         ${(props) => props.lottieName === 'youtube' && css`
@@ -243,6 +306,24 @@ export const LottieWrapper = styled.div`
             left: 5px;
 
             +.text{padding-left: 43px;}
+        `}
+
+        ${(props) => props.lottieName === 'rank' && css`
+            width: 40px;
+            height: 40px;
+            left: -5px;
+
+            +.text{padding-left: 43px;}
+        `}
+
+        ${(props) => props.lottieName === 'season' && css`
+            width: 65px;
+            height: 65px;
+            top: -22px;
+            left: 0;
+            margin-left: -20px;
+
+            +.text{padding-left: 40px;}
         `}
     `};
 `;
@@ -476,6 +557,10 @@ export const MainComponentArticleLink = styled.a`
     ${({ theme }) => theme.tablet`
         padding: 50px 0;
     `};
+
+    ${({ theme }) => theme.mobile`
+        padding: 35px 0;
+    `};
 `
 
 export const MainComponentArticleCategory = styled.strong`
@@ -485,8 +570,12 @@ export const MainComponentArticleCategory = styled.strong`
     color: var(--active);
 
     ${({ theme }) => theme.tablet`
-        min-width: 57px;
+        margin-right: 10px;
         font-size: 1rem;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        font-size: .875rem;
     `};
 `
 
@@ -498,7 +587,15 @@ export const MainComponentArticleTitle = styled.p`
     padding-right: 20px;
 
     ${({ theme }) => theme.tablet`
+        padding-left: 0;
         font-size: 1.25rem;
+        word-break: keep-all;
+        line-height: 30px;
+    `};
+
+    ${({ theme }) => theme.mobile`
+        padding-left: 0;
+        font-size: 1.125rem;
         word-break: keep-all;
         line-height: 30px;
     `};
@@ -544,4 +641,9 @@ export const MainInner = styled.div`
 
 export const ContainerBox = styled.div`
     flex: 0.5;
+
+    ${({ theme }) => theme.tablet`
+        flex: none;
+        width: 100%;
+    `};
 `

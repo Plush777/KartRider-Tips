@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import MainTitle from 'components/article/MainTitle';
 import { fetchVideoLists } from 'scripts/api/youtubeVideo';
 
-const RecommendYoutube = () => {
+const RecommendYoutube = ({ sectionName }) => {
     const videoIds = [
         'Noi6KtdyZOQ&t=5s',
         'KX5dAdwy1Xg&t=1s',
@@ -29,7 +29,7 @@ const RecommendYoutube = () => {
     });
  
     return(
-        <Mainstyled.MainComponentBox>
+        <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle
                 lottieName="fire"
                 lottieSrc="https://lottie.host/862b671f-196b-44e4-8938-d84207e24c95/Kqu1b4vslr.lottie"

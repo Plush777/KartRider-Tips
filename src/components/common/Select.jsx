@@ -2,16 +2,17 @@
 
 import * as Selectstyled from 'components/style/common/Select.style';
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setSelectIndex } from 'redux/store/store';
 import useSelect from 'hooks/useSelect';
 import useClickOutside from "hooks/useClickOutside";
 import { channels, sites, siteLinks } from 'data/select';
+import { useEffect, useState } from 'react';
 
-const Select = ({ setSelectKey, width, height, data }) => {
-    let selectIndex = useSelector(state => state.selectIndex);
+const Select = ({ selectKey, setSelectKey, width, height, data }) => {
     const [toggle, setToggle, handleSelectClick, handleToggleSelect] = useSelect();
     let dispatch = useDispatch();
+    let [randomChannelIndex, setRandomChannelIndex] = useState(undefined);
 
     const selectClose = () => {
         setToggle(false);
@@ -44,14 +45,6 @@ const Select = ({ setSelectKey, width, height, data }) => {
         }
     }
 
-    const renderSelectText = () => {
-        if (data === 'sites') {
-            return '관련 사이트';
-        } else if (data === 'channels') {
-            return channels[selectIndex.channelIndex];
-        }
-    }
-
     const renderSelectList = () => {
         if (data === 'sites') {
             return sites.map((siteItem, index) => {
@@ -80,6 +73,21 @@ const Select = ({ setSelectKey, width, height, data }) => {
                     </Selectstyled.OptionItem>
                 )
             });
+        }
+    }
+
+    useEffect(() => {
+        if (selectKey === 'UCJDEss5wA1ddrCBC40giO8A') setRandomChannelIndex(0);
+        else if (selectKey === 'UCFBGBsvOMA2gbxmnxgotsmw') setRandomChannelIndex(1);
+        else if (selectKey === 'UC8Y0MrXoV4eocUBOYzYnCaw') setRandomChannelIndex(2);
+        else if (selectKey === 'UCkPYxlKG9pF2gIE2HohqaeA') setRandomChannelIndex(3);
+    },[selectKey]);
+
+    const renderSelectText = () => {
+        if (data === 'sites') {
+            return '관련 사이트';
+        } else if (data === 'channels') {
+            return channels[randomChannelIndex];
         }
     }
 

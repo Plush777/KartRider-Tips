@@ -16,8 +16,13 @@ const Settings = ({ themeMode , setThemeMode, setSettingToggle, isMobile }) => {
     });
     const root = document.getElementsByTagName('html')[0];
     const { openScroll } = useBodyScrollLock();
+
     const settingClose = () => {
         setSettingToggle(false);
+
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            openScroll();
+        }
     }
 
     const ref = useClickOutside(settingClose);
@@ -69,8 +74,8 @@ const Settings = ({ themeMode , setThemeMode, setSettingToggle, isMobile }) => {
     },[themeMode]);
 
     return(
-        <Headerstyled.DimmedWrap ref={ref} className={isMobile}>
-            <Headerstyled.SettingWrap>
+        <Headerstyled.DimmedWrap className={isMobile}>
+            <Headerstyled.SettingWrap ref={ref}>
                 <Headerstyled.SettingList>
                     <Headerstyled.SettingItem>
                         <Headerstyled.SettingTitle>글자 크기 설정</Headerstyled.SettingTitle>

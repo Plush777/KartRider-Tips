@@ -12,6 +12,10 @@ const SeasonGroup = styled.div`
     align-items: center;
     column-gap: 16px;
     &+&{margin-top: 30px;}
+
+    ${({ theme }) => theme.tablet`
+        &+&{margin-top: 20px;}
+    `};
 `
 
 const SeasonText = styled.span`
@@ -27,6 +31,10 @@ const SeasonText = styled.span`
     ${props => props.endDate && css`
         color: var(--red);
     `}
+
+    ${({ theme }) => theme.tablet`
+        font-size: 1rem;
+    `};
 `
 
 const ErrorWrap = styled.div`

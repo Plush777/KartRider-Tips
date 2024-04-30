@@ -7,7 +7,7 @@ import Tab from 'components/common/Tab';
 import { useEffect, useState } from 'react';
 import { fetchNews, fetchArticles } from 'scripts/api/news';
 
-const RecentNews = () => {
+const RecentNews = ({ sectionName }) => {
     let [tabIndex, setTabIndex] = useState(0);
     let [loadData, setLoadData] = useState(undefined);
 
@@ -46,7 +46,7 @@ const RecentNews = () => {
     const tabArray = ['뉴스', '개발자 노트', '업데이트'];
 
     return(
-        <Mainstyled.MainComponentBox>
+        <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle
                 lottieName="news"
                 lottieSrc="https://lottie.host/5d6db238-f903-4c96-bf41-391c2e5de0d7/y8jB0ebnOr.lottie"

@@ -2,6 +2,7 @@ body {
     --mainHeightDefault: 371px;
     --mainHeightWide: 802px;
     --mainHeightNews: 660px;
+    --section-gap: 150px;
     --dimmed: rgba(0, 0, 0, 0.3);
     --live: #eb0400;
 
@@ -49,5 +50,24 @@ body {
         --text2: #fff;
         --text3: #000;
         --red: #ff4353;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        --section-gap: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        --mainHeightDefault: 200px;
+        --section-gap: 100px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        --section-gap: 120px;
     }
 }

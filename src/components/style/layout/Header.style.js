@@ -146,10 +146,6 @@ export const UtilTextBox = styled.a`
 `
 
 export const SettingWrap = styled.div`
-    /* position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%); */
     width: 100%;
     padding: 20px;
     border: 1px solid var(--stroke2);
@@ -211,7 +207,7 @@ export const SettingButtonList = styled.div`
     `};
 `
 
-export const mobileHeaderMenuWrap = styled.div`
+export const mobileHeaderMenuWrap = styled.nav`
     position: absolute;
     left: -10px;
     top: 54px;
@@ -282,7 +278,6 @@ export const DimmedWrap = styled.div`
         transform: translate(-50%,-50%);
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0,0,0,.3);
-        z-index: 1010;
+        z-index: 10010;
     }
 `

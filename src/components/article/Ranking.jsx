@@ -4,13 +4,18 @@ import RankingList from 'components/article/RankingList';
 import VideoState from 'components/article/VideoState';
 import { fetchRanking } from 'scripts/api/ranking';
 import { useQuery } from "@tanstack/react-query";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const RankDescription = styled.p`
     margin-top: auto;
     font-size: .8125rem;
     color: var(--description);
     white-space: nowrap;
+
+    ${({ theme }) => theme.mobile`
+        margin-top: 10px;
+        margin-right: auto;
+    `};
 `
 
 const Ranking = () => {

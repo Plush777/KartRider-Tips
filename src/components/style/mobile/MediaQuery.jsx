@@ -36,6 +36,13 @@ const Min768 = ({ children }) => {
     return <React.Fragment>{is768 && children}</React.Fragment>
 }
 
+const Min500 = ({ children }) => {
+    const is500 = useMediaQuery({ 
+        query: "(min-width: 500px)" 
+    });
+    return <React.Fragment>{is500 && children}</React.Fragment>
+}
+
 const M500 = ({ children }) => {
     const is500 = useMediaQuery({ 
         query: "(max-width: 500px)" 
@@ -50,4 +57,4 @@ const M375 = ({ children }) => {
     return <React.Fragment>{is375 && children}</React.Fragment>
 }
 
-export {Min1300, M1300, M1024, M768, Min768, M500, M375}
+export {Min1300, M1300, M1024, M768, Min768, Min500, M500, M375}

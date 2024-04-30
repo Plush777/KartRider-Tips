@@ -8,18 +8,20 @@ import SCchat from 'svg/ico-chat.svg';
 import SCopen from 'svg/ico-open.svg';
 import SCsetting from 'svg/ico-setting.svg';
 import SChamburger from 'svg/ico-hamburger.svg';
-import Portal from 'components/layout/Portal';
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import useStickyHeader from 'hooks/useStickyHeader';
 import Settings from 'components/article/Settings';
+import useClickOutside from "hooks/useClickOutside";
+import Portal from 'components/layout/Portal';
 import Image from 'next/image';
 
 const Header = ({ themeMode , setThemeMode }) => {
     const ref = useRef();
+    const outSideRef = useClickOutside(() => setMenuToggle(false));
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
     const [settingToggle, setSettingToggle] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(undefined);
 
     const handleHeaderMenu = () => {
         setMenuToggle(prev => !prev);
@@ -105,7 +107,7 @@ const Header = ({ themeMode , setThemeMode }) => {
                 </Min768>
 
                 <M768>
-                    <Headerstyled.mobileHeaderMenuWrap className={menuToggle && 'active'}>
+                    <Headerstyled.mobileHeaderMenuWrap ref={outSideRef} className={menuToggle && 'active'}>
                         <Headerstyled.mobileHeaderMenuList>
                             {utilArray.map((item,index) => {
                                 const lastIndex = utilArray.length - 1;
@@ -134,17 +136,22 @@ const Header = ({ themeMode , setThemeMode }) => {
                                 )
                             })}
                         </Headerstyled.mobileHeaderMenuList>
+                        
                     </Headerstyled.mobileHeaderMenuWrap>
-                    
+
                     <Portal>
                         {
                             settingToggle &&
-                            <Settings 
-                                themeMode={themeMode} 
-                                setThemeMode={setThemeMode} 
-                                setSettingToggle={setSettingToggle}
-                                isMobile={isMobile}
-                            />
+                            <>
+                                <div aria-hidden="true" id="modalDimmed"></div>
+                                <Settings
+                                    themeMode={themeMode} 
+                                    setThemeMode={setThemeMode} 
+                                    setSettingToggle={setSettingToggle}
+                                    isMobile={isMobile}
+                                />
+                            </>
+                            
                         }
                     </Portal>
                 </M768>

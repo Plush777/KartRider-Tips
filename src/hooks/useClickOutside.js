@@ -12,11 +12,9 @@ const useClickOutside = (callback) => {
         }   
       
         document.addEventListener("click", handleClickOutside);
-        document.addEventListener("touchend", handleClickOutside);
 
         return () => {
             document.removeEventListener("click", handleClickOutside);
-            document.removeEventListener("touchend", handleClickOutside);
         }
     }, [callback]);
 

@@ -1,11 +1,7 @@
-'use client';
-
 import styled, { css } from "styled-components";
 import SCrankArrowUp from 'svg/ico-rank-arrow-up.svg';
 import SCrankArrowDown from 'svg/ico-rank-arrow-down.svg';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
-import { usePathname } from "next/navigation";
 
 const RankWrap = styled.div`
     position: relative;
@@ -17,6 +13,7 @@ const RankList = styled.ul`
     row-gap: 12px;
     overflow-y: auto;
     max-height: 371px;
+    padding-bottom: 70px;
 `
 
 const RankBoxItem = styled.li`
@@ -31,9 +28,15 @@ const RankBoxItem = styled.li`
     transition: .3s ease-in-out;
     transition-property: background-color;
 
-    &.active{
-        background-color: var(--background1);
+    &:last-of-type{
+        border-radius: 8px 8px 0 0;
     }
+
+    ${({ theme }) => theme.mobile`
+        padding: 12px;
+        column-gap: 12px;
+        max-height: 80px;
+    `};
 `
 
 const RankInnerBox = styled.div`
@@ -49,6 +52,20 @@ const RankInnerBox = styled.div`
         border-radius: 8px;
         object-fit: cover;
     }
+
+    ${({ theme }) => theme.tablet`
+        img{
+            width: 52px;
+            height: 52px;
+        }
+    `};
+
+    ${({ theme }) => theme.mobile`
+        img{
+            width: 44px;
+            height: 44px;
+        }
+    `};
 `
 
 const RankStatus = styled.div`
@@ -59,43 +76,111 @@ const RankStatus = styled.div`
 `
 
 const RankText = styled.span`
-    ${props => props.number && css`
+    &.number{
         font-size: 1.375rem;
         color: var(--text1);
-    `}
 
-    ${props => props.status && css`
+        &:where([data-number="1"], [data-number="2"], [data-number="3"]){
+            color: var(--active);
+        }
+    }
+
+    &.status {
         margin-left: 1.5px;
         font-size: .8125rem;
         color: var(--text1);
-    `}
+    }
 
-    ${props => props.icon && css`
+    &.icon{
         font-size: .625rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.7px;
         color: var(--red);
-    `}
+    }
 
-    ${props => props.gameName && css`
+    &.gameName{
         display: flex;
         align-items: center;
         height: 64px;
         padding-left: 20px;
         font-size: 1.25rem;
         color: var(--text1);
-    `}
-
-    &:where([data-number="1"], [data-number="2"], [data-number="3"]){
-        color: var(--active);
     }
+
+    ${({ theme }) => theme.tablet`
+        &.gameName{
+            font-size: 1.125rem;
+        }
+    `};
+
+    ${({ theme }) => theme.mobile`
+        &.gameName{
+            font-size: 1rem;
+            padding-left: 15px;
+        }
+
+        &.number{
+            font-size: 1.25rem;
+        }
+    `};
+`
+
+const BottomBar = styled.div`
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 14px);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    border-radius: 0 0 8px 8px;
+    background-color: var(--background1);
+    z-index: 990;
+
+    svg{
+        width: 8px;
+        height: 8px;
+    }
+
+    ${RankBoxItem}{
+        max-height: 70px;
+        border-radius: 0 0 8px 8px;
+        border-radius: 0;
+    }
+
+    .number{
+        font-size: 1.125rem;
+    }
+
+    .gameName{
+        font-size: 1rem;
+    }
+
+    .status{
+        font-size: .75rem;
+    }
+
+    ${({ theme }) => theme.tablet`
+        img{
+            width: 38px;
+            height: 38px;
+        }
+    `};
+
+    ${({ theme }) => theme.mobile`
+        .gameName{
+            font-size: .875rem;
+        }
+
+        img{
+            width: 34px;
+            height: 34px;
+        }
+    `};
 `
 
 const RankingList = ({ data, loading }) => {
-    let [myGameFoucs, setMyGameFocus] = useState('');
-    const myGameRef = useRef(null);
-
     const rankIconCondition = (data) => {
         if (data) {
             if (data.includes('ranking-static-up')) return <SCrankArrowUp width="12px" height="12px" fill="#eb0400"/>
@@ -112,47 +197,57 @@ const RankingList = ({ data, loading }) => {
         }
     }
 
-    const focusScroll = () => {
-        if (!loading) {
-            setMyGameFocus('active');
-            myGameRef.current.scrollIntoView({ 
-                block: "center" 
-            });
-        }
-    }
+    const myGameRank = data && data.filter((list) => list.title === '카트라이더 드리프트');
 
-    const pathname = usePathname();
-
-    useEffect(() => {
-        if (pathname === '/') {
-            focusScroll();
-        }
-    }, [pathname]);
-    
     return(
         <RankWrap>
-            <RankList>
-                {data && data.map((list, index) => {
+            <BottomBar>
+                {myGameRank?.map((list, index) => {
                     const { title, rank, rankChange, rankStatus, img } = list;
-                    const myTitle = title === '카트라이더 드리프트'; 
 
                     return(
-                        <RankBoxItem key={index} className={ myTitle ? myGameFoucs : ''} ref={ myTitle ? myGameRef : null}>
+                        <RankBoxItem key={index} as="div">
                             <RankInnerBox direction="column" seq>
-                                <RankText number as="strong" data-number={index+1}>{rank}</RankText>
+                                <RankText className="number" as="strong">{rank}</RankText>
                                 {
                                     rankChange === '' && rankStatus === '' ?
                                     null
                                     :
                                     <RankStatus>
-                                        <RankText icon>{rankIconCondition(rankStatus)}</RankText>
-                                        <RankText status>{rankChange}</RankText>
+                                        <RankText className="icon">{rankIconCondition(rankStatus)}</RankText>
+                                        <RankText className="status">{rankChange}</RankText>
+                                    </RankStatus>
+                                }
+                            </RankInnerBox>
+                            <RankInnerBox direction="row">
+                                <Image width={38} height={38} src={rankImgCondition(title,img)} alt="카트라이더 드리프트"/>
+                                <RankText as="h3" className="gameName">{title}</RankText>
+                            </RankInnerBox>
+                        </RankBoxItem>
+                    )
+                })}
+            </BottomBar>
+            <RankList>
+                {data && data.map((list, index) => {
+                    const { title, rank, rankChange, rankStatus, img } = list;
+
+                    return(
+                        <RankBoxItem key={index}>
+                            <RankInnerBox direction="column" seq>
+                                <RankText className="number" as="strong" data-number={index+1}>{rank}</RankText>
+                                {
+                                    rankChange === '' && rankStatus === '' ?
+                                    null
+                                    :
+                                    <RankStatus>
+                                        <RankText className="icon">{rankIconCondition(rankStatus)}</RankText>
+                                        <RankText className="status">{rankChange}</RankText>
                                     </RankStatus>
                                 }
                             </RankInnerBox>
                             <RankInnerBox direction="row">
                                 <Image width={64} height={64} src={rankImgCondition(title,img)} alt="카트라이더 드리프트"/>
-                                <RankText as="h3" gameName>{title}</RankText>
+                                <RankText as="h3" className="gameName">{title}</RankText>
                             </RankInnerBox>
                         </RankBoxItem>
                     )
