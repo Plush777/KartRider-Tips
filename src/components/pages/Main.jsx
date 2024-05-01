@@ -23,29 +23,21 @@ export default function Main({ videoIds }) {
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
     const isSession = sessionStorage.getItem('intro');
 
-    useEffect(() => {
-        if (!isSession) {
-            let timer = setTimeout(() => {
-                setIntro(true);
-                sessionStorage.setItem('intro', 'true');
-            }, 5500);
-    
-            return () => clearTimeout(timer);
-        }
-    }, []);
-
     return(
         <>
-            {!intro && !isSession ? <Intro/> : null}
-            <Container className={!isSession ? null : 'active'}>
-                <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
-                <Substyled.Main>
-                    <Suspense fallback={null}>
-                        <MainBox themeMode={themeMode} videoIds={videoIds}/>
-                    </Suspense>
-                </Substyled.Main>
-                <Footer themeMode={themeMode}/>
-            </Container>
+            {!intro && !isSession ? 
+                <Intro setIntro={setIntro}/> 
+                : 
+                <Container className={!isSession ? null : 'active'}>
+                    <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
+                    <Substyled.Main>
+                        <Suspense fallback={null}>
+                            <MainBox themeMode={themeMode} videoIds={videoIds}/>
+                        </Suspense>
+                    </Substyled.Main>
+                    <Footer themeMode={themeMode}/>
+                </Container>
+            }
         </>
     )
 }
