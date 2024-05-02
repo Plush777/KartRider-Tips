@@ -5,7 +5,7 @@ import Image from 'next/image';
 import useImageTransition from 'hooks/useImageTransition';
 import { decode } from 'html-entities';
 
-const RecentYoutubeList = ({ data, recentLoading }) => {
+const RecentYoutubeList = ({ data, isLoading }) => {
     const recentList = data && data.slice(0, 3);
     const apiDate = data && recentList.map((item) => (item.pubDate));
     /*
@@ -16,7 +16,7 @@ const RecentYoutubeList = ({ data, recentLoading }) => {
         const dateParts = (dateString || "").split(" ");
         return dateParts[0]; // 날짜 부분만 추출
     });
-    const { isShow } = useImageTransition(recentLoading, 1);
+    const { isShow } = useImageTransition(isLoading, 1);
 
     return(
         <Mainstyled.MainComponentGroup display="flex">

@@ -7,11 +7,11 @@ import { ReactQueryStreamedHydration } from "@tanstack/react-query-next-experime
 
 function Providers({ children }){
     const [client] = useState(new QueryClient({
-        defaultOptions: {
-            queries: {
-                staleTime: 1000 * 60 * 5,
-            }
-        }
+        // defaultOptions: {
+        //     queries: {
+        //         staleTime: 1000 * 60 * 5,
+        //     }
+        // }
     }));
 
     return (

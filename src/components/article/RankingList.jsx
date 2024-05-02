@@ -180,7 +180,7 @@ const BottomBar = styled.div`
     `};
 `
 
-const RankingList = ({ data, loading }) => {
+const RankingList = ({ data, isLoading }) => {
     const rankIconCondition = (data) => {
         if (data) {
             if (data.includes('ranking-static-up')) return <SCrankArrowUp width="12px" height="12px" fill="#eb0400"/>

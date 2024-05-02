@@ -1,30 +1,10 @@
 import RecommendYoutubeList from 'components/article/RecommendYoutubeList';
 import VideoState from 'components/article/VideoState';
 import * as Mainstyled from 'components/style/common/Area.style';
-import { useQuery } from "@tanstack/react-query";
 import MainTitle from 'components/article/MainTitle';
-import { fetchVideoLists } from 'scripts/api/youtubeVideo';
 
-const RecommendYoutube = ({ sectionName }) => {
-    const videoIds = [
-        'Noi6KtdyZOQ&t=5s',
-        'KX5dAdwy1Xg&t=1s',
-        'l3Zz5vDik3E',
-        'WcM4R22Z7lE&t=2s',
-        'Dw0hqjbV0W4&t=3s',
-        'P2211wKunWc&t=51s'
-    ];
-
-    const { 
-        data: youtubeVideo, 
-        isLoading: youtubeVideoLoading,
-        isError: youtubeVideoError
-     } = useQuery({
-        queryKey: ["youtubeVideoLists"],
-        queryFn: () => fetchVideoLists(videoIds)
-    });
-
-    const sortedVideo = youtubeVideo && youtubeVideo.sort((a,b) => {
+const RecommendYoutube = ({ sectionName, data, isLoading, isError }) => {
+    const sortedVideo = data && data.sort((a,b) => {
         return new Date(b[0].snippet.publishedAt) - new Date(a[0].snippet.publishedAt);
     });
  
@@ -38,13 +18,13 @@ const RecommendYoutube = ({ sectionName }) => {
             />
             
             <Mainstyled.MainInner minHeight="var(--mainHeightWide)">
-                {youtubeVideoError && <VideoState type='error'/>}
+                {isError && <VideoState type='error'/>}
                 
                 {
-                    youtubeVideoLoading ? 
+                    isLoading ? 
                     <VideoState type='loading'/> 
                     : 
-                    <RecommendYoutubeList data={sortedVideo} loading={youtubeVideoLoading}/>
+                    <RecommendYoutubeList data={sortedVideo} isLoading={isLoading}/>
                 }
             </Mainstyled.MainInner>
         </Mainstyled.MainComponentBox>

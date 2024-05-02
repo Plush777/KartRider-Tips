@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import MainBox from 'components/article/MainBox';
 import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
@@ -31,9 +31,7 @@ export default function Main({ videoIds }) {
                 <Container className={!isSession ? null : 'active'}>
                     <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
                     <Substyled.Main>
-                        <Suspense fallback={null}>
-                            <MainBox themeMode={themeMode} videoIds={videoIds}/>
-                        </Suspense>
+                        <MainBox themeMode={themeMode} videoIds={videoIds}/>
                     </Substyled.Main>
                     <Footer themeMode={themeMode}/>
                 </Container>

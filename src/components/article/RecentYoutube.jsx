@@ -1,35 +1,10 @@
-import { useState } from 'react';
 import RecentYoutubeList from 'components/article/RecentYoutubeList';
 import VideoState from 'components/article/VideoState';
 import * as Mainstyled from 'components/style/common/Area.style';
-import { useQuery } from "@tanstack/react-query";
 import Select from 'components/common/Select';
 import MainTitle from 'components/article/MainTitle';
-import { fetchRecentLists } from 'scripts/api/rssYoutube';
 
-const RecentYoutube = ({ sectionName }) => {
-    const keyArray = [
-        'UCJDEss5wA1ddrCBC40giO8A',
-        'UCFBGBsvOMA2gbxmnxgotsmw',
-        'UC8Y0MrXoV4eocUBOYzYnCaw',
-        'UCkPYxlKG9pF2gIE2HohqaeA'
-    ];
-
-    const getRandomKey = () => {
-        const randomIndex = Math.floor(Math.random() * keyArray.length);
-        return keyArray[randomIndex];
-    };
-
-    let [selectKey, setSelectKey] = useState(getRandomKey());
-
-    const { 
-        data: recent, 
-        isLoading: recentLoading,
-        isError: recentError
-     } = useQuery({
-        queryKey: ["youtubeRecentLists", selectKey],
-        queryFn: () => fetchRecentLists(selectKey),
-    });
+const RecentYoutube = ({ sectionName, data, isLoading, isError, selectKey, setSelectKey }) => {
 
     return(
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
@@ -43,13 +18,13 @@ const RecentYoutube = ({ sectionName }) => {
             />
             
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
-                {recentError && <VideoState type='error' styleClassName='item3'/>}
+                {isError && <VideoState type='error' styleClassName='item3'/>}
 
                 {
-                    recentLoading ? 
+                    isLoading ? 
                     <VideoState type='loading' styleClassName='item3'/> 
                     : 
-                    <RecentYoutubeList data={recent} recentLoading={recentLoading} selectKey={selectKey} setSelectKey={setSelectKey}/>
+                    <RecentYoutubeList data={data} isLoading={isLoading} selectKey={selectKey} setSelectKey={setSelectKey}/>
                 }
             </Mainstyled.MainInner>
         </Mainstyled.MainComponentBox>

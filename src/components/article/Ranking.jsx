@@ -2,8 +2,6 @@ import * as Mainstyled from 'components/style/common/Area.style';
 import MainTitle from 'components/article/MainTitle';
 import RankingList from 'components/article/RankingList';
 import VideoState from 'components/article/VideoState';
-import { fetchRanking } from 'scripts/api/ranking';
-import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
 
 const RankDescription = styled.p`
@@ -18,18 +16,7 @@ const RankDescription = styled.p`
     `};
 `
 
-const Ranking = () => {
-    const { 
-        data: ranking, 
-        isLoading: rankingLoading, 
-        isError: rankingError
-    } = useQuery({
-        queryKey: ["rankingLists"],
-        queryFn: fetchRanking,
-    });
-
-    // console.log(ranking);
-
+const Ranking = ({ data, isLoading, isError }) => {
     return(
         <Mainstyled.ContainerBox>
             <MainTitle 
@@ -41,13 +28,13 @@ const Ranking = () => {
             />
            
             <Mainstyled.MainInner container="both" minHeight="var(--mainHeightDefault)">
-                {rankingError && <VideoState type='error' styleClassName='item3'/>}
+                {isError && <VideoState type='error' styleClassName='item3'/>}
 
                 {
-                    rankingLoading ? 
+                    isLoading ? 
                     <VideoState type='loading' styleClassName='item3'/> 
                     :
-                    <RankingList data={ranking} loading={rankingLoading}/>
+                    <RankingList data={data} isLoading={isLoading}/>
                 }
             </Mainstyled.MainInner>
         </Mainstyled.ContainerBox>

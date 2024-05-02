@@ -2,11 +2,7 @@ import { useState } from 'react';
 
 const useSelect = () => {
     const [toggle, setToggle] = useState(false);
-    const [selected, setSelected] = useState(
-        {
-            channel: '리버스'
-        }
-    );
+    const [selected, setSelected] = useState(undefined);
 
     const handleSelectClick = (key, e) => {
         setSelected(prev => {
@@ -22,7 +18,7 @@ const useSelect = () => {
         setToggle(!toggle);
     };
 
-    return [toggle, setToggle, handleSelectClick, handleToggleSelect, setSelected];
+    return [toggle, setToggle, handleSelectClick, handleToggleSelect];
 }
 
 export default useSelect;

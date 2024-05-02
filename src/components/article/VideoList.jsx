@@ -5,6 +5,14 @@ import RecentNews from 'components/article/RecentNews';
 import Ranking from 'components/article/Ranking';
 import Season from 'components/article/Season';
 import styled from "styled-components";
+import { useState } from 'react';
+import { useQueries } from '@tanstack/react-query';
+import { fetchRanking } from 'scripts/api/ranking';
+import { fetchRecentLists } from 'scripts/api/rssYoutube';
+import { fetchVideoLists } from 'scripts/api/youtubeVideo';
+import { fetchNews, fetchArticles } from 'scripts/api/news';
+import { keyArray, getRandomKey } from 'data/recent';
+import { videoIds } from 'data/recommend';
 
 const Container = styled.section`
     display: flex;
@@ -22,16 +30,78 @@ const Container = styled.section`
 `
 
 const VideoList = () => {
+    let [selectKey, setSelectKey] = useState(getRandomKey(keyArray));
+
+    const queryResults = useQueries({
+        queries: [
+            {
+                queryKey: ["rankingLists"],
+                queryFn: fetchRanking,
+            },
+            {
+                queryKey: ["youtubeRecentLists", selectKey],
+                queryFn: () => fetchRecentLists(selectKey),
+            },
+            {
+                queryKey: ["youtubeVideoLists"],
+                queryFn: () => fetchVideoLists(videoIds)
+            },
+            {
+                queryKey: ["newsLists"],
+                queryFn: async () => {
+                    const news = await fetchNews();
+                    const devArticles = await fetchArticles('/krtp/article/dev',0,4);
+                    const updateArticles = await fetchArticles('/krtp/article/update',0,4);
+    
+                    return {
+                        news,
+                        devArticles,
+                        updateArticles
+                    }
+                },
+            }
+        ]
+    });
+
+    const [
+        { data: ranking, isLoading: rankingIsLoading, isError: rankingIsError },
+        { data: recent, isLoading: recentIsLoading, isError: recentIsError },
+        { data: youtubeVideo, isLoading: youtubeVideoIsLoading, isError: youtubeVideoIsError },
+        { data: newsData, isLoading: newsIsLoading, isError: newsIsError }
+    ] = queryResults;
+   
     return ( 
         <>
             <Container>
-                <Ranking/>
+                <Ranking 
+                    data={ranking} 
+                    isLoading={rankingIsLoading} 
+                    isError={rankingIsError}
+                />
                 <Season/>
             </Container>
+
             <ChzzkLive sectionName="chzzk"/>
-            <RecentYoutube sectionName="recentYoutube"/>
-            <RecommendYoutube sectionName="recommendYoutube"/>
-            <RecentNews sectionName="recentNews"/>
+            <RecentYoutube 
+                data={recent}
+                isLoading={recentIsLoading}
+                isError={recentIsError}
+                selectKey={selectKey}
+                setSelectKey={setSelectKey}
+                sectionName="recentYoutube"
+            />
+            <RecommendYoutube 
+                data={youtubeVideo} 
+                isLoading={youtubeVideoIsLoading} 
+                isError={youtubeVideoIsError}  
+                sectionName="recommendYoutube"
+            />
+            <RecentNews
+                data={newsData}
+                isLoading={newsIsLoading}
+                isError={newsIsError}
+                sectionName="recentNews"
+            />
         </>
     );
 }

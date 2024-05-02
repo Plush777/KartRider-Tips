@@ -1,47 +1,26 @@
 import * as Mainstyled from 'components/style/common/Area.style';
-import { useQuery } from "@tanstack/react-query";
 import RecentNewsList from 'components/article/RecentNewsList';
 import VideoState from 'components/article/VideoState';
 import MainTitle from 'components/article/MainTitle';
 import Tab from 'components/common/Tab';
 import { useEffect, useState } from 'react';
-import { fetchNews, fetchArticles } from 'scripts/api/news';
 
-const RecentNews = ({ sectionName }) => {
+const RecentNews = ({ sectionName, data, isLoading, isError }) => {
     let [tabIndex, setTabIndex] = useState(0);
     let [loadData, setLoadData] = useState(undefined);
 
-    const { 
-        data: newsData, 
-        isLoading: newsLoading,
-        isError: newsError
-     } = useQuery({
-        queryKey: ["newsLists"],
-        queryFn: async () => {
-            const news = await fetchNews();
-            const devArticles = await fetchArticles('/krtp/article/dev',0,4);
-            const updateArticles = await fetchArticles('/krtp/article/update',0,4);
-
-            return {
-                news,
-                devArticles,
-                updateArticles
-            }
-        },
-    });
-
     useEffect(() => {
-        if (newsData) {
+        if (data) {
             if (tabIndex === 0) {
-                newsData && newsData.news.sort((a,b) => {
+                data && data.news.sort((a,b) => {
                     return new Date(b.date) - new Date(a.date);
                 });
-                setLoadData(newsData.news);
+                setLoadData(data.news);
             }
-            if (tabIndex === 1) setLoadData(newsData.devArticles);
-            if (tabIndex === 2) setLoadData(newsData.updateArticles);
+            if (tabIndex === 1) setLoadData(data.devArticles);
+            if (tabIndex === 2) setLoadData(data.updateArticles);
         }
-    }, [tabIndex, newsData]);
+    }, [tabIndex, data]);
 
     const tabArray = ['뉴스', '개발자 노트', '업데이트'];
 
@@ -57,10 +36,10 @@ const RecentNews = ({ sectionName }) => {
             <Tab tabIndex={tabIndex} setTabIndex={setTabIndex} data={tabArray} marginBottom="15px"/>
 
             <Mainstyled.MainInner borderBottom minHeight="var(--mainHeightNews)">
-                {newsError && <VideoState type='error'/>}
+                {isError && <VideoState type='error'/>}
 
                 {
-                    newsLoading ?
+                    isLoading ?
                     <VideoState type='loading' height="660px"/> : <RecentNewsList tabIndex={tabIndex} data={loadData}/>
                 }
             </Mainstyled.MainInner>

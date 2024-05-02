@@ -4,7 +4,7 @@ import Image from 'next/image';
 import useImageTransition from 'hooks/useImageTransition';
 import { decode } from 'html-entities';
 
-const RecommendYoutubeList = ({ data, loading }) => {
+const RecommendYoutubeList = ({ data, isLoading }) => {
     const videoList = data && data.map(item => {
         const snippet = item[0].snippet;
         const id = item[0].id;
@@ -17,7 +17,7 @@ const RecommendYoutubeList = ({ data, loading }) => {
         }
     });
 
-    const { isShow } = useImageTransition(loading, 1);
+    const { isShow } = useImageTransition(isLoading, 1);
 
     return(
         <Mainstyled.MainComponentGroup display="grid" gtc="repeat(3, 1fr)" rg="60px">
