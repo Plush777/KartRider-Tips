@@ -4,6 +4,6 @@ export const metadata = {
     title: 'Kartrider Tips'
 }
 
-export default async function page({ videoIds, searchParams }) {
-    return <Main videoIds={videoIds} searchParams={searchParams}/>
+export default async function page() {
+    return <Main/>
 }

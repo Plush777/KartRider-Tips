@@ -44,6 +44,8 @@ const ChzzkLive = ({ sectionName }) => {
         queryKey: ["chzzkLists"],
         queryFn: fetchChzzkLiveLists,
         initialPageParam: 0,
+        staleTime: 0,
+        refetchInterval: 1000 * 60 * 5, // 5분
         getNextPageParam: (lastPage, allPages) => {
             return lastPage.length === 0 ? undefined : allPages.length;
         }
@@ -105,12 +107,13 @@ const ChzzkLive = ({ sectionName }) => {
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
                 {chzzkError && <VideoState type='error' styleClassName='item3'/>}
                 
-                {
+                <VideoState type='empty' emptyText="이런, 라이브 중인 스트리머가 없네요!"/>
+                {/* {
                     chzzkLoading || chzzkRefetching ?
                     <VideoState type='loading' styleClassName='item3'/>
                     :
                     <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
-                }
+                } */}
 
                 {chzzkFetchingNextPage && <LoadingSpinner/>}
 

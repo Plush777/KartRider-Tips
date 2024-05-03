@@ -18,7 +18,7 @@ const Container = styled.div`
     }
 `
 
-export default function Main({ videoIds }) {
+export default function Main() {
     const [intro, setIntro] = useState(false);
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
     const isSession = sessionStorage.getItem('intro');
@@ -31,7 +31,7 @@ export default function Main({ videoIds }) {
                 <Container className={!isSession ? null : 'active'}>
                     <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
                     <Substyled.Main>
-                        <MainBox themeMode={themeMode} videoIds={videoIds}/>
+                        <MainBox themeMode={themeMode}/>
                     </Substyled.Main>
                     <Footer themeMode={themeMode}/>
                 </Container>

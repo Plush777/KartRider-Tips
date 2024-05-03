@@ -13,111 +13,125 @@ const Center = styled.div`
 `;
 
 const PlayerWrap = styled.div`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    +.lottieText {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
     ${props => props.state === 'error' && `
         width: 287px;
         height: 287px;
-        margin: 0 auto;
-        transform: translateY(-80px);
+        margin-top: -160px;
 
-        + ${Text} {
-            margin-top: -80px;
+        +.lottieText {
+            margin-top: 130px;
         }
     `}
 
     ${props => props.state === 'loading' && `
         width: 409px;
         height: 307px;
-        margin: 0 auto;
-        transform: translateY(-90px);
+        margin-top: -200px;
 
-        + ${Text} {
-            margin-top: -120px;
-        }
-
-        &.item3{
-            margin-bottom: auto;
+        +.lottieText {
+            margin-top: 40px;
+            bottom: auto;
         }
     `}
 
     ${props => props.state === 'empty' && `
         height: 60%;
+        margin-top: -100px;
 
-        @media (max-width: 1200px) {
-            height: 55%;
+        +.lottieText {
+            margin-top: 170px;
+            bottom: auto;
         }
     `}
 
     ${({ theme }) => theme.laptop`
         ${props => props.state === 'empty' && `
             height: 50%;
+            margin-top: -140px;
+
+            +.lottieText {
+                bottom: 100px;
+            }
         `}
 
         ${props => props.state === 'loading' && `
             width: auto;
-            height: 75%;
-            transform: translateY(-40px);
+            height: 100%;
+            margin-top: -125px;
 
-            + ${Text} {
-                margin-top: -60px;
-                margin-bottom: auto;
+            +.lottieText {
+               bottom: 100px;
             }
         `}
     `};
 
     ${({ theme }) => theme.tablet`
         ${props => props.state === 'empty' && `
-            height: 70%;
+            width: 146px;
+            height: 166px;
+            margin-top: -70px;
+
+            +.lottieText {
+               bottom: 25px;
+            }
         `}
 
         ${props => props.state === 'loading' && `
-            height: 115%;
-            transform: translateY(-55px);
+            margin-top: -60px;
+            width: 55%;
+            height: auto;
 
-            + ${Text} {
-                margin-top: -85px;
+            +.lottieText {
+               bottom: 20px;
             }
         `}
 
         ${props => props.state === 'error' && `
-            width: auto;
-            height: 100%;
-            transform: translateY(-10px);
+            width: 220px;
+            height: 220px;
+            margin-top: -70px;
 
-            + ${Text} {
-                margin-top: -10px;
+            +.lottieText {
+               margin-top: 150px;
             }
         `}
     `};
 
     ${({ theme }) => theme.mobile`
         ${props => props.state === 'loading' && `
-            height: 100%;
-            transform: translateY(-25px);
+            width: 80%;
 
-            + ${Text} {
-                margin-top: -50px;
+            +.lottieText {
+                bottom: 30px;
             }
         `}
     `};
 
     ${({ theme }) => theme.small`
         ${props => props.state === 'empty' && `
-            height: 50%;
+            width: 40%;
+            height: auto;
         `}
 
-        ${props => props.state === 'loading' && `
-            height: 95%;
-            transform: translateY(-35px);
-
-            + ${Text} {
-                margin-top: -55px;
-            }
+        ${props => props.state === 'error' && `
+            width: 70%;
+            height: auto;
         `}
     `};
 `
 
 const Text = styled.p`
-    margin-top: 20px;
     font-size: 1rem;
     color: var(--text1);
     text-align: center;
@@ -152,7 +166,7 @@ const VideoState = ({ type, emptyText, styleClassName }) => {
                     loop
                 />
             </PlayerWrap>
-            <Text>{emptyText ? emptyText : handleTextCondition(type)}</Text>
+            <Text className="lottieText">{emptyText ? emptyText : handleTextCondition(type)}</Text>
         </Center>
     )
 }
