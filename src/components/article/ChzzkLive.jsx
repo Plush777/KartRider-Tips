@@ -44,8 +44,6 @@ const ChzzkLive = ({ sectionName }) => {
         queryKey: ["chzzkLists"],
         queryFn: fetchChzzkLiveLists,
         initialPageParam: 0,
-        refetchOnWindowFocus: true,
-        refetchOnReconnect: true,
         getNextPageParam: (lastPage, allPages) => {
             return lastPage.length === 0 ? undefined : allPages.length;
         }

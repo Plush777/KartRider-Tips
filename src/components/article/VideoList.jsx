@@ -37,16 +37,27 @@ const VideoList = () => {
             {
                 queryKey: ["rankingLists"],
                 queryFn: fetchRanking,
+                staleTime: 1000 * 60 * 60 * 24, // 24시간
+                gcTime: 1000 * 60 * 60 * 24 * 5, // 5일
+                retry: 1
             },
             {
                 queryKey: ["youtubeRecentLists", selectKey],
                 queryFn: () => fetchRecentLists(selectKey),
+                staleTime: 1000 * 60 * 5, // 5분
+                gcTime: 1000 * 60 * 10, // 10분
+                retry: 1
             },
             {
                 queryKey: ["youtubeVideoLists"],
-                queryFn: () => fetchVideoLists(videoIds)
+                queryFn: () => fetchVideoLists(videoIds),
+                staleTime: Infinity,
+                gcTime: Infinity,
+                refetchOnWindowFocus: false,
+                refetchOnReconnect: false,
+                retry: 1
             },
-            {
+            { 
                 queryKey: ["newsLists"],
                 queryFn: async () => {
                     const news = await fetchNews();
@@ -59,6 +70,8 @@ const VideoList = () => {
                         updateArticles
                     }
                 },
+                staleTime: 1000 * 60 * 10, // 10분
+                gcTime: 1000 * 60 * 20, // 20분
             }
         ]
     });
@@ -82,6 +95,7 @@ const VideoList = () => {
             </Container>
 
             <ChzzkLive sectionName="chzzk"/>
+
             <RecentYoutube 
                 data={recent}
                 isLoading={recentIsLoading}
