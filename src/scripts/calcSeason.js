@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
 const calcSeason = () => {
-    const [currentSeasonStart, setCurrentSeasonStart] = useState(new Date(Date.UTC(2024, 1, 15))); // 초기 시즌 시작일
+    const [currentSeasonStart] = useState(new Date(Date.UTC(2024, 1, 15))); // 초기 시즌 시작일
     const [currentSeasonNumber, setCurrentSeasonNumber] = useState(1);
     const [endDate, setEndDate] = useState('');
     const [daysCount, setDaysCount] = useState(0);
+    const [next, setNext] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(() => {
@@ -25,29 +26,27 @@ const calcSeason = () => {
             return;
         }
 
-        const nextSeasonStart = new Date(seasonEnd.getTime() + 24 * 60 * 60 * 1000); // 다음 시즌 시작일은 종료일 다음날
-
         // 현재 시간과 시즌 종료 시간 비교
         const now = new Date();
 
-        // 현재 날짜가 시즌 종료일 이후라면 다음 시즌 시작일을 설정
-        if (now >= seasonEnd) {
-            setCurrentSeasonStart(nextSeasonStart);
+        if (now > seasonEnd) {
             setCurrentSeasonNumber(currentSeasonNumber + 1);
+            setNext(true);
         } else {
             // 시즌 종료일 및 남은 일수 설정
             setEndDate(seasonEnd.toISOString().substring(0, 10));
             const timeDiff = seasonEnd.getTime() - now.getTime();
             setDaysCount(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
         }
-    }, [currentSeasonStart]); 
+    }, [currentSeasonStart, currentSeasonNumber]); 
 
     return {
         currentSeasonStart,
         currentSeasonNumber,
         endDate,
         daysCount,
-        error
+        error,
+        next
     }
 }
 

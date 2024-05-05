@@ -106,14 +106,13 @@ const ChzzkLive = ({ sectionName }) => {
            
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
                 {chzzkError && <VideoState type='error' styleClassName='item3'/>}
-                
-                <VideoState type='empty' emptyText="이런, 라이브 중인 스트리머가 없네요!"/>
-                {/* {
+               
+                {
                     chzzkLoading || chzzkRefetching ?
                     <VideoState type='loading' styleClassName='item3'/>
                     :
                     <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
-                } */}
+                }
 
                 {chzzkFetchingNextPage && <LoadingSpinner/>}
 
