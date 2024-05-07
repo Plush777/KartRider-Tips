@@ -2,7 +2,6 @@
 
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
-import 'scss/app.scss';
 
 const FlexContainer = styled.div`
     display: flex;

@@ -1,4 +1,3 @@
-import 'scss/app.scss';
 import ContextProvider from 'components/layout/ContextProvider';
 import BeforeThemeRender from './BeforeThemeRender';
 import DocumentScrollProvider from './DocumentScrollProvider';

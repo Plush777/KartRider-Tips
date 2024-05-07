@@ -1,12 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import MainBox from 'components/article/MainBox';
-import Footer from 'components/layout/Footer';
-import Header from 'components/layout/Header';
 import Intro from 'components/common/Intro';
 import styled from "styled-components";
-import * as Substyled from 'components/style/common/Area.style';
+import DefaultLayout from 'components/layout/DefaultLayout';
+import VideoList from 'components/article/VideoList';
 
 const Container = styled.div`
    transition: .3s ease-in-out;
@@ -20,7 +18,6 @@ const Container = styled.div`
 
 export default function Main() {
     const [intro, setIntro] = useState(false);
-    const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
     const isSession = sessionStorage.getItem('intro');
 
     return(
@@ -29,11 +26,9 @@ export default function Main() {
                 <Intro setIntro={setIntro}/> 
                 : 
                 <Container className={!isSession ? null : 'active'}>
-                    <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
-                    <Substyled.Main>
-                        <MainBox themeMode={themeMode}/>
-                    </Substyled.Main>
-                    <Footer themeMode={themeMode}/>
+                    <DefaultLayout type="main">
+                        <VideoList/>
+                    </DefaultLayout>
                 </Container>
             }
         </>

@@ -24,7 +24,61 @@ html{
     &.large{font-size: 17.5px;}
 }
 
-body{touch-action: pan-y;}
+body{touch-action: pan-y;
+
+    --mainHeightDefault: 371px;
+    --mainHeightWide: 802px;
+    --mainHeightNews: 660px;
+    --section-gap: 150px;
+    --dimmed: rgba(0, 0, 0, 0.3);
+    --live: #eb0400;
+
+    &[data-theme="light"]{
+        --main-background: #f2f2f2;
+        --sub-background: #f2f2f2;
+        --background1: #fff;
+        --background2: #fff;
+        --background3: #000;
+        --background4: #ececec;
+        --background5: #f9f9f9;
+        --scrollbar-background: #A6A6A6;
+        --active-background: #000;
+        --stroke1: #ddd;
+        --stroke2: #c1c1c1;
+        --description: #626262;
+        --active: #309ED5;
+        --skeleton: #f5f5f5;
+        --disabled: rgba(0, 0, 0, 0.6);
+        --title: #000;
+        --text1: #333;
+        --text2: #333;
+        --text3: #fff;
+        --red: #ff0000;
+    }
+
+    &[data-theme="dark"]{
+        --main-background: #121212;
+        --sub-background: #121212;
+        --background1: #292A2D;
+        --background2: #1e1e1e;
+        --background3: #fff;
+        --background4: #1e1e1e;
+        --background5: #1e1e1e;
+        --scrollbar-background: #aaa;
+        --active-background: #fff;
+        --stroke1: #2A2A2A;
+        --stroke2: rgba(255,255,255,.2);
+        --description: #BBBBBF;
+        --active: #0094ff;
+        --skeleton: #1e1e1e;
+        --disabled: rgba(255,255,255,.55);
+        --title: #F8F8FA;
+        --text1: #ECECEC;
+        --text2: #fff;
+        --text3: #000;
+        --red: #ff4353;
+    }
+}
 
 /* mobile scroll */
 ::-webkit-scrollbar {-webkit-appearance: none; -webkit-overflow-scrolling: auto;}
@@ -69,29 +123,44 @@ border-radius: 8px; background-color: var(--scrollbar-background);}
 
 ${({ theme }) => theme.laptopL`
     br{
-      display: inline-block;
-      content: " ";
-      padding: 0 2px;
+        display: inline-block;
+        content: " ";
+        padding: 0 2px;
+    }
+
+    body {
+        --section-gap: 120px;
     }
 `};
 
 ${({ theme }) => theme.laptop`
    .mini{
-      &::-webkit-scrollbar-thumb {border-radius: 0; background-color: var(--scrollbar-background);}
-      
-      &X{overflow-y: hidden;
-        &::-webkit-scrollbar {height: 10px;}
-      }
+        &::-webkit-scrollbar-thumb {border-radius: 0; background-color: var(--scrollbar-background);}
+        
+        &X{overflow-y: hidden;
+            &::-webkit-scrollbar {height: 10px;}
+        }
 
-      &Y{overflow-x: hidden;
-        &::-webkit-scrollbar {width: 5px;}
-      }
+        &Y{overflow-x: hidden;
+            &::-webkit-scrollbar {width: 5px;}
+        }
     }
 `};
 
 ${({ theme }) => theme.tablet`
     body,html{
-      user-select: none;
+        user-select: none;
+    }
+
+    body {
+        --mainHeightDefault: 200px;
+        --section-gap: 100px;
+    }
+`};
+
+${({ theme }) => theme.small`
+    body {
+        --section-gap: 120px;
     }
 `};
 `;

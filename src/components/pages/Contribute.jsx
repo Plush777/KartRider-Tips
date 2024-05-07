@@ -1,10 +1,10 @@
 import DefaultLayout from "components/layout/DefaultLayout";
-import PurposeMDX from 'markdown/purpose.mdx';
+import ContributeMDX from 'markdown/contribute.mdx';
 
-export default function Purpose(){
+export default function Contribute(){
     return ( 
         <DefaultLayout type="sub">
-            <PurposeMDX />
+            <ContributeMDX/>
         </DefaultLayout>
     );
 }
