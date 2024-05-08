@@ -18,14 +18,15 @@ pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
 img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block; -webkit-touch-callout:none; pointer-events: none;}
 
+body{touch-action: pan-y;}
+
 html{
     &.small{font-size: 15px;}
     &.default{font-size: 16px;}
     &.large{font-size: 17.5px;}
 }
 
-body{touch-action: pan-y;
-
+body{
     --mainHeightDefault: 371px;
     --mainHeightWide: 802px;
     --mainHeightNews: 660px;
@@ -54,6 +55,7 @@ body{touch-action: pan-y;
         --text2: #333;
         --text3: #fff;
         --red: #ff0000;
+        --open-in-new: url('/images/common/ico-open-in-new.svg');
     }
 
     &[data-theme="dark"]{
@@ -77,6 +79,7 @@ body{touch-action: pan-y;
         --text2: #fff;
         --text3: #000;
         --red: #ff4353;
+        --open-in-new: url('/images/common/ico-open-in-new-w.svg');
     }
 }
 
@@ -105,16 +108,10 @@ border-radius: 8px; background-color: var(--scrollbar-background);}
     &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar-background);}
 }
 
-.dark{
-    .openInNew >*::after{background: url('/images/common/ico-open-in-new-w.svg') no-repeat center;}
-}
-
-.openInNew{display: inline-flex;
-    >*{display: flex; align-items: center;
-        &::after{content: "새창 열림"; position: relative; top: -1px;
-        display: inline-block; width: 18px; height: 18px; font-size: 0; color: transparent; margin-left: 2px;
-        background: url('/images/common/ico-open-in-new.svg') no-repeat center;}
-    }
+.openInNew{display: inline-flex; align-items: center;
+    &::after{content: "새창 열림"; position: relative; top: -2px;
+    display: inline-block; width: 18px; height: 18px; font-size: 0; color: transparent; margin-left: 5px;
+    background: var(--open-in-new) no-repeat center;}
 }
 
 #modalRoot,#modalDimmed{position: fixed; top: 0; left: 0; width: 100%; height: 100%;}

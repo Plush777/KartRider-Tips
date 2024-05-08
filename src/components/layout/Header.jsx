@@ -14,6 +14,7 @@ import Settings from 'components/article/Settings';
 import useClickOutside from "hooks/useClickOutside";
 import Portal from 'components/layout/Portal';
 import Image from 'next/image';
+import { utilRender, utilArray, utilLinks } from 'data/header';
 
 const Header = ({ themeMode , setThemeMode }) => {
     const ref = useRef();
@@ -31,19 +32,11 @@ const Header = ({ themeMode , setThemeMode }) => {
         setSettingToggle(prev => !prev);
     }
 
-    const utilLinks = {
-        0: 'https://open.kakao.com/o/gwT6q4bc',
-        1: 'https://kartdrift.nexon.com/kartdrift/ko/main'
-    }
-
     const utilIcons = {
         0: <SCchat width="26px" height="26px"/>,
         1: <SCopen width="26px" height="26px"/>,
         2: <SCsetting onClick={handleSettingButton} width="26px" height="26px"/>
     }
-
-    const utilArray = ['커뮤니티','공식 홈페이지','설정'];
-    const utilRender = (object, index) => object[index];
 
     useEffect(() => {
         if (window.matchMedia('(max-width: 768px)').matches) {
@@ -86,7 +79,6 @@ const Header = ({ themeMode , setThemeMode }) => {
                                 >
 
                                     {utilRender(utilIcons,index)}
-                                    <span className="hidden">새창열림</span>
 
                                     <Headerstyled.Tooltip>
                                         <Headerstyled.TooltipItem>{item}</Headerstyled.TooltipItem>

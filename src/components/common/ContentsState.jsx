@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import * as ButtonStyled from 'components/style/common/Button.style';
 
 const Wrap = styled.div`
@@ -12,8 +12,7 @@ const Wrap = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: var(--dimmed);
-    backdrop-filter: blur(5px);
+    background-color: var(--skeleton);
     border-radius: 8px;
 `
 

@@ -96,7 +96,9 @@ const ChzzkLive = ({ sectionName }) => {
                 marginBottom="20px"
                 right={
                     <Min500>
-                        <Refetch type="button" disabled={chzzkRefetching ? true : false} onClick={chzzkRefetch}>
+                        <Refetch type="button" 
+                        disabled={chzzkRefetching || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false} 
+                        onClick={chzzkRefetch}>
                             <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
                             <span className="hidden">새로고침</span>    
                         </Refetch>

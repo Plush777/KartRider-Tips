@@ -41,20 +41,22 @@ const SeasonList = (state) => {
     const { currentSeasonStart, endDate, daysCount } = calcSeason();
 
     const renderContentsState = (state) => {
-        if (state === 'error') {
+        if (state.state === 'error') {
             return (
                 <ContentsState state='error'/>
             )
         }
 
-        else if (state === 'seasonReady') {
+        else if (state.state === 'seasonReady') {
             return (
                 <ContentsState state='seasonReady'/>
             )
         }
     }
 
-    const isState = state === 'error' || state === 'seasonReady';
+    const isState = state.state === 'error' || state.state === 'seasonReady';
+
+    console.log(state);
 
     return(
         <>

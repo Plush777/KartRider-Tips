@@ -11,23 +11,16 @@ const calcSeason = () => {
     useEffect(() => {
         /* 주어진 시작일로부터 13주 후를 시즌 종료일로 계산 */
         const calcEnd = (startDate) => {
-            if (isNaN(startDate)) {
-                setError(true);
-                return;
-            }
-
             return new Date(startDate.getTime() + 13 * 7 * 24 * 60 * 60 * 1000);
         };
 
         const seasonEnd = calcEnd(currentSeasonStart);
 
-        if (!seasonEnd) {
-            setError(true);
-            return;
-        }
 
         // 현재 시간과 시즌 종료 시간 비교
         const now = new Date();
+        // const now = new Date(Date.UTC(2024, 5, 25));
+        
 
         if (now > seasonEnd) {
             setCurrentSeasonNumber(currentSeasonNumber + 1);
@@ -38,7 +31,7 @@ const calcSeason = () => {
             const timeDiff = seasonEnd.getTime() - now.getTime();
             setDaysCount(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
         }
-    }, [currentSeasonStart, currentSeasonNumber]); 
+    }, [currentSeasonStart]); 
 
     return {
         currentSeasonStart,

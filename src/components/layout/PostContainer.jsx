@@ -1,12 +1,13 @@
 import * as Area from 'components/style/common/Area.style';
+import MdxLayout from 'components/mdx/mdx-layout';
 
 const PostContainer = ({ children }) => {
     return(
         <Area.Wrap>
             <Area.Inner>
-                <div className="markdownContainer">
+                <MdxLayout>
                     {children}
-                </div>
+                </MdxLayout>
             </Area.Inner>
         </Area.Wrap>
     )

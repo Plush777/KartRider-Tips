@@ -15,6 +15,7 @@ const Season = () => {
     }
 
     const renderSeasonList = () => {
+        if (next == false) return <SeasonList/>
         if (next == true || !error) return <SeasonList state="seasonReady"/>
         if (error == true || !next) return <SeasonList state="error"/>
     }

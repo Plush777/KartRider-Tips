@@ -99,6 +99,7 @@ export const GnbList = styled.ul`
 
 export const Tooltip = styled.span`
     position: absolute;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     transition: .3s ease-in-out;

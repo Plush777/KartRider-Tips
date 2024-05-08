@@ -2,16 +2,13 @@
 
 import * as Selectstyled from 'components/style/common/Select.style';
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
-import { useDispatch } from 'react-redux';
-import { setSelectIndex } from 'redux/store/store';
 import useSelect from 'hooks/useSelect';
 import useClickOutside from "hooks/useClickOutside";
 import { channels, sites, siteLinks } from 'data/select';
 import { useEffect, useState } from 'react';
 
-const Select = ({ selectKey, setSelectKey, width, height, data }) => {
+const Select = ({ width, height, selectKey, setSelectKey, data }) => {
     const [toggle, setToggle, handleSelectClick, handleToggleSelect] = useSelect();
-    let dispatch = useDispatch();
     let [randomChannelIndex, setRandomChannelIndex] = useState(undefined);
 
     const selectClose = () => {
@@ -19,12 +16,6 @@ const Select = ({ selectKey, setSelectKey, width, height, data }) => {
     }
 
     const ref = useClickOutside(selectClose);
-
-    const handleSelectChannel = (index) => {
-        dispatch(setSelectIndex({
-            channelIndex: index
-        }));
-    }
 
     const handleSelectKey = (index) => {
         let newKey;
@@ -64,7 +55,6 @@ const Select = ({ selectKey, setSelectKey, width, height, data }) => {
                 return (
                     <Selectstyled.OptionItem key={index}>
                         <Selectstyled.OptionText as="button" type="button" onClick={(e) => {
-                            handleSelectChannel(index);
                             handleSelectClick('channel', e);
                             handleSelectKey(index);
                         }}>

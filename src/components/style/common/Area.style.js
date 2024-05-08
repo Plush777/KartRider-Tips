@@ -1,34 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const Title = styled.h3`
-    font-size: 2.625rem;
-    font-weight: 600;
-    color: var(--title);
-
-    ${({ theme }) => theme.laptopL`
-       font-size: 2.25rem;
-    `};
-
-    ${({ theme }) => theme.laptop`
-       font-size: 1.875rem;
-    `};
-
-    ${({ theme }) => theme.tablet`
-       font-size: 1.5rem;
-    `};
-`
-
-export const Desc = styled.p`
-    line-height: 27px;
-    font-size: 1rem;
-    color: var(--text1);
-    word-break: keep-all;
-
-    ${({ theme }) => theme.tablet`
-       font-size: 0.875rem;
-    `};
-`
-
 export const Wrap = styled.div`
     width: 100%;
     min-height: calc(100vh - 206px);
