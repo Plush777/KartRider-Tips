@@ -58,6 +58,11 @@ export const Button = styled.button`
     color: var(--text1);
     background-color: var(--background2);
 
+    &.active{
+        color: var(--text3);
+        background-color: var(--active-background);
+    }
+
     ${props => props.hasIcon && `
         svg{
             margin-left: 5px;

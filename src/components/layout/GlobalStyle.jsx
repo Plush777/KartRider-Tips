@@ -18,6 +18,26 @@ pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
 img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block; -webkit-touch-callout:none; pointer-events: none;}
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input{
+    border: 1px solid var(--stroke1);
+    border-radius: 4px;
+    color: var(--text1);
+    padding: 0 10px;
+    background-color: var(--background2);
+}
+
 body{touch-action: pan-y;}
 
 html{
