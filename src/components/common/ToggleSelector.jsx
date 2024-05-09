@@ -102,7 +102,7 @@ const ToggleSelector = ({ data, clickFn }) => {
                                 type={isLast ? null : 'button'}
                                 href={isLast ? link : null}
                                 onClick={() => {
-                                    clickFn(item);
+                                    clickFn(index);
                                     handleActive(index);
                                     handleClose();
                                 }}
