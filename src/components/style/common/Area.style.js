@@ -596,6 +596,7 @@ export const LoadText = styled.p`
 export const MainInner = styled.div`
     position: relative;
     min-height: ${props => props.minHeight};
+    height: ${props => props.height};
 
     ${(props) => props.borderBottom && css`
         &::before{

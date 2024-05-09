@@ -22,7 +22,16 @@ const Container = styled.section`
         flex-direction: column;
         column-gap: 0;
         row-gap: var(--section-gap);
-        margin-bottom: calc(var(--section-gap) - 103px);
+        margin-bottom: calc(var(--section-gap) / 2 + 20px);
+    `};
+
+    ${({ theme }) => theme.mobile`
+        row-gap: calc(var(--section-gap) / 2 + 20px);
+    `};
+
+    ${({ theme }) => theme.small`
+        margin-bottom: calc(var(--section-gap) / 2);
+        row-gap: calc(var(--section-gap) / 2);
     `};
 `
 

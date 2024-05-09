@@ -31,6 +31,7 @@ input[type='number'] {
 }
 
 input{
+    height: 100%;
     border: 1px solid var(--stroke1);
     border-radius: 4px;
     color: var(--text1);

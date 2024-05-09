@@ -3,18 +3,27 @@
 import styled, { css } from "styled-components";
 import { format } from 'date-fns';
 import { useState } from "react";
-import * as Buttonstyled from "components/style/common/Button.style"; 
 import { itemScore, speedScore, mode, findNextMp } from "data/season";
+import ToggleSelector from "components/common/ToggleSelector";
 
 const Wrap = styled.div`
+    display: flex;
+    flex-direction: column; 
    position: relative;
+   height: 100%;
 `;
 
 const Group = styled.div`
     display: flex;
     align-items: center;
+   
     column-gap: 16px;
-    &+&{margin-top: 30px;}
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+        flex: 1;
+    }
 
     ${props => props.col && css`
         flex-direction: column;
@@ -30,20 +39,23 @@ const Group = styled.div`
 const GroupInner = styled.div`
     display: flex;
     align-items: center;
+    width: 100%;
+
+    ${props => props.mr && css`
+        input {
+            margin-right: 10px;
+        }
+    `}
 `
 
 const Text = styled.span`
     display: block;
-    color: var(--text1);
     font-size: 1.125rem;
+    color: ${props => props.endDate ? 'var(--red)' : 'var(--text1)'};
 
     ${props => props.head && css`
         font-weight: 600;
         min-width: 91px;
-    `}
-
-    ${props => props.endDate && css`
-        color: var(--red);
     `}
 
     ${({ theme }) => theme.tablet`
@@ -52,7 +64,7 @@ const Text = styled.span`
 `
 
 const CalcInput = styled.input`
-    height: 40px;
+    width: 100%;
     font-size: 1rem;
 
     &::placeholder{
@@ -66,7 +78,7 @@ const CalcResultArea = styled.div`
     justify-content: center;
     padding: 0 16px;
     width: 100%;
-    height: 170px;
+    height: 100%;
     background-color: var(--background5);
 `
 
@@ -75,16 +87,14 @@ const CalcResultText = styled.span`
     color: var(--text1);
 `
 
-const ButtonGroup = styled.div`
+const GroupRight = styled.div`
     display: flex;
     align-items: center;
-    column-gap: 5px;
-    margin-left: 10px;
+    flex-wrap: wrap;
 `
 
 const SeasonWrap = ({ currentSeasonStart, endDate, daysCount }) => {
     const [currentMp, setCurrentMp] = useState('');
-    const [active , setActive] = useState(0);
     const [mpData, setMpData] = useState(itemScore);
 
     const handleChange = (event) => {
@@ -93,15 +103,18 @@ const SeasonWrap = ({ currentSeasonStart, endDate, daysCount }) => {
     };
 
     const handleClick = (index) => {
-        setActive(index);
-
         if (index === 0) {
             setMpData(itemScore);
         } else if (index === 1) {
             setMpData(speedScore);
         }
+
+        if (currentMp !== 0) {
+            setCurrentMp('');
+        }
     }
 
+    /* 인풋 값 콤마때문에 보여줄 때만 문자열로 타입변경 */
     const stringCurrent = currentMp.toLocaleString();
 
     return(
@@ -119,7 +132,7 @@ const SeasonWrap = ({ currentSeasonStart, endDate, daysCount }) => {
                 <Text as="b" endDate>D-{daysCount}</Text>
             </Group>
             <Group col>
-                <GroupInner>
+                <GroupInner mr>
                     <Text as="label" htmlFor="input01" head>점수 계산</Text>
                     <CalcInput 
                         type="text" 
@@ -129,20 +142,10 @@ const SeasonWrap = ({ currentSeasonStart, endDate, daysCount }) => {
                         onChange={handleChange}
                         maxLength={7}
                     />
-                    <ButtonGroup>
-                        {mode?.map((item, index) => {
-                            const clickActive = active === index ? 'active' : '';
 
-                            return(
-                                <Buttonstyled.Button 
-                                key={index} 
-                                className={clickActive} 
-                                onClick={() => handleClick(index)}>
-                                    {item}
-                                </Buttonstyled.Button>
-                            )
-                        })}
-                    </ButtonGroup>
+                    <GroupRight>
+                        <ToggleSelector data={mode} clickFn={handleClick}/>
+                    </GroupRight>
                 </GroupInner>
                 
                 <CalcResultArea>

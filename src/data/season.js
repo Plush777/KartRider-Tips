@@ -63,8 +63,8 @@ export const findNextMp = (data, current) => {
     if (nextMp) {
         return `${nextMp.tier} 까지 ${nextMp.mp - current}점 남았어요.`;
     } else {
-        return "더 이상 다음 티어가 없어요.";
+        return "최고 티어예요. 고수시군요?";
     }
 };
 
-export const mode = ['아이템', '스피드'];
+export const mode = ['아이템', '스피드', '점수표 보기'];

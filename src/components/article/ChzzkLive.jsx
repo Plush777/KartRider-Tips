@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import styled from 'styled-components';
 import { Min500 } from 'components/style/mobile/MediaQuery';
+import useNowDate from 'hooks/useNowDate';
 
 const Refetch = styled.button`
     display: flex;
@@ -24,7 +25,20 @@ const Refetch = styled.button`
     }
 `
 
+const LastUpdate = styled.time`
+    font-size: .8125rem;
+    color: var(--description);
+    white-space: nowrap;
+`
+
+const RightGroup = styled.div`
+    display: flex;
+    align-items: flex-end;
+    column-gap: 10px;
+`
+
 const ChzzkLive = ({ sectionName }) => {
+    const { dateTime, handleShowDateTime } = useNowDate();
     let [click, setClick] = useState(false);
 
     const clickMoreButton = () => {
@@ -40,6 +54,7 @@ const ChzzkLive = ({ sectionName }) => {
         isError: chzzkError,
         refetch: chzzkRefetch,
         isRefetching: chzzkRefetching,
+        isStale: chzzkStale
     } = useInfiniteQuery({
         queryKey: ["chzzkLists"],
         queryFn: fetchChzzkLiveLists,
@@ -96,12 +111,18 @@ const ChzzkLive = ({ sectionName }) => {
                 marginBottom="20px"
                 right={
                     <Min500>
-                        <Refetch type="button" 
-                        disabled={chzzkRefetching || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false} 
-                        onClick={chzzkRefetch}>
-                            <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
-                            <span className="hidden">새로고침</span>    
-                        </Refetch>
+                        <RightGroup>
+                            {dateTime && chzzkStale && <LastUpdate>{`마지막 업데이트: ${dateTime}`}</LastUpdate>}
+                            <Refetch type="button" 
+                            disabled={chzzkRefetching || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false} 
+                            onClick={() => {
+                                chzzkRefetch();
+                                handleShowDateTime();
+                            }}>
+                                <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
+                                <span className="hidden">새로고침</span>    
+                            </Refetch>
+                        </RightGroup>
                     </Min500>
                 }
             />
