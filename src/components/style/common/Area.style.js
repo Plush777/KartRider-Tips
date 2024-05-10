@@ -625,6 +625,12 @@ export const MainInner = styled.div`
         }
     `}
 
+    ${props => props.name === 'season' && css`
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    `}
+
     ${({ theme }) => theme.tablet`
         ${props => props.name === 'ranking' && css` 
             height: 475px;
@@ -637,7 +643,11 @@ export const MainInner = styled.div`
 `
 
 export const ContainerBox = styled.div`
+    position: relative;
     flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: ${props => props.justify};
 
     ${({ theme }) => theme.tablet`
         flex: none;

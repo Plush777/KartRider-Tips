@@ -54,6 +54,7 @@ body{
     --section-gap: 150px;
     --dimmed: rgba(0, 0, 0, 0.3);
     --live: #eb0400;
+    --main-scroll-height: 500px;
 
     &[data-theme="light"]{
         --main-background: #f2f2f2;

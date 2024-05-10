@@ -3,9 +3,6 @@ import * as ButtonStyled from 'components/style/common/Button.style';
 import { message } from "const";
 
 const Wrap = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     row-gap: 10px;

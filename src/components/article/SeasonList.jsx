@@ -21,7 +21,6 @@ const SeasonList = (state) => {
     return(
         <>
             {renderContentsState(state)}
-
             {isState ? 
                 null 
                 : 

@@ -6,6 +6,7 @@ const Wrap = styled.div`
     display: flex;
     flex-direction: column; 
     position: relative;
+    height: 100%;
 `;
 
 const Group = styled.div`
@@ -44,7 +45,6 @@ const Text = styled.span`
 `
 
 const SeasonWrap = () => {
-
     const { currentSeasonStart, endDate, daysCount } = calcSeason();
 
     return(
@@ -59,7 +59,7 @@ const SeasonWrap = () => {
             </Group>
             <Group>
                 <Text as="h3" head>남은 날짜</Text>
-                <Text as="b" endDate>D-{daysCount}</Text>
+                {daysCount && <Text as="b" endDate>D-{daysCount}</Text>}
             </Group>
         </Wrap>
     )

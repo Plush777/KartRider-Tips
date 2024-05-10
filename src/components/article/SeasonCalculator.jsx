@@ -11,7 +11,7 @@ const Wrap = styled.div`
     row-gap: 10px;
     column-gap: 16px;
     margin-top: 60px;
-
+    
     ${({ theme }) => theme.tablet`
         margin-bottom: 20px;
     `};

@@ -134,11 +134,11 @@ const ChzzkLive = ({ sectionName }) => {
     }
 
     const renderLiveList = () => {
+        if (chzzkLoading || chzzkRefetching) {
+            return <VideoState type='loading' styleClassName='item3'/>
+        } 
+
         if (chzzk) {
-            if (chzzkLoading || chzzkRefetching) {
-                return <VideoState type='loading' styleClassName='item3'/>
-            } 
-            
             if (!chzzkLoading || !chzzkRefetching && chzzk.pages[0].length > 0) {
                 return <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
             }

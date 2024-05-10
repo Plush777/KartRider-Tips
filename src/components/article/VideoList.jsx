@@ -16,6 +16,7 @@ const Container = styled.section`
     column-gap: 60px;
     margin-bottom: var(--section-gap);
     row-gap: 0;
+    // max-height: var(--main-scroll-height);
 
     ${({ theme }) => theme.tablet`
         flex-direction: column;

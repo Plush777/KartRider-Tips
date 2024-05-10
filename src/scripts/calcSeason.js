@@ -6,6 +6,7 @@ const calcSeason = () => {
     const [endDate, setEndDate] = useState('');
     const [daysCount, setDaysCount] = useState(0);
     const [next, setNext] = useState(false);
+    const [proceed, setProceed] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(() => {
@@ -32,6 +33,7 @@ const calcSeason = () => {
             setNext(true);
         } else {
             // 시즌 종료일 및 남은 일수 설정
+            setProceed(true);
             setEndDate(seasonEnd.toISOString().substring(0, 10));
             const timeDiff = seasonEnd.getTime() - now.getTime();
             setDaysCount(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)));
@@ -44,7 +46,8 @@ const calcSeason = () => {
         endDate,
         daysCount,
         error,
-        next
+        next,
+        proceed
     }
 }
 
