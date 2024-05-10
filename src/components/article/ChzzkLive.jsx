@@ -12,7 +12,7 @@ import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import styled from 'styled-components';
 import { Min500 } from 'components/style/mobile/MediaQuery';
-import useNowDate from 'hooks/useNowDate';
+import { format } from 'date-fns';
 
 const Refetch = styled.button`
     display: flex;
@@ -38,7 +38,6 @@ const RightGroup = styled.div`
 `
 
 const ChzzkLive = ({ sectionName }) => {
-    const { dateTime, handleShowDateTime } = useNowDate();
     let [click, setClick] = useState(false);
 
     const clickMoreButton = () => {
@@ -54,7 +53,8 @@ const ChzzkLive = ({ sectionName }) => {
         isError: chzzkError,
         refetch: chzzkRefetch,
         isRefetching: chzzkRefetching,
-        isStale: chzzkStale
+        isFetched: chzzkFetched,
+        dataUpdatedAt: chzzkUpdatedAt,
     } = useInfiniteQuery({
         queryKey: ["chzzkLists"],
         queryFn: fetchChzzkLiveLists,
@@ -102,6 +102,10 @@ const ChzzkLive = ({ sectionName }) => {
         }
     }
 
+    const disabledCondition = chzzkLoading || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false;
+    const noDataCondition = click == true && chzzk && !chzzkHasNextPage;
+    const formattedUpdatedAt = format(new Date(chzzkUpdatedAt),'yyyy-MM-dd HH:mm:ss');
+
     return(
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle 
@@ -112,13 +116,11 @@ const ChzzkLive = ({ sectionName }) => {
                 right={
                     <Min500>
                         <RightGroup>
-                            {dateTime && chzzkStale && <LastUpdate>{`마지막 업데이트: ${dateTime}`}</LastUpdate>}
-                            <Refetch type="button" 
-                            disabled={chzzkRefetching || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false} 
-                            onClick={() => {
-                                chzzkRefetch();
-                                handleShowDateTime();
-                            }}>
+                            {chzzkFetched && <LastUpdate>{`마지막 업데이트: ${formattedUpdatedAt}`}</LastUpdate>}
+                            <Refetch 
+                                type="button" 
+                                disabled={disabledCondition} 
+                                onClick={chzzkRefetch}>
                                 <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
                                 <span className="hidden">새로고침</span>    
                             </Refetch>
@@ -141,7 +143,7 @@ const ChzzkLive = ({ sectionName }) => {
 
                 {renderEmpty()}
 
-                {click == true && chzzk && !chzzkHasNextPage && <Mainstyled.LoadText>더 이상 데이터가 없어요.</Mainstyled.LoadText>}
+                {noDataCondition && <Mainstyled.LoadText>더 이상 데이터가 없어요.</Mainstyled.LoadText>}
 
                 {renderMoreButton()}
             </Mainstyled.MainInner>

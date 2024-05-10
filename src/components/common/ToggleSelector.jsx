@@ -66,26 +66,21 @@ const ToggleSelectItemButton = styled.div`
         height: 17px;
         background-size: 17px;
     }
+
+    &.active{
+        color: var(--active);
+    }
 `
 
 const ToggleSelector = ({ data, clickFn }) => {
     const [active , setActive] = useState(0);
     const [toggle, setToggle] = useState(false);
 
-    const handleActive = (index) => {
-        setActive(index);
-    }
-
-    const handleToggle = () => {
-        setToggle(!toggle);
-    }
-
-    const handleClose = () => {
-        setToggle(false);
-    }
+    const handleActive = (index) => setActive(index);
+    const handleToggle = () => setToggle(!toggle);
+    const handleClose = () => setToggle(false);
 
     const link = 'https://kartdrift.nexon.com/kartdrift/ko/news/update/view?threadId=2499938';
-
     const ref = useClickOutside(handleClose);
 
     return(
@@ -93,8 +88,8 @@ const ToggleSelector = ({ data, clickFn }) => {
             <ToggleSelectButton onClick={handleToggle}>설정</ToggleSelectButton>
             <ToggleSelectList className={toggle && 'active'}>
                 {data?.map((item, index) => {
-                    const clickActive = active === index ? 'active' : '';
                     const isLast = index === data.length - 1;
+                    const clickActive = !isLast && active === index ? 'active' : '';
 
                     return(
                         <ToggleSelectItem key={index}>
@@ -103,10 +98,10 @@ const ToggleSelector = ({ data, clickFn }) => {
                                 href={isLast ? link : null}
                                 onClick={() => {
                                     clickFn(index);
-                                    handleActive(index);
+                                    !isLast && handleActive(index);
                                     handleClose();
                                 }}
-                                className={`${clickActive} ${isLast ? 'openInNew' : null}`}
+                                className={`${clickActive} ${isLast ? 'openInNew' : ''}`}
                                 as={isLast ? 'a' : 'button'}
                                 target={isLast ? '_blank' : null}
                             >

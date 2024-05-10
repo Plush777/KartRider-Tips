@@ -144,7 +144,7 @@ const SeasonWrap = ({ currentSeasonStart, endDate, daysCount }) => {
                     />
 
                     <GroupRight>
-                        <ToggleSelector data={mode} clickFn={handleClick}/>
+                        <ToggleSelector data={mode} clickFn={handleClick} itemScore={itemScore} speedScore={speedScore}/>
                     </GroupRight>
                 </GroupInner>
                 

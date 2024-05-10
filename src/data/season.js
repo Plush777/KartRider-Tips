@@ -58,12 +58,22 @@ export const speedScore = [
 export const findNextMp = (data, current) => {
     const nextMp = data.find((mp) => mp.mp > current);
 
-    if (current === '' || current === 0) return "현재 점수를 입력해주세요.";
+    if (current === '' || current === 0) {
+        if (data == itemScore) {
+            return "현재 아이템 점수를 입력해주세요.";
+        } 
+
+        if (data == speedScore) {
+            return "현재 스피드 점수를 입력해주세요.";
+        }
+
+        return "현재 점수를 입력해주세요.";
+    }
 
     if (nextMp) {
         return `${nextMp.tier} 까지 ${nextMp.mp - current}점 남았어요.`;
     } else {
-        return "최고 티어예요. 고수시군요?";
+        return "다음 티어가 없어요. 고수시군요?";
     }
 };
 
