@@ -37,7 +37,7 @@ const PlayerWrap = styled.div`
     ${props => props.state === 'loading' && `
         width: 409px;
         height: 307px;
-        margin-top: -200px;
+        margin-top: -180px;
 
         +.lottieText {
             margin-top: 40px;

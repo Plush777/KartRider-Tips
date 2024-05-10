@@ -29,7 +29,7 @@ const Season = () => {
                 marginBottom="20px"
             />
            
-            <Mainstyled.MainInner height="var(--mainHeightDefault)" minHeight="var(--mainHeightDefault)">
+            <Mainstyled.MainInner name="season" height="var(--mainHeightDefault)">
                 {renderSeasonList()}
             </Mainstyled.MainInner>
         </Mainstyled.ContainerBox>

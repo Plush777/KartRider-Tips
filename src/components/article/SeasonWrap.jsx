@@ -15,8 +15,6 @@ const Wrap = styled.div`
 
 const Group = styled.div`
     display: flex;
-    align-items: center;
-   
     column-gap: 16px;
     margin-bottom: 30px;
 
@@ -32,7 +30,7 @@ const Group = styled.div`
     `}
 
     ${({ theme }) => theme.tablet`
-        &+&{margin-top: 20px;}
+        margin-bottom: 20px;
     `};
 `
 
@@ -46,6 +44,10 @@ const GroupInner = styled.div`
             margin-right: 10px;
         }
     `}
+
+    ${({ theme }) => theme.tablet`
+        height: 40px;
+    `};
 `
 
 const Text = styled.span`
@@ -80,9 +82,15 @@ const CalcResultArea = styled.div`
     width: 100%;
     height: 100%;
     background-color: var(--background5);
+
+    ${({ theme }) => theme.tablet`
+        height: 170px;
+    `};
 `
 
 const CalcResultText = styled.span`
+    text-align: center;
+    word-break: keep-all;
     font-size: 1.125rem;
     color: var(--text1);
 `

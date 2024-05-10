@@ -13,9 +13,8 @@ const Ranking = ({ data, isLoading, isError }) => {
                 marginBottom="20px"
             />
            
-            <Mainstyled.MainInner container="both" minHeight="var(--mainHeightDefault)">
+            <Mainstyled.MainInner name="ranking" minHeight="var(--mainHeightDefault)">
                 {isError && <VideoState type='error' styleClassName='item3'/>}
-
                 {
                     isLoading ? 
                     <VideoState type='loading' styleClassName='item3'/> 

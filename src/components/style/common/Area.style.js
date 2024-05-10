@@ -609,6 +609,16 @@ export const MainInner = styled.div`
             background-color: var(--text1);
         }
     `}
+
+    ${({ theme }) => theme.tablet`
+        ${props => props.name === 'ranking' && css` 
+            height: 371px;
+        `}
+
+        ${props => props.name === 'season' && css`
+            height: auto;
+        `}
+    `};
 `
 
 export const ContainerBox = styled.div`

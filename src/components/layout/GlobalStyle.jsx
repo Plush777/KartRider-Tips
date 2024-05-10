@@ -137,7 +137,7 @@ border-radius: 8px; background-color: var(--scrollbar-background);}
 
 #modalRoot,#modalDimmed{position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
 #modalRoot{z-index: 10000; pointer-events: none;}
-#modalDimmed{background-color: var(---dimmed); z-index: 10010; pointer-events: all;}
+#modalDimmed{background-color: var(--dimmed); z-index: 10010; pointer-events: all;}
 
 ${({ theme }) => theme.laptopL`
     br{

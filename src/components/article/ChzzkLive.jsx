@@ -11,30 +11,60 @@ import MainTitle from 'components/article/MainTitle';
 import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import styled from 'styled-components';
-import { Min500 } from 'components/style/mobile/MediaQuery';
 import { format } from 'date-fns';
+import { M500, Min768} from 'components/style/mobile/MediaQuery';
 
-const Refetch = styled.button`
+const RefetchButton = styled.button`
     display: flex;
+    align-items: center;
+    column-gap: 6px;
     margin-top: auto;
     transition: .3s ease-in-out;
 
     &[disabled]{
-        opacity: 0.6;
+        opacity: 0.5;
         pointer-events: none;
     }
+
+    ${({ theme }) => theme.mobile`
+        height: 30px;
+
+        svg {
+            margin-top: -2px;
+            width: 22px;
+            height: 22px;
+        }
+
+        span:not(.hidden) {
+            color: var(--text1);
+            font-size: .8125rem;
+        }
+    `};
 `
 
 const LastUpdate = styled.time`
     font-size: .8125rem;
     color: var(--description);
     white-space: nowrap;
+
+    ${({ theme }) => theme.mobile`
+        white-space: pre-wrap;
+    `};
 `
 
 const RightGroup = styled.div`
     display: flex;
     align-items: flex-end;
     column-gap: 10px;
+   
+
+    ${({ theme }) => theme.mobile`
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-right: auto;
+        margin-top: 10px;
+    `};
 `
 
 const ChzzkLive = ({ sectionName }) => {
@@ -102,10 +132,22 @@ const ChzzkLive = ({ sectionName }) => {
         }
     }
 
-    const disabledCondition = chzzkLoading || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false;
-    const noDataCondition = click == true && chzzk && !chzzkHasNextPage;
-    const formattedUpdatedAt = format(new Date(chzzkUpdatedAt),'yyyy-MM-dd HH:mm:ss');
+    const renderLiveList = () => {
+        if (chzzk) {
+            if (chzzkLoading || chzzkRefetching) {
+                return <VideoState type='loading' styleClassName='item3'/>
+            } 
+            
+            if (!chzzkLoading || !chzzkRefetching && chzzk.pages[0].length > 0) {
+                return <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
+            }
+        }
+    }
 
+    const disabledCondition = chzzkLoading || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false;
+    const formattedUpdatedAt = format(new Date(chzzkUpdatedAt),'yyyy-MM-dd HH:mm:ss');
+    const noDataCondition = click == true && chzzk && !chzzkHasNextPage;
+   
     return(
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle 
@@ -114,30 +156,28 @@ const ChzzkLive = ({ sectionName }) => {
                 title="치지직에서 지금 라이브중!"
                 marginBottom="20px"
                 right={
-                    <Min500>
-                        <RightGroup>
-                            {chzzkFetched && <LastUpdate>{`마지막 업데이트: ${formattedUpdatedAt}`}</LastUpdate>}
-                            <Refetch 
-                                type="button" 
-                                disabled={disabledCondition} 
-                                onClick={chzzkRefetch}>
-                                <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
-                                <span className="hidden">새로고침</span>    
-                            </Refetch>
-                        </RightGroup>
-                    </Min500>
+                    <RightGroup>
+                        {chzzkFetched && <LastUpdate>{`마지막 업데이트: ${formattedUpdatedAt}`}</LastUpdate>}
+                        <RefetchButton 
+                            type="button" 
+                            disabled={disabledCondition} 
+                            onClick={chzzkRefetch}>
+                            <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
+                            <Min768>
+                                <span className="hidden">새로고침</span> 
+                            </Min768>
+                            <M500>
+                                <span>새로고침</span>
+                            </M500>
+                        </RefetchButton>
+                    </RightGroup>
                 }
             />
            
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
                 {chzzkError && <VideoState type='error' styleClassName='item3'/>}
                
-                {
-                    chzzkLoading || chzzkRefetching ?
-                    <VideoState type='loading' styleClassName='item3'/>
-                    :
-                    <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
-                }
+                {renderLiveList()}
 
                 {chzzkFetchingNextPage && <LoadingSpinner/>}
 
