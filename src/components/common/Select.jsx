@@ -1,11 +1,10 @@
-'use client';
-
 import * as Selectstyled from 'components/style/common/Select.style';
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
 import useSelect from 'hooks/useSelect';
 import useClickOutside from "hooks/useClickOutside";
-import { channels, sites, siteLinks } from 'data/select';
+import { channels, sites } from 'data/select';
 import { useEffect, useState } from 'react';
+import { youtubeId } from 'const';
 
 const Select = ({ width, height, selectKey, setSelectKey, data }) => {
     const [toggle, setToggle, handleSelectClick, handleToggleSelect] = useSelect();
@@ -20,10 +19,10 @@ const Select = ({ width, height, selectKey, setSelectKey, data }) => {
     const handleSelectKey = (index) => {
         let newKey;
 
-        if(index === 0) newKey = 'UCJDEss5wA1ddrCBC40giO8A';
-        if(index === 1) newKey = 'UCFBGBsvOMA2gbxmnxgotsmw';
-        if(index === 2) newKey = 'UC8Y0MrXoV4eocUBOYzYnCaw';
-        if(index === 3) newKey = 'UCkPYxlKG9pF2gIE2HohqaeA';
+        if(index === 0) newKey = youtubeId.형독방송;
+        if(index === 1) newKey = youtubeId.리버스;
+        if(index === 2) newKey = youtubeId.정너굴;
+        if(index === 3) newKey = youtubeId.카트라이더드리프트;
 
         setSelectKey(newKey);
     }
@@ -41,8 +40,8 @@ const Select = ({ width, height, selectKey, setSelectKey, data }) => {
             return sites.map((siteItem, index) => {
                 return (
                     <Selectstyled.OptionItem key={index}>
-                        <Selectstyled.OptionText as="a" href={siteLinks[index]} target="_blank">
-                            <span>{siteItem}</span>
+                        <Selectstyled.OptionText as="a" href={siteItem.link} target="_blank">
+                            <span>{siteItem.name}</span>
                             <span className="hidden">새창열림</span>
                         </Selectstyled.OptionText>
                     </Selectstyled.OptionItem>
@@ -67,10 +66,10 @@ const Select = ({ width, height, selectKey, setSelectKey, data }) => {
     }
 
     useEffect(() => {
-        if (selectKey === 'UCJDEss5wA1ddrCBC40giO8A') setRandomChannelIndex(0);
-        else if (selectKey === 'UCFBGBsvOMA2gbxmnxgotsmw') setRandomChannelIndex(1);
-        else if (selectKey === 'UC8Y0MrXoV4eocUBOYzYnCaw') setRandomChannelIndex(2);
-        else if (selectKey === 'UCkPYxlKG9pF2gIE2HohqaeA') setRandomChannelIndex(3);
+        if (selectKey === youtubeId.형독방송) setRandomChannelIndex(0);
+        else if (selectKey === youtubeId.리버스) setRandomChannelIndex(1);
+        else if (selectKey === youtubeId.정너굴) setRandomChannelIndex(2);
+        else if (selectKey === youtubeId.카트라이더드리프트) setRandomChannelIndex(3);
     },[selectKey]);
 
     const renderSelectText = () => {

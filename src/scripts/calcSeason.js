@@ -15,7 +15,12 @@ const calcSeason = () => {
         };
 
         const seasonEnd = calcEnd(currentSeasonStart);
-
+        
+        /* 종료일이 계산되지 않으면 에러 */
+        if (isNaN(seasonEnd)) {
+            setError(true);
+            return;
+        }
 
         // 현재 시간과 시즌 종료 시간 비교
         const now = new Date();

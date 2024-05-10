@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     * {
-        word-break: break-all;
+        word-break: keep-all;
     }
 
     h2 , h3 , h4 {

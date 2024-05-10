@@ -12,7 +12,8 @@ import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import styled from 'styled-components';
 import { format } from 'date-fns';
-import { M500, Min768} from 'components/style/mobile/MediaQuery';
+import { M500, Min768 } from 'components/style/mobile/MediaQuery';
+import { lottieSrc, mainTitle, message } from 'const';
 
 const RefetchButton = styled.button`
     display: flex;
@@ -127,7 +128,7 @@ const ChzzkLive = ({ sectionName }) => {
     const renderEmpty = () => {
         if (chzzk) {
             if (chzzk.pages[0].length === 0 && !chzzkRefetching) {
-                return <VideoState type='empty' emptyText="이런, 라이브 중인 스트리머가 없네요!"/>
+                return <VideoState type='empty' emptyText={message.empty}/>
             }
         }
     }
@@ -152,8 +153,8 @@ const ChzzkLive = ({ sectionName }) => {
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle 
                 lottieName="live"
-                lottieSrc="https://lottie.host/27768715-a656-4bae-bc76-e4d7ac8c4992/sYc0G5Y6ST.lottie"
-                title="치지직에서 지금 라이브중!"
+                lottieSrc={lottieSrc.live}
+                title={mainTitle.live}
                 marginBottom="20px"
                 right={
                     <RightGroup>
@@ -183,7 +184,7 @@ const ChzzkLive = ({ sectionName }) => {
 
                 {renderEmpty()}
 
-                {noDataCondition && <Mainstyled.LoadText>더 이상 데이터가 없어요.</Mainstyled.LoadText>}
+                {noDataCondition && <Mainstyled.LoadText>{message.noData}</Mainstyled.LoadText>}
 
                 {renderMoreButton()}
             </Mainstyled.MainInner>

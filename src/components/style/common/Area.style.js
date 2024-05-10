@@ -7,7 +7,7 @@ export const Wrap = styled.div`
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
-        min-height: calc(100vh - 469px);
+        min-height: calc(100vh - 186px);
     `}
 `
 
@@ -213,6 +213,13 @@ export const LottieWrapper = styled.div`
         +.text{padding-left: 55px;}
     `}
 
+    ${(props) => props.lottieName === 'calculator' && css`
+        width: 38px;
+        height: 38px;
+
+        +.text{padding-left: 55px;}
+    `}
+
     ${(props) => props.lottieName === 'live' && css`
         width: 45px;
         height: 45px;
@@ -295,6 +302,14 @@ export const LottieWrapper = styled.div`
             margin-left: -20px;
 
             +.text{padding-left: 40px;}
+        `}
+
+        ${(props) => props.lottieName === 'calculator' && css`
+            width: 30px;
+            height: 30px;
+            top: -5px;
+
+            +.text{padding-left: 43px;}
         `}
     `};
 `;
@@ -612,7 +627,7 @@ export const MainInner = styled.div`
 
     ${({ theme }) => theme.tablet`
         ${props => props.name === 'ranking' && css` 
-            height: 371px;
+            height: 475px;
         `}
 
         ${props => props.name === 'season' && css`

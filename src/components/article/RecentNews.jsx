@@ -4,6 +4,8 @@ import VideoState from 'components/article/VideoState';
 import MainTitle from 'components/article/MainTitle';
 import Tab from 'components/common/Tab';
 import { useEffect, useState } from 'react';
+import { lottieSrc, mainTitle } from 'const';
+import { tabArray } from 'data/news';
 
 const RecentNews = ({ sectionName, data, isLoading, isError }) => {
     let [tabIndex, setTabIndex] = useState(0);
@@ -22,14 +24,12 @@ const RecentNews = ({ sectionName, data, isLoading, isError }) => {
         }
     }, [tabIndex, data]);
 
-    const tabArray = ['뉴스', '개발자 노트', '업데이트'];
-
     return(
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle
                 lottieName="news"
-                lottieSrc="https://lottie.host/5d6db238-f903-4c96-bf41-391c2e5de0d7/y8jB0ebnOr.lottie"
-                title="최신 소식들을 확인해보세요"
+                lottieSrc={lottieSrc.news}
+                title={mainTitle.news}
                 marginBottom="40px"
             />
 

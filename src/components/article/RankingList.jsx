@@ -12,7 +12,7 @@ const RankList = styled.ul`
     flex-direction: column;
     row-gap: 12px;
     overflow-y: auto;
-    max-height: 371px;
+    max-height: 475px;
     padding-bottom: 70px;
 `
 

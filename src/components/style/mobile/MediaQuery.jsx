@@ -38,7 +38,7 @@ const M768 = ({ children }) => {
 
 const Min768 = ({ children }) => {
     const is768 = useMediaQuery({ 
-        query: "(min-width: 768px)" 
+        query: "(min-width: 769px)" 
     });
     return <React.Fragment>{is768 && children}</React.Fragment>
 }

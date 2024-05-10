@@ -2,14 +2,15 @@ import * as Mainstyled from 'components/style/common/Area.style';
 import MainTitle from 'components/article/MainTitle';
 import RankingList from 'components/article/RankingList';
 import VideoState from 'components/article/VideoState';
+import { lottieSrc, mainTitle } from 'const';
 
 const Ranking = ({ data, isLoading, isError }) => {
     return(
         <Mainstyled.ContainerBox>
             <MainTitle 
                 lottieName="rank"
-                lottieSrc="https://lottie.host/12db531d-fd6b-4862-bfff-1bb67edaa450/c2R4fIsZlR.lottie"
-                title="현재 우리 게임 순위는?"
+                lottieSrc={lottieSrc.rank}
+                title={mainTitle.rank}
                 marginBottom="20px"
             />
            

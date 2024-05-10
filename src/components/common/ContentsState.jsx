@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as ButtonStyled from 'components/style/common/Button.style';
+import { message } from "const";
 
 const Wrap = styled.div`
     position: absolute;
@@ -26,7 +27,7 @@ const ContentsState = ({ state }) => {
         if (state === 'error') {
             return (
                 <>
-                    <Text>이런, 날짜 계산 중 오류가 발생했어요!</Text>
+                    <Text>{message.seasonError}</Text>
                     <ButtonStyled.Button 
                     type="button" 
                     minWidth="100px" 
@@ -39,7 +40,7 @@ const ContentsState = ({ state }) => {
 
         else if (state === 'seasonReady') {
             return (
-                <Text>곧 새로운 시즌이 시작됩니다!</Text>
+                <Text>{message.seasonReady}</Text>
             )
         }
     }

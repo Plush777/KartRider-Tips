@@ -1,10 +1,7 @@
-import calcSeason from "scripts/calcSeason";
 import ContentsState from "components/common/ContentsState";
 import SeasonWrap from "components/article/SeasonWrap";
 
 const SeasonList = (state) => {
-    const { currentSeasonStart, endDate, daysCount } = calcSeason();
-
     const renderContentsState = (state) => {
         if (state.state === 'error') {
             return (
@@ -28,11 +25,7 @@ const SeasonList = (state) => {
             {isState ? 
                 null 
                 : 
-                <SeasonWrap 
-                    currentSeasonStart={currentSeasonStart}
-                    endDate={endDate} 
-                    daysCount={daysCount}
-                />
+                <SeasonWrap />
             }
         </>
     )

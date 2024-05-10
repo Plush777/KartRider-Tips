@@ -13,7 +13,6 @@ import { videoIds } from 'data/recommend';
 
 const Container = styled.section`
     display: flex;
-    align-items: center;
     column-gap: 60px;
     margin-bottom: var(--section-gap);
     row-gap: 0;

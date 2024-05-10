@@ -2,6 +2,7 @@ import * as Mainstyled from 'components/style/common/Area.style';
 import MainTitle from 'components/article/MainTitle';
 import SeasonList from 'components/article/SeasonList';
 import calcSeason from "scripts/calcSeason";
+import SeasonCalculator from 'components/article/SeasonCalculator';
 
 const Season = () => {
     const { currentSeasonNumber, next, error } = calcSeason();
@@ -29,8 +30,9 @@ const Season = () => {
                 marginBottom="20px"
             />
            
-            <Mainstyled.MainInner name="season" height="var(--mainHeightDefault)">
+            <Mainstyled.MainInner name="season">
                 {renderSeasonList()}
+                <SeasonCalculator/>
             </Mainstyled.MainInner>
         </Mainstyled.ContainerBox>
     )

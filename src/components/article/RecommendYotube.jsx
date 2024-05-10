@@ -2,6 +2,7 @@ import RecommendYoutubeList from 'components/article/RecommendYoutubeList';
 import VideoState from 'components/article/VideoState';
 import * as Mainstyled from 'components/style/common/Area.style';
 import MainTitle from 'components/article/MainTitle';
+import { lottieSrc, mainTitle } from 'const';
 
 const RecommendYoutube = ({ sectionName, data, isLoading, isError }) => {
     const sortedVideo = data && data.sort((a,b) => {
@@ -12,8 +13,8 @@ const RecommendYoutube = ({ sectionName, data, isLoading, isError }) => {
         <Mainstyled.MainComponentBox data-section-name={sectionName}>
             <MainTitle
                 lottieName="fire"
-                lottieSrc="https://lottie.host/862b671f-196b-44e4-8938-d84207e24c95/Kqu1b4vslr.lottie"
-                title="KARTRIDER TIPS의 추천 영상들을 만나보세요"
+                lottieSrc={lottieSrc.recommend}
+                title={mainTitle.recommend}
                 marginBottom="20px"
             />
             
