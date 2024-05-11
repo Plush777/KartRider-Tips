@@ -22,9 +22,9 @@ const Season = () => {
         if (!proceed && !next && error == true ) return <SeasonList state="error"/>
     }
 
-    useEffect(() => {
-        console.log(next, proceed);
-    }, [next, proceed])
+    // useEffect(() => {
+    //     console.log(next, proceed);
+    // }, [next, proceed])
 
     return(
         <Mainstyled.ContainerBox justify="between">

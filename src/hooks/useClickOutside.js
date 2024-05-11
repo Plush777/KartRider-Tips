@@ -10,9 +10,8 @@ const useClickOutside = (callback) => {
                 callback();
             } 
         }   
-      
+        
         document.addEventListener("click", handleClickOutside);
-
         return () => {
             document.removeEventListener("click", handleClickOutside);
         }

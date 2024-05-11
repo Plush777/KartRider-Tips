@@ -26,7 +26,7 @@ const Header = ({ themeMode , setThemeMode }) => {
 
     const handleHeaderMenu = () => {
         setMenuToggle(prev => !prev);
-    }
+    } 
 
     const handleSettingButton = () => {
         setSettingToggle(prev => !prev);
@@ -45,6 +45,16 @@ const Header = ({ themeMode , setThemeMode }) => {
             setIsMobile('');
         }
     }, [isMobile]);
+
+    useEffect(() => {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            if (settingToggle == true) {
+                document.getElementById('modalRoot').style.pointerEvents = 'all';
+            } else if (settingToggle == false) {
+                document.getElementById('modalRoot').style.pointerEvents = 'none';
+            }
+        }
+    }, [settingToggle]);
 
     return(
         <Headerstyled.Headers className={`${visible}`} ref={ref}>
@@ -99,7 +109,7 @@ const Header = ({ themeMode , setThemeMode }) => {
                 </Min768>
 
                 <M768>
-                    <Headerstyled.mobileHeaderMenuWrap ref={outSideRef} className={menuToggle && 'active'}>
+                    <Headerstyled.mobileHeaderMenuWrap className={menuToggle && 'active'}>
                         <Headerstyled.mobileHeaderMenuList>
                             {utilArray.map((item,index) => {
                                 const lastIndex = utilArray.length - 1;

@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
                 <ContextProvider>
                     {children}
                     <DocumentScrollProvider/>
-                    <div id="modalRoot"></div>
+                    <div id="modalRoot" style={{ 'pointerEvents': 'none' }}></div>
                 </ContextProvider>
                 <BeforeThemeRender/>
             </body>
