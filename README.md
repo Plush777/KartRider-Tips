@@ -15,5 +15,6 @@ https://kartrider-tips.netlify.app/
 - TanStack Query v5
 
 ### 백엔드
+https://kartrider-tips-api.fly.dev/
 - express
 - fly.io (node app 배포)
