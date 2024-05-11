@@ -14,12 +14,12 @@ const NexonLv1 = localFont({
 });
 
 export const metadata = {
-    metadataBase: new URL('https://kartrider-tips.vercel.app/'),
+    metadataBase: new URL('https://kartrider-tips.netlify.app/'),
     title: {
         template: 'KartRider Tips | %s', 
         default: 'KartRider Tips',
     },
-    description: '카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.',
+    description: '카트라이더에 대한 정보와 팁들을 제공합니다.',
     author: 'Plush',
     keywords: '카트라이더,kartrider drift,카트라이더 드리프트,카트라이더 팁스, KartRider Tips, 카트라이더 드리프트 가이드',
     themeColor: '#ffffff',
@@ -45,7 +45,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'KartRider Tips',
-        description: '카트라이더 초심자를 위한 여러가지 정보들을 제공합니다.',
+        description: '카트라이더에 대한 정보와 팁들을 제공합니다.',
         images: [`/og-season3.jpg`]
     }, 
 
@@ -56,9 +56,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="ko">
             <head>
-                <meta property="og:site_name" content="카트라이더 팁스" />
-                <meta property="og:description" content="카트라이더 초심자를 위한 여러가지 정보들을 제공합니다." />
-                <meta property="fb:pages" content="카트라이더 팁스" />
+                <meta property="og:site_name" content="kartrider tips" />
+                <meta property="og:description" content="카트라이더에 대한 정보와 팁들을 제공합니다." />
+                <meta property="fb:pages" content="kartrider tips" />
                 <meta name="google-site-verification" content="uz3NEg8IDaaBdc49ymqFoq82FXkU-7kcYSxB2jdUpvM" />
                 <meta name="naver-site-verification" content="a0a506899f9c9e0213425eef416155dcaa46559f" />
             </head>

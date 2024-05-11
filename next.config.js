@@ -42,7 +42,7 @@ const nextConfig = {
             },
             {
                 source: "/krtp/:path*",
-                destination: "https://kartrider-tips-api.vercel.app/api/:path*"
+                destination: "https://kartrider-tips-api.fly.dev/api/:path*"
             },
         ];
     }

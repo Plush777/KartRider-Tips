@@ -8,10 +8,12 @@ https://kartrider-tips.netlify.app/
 
 ## 사용 된 기술
 
+### 프론트
 - Next 13
 - React 18
 - Styled components
-- Scss
-- lottie
 - TanStack Query v5
-- React-responsive
+
+### 백엔드
+- express
+- fly.io (node app 배포)
