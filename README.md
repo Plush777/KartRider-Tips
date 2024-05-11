@@ -1,19 +1,17 @@
 # Kartrider Tips
 
->카트라이더를 처음 접하거나 잘하고 싶은 유저분들에게 여러가지 정보들을 공유하는 사이트입니다. 
+카트라이더에 대한 정보들과 여러 팁들을 제공하는 사이트입니다.
 
-해당 사이트는 다국어를 지원하며 추후에 중국어도 지원 할 예정입니다.
+**24년 5월 11일 기준, 갑자기 vercel이 한국에서만 접속이 안되어서 netlify 로 일단 대체합니다.**
+
+https://kartrider-tips.netlify.app/
 
 ## 사용 된 기술
 
 - Next 13
 - React 18
-- Redux toolkit
 - Styled components
-- React i18n
 - Scss
 - lottie
-- html-react-parser
+- TanStack Query v5
 - React-responsive
-- React-intersection-observer
-- Swiper

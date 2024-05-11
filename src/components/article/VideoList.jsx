@@ -1,4 +1,4 @@
-import ChzzkLive from 'components/article/ChzzkLive';
+import ChzzkLive from 'components/article/ChzzkLive'; 
 import RecentYoutube from 'components/article/RecentYoutube';
 import RecommendYoutube from 'components/article/RecommendYotube';
 import RecentNews from 'components/article/RecentNews';
