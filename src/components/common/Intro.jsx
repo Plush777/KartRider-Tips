@@ -238,7 +238,7 @@ const Intro = ({ setIntro }) => {
 
             {click &&
                 <Contents>
-                    <Video autoPlay>
+                    <Video poster="/intro-thumbnail.png" autoPlay>
                         <source src="/intro.mp4" type="video/mp4" />
                     </Video>
                 </Contents>

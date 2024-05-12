@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
-import { itemScore, speedScore, mode, findNextMp } from "data/season";
+import { useEffect, useState } from "react";
+import { itemScore, speedScore, mode, findNextMp, renderItemIcon, renderSpeedIcon } from "data/season";
 import ToggleSelector from "components/common/ToggleSelector";
 import MainTitle from 'components/article/MainTitle';
 import { lottieSrc, mainTitle } from "const";
@@ -50,6 +50,12 @@ const Result = styled.div`
     height: 170px;
     background-color: var(--background5);
 
+    img {
+        object-fit: contain;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
     ${({ theme }) => theme.tablet`
         height: 170px;
     `};
@@ -65,6 +71,7 @@ const ResultText = styled.p`
 const SeasonCalculator = () => {
     const [currentMp, setCurrentMp] = useState('');
     const [mpData, setMpData] = useState(itemScore);
+    const [imageSrc, setImageSrc] = useState('');
 
     const koRegexp = /[ㄱ-ㅎㅏ-ㅣ가-힣]/;
     const enRegexp = /[a-zA-Z]/;
@@ -100,6 +107,14 @@ const SeasonCalculator = () => {
     /* 인풋 값 콤마때문에 보여줄 때만 문자열로 타입변경 */
     const stringCurrent = currentMp.toLocaleString();
 
+    useEffect(() => {
+        if (mpData === itemScore) {
+            setImageSrc(renderItemIcon(currentMp));
+        } else if (mpData === speedScore) {
+            setImageSrc(renderSpeedIcon(currentMp));
+        }
+    }, [currentMp, mpData])
+
     return(
         <Wrap>
             <MainTitle 
@@ -122,6 +137,11 @@ const SeasonCalculator = () => {
             </Inner>
             
             <Result>
+                {imageSrc ?
+                    <img width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
+                    :
+                    null
+                }   
                 <ResultText>{findNextMp(mpData, currentMp)}</ResultText>
             </Result>
         </Wrap>
