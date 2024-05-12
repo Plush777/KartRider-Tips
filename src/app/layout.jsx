@@ -10,7 +10,7 @@ const NexonLv1 = localFont({
             weight: '400',
             style: 'normal',
         }
-    ]
+    ] 
 });
 
 export const metadata = {
