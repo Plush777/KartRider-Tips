@@ -3,7 +3,7 @@ import BeforeThemeRender from './BeforeThemeRender';
 import DocumentScrollProvider from './DocumentScrollProvider';
 import localFont from "next/font/local";
 
-const NexonLv1 = localFont({
+const NexonLv1 = localFont({ 
     src: [
         {
             path: '../../public/N_Lv1_Gothic.woff2',
