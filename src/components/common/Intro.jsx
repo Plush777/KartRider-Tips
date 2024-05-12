@@ -8,11 +8,10 @@ import { Min1024 } from "components/style/mobile/MediaQuery";
 
 const Wrap = styled.div`
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--main-background);
     z-index: 9999;
 `
@@ -102,18 +101,13 @@ const HeaderBackgroundDiv = styled.div`
 `
 
 const MobileLogoDiv = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    width: 100%;
-    height: 100%;
+    position: static;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 40px;
 
     video {
         position: absolute;
@@ -150,6 +144,13 @@ const MobileLogoDiv = styled.div`
     `};
 `
 
+const MobileLogoInnerDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+`
+
 const HeaderLinkDiv = styled.div`
     position: absolute;
     left: 50%;
@@ -168,6 +169,8 @@ const HeaderLinkDiv = styled.div`
 `
 
 const MobileStartButton = styled.button`
+    max-width: 80px;
+    margin: 0 auto;
     height: 36px;
     padding: 0 16px;
     border-radius: 8px;
@@ -222,12 +225,14 @@ const Intro = ({ setIntro }) => {
 
             <M1024>
                 <MobileLogoDiv>
-                    <Video autoPlay muted loop>
-                        <source src="/mobile-intro.mp4" type="video/mp4" />
-                    </Video>
-                    <Image src="/ico-kart-logo-black.svg" 
-                    width={409} height={91} priority alt="카트라이더 팁스 로고"/>
-                    <MobileStartButton onClick={handleClick} type="button">바로가기</MobileStartButton>
+                    <MobileLogoInnerDiv>
+                        <Video autoPlay muted loop>
+                            <source src="/mobile-intro.mp4" type="video/mp4" />
+                        </Video>
+                        <Image src="/ico-kart-logo-black.svg" 
+                        width={409} height={91} priority alt="카트라이더 팁스 로고"/>
+                        <MobileStartButton onClick={handleClick} type="button">바로가기</MobileStartButton>
+                    </MobileLogoInnerDiv>
                 </MobileLogoDiv>
             </M1024>
 
