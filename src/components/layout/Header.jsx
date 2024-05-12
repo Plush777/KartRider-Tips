@@ -11,14 +11,12 @@ import SChamburger from 'svg/ico-hamburger.svg';
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import useStickyHeader from 'hooks/useStickyHeader';
 import Settings from 'components/article/Settings';
-import useClickOutside from "hooks/useClickOutside";
 import Portal from 'components/layout/Portal';
 import Image from 'next/image';
 import { utilRender, utilArray, utilLinks } from 'data/header';
 
 const Header = ({ themeMode , setThemeMode }) => {
     const ref = useRef();
-    const outSideRef = useClickOutside(() => setMenuToggle(false));
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
     const [settingToggle, setSettingToggle] = useState(false);

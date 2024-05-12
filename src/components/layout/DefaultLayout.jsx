@@ -4,10 +4,25 @@ import Footer from 'components/layout/Footer';
 import Header from 'components/layout/Header';
 import PostContents from 'components/common/PostContents';
 import * as Area from 'components/style/common/Area.style';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const DefaultLayout = ({ children, type }) => {
     const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
+
+    function getThemeMode() {
+        const theme = window.localStorage.getItem('theme')
+        return theme ? theme : 'light'
+    }
+
+    useEffect(() => {
+        if(!window.localStorage.getItem('theme')){
+            setThemeMode('light');
+        }
+        
+        document.body.dataset.theme = getThemeMode()
+        document.body.dataset.theme = themeMode;
+        window.localStorage.setItem('theme', themeMode);
+    },[themeMode]);
 
     const typeCondition = (type) => {
         if (type === 'main') {

@@ -1,6 +1,6 @@
 import * as Headerstyled from "components/style/layout/Header.style";
 import * as Buttonstyled from "components/style/common/Button.style"; 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import useFontSize from "hooks/useFontSize";
 import SCclose from 'svg/ico-close.svg';
 import { M768 } from "components/style/mobile/MediaQuery";
@@ -55,23 +55,6 @@ const Settings = ({ themeMode , setThemeMode, setSettingToggle, isMobile }) => {
         const map = object;
         return map[getData] === index ? 'fixed' : null;
     }
-    
-    useEffect(() => {
-        document.body.dataset.theme = themeMode;
-        window.localStorage.setItem('theme', themeMode);
-    },[themeMode]);
-
-    useLayoutEffect(() => {
-        if(!window.localStorage.getItem('theme')){
-            setThemeMode('light');
-        }
-
-        function getThemeMode() {
-            const theme = window.localStorage.getItem('theme')
-            return theme ? theme : 'dark'
-        }
-        document.body.dataset.theme = getThemeMode()
-    },[themeMode]);
 
     return(
         <Headerstyled.DimmedWrap className={isMobile}>
