@@ -32,11 +32,11 @@ const RecentYoutube = ({ sectionName }) => {
             />
             
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
-                {isError && <VideoState type='error' styleClassName='item3'/>}
+                {isError && <VideoState type='error'/>}
 
                 {
                     isLoading ? 
-                    <VideoState type='loading' styleClassName='item3'/> 
+                    <VideoState type='loading'/> 
                     : 
                     <RecentYoutubeList data={data} isLoading={isLoading} selectKey={selectKey} setSelectKey={setSelectKey}/>
                 }

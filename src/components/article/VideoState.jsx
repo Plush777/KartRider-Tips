@@ -24,6 +24,18 @@ const PlayerWrap = styled.div`
         white-space: nowrap;
     }
 
+    &.ranking {
+        ${({ theme }) => theme.tablet`
+            ${props => props.state === 'loading' && `
+                margin-top: -130px;
+
+                +.lottieText {
+                    margin-top: 100px;
+                }
+            `}
+        `}
+    }
+
     ${props => props.state === 'error' && `
         width: 287px;
         height: 287px;
@@ -65,15 +77,17 @@ const PlayerWrap = styled.div`
             }
         `}
 
-        ${props => props.state === 'loading' && `
-            width: auto;
-            height: 100%;
-            margin-top: -125px;
+        &:not(.ranking) {
+            ${props => props.state === 'loading' && `
+                width: auto;
+                height: 100%;
+                margin-top: -125px;
 
-            +.lottieText {
-               bottom: 100px;
-            }
-        `}
+                +.lottieText {
+                    bottom: 100px;
+                }
+            `}
+        }
     `};
 
     ${({ theme }) => theme.tablet`
@@ -87,15 +101,18 @@ const PlayerWrap = styled.div`
             }
         `}
 
-        ${props => props.state === 'loading' && `
-            margin-top: -60px;
-            width: 55%;
-            height: auto;
 
-            +.lottieText {
-               bottom: 20px;
-            }
-        `}
+        &:not(.ranking) {
+            ${props => props.state === 'loading' && `
+                margin-top: -60px;
+                width: 55%;
+                height: auto;
+
+                +.lottieText {
+                bottom: 20px;
+                }
+            `}
+        }
 
         ${props => props.state === 'error' && `
             width: 220px;
@@ -109,13 +126,15 @@ const PlayerWrap = styled.div`
     `};
 
     ${({ theme }) => theme.mobile`
-        ${props => props.state === 'loading' && `
-            width: 80%;
+        &:not(.ranking) {
+            ${props => props.state === 'loading' && `
+                width: 80%;
 
-            +.lottieText {
-                bottom: 30px;
-            }
-        `}
+                +.lottieText {
+                    bottom: 30px;
+                }
+            `}
+        }
     `};
 
     ${({ theme }) => theme.small`

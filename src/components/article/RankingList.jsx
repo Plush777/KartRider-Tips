@@ -14,6 +14,15 @@ const RankList = styled.ul`
     overflow-y: auto;
     max-height: var(--main-scroll-height);
     padding-bottom: 70px;
+
+    ${({ theme }) => theme.tablet`
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none; /* 인터넷 익스플로러 */
+        scrollbar-width: none; /* 파이어폭스 */
+    `};
 `
 
 const RankBoxItem = styled.li`
@@ -162,6 +171,8 @@ const BottomBar = styled.div`
     }
 
     ${({ theme }) => theme.tablet`
+        width: 100%;
+
         img{
             width: 38px;
             height: 38px;

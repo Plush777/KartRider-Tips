@@ -17,6 +17,7 @@ const Wrap = styled.div`
 `
 
 const Contents = styled.div`
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,6 +46,10 @@ const Contents = styled.div`
         height: 100%;
         z-index: -1;
         background-color: #fff;
+    }
+
+    &.acitve {
+        display: block;
     }
 `
 
@@ -236,13 +241,11 @@ const Intro = ({ setIntro }) => {
                 </MobileLogoDiv>
             </M1024>
 
-            {click &&
-                <Contents>
-                    <Video poster="/intro-thumbnail.png" autoPlay>
-                        <source src="/intro.mp4" type="video/mp4" />
-                    </Video>
-                </Contents>
-            }
+            <Contents className={click ? 'active' : ''}>
+                <Video poster="/intro-thumbnail.png" autoPlay>
+                    <source src="/intro.mp4" type="video/mp4" />
+                </Video>
+            </Contents>
         </Wrap>
     )
 }

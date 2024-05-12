@@ -135,7 +135,7 @@ const ChzzkLive = ({ sectionName }) => {
 
     const renderLiveList = () => {
         if (chzzkLoading || chzzkRefetching) {
-            return <VideoState type='loading' styleClassName='item3'/>
+            return <VideoState type='loading'/>
         } 
 
         if (chzzk) {
@@ -176,7 +176,7 @@ const ChzzkLive = ({ sectionName }) => {
             />
            
             <Mainstyled.MainInner minHeight="var(--mainHeightDefault)">
-                {chzzkError && <VideoState type='error' styleClassName='item3'/>}
+                {chzzkError && <VideoState type='error'/>}
                
                 {renderLiveList()}
 

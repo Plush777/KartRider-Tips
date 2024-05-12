@@ -15,10 +15,10 @@ const Ranking = ({ data, isLoading, isError }) => {
             />
            
             <Mainstyled.MainInner name="ranking" minHeight="var(--main-scroll-height)">
-                {isError && <VideoState type='error' styleClassName='item3'/>}
+                {isError && <VideoState type='error'/>}
                 {
                     isLoading ? 
-                    <VideoState type='loading' styleClassName='item3'/> 
+                    <VideoState type='loading' styleClassName='ranking'/> 
                     :
                     <RankingList data={data} isLoading={isLoading}/>
                 }
