@@ -24,6 +24,7 @@ export const Container = styled.div`
 
         ${({ theme }) => theme.tablet`
             font-size: 1.5rem;
+            margin-bottom: 30px;
         `};
     }
 
@@ -76,4 +77,16 @@ export const Container = styled.div`
             }
         }
     }
+
+    ${({ theme }) => theme.tablet`
+        li, p, span {
+            line-height: 1.5;s
+        }
+
+        br {
+            +h3, +h4, +ol {
+                margin-top: 30px;
+            }
+        }
+    `};
 `

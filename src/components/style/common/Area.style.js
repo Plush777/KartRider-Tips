@@ -84,6 +84,7 @@ export const blankLink = styled.div`
 
 export const Main = styled.main`
     padding-top: 65px;
+    background-color: var(--background1);
 
     ${({ theme }) => theme.tablet`
         padding-top: 55px;

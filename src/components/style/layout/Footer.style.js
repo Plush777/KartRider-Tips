@@ -144,6 +144,6 @@ export const Row = styled.div`
         justify-content: center;
         width: 100%;
         column-gap: 20px;
-        padding: 0 16px;
+        padding: 0 16px 20px 16px;
     `};
 `
