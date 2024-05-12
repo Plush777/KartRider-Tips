@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styled from "styled-components";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { M1024 } from "components/style/mobile/MediaQuery";
 import { Min1024 } from "components/style/mobile/MediaQuery";
 
@@ -22,7 +22,6 @@ const Contents = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: grid;
     place-items: center;
     height: 100%;
     animation: fadeIn 1.5s ease-in-out;
@@ -48,8 +47,8 @@ const Contents = styled.div`
         background-color: #fff;
     }
 
-    &.acitve {
-        display: block;
+    &.active {
+        display: grid;
     }
 `
 
@@ -192,6 +191,7 @@ const MobileStartButton = styled.button`
 
 const Intro = ({ setIntro }) => {
     const [click, setClick] = useState(false);
+    const videoRef = useRef(null);
     const isSession = sessionStorage.getItem('intro');
 
     const handleClick = () => {
@@ -199,6 +199,10 @@ const Intro = ({ setIntro }) => {
         sessionStorage.setItem('intro', 'true');
 
         if (!isSession) {
+            if (videoRef.current) {
+                videoRef.current.play();
+            }
+
             let timer = setTimeout(() => {
                 setIntro(true);
             }, 5500);
@@ -241,8 +245,8 @@ const Intro = ({ setIntro }) => {
                 </MobileLogoDiv>
             </M1024>
 
-            <Contents className={click ? 'active' : ''}>
-                <Video poster="/intro-thumbnail.png" autoPlay>
+            <Contents className={click == true ? 'active' : ''}>
+                <Video ref={videoRef}>
                     <source src="/intro.mp4" type="video/mp4" />
                 </Video>
             </Contents>
