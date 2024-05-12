@@ -3,8 +3,6 @@ import MainTitle from 'components/article/MainTitle';
 import SeasonList from 'components/article/SeasonList';
 import calcSeason from "scripts/calcSeason";
 import SeasonCalculator from 'components/article/SeasonCalculator';
-import { useEffect } from 'react';
-
 const Season = () => {
     const { currentSeasonNumber, next, error, proceed } = calcSeason();
 
@@ -21,10 +19,6 @@ const Season = () => {
         if (!proceed && !error && next == true) return <SeasonList state="seasonReady"/>
         if (!proceed && !next && error == true ) return <SeasonList state="error"/>
     }
-
-    // useEffect(() => {
-    //     console.log(next, proceed);
-    // }, [next, proceed])
 
     return(
         <Mainstyled.ContainerBox justify="between">

@@ -50,15 +50,27 @@ const Result = styled.div`
     height: 170px;
     background-color: var(--background5);
 
-    img {
-        object-fit: contain;
-        margin-right: 10px;
-        border-radius: 50%;
-    }
-
     ${({ theme }) => theme.tablet`
         height: 170px;
     `};
+`
+
+const ResultBox = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+        position: absolute;
+        top: -6px;
+        left: 0;
+        object-fit: contain;
+        border-radius: 50%;
+
+        + p {
+            padding-left: 35px;
+        }
+    }
 `
 
 const ResultText = styled.p`
@@ -66,6 +78,14 @@ const ResultText = styled.p`
     word-break: keep-all;
     font-size: 1.125rem;
     color: var(--text1);
+
+    ${({ theme }) => theme.mobile`
+        max-width: 240px;
+
+        img + p{
+            padding-left: 20px;
+        }
+    `};
 `
 
 const SeasonCalculator = () => {
@@ -137,12 +157,14 @@ const SeasonCalculator = () => {
             </Inner>
             
             <Result>
-                {imageSrc ?
-                    <img width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
-                    :
-                    null
-                }   
-                <ResultText>{findNextMp(mpData, currentMp)}</ResultText>
+                <ResultBox>
+                    {imageSrc ?
+                        <img width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
+                        :
+                        null
+                    }   
+                    <ResultText>{findNextMp(mpData, currentMp)}</ResultText>
+                </ResultBox>
             </Result>
         </Wrap>
     )
