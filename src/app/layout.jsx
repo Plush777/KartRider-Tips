@@ -59,9 +59,10 @@ export default function RootLayout({ children }) {
                 <meta property="og:site_name" content="kartrider tips" />
                 <meta property="og:description" content="카트라이더에 대한 정보와 팁들을 제공합니다." />
                 <meta property="fb:pages" content="kartrider tips" />
-                <meta name="google-site-verification" content="uz3NEg8IDaaBdc49ymqFoq82FXkU-7kcYSxB2jdUpvM" />
+                {/* <meta name="google-site-verification" content="uz3NEg8IDaaBdc49ymqFoq82FXkU-7kcYSxB2jdUpvM" /> */}
                 {/* <meta name="naver-site-verification" content="a0a506899f9c9e0213425eef416155dcaa46559f" /> */}
                 <meta name="naver-site-verification" content="3f94de41171f46560d8a1005d54f29344fc28153" />
+                <meta name="google-site-verification" content="GPYk6PpfcgAfH_xVermIhvSiltn-RMAzOC9Oap7TAWY" />
             </head>
             
             <body suppressHydrationWarning className={`${NexonLv1.className}`}>
