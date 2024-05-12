@@ -55,6 +55,10 @@ const Contents = styled.div`
 const Video = styled.video`
     width: 100vw;
     height: 100vh;
+
+    ${props => props.clickIntro && `
+        margin-top: -80px;
+    `}
 `
 
 const ImageBox = styled.div`
@@ -246,7 +250,7 @@ const Intro = ({ setIntro }) => {
             </M1024>
 
             <Contents className={click == true ? 'active' : ''}>
-                <Video ref={videoRef}>
+                <Video clickIntro ref={videoRef}>
                     <source src="/intro.mp4" type="video/mp4" />
                 </Video>
             </Contents>
