@@ -4,6 +4,7 @@ import { itemScore, speedScore, mode, findNextMp, renderItemIcon, renderSpeedIco
 import ToggleSelector from "components/common/ToggleSelector";
 import MainTitle from 'components/article/MainTitle';
 import { lottieSrc, mainTitle } from "const";
+import Image from "next/image";
 
 const Wrap = styled.div`
     display: flex;
@@ -68,9 +69,19 @@ const ResultBox = styled.div`
         border-radius: 50%;
 
         + p {
-            padding-left: 35px;
+            padding-left: 40px;
         }
     }
+
+    ${({ theme }) => theme.mobile`
+        img {
+            left: 5px;
+
+            + p {
+                padding-left: 0;
+            }
+        }
+    `};
 `
 
 const ResultText = styled.p`
@@ -81,10 +92,6 @@ const ResultText = styled.p`
 
     ${({ theme }) => theme.mobile`
         max-width: 240px;
-
-        img + p{
-            padding-left: 20px;
-        }
     `};
 `
 
@@ -135,6 +142,10 @@ const SeasonCalculator = () => {
         }
     }, [currentMp, mpData])
 
+    // useEffect(() => {
+    //     console.log(currentMp);
+    // }, [currentMp])
+
     return(
         <Wrap>
             <MainTitle 
@@ -159,7 +170,7 @@ const SeasonCalculator = () => {
             <Result>
                 <ResultBox>
                     {imageSrc ?
-                        <img width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
+                        <Image priority="high" width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
                         :
                         null
                     }   

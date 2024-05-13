@@ -30,3 +30,7 @@ export const message = {
     seasonReady: '곧 새로운 시즌이 시작됩니다!',
     seasonError: '이런, 날짜 계산 중 오류가 발생했어요!'
 }
+
+export const blankUrl = {
+    nexon: 'https://www.nexon.com/Home/Game'
+}

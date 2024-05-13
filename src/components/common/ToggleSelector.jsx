@@ -34,6 +34,7 @@ const ToggleSelectList = styled.ul`
     transition: .3s ease-in-out;
     transition-property: transform, opacity;
     transform-origin: top right;
+    z-index: 10;
 
     &.active {
         transform: scale(1);
