@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
-const useSelect = () => {
+ 
+export default function useSelect () {
     const [toggle, setToggle] = useState(false);
     const [selected, setSelected] = useState(undefined);
 
@@ -20,5 +20,3 @@ const useSelect = () => {
 
     return [toggle, setToggle, handleSelectClick, handleToggleSelect];
 }
-
-export default useSelect;

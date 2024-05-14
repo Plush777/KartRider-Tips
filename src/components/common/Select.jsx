@@ -6,7 +6,7 @@ import { channels, sites } from 'data/select';
 import { useEffect, useState } from 'react';
 import { youtubeId } from 'const';
 
-const Select = ({ width, height, selectKey, setSelectKey, data }) => {
+export default function Select ({ width, height, selectKey, setSelectKey, data }) {
     const [toggle, setToggle, handleSelectClick, handleToggleSelect] = useSelect();
     let [randomChannelIndex, setRandomChannelIndex] = useState(undefined);
 
@@ -95,5 +95,3 @@ const Select = ({ width, height, selectKey, setSelectKey, data }) => {
         </Selectstyled.SelectArea>
     );
 }
-
-export default Select

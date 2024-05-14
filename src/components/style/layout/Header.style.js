@@ -214,7 +214,7 @@ export const mobileHeaderMenuWrap = styled.nav`
     top: 54px;
     width: 100vw;
     background-color: var(--background1);
-    transition: max-height .3s ease-in-out;
+    transition: max-height .5s ease-in-out;
     max-height: 0;
     overflow: hidden;
 
@@ -257,6 +257,8 @@ export const BtnHambuger = styled.button.attrs({ type: 'button' })`
     top: 50%;
     transform: translateY(-50%);
     left: 10px;
+    width: 24px;
+    height: 24px;
 
     svg{
         path{

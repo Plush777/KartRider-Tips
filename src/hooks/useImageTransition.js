@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useImageTransition = (loading, delay) => {
+export default function useImageTransition (loading, delay) {
     let [isShow, setIsShow] = useState('');
 
     useEffect(() => {
@@ -12,5 +12,3 @@ const useImageTransition = (loading, delay) => {
 
     return { isShow };
 }
-
-export default useImageTransition;

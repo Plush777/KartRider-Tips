@@ -1,8 +1,6 @@
-"use client";
-
 import * as Tabstyled from "components/style/common/Tab.style";
 
-const Tab = ({ data, tabIndex, setTabIndex, marginBottom }) => {
+export default function Tab ({ data, tabIndex, setTabIndex, marginBottom }) {
     const handleTab = (index) => setTabIndex(index);
 
     return(
@@ -27,5 +25,3 @@ const Tab = ({ data, tabIndex, setTabIndex, marginBottom }) => {
         </Tabstyled.TabWrap>
     )
 }
-
-export default Tab;

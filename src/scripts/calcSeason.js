@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const calcSeason = () => {
+export default function calcSeason () {
     const [currentSeasonStart] = useState(new Date(Date.UTC(2024, 1, 15))); // 초기 시즌 시작일
     const [currentSeasonNumber, setCurrentSeasonNumber] = useState(1);
     const [endDate, setEndDate] = useState('');
@@ -50,5 +50,3 @@ const calcSeason = () => {
         proceed
     }
 }
-
-export default calcSeason;

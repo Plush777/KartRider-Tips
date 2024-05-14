@@ -1,4 +1,4 @@
-import DefaultLayout from "components/layout/DefaultLayout";
+import DefaultLayout from "components/layout/common/DefaultLayout";
 import ContributeMDX from 'markdown/contribute.mdx';
 
 export default function Contribute(){

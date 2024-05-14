@@ -73,7 +73,7 @@ const ToggleSelectItemButton = styled.div`
     }
 `
 
-const ToggleSelector = ({ data, clickFn }) => {
+export default function ToggleSelector({ data, clickFn }) {
     const [active , setActive] = useState(0);
     const [toggle, setToggle] = useState(false);
 
@@ -115,5 +115,3 @@ const ToggleSelector = ({ data, clickFn }) => {
         </ToggleSelectWrap>
     )
 }
-
-export default ToggleSelector;
