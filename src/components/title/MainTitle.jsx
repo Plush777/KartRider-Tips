@@ -7,11 +7,13 @@ export default function MainTitle ({ lottieName, lottieSrc, title, right, margin
         <Tit.Title marginBottom={marginBottom}>
             <Tit.TitleBox>
                 <L.LottieWrapper lottieName={lottieName}>
+
                     <dotlottie-player
                         src={lottieSrc}
                         autoplay
                         loop
                     />
+
                 </L.LottieWrapper>
                 <span className='text'>{title}</span>
             </Tit.TitleBox>

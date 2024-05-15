@@ -71,7 +71,6 @@ export default function Settings({ themeMode , setThemeMode, setSettingToggle, i
                                 <SCclose width="22px" height="22px" fill="#000"/>   
                             </button>
                         </M768>
-                        
                         <Set.SettingButtonList>
                             {fontSizeArray.map((item,index) => {
                                 return(

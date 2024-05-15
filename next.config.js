@@ -48,6 +48,14 @@ const nextConfig = {
     }
 };
 
+//https://medium.com/readytowork-org/implementing-pwa-in-the-next-13-application-3e46f6b3f6d8
+const withPWA = require("next-pwa")({
+    dest: "public",
+    disable: process.env.NODE_ENV === "development",
+    // register: true,
+    // skipWaiting: true
+});
+
 
 const withMDX = require("@next/mdx")();
-module.exports = withBundleAnalyzer(withMDX(nextConfig));
+module.exports = withBundleAnalyzer(withPWA(withMDX(nextConfig)));
