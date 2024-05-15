@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { throttle } from 'lodash';
 
-const documentScroll = () => {
+export default function documentScroll () {
     const handleDocumentScroll = useMemo(() =>
         throttle(() => {
             const scrollTop = window.scrollY;
@@ -27,5 +27,3 @@ const documentScroll = () => {
         handleDocumentScroll
     }
 }
-
-export default documentScroll;

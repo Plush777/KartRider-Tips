@@ -34,6 +34,7 @@ const ToggleSelectList = styled.ul`
     transition: .3s ease-in-out;
     transition-property: transform, opacity;
     transform-origin: top right;
+    z-index: 10;
 
     &.active {
         transform: scale(1);
@@ -72,7 +73,7 @@ const ToggleSelectItemButton = styled.div`
     }
 `
 
-const ToggleSelector = ({ data, clickFn }) => {
+export default function ToggleSelector({ data, clickFn }) {
     const [active , setActive] = useState(0);
     const [toggle, setToggle] = useState(false);
 
@@ -114,5 +115,3 @@ const ToggleSelector = ({ data, clickFn }) => {
         </ToggleSelectWrap>
     )
 }
-
-export default ToggleSelector;

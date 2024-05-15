@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Intro from 'components/common/Intro';
+import Intro from 'components/intro/Intro';
 import styled from "styled-components";
-import DefaultLayout from 'components/layout/DefaultLayout';
-import VideoList from 'components/article/VideoList';
+import DefaultLayout from 'components/layout/common/DefaultLayout';
+import MainLayout from 'components/layout/main/MainLayout';
 
 const Container = styled.div`
    transition: .3s ease-in-out;
@@ -27,7 +27,7 @@ export default function Main() {
                 : 
                 <Container className={!isSession ? null : 'active'}>
                     <DefaultLayout type="main">
-                        <VideoList/>
+                        <MainLayout/>
                     </DefaultLayout>
                 </Container>
             }

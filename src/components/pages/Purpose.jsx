@@ -1,4 +1,4 @@
-import DefaultLayout from "components/layout/DefaultLayout";
+import DefaultLayout from "components/layout/common/DefaultLayout";
 import PurposeMDX from 'markdown/purpose.mdx';
 
 export default function Purpose(){

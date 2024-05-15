@@ -111,7 +111,7 @@ export const speedScore = [
 export const findNextMp = (data, current) => {
     const nextMp = data.find((mp) => mp.mp > current);
 
-    if (current === '' || current === 0) {
+    if (current === '') {
         if (data == itemScore) {
             return "현재 아이템 점수를 입력해주세요.";
         } 
@@ -133,7 +133,7 @@ export const findNextMp = (data, current) => {
 export const renderItemIcon = (current) => {
     switch (true) {
         case current === 0:
-            return "white0";
+            return "y5";
         case current >= y5 && current < y4:
             return "y4";
         case current >= y4 && current < y3:
@@ -195,14 +195,14 @@ export const renderItemIcon = (current) => {
         case current > rb1:
             return null;
         default:
-            return null;
+            return "white0";
     }
 };
 
 export const renderSpeedIcon = (current) => {
     switch (true) {
         case current === 0:
-            return "minus";
+            return "bz3";
         case current >= bz3 && current < bz2:
             return "bz2";
         case current >= bz2 && current < bz1:
@@ -246,7 +246,7 @@ export const renderSpeedIcon = (current) => {
         case current > gm1:
             return null;
         default:
-            return null;
+            return "minus";
     }
 };
 

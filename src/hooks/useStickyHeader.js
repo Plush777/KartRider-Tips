@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useState , useRef } from 'react';
 import { throttle } from 'lodash';
 
-const useStickyHeader = () => {
+export default function useStickyHeader () {
     const beforeScrollY = useRef(0);
     const [visible, setVisible] = useState(true);
     const [menuToggle, setMenuToggle] = useState(false);
@@ -37,5 +37,3 @@ const useStickyHeader = () => {
 
     return { visible, menuToggle, setMenuToggle };
 }
-
-export default useStickyHeader;

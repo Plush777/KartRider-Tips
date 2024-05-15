@@ -1,7 +1,6 @@
 import { useLayoutEffect, useState } from "react";
 
-const useFontSize = () => {
-
+export default function useFontSize() {
     const root = document.getElementsByTagName('html')[0];
     const [rootFontSize, setRootFontSize] = useState('default');
     const getFontSize = localStorage.getItem('fontSize');
@@ -34,5 +33,3 @@ const useFontSize = () => {
 
     return { getFontSize, handleSelectFontSize };
 }
-
-export default useFontSize;
