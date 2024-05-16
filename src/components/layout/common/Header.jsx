@@ -16,7 +16,7 @@ import Settings from 'components/setting/Settings';
 import Portal from 'components/config/Portal';
 import Image from 'next/image';
 import { utilRender, utilArray, utilLinks, mobileHeaderMenuTagCondition } from 'data/header';
-import Pwa from 'components/pwa/pwa';
+import Pwa from 'components/pwa/Pwa';
 
 export default function Header ({ themeMode , setThemeMode, rootFontSize, setRootFontSize }) {
     const ref = useRef();
