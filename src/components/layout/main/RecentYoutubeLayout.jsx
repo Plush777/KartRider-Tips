@@ -1,6 +1,6 @@
 import RecentYoutubeList from 'components/recentYoutube/RecentYoutubeList';
 import VideoState from 'components/state/VideoState';
-import * as M from 'style/main/Main.style';
+import * as M from 'style/components/main/Main.style';
 import Select from 'components/common/Select';
 import MainTitle from 'components/title/MainTitle';
 import { useQuery } from '@tanstack/react-query';

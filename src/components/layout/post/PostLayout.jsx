@@ -1,3 +1,5 @@
+'use client';
+
 import * as PLay from 'style/layout/PostLayout.style';
 import MdxLayout from 'components/mdx/mdx-layout';
 

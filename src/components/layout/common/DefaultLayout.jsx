@@ -4,25 +4,12 @@ import Footer from 'components/layout/common/Footer';
 import Header from 'components/layout/common/Header';
 import PostContents from 'components/post/PostContents';
 import * as DLay from 'style/layout/DefaultLayout.style';
-import { useState, useEffect } from 'react';
+import useTheme from 'hooks/useTheme';
+import useFontSize from 'hooks/useFontSize';
 
 export default function DefaultLayout ({ children, type }) {
-    const [themeMode, setThemeMode] = useState(window.localStorage.getItem('theme'));
-
-    function getThemeMode() {
-        const theme = window.localStorage.getItem('theme')
-        return theme ? theme : 'light'
-    }
-
-    useEffect(() => {
-        if(!window.localStorage.getItem('theme')){
-            setThemeMode('light');
-        }
-        
-        document.body.dataset.theme = getThemeMode()
-        document.body.dataset.theme = themeMode;
-        window.localStorage.setItem('theme', themeMode);
-    },[themeMode]);
+    const { themeMode, setThemeMode } = useTheme();
+    const { rootFontSize,  setRootFontSize } = useFontSize();
 
     const typeCondition = (type) => {
         if (type === 'main') {
@@ -48,7 +35,12 @@ export default function DefaultLayout ({ children, type }) {
 
     return(
         <>
-            <Header themeMode={themeMode} setThemeMode={setThemeMode}/>
+            <Header 
+                themeMode={themeMode} 
+                setThemeMode={setThemeMode}
+                rootFontSize={rootFontSize}
+                setRootFontSize={setRootFontSize}
+            />
             <DLay.Main>{typeCondition(type)}</DLay.Main>
             <Footer themeMode={themeMode}/>
         </>

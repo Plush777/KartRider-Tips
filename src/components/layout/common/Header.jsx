@@ -15,10 +15,10 @@ import useStickyHeader from 'hooks/useStickyHeader';
 import Settings from 'components/setting/Settings';
 import Portal from 'components/config/Portal';
 import Image from 'next/image';
-import { utilRender, utilArray, utilLinks } from 'data/header';
+import { utilRender, utilArray, utilLinks, mobileHeaderMenuTagCondition } from 'data/header';
 import Pwa from 'components/pwa/pwa';
 
-export default function Header ({ themeMode , setThemeMode }) {
+export default function Header ({ themeMode , setThemeMode, rootFontSize, setRootFontSize }) {
     const ref = useRef();
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
@@ -58,7 +58,7 @@ export default function Header ({ themeMode , setThemeMode }) {
     }, [settingToggle]);
 
     return(
-        <H.Header className={`${visible}`} ref={ref}>
+        <H.Header className={visible} ref={ref}>
             <H.HeaderInner>
                 <M768>
                     <H.BtnHambuger onClick={handleHeaderMenu}>
@@ -73,24 +73,19 @@ export default function Header ({ themeMode , setThemeMode }) {
                     </Link>
                 </H.Logo>
 
-                <M768>
-                    <Pwa type="icon"/>
-                </M768>
-
                 <Min768>
                     <U.UtilArea>
-                        {utilArray.map((item,index) => {
-                            const lastIndex = utilArray.length - 1;
-                            const isLast = index === lastIndex;
+                        {utilArray.filter(item => item !== '앱 설치하기').map((item,index) => {
+                            const isItem = item === '설정';
 
                             return(
                                 <U.UtilTextBox 
                                     key={index} 
                                     href={utilRender(utilLinks,index)} 
-                                    rel={!isLast ? 'noopener noreferrer' : null} 
-                                    target={!isLast ? '_blank' : null} 
-                                    as={isLast && 'button'} 
-                                    type={isLast ? 'button' : null}
+                                    rel={!isItem ? 'noopener noreferrer' : null} 
+                                    target={!isItem ? '_blank' : null} 
+                                    as={isItem && 'button'} 
+                                    type={isItem ? 'button' : null}
                                 >
 
                                     {utilRender(utilIcons,index)}
@@ -108,29 +103,30 @@ export default function Header ({ themeMode , setThemeMode }) {
                                 themeMode={themeMode} 
                                 setThemeMode={setThemeMode} 
                                 setSettingToggle={setSettingToggle}
+                                rootFontSize={rootFontSize}
+                                setRootFontSize={setRootFontSize}
                             />
                         }
-
-                        <Pwa type="button"/>
                     </U.UtilArea>
+
+                    <Pwa />
                 </Min768>
 
                 <M768>
                     <H.mobileHeaderMenuWrap className={menuToggle && 'active'}>
                         <H.mobileHeaderMenuList>
                             {utilArray.map((item,index) => {
-                                const lastIndex = utilArray.length - 1;
-                                const isLast = index === lastIndex;
+                                const linkIndex = index === 0 || index === 1;
 
                                 return(
                                     <H.mobileHeaderMenuItem key={index}>
                                         <H.mobileHeaderMenuLink 
-                                        href={utilRender(utilLinks,index)} 
-                                        as={isLast && 'button'} 
-                                        rel={!isLast ? 'noopener noreferrer' : null} 
-                                        target={!isLast ? '_blank' : null} 
-                                        type={isLast ? 'button' : null}
-                                        onClick={isLast ?
+                                            href={utilRender(utilLinks,index)} 
+                                            as={mobileHeaderMenuTagCondition(linkIndex,item)} 
+                                            rel={linkIndex ? 'noopener noreferrer' : null} 
+                                            target={linkIndex ? '_blank' : null} 
+                                            type={!linkIndex && item !== '앱 설치하기' ? 'button' : null}
+                                            onClick={index === 2 ?
                                             () => {
                                                 handleSettingButton();
                                                 lockScroll();
@@ -138,8 +134,8 @@ export default function Header ({ themeMode , setThemeMode }) {
 
                                             : null
                                         }>
-                                            {item}
-                                            {!isLast && <SCopen width="20px" height="20px"/>}
+                                            {item === '앱 설치하기' ? <Pwa /> : item}
+                                            {linkIndex && <SCopen width="20px" height="20px"/>}
                                         </H.mobileHeaderMenuLink>
                                     </H.mobileHeaderMenuItem>
                                 )
@@ -158,6 +154,8 @@ export default function Header ({ themeMode , setThemeMode }) {
                                     setThemeMode={setThemeMode} 
                                     setSettingToggle={setSettingToggle}
                                     isMobile={isMobile}
+                                    rootFontSize={rootFontSize}
+                                    setRootFontSize={setRootFontSize}
                                 />
                             </>
                             

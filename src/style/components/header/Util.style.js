@@ -6,6 +6,13 @@ export const UtilArea = styled.div`
     align-items: center;
     column-gap: 15px;
     position: relative;
+    margin-right: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     svg{
         path{
@@ -16,6 +23,9 @@ export const UtilArea = styled.div`
 
 export const UtilTextBox = styled.a`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (hover: hover) {
         &:hover{

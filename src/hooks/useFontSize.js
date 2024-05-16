@@ -1,35 +1,24 @@
-import { useLayoutEffect, useState } from "react";
+'use client';
+
+import { useEffect, useState } from "react";
+import { fontSizeArray } from "data/setting";
 
 export default function useFontSize() {
+    const [rootFontSize, setRootFontSize] = useState(window.localStorage.getItem('fontSize') || 'default');
     const root = document.getElementsByTagName('html')[0];
-    const [rootFontSize, setRootFontSize] = useState('default');
-    const getFontSize = localStorage.getItem('fontSize');
 
-    const handleSelectFontSize = index => {
-        let fontSize;
+    useEffect(() => {
+        setRootFontSize(rootFontSize);
+        window.localStorage.setItem('fontSize', rootFontSize);
+        root.classList.add(rootFontSize);
 
-        if (index === 0) {
-            fontSize = 'small';
-        } else if (index === 1) {
-            fontSize = 'default';
-        } else if (index === 2) {
-            fontSize = 'large';
-        }
+        fontSizeArray.forEach((item) => {
+            if (item !== rootFontSize) {
+                root.classList.remove(item);
+            }
+        });
+       
+    }, [rootFontSize]);
 
-        setRootFontSize(fontSize);
-        localStorage.setItem('fontSize', fontSize);
-    }
-
-    useLayoutEffect(() => {
-        if (!getFontSize) {
-            setRootFontSize('default');
-            localStorage.setItem('fontSize', 'default');
-        } else if (getFontSize) {
-            setRootFontSize(getFontSize);
-            localStorage.setItem('fontSize', getFontSize);
-            root.classList.add(getFontSize);
-        }
-    }, [rootFontSize, getFontSize]);
-
-    return { getFontSize, handleSelectFontSize };
+    return { rootFontSize, setRootFontSize };
 }

@@ -80,7 +80,7 @@ export const mobileHeaderMenuWrap = styled.nav`
     overflow: hidden;
 
     &.active{
-        max-height: 193px;
+        max-height: 248px;
     }
 `
 

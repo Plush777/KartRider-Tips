@@ -4,35 +4,12 @@ import RecommendLayout from 'components/layout/main/RecommendLayout';
 import RecentNewsLayout from 'components/layout/main/RecentNewsLayout';
 import RankingLayout from 'components/layout/main/RankingLayout';
 import SeasonLayout from 'components/layout/main/SeasonLayout';
-import styled from "styled-components";
 import { useQueries } from '@tanstack/react-query';
 import { fetchRanking } from 'scripts/api/ranking';
 import { fetchVideoLists } from 'scripts/api/youtubeVideo';
 import { fetchNews, fetchArticles } from 'scripts/api/news';
 import { videoIds } from 'data/recommend';
-
-const Container = styled.section`
-    display: flex;
-    column-gap: 60px;
-    margin-bottom: var(--section-gap);
-    row-gap: 0;
-
-    ${({ theme }) => theme.tablet`
-        flex-direction: column;
-        column-gap: 0;
-        row-gap: var(--section-gap);
-        margin-bottom: calc(var(--section-gap) / 2 + 20px);
-    `};
-
-    ${({ theme }) => theme.mobile`
-        row-gap: calc(var(--section-gap) / 2 + 20px);
-    `};
-
-    ${({ theme }) => theme.small`
-        margin-bottom: calc(var(--section-gap) / 2);
-        row-gap: calc(var(--section-gap) / 2);
-    `};
-`
+import * as M from 'style/layout/MainLayout.style';
 
 export default function MainLayout() {
     const queryResults = useQueries({
@@ -80,14 +57,14 @@ export default function MainLayout() {
    
     return ( 
         <>
-            <Container>
+            <M.Container>
                 <RankingLayout 
                     data={ranking} 
                     isLoading={rankingIsLoading} 
                     isError={rankingIsError}
                 />
                 <SeasonLayout/>
-            </Container>
+            </M.Container>
 
             <ChzzkLiveLayout sectionName="chzzk"/>
 

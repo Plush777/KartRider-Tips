@@ -1,6 +1,6 @@
 import '@dotlottie/player-component';
-import * as Tit from 'style/title/Title.style';
-import * as L from 'style/lottie/Lottie.style';
+import * as Tit from 'style/components/title/Title.style';
+import * as L from 'style/components/lottie/Lottie.style';
 
 export default function MainTitle ({ lottieName, lottieSrc, title, right, marginBottom }) {
     return(

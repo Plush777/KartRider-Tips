@@ -141,12 +141,6 @@ border-radius: 8px; background-color: var(--scrollbar-background);}
 #modalDimmed{background-color: var(--dimmed); z-index: 10010; pointer-events: all;}
 
 ${({ theme }) => theme.laptopL`
-    br{
-        display: inline-block;
-        content: " ";
-        padding: 0 2px;
-    }
-
     body {
         --section-gap: 120px;
     }

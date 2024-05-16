@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 export default function calcSeason () {
-    const [currentSeasonStart] = useState(new Date(Date.UTC(2024, 1, 15))); // 초기 시즌 시작일
-    const [currentSeasonNumber, setCurrentSeasonNumber] = useState(1);
+    const [currentSeasonStart] = useState(new Date(Date.UTC(2024, 4, 16))); // 초기 시즌 시작일
+    const [currentSeasonNumber, setCurrentSeasonNumber] = useState(2);
     const [endDate, setEndDate] = useState('');
     const [daysCount, setDaysCount] = useState(0);
     const [next, setNext] = useState(false);
@@ -25,7 +25,7 @@ export default function calcSeason () {
 
         // 현재 시간과 시즌 종료 시간 비교
         const now = new Date();
-        // const now = new Date(Date.UTC(2024, 5, 25));
+        // const now = new Date(Date.UTC(2024, 8, 25));
         
 
         if (now > seasonEnd) {

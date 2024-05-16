@@ -5,7 +5,10 @@ export const lottieSrc = {
     youtube: 'https://lottie.host/0fa9e3a2-0b2c-45f6-a151-86b61f917e9a/WTN6JyfSj7.lottie',
     recommend: 'https://lottie.host/862b671f-196b-44e4-8938-d84207e24c95/Kqu1b4vslr.lottie',
     news: 'https://lottie.host/5d6db238-f903-4c96-bf41-391c2e5de0d7/y8jB0ebnOr.lottie',
-    calculator: 'https://lottie.host/1db17b6d-5602-4755-add9-497b9371c480/nin6285ewY.lottie'
+    calculator: 'https://lottie.host/1db17b6d-5602-4755-add9-497b9371c480/nin6285ewY.lottie',
+    error: 'https://lottie.host/b711b73c-6d8a-4350-a9ae-f2a91792b2e7/SK0CFLnN0m.lottie',
+    loading: 'https://lottie.host/ff36d141-083e-4c29-a56d-4bef4c9d1e84/CBgcAGpUAE.lottie',
+    empty: 'https://lottie.host/83fe92f4-1109-405b-8cc6-637ac5ee4bb1/XqhmKxPBYf.lottie'
 }
 
 export const mainTitle = {

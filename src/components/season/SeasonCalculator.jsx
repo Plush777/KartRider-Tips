@@ -1,99 +1,10 @@
-import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { itemScore, speedScore, mode, findNextMp, renderItemIcon, renderSpeedIcon } from "data/season";
 import ToggleSelector from "components/common/ToggleSelector";
 import MainTitle from 'components/title/MainTitle';
 import { lottieSrc, mainTitle } from "const";
 import Image from "next/image";
-
-const Wrap = styled.div`
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    column-gap: 16px;
-    margin-top: 60px;
-    
-    ${({ theme }) => theme.tablet`
-        margin-bottom: 20px;
-    `};
-`;
-
-const Inner = styled.div`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-
-    input {
-        margin-right: 10px;
-    }
-
-    ${({ theme }) => theme.tablet`
-        height: 40px;
-    `};
-`;
-
-const Input = styled.input`
-    width: 100%;
-    font-size: 1rem;
-
-    &::placeholder{
-        font-size: .875rem;
-    }
-`
-
-const Result = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    width: 100%;
-    height: 170px;
-    background-color: var(--background5);
-
-    ${({ theme }) => theme.tablet`
-        height: 170px;
-    `};
-`
-
-const ResultBox = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    img {
-        position: absolute;
-        top: -6px;
-        left: 0;
-        object-fit: contain;
-        border-radius: 50%;
-
-        + p {
-            padding-left: 40px;
-        }
-    }
-
-    ${({ theme }) => theme.mobile`
-        img {
-            left: 5px;
-
-            + p {
-                padding-left: 0;
-            }
-        }
-    `};
-`
-
-const ResultText = styled.p`
-    text-align: center;
-    word-break: keep-all;
-    font-size: 1.125rem;
-    color: var(--text1);
-
-    ${({ theme }) => theme.mobile`
-        max-width: 240px;
-    `};
-`
+import * as S from "style/components/main/SeasonCalculator.style";
 
 export default function SeasonCalculator() {
     const [currentMp, setCurrentMp] = useState('');
@@ -142,12 +53,8 @@ export default function SeasonCalculator() {
         }
     }, [currentMp, mpData])
 
-    // useEffect(() => {
-    //     console.log(currentMp);
-    // }, [currentMp])
-
     return(
-        <Wrap>
+        <S.Wrap>
             <MainTitle 
                 lottieName="calculator"
                 lottieSrc={lottieSrc.calculator}
@@ -155,8 +62,8 @@ export default function SeasonCalculator() {
                 marginBottom="20px"
             />
 
-            <Inner>
-                <Input 
+            <S.Inner>
+                <S.Input 
                     type="text" 
                     id="input01" 
                     placeholder="현재 점수를 입력하세요"
@@ -165,18 +72,18 @@ export default function SeasonCalculator() {
                     maxLength={7}
                 />
                 <ToggleSelector data={mode} clickFn={handleClick} itemScore={itemScore} speedScore={speedScore}/>
-            </Inner>
+            </S.Inner>
             
-            <Result>
-                <ResultBox>
+            <S.Result>
+                <S.ResultBox>
                     {imageSrc ?
-                        <Image priority="high" width={30} height={30} src={`/images/tier/${imageSrc}.png`} alt=""/>
+                        <Image priority="high" width={50} height={50} src={`/images/tier/${imageSrc}.png`} alt=""/>
                         :
                         null
                     }   
-                    <ResultText>{findNextMp(mpData, currentMp)}</ResultText>
-                </ResultBox>
-            </Result>
-        </Wrap>
+                    <S.ResultText>{findNextMp(mpData, currentMp)}</S.ResultText>
+                </S.ResultBox>
+            </S.Result>
+        </S.Wrap>
     )
 }

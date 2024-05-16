@@ -1,21 +1,20 @@
-import * as Headerstyled from "style/layout/Header.style";
-import * as Buttonstyled from "style/common/Button.style"; 
+import * as H from "style/layout/Header.style";
+import * as B from "style/common/Button.style"; 
 import * as Set from "style/components/header/Setting.style"; 
-import { useState } from "react";
-import useFontSize from "hooks/useFontSize";
 import SCclose from 'svg/ico-close.svg';
 import { M768 } from "components/config/MediaQuery";
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
 import useClickOutside from "hooks/useClickOutside";
-import { fontSizeArray, themeArray, fontSizeObject, themeObject } from 'data/setting';
+import { fontSizeArray, themeArray, fontSizeObject, themeObject, activeCondition, renderText } from 'data/setting';
 
-export default function Settings({ themeMode , setThemeMode, setSettingToggle, isMobile }) {
-    const { getFontSize , handleSelectFontSize } = useFontSize();
-    const [activeIndex, setActiveIndex] = useState({
-        fontSize: null,
-        theme: null,
-    });
-    const root = document.getElementsByTagName('html')[0];
+export default function Settings({ 
+    themeMode, 
+    setThemeMode, 
+    setSettingToggle, 
+    isMobile, 
+    rootFontSize, 
+    setRootFontSize
+}) {
     const { openScroll } = useBodyScrollLock();
 
     const settingClose = () => {
@@ -28,37 +27,16 @@ export default function Settings({ themeMode , setThemeMode, setSettingToggle, i
 
     const ref = useClickOutside(settingClose);
 
-    const handleActive = (listKey, index) => {
-        setActiveIndex((prevIndexes) => ({
-            ...prevIndexes,
-            [listKey]: prevIndexes[listKey] === index ? null : index,
-        }));
+    const handleTheme = (index) => {
+        setThemeMode(themeArray[index] || 'light');
     }
 
     const handleFontSize = (index) => {
-        const sizeArray = ['small', 'default', 'large']; 
-
-        sizeArray.forEach((size, i) => {
-            if (i === index) {
-                root.classList.add(size);
-            } else {
-                root.classList.remove(size);
-            }
-        });
-    }
-
-    const handleTheme = (index) => {
-        const themes = ['light', 'dark'];
-        setThemeMode(themes[index] || 'light');
-    }
-
-    const activeCondition = (object, getData, index) => {
-        const map = object;
-        return map[getData] === index ? 'fixed' : null;
+        setRootFontSize(fontSizeArray[index] || 'default');
     }
 
     return(
-        <Headerstyled.DimmedWrap className={isMobile}>
+        <H.DimmedWrap className={isMobile}>
             <Set.SettingWrap ref={ref}>
                 <Set.SettingList>
                     <Set.SettingItem>
@@ -74,11 +52,12 @@ export default function Settings({ themeMode , setThemeMode, setSettingToggle, i
                         <Set.SettingButtonList>
                             {fontSizeArray.map((item,index) => {
                                 return(
-                                    <Buttonstyled.BtnSetting key={index} onClick={() => {
-                                        handleSelectFontSize(index)
-                                        handleFontSize(index)
-                                        handleActive('fontSize',index)
-                                    }} className={activeCondition(fontSizeObject, getFontSize, index)}>{item}</Buttonstyled.BtnSetting>
+                                    <B.BtnSetting 
+                                    key={index} 
+                                    onClick={() => {handleFontSize(index)}} 
+                                    className={activeCondition(fontSizeObject, rootFontSize, index)}>
+                                        {renderText(fontSizeArray, item)}
+                                    </B.BtnSetting>
                                 )
                             })}
                         </Set.SettingButtonList>
@@ -90,16 +69,18 @@ export default function Settings({ themeMode , setThemeMode, setSettingToggle, i
                         <Set.SettingButtonList>
                             {themeArray.map((item,index) => {
                                 return(
-                                    <Buttonstyled.BtnSetting key={index} onClick={() => {
-                                        handleTheme(index)
-                                        handleActive('theme',index)
-                                    }} className={activeCondition(themeObject, themeMode, index)}>{item}</Buttonstyled.BtnSetting>
+                                    <B.BtnSetting 
+                                    key={index} 
+                                    onClick={() => {handleTheme(index)}} 
+                                    className={activeCondition(themeObject, themeMode, index)}>
+                                        {renderText(themeArray, item)}
+                                    </B.BtnSetting>
                                 )
                             })}
                         </Set.SettingButtonList>
                     </Set.SettingItem>
                 </Set.SettingList>
             </Set.SettingWrap>
-        </Headerstyled.DimmedWrap>
+        </H.DimmedWrap>
     )
 }

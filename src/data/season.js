@@ -1,55 +1,55 @@
 const y5 = 1;
 const y4 = 101;
-const y3 = 111;
-const y2 = 141;
-const y1 = 201;
-const g5 = 301;
-const g4 = 441;
-const g3 = 641;
-const g2 = 911;
-const g1 = 1261;
-const b5 = 1701;
-const b4 = 2221;
-const b3 = 2861;
-const b2 = 3611;
-const b1 = 4491;
-const r5 = 5501;
-const r4 = 6651;
-const r3 = 7961;
-const r2 = 9431;
-const r1 = 11071;
-const bl5 = 12901;
-const bl4 = 15201;
-const bl3 = 22301;
-const bl2 = 30001;
-const bl1 = 38501;
-const rb5 = 47601;
-const rb4 = 57601;
-const rb3 = 68301;
-const rb2 = 79901;
-const rb1 = 92301;
+const y3 = 121;
+const y2 = 171;
+const y1 = 261;
+const g5 = 421;
+const g4 = 661;
+const g3 = 991;
+const g2 = 1431;
+const g1 = 1991;
+const b5 = 2701;
+const b4 = 3561;
+const b3 = 4591;
+const b2 = 5811;
+const b1 = 7231;
+const r5 = 8871;
+const r4 = 10741;
+const r3 = 12871;
+const r2 = 15261;
+const r1 = 17931;
+const bl5 = 20901;
+const bl4 = 25001;
+const bl3 = 30501;
+const bl2 = 36601;
+const bl1 = 43201;
+const rb5 = 50501;
+const rb4 = 58301;
+const rb3 = 66701;
+const rb2 = 75801;
+const rb1 = 85501;
 
 const bz3 = 1;
-const bz2 = 101;
-const bz1 = 131;
-const sv3 = 281;
-const sv2 = 681;
-const sv1 = 1531;
-const gd3 = 3081;
-const gd2 = 5621;
-const gd1 = 9521;
-const pt3 = 15191;
-const pt2 = 23101;
-const pt1 = 31101;
-const dm3 = 39901;
-const dm2 = 49701;
-const dm1 = 60601;
-const ms3 = 72601;
-const ms2 = 85801;
-const ms1 = 100101;
-const gm3 = 115701;
-const gm2 = 132501;
-const gm1 = 150501;
+const bz2 = 121;
+const bz1 = 271;
+const sv3 = 621;
+const sv2 = 1241;
+const sv1 = 2181;
+const gd3 = 3501;
+const gd2 = 5261;
+const gd1 = 7501;
+const pt3 = 10281;
+const pt2 = 13631;
+const pt1 = 17601;
+const dm3 = 22231;
+const dm2 = 27571;
+const dm1 = 33661;
+const ms3 = 40531;
+const ms2 = 48231;
+const ms1 = 56791;
+const gm3 = 66261;
+const gm2 = 76651;
+const gm1 = 88031;
 
 export const itemScore = [
     {"mp": y5, "tier": "노랑 장갑 다섯손가락"},
@@ -193,7 +193,7 @@ export const renderItemIcon = (current) => {
         case current >= rb2 && current < rb1:
             return "rb1";
         case current > rb1:
-            return null;
+            return "rb1";
         default:
             return "white0";
     }
@@ -244,7 +244,7 @@ export const renderSpeedIcon = (current) => {
         case current >= gm2 && current < gm1:
             return "gm1";
         case current > gm1:
-            return null;
+            return "gm-no-tier";
         default:
             return "minus";
     }

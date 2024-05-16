@@ -1,4 +1,4 @@
-import * as M from 'style/main/Main.style';
+import * as M from 'style/components/main/Main.style';
 import RecentNewsList from 'components/recentNews/RecentNewsList';
 import VideoState from 'components/state/VideoState';
 import MainTitle from 'components/title/MainTitle';

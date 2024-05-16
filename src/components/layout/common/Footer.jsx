@@ -1,3 +1,5 @@
+'use client';
+
 import * as Footerstyled from 'style/layout/Footer.style';
 import Link from 'next/link';
 import { M500 } from 'components/config/MediaQuery';

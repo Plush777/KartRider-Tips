@@ -1,9 +1,7 @@
-"use client";
-
 import { useRef, useState } from "react";
 import CenterStart from "components/intro/CenterStart";
 import HeaderBackground from "components/intro/HeaderBackground";
-import * as I from "style/intro/Intro.style";
+import * as I from "style/components/intro/Intro.style";
 
 export default function Intro ({ setIntro }) {
     const [click, setClick] = useState(false);
@@ -27,12 +25,17 @@ export default function Intro ({ setIntro }) {
         }
     }
 
+    const skip = () => {
+        setIntro(true);
+        sessionStorage.setItem('intro', 'true');
+    }
+
     return (
         <I.Wrap> 
             <HeaderBackground hiddenText="넥슨 홈페이지 바로가기" />
 
-            <CenterStart clickFn={handleClick}>
-                <I.Video autoPlay muted loop>
+            <CenterStart skip={skip} clickFn={handleClick}>
+                <I.Video preload="auto" autoPlay muted loop>
                     <source src="/mobile-intro.mp4" type="video/mp4" />
                 </I.Video>
             </CenterStart>

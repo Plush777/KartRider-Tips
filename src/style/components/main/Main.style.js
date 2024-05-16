@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const MainInner = styled.div`
+export const MainInner = styled.article`
     position: relative;
     min-height: ${props => props.minHeight};
     height: ${props => props.height};
@@ -29,7 +29,7 @@ export const MainInner = styled.div`
         `}
 
         ${props => props.name === 'season' && css`
-            height: auto;
+            height: 170px;
         `}
     `};
 `
@@ -68,7 +68,7 @@ export const MainComponentBox = styled.section`
     `};
 `
 
-export const ContainerBox = styled.div`
+export const ContainerBox = styled.article`
     position: relative;
     flex: 0.5;
     display: flex;
@@ -79,4 +79,14 @@ export const ContainerBox = styled.div`
         flex: none;
         width: 100%;
     `};
+`
+
+export const Container = styled.div`
+   transition: .3s ease-in-out;
+   transition-delay: .5s;
+   opacity: 0;
+
+    &.active{
+        opacity: 1;
+    }
 `

@@ -13,14 +13,9 @@ export const PWAButton = styled.button`
     color: #fff;
     background-color: var(--active);
 
-    &.transparent {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
-        padding: 0;
-        width: 22px;
-        height: 22px;
-        background-color: transparent;
-    }
+    ${({ theme }) => theme.tablet`
+        max-width: none;
+        width: 100%;
+        height: 100%;
+    `};
 `

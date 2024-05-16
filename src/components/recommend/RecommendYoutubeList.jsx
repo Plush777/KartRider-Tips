@@ -1,5 +1,5 @@
-import * as C from 'style/main/Card.style';
-import * as Tit from 'style/title/Title.style';
+import * as C from 'style/components/main/Card.style';
+import * as Tit from 'style/components/title/Title.style';
 import '@dotlottie/player-component';
 import Image from 'next/image';
 import useImageTransition from 'hooks/useImageTransition';

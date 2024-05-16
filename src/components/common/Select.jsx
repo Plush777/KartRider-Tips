@@ -1,3 +1,5 @@
+'use client';
+
 import * as Selectstyled from 'style/common/Select.style';
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
 import useSelect from 'hooks/useSelect';

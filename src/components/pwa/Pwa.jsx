@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import SCappDownload from 'svg/ico-app-download.svg';
-import * as P from "style/components/pwa/Pwa.style";
+// import SCappDownload from 'svg/ico-app-download.svg';
+import * as P from "style/components/header/Pwa.style";
 
 //https://kagrin97-blog.vercel.app/react/pwa-beforeInstallPrompt
-export default function Pwa ({ type }) {
+export default function Pwa () {
     const [deferredPrompt, setDeferredPrompt] = useState(null);
 
     useEffect(() => {
@@ -40,24 +40,5 @@ export default function Pwa ({ type }) {
         }
     };
 
-    const renderButton = (type) => {
-        if (type === 'button') {
-            return <P.PWAButton type="button" onClick={installApp}>앱 설치하기</P.PWAButton>
-        } 
-        
-        if (type === 'icon') {
-            return (
-                <P.PWAButton className='transparent' type="button" onClick={installApp}>
-                    <SCappDownload width="22px" height="22px" fill="transparent"/>
-                    <span className='hidden'>앱 설치하기</span>
-                </P.PWAButton>
-            );
-        }
-    }
-
-    return (
-        <>
-           {renderButton(type)}
-        </>
-    )
+    return <P.PWAButton type="button" onClick={installApp}>앱 설치하기</P.PWAButton>
 }

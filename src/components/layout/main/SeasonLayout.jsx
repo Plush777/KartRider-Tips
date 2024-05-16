@@ -1,4 +1,4 @@
-import * as M from 'style/main/Main.style';
+import * as M from 'style/components/main/Main.style';
 import MainTitle from 'components/title/MainTitle';
 import SeasonList from 'components/season/SeasonList';
 import calcSeason from "scripts/calcSeason";

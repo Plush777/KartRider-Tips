@@ -1,6 +1,6 @@
 import RecommendYoutubeList from 'components/recommend/RecommendYoutubeList';
 import VideoState from 'components/state/VideoState';
-import * as M from 'style/main/Main.style';
+import * as M from 'style/components/main/Main.style';
 import MainTitle from 'components/title/MainTitle';
 import { lottieSrc, mainTitle } from 'const';
 

@@ -1,5 +1,5 @@
 import { blankUrl } from "const";
-import * as I from "style/intro/Intro.style";
+import * as I from "style/components/intro/Intro.style";
 
 export default function HeaderBackground ({ hiddenText }) {
     return(
