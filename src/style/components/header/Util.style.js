@@ -6,7 +6,6 @@ export const UtilArea = styled.div`
     align-items: center;
     column-gap: 15px;
     position: relative;
-    margin-right: 20px;
 
     a {
         display: flex;

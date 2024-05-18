@@ -17,6 +17,7 @@ import Portal from 'components/config/Portal';
 import Image from 'next/image';
 import { utilRender, utilArray, utilLinks, mobileHeaderMenuTagCondition } from 'data/header';
 import Pwa from 'components/pwa/Pwa';
+import Gnb from 'components/layout/common/Gnb';
 
 export default function Header ({ themeMode , setThemeMode, rootFontSize, setRootFontSize }) {
     const ref = useRef();
@@ -24,6 +25,7 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
     const [settingToggle, setSettingToggle] = useState(false);
     const [isMobile, setIsMobile] = useState(undefined);
+    const [windowMobileWidth, setWindowMobileWidth] = useState(window.innerWidth <= 768);
 
     const handleHeaderMenu = () => {
         setMenuToggle(prev => !prev);
@@ -39,16 +41,21 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
         2: <SCsetting onClick={handleSettingButton} width="26px" height="26px"/>
     }
 
+    const handleIsMobile = () => {
+        setWindowMobileWidth(window.innerWidth <= 768);
+        setIsMobile('mobile');
+    }
+
     useEffect(() => {
-        if (window.matchMedia('(max-width: 768px)').matches) {
-            setIsMobile('mobile');
-        } else {
-            setIsMobile('');
+        window.addEventListener('resize', handleIsMobile);
+
+        return () => {
+            window.removeEventListener('resize', handleIsMobile);
         }
     }, [isMobile]);
 
     useEffect(() => {
-        if (window.matchMedia('(max-width: 768px)').matches) {
+        if (windowMobileWidth) {
             if (settingToggle == true) {
                 document.getElementById('modalRoot').style.pointerEvents = 'all';
             } else if (settingToggle == false) {
@@ -58,7 +65,7 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
     }, [settingToggle]);
 
     return(
-        <H.Header className={visible} ref={ref}>
+        <H.Header className={visible ? 'active' : null} ref={ref}>
             <H.HeaderInner>
                 <M768>
                     <H.BtnHambuger onClick={handleHeaderMenu}>
@@ -74,42 +81,45 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
                 </H.Logo>
 
                 <Min768>
-                    <U.UtilArea>
-                        {utilArray.filter(item => item !== '앱 설치하기').map((item,index) => {
-                            const isItem = item === '설정';
+                    <Gnb />
 
-                            return(
-                                <U.UtilTextBox 
-                                    key={index} 
-                                    href={utilRender(utilLinks,index)} 
-                                    rel={!isItem ? 'noopener noreferrer' : null} 
-                                    target={!isItem ? '_blank' : null} 
-                                    as={isItem && 'button'} 
-                                    type={isItem ? 'button' : null}
-                                >
+                    <H.Right>
+                        <U.UtilArea>
+                            {utilArray.filter(item => item !== '앱 설치하기').map((item,index) => {
+                                const isItem = item === '설정';
 
-                                    {utilRender(utilIcons,index)}
+                                return(
+                                    <U.UtilTextBox 
+                                        key={index} 
+                                        href={utilRender(utilLinks,index)} 
+                                        rel={!isItem ? 'noopener noreferrer' : null} 
+                                        target={!isItem ? '_blank' : null} 
+                                        as={isItem && 'button'} 
+                                        type={isItem ? 'button' : null}
+                                    >
 
-                                    <T.Tooltip>
-                                        <T.TooltipItem>{item}</T.TooltipItem>
-                                    </T.Tooltip>
-                                </U.UtilTextBox>
-                            )
-                        })}
+                                        {utilRender(utilIcons,index)}
 
-                        {
-                            settingToggle &&
-                            <Settings
-                                themeMode={themeMode} 
-                                setThemeMode={setThemeMode} 
-                                setSettingToggle={setSettingToggle}
-                                rootFontSize={rootFontSize}
-                                setRootFontSize={setRootFontSize}
-                            />
-                        }
-                    </U.UtilArea>
+                                        <T.Tooltip>
+                                            <T.TooltipItem>{item}</T.TooltipItem>
+                                        </T.Tooltip>
+                                    </U.UtilTextBox>
+                                )
+                            })}
 
-                    <Pwa />
+                            {
+                                settingToggle &&
+                                <Settings
+                                    themeMode={themeMode} 
+                                    setThemeMode={setThemeMode} 
+                                    setSettingToggle={setSettingToggle}
+                                    rootFontSize={rootFontSize}
+                                    setRootFontSize={setRootFontSize}
+                                />
+                            }
+                        </U.UtilArea>
+                        <Pwa />
+                    </H.Right>
                 </Min768>
 
                 <M768>
