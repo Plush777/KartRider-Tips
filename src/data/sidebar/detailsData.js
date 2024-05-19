@@ -1,10 +1,10 @@
 export const detailsData = {
     learn: [
         {
-            group1: ['item1', 'item2', 'item3']
+            group: ['item1', 'item2', 'item3']
         },
         {
-            group2: ['speed1', 'speed2', 'speed3']
+            group: ['주행 기술', '몸싸움 전략', '팀전 전략', '포지션']
         }
     ],
 }

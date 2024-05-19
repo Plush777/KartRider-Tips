@@ -16,8 +16,7 @@ const NexonLv1 = localFont({
 export const metadata = {
     metadataBase: new URL('https://kartrider-tips.netlify.app/'),
     title: {
-        template: 'KartRider Tips | %s', 
-        default: 'KartRider Tips',
+        template: '%s | KartRider Tips', 
     },
     description: '카트라이더에 대한 정보와 팁들을 제공합니다.',
     author: 'Plush',

@@ -23,16 +23,15 @@ export default function Sidebar({
                             <S.Group key={groupIndex}>
                                 <S.SectionText>{group.title}</S.SectionText>
 
-                                {Object.values(detailsData[groupIndex])[0].map((details, detailsIndex) => {
-                                    // console.log(Object.values(listData[groupIndex])[0])
-                                    // console.log(detailsIndex)
+                                {detailsData[groupIndex]?.group.map((details, detailsIndex) => {
+                                    // console.log(listData[groupIndex].group[detailsIndex].item)
 
                                     return (
                                         <S.DetailsWrap key={detailsIndex}>
                                             <S.Details>
                                                 <S.Summary>{details}</S.Summary>
                                                 <S.List>
-                                                    {Object.values(listData[groupIndex])[0].map((list, listIndex) => {
+                                                    {listData[groupIndex].group[detailsIndex]?.item.map((list, listIndex) => {
                                                         return (
                                                             <S.Item key={listIndex}>
                                                                 <Link href={list.href}>{list.title}</Link>
