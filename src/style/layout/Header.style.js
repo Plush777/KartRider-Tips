@@ -8,7 +8,7 @@ export const Header = styled.header`
     width: 100%;
     height: 65px;
     padding: 0 16px;
-    border-bottom: 1px solid var(--stroke1);
+    border-bottom: 1px solid var(--stroke2);
     background-color: var(--background1);
     transition: background .3s ease-in-out;
 
@@ -26,7 +26,7 @@ export const Header = styled.header`
         transition: .25s top ease-in-out;
         padding: 0 10px;
 
-        &.true{
+        &.active {
             top: 0;
         }
     `};
@@ -47,8 +47,6 @@ export const HeaderInner = styled.div`
 `
 
 export const Logo = styled.h1`
-    margin-right: auto;
-
     img{
         ${({ theme }) => theme.laptop`
             width: 100px;
@@ -144,4 +142,11 @@ export const DimmedWrap = styled.div`
         height: 100vh;
         z-index: 10010;
     }
+`
+
+export const Right = styled.div`
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-left: auto;
 `

@@ -59,7 +59,7 @@ export const ResultBox = styled.div`
         margin-top: -2px;
     }
 
-    ${({ theme }) => theme.small`
+    ${({ theme }) => theme.mobile`
         img {
             position: absolute;
             width: 40px;

@@ -1,16 +1,17 @@
-import { useLayoutEffect, useMemo, useState , useRef } from 'react';
+import { useLayoutEffect, useMemo, useState, useRef } from 'react';
 import { throttle } from 'lodash';
 
-export default function useStickyHeader () {
+export default function useStickyHeader() {
     const beforeScrollY = useRef(0);
     const [visible, setVisible] = useState(true);
     const [menuToggle, setMenuToggle] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-    const handleScroll = useMemo(() => 
+    const handleScroll = useMemo(() =>
         throttle(() => {
             const currentScrollY = window.scrollY;
 
-            if(beforeScrollY.current < currentScrollY){
+            if (beforeScrollY.current < currentScrollY) {
                 setVisible(false);
                 setMenuToggle(false);
             } else {
@@ -18,22 +19,34 @@ export default function useStickyHeader () {
             }
 
             beforeScrollY.current = currentScrollY;
+        }, 250),
+    []);
 
-            // console.log(beforeScrollY.current);
-        }, 250),[beforeScrollY]);
+    const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+        setVisible(true);
+    };
 
     useLayoutEffect(() => {
-        if(window.matchMedia('(max-width: 768px)').matches){
-            window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+        handleResize();
 
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useLayoutEffect(() => {
+        if (isMobile) {
+            window.addEventListener('scroll', handleScroll);
+            
             return () => {
                 window.removeEventListener('scroll', handleScroll);
-            }
-            
+            };
         } else {
             setVisible('');
         }
-    },[handleScroll]);
+    }, [isMobile, handleScroll]);
 
     return { visible, menuToggle, setMenuToggle };
 }

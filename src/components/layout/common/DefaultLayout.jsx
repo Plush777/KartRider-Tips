@@ -6,6 +6,7 @@ import PostContents from 'components/post/PostContents';
 import * as DLay from 'style/layout/DefaultLayout.style';
 import useTheme from 'hooks/useTheme';
 import useFontSize from 'hooks/useFontSize';
+import TopNavigation from 'components/sub/TopNavigation';
 
 export default function DefaultLayout ({ children, type }) {
     const { themeMode, setThemeMode } = useTheme();
@@ -24,9 +25,12 @@ export default function DefaultLayout ({ children, type }) {
         
         if (type === 'sub') {
             return (
-                <PostContents themeMode={themeMode}>
-                    {children}
-                </PostContents>
+                <>
+                    <TopNavigation />
+                    <PostContents themeMode={themeMode}>
+                        {children}
+                    </PostContents>
+                </>
             )
         }
 
@@ -41,6 +45,7 @@ export default function DefaultLayout ({ children, type }) {
                 rootFontSize={rootFontSize}
                 setRootFontSize={setRootFontSize}
             />
+          
             <DLay.Main>{typeCondition(type)}</DLay.Main>
             <Footer themeMode={themeMode}/>
         </>
