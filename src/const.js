@@ -37,3 +37,7 @@ export const message = {
 export const blankUrl = {
     nexon: 'https://www.nexon.com/Home/Game'
 }
+
+export const mdxPathPrefix = {
+    learn: 'src/markdown/docs/learn/'
+}

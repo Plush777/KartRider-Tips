@@ -1,12 +1,9 @@
-'use client';
-
 import DefaultLayout from "components/layout/common/DefaultLayout";
-import LearnMDX from "markdown/learn/Learn.mdx";
 
-export default function Learn(){
-    return(
+export default function Layout({ children }) {
+    return (
         <DefaultLayout type="sub">
-            <LearnMDX/>
+            {children}
         </DefaultLayout>
     )
 }

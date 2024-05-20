@@ -7,10 +7,13 @@ import * as DLay from 'style/layout/DefaultLayout.style';
 import useTheme from 'hooks/useTheme';
 import useFontSize from 'hooks/useFontSize';
 import TopNavigation from 'components/sub/TopNavigation';
+import { usePathname } from 'next/navigation';
 
 export default function DefaultLayout ({ children, type }) {
     const { themeMode, setThemeMode } = useTheme();
     const { rootFontSize,  setRootFontSize } = useFontSize();
+
+    const pathname = usePathname();
 
     const typeCondition = (type) => {
         if (type === 'main') {
@@ -26,7 +29,7 @@ export default function DefaultLayout ({ children, type }) {
         if (type === 'sub') {
             return (
                 <>
-                    <TopNavigation />
+                    {pathname.startsWith('/docs') && <TopNavigation />} 
                     <PostContents themeMode={themeMode}>
                         {children}
                     </PostContents>

@@ -10,9 +10,9 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    experimental: {
-        mdxRs: true,
-    },
+    // experimental: {
+    //     mdxRs: true,
+    // },
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
     // 도메인 모두 허용 https://stackoverflow.com/questions/71235874/how-to-allow-all-domains-for-image-nextjs-config
     images: {

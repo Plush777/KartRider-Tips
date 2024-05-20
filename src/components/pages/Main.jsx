@@ -1,16 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import Intro from 'components/intro/Intro';
 import DefaultLayout from 'components/layout/common/DefaultLayout';
 import MainLayout from 'components/layout/main/MainLayout';
 import ImagePreload from 'components/common/ImagePreload';
 import * as M from 'style/components/main/Main.style';
-import { imageArray } from 'data/main';
+import { imageArray, preloadingImage } from 'data/main';
 
 export default function Main() {
     const [intro, setIntro] = useState(false);
     const isSession = sessionStorage.getItem('intro');
+
+    useLayoutEffect(() => {
+        preloadingImage(imageArray);
+    }, []);
 
     return(
         <>

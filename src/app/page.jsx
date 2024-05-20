@@ -4,6 +4,6 @@ export const metadata = {
     title: 'Kartrider Tips'
 }
 
-export default async function page() {
+export default async function Home() {
     return <Main/>
 }

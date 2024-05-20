@@ -36,7 +36,10 @@ export const GnbItem = styled.li`
 
     &.disabled{
         color: var(--disabled);
-        cursor: not-allowed;
+
+        a {
+            cursor: not-allowed;
+        }
     }
 
     &.active{

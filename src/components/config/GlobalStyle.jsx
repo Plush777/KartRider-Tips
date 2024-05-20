@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
 body,html{margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-text-size-adjust: 100%;
--moz-text-size-adjust : none; -o-text-size-adjust : none; -webkit-touch-callout:none; width: 100%; height: 100%;}
+-moz-text-size-adjust : none; -o-text-size-adjust : none; -webkit-touch-callout:none;}
 :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary){
   margin:0;padding:0;border:0;
 }  
@@ -39,7 +39,10 @@ input{
     background-color: var(--background2);
 }
 
-body{touch-action: pan-y;}
+body{
+    touch-action: pan-y;
+    color: var(--text1);
+}
 
 html{
     &.small{font-size: 15px;}

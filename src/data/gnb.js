@@ -2,16 +2,16 @@ export const menus = [
     {
         id: 1,
         name: '배우기',
-        path: '/learn'
+        path: '/docs/learn'
     }, 
     {
         id: 2,
         name: '도감',
-        path: '/encyclopedia'
+        path: '/docs/encyclopedia'
     }, 
     {
         id: 3,
         name: 'faq',
-        path: '/faq'
+        path: '/docs/faq'
     }
 ];

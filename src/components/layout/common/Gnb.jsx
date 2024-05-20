@@ -13,8 +13,11 @@ export default function Gnb() {
             <G.GnbList>
                 {menus.map((menu) => {
                     return(
-                        <G.GnbItem className={pathname === menu.path && 'active'} key={menu.id}>
-                            <Link href={`/${menu.path}`}>{menu.name}</Link>
+                        <G.GnbItem className={`disabled ${pathname === menu.path && 'active'}`} key={menu.id}>
+                            <Link onClick={(e) => {
+                                alert('준비중입니다.');
+                                e.preventDefault();
+                            }} href={`${menu.path}`}>{menu.name}</Link>
                         </G.GnbItem>
                     )
                 })}

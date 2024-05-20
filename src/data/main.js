@@ -3,3 +3,10 @@ export const imageArray = ['b1','b2','b3','b4','b5','bl1','bl2','bl3','bl4','bl5
 'pt1','pt2','pt3','r1','r2','r3','r4','r5','rb1','rb2','rb3','rb4','rb5','sv1','sv2','sv3','white0', 'y1',
 'y2','y3','y4','y5'
 ];
+
+export const preloadingImage = (imageArray) => {
+    imageArray.map((image) => {
+        const img = new Image();
+        img.src = `/images/tier/${image}.png`;
+    });
+}

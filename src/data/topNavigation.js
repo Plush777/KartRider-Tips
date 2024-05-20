@@ -1,6 +1,6 @@
-export const changeLink = (link, pageName) => {
+export const changeLink = (pathArray, pageName) => {
     if (pageName === 'learn') {
-        const mapping = link.map((item) => {
+        const mapping = pathArray.map((item) => {
             if (item === 'learn') return '배우기';
         });
 
