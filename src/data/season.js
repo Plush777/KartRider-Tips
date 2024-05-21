@@ -103,9 +103,9 @@ export const speedScore = [
     {"mp": ms3, "tier": "마스터 III"},
     {"mp": ms2, "tier": "마스터 II"},
     {"mp": ms1, "tier": "마스터 I"},
-    {"mp": gm1, "tier": "그랜드마스터 III"},
+    {"mp": gm3, "tier": "그랜드마스터 III"},
     {"mp": gm2, "tier": "그랜드마스터 II"},
-    {"mp": gm3, "tier": "그랜드마스터 I"},
+    {"mp": gm1, "tier": "그랜드마스터 I"},
 ];
 
 export const findNextMp = (data, current) => {
