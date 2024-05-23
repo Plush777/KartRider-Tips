@@ -30,7 +30,7 @@ export default function DefaultLayout ({ children, type }) {
             return (
                 <>
                     {pathname.startsWith('/docs') && <TopNavigation />} 
-                    <PostContents themeMode={themeMode}>
+                    <PostContents type={pathname.startsWith('/docs') && 'hasNavigation'} themeMode={themeMode}>
                         {children}
                     </PostContents>
                 </>

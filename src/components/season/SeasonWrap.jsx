@@ -9,11 +9,13 @@ export default function SeasonWrap () {
         <S.Wrap>
             <S.Group>
                 <S.Text as="h3" head>시즌 시작일</S.Text>
-                <S.Text as="time">{format(currentSeasonStart,'yyyy-MM-dd')}</S.Text>
+                <S.Text as="time" dateTime={format(currentSeasonStart,'yyyy-MM-dd')}>
+                    {format(currentSeasonStart,'yyyy-MM-dd')}
+                </S.Text>
             </S.Group>
             <S.Group>
                 <S.Text as="h3" head>시즌 종료일</S.Text>
-                {endDate && <S.Text as="time">{endDate} 오전 8시 59분 (UTC +9)</S.Text>}
+                {endDate && <S.Text as="time" dateTime={endDate}>{endDate} 오전 8시 59분 (UTC +9)</S.Text>}
             </S.Group>
             <S.Group>
                 <S.Text as="h3" head>남은 날짜</S.Text>

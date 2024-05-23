@@ -1,17 +1,14 @@
 'use client';
 
-import * as T from "style/components/sub/TopNavigation.style"
+import * as T from "style/components/sub/TopNavigation.style";
 import * as S from "style/components/sub/Sidebar.style";
-import Link from "next/link"
 import { usePathname } from 'next/navigation';
-import { changeLink } from "data/topNavigation";
 import { useEffect, useState } from "react";
 import SCsidebarLeft from "svg/ico-sidebar-left.svg";
 import Sidebar from "components/sub/Sidebar";
+import BreadCrumb from "components/sub/BreadCrumb";
 import SCclose from 'svg/ico-close.svg';
-import { detailsData } from "data/sidebar/detailsData";
-import { listData } from "data/sidebar/listData";
-import { groupData } from "data/sidebar/groupData";
+import { learnData } from "data/sidebar/learn/data";
 import useClickOutside from "hooks/useClickOutside";
 
 export default function TopNavigation() {
@@ -19,18 +16,10 @@ export default function TopNavigation() {
     const pathnameArray = pathname.split('/').filter((path) => path);
     /* 0번째 경로를 제외한 나머지 경로 */
     const myPathArray = pathnameArray.slice(1);
-    const lastPathname = pathnameArray[pathnameArray.length - 1];
-
-    const [currentPath, setCurrentPath] = useState(null);
+   
     const [sideToggle, setSideToggle] = useState(false);
     const [sideTransition, setSideTransition] = useState(true);
     const sidebarRef = useClickOutside(() => setSideToggle(false));
-
-    useEffect(() => {
-        setCurrentPath(changeLink([lastPathname], lastPathname));
-    }, []);
-
-    // console.log(Object.values(detailsData.learn[0]))
 
     const handleSideOpen = (state) => {
         setSideToggle(state);
@@ -63,9 +52,7 @@ export default function TopNavigation() {
             <Sidebar
                 wrapClassName={`${sideTransition ? 'transition' : ''} ${sideToggle ? 'active' : ''}`}
                 dimmedClassName={`${sideTransition ? 'transition' : ''} ${sideToggle ? 'active' : ''}`}
-                groupData={groupData.learn}
-                detailsData={detailsData.learn}
-                listData={listData.learn}
+                data={learnData}
                 sidebarRef={sidebarRef}
                 sideToggle={sideToggle}
             >
@@ -82,15 +69,7 @@ export default function TopNavigation() {
                         <SCsidebarLeft width="24px" height="24px"/>
                     </T.SidebarOpenButton>
 
-                    <T.List>
-                        {myPathArray.map((link, index) => {
-                            return(
-                                <T.Item key={index}>
-                                    <Link href={`/docs/${link}`}>{currentPath}</Link>
-                                </T.Item>
-                            )
-                        })}
-                    </T.List>
+                    <BreadCrumb data={myPathArray}/>
                 </T.Inner>
             </T.Wrap>
         </>

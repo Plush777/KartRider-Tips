@@ -47,7 +47,9 @@ export const GnbItem = styled.li`
         font-weight: 600;
     }
 
-    &:hover:not(.disabled){
-        color: var(--active); 
+    @media (hover: hover) {
+        &:hover:not(.disabled){
+            color: var(--active); 
+        }
     }
 `

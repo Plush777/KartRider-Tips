@@ -22,13 +22,13 @@ export default function Footer() {
                 <Footerstyled.BottomArea>
                     <Footerstyled.BottomMenu> 
                         <Footerstyled.BottomItem as="li">
-                            <Link href="/purpose">사이트 안내</Link>
+                            <Link href="/guide/purpose">사이트 안내</Link>
                         </Footerstyled.BottomItem>
                         <Footerstyled.BottomItem as="li">
                             <a href="https://forms.gle/4i8vvDYz9VbLbJGN9" target="_blank" rel="noopener noreferrer">피드백</a>
                         </Footerstyled.BottomItem>
                         <Footerstyled.BottomItem as="li">
-                            <Link href="/contribute">기여하기</Link>
+                            <Link href="/guide/contribute">기여하기</Link>
                         </Footerstyled.BottomItem>
                     </Footerstyled.BottomMenu>
                 </Footerstyled.BottomArea>

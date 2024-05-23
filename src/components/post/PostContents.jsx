@@ -1,8 +1,8 @@
 import PostLayout from 'components/layout/post/PostLayout';
 
-export default function PostContents ({ themeMode, children }) {
+export default function PostContents ({ themeMode, children, type }) {
     return(
-        <PostLayout>
+        <PostLayout type={type}>
             {children}
         </PostLayout>
     )

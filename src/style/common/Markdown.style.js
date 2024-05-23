@@ -5,7 +5,11 @@ export const Container = styled.div`
         word-break: keep-all;
     }
 
-    h2 , h3 , h4 {
+    p {
+        line-height: 1.5;
+    }
+
+    h2 , h3 , h4, h5 {
         color: var(--title);
     }
 
@@ -29,20 +33,32 @@ export const Container = styled.div`
     }
 
     h3 {
-        font-size: 1.375rem;
-        margin-bottom: 5px;
-    }
+        font-size: 2rem;
 
-    h4 {
-        font-size: 1.125rem;
-
-        +ul {
-            margin-top: 10px;
+        + h4 {
+            margin-top: 40px;
         }
     }
 
+    h4 {
+        font-size: 1.5rem;
+
+        +ul, +ol {
+            margin-top: 15px;
+        }
+
+        + h5 {
+            margin-top: 25px;
+        }
+    }
+
+    h5 {
+        font-size: 1.25rem;
+        margin-bottom: 2px;
+    }
+
     p {
-        font-size: .875rem;
+        font-size: 1rem;
         color: var(--text1);
         
         ${({ theme }) => theme.tablet`
@@ -54,7 +70,7 @@ export const Container = styled.div`
         color: var(--text1);
 
         +li {
-            margin-top: 5px;
+            margin-top: 10px;
         }
     }
 
@@ -62,7 +78,7 @@ export const Container = styled.div`
         li {
             list-style: disc;
             margin-left: 20px;
-            font-size: .875rem;
+            font-size: 1rem;
         }
     }
 
@@ -78,9 +94,37 @@ export const Container = styled.div`
         }
     }
 
+    hr {
+        margin: 60px 0;
+        background-color: var(--stroke2);
+        height: 1px;
+        border: none;
+    }
+
+    .mdLink {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .articleDates {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+        margin-top: 60px;
+        font-size: .875rem;
+        font-style: italic;
+        color: var(--disabled);
+        border-top: 1px solid var(--stroke2);
+        padding-top: 20px;
+    }
+
+    .articleDateText {
+        margin-right: 5px;
+    }
+
     ${({ theme }) => theme.tablet`
         li, p, span {
-            line-height: 1.5;s
+            line-height: 1.5;
         }
 
         br {

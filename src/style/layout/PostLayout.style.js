@@ -19,9 +19,9 @@ export const Inner = styled.div`
 
     ${({ theme }) => theme.laptopL`
         padding: 36px 16px;
-    `};
 
-    ${({ theme }) => theme.small`
-        padding: 26px 10px;
+        &.hasNavigation {
+            padding: 66px 16px;
+        }
     `};
 `

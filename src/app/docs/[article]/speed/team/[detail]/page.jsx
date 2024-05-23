@@ -1,25 +1,38 @@
-import { pageNameArray } from "data/docs/learn/speed/team/data";
+import { mdxPathPrefix } from "const";
+import { detailPageSuffix } from "const";
+import Article from "components/common/Article";
 
 export async function generateMetadata({ params }) {
+    const suffix = detailPageSuffix.learn;
     const detail = params.detail;
 
-    pageNameArray.forEach((pageName) => {
-        if (detail === pageName) {
-            return {
-                title: pageName
-            }
+    if (detail === 'distance') {
+        return {
+            title: `거리유지 - ${suffix}`
         }
-    });
+    }
+
+    if (detail === 'runner') {
+        return {
+            title: `러너 - ${suffix}`
+        }
+    }
+
+    if (detail === 'middle') {
+        return {
+            title: `미들 - ${suffix}`
+        }
+    }
+
+    if (detail === 'sweeper') {
+        return {
+            title: `스위퍼 - ${suffix}`
+        }
+    }
 }
 
 export default function page({ params }) {
     return (
-        <>
-            {pageNameArray.map((pageName) => {
-                return (
-                    params.detail === pageName && <div>{pageName}</div>
-                )
-            })}
-        </>
+        <Article prefix={mdxPathPrefix.learn} category="speed/team" slug={params.detail} />
     )
 }
