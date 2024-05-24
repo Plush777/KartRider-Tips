@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-/* https://dev.to/rashed_iqbal/how-to-handle-outside-clicks-in-react-with-typescript-4lmc */
 export default function useClickOutside (callback) {
     const ref = useRef(null);
 

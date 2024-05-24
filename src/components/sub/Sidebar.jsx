@@ -46,8 +46,6 @@ export default function Sidebar({
         }
     }
 
-    
-
     return (
         <>
             <S.Wrap ref={sidebarRef} className={wrapClassName}>
