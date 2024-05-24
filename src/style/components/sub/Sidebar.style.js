@@ -10,7 +10,6 @@ export const Wrap = styled.aside`
     border-right: 1px solid var(--stroke2);
     background-color: var(--background2);
     z-index: 1020;
-    overflow-y: auto;
 
     &.transition {
         transition: .3s ease-in-out;
@@ -26,13 +25,6 @@ export const Wrap = styled.aside`
         width: 60%;
     `};
 
-    ${({ theme }) => theme.tablet`
-        &::-webkit-scrollbar{
-            display: none;
-            scrollbar-width: none;
-        }
-    `};
-
     ${({ theme }) => theme.mobile`
         width: 320px;
     `};
@@ -45,11 +37,15 @@ export const Wrap = styled.aside`
 
 export const Inner = styled.div`
     position: relative;
-    padding: 22px;
-    height: 100%;
+    padding: var(--sidebar-padding);
+    overflow-y: auto;
+    height: calc(100% - 58px);
 
-    ${({ theme }) => theme.mobile`
-        padding: 16px;
+    ${({ theme }) => theme.tablet`
+        &::-webkit-scrollbar{
+            display: none;
+            scrollbar-width: none;
+        }
     `};
 `
 
@@ -88,15 +84,14 @@ export const Item = styled.li`
 `
 
 export const GroupContainer = styled.div`
-    margin-top: -30px;
+    height: 100%;
+`
 
-    ${({ theme }) => theme.tablet`
-        margin-top: -24px;
-    `};
-
-    ${({ theme }) => theme.mobile`
-        margin-top: -26px;
-    `};
+export const Top = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    background-color: var(--background1);
 `
 
 export const Group = styled.section`
@@ -238,17 +233,12 @@ export const Summary = styled.summary`
     padding-left: var(--sidebar-summary-padding-left);
 `
 
-export const BtnArea = styled.section`
-    position: sticky;
+export const BtnArea = styled.div`
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    top: 22px;
-    right: 22px;
-
-    ${({ theme }) => theme.mobile`
-        top: 12px;
-    `};
+    align-items: center;
+    justify-content: center;
+    max-height: 30px;
+    padding-right: var(--sidebar-padding);
 `
 
 export const CloseButton = styled.button`

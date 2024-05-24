@@ -18,18 +18,6 @@ pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
 img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block; -webkit-touch-callout:none; pointer-events: none;}
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox  */
-input[type='number'] {
-    -moz-appearance: textfield;
-}
-
 input{
     height: 100%;
     border: 1px solid var(--stroke1);
@@ -37,6 +25,23 @@ input{
     color: var(--text1);
     padding: 0 10px;
     background-color: var(--background2);
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration{
+        display:none;
+    }
+
+    &[type='number']{
+        -moz-appearance: textfield;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 body{
@@ -61,6 +66,7 @@ body{
     --sidebar-summary-padding-left: 30px;
     --sidebar-details-height: 50px;
     --sidebar-item-text-underline-offset: 2px;
+    --sidebar-padding: 22px;
 
     &[data-theme="light"]{
         --main-background: #f2f2f2;
@@ -184,6 +190,7 @@ ${({ theme }) => theme.mobile`
     body {
         --sidebar-summary-padding-left: 20px;
         --sidebar-details-height: 40px;
+        --sidebar-padding: 16px;
     }
 `};
 
