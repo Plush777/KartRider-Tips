@@ -10,7 +10,7 @@ export default function ToggleSelector({ data, clickFn }) {
     const handleToggle = () => setToggle(!toggle);
     const handleClose = () => setToggle(false);
 
-    const link = 'https://kartdrift.nexon.com/kartdrift/ko/news/update/view?threadId=2499938';
+    const link = 'https://kartdrift.nexon.com/kartdrift/ko/news/update/view?threadId=2566733';
     const ref = useClickOutside(handleClose);
 
     return(

@@ -12,9 +12,9 @@ export default function Main() {
     const [intro, setIntro] = useState(false);
     const isSession = sessionStorage.getItem('intro');
 
-    useLayoutEffect(() => {
-        preloadingImage(imageArray);
-    }, []);
+    // useLayoutEffect(() => {
+    //     preloadingImage(imageArray);
+    // }, []);
 
     return(
         <>

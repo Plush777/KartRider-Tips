@@ -1,5 +1,5 @@
 import { M768 } from 'components/config/MediaQuery';
-import * as Art from 'style/components/article/Article.style';
+import * as Art from 'style/components/main/Article.style';
 
 export default function RecentNewsList ({ data, tabIndex }) {
     const renderCategory = () => {

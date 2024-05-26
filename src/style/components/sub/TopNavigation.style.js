@@ -10,7 +10,7 @@ export const Wrap = styled.div`
     background-color: var(--background2);
 
     ${({ theme }) => theme.tablet`
-        top: 55px;
+        transition: .25s top ease-in-out;
     `};
 `
 
@@ -22,6 +22,20 @@ export const Inner = styled.div`
     display: flex;
     align-items: center;
     z-index: 10;
+    background-color: var(--background2);
+
+    ${({ theme }) => theme.tablet`
+        &::before {
+            content: '';
+            position: absolute;
+            top: -91px;
+            left: 0;
+            width: 100%;
+            height: calc(55px + 36px);
+            background-color: var(--main-background);
+            z-index: -1;
+        }
+    `};
 `
 
 export const SidebarOpenButton = styled.button`

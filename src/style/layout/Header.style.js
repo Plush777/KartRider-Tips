@@ -26,8 +26,20 @@ export const Header = styled.header`
         transition: .25s top ease-in-out;
         padding: 0 10px;
 
+        ~ main {
+            .topNavigationWrap {
+                top: 0;
+            }
+        }
+
         &.active {
             top: 0;
+
+            ~ main {
+                .topNavigationWrap {
+                    top: 55px;
+                }
+            }
         }
     `};
 `

@@ -8,7 +8,19 @@ const MdxComponents = {
     ),
     Ratio: (props) => (
         <div {...props} className="mdRatio"/>
-    )
+    ),
+    Tip: (props) => (
+        <div {...props} className="mdTip"/>
+    ),
+    TipText: (props) => (
+        <p {...props} className="mdTipText"/>
+    ),
+    Strong: (props) => (
+        <strong {...props} className="mdStrong"/>
+    ),
+    Ref: (props) => (
+        <i {...props} className="mdRef"/>
+    ),
 };
 
 export function MdxContent({ source }){

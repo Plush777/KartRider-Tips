@@ -2,7 +2,7 @@
 
 import Footer from 'components/layout/common/Footer';
 import Header from 'components/layout/common/Header';
-import PostContents from 'components/post/PostContents';
+import ArticleContents from 'components/article/ArticleContents';
 import * as DLay from 'style/layout/DefaultLayout.style';
 import useTheme from 'hooks/useTheme';
 import useFontSize from 'hooks/useFontSize';
@@ -30,9 +30,9 @@ export default function DefaultLayout ({ children, type }) {
             return (
                 <>
                     {pathname.startsWith('/docs') && <TopNavigation />} 
-                    <PostContents type={pathname.startsWith('/docs') && 'hasNavigation'} themeMode={themeMode}>
+                    <ArticleContents type={pathname.startsWith('/docs') && 'hasNavigation'} themeMode={themeMode}>
                         {children}
-                    </PostContents>
+                    </ArticleContents>
                 </>
             )
         }

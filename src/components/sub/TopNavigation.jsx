@@ -63,7 +63,7 @@ export default function TopNavigation() {
                 </S.BtnArea>
             </Sidebar>
             
-            <T.Wrap>
+            <T.Wrap className="topNavigationWrap">
                 <T.Inner>
                     <T.SidebarOpenButton onClick={() => handleSideOpen(true)} type="button" title="목차 열기">
                         <SCsidebarLeft width="24px" height="24px"/>
