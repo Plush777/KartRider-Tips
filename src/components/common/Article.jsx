@@ -5,7 +5,7 @@ import { MdxContent } from "app/mdx-content";
 
 export default async function Article({ prefix, category, slug }) {
     const pageCategory = !category ? '' : category;
-    const { serialized, frontmatter } = await useGetArticle(`${prefix}${pageCategory}/${slug}.mdx`);
+    const { serialized, frontmatter } = await useGetArticle(`${prefix}${pageCategory}`, slug);
 
     return(
         <>  
