@@ -42,9 +42,3 @@ export const mdxPathPrefix = {
     guide: 'src/markdown/guide/',
     learn: 'src/markdown/docs/learn/'
 }
-
-export const detailPageSuffix = {
-    learn: '배우기',
-    encyclopedia: '도감',
-    faq: 'FAQ'
-}

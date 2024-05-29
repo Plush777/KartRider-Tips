@@ -1,15 +1,32 @@
 import { serialize } from "next-mdx-remote/serialize";
-import path from "path";
-import { promises as fs } from "fs";
+import fs from "fs";
+import { getArticles } from "scripts/getArticles";
 
-// https://blog.kfirfitousi.com/posts/web-dev/mdx-nextjs-13
-export default async function useGetArticle(filepath, slug) {
-    const workDir = process.cwd();
-    const file = path.join(workDir, filepath, `/${slug}.mdx`);
+/* Article.jsx에서 slug 배열을 받아와서 파일명이 어떤 것이냐에 따라 src/docs/markdown 이후 dir (마크다운 파일경로) 를 결정합니다. */
+function markdownDirCondition(slugArray) {
+    if (slugArray.includes('learn') && slugArray.length < 2) return 'learn/home';
+    if (slugArray.includes('basic')) return 'learn/basic';
+}
 
-    const source = await fs.readFile(file, 'utf8');
+export default async function useGetArticle(slugArray) {
+    // console.log(slugArray);
+   
+    const last = slugArray[slugArray.length - 1];
+    slugArray.length > 1 && slugArray.pop();
+
+    const mySlugArray = slugArray;
+    // console.log(mySlugArray);
     
-    const serialized = await serialize(source, {
+    const dir = markdownDirCondition(mySlugArray);
+
+    // console.log(dir);
+
+    /* getArticles 함수에 받아온 dir (경로) 와 last (파일명) 도 같이 넘겨줍니다.  */
+    const articlePath = await getArticles(dir, last);
+    const articlePathFileSlug = articlePath;
+    const file = fs.readFileSync(`${articlePathFileSlug}.mdx`, "utf8");
+    
+    const serialized = await serialize(file, {
         parseFrontmatter: true,
     });
 

@@ -1,13 +1,14 @@
 import useGetArticle from "hooks/useGetArticle";
 import { format } from "date-fns";
-
 import { MdxContent } from "app/mdx-content";
 
-export default async function Article({ prefix, category, slug }) {
-    const pageCategory = !category ? '' : category;
-    const { serialized, frontmatter } = await useGetArticle(`${prefix}${pageCategory}`, slug);
+/* [...article] page에서 slug를 배열로 받아옵니다.*/
+export default async function Article({ slug }) {
+    // console.log(slug);
 
-    return(
+    const { serialized, frontmatter } = await useGetArticle(slug);
+
+    return( 
         <>  
             <h2>{frontmatter.title}</h2>
             <MdxContent source={serialized} />
