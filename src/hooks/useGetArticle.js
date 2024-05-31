@@ -6,6 +6,11 @@ import { getArticles } from "scripts/getArticles";
 function markdownDirCondition(slugArray) {
     if (slugArray.includes('learn') && slugArray.length < 2) return 'learn/home';
     if (slugArray.includes('basic')) return 'learn/basic';
+    if (slugArray.includes('item') ) return 'learn/item';
+    if (slugArray.includes('speed')) return 'learn/speed';
+    if (slugArray.includes('tuning')) return 'learn/tuning';
+    if (slugArray.includes('purpose')) return 'guide/purpose';
+    if (slugArray.includes('contribute')) return 'guide/contribute';
 }
 
 export default async function useGetArticle(slugArray) {
@@ -15,7 +20,7 @@ export default async function useGetArticle(slugArray) {
     slugArray.length > 1 && slugArray.pop();
 
     const mySlugArray = slugArray;
-    // console.log(mySlugArray);
+    console.log(mySlugArray);
     
     const dir = markdownDirCondition(mySlugArray);
 

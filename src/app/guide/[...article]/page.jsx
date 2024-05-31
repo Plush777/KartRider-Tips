@@ -7,15 +7,9 @@ export async function generateMetadata({ params }) {
     const fileName = article[article.length - 1];
     const title = useTranslateTitle(fileName);
 
-    let suffix;
-
-    if (article[0] === 'learn') {
-        suffix = '배우기';
-    }
-
-    if (article.includes('basic') || article.includes('item') || article.includes('speed') || article.includes('tuning')) {
+    if (article.includes('purpose') || article.includes('contribute')) {
         return {
-            title: `${title} - ${suffix}`
+            title: `${title}`
         }
     }
 }
@@ -31,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 export default async function page({ params }) {
-    // console.log(params.article) 
+    console.log(params.article) 
 
     return <Article slug={params.article}/>
 }
