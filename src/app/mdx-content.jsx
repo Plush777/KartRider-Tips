@@ -2,7 +2,7 @@
 
 import { MDXRemote } from "next-mdx-remote";
 import Division from "components/mdx/Division";
-import Paragraph from "components/mdx/paragraph";
+import Paragraph from "components/mdx/Paragraph";
 import Italic from "components/mdx/Italic";
 import Strong from "components/mdx/Strong";
 import MdLink from "components/mdx/Link";
