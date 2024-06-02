@@ -1,26 +1,28 @@
 "use client";
 
 import { MDXRemote } from "next-mdx-remote";
+import Division from "components/mdx/Division";
+import Paragraph from "components/mdx/paragraph";
+import Italic from "components/mdx/Italic";
+import Strong from "components/mdx/Strong";
+import MdLink from "components/mdx/Link";
 
 const MdxComponents = {
     Link: (props) => (
-        <a {...props} className="mdLink"/>
+        <MdLink {...props}/>
     ),
-    Ratio: (props) => (
-        <div {...props} className="mdRatio"/>
+    Division: (props) => (
+        <Division {...props}/>
     ),
-    Tip: (props) => (
-        <div {...props} className="mdTip"/>
-    ),
-    TipText: (props) => (
-        <p {...props} className="mdTipText"/>
+    Paragraph: (props) => (
+        <Paragraph {...props}/>
     ),
     Strong: (props) => (
-        <strong {...props} className="mdStrong"/>
+        <Strong {...props}/>
     ),
-    Ref: (props) => (
-        <i {...props} className="mdRef"/>
-    ),
+    Italic: (props) => (
+        <Italic {...props}/>
+    )
 };
 
 export function MdxContent({ source }){

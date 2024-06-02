@@ -1,10 +1,11 @@
 
 export default function useTranslateTitle(fileName) {
+    if (fileName === 'learn') return '배우기';
+
     if (fileName === 'startbooster') return '출발 부스터';
     if (fileName === 'grip') return '그립';
     if (fileName === 'drift') return '드리프트';
     if (fileName === 'combobooster') return '순간 부스터';
-
 
     if (fileName === 'dao') return '다오';
     if (fileName === 'bazzi') return '배찌';
@@ -98,6 +99,9 @@ export default function useTranslateTitle(fileName) {
 
     if (fileName === 'item') return '아이템전';
     if (fileName === 'speed') return '스피드전';
+
+    if (fileName === 'purpose') return '사이트 안내';
+    if (fileName === 'contribute') return '기여하기';
     
     return undefined;
 }

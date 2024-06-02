@@ -76,11 +76,7 @@ export default function SeasonCalculator() {
             
             <S.Result>
                 <S.ResultBox>
-                    {imageSrc ?
-                        <Image priority="high" width={50} height={50} src={`/images/tier/${imageSrc}.png`} alt=""/>
-                        :
-                        null
-                    }   
+                    <Image priority="high" width={50} height={50} src={`/images/tier/${imageSrc ? imageSrc : null}.webp`} alt=""/>
                     <S.ResultText>{findNextMp(mpData, currentMp)}</S.ResultText>
                 </S.ResultBox>
             </S.Result>

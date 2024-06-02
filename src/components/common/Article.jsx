@@ -4,7 +4,7 @@ import { MdxContent } from "app/mdx-content";
 
 /* [...article] page에서 slug를 배열로 받아옵니다.*/
 export default async function Article({ slug }) {
-    // console.log(slug);
+    // console.log(slug); 
 
     const { serialized, frontmatter } = await useGetArticle(slug);
 

@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 export default async function page({ params }) {
-    console.log(params.article) 
+    // console.log(params.article) 
 
     return <Article slug={params.article}/>
 }

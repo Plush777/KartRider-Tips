@@ -40,5 +40,11 @@ export default function Pwa () {
         }
     };
 
-    return <P.PWAButton type="button" onClick={installApp}>앱 설치하기</P.PWAButton>
+    return (
+        <>
+            {deferredPrompt && (
+                <P.PWAButton type="button" onClick={installApp}>앱 설치하기</P.PWAButton>
+            )}
+        </>
+    )
 }

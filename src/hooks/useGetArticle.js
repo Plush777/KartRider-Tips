@@ -9,8 +9,13 @@ function markdownDirCondition(slugArray) {
     if (slugArray.includes('item') ) return 'learn/item';
     if (slugArray.includes('speed')) return 'learn/speed';
     if (slugArray.includes('tuning')) return 'learn/tuning';
-    if (slugArray.includes('purpose')) return 'guide/purpose';
-    if (slugArray.includes('contribute')) return 'guide/contribute';
+    if (slugArray.includes('purpose')) return 'purpose';
+    if (slugArray.includes('contribute')) return 'contribute';
+}
+
+function categoryCondition(slugArray) {
+    if (slugArray.includes('purpose') || slugArray.includes('contribute')) return 'guide';
+    if (slugArray.includes('learn')) return 'docs';
 }
 
 export default async function useGetArticle(slugArray) {
@@ -19,15 +24,17 @@ export default async function useGetArticle(slugArray) {
     const last = slugArray[slugArray.length - 1];
     slugArray.length > 1 && slugArray.pop();
 
-    const mySlugArray = slugArray;
-    console.log(mySlugArray);
+    const mySlugArray = slugArray; 
+    // console.log(mySlugArray);
     
     const dir = markdownDirCondition(mySlugArray);
+    const category = categoryCondition(mySlugArray);
 
     // console.log(dir);
+    // console.log(category);
 
     /* getArticles 함수에 받아온 dir (경로) 와 last (파일명) 도 같이 넘겨줍니다.  */
-    const articlePath = await getArticles(dir, last);
+    const articlePath = await getArticles(category, dir, last);
     const articlePathFileSlug = articlePath;
     const file = fs.readFileSync(`${articlePathFileSlug}.mdx`, "utf8");
     
