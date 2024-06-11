@@ -54,21 +54,6 @@ export const Result = styled.div`
 export const ResultBox = styled.div`
     display: flex;
     align-items: center;
-
-    img {
-        margin-top: -2px;
-    }
-
-    ${({ theme }) => theme.mobile`
-        img {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            top: 4px;
-            left: 4px;
-            margin-top: 0;
-        }
-    `};
 `
 
 export const ResultText = styled.p`
@@ -76,4 +61,19 @@ export const ResultText = styled.p`
     word-break: keep-all;
     font-size: 1.125rem;
     color: var(--text1);
+`
+
+export const Icon = styled.div`
+    width: 50px;
+    height: 50px;
+    background-image: url('/images/tier/img-tier.png');
+    background-repeat: no-repeat;
+    background-size: 380px;
+    background-position: ${props => props.backgroundPosition};
+
+    ${({ theme }) => theme.mobile`
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    `};
 `

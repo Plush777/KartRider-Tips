@@ -6,6 +6,8 @@ import Paragraph from "components/mdx/Paragraph";
 import Italic from "components/mdx/Italic";
 import Strong from "components/mdx/Strong";
 import MdLink from "components/mdx/Link";
+import Blockquote from "components/mdx/Blockquote";
+import Img from "components/mdx/Img";
 
 const MdxComponents = {
     Link: (props) => (
@@ -22,6 +24,12 @@ const MdxComponents = {
     ),
     Italic: (props) => (
         <Italic {...props}/>
+    ),
+    Bq: (props) => (
+        <Blockquote {...props}/>
+    ),
+    Img: (props) => (
+        <Img {...props}/>
     )
 };
 

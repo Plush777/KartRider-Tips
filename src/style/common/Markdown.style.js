@@ -5,6 +5,12 @@ export const Container = styled.div`
         word-break: keep-all;
     }
 
+    img {
+        + p {
+            margin-top: 10px;
+        }
+    }
+
     p {
         line-height: 1.5;
     }
@@ -53,6 +59,10 @@ export const Container = styled.div`
 
         + p {
             margin-top: 10px;
+        }
+
+        +div {
+            margin: 10px 0 0 0;
         }
     }
 
@@ -170,13 +180,15 @@ export const Container = styled.div`
     }
 
     blockquote {
-        margin-top: 10px;
+        margin-top: 16px;
+        margin-bottom: 16px;
         padding: 16px;
         border-left: 4px solid var(--active);
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         color: var(--text1);
         font-size: .875rem;
+        background-color: var(--background2);
     }
 
     .mdRef {
@@ -184,6 +196,23 @@ export const Container = styled.div`
         margin-top: 30px;
         color: var(--text1);
         font-size: .875rem;
+    }
+
+    .mdImg {
+        /*  */
+    }
+
+    .mdFlex {
+        display: flex;
+        align-content: center;
+    }
+
+    .mdCg {
+        column-gap: 10px;
+    }
+
+    .m0 {
+        margin: 0;
     }
 
     ${({ theme }) => theme.tablet`

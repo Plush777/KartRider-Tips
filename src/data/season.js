@@ -133,120 +133,120 @@ export const findNextMp = (data, current) => {
 export const renderItemIcon = (current) => {
     switch (true) {
         case current === 0:
-            return "y5";
+            return "-332px -192px";
         case current >= y5 && current < y4:
-            return "y4";
+            return "-332px -145px";
         case current >= y4 && current < y3:
-            return "y3";
+            return "-332px -95px";
         case current >= y3 && current < y2:
-            return "y2";
+            return "-332px -48px";
         case current >= y2 && current < y1:
-            return "y1";
+            return "-332px 0";
         case current >= y1 && current < g5:
-            return "g5";
+            return "-2px -192px";
         case current >= g5 && current < g4:
-            return "g4";
+            return "-190px -143px";
         case current >= g4 && current < g3:
-            return "g3";
+            return "-190px -94px";
         case current >= g3 && current < g2:
-            return "g2";
+            return "-190px -48px";
         case current >= g2 && current < g1:
-            return "g1";
+            return "-190px -2px";
         case current >= g1 && current < b5:
-            return "b5";
+            return "-96px 0";
         case current >= b5 && current < b4:
-            return "b4";
+            return "-46px -50px";
         case current >= b4 && current < b3:
-            return "b3";
+            return "0px -50px";
         case current >= b3 && current < b2:
-            return "b2";
+            return "-46px -2px";
         case current >= b2 && current < b1:
-            return "b1";
+            return "0px -2px";
         case current >= b1 && current < r5:
-            return "r5";
+            return "-287px -144px";
         case current >= r5 && current < r4:
-            return "r4";
+            return "-287px -97px";
         case current >= r4 && current < r3:
-            return "r3";
+            return "-287px -47px";
         case current >= r3 && current < r2:
-            return "r2";
+            return "-287px -1px";
         case current >= r2 && current < r1:
-            return "r1";
+            return "-236px -239px";
         case current >= r1 && current < bl5:
-            return "bl5";
+            return "-142px -2px";
         case current >= bl5 && current < bl4:
-            return "bl4";
+            return "95px -96px";
         case current >= bl4 && current < bl3:
-            return "bl3";
+            return "-48px -96px";
         case current >= bl3 && current < bl2:
-            return "bl2";
+            return "0 -96px";
         case current >= bl2 && current < bl1:
-            return "bl1";
+            return "-95px -49px";
         case current >= bl1 && current < rb5:
-            return "rb5";
+            return "-50px -287px";
         case current >= rb5 && current < rb4:
-            return "rb4";
+            return "-94px -287px";
         case current >= rb4 && current < rb3:
-            return "rb3";
+            return "0 -287px";
         case current >= rb3 && current < rb2:
-            return "rb2";
+            return "-285px -239px";
         case current >= rb2 && current < rb1:
-            return "rb1";
+            return "-285px -193px";
         case current > rb1:
-            return "rb1";
+            return "-285px -193px";
         default:
-            return "white0";
+            return "-189px -285px";
     }
 };
 
 export const renderSpeedIcon = (current) => {
     switch (true) {
         case current === 0:
-            return "bz3";
+            return "-143px -97px";
         case current >= bz3 && current < bz2:
-            return "bz2";
+            return "-3px -144px";
         case current >= bz2 && current < bz1:
-            return "bz1";
+            return "-143px -50px";
         case current >= bz1 && current < sv3:
-            return "sv3";
+            return "-288px -286px";
         case current >= sv3 && current < sv2:
-            return "sv2";
+            return "-240px -286px";
         case current >= sv2 && current < sv1:
-            return "sv1";
+            return "-145px -286px";
         case current >= sv1 && current < gd3:
-            return "gd3";
+            return "-143px -191px";
         case current >= gd3 && current < gd2:
-            return "gd2";
+            return "-95px -191px";
         case current >= gd2 && current < gd1:
-            return "gd1";
+            return "-47px -191px";
         case current >= gd1 && current < pt3:
-            return "pt3";
+            return "-192px -239px";
         case current >= pt3 && current < pt2:
-            return "pt2";
+            return "-146px -239px";
         case current >= pt2 && current < pt1:
-            return "pt1";
+            return "-96px -239px";
         case current >= pt1 && current < dm3:
-            return "dm3";
+            return "-144px -145px";
         case current >= dm3 && current < dm2:
-            return "dm2";
+            return "-98px -145px";
         case current >= dm2 && current < dm1:
-            return "dm1";
+            return "-50px -145px";
         case current >= dm1 && current < ms3:
-            return "ms3";
+            return "-52px -239px";
         case current >= ms3 && current < ms2:
-            return "ms2";
+            return "-3px -239px";
         case current >= ms2 && current < ms1:
-            return "ms1";
+            return "-240px -145px";
         case current >= ms1 && current < gm3:
-            return "gm3";
+            return "-239px -49px";
         case current >= gm3 && current < gm2:
-            return "gm2";
+            return "-239px 0";
         case current >= gm2 && current < gm1:
-            return "gm1";
+            return "-192px -191px";
         case current > gm1:
-            return "gm-no-tier";
+            return "-239px -96px";
         default:
-            return "minus";
+            return "-235px -191px";
     }
 };
 
