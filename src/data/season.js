@@ -175,7 +175,7 @@ export const renderItemIcon = (current) => {
         case current >= r1 && current < bl5:
             return "-142px -2px";
         case current >= bl5 && current < bl4:
-            return "95px -96px";
+            return "-95px -96px";
         case current >= bl4 && current < bl3:
             return "-48px -96px";
         case current >= bl3 && current < bl2:
