@@ -10,6 +10,7 @@ import BreadCrumb from "components/sub/BreadCrumb";
 import SCclose from 'svg/ico-close.svg';
 import { learnData } from "data/sidebar/learn/data";
 import useClickOutside from "hooks/useClickOutside";
+import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 
 export default function TopNavigation() {
     const pathname = usePathname();
@@ -20,6 +21,7 @@ export default function TopNavigation() {
     const [sideToggle, setSideToggle] = useState(false);
     const [sideTransition, setSideTransition] = useState(true);
     const sidebarRef = useClickOutside(() => setSideToggle(false));
+    const { lockScroll, openScroll } = useBodyScrollLock();
 
     const handleSideOpen = (state) => {
         setSideToggle(state);
@@ -29,8 +31,12 @@ export default function TopNavigation() {
         if (sideToggle) {
             setSideTransition(false);
             setSideToggle(false);
-        }
+        } 
     }, [pathname]);
+
+    useEffect(() => {
+        sideToggle ? lockScroll() : openScroll();
+    }, [sideToggle]);
 
     /* 사이드바 메뉴를 클릭하면 트랜지션 상태와 토글 상태가 모두 false로 바뀌기 때문에
     다시 버튼을 눌렀을 때 토글 애니메이션을 위해 0.3초가 지난 후 트랜지션 상태를 다시 true로 바꿔줍니다.

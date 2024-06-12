@@ -8,6 +8,7 @@ import Strong from "components/mdx/Strong";
 import MdLink from "components/mdx/Link";
 import Blockquote from "components/mdx/Blockquote";
 import Img from "components/mdx/Img";
+import Sprite from "components/mdx/Sprite";
 
 const MdxComponents = {
     Link: (props) => (
@@ -30,7 +31,10 @@ const MdxComponents = {
     ),
     Img: (props) => (
         <Img {...props}/>
-    )
+    ),
+    Sprite: (props) => (
+        <Sprite {...props}/>
+    ),
 };
 
 export function MdxContent({ source }){

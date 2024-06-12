@@ -180,6 +180,7 @@ export const Container = styled.div`
     }
 
     blockquote {
+        position: relative;
         margin-top: 16px;
         margin-bottom: 16px;
         padding: 16px;
@@ -189,6 +190,8 @@ export const Container = styled.div`
         color: var(--text1);
         font-size: .875rem;
         background-color: var(--background2);
+        overflow: hidden;
+        z-index: 10;
     }
 
     .mdRef {
@@ -204,7 +207,7 @@ export const Container = styled.div`
 
     .mdFlex {
         display: flex;
-        align-content: center;
+        align-items: center;
     }
 
     .mdCg {
@@ -226,4 +229,37 @@ export const Container = styled.div`
             }
         }
     `};
-`
+`;
+
+export const Sprite = styled.i`
+    display: block;
+    background-size: ${props => props.backgroundSize};
+    background-position: ${props => props.backgroundPosition}; 
+    background-repeat: no-repeat;
+
+    &.item {
+        width: 57px;
+        height: 57px;
+        background-image: url('/images/items/img-items.webp');
+    }
+
+    &.character {
+        width: 220px;
+        height: 280px;
+        background-image: url('/images/characters/img-characters.webp');
+
+        &.h140{
+            height: 140px;
+        }
+
+        &.h230{
+            height: 230px;
+        }
+    }
+
+    &.skill {
+        width: 70px;
+        height: 70px;
+        background-image: url('/images/skills/img-skills.webp');
+    }
+`;

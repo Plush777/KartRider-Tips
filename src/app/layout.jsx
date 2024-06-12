@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
                 <meta name="naver-site-verification" content="3f94de41171f46560d8a1005d54f29344fc28153" />
                 <meta name="google-site-verification" content="GPYk6PpfcgAfH_xVermIhvSiltn-RMAzOC9Oap7TAWY" />
                 <meta name="theme-color" content="#f2f2f2" />
-                <link rel="preload" href="/images/tier/img-tier.png" as="image" />
+                <link rel="preload" href="/images/tier/img-tier.webp" as="image" />
             </head>
             
             <body suppressHydrationWarning className={`${NexonLv1.className}`}>

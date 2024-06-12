@@ -181,7 +181,51 @@ export const learnData = [
                     {
                         href: "/docs/learn/item/character/pinkbean",
                         title: "핑크빈"
-                    }
+                    },
+                    {
+                        href: "/docs/learn/item/character/koya",
+                        title: "KOYA"
+                    },
+                    {
+                        href: "/docs/learn/item/character/rj",
+                        title: "RJ"
+                    },
+                    {
+                        href: "/docs/learn/item/character/shooky",
+                        title: "SHOKKY"
+                    },
+                    {
+                        href: "/docs/learn/item/character/mang",
+                        title: "MANG"
+                    },
+                    {
+                        href: "/docs/learn/item/character/chimmy",
+                        title: "CHIMMY"
+                    },
+                    {
+                        href: "/docs/learn/item/character/tata",
+                        title: "TATA"
+                    },
+                    {
+                        href: "/docs/learn/item/character/cooky",
+                        title: "COOKY"
+                    },
+                    {
+                        href: "/docs/learn/item/character/jisu",
+                        title: "블랙핑크 지수"
+                    },
+                    {
+                        href: "/docs/learn/item/character/jennie",
+                        title: "블랙핑크 제니"
+                    },
+                    {
+                        href: "/docs/learn/item/character/rose",
+                        title: "블랙핑크 로제"
+                    },
+                    {
+                        href: "/docs/learn/item/character/lisa",
+                        title: "블랙핑크 리사"
+                    },
                 ]
             },
             {

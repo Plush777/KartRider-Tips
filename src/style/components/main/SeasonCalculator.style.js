@@ -66,7 +66,7 @@ export const ResultText = styled.p`
 export const Icon = styled.div`
     width: 50px;
     height: 50px;
-    background-image: url('/images/tier/img-tier.png');
+    background-image: url('/images/tier/img-tier.webp');
     background-repeat: no-repeat;
     background-size: 380px;
     background-position: ${props => props.backgroundPosition};

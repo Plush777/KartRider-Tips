@@ -78,6 +78,10 @@ export const Item = styled.li`
         }
     }
 
+    &.active {
+        color: var(--active);       
+    }
+
     ${({ theme }) => theme.mobile`
         font-size: .8125rem;
     `};
