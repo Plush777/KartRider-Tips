@@ -7,10 +7,13 @@ import { useEffect, useState } from "react";
 import SCsidebarLeft from "svg/ico-sidebar-left.svg";
 import Sidebar from "components/sub/Sidebar";
 import BreadCrumb from "components/sub/BreadCrumb";
+import GuideTooltip from "components/common/GuideTooltip";
 import SCclose from 'svg/ico-close.svg';
 import { learnData } from "data/sidebar/learn/data";
 import useClickOutside from "hooks/useClickOutside";
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { guideTooltipAtom } from "recoil/common/guideTooltipState";
 
 export default function TopNavigation() {
     const pathname = usePathname();
@@ -23,8 +26,17 @@ export default function TopNavigation() {
     const sidebarRef = useClickOutside(() => setSideToggle(false));
     const { lockScroll, openScroll } = useBodyScrollLock();
 
+    const guideTooltipState = useRecoilValue(guideTooltipAtom);
+    const setGuideTooltipState = useSetRecoilState(guideTooltipAtom);
+    const getSessionTooltip = sessionStorage.getItem('tooltip');
+
     const handleSideOpen = (state) => {
         setSideToggle(state);
+    }
+
+    const handleTooltipClose = () => {
+        setGuideTooltipState(false);
+        sessionStorage.setItem('tooltip', 'true');
     }
 
     useEffect(() => {
@@ -74,6 +86,20 @@ export default function TopNavigation() {
                     <T.SidebarOpenButton onClick={() => handleSideOpen(true)} type="button" title="목차 열기">
                         <SCsidebarLeft width="24px" height="24px"/>
                     </T.SidebarOpenButton>
+
+                    {getSessionTooltip == null && guideTooltipState &&
+                        <GuideTooltip 
+                            left="26px" 
+                            top="35px"
+                            arrowLeft="50%" 
+                            arrowTop="-5px"
+                            arrowTransform="translateX(-50%)" 
+                            transform="translateX(-50%)" 
+                            text="목차를 열어보세요!" 
+                            className="arrowUp"
+                            clickFn={handleTooltipClose}
+                        /> 
+                    }
 
                     <BreadCrumb data={myPathArray}/>
                 </T.Inner>

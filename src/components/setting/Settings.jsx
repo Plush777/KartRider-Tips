@@ -11,7 +11,6 @@ export default function Settings({
     themeMode, 
     setThemeMode, 
     setSettingToggle, 
-    isMobile, 
     rootFontSize, 
     setRootFontSize
 }) {
@@ -36,7 +35,7 @@ export default function Settings({
     }
 
     return(
-        <H.DimmedWrap className={isMobile}>
+        <H.DimmedWrap>
             <Set.SettingWrap ref={ref}>
                 <Set.SettingList>
                     <Set.SettingItem>

@@ -39,6 +39,7 @@ export const Inner = styled.div`
 `
 
 export const SidebarOpenButton = styled.button`
+    position: relative;
     display: flex;
     align-items: center;
     height: 100%;

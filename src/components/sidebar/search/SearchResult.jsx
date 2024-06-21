@@ -1,7 +1,7 @@
 import DetailsItem from "components/sidebar/details/DetailsItem";
 import * as S from "style/components/sub/Sidebar.style";
 
-export default function SearchResult({ loopData }) {
+export default function SearchResult({ loopData, value }) {
     return (
         <>
             {loopData?.map((data, dataIndex) => {
@@ -16,6 +16,7 @@ export default function SearchResult({ loopData }) {
                                         type={depth1.depth2 ? 'hasDepth' : 'noDepth'}
                                         depth1={depth1}
                                         depth1Key={depth1Index}
+                                        value={value}
                                     />
                                 )
                             })}

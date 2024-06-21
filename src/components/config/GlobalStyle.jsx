@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
 body,html{margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-text-size-adjust: 100%;
--moz-text-size-adjust : none; -o-text-size-adjust : none; -webkit-touch-callout:none;}
+-moz-text-size-adjust : none; -o-text-size-adjust : none; -webkit-touch-callout:none; user-select: none;}
 :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary){
   margin:0;padding:0;border:0;
 }  
@@ -17,6 +17,7 @@ button{display: inline-block;border: none;background-color: transparent; cursor:
 pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
 img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block; -webkit-touch-callout:none; pointer-events: none;}
+::selection{background-color: transparent;}
 
 input{
     height: 100%;
@@ -33,9 +34,9 @@ input{
         display:none;
     }
 
-    &[type='number']{
+    /* &[type='number']{
         -moz-appearance: textfield;
-    }
+    } */
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -70,43 +71,55 @@ body{
 
     &[data-theme="light"]{
         --main-background: #f2f2f2;
-        --sub-background: #f2f2f2;
         --background1: #fff;
         --background2: #fff;
         --background3: #000;
         --background4: #ececec;
         --background5: #f9f9f9;
-        --scrollbar-background: #A6A6A6;
-        --active-background: #000;
+        --sidebar-background: #f2f2f2;
+        --scrollbar-track-background: #f2f2f2;
+        --scrollbar-thumb-background: #A6A6A6;
         --stroke1: #ddd;
-        --stroke2: #c1c1c1;
+        --stroke2: #e5e8eb;
+        --stroke3: #dedede;
         --description: #626262;
-        --active: #309ED5;
+        --active: #3a67ea;
+        --active-background: #000;
         --skeleton: #f5f5f5;
         --disabled: rgba(0, 0, 0, 0.6);
         --title: #000;
         --text1: #333;
         --text2: #333;
         --text3: #fff;
-        --red: #ff0000;
+        --red: #d1180b;
+        --red-background: #d1180b;
+        --purple: #ba00ff;
+        --gray: #6c7274;
+        --green: #008000;
+        --blue-background: #3a67ea;
+        --green-text: #006600;
+        --orange-text: #B9582C;
+        --highlight-background: #dce2f2;
         --open-in-new: url('/images/common/ico-open-in-new.svg');
         --angle-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill='%23333' d='M15.5 14.5C15.4015 14.5005 15.3038 14.4813 15.2128 14.4435C15.1218 14.4057 15.0392 14.3501 14.97 14.28L11.97 11.28L8.96999 14.28C8.82472 14.3502 8.6607 14.3716 8.50227 14.3411C8.34385 14.3107 8.19947 14.23 8.09056 14.111C7.98165 13.9919 7.91402 13.841 7.89771 13.6805C7.88139 13.52 7.91726 13.3585 7.99999 13.22L11.5 9.72001C11.6406 9.57956 11.8312 9.50067 12.03 9.50067C12.2287 9.50067 12.4194 9.57956 12.56 9.72001L16.06 13.22C16.2004 13.3606 16.2793 13.5513 16.2793 13.75C16.2793 13.9488 16.2004 14.1394 16.06 14.28C15.9873 14.3539 15.8998 14.4116 15.8034 14.4495C15.7069 14.4874 15.6035 14.5046 15.5 14.5Z'/%3E%3C/svg%3E");
     }
 
     &[data-theme="dark"]{
         --main-background: #121212;
-        --sub-background: #121212;
         --background1: #292A2D;
         --background2: #1e1e1e;
         --background3: #fff;
         --background4: #1e1e1e;
         --background5: #1e1e1e;
-        --scrollbar-background: #aaa;
-        --active-background: #fff;
+        --sidebar-background: #1e1e1e;
+        --scrollbar-track-background: #121212;
+        --scrollbar-thumb-background: #A6A6A6;
         --stroke1: #2A2A2A;
         --stroke2: rgba(255,255,255,.2);
+        --stroke3: rgba(255,255,255,.2);
         --description: #BBBBBF;
-        --active: #0094ff;
+        --active: #00A2FF;
+        --active-background: #fff;
         --skeleton: #1e1e1e;
         --disabled: rgba(255,255,255,.55);
         --title: #F8F8FA;
@@ -114,6 +127,14 @@ body{
         --text2: #fff;
         --text3: #000;
         --red: #ff4353;
+        --red-background: #d1180b;
+        --purple: #800080;
+        --gray: #6c7274;
+        --green: #008000;
+        --blue-background: #2468a2;
+        --green-text: #00ffa3;
+        --orange-text: #724820; 
+        --highlight-background: #004d92;
         --open-in-new: url('/images/common/ico-open-in-new-w.svg');
         --angle-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath fill='%23ececec' d='M15.5 14.5C15.4015 14.5005 15.3038 14.4813 15.2128 14.4435C15.1218 14.4057 15.0392 14.3501 14.97 14.28L11.97 11.28L8.96999 14.28C8.82472 14.3502 8.6607 14.3716 8.50227 14.3411C8.34385 14.3107 8.19947 14.23 8.09056 14.111C7.98165 13.9919 7.91402 13.841 7.89771 13.6805C7.88139 13.52 7.91726 13.3585 7.99999 13.22L11.5 9.72001C11.6406 9.57956 11.8312 9.50067 12.03 9.50067C12.2287 9.50067 12.4194 9.57956 12.56 9.72001L16.06 13.22C16.2004 13.3606 16.2793 13.5513 16.2793 13.75C16.2793 13.9488 16.2004 14.1394 16.06 14.28C15.9873 14.3539 15.8998 14.4116 15.8034 14.4495C15.7069 14.4874 15.6035 14.5046 15.5 14.5Z'/%3E%3C/svg%3E");
     }
@@ -127,9 +148,9 @@ body{
 
 ::-webkit-scrollbar{width: 14px;}
 ::-webkit-scrollbar-button{display: none;}
-::-webkit-scrollbar-track{background-color: transparent;}
+::-webkit-scrollbar-track{background-color: var(--scrollbar-track-background);}
 ::-webkit-scrollbar-thumb {border: solid transparent; background-clip: padding-box; 
-border-radius: 8px; background-color: var(--scrollbar-background);}
+border-radius: 8px; background-color: var(--scrollbar-thumb-background);}
 
 .hidden{display: block; width: 0;height: 0; margin: 0; padding: 0; line-height: 0; font-size: 0;overflow: hidden;}
 
@@ -141,7 +162,7 @@ border-radius: 8px; background-color: var(--scrollbar-background);}
 
 .scY{overflow-y: auto;
     &::-webkit-scrollbar {width: 5px;}
-    &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar-background);}
+    &::-webkit-scrollbar-thumb {border: 0; border-radius: 10px; background-color: var(--scrollbar-thumb-background);}
 }
 
 .openInNew{display: inline-flex; align-items: center;
@@ -160,25 +181,7 @@ ${({ theme }) => theme.laptopL`
     }
 `};
 
-${({ theme }) => theme.laptop`
-   .mini{
-        &::-webkit-scrollbar-thumb {border-radius: 0; background-color: var(--scrollbar-background);}
-        
-        &X{overflow-y: hidden;
-            &::-webkit-scrollbar {height: 10px;}
-        }
-
-        &Y{overflow-x: hidden;
-            &::-webkit-scrollbar {width: 5px;}
-        }
-    }
-`};
-
 ${({ theme }) => theme.tablet`
-    body,html{
-        user-select: none;
-    }
-
     body {
         --mainHeightDefault: 200px;
         --section-gap: 100px;

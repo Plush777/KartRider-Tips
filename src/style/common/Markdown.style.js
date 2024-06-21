@@ -13,6 +13,10 @@ export const Container = styled.div`
 
     p {
         line-height: 1.5;
+
+        + .mdLink {
+            margin-top: 20px;
+        }
     }
 
     h2 , h3 , h4, h5 {
@@ -41,8 +45,12 @@ export const Container = styled.div`
     h3 {
         font-size: 2rem;
 
-        + h4 {
-            margin-top: 40px;
+        + div, + p {
+            margin-top: 20px;
+        }
+
+        + .sprite, + h4 {
+            margin-top: 30px;
         }
     }
 
@@ -62,7 +70,7 @@ export const Container = styled.div`
         }
 
         +div {
-            margin: 10px 0 0 0;
+            margin: 20px 0 0 0;
         }
     }
 
@@ -116,8 +124,15 @@ export const Container = styled.div`
     }
 
     .mdLink {
+        display: block;
         text-decoration: underline;
         text-underline-offset: 2px;
+
+        &.blank::after {
+            content: '>';
+            margin-left: 3px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
     }
 
     .articleDate {
@@ -192,6 +207,14 @@ export const Container = styled.div`
         background-color: var(--background2);
         overflow: hidden;
         z-index: 10;
+
+        .mdLink {
+            display: inline;
+        }
+
+        + .tagListWrap {
+            margin-top: 36px;
+        }
     }
 
     .mdRef {
@@ -216,6 +239,124 @@ export const Container = styled.div`
 
     .m0 {
         margin: 0;
+    }
+
+    .info {
+        &Row {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &TitleBox {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            color: var(--title);
+            margin-bottom: 0;
+        }
+
+        &Diff {
+            display: flex;
+            align-items: center;
+
+            &.green {
+                color: var(--green-text);
+            }
+
+            &.orange {
+                color: orange;
+            }
+
+            &.purple {
+                color: purple;
+            }
+
+            &::after{
+                content: '|';
+                position: relative;
+                top: 1px;
+                color: var(--title);
+                margin: 0 8px;
+            }
+        }
+    }
+
+    .tag {
+        display: flex;
+        align-items: center;
+        height: 18px;
+        border-radius: 4px;
+        font-size: .6875rem;
+        padding: 0 5px;
+        color: #fff;
+
+        &.blue {
+            background-color: var(--blue-background);
+        }
+
+        &.red {
+            background-color: var(--red-background);
+        }
+
+        &ListTitle {
+            margin-bottom: 0;
+            font-size: 1.25rem;
+            color: var(--title);
+        }
+
+        &List {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        &ListWrap {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        &Item {
+            display: flex;
+            align-items: center;
+
+            &[data-name="일반"] .tag {
+                background-color: var(--gray);
+            }
+
+            &[data-name="고급"] .tag {
+                background-color: var(--green);
+            }
+
+            &[data-name="희귀"] .tag {
+                background-color: var(--blue-background);
+            }
+
+            &[data-name="영웅"] .tag {
+                background-color: var(--purple);
+            }
+
+            &[data-name="전설"] .tag {
+                background-color: var(--orange-text);
+            }
+
+            &.radius {
+                border-radius: 20px;
+            }
+        }
+
+        &ItemTextBox {
+            display: flex;
+            align-items: center;
+            column-gap: 3px;
+            margin-left: 5px;
+        }
+
+        &ItemText {
+            color: var(--title);
+            font-size: .875rem;
+        }
     }
 
     ${({ theme }) => theme.tablet`
@@ -260,6 +401,12 @@ export const Sprite = styled.i`
     &.skill {
         width: 70px;
         height: 70px;
+        border-radius: 50%;
         background-image: url('/images/skills/img-skills.webp');
+        background-color: #121212;
+    }
+
+    + .infoWrap {
+        margin-top: 20px;
     }
 `;

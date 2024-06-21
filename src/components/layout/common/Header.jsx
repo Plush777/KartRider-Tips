@@ -24,7 +24,6 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
     const { lockScroll } = useBodyScrollLock();
     const { visible, menuToggle, setMenuToggle } = useStickyHeader(ref);
     const [settingToggle, setSettingToggle] = useState(false);
-    const [isMobile, setIsMobile] = useState(undefined);
     const [windowMobileWidth, setWindowMobileWidth] = useState(window.innerWidth <= 768);
 
     const handleHeaderMenu = () => {
@@ -40,19 +39,6 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
         1: <SCopen width="26px" height="26px"/>,
         2: <SCsetting onClick={handleSettingButton} width="26px" height="26px"/>
     }
-
-    const handleIsMobile = () => {
-        setWindowMobileWidth(window.innerWidth <= 768);
-        setIsMobile('mobile');
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', handleIsMobile);
-
-        return () => {
-            window.removeEventListener('resize', handleIsMobile);
-        }
-    }, [isMobile]);
 
     useEffect(() => {
         if (windowMobileWidth) {
@@ -163,7 +149,6 @@ export default function Header ({ themeMode , setThemeMode, rootFontSize, setRoo
                                     themeMode={themeMode} 
                                     setThemeMode={setThemeMode} 
                                     setSettingToggle={setSettingToggle}
-                                    isMobile={isMobile}
                                     rootFontSize={rootFontSize}
                                     setRootFontSize={setRootFontSize}
                                 />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrap = styled.div`
     width: 100%;
     min-height: calc(100vh - 206px);
-    background-color: var(--sub-background);
+    background-color: var(--main-background);
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`

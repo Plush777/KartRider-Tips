@@ -12,7 +12,7 @@ export const ArticleLink = styled.a`
     display: flex;
     align-items: center;
     padding: 67.2px 32px;
-    border-bottom: 1px solid var(--stroke2);
+    border-bottom: 1px solid var(--stroke3);
     background-color: transparent;
 
     ${({ theme }) => theme.tablet`

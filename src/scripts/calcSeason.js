@@ -4,7 +4,7 @@ export default function calcSeason () {
     const [currentSeasonStart] = useState(new Date(Date.UTC(2024, 4, 16))); // 초기 시즌 시작일
     const [currentSeasonNumber, setCurrentSeasonNumber] = useState(2);
     const [endDate, setEndDate] = useState('');
-    const [daysCount, setDaysCount] = useState(0);
+    const [daysCount, setDaysCount] = useState(null);
     const [next, setNext] = useState(false);
     const [proceed, setProceed] = useState(false);
     const [error, setError] = useState(false);

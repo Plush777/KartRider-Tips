@@ -9,6 +9,9 @@ import MdLink from "components/mdx/Link";
 import Blockquote from "components/mdx/Blockquote";
 import Img from "components/mdx/Img";
 import Sprite from "components/mdx/Sprite";
+import Info from "components/mdx/Info";
+import Tag from "components/mdx/Tag";
+import TagList from "components/mdx/TagList";
 
 const MdxComponents = {
     Link: (props) => (
@@ -35,6 +38,15 @@ const MdxComponents = {
     Sprite: (props) => (
         <Sprite {...props}/>
     ),
+    Info: (props) => (
+        <Info {...props}/>
+    ),
+    Tag: (props) => (
+        <Tag {...props}/>
+    ),
+    TagList: (props) => (
+        <TagList {...props}/>
+    )
 };
 
 export function MdxContent({ source }){

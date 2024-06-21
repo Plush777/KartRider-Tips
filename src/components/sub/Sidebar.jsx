@@ -38,11 +38,11 @@ export default function Sidebar({
         }
 
         if (value.length > 0) {
-            return <SearchResult loopData={results} />
+            return <SearchResult value={value} loopData={results} />
         } 
 
         if (value.length === 0) {
-            return <SearchResult loopData={data} />
+            return <SearchResult value={value} loopData={data} />
         }
     }
 

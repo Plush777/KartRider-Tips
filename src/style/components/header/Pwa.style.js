@@ -5,17 +5,25 @@ export const PWAButton = styled.button`
     align-items: center;
     justify-content: center;
     padding: 0 10px;
-    max-width: 95px;
+    /* max-width: 95px; */
     height: 34px;
     border-radius: 6px;
     font-size: .875rem;
     font-weight: 600;
     color: #fff;
-    background-color: var(--active);
+    border: 1px solid var(--stroke3);
+    background-color: var(--blue-background);
+    transition: .3s ease-in-out;
+    transition-property: background-color;
+
+    &[disabled] {
+        cursor: not-allowed;
+        background-color: var(--disabled);
+    }
 
     ${({ theme }) => theme.tablet`
         max-width: none;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 10px);
     `};
 `

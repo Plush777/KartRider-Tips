@@ -17,6 +17,7 @@ export const TooltipItem = styled.span`
     white-space: nowrap;
     height: 32px;
     padding: 0 10px;
+    border: 1px solid var(--stroke3);
     border-radius: 16px;
     color: var(--text1);
     background-color: var(--background1);

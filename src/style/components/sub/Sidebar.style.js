@@ -8,7 +8,6 @@ export const Wrap = styled.aside`
     width: 600px;
     height: 100%;
     border-right: 1px solid var(--stroke2);
-    background-color: var(--background2);
     z-index: 1020;
 
     &.transition {
@@ -37,9 +36,11 @@ export const Wrap = styled.aside`
 
 export const Inner = styled.div`
     position: relative;
-    padding: var(--sidebar-padding);
+    padding: var(--sidebar-padding) 0;
     overflow-y: auto;
+    padding: var(--sidebar-padding);
     height: calc(100% - 58px);
+    background-color: var(--sidebar-background);
 
     ${({ theme }) => theme.tablet`
         &::-webkit-scrollbar{
@@ -72,14 +73,22 @@ export const Item = styled.li`
     font-size: .875rem;
 
     @media (hover: hover) {
-        a:hover {
+        &:not(.active) a:hover {
             text-decoration: underline;
             text-underline-offset: var(--sidebar-item-text-underline-offset);
         }
     }
 
     &.active {
-        color: var(--active);       
+        color: var(--active);     
+        font-weight: 600;
+    }
+
+    &.highlight {
+        a {
+            color: var(--text1);
+            background-color: var(--highlight-background);
+        }
     }
 
     ${({ theme }) => theme.mobile`
@@ -144,14 +153,25 @@ export const DetailsOuterItem = styled.li`
     .detailsLink {
         display: flex;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        
+    }
 
-        @media (hover: hover) {
-            &:hover {
-                text-decoration: underline;
-                text-underline-offset: var(--sidebar-item-text-underline-offset);
-            }
+    @media (hover: hover) {
+        &:not(.active) a:hover {
+            text-decoration: underline;
+            text-underline-offset: var(--sidebar-item-text-underline-offset);
+        }
+    }
+
+    &.active {
+        color: var(--active);     
+        font-weight: 600;
+    }
+
+    &.highlight {
+        .detailsLink {
+            color: var(--text1);
+            background-color: var(--highlight-background);
         }
     }
 
@@ -170,6 +190,7 @@ export const DetailsOuterItem = styled.li`
 
 export const Details = styled.details`
     position: relative;
+    z-index: 10;
     width: 100%;
     height: var(--sidebar-details-height);
 
