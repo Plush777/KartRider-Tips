@@ -21,7 +21,7 @@ export default function useTranslateTitle(fileName) {
     if (fileName === 'ethen') return '에띠';
     if (fileName === 'rex') return '렉스';
     if (fileName === 'keffy') return '케피';
-    if (fileName === 'brain') return '브라이언';
+    if (fileName === 'brian') return '브라이언';
     if (fileName === 'rave') return '레이브';
     if (fileName === 'vivi') return '비비';
     if (fileName === 'pim') return '휘';
@@ -46,6 +46,17 @@ export default function useTranslateTitle(fileName) {
     if (fileName === 'rivaski') return '리바스키';
     if (fileName === 'lucid') return '루시드';
     if (fileName === 'pinkbean') return '핑크빈';
+    if (fileName === 'koya') return 'koya';
+    if (fileName === 'rj') return 'rj';
+    if (fileName === 'shooky') return 'shooky';
+    if (fileName === 'mang') return 'mang';
+    if (fileName === 'chimmy') return 'chimmy';
+    if (fileName === 'tata') return 'tata';
+    if (fileName === 'cooky') return 'cooky';
+    if (fileName === 'jisu') return '블랙핑크 지수';
+    if (fileName === 'jennie') return '블랙핑크 제니';
+    if (fileName === 'rose') return '블랙핑크 로제';
+    if (fileName === 'lisa') return '블랙핑크 리사';
 
     if (fileName === 'balloon') return '풍선';
 

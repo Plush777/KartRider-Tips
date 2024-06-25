@@ -4,9 +4,11 @@ import * as G from "style/components/header/Gnb.style";
 import { menus } from "data/gnb";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import useClickAlert from "hooks/useClickAlert";
 
 export default function Gnb() {
     const pathname = usePathname();
+    const clickAlert = useClickAlert('준비중입니다.');
 
     /* 
         1. 현재 경로들을 배열로 만듭니다
@@ -24,10 +26,7 @@ export default function Gnb() {
                 {menus.map((menu) => {
                     return(
                         <G.GnbItem className={`disabled ${myPath === menu.path && 'active'}`} key={menu.id}>
-                            <Link onClick={(e) => {
-                                alert('준비중입니다.');
-                                e.preventDefault();
-                            }} href={`${menu.path}`}>{menu.name}</Link>
+                            <Link onClick={clickAlert} href={`${menu.path}`}>{menu.name}</Link>
                         </G.GnbItem>
                     )
                 })}

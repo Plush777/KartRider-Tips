@@ -42,6 +42,10 @@ export const Inner = styled.div`
     height: calc(100% - 58px);
     background-color: var(--sidebar-background);
 
+    &::-webkit-scrollbar-track {
+        background-color: var(--sidebar-background);
+    }
+
     ${({ theme }) => theme.tablet`
         &::-webkit-scrollbar{
             display: none;
@@ -73,9 +77,12 @@ export const Item = styled.li`
     font-size: .875rem;
 
     @media (hover: hover) {
-        &:not(.active) a:hover {
-            text-decoration: underline;
-            text-underline-offset: var(--sidebar-item-text-underline-offset);
+        &.active a:hover, &.disabled a:hover {
+            text-decoration: none;
+        }
+
+        &.disabled a:hover {
+            cursor: not-allowed;
         }
     }
 
@@ -89,6 +96,10 @@ export const Item = styled.li`
             color: var(--text1);
             background-color: var(--highlight-background);
         }
+    }
+
+    &.disabled {
+        color: var(--disabled);
     }
 
     ${({ theme }) => theme.mobile`
@@ -157,9 +168,17 @@ export const DetailsOuterItem = styled.li`
     }
 
     @media (hover: hover) {
-        &:not(.active) a:hover {
+        a:hover {
             text-decoration: underline;
             text-underline-offset: var(--sidebar-item-text-underline-offset);
+        }
+
+        &.active a:hover, &.disabled a:hover {
+            text-decoration: none;
+        }
+
+        &.disabled a:hover {
+            cursor: not-allowed;
         }
     }
 

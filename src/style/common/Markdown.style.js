@@ -13,10 +13,28 @@ export const Container = styled.div`
 
     p {
         line-height: 1.5;
+        font-size: 1rem;
+        color: var(--text1);
 
-        + .mdLink {
+        .mdLink {
+            display: inline;
+        }
+
+        + .mdLink, + .mdRatio, + ul {
             margin-top: 20px;
         }
+
+        + .mdTip {
+            margin-top: 30px;
+        }
+
+        + h3, + h4 {
+            margin-top: 70px;
+        }
+        
+        ${({ theme }) => theme.tablet`
+            font-size: 0.875rem;
+        `};
     }
 
     h2 , h3 , h4, h5 {
@@ -45,7 +63,7 @@ export const Container = styled.div`
     h3 {
         font-size: 2rem;
 
-        + div, + p {
+        + div, + p, + ul, + ol {
             margin-top: 20px;
         }
 
@@ -79,20 +97,23 @@ export const Container = styled.div`
         margin-bottom: 2px;
     }
 
-    p {
-        font-size: 1rem;
-        color: var(--text1);
-        
-        ${({ theme }) => theme.tablet`
-            font-size: 0.875rem;
-        `};
-    }
-
     li {
         color: var(--text1);
+        line-height: 1.5;
+        
+        a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
 
         +li {
-            margin-top: 10px;
+            margin-top: 5px;
+        }
+    }
+
+    ul {
+        +.figureWrap {
+            margin-top: 20px;
         }
     }
 
@@ -113,6 +134,12 @@ export const Container = styled.div`
                 content: counter(list-item) ". ";
                 color: var(--text1);
             }
+        }
+    }
+
+    ul, ol {
+        + h3, h4 {
+            margin-top: 70px;
         }
     }
 
@@ -159,12 +186,19 @@ export const Container = styled.div`
     .mdRatio {
         position: relative;
         width: 100%;
-        margin-bottom: 40px;
 
         video, img, iframe {
             width: 100%;
             display: block;
             object-fit: cover;
+        }
+
+        + h3, + h4 {
+            margin-top: 70px;
+        }
+
+        + .sprite {
+            margin-top: 60px;
         }
     }
 
@@ -185,6 +219,10 @@ export const Container = styled.div`
             font-weight: 600;
             color: var(--text1);
             text-transform: uppercase;
+        }
+
+        + h3, + h4 {
+            margin-top: 70px;
         }
     }
 
@@ -215,6 +253,10 @@ export const Container = styled.div`
         + .tagListWrap {
             margin-top: 36px;
         }
+
+        + h3 {
+            margin-top: 50px;
+        }
     }
 
     .mdRef {
@@ -222,6 +264,10 @@ export const Container = styled.div`
         margin-top: 30px;
         color: var(--text1);
         font-size: .875rem;
+
+        .mdLink {
+            display: inline;
+        }
     }
 
     .mdImg {
@@ -231,14 +277,14 @@ export const Container = styled.div`
     .mdFlex {
         display: flex;
         align-items: center;
+
+        + h3, + h4 {
+            margin-top: 70px;
+        }
     }
 
     .mdCg {
         column-gap: 10px;
-    }
-
-    .m0 {
-        margin: 0;
     }
 
     .info {
@@ -259,17 +305,18 @@ export const Container = styled.div`
         &Diff {
             display: flex;
             align-items: center;
+            font-weight: 600;
 
             &.green {
                 color: var(--green-text);
             }
 
             &.orange {
-                color: orange;
+                color: var(--yellow-text);
             }
 
             &.purple {
-                color: purple;
+                color: var(--purple-text);
             }
 
             &::after{
@@ -315,6 +362,10 @@ export const Container = styled.div`
             display: flex;
             flex-direction: column;
             row-gap: 10px;
+
+            + h3 {
+                margin-top: 70px;
+            }
         }
 
         &Item {
@@ -322,11 +373,11 @@ export const Container = styled.div`
             align-items: center;
 
             &[data-name="일반"] .tag {
-                background-color: var(--gray);
+                background-color: var(--gray-background);
             }
 
             &[data-name="고급"] .tag {
-                background-color: var(--green);
+                background-color: var(--green-background);
             }
 
             &[data-name="희귀"] .tag {
@@ -334,15 +385,23 @@ export const Container = styled.div`
             }
 
             &[data-name="영웅"] .tag {
-                background-color: var(--purple);
+                background-color: var(--purple-background);
             }
 
             &[data-name="전설"] .tag {
-                background-color: var(--orange-text);
+                background-color: var(--orange-background);
             }
 
             &.radius {
-                border-radius: 20px;
+                .tag {
+                    border-radius: 20px;
+                    height: 30px;
+                    padding: 0 10px;
+                    font-size: .75rem;
+                    color: var(--title);
+                    border: 1px solid var(--stroke2);
+                    background-color: var(--background2);
+                }
             }
         }
 
@@ -358,6 +417,45 @@ export const Container = styled.div`
             font-size: .875rem;
         }
     }
+
+    .figureWrap {
+        + h3, + h4 {
+            margin-top: 50px;
+        }
+    }
+
+    .figureWrap figure {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0;
+            background-color: var(--title);
+        }
+    }
+
+    .figureWrap figcaption {
+        text-align: center;
+        margin-top: 12px;
+        font-size: .875rem;
+        color: var(--disabled);
+    }
+
+    iframe {
+        border: 0;
+        border-radius: 8px;
+    }
+    
 
     ${({ theme }) => theme.tablet`
         li, p, span {

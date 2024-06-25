@@ -12,6 +12,7 @@ import Sprite from "components/mdx/Sprite";
 import Info from "components/mdx/Info";
 import Tag from "components/mdx/Tag";
 import TagList from "components/mdx/TagList";
+import Figure from "components/mdx/Figure";
 
 const MdxComponents = {
     Link: (props) => (
@@ -46,7 +47,10 @@ const MdxComponents = {
     ),
     TagList: (props) => (
         <TagList {...props}/>
-    )
+    ),
+    Figure: (props) => (
+        <Figure {...props}/>
+    ),
 };
 
 export function MdxContent({ source }){

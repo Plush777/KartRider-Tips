@@ -184,31 +184,38 @@ export const learnData = [
                     },
                     {
                         href: "/docs/learn/item/character/koya",
-                        title: "KOYA"
+                        title: "KOYA",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/rj",
-                        title: "RJ"
+                        title: "RJ",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/shooky",
-                        title: "SHOKKY"
+                        title: "SHOKKY",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/mang",
-                        title: "MANG"
+                        title: "MANG",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/chimmy",
-                        title: "CHIMMY"
+                        title: "CHIMMY",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/tata",
-                        title: "TATA"
+                        title: "TATA",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/cooky",
-                        title: "COOKY"
+                        title: "COOKY",
+                        disabled: true
                     },
                     {
                         href: "/docs/learn/item/character/jisu",

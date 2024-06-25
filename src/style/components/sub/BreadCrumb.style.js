@@ -18,7 +18,7 @@ export const Item = styled.li`
     align-items: center;
     font-size: .875rem;
     color: var(--disabled);
-    
+    text-transform: uppercase;
     
     &:not(:last-of-type)::after {
         content: ">";

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import useClickAlert from "hooks/useClickAlert";
 
 export default function DetailsItem ({ type, depth1, depth1Key, value }) {
     const pathname = usePathname();
@@ -22,6 +23,10 @@ export default function DetailsItem ({ type, depth1, depth1Key, value }) {
             setDetailOpen(false);
         }
     }, [isActive, value]);
+
+    const clickAlert = (message) => {
+        return useClickAlert(message);
+    }
 
     const renderItem = (type, depth1, depth1Key) => {
         if (type === 'noDepth') {
@@ -47,10 +52,10 @@ export default function DetailsItem ({ type, depth1, depth1Key, value }) {
 
                                 return (
                                     <S.Item 
-                                        className={`${hrefActive} ${isHighlighted ? 'highlight' : ''}`} 
+                                        className={`${hrefActive} ${isHighlighted ? 'highlight' : ''} ${depth2.disabled ? 'disabled' : ''}`} 
                                         key={depth2Index}
                                     >
-                                        <Link href={depth2.href}>{depth2.title}</Link>
+                                        <Link onClick={depth2.disabled && clickAlert('아직 스킬이 없는 캐릭터예요.')} href={depth2.href}>{depth2.title}</Link>
                                     </S.Item>
                                 )
                             })}

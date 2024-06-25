@@ -1,4 +1,6 @@
 export const changeLinkName = (item) => {
+    // console.log(item);
+
     /* 1차 카테고리 */
     if (item === 'learn') return '배우기';
 
@@ -55,6 +57,17 @@ export const changeLinkName = (item) => {
     if (item === 'rivaski') return '리바스키';
     if (item === 'lucid') return '루시드';
     if (item === 'pinkbean') return '핑크빈';
+    if (item === 'koya') return 'koya';
+    if (item === 'rj') return 'rj';
+    if (item === 'shooky') return 'shooky';
+    if (item === 'mang') return 'mang';
+    if (item === 'chimmy') return 'chimmy';
+    if (item === 'tata') return 'tata';
+    if (item === 'cooky') return 'cooky';
+    if (item === 'jisu') return '블랙핑크 지수';
+    if (item === 'jennie') return '블랙핑크 제니';
+    if (item === 'rose') return '블랙핑크 로제';
+    if (item === 'lisa') return '블랙핑크 리사';
 
     /* 착용 아이템 */
     if (item === 'wear') return '착용 아이템';
@@ -75,7 +88,8 @@ export const changeLinkName = (item) => {
     if (item === 'landmine') return '지뢰';
 
     /* 방어 아이템 */
-    if (item === 'defence') return '방어 아이템';
+    if (item === 'struggle' && item === 'defence') return '디펜스';
+    if (item === 'item' && item === 'defence') return '방어 아이템';
     if (item === 'electromagnetic') return '전자파';
     if (item === 'shield') return '실드';
     if (item === 'angel') return '천사';

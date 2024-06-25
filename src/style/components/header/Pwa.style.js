@@ -18,7 +18,7 @@ export const PWAButton = styled.button`
 
     &[disabled] {
         cursor: not-allowed;
-        background-color: var(--disabled);
+        background-color: var(--disabled-background);
     }
 
     ${({ theme }) => theme.tablet`
