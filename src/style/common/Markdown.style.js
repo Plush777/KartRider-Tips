@@ -31,6 +31,10 @@ export const Container = styled.div`
         + h3, + h4 {
             margin-top: 70px;
         }
+
+        + h5 {
+            margin-top: 30px;
+        }
         
         ${({ theme }) => theme.tablet`
             font-size: 0.875rem;
@@ -94,7 +98,10 @@ export const Container = styled.div`
 
     h5 {
         font-size: 1.25rem;
-        margin-bottom: 2px;
+
+        + p {
+            margin-top: 5px;
+        }
     }
 
     li {
@@ -186,9 +193,17 @@ export const Container = styled.div`
     .mdRatio {
         position: relative;
         width: 100%;
-
+        padding-top: 56.25%;
+        border-radius: 8px;
+        background-color: var(--background2);
+       
         video, img, iframe {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100%;
+            height: 100%;
             display: block;
             object-fit: cover;
         }

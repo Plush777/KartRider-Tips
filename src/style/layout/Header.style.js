@@ -90,7 +90,7 @@ export const mobileHeaderMenuWrap = styled.nav`
     overflow: hidden;
 
     &.active{
-        max-height: 248px;
+        max-height: ${props => props.activeHeight};
     }
 `
 
@@ -105,6 +105,7 @@ export const mobileHeaderMenuItem = styled.li`
     align-items: center;
     width: 100%;
     height: 55px;
+    text-transform: uppercase;
 `
 
 export const mobileHeaderMenuLink = styled.a`

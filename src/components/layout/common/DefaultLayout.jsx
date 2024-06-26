@@ -8,10 +8,26 @@ import useTheme from 'hooks/useTheme';
 import useFontSize from 'hooks/useFontSize';
 import TopNavigation from 'components/sub/TopNavigation';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { useRecoilValue } from "recoil";
+import { settingToggleAtom } from "recoil/common/settingToggleState";
 
 export default function DefaultLayout ({ children, type }) {
-    const { themeMode, setThemeMode } = useTheme();
-    const { rootFontSize,  setRootFontSize } = useFontSize();
+    const [windowMobileWidth] = useState(window.innerWidth <= 768);
+    const settingToggleState = useRecoilValue(settingToggleAtom);
+
+    useTheme();
+    useFontSize();
+
+    useEffect(() => {
+        if (windowMobileWidth) {
+            if (settingToggleState) {
+                document.getElementById('modalRoot').style.pointerEvents = 'all';
+            } else if (!settingToggleState) {
+                document.getElementById('modalRoot').style.pointerEvents = 'none';
+            }
+        }
+    }, [settingToggleState]);
 
     const pathname = usePathname();
 
@@ -30,7 +46,7 @@ export default function DefaultLayout ({ children, type }) {
             return (
                 <>
                     {pathname.startsWith('/docs') && <TopNavigation />} 
-                    <ArticleContents type={pathname.startsWith('/docs') && 'hasNavigation'} themeMode={themeMode}>
+                    <ArticleContents type={pathname.startsWith('/docs') && 'hasNavigation'}>
                         {children}
                     </ArticleContents>
                 </>
@@ -42,15 +58,9 @@ export default function DefaultLayout ({ children, type }) {
 
     return(
         <>
-            <Header 
-                themeMode={themeMode} 
-                setThemeMode={setThemeMode}
-                rootFontSize={rootFontSize}
-                setRootFontSize={setRootFontSize}
-            />
-          
+            <Header />
             <DLay.Main>{typeCondition(type)}</DLay.Main>
-            <Footer themeMode={themeMode}/>
+            <Footer/>
         </>
     )
 }

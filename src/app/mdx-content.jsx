@@ -5,7 +5,7 @@ import Division from "components/mdx/Division";
 import Paragraph from "components/mdx/Paragraph";
 import Italic from "components/mdx/Italic";
 import Strong from "components/mdx/Strong";
-import MdLink from "components/mdx/Link";
+import MdxLink from "components/mdx/MdxLink";
 import Blockquote from "components/mdx/Blockquote";
 import Img from "components/mdx/Img";
 import Sprite from "components/mdx/Sprite";
@@ -16,7 +16,7 @@ import Figure from "components/mdx/Figure";
 
 const MdxComponents = {
     Link: (props) => (
-        <MdLink {...props}/>
+        <MdxLink {...props}/>
     ),
     Division: (props) => (
         <Division {...props}/>

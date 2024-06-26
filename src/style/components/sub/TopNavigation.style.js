@@ -8,6 +8,7 @@ export const Wrap = styled.div`
     width: 100%;
     border-bottom: 1px solid var(--stroke2);
     background-color: var(--background2);
+    transition: .3s background-color ease-in-out;
 
     ${({ theme }) => theme.tablet`
         transition: .25s top ease-in-out;
@@ -23,6 +24,7 @@ export const Inner = styled.div`
     align-items: center;
     z-index: 10;
     background-color: var(--background2);
+    transition: .3s background-color ease-in-out;
 
     ${({ theme }) => theme.tablet`
         &::before {

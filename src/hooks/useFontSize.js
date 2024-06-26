@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fontSizeArray } from "data/setting";
+import { useRecoilState } from "recoil";
+import { rootFontSizeAtom } from "recoil/common/rootFontSizeState";
 
 export default function useFontSize() {
-    const [rootFontSize, setRootFontSize] = useState(window.localStorage.getItem('fontSize') || 'default');
+    const [rootFontSize, setRootFontSize] = useRecoilState(rootFontSizeAtom);
     const root = document.getElementsByTagName('html')[0];
 
     useEffect(() => {
@@ -19,6 +21,4 @@ export default function useFontSize() {
         });
        
     }, [rootFontSize]);
-
-    return { rootFontSize, setRootFontSize };
 }

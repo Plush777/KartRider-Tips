@@ -6,18 +6,19 @@ import { M768 } from "components/config/MediaQuery";
 import useBodyScrollLock from 'hooks/useBodyScrollLock';
 import useClickOutside from "hooks/useClickOutside";
 import { fontSizeArray, themeArray, fontSizeObject, themeObject, activeCondition, renderText } from 'data/setting';
+import { useSetRecoilState, useRecoilState } from "recoil";
+import { settingToggleAtom } from "recoil/common/settingToggleState";
+import { rootFontSizeAtom } from 'recoil/common/rootFontSizeState';
+import { themeModeAtom } from "recoil/common/themeModeState";
 
-export default function Settings({ 
-    themeMode, 
-    setThemeMode, 
-    setSettingToggle, 
-    rootFontSize, 
-    setRootFontSize
-}) {
+export default function Settings() {
+    const setSettingToggleState = useSetRecoilState(settingToggleAtom);
+    const [themeMode, setThemeMode] = useRecoilState(themeModeAtom);
+    const [rootFontSize, setRootFontSize] = useRecoilState(rootFontSizeAtom);
     const { openScroll } = useBodyScrollLock();
 
     const settingClose = () => {
-        setSettingToggle(false);
+        setSettingToggleState(false);
 
         if (window.matchMedia('(max-width: 768px)').matches) {
             openScroll();
@@ -52,9 +53,9 @@ export default function Settings({
                             {fontSizeArray.map((item,index) => {
                                 return(
                                     <B.BtnSetting 
-                                    key={index} 
-                                    onClick={() => {handleFontSize(index)}} 
-                                    className={activeCondition(fontSizeObject, rootFontSize, index)}>
+                                        key={index} 
+                                        onClick={() => {handleFontSize(index)}} 
+                                        className={activeCondition(fontSizeObject, rootFontSize, index)}>
                                         {renderText(fontSizeArray, item)}
                                     </B.BtnSetting>
                                 )
