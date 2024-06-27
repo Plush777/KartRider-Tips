@@ -25,7 +25,7 @@ export default function Gnb() {
             <G.GnbList>
                 {menus.map((menu) => {
                     return(
-                        <G.GnbItem className={`disabled ${myPath === menu.path && 'active'}`} key={menu.id}>
+                        <G.GnbItem className={`disabled ${myPath === menu.path ? 'active' : ''}`} key={menu.id}>
                             <Link onClick={clickAlert} href={`${menu.path}`}>{menu.name}</Link>
                         </G.GnbItem>
                     )

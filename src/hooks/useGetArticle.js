@@ -11,11 +11,13 @@ function markdownDirCondition(slugArray) {
     if (slugArray.includes('tuning')) return 'learn/tuning';
     if (slugArray.includes('purpose')) return 'purpose';
     if (slugArray.includes('contribute')) return 'contribute';
+
+    if (slugArray.includes('encyclopedia')) return 'encyclopedia/home';
 }
 
 function categoryCondition(slugArray) {
     if (slugArray.includes('purpose') || slugArray.includes('contribute')) return 'guide';
-    if (slugArray.includes('learn')) return 'docs';
+    if (slugArray.includes('learn') || slugArray.includes('encyclopedia')) return 'docs';
 }
 
 export default async function useGetArticle(slugArray) {

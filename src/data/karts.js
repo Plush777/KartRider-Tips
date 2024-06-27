@@ -1,0 +1,1 @@
+export const tabArray = ['일반', '고급', '희귀', '영웅', '전설'];

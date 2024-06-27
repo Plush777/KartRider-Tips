@@ -6,20 +6,19 @@ export async function generateMetadata({ params }) {
     const article = params.article;
     const fileName = article[article.length - 1];
     const title = useTranslateTitle(fileName);
-    // console.log(title)
 
-    let suffix;
-
-    if (article.includes('learn') && article.length > 1) {
-        suffix = '배우기';
-
-        return {
-            title: `${title} - ${suffix}`
-        }
+    function changeSuffix() {
+        if (article.includes('learn')) return '배우기';
+        if (article.includes('encyclopedia')) return '도감';
     }
 
-    if (article.includes('learn') && article.length < 2) {
-
+    if (article.length > 1) {
+        return {
+            title: `${title} - ${changeSuffix()}`
+        }
+    } 
+    
+    if (article.length < 2) {
         return {
             title: `${title}`
         }

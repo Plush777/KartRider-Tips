@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import css from 'styled-jsx/css';
 
 export const Wrap = styled.div`
     position: absolute;
@@ -46,6 +47,24 @@ export const Wrap = styled.div`
         border-bottom: 5px solid transparent;
         border-left: 5px solid var(--blue-background);
     }
+
+    ${({ theme }) => theme.laptopL`
+        ${props => props.name === 'topNavigation' && css`
+            left: 8px;
+
+            &.arrowUp::before {
+                left: 6px;
+                transform: none;
+            }
+        `}
+    `};
+
+    ${({ theme }) => theme.tablet`
+        ${props => props.name === 'topNavigation' && css`
+            top: 50%;
+            transform: translateY(97%);
+        `}
+    `};
 `
 
 export const Button = styled.button`

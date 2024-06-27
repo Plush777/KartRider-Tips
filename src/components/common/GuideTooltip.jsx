@@ -1,9 +1,10 @@
 import * as G from "style/common/GuideTooltip.style";
 import SCclose from 'svg/ico-close.svg';
 
-export default function GuideTooltip({ left, top, transform, arrowLeft, arrowTop, arrowTransform, className, text, clickFn }) {
+export default function GuideTooltip({ name, left, top, transform, arrowLeft, arrowTop, arrowTransform, className, text, clickFn }) {
     return (
         <G.Wrap 
+            name={name}
             left={left} 
             top={top} 
             transform={transform} 

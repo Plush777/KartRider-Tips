@@ -3,12 +3,15 @@ export const changeLinkName = (item) => {
 
     /* 1차 카테고리 */
     if (item === 'learn') return '배우기';
+    if (item === 'encyclopedia') return '도감';
 
     /* 2차 카테고리 */
     if (item === 'basic') return '기초';
     if (item === 'speed') return '스피드전';
     if (item === 'item') return '아이템전';
     if (item === 'tuning') return '튜닝';
+    if (item === 'karts') return '카트바디 도감';
+    if (item === 'characters') return '캐릭터 도감';
 
     /* 기초 */
     if (item === 'startbooster') return '출발 부스터';

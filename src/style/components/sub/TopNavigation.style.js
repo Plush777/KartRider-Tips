@@ -27,6 +27,8 @@ export const Inner = styled.div`
     transition: .3s background-color ease-in-out;
 
     ${({ theme }) => theme.tablet`
+        padding: 0 5px 0 0;
+
         &::before {
             content: '';
             position: absolute;

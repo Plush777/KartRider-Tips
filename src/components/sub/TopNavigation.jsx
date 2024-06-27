@@ -10,6 +10,7 @@ import BreadCrumb from "components/sub/BreadCrumb";
 import GuideTooltip from "components/common/GuideTooltip";
 import SCclose from 'svg/ico-close.svg';
 import { learnData } from "data/sidebar/learn/data";
+import { encyclopediaData } from "data/sidebar/encyclopedia/data";
 import useClickOutside from "hooks/useClickOutside";
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import { useRecoilValue, useSetRecoilState } from "recoil";
@@ -20,14 +21,18 @@ export default function TopNavigation() {
     const pathnameArray = pathname.split('/').filter((path) => path);
     /* 0번째 경로를 제외한 나머지 경로 */
     const myPathArray = pathnameArray.slice(1);
+    // console.log(myPathArray);
    
     const [sideToggle, setSideToggle] = useState(false);
     const [sideTransition, setSideTransition] = useState(true);
+    const [sideData, setSideData] = useState(null);
+
     const sidebarRef = useClickOutside(() => setSideToggle(false));
     const { lockScroll, openScroll } = useBodyScrollLock();
 
     const guideTooltipState = useRecoilValue(guideTooltipAtom);
     const setGuideTooltipState = useSetRecoilState(guideTooltipAtom);
+
     const getSessionTooltip = sessionStorage.getItem('tooltip');
 
     const handleSideOpen = (state) => {
@@ -44,6 +49,14 @@ export default function TopNavigation() {
             setSideTransition(false);
             setSideToggle(false);
         } 
+
+        if (myPathArray.includes('learn')) {
+            setSideData(learnData);
+        } 
+
+        if (myPathArray.includes('encyclopedia')) {
+            setSideData(encyclopediaData);
+        }
     }, [pathname]);
 
     useEffect(() => {
@@ -70,7 +83,7 @@ export default function TopNavigation() {
             <Sidebar
                 wrapClassName={`${sideTransition ? 'transition' : ''} ${sideToggle ? 'active' : ''}`}
                 dimmedClassName={`${sideTransition ? 'transition' : ''} ${sideToggle ? 'active' : ''}`}
-                data={learnData}
+                data={sideData}
                 sidebarRef={sidebarRef}
                 sideToggle={sideToggle}
             >
@@ -89,12 +102,12 @@ export default function TopNavigation() {
 
                     {getSessionTooltip == null && guideTooltipState &&
                         <GuideTooltip 
-                            left="26px" 
+                            name="topNavigation"
+                            left="-38px" 
                             top="35px"
                             arrowLeft="50%" 
                             arrowTop="-5px"
                             arrowTransform="translateX(-50%)" 
-                            transform="translateX(-50%)" 
                             text="목차를 열어보세요!" 
                             className="arrowUp"
                             clickFn={handleTooltipClose}
