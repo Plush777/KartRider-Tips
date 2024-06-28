@@ -1,27 +1,33 @@
-import * as Tabstyled from "style/common/Tab.style";
+import * as T from "style/common/Tab.style";
 
-export default function Tab ({ data, tabIndex, setTabIndex, marginBottom }) {
-    const handleTab = (index) => setTabIndex(index);
+export default function Tab ({ type, data, tabIndex, setTabIndex, marginBottom, disabledIndex }) {
+    const handleTab = (index) => {
+        if (disabledIndex < index) {
+            alert('아직 전설등급이 출시되지 않았습니다.');
+            return;
+        };
+        setTabIndex(index);
+    }
 
     return(
-        <Tabstyled.TabWrap marginBottom={marginBottom}>
-            <Tabstyled.TabList>
+        <T.TabWrap className={type} marginBottom={marginBottom}>
+            <T.TabList>
                 {
                     data.map((tab, index) => (
-                        <Tabstyled.TabItem key={index}>
-                            <Tabstyled.TabDiv 
+                        <T.TabItem className={disabledIndex < index ? 'disabled' : ''} key={index}>
+                            <T.TabDiv 
                                 as='button' 
                                 type='button' 
-                                className={tabIndex === index ? 'active' : ''}
+                                className={`${tabIndex === index ? 'active' : ''} `}
                                 onClick={() => handleTab(index)}
                             >
                                 {tab}
-                            </Tabstyled.TabDiv>
-                        </Tabstyled.TabItem>
+                            </T.TabDiv>
+                        </T.TabItem>
                         
                     ))
                 }
-            </Tabstyled.TabList>
-        </Tabstyled.TabWrap>
+            </T.TabList>
+        </T.TabWrap>
     )
 }

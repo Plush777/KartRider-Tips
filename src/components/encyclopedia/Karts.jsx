@@ -3,6 +3,7 @@ import { fetchKarts } from "scripts/api/karts";
 import Tab from 'components/common/Tab';
 import { tabArray } from "data/karts";
 import useTab from 'hooks/useTab';
+import Grid from "components/sub/Grid";
 
 export default function Karts() {
     const { tabIndex, setTabIndex, loadData, setLoadData } = useTab(data, callback);
@@ -15,26 +16,33 @@ export default function Karts() {
         retry: 1
     });
 
+    console.log(isLoading)
+
     function callback() {
-        if (tabIndex === 0) {
-            data && data.news.sort((a,b) => {
-                return new Date(b.date) - new Date(a.date);
-            });
-            setLoadData(data.news);
-        }
-        if (tabIndex === 1) setLoadData(data.devArticles);
-        if (tabIndex === 2) setLoadData(data.updateArticles);
+        if (tabIndex === 0) setLoadData('일반');
+        if (tabIndex === 1) setLoadData('고급');
+        if (tabIndex === 2) setLoadData('희귀');
+        if (tabIndex === 3) setLoadData('영웅');
+        if (tabIndex === 4) setLoadData('전설');
     }
 
-    console.log(data)
-
-    if(isLoading) return <div>로딩중...</div>
-
-    if(isError) return <div>에러가 발생했습니다.</div>
-    
     return(
-        <>
-            <Tab tabIndex={tabIndex} setTabIndex={setTabIndex} data={tabArray} marginBottom="15px"/>
-        </>
+        <div className="reset">
+            <Tab 
+                type="ency" 
+                tabIndex={tabIndex}
+                setTabIndex={setTabIndex} 
+                data={tabArray} 
+                marginBottom="15px"
+                disabledIndex={3}
+            />
+
+            <Grid 
+                data={data} 
+                kartGradeData={loadData} 
+                isLoading={isLoading}
+                isError={isError}
+            />
+        </div>
     )
 }

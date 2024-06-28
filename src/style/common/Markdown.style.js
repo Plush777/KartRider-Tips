@@ -471,6 +471,24 @@ export const Container = styled.div`
         border-radius: 8px;
     }
     
+    .reset {
+        ul {
+            li {
+                list-style: none;
+                margin-left: 0;
+                font-size: inherit;
+            }
+        }
+
+        li {
+            color: inherit;
+            line-height: inherit;
+
+            + li {
+                margin-top: 0;
+            }
+        }
+    }
 
     ${({ theme }) => theme.tablet`
         li, p, span {

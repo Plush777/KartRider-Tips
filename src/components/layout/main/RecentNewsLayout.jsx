@@ -11,14 +11,16 @@ export default function RecentNewsLayout ({ sectionName, data, isLoading, isErro
     const { tabIndex, setTabIndex, loadData, setLoadData } = useTab(data, callback);
 
     function callback() {
-        if (tabIndex === 0) {
-            data && data.news.sort((a,b) => {
-                return new Date(b.date) - new Date(a.date);
-            });
-            setLoadData(data.news);
+        if (data) {
+            if (tabIndex === 0) {
+                data && data.news.sort((a,b) => {
+                    return new Date(b.date) - new Date(a.date);
+                });
+                setLoadData(data.news);
+            }
+            if (tabIndex === 1) setLoadData(data.devArticles);
+            if (tabIndex === 2) setLoadData(data.updateArticles);
         }
-        if (tabIndex === 1) setLoadData(data.devArticles);
-        if (tabIndex === 2) setLoadData(data.updateArticles);
     }
 
     return(

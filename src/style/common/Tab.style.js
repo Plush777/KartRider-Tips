@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const TabWrap = styled.div`
-    margin-bottom: ${(props) => props.marginBottom};
-`;
-
 export const TabList = styled.ul`
     position: relative;
     display: flex;
@@ -23,6 +19,13 @@ export const TabItem = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.disabled{
+        button {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
 `;
 
 export const TabDiv = styled.div`
@@ -42,3 +45,16 @@ export const TabDiv = styled.div`
         color: var(--text1);
     }
 `
+
+export const TabWrap = styled.div`
+    margin-bottom: ${(props) => props.marginBottom};
+
+    &.ency {
+        border-bottom: 2px solid var(--stroke2);
+        padding-bottom: 10px;
+
+        ${TabDiv} {
+            font-size: 1.25rem;
+        }
+    }
+`;

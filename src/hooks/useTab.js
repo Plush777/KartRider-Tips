@@ -5,9 +5,7 @@ export default function useTab(data, callback) {
     let [loadData, setLoadData] = useState(undefined);
 
     useEffect(() => {
-        if (data) {
-            callback(tabIndex, data, setLoadData);
-        }
+        callback(tabIndex, data, setLoadData);
     }, [tabIndex, data]);
 
     return { tabIndex, setTabIndex, loadData, setLoadData };
