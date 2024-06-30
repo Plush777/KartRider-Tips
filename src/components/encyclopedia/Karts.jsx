@@ -3,7 +3,7 @@ import { fetchKarts } from "scripts/api/karts";
 import Tab from 'components/common/Tab';
 import { tabArray } from "data/karts";
 import useTab from 'hooks/useTab';
-import Grid from "components/sub/Grid";
+import Grid from "components/encyclopedia/Grid";
 
 export default function Karts() {
     const { tabIndex, setTabIndex, loadData, setLoadData } = useTab(data, callback);
@@ -15,8 +15,6 @@ export default function Karts() {
         gcTime: 1000 * 60 * 60 * 24, // 24시간
         retry: 1
     });
-
-    console.log(isLoading)
 
     function callback() {
         if (tabIndex === 0) setLoadData('일반');
@@ -35,6 +33,7 @@ export default function Karts() {
                 data={tabArray} 
                 marginBottom="15px"
                 disabledIndex={3}
+                styleProps="ency"
             />
 
             <Grid 
@@ -42,6 +41,7 @@ export default function Karts() {
                 kartGradeData={loadData} 
                 isLoading={isLoading}
                 isError={isError}
+                tabIndex={tabIndex}
             />
         </div>
     )

@@ -13,7 +13,6 @@ export default function RankingLayout ({ data, isLoading, isError }) {
                 title={mainTitle.rank}
                 marginBottom="20px"
             />
-           
             <M.MainInner name="ranking" minHeight="var(--main-scroll-height)">
                 {isError && <VideoState type='error'/>}
                 {

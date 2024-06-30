@@ -5,11 +5,19 @@ import SCopen from 'svg/ico-open.svg';
 import Pwa from 'components/pwa/Pwa';
 import * as H from "style/layout/Header.style";
 import { useRef, useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
+import useClickAlert from "hooks/useClickAlert";
+
 
 export default function HeaderMenuWrap({ menuToggle, handleSettingButton }) {
     const { lockScroll } = useBodyScrollLock();
     const ulRef = useRef(null);
     const [wrapHeight, setWrapHeight] = useState(0);
+    const pathname = usePathname();
+    const pathnameArray = pathname.split('/').filter((path) => path);
+    const myPathArray = pathnameArray.slice(0, 2);
+    const myPath = `/${myPathArray.join('/')}`;
+    const clickAlert = useClickAlert('준비중입니다.');
 
     useEffect(() => {
         if (ulRef.current) {
@@ -37,8 +45,8 @@ export default function HeaderMenuWrap({ menuToggle, handleSettingButton }) {
             <H.mobileHeaderMenuList ref={ulRef}>
                 {menus.map((menu) => {
                     return(
-                        <H.mobileHeaderMenuItem key={menu.id}>
-                            <H.mobileHeaderMenuLink href={menu.path}>
+                        <H.mobileHeaderMenuItem className={`disabled ${myPath === menu.path ? 'active' : ''}`} key={menu.id}>
+                            <H.mobileHeaderMenuLink onClick={clickAlert} href={menu.path}>
                                 {menu.name}
                             </H.mobileHeaderMenuLink>
                         </H.mobileHeaderMenuItem>

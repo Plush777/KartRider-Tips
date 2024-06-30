@@ -5,18 +5,6 @@ export const MainInner = styled.article`
     min-height: ${props => props.minHeight};
     height: ${props => props.height};
 
-    ${(props) => props.borderBottom && css`
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--text1);
-        }
-    `}
-
     ${props => props.name === 'season' && css`
         height: 100%;
         display: flex;

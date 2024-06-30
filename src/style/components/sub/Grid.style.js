@@ -5,33 +5,29 @@ export const Wrap = styled.div`
 `
 
 export const List = styled.ul`
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     column-gap: 20px;
     row-gap: 80px;
+
+    ${({ theme }) => theme.tablet`
+        row-gap: 40px;
+    `};
 `
 
 export const Item = styled.li`
-
+    position: relative;
 `
 
 export const InnerItem = styled.div`
-
+    margin-bottom: 20px;
 `
 
 export const ImgDiv = styled.div`
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
-
-    img {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-    }
 `
 
 export const Tag = styled.span`
@@ -69,14 +65,61 @@ export const Tag = styled.span`
     }
 `
 
-export const NameArea = styled.div`
+export const Box = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
     row-gap: 10px;
 `
 
-export const Name = styled.strong`
+export const InnerBox = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const Button = styled.button`
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+
+    svg {
+        margin-top: -3px;
+        stroke-width: 2px;
+    }
+`
+
+export const Text = styled.strong`
     font-weight: normal;
-    font-size: 1rem;
+    font-size: ${props => props.fontSize || "1rem"};
+    line-height: 20px;
+`
+
+export const CollapseWrap = styled.div`
+  
+`
+
+export const CollapseList = styled.ul`
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+`
+
+export const CollapseItem = styled.li`
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+`
+
+export const Row = styled.div`
+    display: flex;
+    flex-direction: ${props => props.flexDirection || "row"};
+    column-gap: ${props => props.columnGap};
+    row-gap: ${props => props.rowGap};
+    width: 100%;
+`
+
+export const StatGraph = styled.div`
+    width: 25px;
+    height: 15px;
+    background-color: var(--title);
 `

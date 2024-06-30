@@ -105,7 +105,16 @@ export const mobileHeaderMenuItem = styled.li`
     align-items: center;
     width: 100%;
     height: 55px;
+    color: var(--text1);
     text-transform: uppercase;
+
+    &.disabled{
+        color: var(--disabled);
+
+        a {
+            cursor: not-allowed;
+        }
+    }
 `
 
 export const mobileHeaderMenuLink = styled.a`
@@ -114,7 +123,6 @@ export const mobileHeaderMenuLink = styled.a`
     column-gap: 7.5px;
     width: 100%;
     height: 100%;
-    color: var(--text1);
     font-size: 1rem;
 
     svg{margin-top: -2.5px;

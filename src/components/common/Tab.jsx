@@ -1,6 +1,14 @@
 import * as T from "style/common/Tab.style";
 
-export default function Tab ({ type, data, tabIndex, setTabIndex, marginBottom, disabledIndex }) {
+export default function Tab ({ 
+    type, 
+    data, 
+    tabIndex, 
+    setTabIndex, 
+    marginBottom, 
+    disabledIndex,
+    styleProps
+}) {
     const handleTab = (index) => {
         if (disabledIndex < index) {
             alert('아직 전설등급이 출시되지 않았습니다.');
@@ -10,7 +18,7 @@ export default function Tab ({ type, data, tabIndex, setTabIndex, marginBottom, 
     }
 
     return(
-        <T.TabWrap className={type} marginBottom={marginBottom}>
+        <T.TabWrap className={type} marginBottom={marginBottom} styleProps={styleProps}>
             <T.TabList>
                 {
                     data.map((tab, index) => (
