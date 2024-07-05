@@ -1,12 +1,12 @@
-import * as G from "style/components/sub/Grid.style";
+import * as G from "style/components/sub/encyclopedia/Grid.style";
 import Image from "next/image";
 import { backgroundCondition } from "data/karts";
 import SCMinus from 'svg/ico-collapse-minus.svg';
 import SCPlus from 'svg/ico-collapse-plus.svg';
+import { useEffect } from "react";
 
 export default function GridItem({ 
     kartItem, 
-    kartName, 
     toggle, 
     uniqueIndex, 
     toggleArray, 
@@ -29,16 +29,29 @@ export default function GridItem({
         }
     }
 
+    
+
+    //kartItem.img를 배열로 만들기
+    useEffect(() => {
+        if (kartItem.img) {
+            const imgArray = kartItem.img.split(',');
+            const a = imgArray.concat(imgArray)
+            
+        }
+    }, [kartItem.img]);
+
+   
+
     return (
         <G.InnerItem>
             <G.ImgDiv>
                 <G.Tag className={backgroundCondition(kartItem.type)}>{kartItem.type}</G.Tag>
-                <Image priority="high" src={kartItem.img} width={240} height={200} alt={kartName}/>
+                <Image priority="high" src={kartItem.img} width={240} height={200} alt={kartItem.name}/>
             </G.ImgDiv>
             <G.Box>
                 <G.InnerBox>
                     <G.Button type="button" onClick={() => handleToggle(uniqueIndex)}>
-                        <G.Text>{kartName}</G.Text>
+                        <G.Text>{kartItem.name}</G.Text>
 
                         {
                             toggle ? 

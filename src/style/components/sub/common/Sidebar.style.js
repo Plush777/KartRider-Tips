@@ -10,6 +10,11 @@ export const Wrap = styled.aside`
     border-right: 1px solid var(--stroke2);
     z-index: 1020;
 
+    .highlightText.highlight {
+        color: var(--text1);
+        background-color: var(--highlight-background);
+    }
+
     &.transition {
         transition: .3s ease-in-out;
         transition-property: left, visibility;
@@ -91,13 +96,6 @@ export const Item = styled.li`
         font-weight: 600;
     }
 
-    &.highlight {
-        a {
-            color: var(--text1);
-            background-color: var(--highlight-background);
-        }
-    }
-
     &.disabled {
         color: var(--disabled);
     }
@@ -164,7 +162,6 @@ export const DetailsOuterItem = styled.li`
     .detailsLink {
         display: flex;
         align-items: center;
-        
     }
 
     @media (hover: hover) {
@@ -185,13 +182,6 @@ export const DetailsOuterItem = styled.li`
     &.active {
         color: var(--active);     
         font-weight: 600;
-    }
-
-    &.highlight {
-        .detailsLink {
-            color: var(--text1);
-            background-color: var(--highlight-background);
-        }
     }
 
     &+& {

@@ -1,4 +1,4 @@
-import * as B from "style/components/sub/BreadCrumb.style";
+import * as B from "style/components/sub/common/BreadCrumb.style";
 import { changeLinkName } from "data/topNavigation";
 
 export default function BreadCrumb({ data }) {

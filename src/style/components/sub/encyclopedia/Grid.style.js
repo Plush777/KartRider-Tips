@@ -89,37 +89,8 @@ export const Button = styled.button`
 `
 
 export const Text = styled.strong`
-    font-weight: normal;
+    font-weight: ${props => props.fontWeight || "normal"};
     font-size: ${props => props.fontSize || "1rem"};
+    color: ${props => props.color || "var(--text1)"};
     line-height: 20px;
-`
-
-export const CollapseWrap = styled.div`
-  
-`
-
-export const CollapseList = styled.ul`
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-`
-
-export const CollapseItem = styled.li`
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-`
-
-export const Row = styled.div`
-    display: flex;
-    flex-direction: ${props => props.flexDirection || "row"};
-    column-gap: ${props => props.columnGap};
-    row-gap: ${props => props.rowGap};
-    width: 100%;
-`
-
-export const StatGraph = styled.div`
-    width: 25px;
-    height: 15px;
-    background-color: var(--title);
 `

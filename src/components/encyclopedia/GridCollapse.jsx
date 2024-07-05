@@ -1,30 +1,50 @@
-import * as G from "style/components/sub/Grid.style";
-import { statArray } from "data/karts";
+import * as G from "style/components/sub/encyclopedia/Grid.style";
+import * as Collap from "style/components/sub/encyclopedia/Collapse.style";
+import { statArray, kartAcquisitionCondition } from "data/karts";
+import Graph from "components/encyclopedia/Graph";
+import React, { Fragment } from "react";
 
-export default function GridCollapse({ kartItem, kartItemIndex, collapseRef }) {
+export default function GridCollapse({ kartItem, kartName, kartItemIndex, collapseRef }) {
+
+    const acqArray = kartAcquisitionCondition(kartName);
+    console.log(acqArray);
+
     return (
-        <G.CollapseWrap ref={(el) => collapseRef.current[kartItemIndex] = el}>
-            <G.CollapseList> 
+        <Collap.Wrap ref={(el) => collapseRef.current[kartItemIndex] = el}>
+            <Collap.List> 
+                <Collap.Item className="first"> 
+                    <Collap.Row flexDirection="column" rowGap="5px">
+                        <G.Text as="span">획득경로</G.Text>
+                        {acqArray.map((acqItem, acqIndex) => {
+                            return (    
+                                <G.Text fontSize=".875rem" as="span" key={acqIndex}>{acqItem}</G.Text>
+                            )
+                        })}
+                    </Collap.Row>
+                </Collap.Item>
+
                 {kartItem.stat.array.map((stat, statIndex) => {
                     return (
-                        <G.CollapseItem key={statIndex}> 
-                            <G.Row rowGap="5px" flexDirection="column" columnGap="20px">
-                                <G.Row columnGap="15px">
+                        <Collap.Item key={statIndex}> 
+                            <Collap.Row rowGap="5px" flexDirection="column" columnGap="20px">
+                                <Collap.Row columnGap="10px">
                                     <G.Text fontSize=".875rem">{statArray[statIndex]}</G.Text>
-                                    <G.Text as="span" fontSize=".875rem">{stat}</G.Text>
-                                </G.Row>
-                                <G.Row columnGap="5px">
+                                    <G.Text as="span" color="var(--active)" fontSize=".875rem" fontWeight="600">{stat}</G.Text>
+                                </Collap.Row>
+                                <Collap.Row columnGap="5px">
                                     {Array.from({ length: stat }, (_, index) => {
                                         return (
-                                            <G.StatGraph key={index}/>
+                                            <Fragment key={index}>
+                                                <Graph/>
+                                            </Fragment>
                                         )
                                     })}
-                                </G.Row>
-                            </G.Row>
-                        </G.CollapseItem>
+                                </Collap.Row>
+                            </Collap.Row>
+                        </Collap.Item>
                     )
                 })}
-            </G.CollapseList>
-        </G.CollapseWrap>
+            </Collap.List>
+        </Collap.Wrap>
     )
 }

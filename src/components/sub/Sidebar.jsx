@@ -1,10 +1,8 @@
-import * as S from "style/components/sub/Sidebar.style";
-import * as Sh from "style/components/sidebar/SearchItem.style";
-import SearchItem from "components/sidebar/search/SearchItem";
-import SearchResult from "components/sidebar/search/SearchResult";
-import NoMatch from "components/sidebar/search/NoMatch";
-import { useState } from "react";
-import { filterData } from "data/sidebar";
+import * as S from "style/components/sub/common/Sidebar.style";
+import SearchItem from "components/search/SearchItem";
+import useSearch from "hooks/useSearch";
+import useSearchDataObject from "hooks/useSearchDataObject";
+import useSearchRenderResults from "hooks/useSearchRenderResults";
 
 export default function Sidebar({ 
     wrapClassName, 
@@ -13,69 +11,48 @@ export default function Sidebar({
     children, 
     sidebarRef  
 }) {
-    const [value, setValue] = useState('');
-    const [results, setResults] = useState([]);
-    const [focused, setFocused] = useState(false);
 
-    const handleFocus = () => {
-        setFocused(true);
-    }
+    const dataObject = useSearchDataObject(data);
 
-    const handleBlur = (e) => {
-        if (e.target.value === '') {
-            setFocused(false);
-        }
-    }
+    const { 
+        value, 
+        results, 
+        focused, 
+        handleFocus, 
+        handleBlur, 
+        handleValueChange, 
+        handleValueRemove  
+    } = useSearch(dataObject);
+    
+    const commonProps = {
+        value: value,
+    };
 
-    const handleValueChange = (e) => {
-        setValue(e.target.value);
-        setResults(filterData(data, e.target.value));
-    }
+    const dataPropsType = value.length > 0 ? results : dataObject;
+    const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
 
-    const renderResults = () => {
-        if (value.length > 0 && results.length === 0) {
-            return <NoMatch />
-        }
-
-        if (value.length > 0) {
-            return <SearchResult value={value} loopData={results} />
-        } 
-
-        if (value.length === 0) {
-            return <SearchResult value={value} loopData={data} />
-        }
-    }
+    console.log(results)
 
     return (
         <>
             <S.Wrap ref={sidebarRef} className={wrapClassName}>
                 <S.Top>
                     <SearchItem 
-                        data={data} 
                         value={value}
-                        setValue={setValue}   
                         focused={focused} 
-                        setFocused={setFocused}
+                        onFocusFn={handleFocus}
+                        onBlurFn={handleBlur}
+                        onChangeFn={handleValueChange}
+                        removeFn={handleValueRemove}
+                        placeholder={"어떤 걸 찾고 계세요?"}
+                        inputId={"s01"}
                     >
-                        <Sh.SearchInput 
-                            type="search" 
-                            id="s01"
-                            placeholder="어떤 걸 찾고 계세요?" 
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                            onChange={(e) => {
-                                handleValueChange(e);
-                            }}
-                            value={value}
-                            autoComplete="off"
-                            spellCheck="false"
-                        />
                     </SearchItem>
                     {children}
                 </S.Top>
                 <S.Inner>
                     <S.GroupContainer>
-                        {renderResults()}
+                        {renderResults}
                     </S.GroupContainer>
                 </S.Inner>
             </S.Wrap>

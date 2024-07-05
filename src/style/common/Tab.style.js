@@ -41,6 +41,7 @@ export const TabWrap = styled.div`
 
     ${props => props.styleProps === 'ency' && css`
         border-bottom: 2px solid var(--stroke2);
+        width: 100%;
 
         ${TabDiv} {
             font-size: 1.25rem;

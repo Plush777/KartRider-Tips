@@ -1,75 +1,82 @@
-import * as G from "style/components/sub/Grid.style";
+import * as G from "style/components/sub/encyclopedia/Grid.style";
 import { useState, useEffect, useRef } from "react";
-import VideoState from 'components/state/VideoState';
 import GridItem from "components/encyclopedia/GridItem";
 import GridCollapse from "components/encyclopedia/GridCollapse"
+import { filterDataByGrade } from "data/sidebar";
 
-export default function Grid({ data, kartGradeData, isLoading, isError, tabIndex }) {
+export default function Grid({ 
+    data, 
+    kartGradeData, 
+    tabIndex, 
+    value, 
+    setValue, 
+    clicked,
+    setClicked
+}) {
+    const [dataState, setDataState] = useState(undefined);
     const [toggleArray, setToggleArray] = useState([]);
     const collapseRef = useRef([]);
 
-    function filterDataByGrade (grade) {
-        return data && data.map((dataItem, dataIndex) => {
-            return dataItem.name.map((name, nameIndex) => ({
-                name,
-                type: data[dataIndex].type?.[nameIndex],
-                img: data[dataIndex].imgs?.[nameIndex],
-                stat: data[dataIndex].stats?.[nameIndex]
-            })).filter((item) => item.name?.includes(`[${grade}]`) ? item.name : false);
-        });
-    }
-
-    const karts = filterDataByGrade(kartGradeData);
+    let karts = filterDataByGrade(kartGradeData, data);
 
     useEffect(() => {
         if (data) {
-            const initArray = Array.from({ length: data.length }, () => false);
+            setDataState(karts);
+            const initArray = Array.from({ length: karts.length }, () => false);
             setToggleArray(initArray);
         }
-    }, [tabIndex]);
+
+        if (data && value.length > 0) {
+            setDataState(data);
+        }
+
+        if (data && value.length > 0 && clicked?.includes(true)) {
+            setValue('');
+            setClicked([false, false, false, false, false]);
+            setDataState(karts);
+        }
+    }, [data, tabIndex, kartGradeData, value]);
 
     return(
         <G.Wrap>
             <G.List>
-                <VideoState type='loading' styleClassName='ency'/>
-                {isError && <VideoState type='error'/>}
-                {isLoading ? 
+                {/* <VideoState type='loading' styleClassName='ency'/> */}
+                {/* {isError && <VideoState type='error'/>} */}
+                {/* {isLoading ? 
                     <VideoState type='loading'/>
                     :
-                    <>
-                        {karts?.map((kart, kartIndex) => {
-                            return kart.map((kartItem, kartItemIndex) => {
-                                const kartName = kartItem.name.replace(`[${kartGradeData}]`, "").trim();
-                                const uniqueIndex = kartIndex * 100 + kartItemIndex;
-                                const toggle = toggleArray[uniqueIndex];
+                   
+                } */}
+                {dataState?.map((kart, kartIndex) => {
+                    return kart?.map((kartItem, kartItemIndex) => {
+                        const uniqueIndex = kartIndex * 100 + kartItemIndex;
+                        const toggle = toggleArray[uniqueIndex];
 
-                                return (
-                                    <G.Item key={uniqueIndex}>
-                                       <GridItem
-                                            kartItem={kartItem}
-                                            kartName={kartName}
-                                            toggle={toggle}
-                                            uniqueIndex={uniqueIndex}
-                                            toggleArray={toggleArray}
-                                            setToggleArray={setToggleArray}
-                                            collapseRef={collapseRef}
-                                       />
+                        return (
+                            <G.Item key={uniqueIndex}>
+                                <GridItem
+                                    kartItem={kartItem}
+                                    toggle={toggle}
+                                    uniqueIndex={uniqueIndex}
+                                    toggleArray={toggleArray}
+                                    setToggleArray={setToggleArray}
+                                    collapseRef={collapseRef}
+                                />
 
-                                        {
-                                            toggle && 
+                                {
+                                    toggle && 
 
-                                            <GridCollapse 
-                                                kartItem={kartItem} 
-                                                kartItemIndex={uniqueIndex} 
-                                                collapseRef={collapseRef}
-                                            />
-                                        }
-                                    </G.Item>
-                                )
-                            })
-                        })}
-                    </>
-                }
+                                    <GridCollapse 
+                                        kartItem={kartItem} 
+                                        kartName={kartName}
+                                        kartItemIndex={uniqueIndex} 
+                                        collapseRef={collapseRef}
+                                    />
+                                }
+                            </G.Item>
+                        )
+                    })
+                })}
             </G.List>
         </G.Wrap>
     )

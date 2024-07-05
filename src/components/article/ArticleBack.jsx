@@ -1,4 +1,4 @@
-import * as A from "style/components/sub/ArticleTop.style";
+import * as A from "style/components/sub/common/ArticleTop.style";
 import Link from "next/link";
 import SCback from "svg/ico-back.svg";
 import SChome from "svg/ico-home.svg";

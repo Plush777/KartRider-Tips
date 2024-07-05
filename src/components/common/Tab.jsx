@@ -7,7 +7,9 @@ export default function Tab ({
     setTabIndex, 
     marginBottom, 
     disabledIndex,
-    styleProps
+    styleProps,
+    clicked,
+    setClicked
 }) {
     const handleTab = (index) => {
         if (disabledIndex < index) {
@@ -15,7 +17,20 @@ export default function Tab ({
             return;
         };
         setTabIndex(index);
+        
+        // 클릭한 탭의 인덱스를 저장
+        let newClicked = clicked.map((_, i) => {
+            if (i === index) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        setClicked(newClicked);
     }
+
+    console.log(clicked)
 
     return(
         <T.TabWrap className={type} marginBottom={marginBottom} styleProps={styleProps}>

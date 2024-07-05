@@ -1,7 +1,7 @@
 'use client';
 
-import * as T from "style/components/sub/TopNavigation.style";
-import * as S from "style/components/sub/Sidebar.style";
+import * as T from "style/components/sub/common/TopNavigation.style";
+import * as S from "style/components/sub/common/Sidebar.style";
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from "react";
 import SCsidebarLeft from "svg/ico-sidebar-left.svg";

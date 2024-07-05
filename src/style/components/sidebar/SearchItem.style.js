@@ -1,10 +1,4 @@
-import styled from "styled-components";
-
-export const SearchWrap = styled.div`
-    display: flex;
-    width: 100%;
-    padding-left: var(--sidebar-padding);
-`
+import styled, { css } from "styled-components";
 
 export const SearchContainer = styled.div`
     display: flex;
@@ -32,22 +26,6 @@ export const SearchLabel = styled.label`
     }
 `
 
-export const SearchInput = styled.input`
-    width: 100%;
-    height: 36px;
-    border: 1px solid var(--stroke2);
-    border-radius: 20px;
-    padding-left: 35px;
-    padding-right: 40px;
-    font-size: .875rem;
-    color: var(--text1);
-    background-color: var(--background1);
-
-    &::placeholder {
-        color: var(--disabled);
-    }
-`
-
 export const RemoveButton = styled.button`
     display: none;
     align-items: center;
@@ -65,4 +43,45 @@ export const RemoveButton = styled.button`
     &.active {
         display: flex;
     }
+`
+
+export const SearchInput = styled.input`
+    width: 100%;
+    height: 36px;
+    border: 1px solid var(--stroke2);
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 40px;
+    font-size: .875rem;
+    color: var(--text1);
+    background-color: var(--background1);
+
+    &.active {
+        padding-right: 20px;
+    }
+
+    &::placeholder {
+        color: var(--disabled);
+    }
+`
+
+export const SearchWrap = styled.div`
+    display: flex;
+    width: 100%;
+    padding-left: var(--sidebar-padding);
+
+    ${props => props.styleProps === 'ency' && css`
+        padding-left: 0;
+        margin-left: auto;
+        margin-bottom: 40px;
+        max-width: 190px;
+
+        ${SearchContainer} {
+            justify-content: flex-end;
+        }
+
+        ${SearchWrapInner} {
+            max-width: none;
+        }
+    `}
 `

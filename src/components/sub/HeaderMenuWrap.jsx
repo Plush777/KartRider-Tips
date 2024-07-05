@@ -5,19 +5,13 @@ import SCopen from 'svg/ico-open.svg';
 import Pwa from 'components/pwa/Pwa';
 import * as H from "style/layout/Header.style";
 import { useRef, useEffect, useState } from 'react';
-import { usePathname } from "next/navigation";
 import useClickAlert from "hooks/useClickAlert";
-
 
 export default function HeaderMenuWrap({ menuToggle, handleSettingButton }) {
     const { lockScroll } = useBodyScrollLock();
     const ulRef = useRef(null);
     const [wrapHeight, setWrapHeight] = useState(0);
-    const pathname = usePathname();
-    const pathnameArray = pathname.split('/').filter((path) => path);
-    const myPathArray = pathnameArray.slice(0, 2);
-    const myPath = `/${myPathArray.join('/')}`;
-    const clickAlert = useClickAlert('준비중입니다.');
+    const clickAlert = useClickAlert('준비중이에요.');
 
     useEffect(() => {
         if (ulRef.current) {
