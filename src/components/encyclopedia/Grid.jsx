@@ -37,16 +37,9 @@ export default function Grid({
         }
     }, [data, tabIndex, kartGradeData, value]);
 
-    return(
+    return (
         <G.Wrap>
             <G.List>
-                {/* <VideoState type='loading' styleClassName='ency'/> */}
-                {/* {isError && <VideoState type='error'/>} */}
-                {/* {isLoading ? 
-                    <VideoState type='loading'/>
-                    :
-                   
-                } */}
                 {dataState?.map((kart, kartIndex) => {
                     return kart?.map((kartItem, kartItemIndex) => {
                         const uniqueIndex = kartIndex * 100 + kartItemIndex;
@@ -68,11 +61,11 @@ export default function Grid({
 
                                     <GridCollapse 
                                         kartItem={kartItem} 
-                                        kartName={kartName}
                                         kartItemIndex={uniqueIndex} 
                                         collapseRef={collapseRef}
                                     />
                                 }
+                                
                             </G.Item>
                         )
                     })

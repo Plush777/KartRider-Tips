@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-
+    position: relative;
 `
 
 export const List = styled.ul`
@@ -21,13 +21,22 @@ export const Item = styled.li`
 `
 
 export const InnerItem = styled.div`
-    margin-bottom: 20px;
+    
 `
 
 export const ImgDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+        opacity: 0;
+        transition: opacity .3s ease-in-out;    
+
+        &.active {
+            opacity: 1;
+        }
+    }
 `
 
 export const Tag = styled.span`
@@ -70,6 +79,7 @@ export const Box = styled.div`
     align-items: center;
     flex-direction: column;
     row-gap: 10px;
+    margin-top: 20px;
 `
 
 export const InnerBox = styled.div`

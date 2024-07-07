@@ -8,6 +8,7 @@ import useSearch from "hooks/useSearch";
 import SearchItem from "components/search/SearchItem";
 import useSearchDataObject from "hooks/useSearchDataObject";
 import useSearchRenderResults from "hooks/useSearchRenderResults";
+import Skeleton from "components/layout/common/Skeleton";
 
 export default function Karts() {
     const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(data, callback);
@@ -15,8 +16,8 @@ export default function Karts() {
     const { data, isLoading, isError } = useQuery({
         queryKey: ["karts"],
         queryFn: fetchKarts,
-        staleTime: 1000 * 60 * 60 * 12, // 12시간
-        gcTime: 1000 * 60 * 60 * 24, // 24시간
+        // staleTime: 1000 * 60 * 60 * 12, // 12시간
+        // gcTime: 1000 * 60 * 60 * 24, // 24시간
         retry: 1
     });
 
@@ -43,18 +44,16 @@ export default function Karts() {
 
     const dataProps = {
         ency: {
-            loopData: data,
-            kartGradeData: loadData,
-            tabIndex: tabIndex
+            loopData: data
         },
         search: {
-            loopData: results,
-            kartGradeData: loadData,
-            tabIndex: tabIndex
+            loopData: results
         }
     }
 
     const commonProps = {
+        kartGradeData: loadData,
+        tabIndex: tabIndex,
         value: value,
         setValue: setValue,
         clicked: clicked,
@@ -66,6 +65,7 @@ export default function Karts() {
     const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
 
     console.log(results)
+    console.log(dataPropsType)
 
     return(
         <div className="reset">
@@ -97,7 +97,17 @@ export default function Karts() {
                 />
             </Container>
 
-            {renderResults}
+            <div className="dataContainer">
+                {
+                    isLoading ? (
+                        dataPropsType.loopData?.map((_, index) => (
+                            <Skeleton type="grid" key={index} />
+                        ))
+                    )
+                    :
+                    renderResults
+                }
+            </div>
         </div>
     )
 }

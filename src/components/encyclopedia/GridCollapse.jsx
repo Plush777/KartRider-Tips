@@ -4,9 +4,9 @@ import { statArray, kartAcquisitionCondition } from "data/karts";
 import Graph from "components/encyclopedia/Graph";
 import React, { Fragment } from "react";
 
-export default function GridCollapse({ kartItem, kartName, kartItemIndex, collapseRef }) {
+export default function GridCollapse({ kartItem, kartItemIndex, collapseRef }) {
 
-    const acqArray = kartAcquisitionCondition(kartName);
+    const acqArray = kartAcquisitionCondition(kartItem.name);
     console.log(acqArray);
 
     return (

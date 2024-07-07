@@ -14,7 +14,9 @@ export default function DetailsItem ({
     setValue, 
     dataProps, 
     clicked,
-    setClicked
+    setClicked,
+    kartGradeData,
+    tabIndex
  }) {
     const pathname = usePathname();
     const [isActive, setIsActive] = useState('');
@@ -86,8 +88,8 @@ export default function DetailsItem ({
                     data={dataProps.loopData}
                     value={value} 
                     setValue={setValue}
-                    kartGradeData={dataProps.kartGradeData} 
-                    tabIndex={dataProps.tabIndex} 
+                    kartGradeData={kartGradeData} 
+                    tabIndex={tabIndex} 
                     clicked={clicked}
                     setClicked={setClicked}
                 />

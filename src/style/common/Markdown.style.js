@@ -490,6 +490,10 @@ export const Container = styled.div`
         }
     }
 
+    .dataContainer {
+        position: relative;
+    }
+
     ${({ theme }) => theme.tablet`
         li, p, span {
             line-height: 1.5;

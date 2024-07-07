@@ -12,7 +12,9 @@ export default function SearchResult({
     setValue, 
     dataProps, 
     clicked,
-    setClicked
+    setClicked,
+    kartGradeData,
+    tabIndex
 }) {
 
     const loopData = value.length > 0 ? dataProps : dataProps.data;
@@ -55,6 +57,8 @@ export default function SearchResult({
                     dataProps={dataProps}
                     clicked={clicked}
                     setClicked={setClicked}
+                    kartGradeData={kartGradeData}
+                    tabIndex={tabIndex}
                 />
             )
         }

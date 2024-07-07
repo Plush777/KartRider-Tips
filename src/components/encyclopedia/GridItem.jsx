@@ -3,7 +3,7 @@ import Image from "next/image";
 import { backgroundCondition } from "data/karts";
 import SCMinus from 'svg/ico-collapse-minus.svg';
 import SCPlus from 'svg/ico-collapse-plus.svg';
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function GridItem({ 
     kartItem, 
@@ -13,6 +13,8 @@ export default function GridItem({
     setToggleArray, 
     collapseRef 
 }) {
+
+    const [loaded, setLoaded] = useState(false);
 
     const handleToggle = (index) => {
         const updatedArray = [...toggleArray];
@@ -29,24 +31,25 @@ export default function GridItem({
         }
     }
 
-    
-
-    //kartItem.img를 배열로 만들기
-    useEffect(() => {
-        if (kartItem.img) {
-            const imgArray = kartItem.img.split(',');
-            const a = imgArray.concat(imgArray)
-            
-        }
-    }, [kartItem.img]);
-
-   
+    const isLoading = () => {
+        setTimeout(() => {
+            setLoaded(true);
+        }, 500);
+    }
 
     return (
         <G.InnerItem>
             <G.ImgDiv>
-                <G.Tag className={backgroundCondition(kartItem.type)}>{kartItem.type}</G.Tag>
-                <Image priority="high" src={kartItem.img} width={240} height={200} alt={kartItem.name}/>
+                <G.Tag className={`${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>
+                
+                <Image 
+                    className={`gridImage ${loaded ? 'active' : ''}`}
+                    onLoadingComplete={isLoading}
+                    src={kartItem.img} 
+                    width={240} 
+                    height={200} 
+                    alt={kartItem.name}
+                />
             </G.ImgDiv>
             <G.Box>
                 <G.InnerBox>
