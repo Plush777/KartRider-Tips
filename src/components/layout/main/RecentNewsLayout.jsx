@@ -32,7 +32,7 @@ export default function RecentNewsLayout ({ sectionName, data, isLoading, isErro
                 marginBottom="40px"
             />
 
-            <Tab tabIndex={tabIndex} setTabIndex={setTabIndex} data={tabArray} styleProps="main"/>
+            <Tab indicator={true} tabIndex={tabIndex} setTabIndex={setTabIndex} data={tabArray} styleProps="main"/>
 
             <M.MainInner minHeight="var(--mainHeightNews)">
                 {isError && <VideoState type='error'/>}

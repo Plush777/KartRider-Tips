@@ -11,7 +11,7 @@ export default function ReactQueryProvider({ children }){
     return (
         <QueryClientProvider client={client}>
             <ReactQueryStreamedHydration>{children}</ReactQueryStreamedHydration>
-            <ReactQueryDevtools initialIsOpen={false} />
+            <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left"/>
         </QueryClientProvider>
     );
 }

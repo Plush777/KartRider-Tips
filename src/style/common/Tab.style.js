@@ -36,11 +36,12 @@ export const TabDiv = styled.div`
 `
 
 export const TabWrap = styled.div`
+    position: relative;
     margin-bottom: ${props => props.marginBottom};
     padding-bottom: 15px;
+    border-bottom: 2px solid var(--stroke2);
 
     ${props => props.styleProps === 'ency' && css`
-        border-bottom: 2px solid var(--stroke2);
         width: 100%;
 
         ${TabDiv} {
@@ -57,8 +58,6 @@ export const TabWrap = styled.div`
     `}
 
     ${props => props.styleProps === 'main' && css`
-        border-bottom: 2px solid var(--text1);
-        
         ${TabDiv} {
             font-size: 1.5rem;
 

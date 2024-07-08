@@ -16,9 +16,9 @@ export default function Karts() {
     const { data, isLoading, isError } = useQuery({
         queryKey: ["karts"],
         queryFn: fetchKarts,
-        // staleTime: 1000 * 60 * 60 * 12, // 12시간
-        // gcTime: 1000 * 60 * 60 * 24, // 24시간
-        retry: 1
+        staleTime: 1000 * 60 * 60 * 12, // 12시간
+        gcTime: 1000 * 60 * 60 * 24, // 24시간
+        retry: 1,
     });
 
     const dataObject = useSearchDataObject(data,'list',loadData);
@@ -65,7 +65,6 @@ export default function Karts() {
     const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
 
     console.log(results)
-    console.log(dataPropsType)
 
     return(
         <div className="reset">
@@ -80,6 +79,7 @@ export default function Karts() {
                     marginBottom="15px"
                     disabledIndex={3}
                     styleProps="ency"
+                    indicator={true}
                 />
 
                 <SearchItem 
@@ -96,12 +96,12 @@ export default function Karts() {
                     inputStyleClassName="encyInput"
                 />
             </Container>
-
-            <div className="dataContainer">
+            
+            <div className={`dataWrapper ${isLoading ? 'grid' : ''}`}>
                 {
                     isLoading ? (
-                        dataPropsType.loopData?.map((_, index) => (
-                            <Skeleton type="grid" key={index} />
+                        Array.from({ length: 15 }, (_, i) => (
+                            <Skeleton key={i} />
                         ))
                     )
                     :

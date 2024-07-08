@@ -7,25 +7,9 @@ export const Wrap = styled.div`
     margin-bottom: 40px;
 `
 
-export const ButtonDiv = styled.div`
+export const Right = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 40px; 
-    height: 40px;
-    border: 3px solid var(--text1);
-
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    svg {
-        path {
-            fill: var(--text1);
-        }
-    }
+    column-gap: 10px;
+    margin-left: auto;
 `

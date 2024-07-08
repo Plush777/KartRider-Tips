@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { useRecoilValue } from "recoil";
 import { settingToggleAtom } from "recoil/common/settingToggleState";
+import BtnTop from 'components/common/BtnTop';
 
 export default function DefaultLayout ({ children, type }) {
     const [windowMobileWidth] = useState(window.innerWidth <= 768);
@@ -59,7 +60,10 @@ export default function DefaultLayout ({ children, type }) {
     return(
         <>
             <Header />
-            <DLay.Main>{typeCondition(type)}</DLay.Main>
+            <DLay.Main>
+                {typeCondition(type)}
+                <BtnTop />
+            </DLay.Main>
             <Footer/>
         </>
     )

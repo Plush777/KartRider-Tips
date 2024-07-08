@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const BtnArea = styled.div`
     display: flex;
@@ -7,7 +7,7 @@ export const BtnArea = styled.div`
     column-gap: ${props => props.cg};
     visibility: hidden;
 
-    ${props => props.outline && `
+    ${props => props.styleProp === 'outline' && `
         svg{
             fill: currentColor;
         }
@@ -49,25 +49,59 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
-    min-width: ${(props) => props.minWidth};
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid var(--stroke1);
-    font-size: .875rem;
     color: var(--text1);
-    background-color: var(--background2);
 
-    &.active{
-        color: var(--text3);
-        background-color: var(--active-background);
-    }
+    ${props => props.typeProp === 'default' && `
+        padding: 0 10px;
+        min-width: 100px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid var(--stroke1);
+        font-size: .875rem;
+        background-color: var(--background2);
+    `}
 
-    ${props => props.hasIcon && `
+    ${props => props.typeProp === 'article' && `
+        width: 40px; 
+        height: 40px;
+        border: 3px solid var(--text1);
+    `}
+
+    ${props => props.hasProp === 'icon' && `
         svg{
             margin-left: 5px;
         }
     `}
+
+    ${props => props.hasProp === 'anchor' && `
+        a {
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            width: 100%;
+            height: 100%;
+        }
+    `}
+
+    ${props => props.featureProp === 'sticky' && css`
+        position: sticky;
+        margin-left: auto;
+        margin-top: -40px;
+        margin-bottom: 20px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        opacity: ${props => props.opacity};
+        visibility: ${props => props.visibility};
+        transition: .3s ease-in-out;
+    `}
+
+
+    svg {
+        path {
+            fill: var(--text1);
+        }
+    }
 `
 
 export const BtnSetting = styled.button.attrs({ type: 'button' })`
@@ -86,30 +120,4 @@ export const BtnSetting = styled.button.attrs({ type: 'button' })`
         color: var(--text3);
         background-color: var(--active-background);
     }
-`
-
-export const BtnArrowDown = styled.button.attrs({ type: 'button' })`
-    position: absolute;
-    left: 50%;
-    /* 14px은 스크롤 넓이 */
-    transform: translateX(calc(-50% - 14px));
-    bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 10px;
-    height: 32px;
-    border-radius: 100px;
-    background-color: var(--active);
-    font-weight: 600;
-    min-width: 80px;
-
-    svg{
-        path{stroke: #fff;}
-    }
-`;
-
-export const BtnArrowDownText = styled.span`
-    color: #fff;
-    font-size: .875rem;
 `

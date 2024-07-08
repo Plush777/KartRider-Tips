@@ -6,12 +6,14 @@ import Pwa from 'components/pwa/Pwa';
 import * as H from "style/layout/Header.style";
 import { useRef, useEffect, useState } from 'react';
 import useClickAlert from "hooks/useClickAlert";
+import useMenuActive from "hooks/useMenuActive";
 
 export default function HeaderMenuWrap({ menuToggle, handleSettingButton }) {
     const { lockScroll } = useBodyScrollLock();
     const ulRef = useRef(null);
     const [wrapHeight, setWrapHeight] = useState(0);
     const clickAlert = useClickAlert('준비중이에요.');
+    const { myPath } = useMenuActive();
 
     useEffect(() => {
         if (ulRef.current) {

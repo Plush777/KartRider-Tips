@@ -490,8 +490,21 @@ export const Container = styled.div`
         }
     }
 
-    .dataContainer {
-        position: relative;
+    .dataWrapper {
+        min-height: 500px;
+
+        &.grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-auto-rows: 240px;
+            column-gap: 20px;
+            row-gap: 80px;
+
+            .bottom {
+                min-height: 20px;
+                max-height: 40px;
+            }
+        }
     }
 
     ${({ theme }) => theme.tablet`

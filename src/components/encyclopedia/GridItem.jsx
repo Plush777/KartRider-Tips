@@ -31,20 +31,18 @@ export default function GridItem({
         }
     }
 
-    const isLoading = () => {
-        setTimeout(() => {
-            setLoaded(true);
-        }, 500);
+    const loadingComplete = () => {
+        setLoaded(true);
     }
 
     return (
-        <G.InnerItem>
+        <G.InnerItem className={`${loaded ? 'loaded' : ''}`}>
             <G.ImgDiv>
-                <G.Tag className={`${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>
+                <G.Tag className={`gridTag ${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>
                 
                 <Image 
-                    className={`gridImage ${loaded ? 'active' : ''}`}
-                    onLoadingComplete={isLoading}
+                    className="gridImage"
+                    onLoadingComplete={loadingComplete}
                     src={kartItem.img} 
                     width={240} 
                     height={200} 
@@ -53,7 +51,7 @@ export default function GridItem({
             </G.ImgDiv>
             <G.Box>
                 <G.InnerBox>
-                    <G.Button type="button" onClick={() => handleToggle(uniqueIndex)}>
+                    <G.Button className="gridButton" type="button" onClick={() => handleToggle(uniqueIndex)}>
                         <G.Text>{kartItem.name}</G.Text>
 
                         {

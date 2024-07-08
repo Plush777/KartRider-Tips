@@ -1,4 +1,7 @@
 import * as T from "style/common/Tab.style";
+import TabIndicator from "./TabIndicator";
+import { useEffect } from "react";
+import useTabIndicator from "hooks/useTabIndicator";
 
 export default function Tab ({ 
     type, 
@@ -9,17 +12,31 @@ export default function Tab ({
     disabledIndex,
     styleProps,
     clicked,
-    setClicked
+    setClicked,
+    indicator
 }) {
-    const handleTab = (index) => {
+
+    const { indicatorState, tabRef, updateIndicator } = useTabIndicator();
+
+    useEffect(() => {
+        updateIndicator(tabIndex);
+    }, [tabIndex]);
+    
+    useEffect(() => {
+        updateIndicator(0); 
+    }, []);
+    
+    const handleTabIndex = (index) => {
         if (disabledIndex < index) {
             alert('아직 전설등급이 출시되지 않았습니다.');
             return;
         };
         setTabIndex(index);
-        
+    }
+
+    const handleClicked = (index) => {
         // 클릭한 탭의 인덱스를 저장
-        let newClicked = clicked.map((_, i) => {
+        let newClicked = clicked && clicked.map((_, i) => {
             if (i === index) {
                 return true;
             } else {
@@ -30,11 +47,9 @@ export default function Tab ({
         setClicked(newClicked);
     }
 
-    console.log(clicked)
-
     return(
         <T.TabWrap className={type} marginBottom={marginBottom} styleProps={styleProps}>
-            <T.TabList>
+            <T.TabList ref={tabRef}>
                 {
                     data.map((tab, index) => (
                         <T.TabItem className={disabledIndex < index ? 'disabled' : ''} key={index}>
@@ -42,7 +57,10 @@ export default function Tab ({
                                 as='button' 
                                 type='button' 
                                 className={`${tabIndex === index ? 'active' : ''} `}
-                                onClick={() => handleTab(index)}
+                                onClick={() => {
+                                    handleTabIndex(index);
+                                    clicked && handleClicked(index);
+                                }}
                             >
                                 {tab}
                             </T.TabDiv>
@@ -51,6 +69,7 @@ export default function Tab ({
                     ))
                 }
             </T.TabList>
+            {indicator && <TabIndicator width={indicatorState.width} left={indicatorState.left}/>}
         </T.TabWrap>
     )
 }

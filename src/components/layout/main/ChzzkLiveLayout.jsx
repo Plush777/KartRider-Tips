@@ -54,8 +54,12 @@ export default function ChzzkLiveLayout ({ sectionName }) {
             if (chzzkHasNextPage && !chzzkRefetching) {
                 return (
                     <B.BtnWrap className={!chzzkLoading && !chzzkFetchingNextPage && isShow}>
-                        <B.BtnArea outline>
-                            <B.Button hasIcon type='button' minWidth="100px" onClick={
+                        <B.BtnArea styleProp={'outline'}>
+                            <B.Button 
+                                typeProp={'default'} 
+                                hasProp={'icon'} 
+                                type='button' 
+                                onClick={
                                 () => {
                                     chzzkFetchNextPage();
                                     clickMoreButton();

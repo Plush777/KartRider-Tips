@@ -21,22 +21,22 @@ export const Item = styled.li`
 `
 
 export const InnerItem = styled.div`
-    
+    .gridTag, .gridImage, .gridButton {
+        opacity: 0;
+        transition: opacity .3s ease-in-out;    
+    }
+
+    &.loaded {
+        .gridTag, .gridImage, .gridButton {
+            opacity: 1;
+        }
+    }
 `
 
 export const ImgDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    img {
-        opacity: 0;
-        transition: opacity .3s ease-in-out;    
-
-        &.active {
-            opacity: 1;
-        }
-    }
 `
 
 export const Tag = styled.span`

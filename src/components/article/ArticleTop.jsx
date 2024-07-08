@@ -1,6 +1,6 @@
 import * as A from "style/components/sub/common/ArticleTop.style";
-import ArticleBack from "components/article/ArticleBack";
 import { usePathname } from "next/navigation";
+import ArticleButton from "components/article/ArticleButton";
 
 export default function ArticleTop() {
     const pathname = usePathname();
@@ -17,10 +17,10 @@ export default function ArticleTop() {
 
 
     function renderBackButton(type) {
-        if (learnCondition) return <ArticleBack type={type} link="/docs/learn" />;
-        if (encyCondition) return <ArticleBack type={type} link="/docs/encyclopedia" />;
+        if (learnCondition) return <ArticleButton type={type} link="/docs/learn" />;
+        if (encyCondition) return <ArticleButton type={type} link="/docs/encyclopedia" />;
 
-        return <ArticleBack type={type} link="/" />;
+        return <ArticleButton type={type} link="/" />;
     }
 
     function getBackButtonType() {
@@ -34,6 +34,12 @@ export default function ArticleTop() {
     return (
         <A.Wrap>
             {renderBackButton(backButtonType)}
+
+            <A.Right>
+                <ArticleButton type={'copy'} />
+                <ArticleButton type={'kakao'} />
+                <ArticleButton type={'edit'} />
+            </A.Right>
         </A.Wrap>
     )
 }   

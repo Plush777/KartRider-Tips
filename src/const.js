@@ -1,3 +1,9 @@
+export const meta = {
+    title: 'KartRider Tips',
+    description: '카트라이더에 대한 정보와 팁들을 제공합니다.',
+    thumbnail: '/og-season3.jpg',
+}
+
 export const lottieSrc = {
     rank: 'https://lottie.host/12db531d-fd6b-4862-bfff-1bb67edaa450/c2R4fIsZlR.lottie',
     season: 'https://lottie.host/7a070841-534a-4caa-b524-8f84ab7411ad/yPubudtc9R.lottie',

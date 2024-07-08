@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-    ${props => props.type === 'grid' && `
+     ${props => props.type === 'grid' && `
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         grid-auto-rows: 240px;
