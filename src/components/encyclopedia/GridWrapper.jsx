@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchKarts } from "scripts/api/karts";
 import Tab from 'components/common/Tab';
 import { tabArray } from "data/karts";
+import { characterData } from "data/characters";
 import useTab from 'hooks/useTab';
 import Container from "components/layout/common/Container";
 import useSearch from "hooks/useSearch";
@@ -10,9 +11,7 @@ import useSearchDataObject from "hooks/useSearchDataObject";
 import useSearchRenderResults from "hooks/useSearchRenderResults";
 import Skeleton from "components/layout/common/Skeleton";
 
-export default function Karts() {
-    const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(data, callback);
-
+export default function GridWrapper({ type }) {
     const { data, isLoading, isError } = useQuery({
         queryKey: ["karts"],
         queryFn: fetchKarts,
@@ -21,7 +20,17 @@ export default function Karts() {
         retry: 1,
     });
 
-    const dataObject = useSearchDataObject(data,'list',loadData);
+    const typeCondition = () => {
+        if (type === 'karts') return data;
+        if (type === 'characters') return characterData;
+
+        return null;
+    }
+
+    const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(typeCondition(), callback);
+    const dataObject = useSearchDataObject(typeCondition(),'list',loadData);
+
+    console.log(typeCondition());
 
     const { 
         value, 
@@ -44,7 +53,7 @@ export default function Karts() {
 
     const dataProps = {
         ency: {
-            loopData: data
+            loopData: typeCondition()
         },
         search: {
             loopData: results
@@ -63,8 +72,6 @@ export default function Karts() {
 
     const dataPropsType = value.length > 0 ? dataProps.search : dataProps.ency;
     const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
-
-    console.log(results)
 
     return(
         <div className="reset">

@@ -38,7 +38,6 @@ export default function ArticleTop() {
             <A.Right>
                 <ArticleButton type={'copy'} />
                 <ArticleButton type={'kakao'} />
-                <ArticleButton type={'edit'} />
             </A.Right>
         </A.Wrap>
     )

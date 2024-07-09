@@ -41,13 +41,6 @@ export default function ArticleButton({ link = '/', type }) {
                 <span className="hidden">카카오톡 공유하기</span>
             </Fragment>
         )
-
-        if (type === 'edit') return (
-            <Fragment>
-                <SCedit width="20" height="20"/>
-                <span className="hidden">수정 요청</span>
-            </Fragment>
-        )
     }
 
     const renderTypeCondition = type === 'copy' || type === 'kakao' || type === 'edit';

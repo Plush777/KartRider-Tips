@@ -38,7 +38,7 @@ export default function GridItem({
     return (
         <G.InnerItem className={`${loaded ? 'loaded' : ''}`}>
             <G.ImgDiv>
-                <G.Tag className={`gridTag ${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>
+                {kartItem.type && <G.Tag className={`gridTag ${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>}
                 
                 <Image 
                     className="gridImage"

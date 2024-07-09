@@ -13,7 +13,7 @@ import Info from "components/mdx/Info";
 import Tag from "components/mdx/Tag";
 import TagList from "components/mdx/TagList";
 import Figure from "components/mdx/Figure";
-import Karts from "components/encyclopedia/karts";
+import GridWrapper from "components/encyclopedia/GridWrapper";
 
 const MdxComponents = {
     Link: (props) => (
@@ -52,8 +52,8 @@ const MdxComponents = {
     Figure: (props) => (
         <Figure {...props}/>
     ),
-    Karts: () => (
-        <Karts />
+    GridWrapper: (props) => (
+        <GridWrapper {...props}/>
     )
 };
 

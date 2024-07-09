@@ -7,7 +7,6 @@ import React, { Fragment } from "react";
 export default function GridCollapse({ kartItem, kartItemIndex, collapseRef }) {
 
     const acqArray = kartAcquisitionCondition(kartItem.name);
-    console.log(acqArray);
 
     return (
         <Collap.Wrap ref={(el) => collapseRef.current[kartItemIndex] = el}>
@@ -23,7 +22,7 @@ export default function GridCollapse({ kartItem, kartItemIndex, collapseRef }) {
                     </Collap.Row>
                 </Collap.Item>
 
-                {kartItem.stat.array.map((stat, statIndex) => {
+                {kartItem.stat && kartItem.stat.array.map((stat, statIndex) => {
                     return (
                         <Collap.Item key={statIndex}> 
                             <Collap.Row rowGap="5px" flexDirection="column" columnGap="20px">

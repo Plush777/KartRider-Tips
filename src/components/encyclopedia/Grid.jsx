@@ -39,38 +39,42 @@ export default function Grid({
 
     return (
         <G.Wrap>
-            <G.List>
-                {dataState?.map((kart, kartIndex) => {
-                    return kart?.map((kartItem, kartItemIndex) => {
-                        const uniqueIndex = kartIndex * 100 + kartItemIndex;
-                        const toggle = toggleArray[uniqueIndex];
+            {
+                dataState?.length > 0 ?
+                <G.List>
+                    {dataState?.map((kart, kartIndex) => {
+                        return kart?.map((kartItem, kartItemIndex) => {
+                            const uniqueIndex = kartIndex * 100 + kartItemIndex;
+                            const toggle = toggleArray[uniqueIndex];
 
-                        return (
-                            <G.Item key={uniqueIndex}>
-                                <GridItem
-                                    kartItem={kartItem}
-                                    toggle={toggle}
-                                    uniqueIndex={uniqueIndex}
-                                    toggleArray={toggleArray}
-                                    setToggleArray={setToggleArray}
-                                    collapseRef={collapseRef}
-                                />
-
-                                {
-                                    toggle && 
-
-                                    <GridCollapse 
-                                        kartItem={kartItem} 
-                                        kartItemIndex={uniqueIndex} 
+                            return (
+                                <G.Item key={uniqueIndex}>
+                                    <GridItem
+                                        kartItem={kartItem}
+                                        toggle={toggle}
+                                        uniqueIndex={uniqueIndex}
+                                        toggleArray={toggleArray}
+                                        setToggleArray={setToggleArray}
                                         collapseRef={collapseRef}
                                     />
-                                }
-                                
-                            </G.Item>
-                        )
-                    })
-                })}
-            </G.List>
+
+                                    {
+                                        toggle && 
+
+                                        <GridCollapse 
+                                            kartItem={kartItem} 
+                                            kartItemIndex={uniqueIndex} 
+                                            collapseRef={collapseRef}
+                                        />
+                                    }
+                                    
+                                </G.Item>
+                            )
+                        })
+                    })}
+                </G.List> :
+                <div>데이터가 없어요.</div>
+            }
         </G.Wrap>
     )
 }
