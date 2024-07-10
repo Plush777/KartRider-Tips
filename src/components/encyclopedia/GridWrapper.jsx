@@ -10,9 +10,13 @@ import SearchItem from "components/search/SearchItem";
 import useSearchDataObject from "hooks/useSearchDataObject";
 import useSearchRenderResults from "hooks/useSearchRenderResults";
 import Skeleton from "components/layout/common/Skeleton";
+import { useEffect, useState } from "react";
+import NoMatch from "components/search/NoMatch";
 
 export default function GridWrapper({ type }) {
-    const { data, isLoading, isError } = useQuery({
+    const [containerActive, setContainerActive] = useState('');
+
+    const { data, isLoading, isError, isFetched } = useQuery({
         queryKey: ["karts"],
         queryFn: fetchKarts,
         staleTime: 1000 * 60 * 60 * 12, // 12시간
@@ -29,8 +33,6 @@ export default function GridWrapper({ type }) {
 
     const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(typeCondition(), callback);
     const dataObject = useSearchDataObject(typeCondition(),'list',loadData);
-
-    console.log(typeCondition());
 
     const { 
         value, 
@@ -67,15 +69,37 @@ export default function GridWrapper({ type }) {
         setValue: setValue,
         clicked: clicked,
         setClicked: setClicked,
+        setContainerActive: setContainerActive,
+        isLoading: isLoading,
         dataType: "list"
     };
 
     const dataPropsType = value.length > 0 ? dataProps.search : dataProps.ency;
     const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
 
+    const renderResultCondition = () => {
+        if (isLoading) {
+            return (
+                Array.from({ length: 10 }, (_, i) => (
+                    <Skeleton key={i} />
+                ))
+            )
+        } 
+        
+        if (isFetched) {
+            return renderResults;
+        }
+        
+        if (data.length <= 0) return <NoMatch text={'이런, 데이터가 없네요!'}/>;
+    }
+
+    useEffect(() => {
+        results.length <= 0 ? setContainerActive('auto') : setContainerActive('500px');
+    }, [tabIndex])
+
     return(
         <div className="reset">
-            <Container alignItems="flex-start" flexDirection="column">
+            <Container displayProp="flex" alignItems="flex-start" flexDirection="column">
                 <Tab 
                     type="ency" 
                     tabIndex={tabIndex}
@@ -103,18 +127,10 @@ export default function GridWrapper({ type }) {
                     inputStyleClassName="encyInput"
                 />
             </Container>
-            
-            <div className={`dataWrapper ${isLoading ? 'grid' : ''}`}>
-                {
-                    isLoading ? (
-                        Array.from({ length: 15 }, (_, i) => (
-                            <Skeleton key={i} />
-                        ))
-                    )
-                    :
-                    renderResults
-                }
-            </div>
+
+            <Container minHeight={containerActive} styleProp={isLoading ? 'grid' : ''}>
+                {renderResultCondition()}
+            </Container>
         </div>
     )
 }

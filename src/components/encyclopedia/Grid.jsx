@@ -1,7 +1,7 @@
 import * as G from "style/components/sub/encyclopedia/Grid.style";
 import { useState, useEffect, useRef } from "react";
 import GridItem from "components/encyclopedia/GridItem";
-import GridCollapse from "components/encyclopedia/GridCollapse"
+import GridCollapse from "components/encyclopedia/GridCollapse";
 import { filterDataByGrade } from "data/sidebar";
 
 export default function Grid({ 
@@ -39,42 +39,38 @@ export default function Grid({
 
     return (
         <G.Wrap>
-            {
-                dataState?.length > 0 ?
-                <G.List>
-                    {dataState?.map((kart, kartIndex) => {
-                        return kart?.map((kartItem, kartItemIndex) => {
-                            const uniqueIndex = kartIndex * 100 + kartItemIndex;
-                            const toggle = toggleArray[uniqueIndex];
+             <G.List>
+                {dataState?.map((kart, kartIndex) => {
+                    return kart?.map((kartItem, kartItemIndex) => {
+                        const uniqueIndex = kartIndex * 100 + kartItemIndex;
+                        const toggle = toggleArray[uniqueIndex];
 
-                            return (
-                                <G.Item key={uniqueIndex}>
-                                    <GridItem
-                                        kartItem={kartItem}
-                                        toggle={toggle}
-                                        uniqueIndex={uniqueIndex}
-                                        toggleArray={toggleArray}
-                                        setToggleArray={setToggleArray}
+                        return (
+                            <G.Item key={uniqueIndex}>
+                                <GridItem
+                                    kartItem={kartItem}
+                                    toggle={toggle}
+                                    uniqueIndex={uniqueIndex}
+                                    toggleArray={toggleArray}
+                                    setToggleArray={setToggleArray}
+                                    collapseRef={collapseRef}
+                                />
+
+                                {
+                                    toggle && 
+
+                                    <GridCollapse 
+                                        kartItem={kartItem} 
+                                        kartItemIndex={uniqueIndex} 
                                         collapseRef={collapseRef}
                                     />
-
-                                    {
-                                        toggle && 
-
-                                        <GridCollapse 
-                                            kartItem={kartItem} 
-                                            kartItemIndex={uniqueIndex} 
-                                            collapseRef={collapseRef}
-                                        />
-                                    }
-                                    
-                                </G.Item>
-                            )
-                        })
-                    })}
-                </G.List> :
-                <div>데이터가 없어요.</div>
-            }
+                                }
+                                
+                            </G.Item>
+                        )
+                    })
+                })}
+            </G.List>
         </G.Wrap>
     )
 }

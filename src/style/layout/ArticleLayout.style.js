@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
     width: 100%;
-    min-height: calc(100vh - 206px);
+    min-height: calc(100vh - 226px);
     background-color: var(--main-background);
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
-        min-height: calc(100vh - 186px);
+        min-height: calc(100vh - 206px);
     `}
 `
 

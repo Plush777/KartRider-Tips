@@ -21,13 +21,13 @@ export const Item = styled.li`
 `
 
 export const InnerItem = styled.div`
-    .gridTag, .gridImage, .gridButton {
+    .gridTag, .gridImage, .gridButton, .noImageDiv {
         opacity: 0;
         transition: opacity .3s ease-in-out;    
     }
 
     &.loaded {
-        .gridTag, .gridImage, .gridButton {
+        .gridTag, .gridImage, .gridButton, .noImageDiv {
             opacity: 1;
         }
     }
@@ -37,6 +37,11 @@ export const ImgDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+        object-fit: contain;
+        border-radius: 6px;
+    }
 `
 
 export const Tag = styled.span`

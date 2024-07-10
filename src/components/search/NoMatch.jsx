@@ -1,9 +1,9 @@
 import * as N from "style/components/sidebar/NoMatch.style"
 
-export default function NoMatch() {
+export default function NoMatch({ text }) {
     return(
         <N.Wrap>
-            <N.Text>이런, 검색결과가 없네요!</N.Text>
+            <N.Text>{text}</N.Text>
         </N.Wrap>
     )
 }

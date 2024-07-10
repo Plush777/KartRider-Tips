@@ -4,6 +4,7 @@ import { backgroundCondition } from "data/karts";
 import SCMinus from 'svg/ico-collapse-minus.svg';
 import SCPlus from 'svg/ico-collapse-plus.svg';
 import { useState } from "react";
+import NoImage from "components/layout/common/NoImage";
 
 export default function GridItem({ 
     kartItem, 
@@ -15,6 +16,11 @@ export default function GridItem({
 }) {
 
     const [loaded, setLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
+
+    const handleImageError = (event) => {
+        setImageError(true);
+    };
 
     const handleToggle = (index) => {
         const updatedArray = [...toggleArray];
@@ -36,19 +42,24 @@ export default function GridItem({
     }
 
     return (
-        <G.InnerItem className={`${loaded ? 'loaded' : ''}`}>
-            <G.ImgDiv>
-                {kartItem.type && <G.Tag className={`gridTag ${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>}
-                
-                <Image 
-                    className="gridImage"
-                    onLoadingComplete={loadingComplete}
-                    src={kartItem.img} 
-                    width={240} 
-                    height={200} 
-                    alt={kartItem.name}
-                />
-            </G.ImgDiv>
+        <G.InnerItem className={`${loaded || imageError ? 'loaded' : ''}`}>
+            {kartItem.img && !imageError ? 
+                 <G.ImgDiv>
+                    {kartItem.type && <G.Tag className={`gridTag ${backgroundCondition(kartItem.type)}`}>{kartItem.type}</G.Tag>}
+                    <Image 
+                        className="gridImage"
+                        onLoadingComplete={loadingComplete}
+                        onError={handleImageError}
+                        src={kartItem.img} 
+                        width={240} 
+                        height={200} 
+                        alt={kartItem.name}
+                    />
+                </G.ImgDiv>
+                :
+                <NoImage />
+            }
+
             <G.Box>
                 <G.InnerBox>
                     <G.Button className="gridButton" type="button" onClick={() => handleToggle(uniqueIndex)}>
@@ -62,7 +73,6 @@ export default function GridItem({
                         }
                     </G.Button>
                 </G.InnerBox>
-                
             </G.Box>
         </G.InnerItem>
     )

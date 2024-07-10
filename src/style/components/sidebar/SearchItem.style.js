@@ -55,9 +55,24 @@ export const SearchInput = styled.input`
     font-size: .875rem;
     color: var(--text1);
     background-color: var(--background1);
+    transition: opacity .3s ease-in-out;
+
+    ~ label svg {
+        transition: opacity .3s ease-in-out;
+    }
 
     &.active {
         padding-right: 20px;
+    }
+
+    &[disabled] {
+        opacity: .5;
+        cursor: not-allowed;
+
+        ~ label svg {
+            opacity: .3;
+            cursor: not-allowed;
+        }
     }
 
     &::placeholder {

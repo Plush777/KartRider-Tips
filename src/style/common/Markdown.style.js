@@ -11,7 +11,7 @@ export const Container = styled.div`
         }
     }
 
-    p {
+    p:not(.noImageText) {
         line-height: 1.5;
         font-size: 1rem;
         color: var(--text1);
@@ -486,23 +486,6 @@ export const Container = styled.div`
 
             + li {
                 margin-top: 0;
-            }
-        }
-    }
-
-    .dataWrapper {
-        min-height: 500px;
-
-        &.grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            grid-auto-rows: 240px;
-            column-gap: 20px;
-            row-gap: 80px;
-
-            .bottom {
-                min-height: 20px;
-                max-height: 40px;
             }
         }
     }
