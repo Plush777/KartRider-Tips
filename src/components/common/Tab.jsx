@@ -25,10 +25,17 @@ export default function Tab ({
     useEffect(() => {
         updateIndicator(0); 
     }, []);
+
+    const handleTabDisabledMessage = (index) => {
+        if (index === 4)  return '전설';
+        if (index === 3)  return '영웅';
+        
+        return '';
+    }
     
     const handleTabIndex = (index) => {
         if (disabledIndex < index) {
-            alert('아직 전설등급이 출시되지 않았습니다.');
+            alert(`아직 ${handleTabDisabledMessage(index)}등급이 출시되지 않았습니다.`);
             return;
         };
         setTabIndex(index);

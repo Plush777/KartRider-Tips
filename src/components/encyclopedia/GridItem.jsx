@@ -3,8 +3,8 @@ import Image from "next/image";
 import { backgroundCondition } from "data/karts";
 import SCMinus from 'svg/ico-collapse-minus.svg';
 import SCPlus from 'svg/ico-collapse-plus.svg';
-import { useState } from "react";
 import NoImage from "components/layout/common/NoImage";
+import useImageLoad from "hooks/useImageLoad";
 
 export default function GridItem({ 
     kartItem, 
@@ -15,12 +15,7 @@ export default function GridItem({
     collapseRef 
 }) {
 
-    const [loaded, setLoaded] = useState(false);
-    const [imageError, setImageError] = useState(false);
-
-    const handleImageError = (event) => {
-        setImageError(true);
-    };
+    const { loaded, imageError, handleImageError, loadingComplete } = useImageLoad();
 
     const handleToggle = (index) => {
         const updatedArray = [...toggleArray];
@@ -35,10 +30,6 @@ export default function GridItem({
                 }
             }, 1);
         }
-    }
-
-    const loadingComplete = () => {
-        setLoaded(true);
     }
 
     return (

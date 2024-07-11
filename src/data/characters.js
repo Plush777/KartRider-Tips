@@ -521,4 +521,4 @@ export const characterData = [
             '[영웅] BORN PINK (Black ver.) 리사',
         ]
     }
-]
+];

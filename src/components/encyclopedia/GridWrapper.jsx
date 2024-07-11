@@ -24,15 +24,26 @@ export default function GridWrapper({ type }) {
         retry: 1,
     });
 
-    const typeCondition = () => {
-        if (type === 'karts') return data;
-        if (type === 'characters') return characterData;
+    const typeCondition = (value) => {
+        if (value === 'data') {
+            if (type === 'karts') return data;
+            if (type === 'characters') return characterData;
+
+            return null;
+        }
+
+        if (value === 'tab') {
+            if (type === 'karts') return 3;
+            if (type === 'characters') return 4;
+
+            return null;
+        }
 
         return null;
     }
 
-    const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(typeCondition(), callback);
-    const dataObject = useSearchDataObject(typeCondition(),'list',loadData);
+    const { tabIndex, setTabIndex, clicked, setClicked, loadData, setLoadData } = useTab(typeCondition('data'), callback);
+    const dataObject = useSearchDataObject(typeCondition('data'),'list',loadData);
 
     const { 
         value, 
@@ -55,7 +66,7 @@ export default function GridWrapper({ type }) {
 
     const dataProps = {
         ency: {
-            loopData: typeCondition()
+            loopData: typeCondition('data')
         },
         search: {
             loopData: results
@@ -94,7 +105,7 @@ export default function GridWrapper({ type }) {
     }
 
     useEffect(() => {
-        results.length <= 0 ? setContainerActive('auto') : setContainerActive('500px');
+        isLoading ? setContainerActive('500px') : setContainerActive('auto');
     }, [tabIndex])
 
     return(
@@ -108,7 +119,7 @@ export default function GridWrapper({ type }) {
                     setClicked={setClicked}
                     data={tabArray} 
                     marginBottom="15px"
-                    disabledIndex={3}
+                    disabledIndex={typeCondition('tab')}
                     styleProps="ency"
                     indicator={true}
                 />

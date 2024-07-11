@@ -1,12 +1,13 @@
 import * as G from "style/components/sub/encyclopedia/Grid.style";
 import * as Collap from "style/components/sub/encyclopedia/Collapse.style";
-import { statArray, kartAcquisitionCondition } from "data/karts";
+import { statArray } from "data/karts";
 import Graph from "components/encyclopedia/Graph";
 import React, { Fragment } from "react";
+import { acquisitionCondition } from "data/acquisition";
 
 export default function GridCollapse({ kartItem, kartItemIndex, collapseRef }) {
 
-    const acqArray = kartAcquisitionCondition(kartItem.name);
+    const acqArray = acquisitionCondition(kartItem.name);
 
     return (
         <Collap.Wrap ref={(el) => collapseRef.current[kartItemIndex] = el}>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrap = styled.div`
-  
+    margin-top: 20px;
 `
 
 export const List = styled.ul`
