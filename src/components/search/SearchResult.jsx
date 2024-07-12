@@ -6,21 +6,12 @@ import * as S from "style/components/sub/common/Sidebar.style";
     값이 없으면 기본값은 사이드바 컴포넌트로 설정
 */
 
-export default function SearchResult({ 
-    dataType, 
-    value, 
-    setValue, 
-    dataProps, 
-    clicked,
-    setClicked,
-    kartGradeData,
-    tabIndex
-}) {
+export default function SearchResult({ dataProps, commonProps }) {
 
-    const loopData = value.length > 0 ? dataProps : dataProps.data;
+    const loopData = commonProps.value?.length > 0 ? dataProps : dataProps.data;
 
-    function renderData(dataType) {
-        if (!dataType) {
+    function renderData() {
+        if (commonProps?.dataType === 'sidebar') {
             return (
                 <>
                     {loopData?.map((data, dataIndex) => {
@@ -32,10 +23,11 @@ export default function SearchResult({
                                         return (
                                             <DetailsItem
                                                 key={depth1Index}
-                                                type={depth1.depth2 ? 'hasDepth' : 'noDepth'}
+                                                commonProps={commonProps}
+                                                depthType={depth1.depth2 ? 'hasDepth' : 'noDepth'}
                                                 depth1={depth1}
                                                 depth1Key={depth1Index}
-                                                value={value}
+                                                value={commonProps.value}
                                             />
                                         )
                                     })}
@@ -47,22 +39,16 @@ export default function SearchResult({
             )
         }
 
-        if (dataType === 'list') {
+        if (commonProps?.dataType === 'list') {
             return (
                 <DetailsItem
                     as="div"
-                    type={dataType}
-                    value={value}
-                    setValue={setValue}
                     dataProps={dataProps}
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    kartGradeData={kartGradeData}
-                    tabIndex={tabIndex}
+                    commonProps={commonProps}
                 />
             )
         }
     }
 
-    return renderData(dataType)
+    return renderData(commonProps.dataType)
 }

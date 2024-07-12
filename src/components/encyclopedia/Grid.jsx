@@ -4,20 +4,12 @@ import GridItem from "components/encyclopedia/GridItem";
 import GridCollapse from "components/encyclopedia/GridCollapse";
 import { filterDataByGrade } from "data/sidebar";
 
-export default function Grid({ 
-    data, 
-    kartGradeData, 
-    tabIndex, 
-    value, 
-    setValue, 
-    clicked,
-    setClicked
-}) {
+export default function Grid({ data, commonProps }) {
     const [dataState, setDataState] = useState(undefined);
     const [toggleArray, setToggleArray] = useState([]);
     const collapseRef = useRef([]);
 
-    let karts = filterDataByGrade(kartGradeData, data);
+    let karts = filterDataByGrade(commonProps.kartGradeData, data);
 
     useEffect(() => {
         if (data) {
@@ -26,16 +18,16 @@ export default function Grid({
             setToggleArray(initArray);
         }
 
-        if (data && value.length > 0) {
+        if (data && commonProps.value.length > 0) {
             setDataState(data);
         }
 
-        if (data && value.length > 0 && clicked?.includes(true)) {
-            setValue('');
-            setClicked([false, false, false, false, false]);
+        if (data && commonProps.value.length > 0 && commonProps.clicked?.includes(true)) {
+            commonProps.setValue('');
+            commonProps.setClicked([false, false, false, false, false]);
             setDataState(karts);
         }
-    }, [data, tabIndex, kartGradeData, value]);
+    }, [data, commonProps.tabIndex, commonProps.kartGradeData, commonProps.value]);
 
     return (
         <G.Wrap>

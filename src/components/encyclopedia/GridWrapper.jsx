@@ -86,7 +86,7 @@ export default function GridWrapper({ type }) {
     };
 
     const dataPropsType = value.length > 0 ? dataProps.search : dataProps.ency;
-    const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
+    const renderResults = useSearchRenderResults(commonProps, dataPropsType);
 
     const renderResultCondition = () => {
         if (isLoading) {
@@ -96,17 +96,20 @@ export default function GridWrapper({ type }) {
                 ))
             )
         } 
+
+        if (value.length > 0 && results.length === 0) return <NoMatch text={'이런, 데이터가 없네요!'}/>;
         
         if (isFetched) {
             return renderResults;
         }
-        
-        if (data.length <= 0) return <NoMatch text={'이런, 데이터가 없네요!'}/>;
     }
-
+   
     useEffect(() => {
+        // if () {
+
+        // }
         isLoading ? setContainerActive('500px') : setContainerActive('auto');
-    }, [tabIndex])
+    }, [data, tabIndex])
 
     return(
         <div className="reset">

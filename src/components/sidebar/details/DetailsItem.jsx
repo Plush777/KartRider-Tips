@@ -6,25 +6,14 @@ import { useState } from "react";
 import useClickAlert from "hooks/useClickAlert";
 import Grid from "components/encyclopedia/Grid";
 
-export default function DetailsItem ({ 
-    type, 
-    depth1, 
-    depth1Key, 
-    value, 
-    setValue, 
-    dataProps, 
-    clicked,
-    setClicked,
-    kartGradeData,
-    tabIndex
- }) {
+export default function DetailsItem ({ dataProps, commonProps, depth1, depth1Key, depthType, value }) {
     const pathname = usePathname();
     const [isActive, setIsActive] = useState('');
     const [detailOpen, setDetailOpen] = useState(false);
 
     const myHref = depth1 && depth1.depth2?.map((depth2) => depth2.href);
 
-    if (type !== 'list') {
+    if (commonProps.dataType === 'sidebar') {
         useLayoutEffect(() => {
             myHref?.forEach((href) => pathname === href && setIsActive('active'));
         }, [pathname]);
@@ -42,10 +31,10 @@ export default function DetailsItem ({
         return useClickAlert(message);
     }
 
-    const renderItem = (type, depth1, depth1Key) => {
-        if (type === 'noDepth') {
+    const renderItem = (depthType, depth1, depth1Key) => {
+        if (depthType === 'noDepth') {
             const hrefActive = depth1.href === pathname ? 'active' : '';
-            const isHighlighted = value.length > 0 ? 'highlight' : ''
+            const isHighlighted = value.length > 0 ? 'highlight' : '';
 
             return (
                 <S.DetailsOuterItem className={`${hrefActive}`} noDepth key={depth1Key}>
@@ -54,7 +43,7 @@ export default function DetailsItem ({
             )
         }
 
-        if (type === 'hasDepth') {
+        if (depthType === 'hasDepth') {
             return (
                 <S.DetailsOuterItem key={depth1Key}>
                     <S.Details open={detailOpen}>
@@ -82,16 +71,11 @@ export default function DetailsItem ({
         }
 
         /* 도감 페이지 검색  */
-        if (type === 'list') {
+        if (commonProps.dataType === 'list') {
             return (
                 <Grid 
                     data={dataProps.loopData}
-                    value={value} 
-                    setValue={setValue}
-                    kartGradeData={kartGradeData} 
-                    tabIndex={tabIndex} 
-                    clicked={clicked}
-                    setClicked={setClicked}
+                    commonProps={commonProps}
                 />
             )
         }
@@ -99,7 +83,7 @@ export default function DetailsItem ({
 
     return(
         <>
-            {renderItem(type, depth1, depth1Key)}
+            {renderItem(depthType, depth1, depth1Key)}
         </>
     )
 }

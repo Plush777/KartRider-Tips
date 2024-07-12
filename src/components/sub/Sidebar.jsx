@@ -26,12 +26,11 @@ export default function Sidebar({
     
     const commonProps = {
         value: value,
+        dataType: 'sidebar'
     };
 
     const dataPropsType = value.length > 0 ? results : dataObject;
-    const renderResults = useSearchRenderResults(value, results, commonProps, dataPropsType);
-
-    console.log(results)
+    const renderResults = useSearchRenderResults(commonProps, dataPropsType);
 
     return (
         <>

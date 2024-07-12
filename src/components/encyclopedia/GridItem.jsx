@@ -41,7 +41,7 @@ export default function GridItem({
                         className="gridImage"
                         onLoadingComplete={loadingComplete}
                         onError={handleImageError}
-                        src={kartItem.img} 
+                        src={kartItem.stat ? kartItem.img : `${kartItem.img}.webp`} 
                         width={240} 
                         height={200} 
                         alt={kartItem.name}
