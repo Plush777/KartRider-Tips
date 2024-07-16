@@ -11,6 +11,7 @@ import GuideTooltip from "components/common/GuideTooltip";
 import SCclose from 'svg/ico-close.svg';
 import { learnData } from "data/sidebar/learn/data";
 import { encyclopediaData } from "data/sidebar/encyclopedia/data";
+import { faqData } from "data/sidebar/faq/data";
 import useClickOutside from "hooks/useClickOutside";
 import useBodyScrollLock from 'hooks/useBodyScrollLock'; 
 import { useRecoilValue, useSetRecoilState } from "recoil";
@@ -56,6 +57,10 @@ export default function TopNavigation() {
 
         if (myPathArray.includes('encyclopedia')) {
             setSideData(encyclopediaData);
+        }
+
+        if (myPathArray.includes('faq')) {
+            setSideData(faqData);
         }
     }, [pathname]);
 

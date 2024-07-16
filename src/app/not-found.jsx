@@ -1,5 +1,5 @@
-import NotFound from "components/pages/NotFound";
+import PageError from "components/pages/PageError"
 
 export default function not_found() {
-    return <NotFound/>
+    return <PageError type="notFound"/>
 }

@@ -12,6 +12,7 @@ export const Main = styled.main`
 
 export const ContentWrap = styled.div`
     position: relative;
+    padding-bottom: 20px;
     background-color: var(--main-background);
     transition: background .3s ease-in-out;
 `

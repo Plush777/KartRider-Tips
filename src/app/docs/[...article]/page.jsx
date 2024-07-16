@@ -10,6 +10,7 @@ export async function generateMetadata({ params }) {
     function changeSuffix() {
         if (article.includes('learn')) return '배우기';
         if (article.includes('encyclopedia')) return '도감';
+        if (article.includes('faq')) return 'FAQ';
     }
 
     if (article.length > 1) {

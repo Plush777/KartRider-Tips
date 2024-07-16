@@ -97,17 +97,20 @@ export default function GridWrapper({ type }) {
             )
         } 
 
-        if (value.length > 0 && results.length === 0) return <NoMatch text={'이런, 데이터가 없네요!'}/>;
+        if (value.length > 0 && results.length === 0) {
+            if (!clicked.includes(true)) {
+                return <NoMatch text={'이런, 데이터가 없네요!'}/>
+            }
+        }
         
         if (isFetched) {
             return renderResults;
         }
     }
+
+    console.log(clicked)
    
     useEffect(() => {
-        // if () {
-
-        // }
         isLoading ? setContainerActive('500px') : setContainerActive('auto');
     }, [data, tabIndex])
 
@@ -115,6 +118,7 @@ export default function GridWrapper({ type }) {
         <div className="reset">
             <Container displayProp="flex" alignItems="flex-start" flexDirection="column">
                 <Tab 
+                    value={value}
                     type="ency" 
                     tabIndex={tabIndex}
                     setTabIndex={setTabIndex} 

@@ -38,7 +38,8 @@ export default function DefaultLayout ({ children, type }) {
                 <DLay.ContentWrap>
                     <DLay.ContentInner>
                         {children}
-                    </DLay.ContentInner>    
+                    </DLay.ContentInner>   
+                    <BtnTop /> 
                 </DLay.ContentWrap>
             )
         } 
@@ -62,7 +63,6 @@ export default function DefaultLayout ({ children, type }) {
             <Header />
             <DLay.Main>
                 {typeCondition(type)}
-                <BtnTop />
             </DLay.Main>
             <Footer/>
         </>

@@ -49,6 +49,7 @@ export const Container = styled.div`
         margin-bottom: 40px;
         font-size: 2.625rem;
         font-weight: 600;
+        text-transform: uppercase;
 
         ${({ theme }) => theme.laptopL`
             font-size: 2.25rem;
@@ -79,6 +80,10 @@ export const Container = styled.div`
     h4 {
         font-size: 1.5rem;
 
+        .mdLink {
+            display: inline;
+        }
+
         +ul, +ol {
             margin-top: 15px;
         }
@@ -93,6 +98,10 @@ export const Container = styled.div`
 
         +div {
             margin: 20px 0 0 0;
+        }
+
+        + h4 {
+            margin-top: 20px;
         }
     }
 

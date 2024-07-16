@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import useTabIndicator from "hooks/useTabIndicator";
 
 export default function Tab ({ 
+    value,
     type, 
     data, 
     tabIndex, 
@@ -15,7 +16,6 @@ export default function Tab ({
     setClicked,
     indicator
 }) {
-
     const { indicatorState, tabRef, updateIndicator } = useTabIndicator();
 
     useEffect(() => {
@@ -41,17 +41,12 @@ export default function Tab ({
         setTabIndex(index);
     }
 
+    /* 탭 클릭 상태를 value가 있을 때만 저장합니다. */
     const handleClicked = (index) => {
-        // 클릭한 탭의 인덱스를 저장
-        let newClicked = clicked && clicked.map((_, i) => {
-            if (i === index) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-
-        setClicked(newClicked);
+        if (value.length > 0) {
+            let newClicked = clicked && clicked.map((_, i) => i === index ? true : false);
+            setClicked(newClicked);
+        }
     }
 
     return(

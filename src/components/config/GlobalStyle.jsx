@@ -18,6 +18,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0;}
 *{box-sizing: border-box;}
 img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-select: none; display: block; -webkit-touch-callout:none; pointer-events: none;}
 ::selection{background-color: transparent;}
+input::selection{background-color: blue;}
 
 input{
     height: 100%;

@@ -4,6 +4,7 @@ export const changeLinkName = (item) => {
     /* 1차 카테고리 */
     if (item === 'learn') return '배우기';
     if (item === 'encyclopedia') return '도감';
+    if (item === 'faq') return 'faq';
 
     /* 2차 카테고리 */
     if (item === 'basic') return '기초';
@@ -12,6 +13,15 @@ export const changeLinkName = (item) => {
     if (item === 'tuning') return '튜닝';
     if (item === 'karts') return '카트바디 도감';
     if (item === 'characters') return '캐릭터 도감';
+
+    /* faq */
+    /* --- 스피드전, 아이템전, 튜닝은 중복이라 위에꺼 그대로 사용 --- */
+    if (item === 'goods') return '재화/레이싱 박스/레이싱 패스';
+    if (item === 'system') return '게임 시스템';
+    if (item === 'play') return '게임 플레이';
+    if (item === 'karts' && item === 'faq') return '카트바디';
+    if (item === 'setting') return '세팅';
+    if (item === 'etc') return '기타';
 
     /* 기초 */
     if (item === 'startbooster') return '출발 부스터';
@@ -140,7 +150,7 @@ export const changeLinkName = (item) => {
     if (item === 'sweeper') return '스위퍼';
 
     /* 튜닝 */
-    if (item === 'tuning') return '튜닝';
+    /* --- 튜닝은 중복이라 위에꺼 그대로 사용 --- */
 
     return 'undefined';
 }

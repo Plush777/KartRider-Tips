@@ -2,6 +2,7 @@
 export default function useTranslateTitle(fileName) {
     if (fileName === 'learn') return '배우기';
     if (fileName === 'encyclopedia') return '도감';
+    if (fileName === 'faq') return 'FAQ';
 
     if (fileName === 'startbooster') return '출발 부스터';
     if (fileName === 'grip') return '그립';

@@ -87,7 +87,6 @@ export const Button = styled.button`
         position: sticky;
         margin-left: auto;
         margin-top: -40px;
-        margin-bottom: 20px;
         bottom: 20px;
         right: 20px;
         z-index: 100;
