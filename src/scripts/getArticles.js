@@ -11,7 +11,7 @@ export async function getArticles(category, dir, lastFileName) {
     const filePaths = await getAllArticles(category, dir);
     // console.log(filePaths);
     const slug = `src/markdown/${category}/${dir}/${lastFileName}`;
-    // console.log(slug);  
+    console.log(slug);  
      
     const articleFind = filePaths.find((path) => {
         // console.log(path.slug);

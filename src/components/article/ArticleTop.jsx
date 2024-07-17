@@ -15,16 +15,27 @@ export default function ArticleTop() {
     pathnameArr.includes("karts") ||
     pathnameArr.includes("characters");
 
+    const faqCondition = 
+    pathnameArr.includes("goods") ||
+    pathnameArr.includes("system") ||
+    pathnameArr.includes("play") ||
+    pathnameArr.includes("karts") ||
+    pathnameArr.includes("tuning") ||
+    pathnameArr.includes("setting") ||
+    pathnameArr.includes("speed") ||
+    pathnameArr.includes("item") ||
+    pathnameArr.includes("etc");
 
     function renderBackButton(type) {
         if (learnCondition) return <ArticleButton type={type} link="/docs/learn" />;
         if (encyCondition) return <ArticleButton type={type} link="/docs/encyclopedia" />;
+        if (faqCondition) return <ArticleButton type={type} link="/docs/faq" />;
 
         return <ArticleButton type={type} link="/" />;
     }
 
     function getBackButtonType() {
-        if (learnCondition || encyCondition) return "back";
+        if (learnCondition || encyCondition || faqCondition) return "back";
         
         return "home";
     }

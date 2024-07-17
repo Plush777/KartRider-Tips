@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     img {
         + p {
-            margin-top: 10px;
+            margin-top: 20px;
         }
     }
 
@@ -117,7 +117,8 @@ export const Container = styled.div`
         color: var(--text1);
         line-height: 1.5;
         
-        a {
+        .mdLink {
+            display: inline;
             text-decoration: underline;
             text-underline-offset: 2px;
         }
@@ -130,6 +131,10 @@ export const Container = styled.div`
     ul {
         +.figureWrap {
             margin-top: 20px;
+        }
+
+        +h4 {
+            margin-top: 60px;
         }
     }
 

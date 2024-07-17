@@ -8,7 +8,7 @@ export const Wrap = styled.div`
     transition: background .3s ease-in-out;
 
     ${({ theme }) => theme.tablet`
-        min-height: calc(100vh - 206px);
+        min-height: calc(100vh - 186px);
     `}
 `
 

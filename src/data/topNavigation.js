@@ -1,3 +1,5 @@
+import { docsSlug } from "const";
+
 export const changeLinkName = (item) => {
     // console.log(item);
 
@@ -16,12 +18,71 @@ export const changeLinkName = (item) => {
 
     /* faq */
     /* --- 스피드전, 아이템전, 튜닝은 중복이라 위에꺼 그대로 사용 --- */
-    if (item === 'goods') return '재화/레이싱 박스/레이싱 패스';
-    if (item === 'system') return '게임 시스템';
-    if (item === 'play') return '게임 플레이';
-    if (item === 'karts' && item === 'faq') return '카트바디';
-    if (item === 'setting') return '세팅';
-    if (item === 'etc') return '기타';
+    if (item === 'goods') return docsSlug.faq.pageName.goods;
+    if (item === 'system') return docsSlug.faq.pageName.system;
+    if (item === 'play') return docsSlug.faq.pageName.play;
+    if (item === 'karts' && item === 'faq') return docsSlug.faq.pageName.karts;
+    if (item === 'setting') return docsSlug.faq.pageName.setting;
+    if (item === 'etc') return docsSlug.faq.pageName.etc;
+
+    /* faq goods */
+    if (item === 'coinLinked') return docsSlug.faq.depth2.goods.coinLinked.title;
+    if (item === 'mileage') return docsSlug.faq.depth2.goods.mileage.title;
+    if (item === 'how_to_get_a_lot_of_mileage') return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.title;
+    if (item === 'how_to_get_a_lot_of_lucci') return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.title;
+    if (item === 'how_do_i_get_a_plus_box_or_a_premium_plus_box') return docsSlug.faq.depth2.goods.how_do_i_get_a_plus_box_or_a_premium_plus_box.title;
+    if (item === 'get_coin_for_free') return docsSlug.faq.depth2.goods.get_coin_for_free.title;
+
+    /* faq system */
+    if (item === 'does_game_matching_work_with_all_platforms') return docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.title;
+    if (item === 'personal_outlet') return docsSlug.faq.depth2.system.personal_outlet.title;
+    if (item === 'how_do_i_use_the_coupon') return docsSlug.faq.depth2.system.how_do_i_use_the_coupon.title;
+    if (item === 'config_where_is_it') return docsSlug.faq.depth2.system.config_where_is_it.title;
+    if (item === 'my_License_is_missing') return docsSlug.faq.depth2.system.my_License_is_missing.title;
+    if (item === 'is_there_a_separate_AI_matching_standard') return docsSlug.faq.depth2.system.is_there_a_separate_AI_matching_standard.title;
+    if (item === 'my_replays_wont_save') return docsSlug.faq.depth2.system.my_replays_wont_save.title;
+    if (item === 'not_able_to_use_chat') return docsSlug.faq.depth2.system.not_able_to_use_chat.title;
+    if (item === 'drift_Assist_is_missing') return docsSlug.faq.depth2.system.drift_Assist_is_missing.title;
+    if (item === 'when_does the_weekly_limit_for_Lucci_reset') return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
+    if (item === 'what_is_the_block_feature') return docsSlug.faq.depth2.system.what_is_the_block_feature.title;
+    if (item === 'i_met_a_malicious_racer') return docsSlug.faq.depth2.system.i_met_a_malicious_racer.title;
+
+    /* faq play */
+    if (item === 'cant_you_play_common_games_other_than_grade_games') return docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.title;
+
+    /* faq karts */
+    if (item === 'whats_your_number_one_kartbody_right_now') return docsSlug.faq.depth2.karts.whats_your_number_one_kartbody_right_now.title;
+
+    /* faq tuning */
+    if (item === 'how_do_i_upgrade_my_kartbody') return docsSlug.faq.depth2.tuning.how_do_i_upgrade_my_kartbody.title;
+    if (item === 'what_is_the_best_way_to_set_up_a_tuning_stat') return docsSlug.faq.depth2.tuning.what_is_the_best_way_to_set_up_a_tuning_stat.title;
+    if (item === 'is_the_legend_rank_removed_from_tuning') return docsSlug.faq.depth2.tuning.is_the_legend_rank_removed_from_tuning.title;
+
+    /* faq setting */
+    if (item === 'wasd_or_arrow_keys') return docsSlug.faq.depth2.setting.wasd_or_arrow_keys.title;
+    if (item === 'settings_for_not_getting_lag') return docsSlug.faq.depth2.setting.settings_for_not_getting_lag.title;
+
+    /* faq speed */
+    if (item === 'what_character_should_i_use_in_speed_mode') return docsSlug.faq.depth2.speed.what_character_should_i_use_in_speed_mode.title;
+    if (item === 'what_is_the_best_map_for_beginners_to_practice_on') return docsSlug.faq.depth2.speed.what_is_the_best_map_for_beginners_to_practice_on.title;
+    if (item === 'booster_gauge_automatically_fills_up') return docsSlug.faq.depth2.speed.booster_gauge_automatically_fills_up.title;
+
+    /* faq item */
+    if (item === 'what_kartbody_should_i_use_in_item_mode') return docsSlug.faq.depth2.item.what_kartbody_should_i_use_in_item_mode.title;
+    if (item === 'what_character_should_i_use_in_item_mode') return docsSlug.faq.depth2.item.what_character_should_i_use_in_item_mode.title;
+    if (item === 'electromagnetic_bands_or_pets') return docsSlug.faq.depth2.item.electromagnetic_bands_or_pets.title;
+
+    /* faq etc */
+    if (item === 'there_is_frequent_game_crashing') return docsSlug.faq.depth2.etc.there_is_frequent_game_crashing.title;
+    if (item === 'what_do_you_mean_by_10_point_and_12_point') return docsSlug.faq.depth2.etc.what_do_you_mean_by_10_point_and_12_point.title;
+    if (item === 'no_kdl') return docsSlug.faq.depth2.etc.no_kdl.title;
+    if (item === 'is_there_a_guild_system_or_something') return docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.title;
+    if (item === 'get_a_good_kartbody') return docsSlug.faq.depth2.etc.get_a_good_kartbody.title;
+    if (item === 'where_can_i_get_the_items_i_didnt_get_back') return docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.title;
+    if (item === 'ping_is_high') return docsSlug.faq.depth2.etc.ping_is_high.title;
+    if (item === 'playStation_plus_subscription_benefits') return docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.title;
+
+    
 
     /* 기초 */
     if (item === 'startbooster') return '출발 부스터';

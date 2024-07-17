@@ -1,3 +1,4 @@
+import { docsSlug } from "const";
 
 export default function useTranslateTitle(fileName) {
     if (fileName === 'learn') return '배우기';
@@ -115,6 +116,52 @@ export default function useTranslateTitle(fileName) {
 
     if (fileName === 'karts') return '카트바디 도감';
     if (fileName === 'characters') return '캐릭터 도감';
+
+    if (fileName === docsSlug.faq.depth2.goods.coinLinked.slug) return docsSlug.faq.depth2.goods.coinLinked.title;
+    if (fileName === docsSlug.faq.depth2.goods.mileage.slug) return docsSlug.faq.depth2.goods.mileage.title;
+    if (fileName === docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.slug) return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.title;
+    if (fileName === docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.slug) return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.title;
+    if (fileName === docsSlug.faq.depth2.goods.how_do_i_get_a_plus_box_or_a_premium_plus_box.slug) return docsSlug.faq.depth2.goods.how_do_i_get_a_plus_box_or_a_premium_plus_box.title;
+    if (fileName === docsSlug.faq.depth2.goods.get_coin_for_free.slug) return docsSlug.faq.depth2.goods.get_coin_for_free.title;
+
+    if (fileName === docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.slug) return docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.title;
+    if (fileName === docsSlug.faq.depth2.system.personal_outlet.slug) return docsSlug.faq.depth2.system.personal_outlet.title;
+    if (fileName === docsSlug.faq.depth2.system.how_do_i_use_the_coupon.slug) return docsSlug.faq.depth2.system.how_do_i_use_the_coupon.title;
+    if (fileName === docsSlug.faq.depth2.system.config_where_is_it.slug) return docsSlug.faq.depth2.system.config_where_is_it.title;
+    if (fileName === docsSlug.faq.depth2.system.my_License_is_missing.slug) return docsSlug.faq.depth2.system.my_License_is_missing.title;
+    if (fileName === docsSlug.faq.depth2.system.my_replays_wont_save.slug) return docsSlug.faq.depth2.system.my_replays_wont_save.title;
+    if (fileName === docsSlug.faq.depth2.system.drift_Assist_is_missing.slug) return docsSlug.faq.depth2.system.drift_Assist_is_missing.title;
+    if (fileName === docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.slug) return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
+    if (fileName === docsSlug.faq.depth2.system.what_is_the_block_feature.slug) return docsSlug.faq.depth2.system.what_is_the_block_feature.title;
+    if (fileName === docsSlug.faq.depth2.system.i_met_a_malicious_racer.slug) return docsSlug.faq.depth2.system.i_met_a_malicious_racer.title;
+
+    if (fileName === docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.slug) return docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.title;
+
+    if (fileName === docsSlug.faq.depth2.karts.whats_your_number_one_kartbody_right_now.slug) return docsSlug.faq.depth2.karts.whats_your_number_one_kartbody_right_now.title;
+
+    if (fileName === docsSlug.faq.depth2.tuning.how_do_i_upgrade_my_kartbody.slug) return docsSlug.faq.depth2.tuning.how_do_i_upgrade_my_kartbody.title;
+    if (fileName === docsSlug.faq.depth2.tuning.what_is_the_best_way_to_set_up_a_tuning_stat.slug) return docsSlug.faq.depth2.tuning.what_is_the_best_way_to_set_up_a_tuning_stat.title;
+    if (fileName === docsSlug.faq.depth2.tuning.is_the_legend_rank_removed_from_tuning.slug) return docsSlug.faq.depth2.tuning.is_the_legend_rank_removed_from_tuning.title;
+
+    if (fileName === docsSlug.faq.depth2.setting.wasd_or_arrow_keys.slug) return docsSlug.faq.depth2.setting.wasd_or_arrow_keys.title;
+    if (fileName === docsSlug.faq.depth2.setting.settings_for_not_getting_lag.slug) return docsSlug.faq.depth2.setting.settings_for_not_getting_lag.title;
+
+    if (fileName === docsSlug.faq.depth2.speed.what_character_should_i_use_in_speed_mode.slug) return docsSlug.faq.depth2.speed.what_character_should_i_use_in_speed_mode.title;
+    if (fileName === docsSlug.faq.depth2.speed.what_is_the_best_map_for_beginners_to_practice_on.slug) return docsSlug.faq.depth2.speed.what_is_the_best_map_for_beginners_to_practice_on.title;
+    if (fileName === docsSlug.faq.depth2.speed.booster_gauge_automatically_fills_up.slug) return docsSlug.faq.depth2.speed.booster_gauge_automatically_fills_up.title;
+
+    if (fileName === docsSlug.faq.depth2.item.what_kartbody_should_i_use_in_item_mode.slug) return docsSlug.faq.depth2.item.what_kartbody_should_i_use_in_item_mode.title;
+    if (fileName === docsSlug.faq.depth2.item.what_character_should_i_use_in_item_mode.slug) return docsSlug.faq.depth2.item.what_character_should_i_use_in_item_mode.title;
+    if (fileName === docsSlug.faq.depth2.item.electromagnetic_bands_or_pets.slug) return docsSlug.faq.depth2.item.electromagnetic_bands_or_pets.title;
+
+    if (fileName === docsSlug.faq.depth2.etc.there_is_frequent_game_crashing.slug) return docsSlug.faq.depth2.etc.there_is_frequent_game_crashing.title;
+    if (fileName === docsSlug.faq.depth2.etc.what_do_you_mean_by_10_point_and_12_point.slug) return docsSlug.faq.depth2.etc.what_do_you_mean_by_10_point_and_12_point.title;
+    if (fileName === docsSlug.faq.depth2.etc.no_kdl.slug) return docsSlug.faq.depth2.etc.no_kdl.title;
+    if (fileName === docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.slug) return docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.title;
+    if (fileName === docsSlug.faq.depth2.etc.get_a_good_kartbody.slug) return docsSlug.faq.depth2.etc.get_a_good_kartbody.title;
+    if (fileName === docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.slug) return docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.title;
+    if (fileName === docsSlug.faq.depth2.etc.ping_is_high.slug) return docsSlug.faq.depth2.etc.ping_is_high.title;
+    if (fileName === docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.slug) return docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.title;
 
     if (fileName === 'purpose') return '사이트 안내';
     if (fileName === 'contribute') return '기여하기';

@@ -5,15 +5,25 @@ import { getArticles } from "scripts/getArticles";
 /* Article.jsx에서 slug 배열을 받아와서 파일명이 어떤 것이냐에 따라 src/docs/markdown 이후 dir (마크다운 파일경로) 를 결정합니다. */
 function markdownDirCondition(slugArray) {
     if (slugArray.includes('learn') && slugArray.length < 2) return 'learn/home';
-    if (slugArray.includes('basic')) return 'learn/basic';
-    if (slugArray.includes('item') ) return 'learn/item';
-    if (slugArray.includes('speed')) return 'learn/speed';
-    if (slugArray.includes('tuning')) return 'learn/tuning';
-    if (slugArray.includes('purpose')) return 'purpose';
-    if (slugArray.includes('contribute')) return 'contribute';
+    if (slugArray.includes('learn') && slugArray.includes('basic')) return 'learn/basic';
+    if (slugArray.includes('learn') && slugArray.includes('item') ) return 'learn/item';
+    if (slugArray.includes('learn') && slugArray.includes('speed')) return 'learn/speed';
+    if (slugArray.includes('learn') && slugArray.includes('tuning')) return 'learn/tuning';
+    if (slugArray.includes('learn') && slugArray.includes('purpose')) return 'purpose';
+    if (slugArray.includes('learn') && slugArray.includes('contribute')) return 'contribute';
 
     if (slugArray.includes('encyclopedia')) return 'encyclopedia/home';
-    if (slugArray.includes('faq')) return 'faq/home';
+
+    if (slugArray.includes('faq') && slugArray.length < 2) return 'faq/home';
+    if (slugArray.includes('faq') && slugArray.includes('goods')) return 'faq/goods';
+    if (slugArray.includes('faq') && slugArray.includes('system')) return 'faq/system';
+    if (slugArray.includes('faq') && slugArray.includes('play')) return 'faq/play';
+    if (slugArray.includes('faq') && slugArray.includes('karts')) return 'faq/karts';
+    if (slugArray.includes('faq') && slugArray.includes('tuning')) return 'faq/tuning';
+    if (slugArray.includes('faq') && slugArray.includes('setting')) return 'faq/setting';
+    if (slugArray.includes('faq') && slugArray.includes('speed')) return 'faq/speed';
+    if (slugArray.includes('faq') && slugArray.includes('item')) return 'faq/item';
+    if (slugArray.includes('faq') && slugArray.includes('etc')) return 'faq/etc';
 }
 
 function categoryCondition(slugArray) {
