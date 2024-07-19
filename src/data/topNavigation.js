@@ -46,6 +46,7 @@ export const changeLinkName = (item) => {
     if (item === 'when_does the_weekly_limit_for_Lucci_reset') return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
     if (item === 'what_is_the_block_feature') return docsSlug.faq.depth2.system.what_is_the_block_feature.title;
     if (item === 'i_met_a_malicious_racer') return docsSlug.faq.depth2.system.i_met_a_malicious_racer.title;
+    if (item === 'what_is_your_proficiency') return docsSlug.faq.depth2.system.what_is_your_proficiency.title;
 
     /* faq play */
     if (item === 'cant_you_play_common_games_other_than_grade_games') return docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.title;

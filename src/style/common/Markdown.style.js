@@ -20,7 +20,7 @@ export const Container = styled.div`
             display: inline;
         }
 
-        + .mdLink, + .mdRatio, + ul {
+        + .mdLink, + .mdRatio, + ul, + details {
             margin-top: 20px;
         }
 
@@ -39,6 +39,24 @@ export const Container = styled.div`
         ${({ theme }) => theme.tablet`
             font-size: 0.875rem;
         `};
+    }
+
+    details {
+        ul {
+            margin-top: 10px;
+        }
+
+        hr { 
+            margin: 30px 0;
+
+            + ul {
+                margin-top: 0;
+            }
+        }
+
+        + h3 {
+            margin-top: 70px;
+        }
     }
 
     h2 , h3 , h4, h5 {

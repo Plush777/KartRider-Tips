@@ -134,6 +134,7 @@ export default function useTranslateTitle(fileName) {
     if (fileName === docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.slug) return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
     if (fileName === docsSlug.faq.depth2.system.what_is_the_block_feature.slug) return docsSlug.faq.depth2.system.what_is_the_block_feature.title;
     if (fileName === docsSlug.faq.depth2.system.i_met_a_malicious_racer.slug) return docsSlug.faq.depth2.system.i_met_a_malicious_racer.title;
+    if (fileName === docsSlug.faq.depth2.system.what_is_your_proficiency.slug) return docsSlug.faq.depth2.system.what_is_your_proficiency.title;
 
     if (fileName === docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.slug) return docsSlug.faq.depth2.play.cant_you_play_common_games_other_than_grade_games.title;
 

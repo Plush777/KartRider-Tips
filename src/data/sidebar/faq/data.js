@@ -83,6 +83,10 @@ export const faqData = [
                     {
                         href: docsSlug.faq.depth2.system.i_met_a_malicious_racer.href,
                         title: docsSlug.faq.depth2.system.i_met_a_malicious_racer.title
+                    },
+                    {
+                        href: docsSlug.faq.depth2.system.what_is_your_proficiency.href,
+                        title: docsSlug.faq.depth2.system.what_is_your_proficiency.title
                     }
                 ]
             },

@@ -91,6 +91,11 @@ export const docsSlug = {
                 }
             },
             system: {
+                what_is_your_proficiency: {
+                    href: '/docs/faq/system/what_is_your_proficiency',
+                    slug: 'what_is_your_proficiency',
+                    title: '숙련도가 뭔가요?'
+                },
                 does_game_matching_work_with_all_platforms: {
                     href: '/docs/faq/system/does_game_matching_work_with_all_platforms',
                     slug: 'does_game_matching_work_with_all_platforms',
