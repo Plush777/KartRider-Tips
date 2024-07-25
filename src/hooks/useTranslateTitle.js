@@ -129,6 +129,7 @@ export default function useTranslateTitle(fileName) {
     if (fileName === docsSlug.faq.depth2.system.how_do_i_use_the_coupon.slug) return docsSlug.faq.depth2.system.how_do_i_use_the_coupon.title;
     if (fileName === docsSlug.faq.depth2.system.config_where_is_it.slug) return docsSlug.faq.depth2.system.config_where_is_it.title;
     if (fileName === docsSlug.faq.depth2.system.my_License_is_missing.slug) return docsSlug.faq.depth2.system.my_License_is_missing.title;
+    if (fileName === docsSlug.faq.depth2.system.is_there_a_separate_AI_matching_standard.slug) return docsSlug.faq.depth2.system.is_there_a_separate_AI_matching_standard.title;
     if (fileName === docsSlug.faq.depth2.system.my_replays_wont_save.slug) return docsSlug.faq.depth2.system.my_replays_wont_save.title;
     if (fileName === docsSlug.faq.depth2.system.drift_Assist_is_missing.slug) return docsSlug.faq.depth2.system.drift_Assist_is_missing.title;
     if (fileName === docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.slug) return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;

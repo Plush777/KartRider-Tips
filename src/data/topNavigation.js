@@ -43,7 +43,7 @@ export const changeLinkName = (item) => {
     if (item === 'my_replays_wont_save') return docsSlug.faq.depth2.system.my_replays_wont_save.title;
     if (item === 'not_able_to_use_chat') return docsSlug.faq.depth2.system.not_able_to_use_chat.title;
     if (item === 'drift_Assist_is_missing') return docsSlug.faq.depth2.system.drift_Assist_is_missing.title;
-    if (item === 'when_does the_weekly_limit_for_Lucci_reset') return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
+    if (item === 'when_does_the_weekly_limit_for_Lucci_reset') return docsSlug.faq.depth2.system.when_does_the_weekly_limit_for_Lucci_reset.title;
     if (item === 'what_is_the_block_feature') return docsSlug.faq.depth2.system.what_is_the_block_feature.title;
     if (item === 'i_met_a_malicious_racer') return docsSlug.faq.depth2.system.i_met_a_malicious_racer.title;
     if (item === 'what_is_your_proficiency') return docsSlug.faq.depth2.system.what_is_your_proficiency.title;

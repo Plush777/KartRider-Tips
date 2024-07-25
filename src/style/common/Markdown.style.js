@@ -6,7 +6,7 @@ export const Container = styled.div`
     }
 
     img {
-        + p {
+        + p, + h3 {
             margin-top: 20px;
         }
     }
@@ -24,7 +24,7 @@ export const Container = styled.div`
             margin-top: 20px;
         }
 
-        + .mdTip {
+        + .mdTip, + h5 {
             margin-top: 30px;
         }
 
@@ -32,10 +32,6 @@ export const Container = styled.div`
             margin-top: 70px;
         }
 
-        + h5 {
-            margin-top: 30px;
-        }
-        
         ${({ theme }) => theme.tablet`
             font-size: 0.875rem;
         `};
@@ -86,7 +82,7 @@ export const Container = styled.div`
     h3 {
         font-size: 2rem;
 
-        + div, + p, + ul, + ol {
+        + div, + p, + ul, + ol, + img, + s {
             margin-top: 20px;
         }
 
@@ -143,6 +139,10 @@ export const Container = styled.div`
 
         +li {
             margin-top: 5px;
+        }
+
+        ul {
+            margin-top: 10px;
         }
     }
 
@@ -304,6 +304,10 @@ export const Container = styled.div`
         + h3 {
             margin-top: 50px;
         }
+
+        + h4 {
+            margin-top: 70px;
+        }
     }
 
     .mdRef {
@@ -327,6 +331,12 @@ export const Container = styled.div`
 
         + h3, + h4 {
             margin-top: 70px;
+        }
+
+        &.hasImage {
+            .figureWrap, img {
+                width: 100%;
+            }
         }
     }
 
@@ -469,6 +479,10 @@ export const Container = styled.div`
         + h3, + h4 {
             margin-top: 50px;
         }
+
+        + p {
+            margin-top: 20px;
+        }
     }
 
     .figureWrap figure {
@@ -519,6 +533,34 @@ export const Container = styled.div`
             + li {
                 margin-top: 0;
             }
+        }
+    }
+
+    s {
+        display: block;
+    }
+
+    .staticImage {
+        width: 100%;
+        border-radius: 12px;
+        background-color: var(--background1);
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        gap: 10px;
+    }
+
+    [class*="grid"] {
+        margin-top: 20px;
+    }
+
+    .hasIdDiv {
+        margin-top: 70px;
+
+        + .mdFlex {
+            margin-top: 20px;
         }
     }
 
