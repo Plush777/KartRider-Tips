@@ -38,6 +38,12 @@ export const Container = styled.div`
     }
 
     details {
+        summary {
+            + * {
+                padding-top: 20px;
+            }
+        }
+
         ul {
             margin-top: 10px;
         }
@@ -50,7 +56,7 @@ export const Container = styled.div`
             }
         }
 
-        + h3 {
+        + h3, + h4 {
             margin-top: 70px;
         }
     }
@@ -98,7 +104,7 @@ export const Container = styled.div`
             display: inline;
         }
 
-        +ul, +ol {
+        +ul, +ol, +img {
             margin-top: 15px;
         }
 
@@ -544,6 +550,10 @@ export const Container = styled.div`
         width: 100%;
         border-radius: 12px;
         background-color: var(--background1);
+
+        &.half {
+            width: 50%;
+        }
     }
 
     .grid2 {
