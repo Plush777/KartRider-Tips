@@ -59,11 +59,6 @@ export const docsSlug = {
         },
         depth2: {
             goods: {
-                coinLinked: {
-                    href: '/docs/faq/goods/coinLinked',
-                    slug: 'coinLinked',
-                    title: '다른 플랫폼에서 충전한 K-COIN은 사용할 수 없나요?'
-                },
                 mileage: {
                     href: '/docs/faq/goods/mileage',
                     slug: 'mileage',
@@ -95,11 +90,6 @@ export const docsSlug = {
                     href: '/docs/faq/system/what_is_your_proficiency',
                     slug: 'what_is_your_proficiency',
                     title: '숙련도가 뭔가요?'
-                },
-                does_game_matching_work_with_all_platforms: {
-                    href: '/docs/faq/system/does_game_matching_work_with_all_platforms',
-                    slug: 'does_game_matching_work_with_all_platforms',
-                    title: '게임 매칭은 모든 플랫폼이랑 같이 되나요?'
                 },
                 personal_outlet: {
                     href: '/docs/faq/system/personal_outlet',
@@ -264,16 +254,6 @@ export const docsSlug = {
                     href: '/docs/faq/etc/where_can_i_get_the_items_i_didnt_get_back',
                     slug: 'where_can_i_get_the_items_i_didnt_get_back',
                     title: '얻지 못한 아이템들은 어디서 다시 얻을 수 있나요?'
-                },
-                ping_is_high: {
-                    href: '/docs/faq/etc/ping_is_high',
-                    slug: 'ping_is_high',
-                    title: '인터넷 상태는 좋은데 핑이 높아요.'
-                },
-                playStation_plus_subscription_benefits: {
-                    href: '/docs/faq/etc/playStation_plus_subscription_benefits',
-                    slug: 'playStation_plus_subscription_benefits',
-                    title: '플레이스테이션 플러스 구독 혜택에 대해 알려주세요.'
                 }
             }
         }

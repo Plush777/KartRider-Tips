@@ -117,14 +117,12 @@ export default function useTranslateTitle(fileName) {
     if (fileName === 'karts') return '카트바디 도감';
     if (fileName === 'characters') return '캐릭터 도감';
 
-    if (fileName === docsSlug.faq.depth2.goods.coinLinked.slug) return docsSlug.faq.depth2.goods.coinLinked.title;
     if (fileName === docsSlug.faq.depth2.goods.mileage.slug) return docsSlug.faq.depth2.goods.mileage.title;
     if (fileName === docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.slug) return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.title;
     if (fileName === docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.slug) return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.title;
     if (fileName === docsSlug.faq.depth2.goods.how_do_i_get_a_plus_box_or_a_premium_plus_box.slug) return docsSlug.faq.depth2.goods.how_do_i_get_a_plus_box_or_a_premium_plus_box.title;
     if (fileName === docsSlug.faq.depth2.goods.get_coin_for_free.slug) return docsSlug.faq.depth2.goods.get_coin_for_free.title;
 
-    if (fileName === docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.slug) return docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.title;
     if (fileName === docsSlug.faq.depth2.system.personal_outlet.slug) return docsSlug.faq.depth2.system.personal_outlet.title;
     if (fileName === docsSlug.faq.depth2.system.how_do_i_use_the_coupon.slug) return docsSlug.faq.depth2.system.how_do_i_use_the_coupon.title;
     if (fileName === docsSlug.faq.depth2.system.config_where_is_it.slug) return docsSlug.faq.depth2.system.config_where_is_it.title;
@@ -162,8 +160,6 @@ export default function useTranslateTitle(fileName) {
     if (fileName === docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.slug) return docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.title;
     if (fileName === docsSlug.faq.depth2.etc.get_a_good_kartbody.slug) return docsSlug.faq.depth2.etc.get_a_good_kartbody.title;
     if (fileName === docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.slug) return docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.title;
-    if (fileName === docsSlug.faq.depth2.etc.ping_is_high.slug) return docsSlug.faq.depth2.etc.ping_is_high.title;
-    if (fileName === docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.slug) return docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.title;
 
     if (fileName === 'purpose') return '사이트 안내';
     if (fileName === 'contribute') return '기여하기';

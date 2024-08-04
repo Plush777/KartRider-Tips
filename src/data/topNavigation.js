@@ -26,7 +26,6 @@ export const changeLinkName = (item) => {
     if (item === 'etc') return docsSlug.faq.pageName.etc;
 
     /* faq goods */
-    if (item === 'coinLinked') return docsSlug.faq.depth2.goods.coinLinked.title;
     if (item === 'mileage') return docsSlug.faq.depth2.goods.mileage.title;
     if (item === 'how_to_get_a_lot_of_mileage') return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_mileage.title;
     if (item === 'how_to_get_a_lot_of_lucci') return docsSlug.faq.depth2.goods.how_to_get_a_lot_of_lucci.title;
@@ -34,7 +33,6 @@ export const changeLinkName = (item) => {
     if (item === 'get_coin_for_free') return docsSlug.faq.depth2.goods.get_coin_for_free.title;
 
     /* faq system */
-    if (item === 'does_game_matching_work_with_all_platforms') return docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.title;
     if (item === 'personal_outlet') return docsSlug.faq.depth2.system.personal_outlet.title;
     if (item === 'how_do_i_use_the_coupon') return docsSlug.faq.depth2.system.how_do_i_use_the_coupon.title;
     if (item === 'config_where_is_it') return docsSlug.faq.depth2.system.config_where_is_it.title;
@@ -80,8 +78,6 @@ export const changeLinkName = (item) => {
     if (item === 'is_there_a_guild_system_or_something') return docsSlug.faq.depth2.etc.is_there_a_guild_system_or_something.title;
     if (item === 'get_a_good_kartbody') return docsSlug.faq.depth2.etc.get_a_good_kartbody.title;
     if (item === 'where_can_i_get_the_items_i_didnt_get_back') return docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.title;
-    if (item === 'ping_is_high') return docsSlug.faq.depth2.etc.ping_is_high.title;
-    if (item === 'playStation_plus_subscription_benefits') return docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.title;
 
     
 

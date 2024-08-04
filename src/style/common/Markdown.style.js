@@ -338,12 +338,6 @@ export const Container = styled.div`
         + h3, + h4 {
             margin-top: 70px;
         }
-
-        &.hasImage {
-            .figureWrap, img {
-                width: 100%;
-            }
-        }
     }
 
     .mdCg {
@@ -547,13 +541,34 @@ export const Container = styled.div`
     }
 
     .staticImage {
+        max-height: 100vh;
+        max-width: 100%;
         width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
         border-radius: 12px;
         background-color: var(--background1);
+
+        &.wAuto {
+            width: auto;
+            border-radius: 4px;
+        }
 
         &.half {
             width: 50%;
         }
+    }
+
+    .boxImage {
+        width: 150px;
+        height: 119px;
+    }
+
+    .centerImage {
+        width: auto;
+        margin: 0 auto;
+        border-radius: 12px;
     }
 
     .grid2 {

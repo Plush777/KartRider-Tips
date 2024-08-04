@@ -8,10 +8,6 @@ export const faqData = [
                 title: docsSlug.faq.pageName.goods,
                 depth2: [
                     {
-                        href: docsSlug.faq.depth2.goods.coinLinked.href,
-                        title: docsSlug.faq.depth2.goods.coinLinked.title
-                    },
-                    {
                         href: docsSlug.faq.depth2.goods.mileage.href,
                         title: docsSlug.faq.depth2.goods.mileage.title
                     },
@@ -36,10 +32,6 @@ export const faqData = [
             {
                 title: docsSlug.faq.pageName.system,
                 depth2: [
-                    {
-                        href: docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.href,
-                        title: docsSlug.faq.depth2.system.does_game_matching_work_with_all_platforms.title
-                    },
                     {
                         href: docsSlug.faq.depth2.system.personal_outlet.href,
                         title: docsSlug.faq.depth2.system.personal_outlet.title
@@ -198,14 +190,6 @@ export const faqData = [
                     {
                         href: docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.href,
                         title: docsSlug.faq.depth2.etc.where_can_i_get_the_items_i_didnt_get_back.title
-                    },
-                    {
-                        href: docsSlug.faq.depth2.etc.ping_is_high.href,
-                        title: docsSlug.faq.depth2.etc.ping_is_high.title
-                    },
-                    {
-                        href: docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.href,
-                        title: docsSlug.faq.depth2.etc.playStation_plus_subscription_benefits.title
                     }
                 ]
             }
