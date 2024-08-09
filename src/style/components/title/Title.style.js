@@ -48,7 +48,6 @@ export const HeadTitle = styled.h3`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    word-break: keep-all;
     max-height: 87px;
 
     ${({ theme }) => theme.laptop`

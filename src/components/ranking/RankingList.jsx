@@ -1,85 +1,91 @@
 import SCrankArrowUp from 'svg/ico-rank-arrow-up.svg';
 import SCrankArrowDown from 'svg/ico-rank-arrow-down.svg';
+import SCrankMinus from 'svg/ico-rank-minus.svg';
 import Image from 'next/image';
 import * as R from 'style/components/ranking/RankingList.style';
-import { fetchGameImage } from 'scripts/api/ranking';
+import * as B from 'style/common/Button.style';
 
-export default function RankingList ({ data, isLoading }) {
+export default function RankingList ({ 
+    ranking, 
+    rankingFetchNextPage, 
+    rankingHasNextPage, 
+    rankingFetchingNextPage,
+    imageData
+}) {
     const rankIconCondition = (data) => {
         if (data) {
-            if (data.includes('ranking-static-up')) return <SCrankArrowUp width="12px" height="12px" fill="#eb0400"/>
-            if (data.includes('ranking-static-down')) return <SCrankArrowDown width="12px" height="12px" fill="#0094ff"/>
-            if (data.includes('new')) return 'new'
+            if (data.includes('up')) return <SCrankArrowUp width="12px" height="12px" fill="#eb0400"/>
+            if (data.includes('down')) return <SCrankArrowDown width="12px" height="12px" fill="#0094ff"/>
+            if (data.includes('noChange')) return <SCrankMinus width="12px" height="12px" fill="var(--disabled)"/>
         }
     }
-
-    const rankImgCondition = (conditionData, returnData) => {
-        if (conditionData === '카트라이더 드리프트') {
-            return '/images/common/img-kart-app.webp';
-        } else {
-            return returnData; 
-        }
-    }
-  
-    const myGameRank = data && data.filter((list) => list.title === '카트라이더 드리프트');
 
     return (
         <R.RankWrap>
-            <R.BottomBar>
+            {/* <R.BottomBar>
                 {myGameRank?.map((list, index) => {
-                    const { title, rank, rankChange, rankStatus } = list;
-                    
-
-                    console.log(fetchGameImage(title));
+                    const { title, rank, gameRankUpDown, sharesStatus, shares } = list;
+                    const { src, alt } = list.images;
 
                     return(
                         <R.RankBoxItem key={index} as="div">
                             <R.RankInnerBox direction="column" seq>
                                 <R.RankText className="number" as="strong">{rank}</R.RankText>
                                 {
-                                    rankChange === '' && rankStatus === '' ?
+                                    gameRankUpDown === '' && sharesStatus === '' ?
                                     null
                                     :
                                     <R.RankStatus>
-                                        <R.RankText className="icon">{rankIconCondition(rankStatus)}</R.RankText>
-                                        <R.RankText className="status">{rankChange}</R.RankText>
+                                        <R.RankText className="icon">{rankIconCondition(sharesStatus)}</R.RankText>
+                                        <R.RankText className="status">{gameRankUpDown}</R.RankText>
                                     </R.RankStatus>
                                 }
                             </R.RankInnerBox>
                             <R.RankInnerBox direction="row">
-                                <Image width={38} height={38} src={''} alt="카트라이더 드리프트"/>
+                                <Image width={38} height={38} src={src ? src : ''} alt={alt ? alt : ''}/>
                                 <R.RankText as="h3" className="gameName">{title}</R.RankText>
                             </R.RankInnerBox>
                         </R.RankBoxItem>
                     )
                 })}
-            </R.BottomBar>
+            </R.BottomBar> */}
             <R.RankList>
-                {data && data.map((list, index) => {
-                    const { title, rank, rankChange, rankStatus } = list;
+                {ranking && ranking.pages.map((pageItem, pageIndex) => {
+                    return pageItem.map((list, index) => {
+                        const { title, rank, gameRankUpDown, sharesStatus, shares } = list;
 
-                    return(
-                        <R.RankBoxItem key={index}>
-                            <R.RankInnerBox direction="column" seq>
-                                <R.RankText className="number" as="strong" data-number={index+1}>{rank}</R.RankText>
-                                {
-                                    rankChange === '' && rankStatus === '' ?
-                                    null
-                                    :
-                                    <R.RankStatus>
-                                        <R.RankText className="icon">{rankIconCondition(rankStatus)}</R.RankText>
-                                        <R.RankText className="status">{rankChange}</R.RankText>
-                                    </R.RankStatus>
-                                }
-                            </R.RankInnerBox>
-                            <R.RankInnerBox direction="row">
-                                <Image width={64} height={64} src={''} alt="카트라이더 드리프트"/>
-                                <R.RankText as="h3" className="gameName">{title}</R.RankText>
-                            </R.RankInnerBox>
-                        </R.RankBoxItem>
-                    )
+                        return(
+                            <R.RankBoxItem key={index}>
+                                <R.RankInnerBox direction="column" seq>
+                                    <R.RankText className="number" as="strong" data-number={pageIndex === 0 && index+1}>{rank}</R.RankText>
+                                    {
+                                        gameRankUpDown === '' && sharesStatus === '' ?
+                                        null
+                                        :
+                                        <R.RankStatus>
+                                            <R.RankText className="icon">{rankIconCondition(sharesStatus)}</R.RankText>
+                                            <R.RankText className="status">{gameRankUpDown}</R.RankText>
+                                        </R.RankStatus>
+                                    }
+                                </R.RankInnerBox>
+                                <R.RankInnerBox direction="row">
+                                    <Image width={64} height={64} src={''} alt={''}/>
+                                    <R.RankText as="h3" className="gameName">{title}</R.RankText>
+                                </R.RankInnerBox>
+                            </R.RankBoxItem>
+                        )})
                 })}
             </R.RankList>
+            <R.RankButtonWrap>
+                <B.Button 
+                    type="button" 
+                    typeProp="rank" 
+                    disabled={rankingFetchingNextPage || !rankingHasNextPage ? true : false} 
+                    onClick={rankingFetchNextPage}
+                >
+                    더보기
+                </B.Button>
+            </R.RankButtonWrap>
         </R.RankWrap>
     )
 }

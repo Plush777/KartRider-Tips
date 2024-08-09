@@ -56,7 +56,8 @@ export const RankInnerBox = styled.div`
 
     img{
         border-radius: 8px;
-        object-fit: cover;
+        object-fit: scale-down;
+        background-color: #fff;
     }
 
     ${({ theme }) => theme.tablet`
@@ -102,7 +103,7 @@ export const RankText = styled.span`
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.7px;
-        color: var(--red);
+        /* color: var(--red); */
     }
 
     &.gameName{
@@ -135,7 +136,7 @@ export const RankText = styled.span`
 export const BottomBar = styled.div`
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: calc(40px + 20px);
     width: calc(100% - 14px);
     display: flex;
     align-items: center;
@@ -186,4 +187,10 @@ export const BottomBar = styled.div`
             height: 34px;
         }
     `};
+`
+
+export const RankButtonWrap = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 `

@@ -67,6 +67,22 @@ export const Button = styled.button`
         border: 3px solid var(--text1);
     `}
 
+    ${props => props.typeProp === 'rank' && `
+        width: calc(100% - 14px); 
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid var(--stroke1);
+        font-size: .875rem;
+        background-color: var(--background2);
+        transition: .3s ease-in-out;
+
+        &:disabled {
+            cursor: not-allowed;
+            color: var(--disabled);
+            opacity: .5;
+        }
+    `}
+
     ${props => props.hasProp === 'icon' && `
         svg{
             margin-left: 5px;

@@ -1,16 +1,11 @@
 import axios from 'axios';
 
-export const fetchRanking = async () => {
-    const { data } = await axios.get('http://localhost:8000/api/ranking');
+export const pageSize = 5;
 
-    return data;
-}
+export const fetchGameData = async ({ pageParam }) => {
+    const start = pageParam;
 
-export const fetchGameImage = async (gameName) => {
-    const { data } = await axios.get(`http://localhost:8000/api/game/image/${gameName}`);
+    const response = await axios.get(`http://localhost:8000/api/games?page=${start}&size=${pageSize}`);
 
-    return {
-        src: data.src,
-        alt: data.alt
-    }
+    return response.data;
 }

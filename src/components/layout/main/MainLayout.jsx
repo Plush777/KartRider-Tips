@@ -5,7 +5,6 @@ import RecentNewsLayout from 'components/layout/main/RecentNewsLayout';
 import RankingLayout from 'components/layout/main/RankingLayout';
 import SeasonLayout from 'components/layout/main/SeasonLayout';
 import { useQueries } from '@tanstack/react-query';
-import { fetchRanking } from 'scripts/api/ranking';
 import { fetchVideoLists } from 'scripts/api/youtubeVideo';
 import { fetchNews, fetchArticles } from 'scripts/api/news';
 import { videoIds } from 'data/recommend';
@@ -14,13 +13,6 @@ import * as M from 'style/layout/MainLayout.style';
 export default function MainLayout() {
     const queryResults = useQueries({
         queries: [
-            {
-                queryKey: ["rankingLists"],
-                queryFn: fetchRanking,
-                staleTime: 1000 * 60 * 60 * 24, // 24시간
-                gcTime: 1000 * 60 * 60 * 24 * 5, // 5일
-                retry: 1
-            },
             {
                 queryKey: ["youtubeVideoLists"],
                 queryFn: () => fetchVideoLists(videoIds),
@@ -50,7 +42,6 @@ export default function MainLayout() {
     });
 
     const [
-        { data: ranking, isLoading: rankingIsLoading, isError: rankingIsError },
         { data: youtubeVideo, isLoading: youtubeVideoIsLoading, isError: youtubeVideoIsError },
         { data: newsData, isLoading: newsIsLoading, isError: newsIsError }
     ] = queryResults;
@@ -58,11 +49,7 @@ export default function MainLayout() {
     return ( 
         <>
             <M.Container>
-                <RankingLayout 
-                    data={ranking} 
-                    isLoading={rankingIsLoading} 
-                    isError={rankingIsError}
-                />
+                <RankingLayout />
                 <SeasonLayout/>
             </M.Container>
 
