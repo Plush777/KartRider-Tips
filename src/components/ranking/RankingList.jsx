@@ -9,8 +9,7 @@ export default function RankingList ({
     ranking, 
     rankingFetchNextPage, 
     rankingHasNextPage, 
-    rankingFetchingNextPage,
-    imageData
+    rankingFetchingNextPage
 }) {
     const rankIconCondition = (data) => {
         if (data) {
@@ -19,6 +18,10 @@ export default function RankingList ({
             if (data.includes('noChange')) return <SCrankMinus width="12px" height="12px" fill="var(--disabled)"/>
         }
     }
+
+    const loopRankingData = ranking && ranking.pages[0].result;
+
+    // console.log(loopRankingData);
 
     return (
         <R.RankWrap>
@@ -50,31 +53,30 @@ export default function RankingList ({
                 })}
             </R.BottomBar> */}
             <R.RankList>
-                {ranking && ranking.pages.map((pageItem, pageIndex) => {
-                    return pageItem.map((list, index) => {
-                        const { title, rank, gameRankUpDown, sharesStatus, shares } = list;
+                {loopRankingData.map((loopItem, loopIndex) => {
+                    const { title, rank, gameRankUpDown, sharesStatus, shares, targetDate, useStoreCount, img } = loopItem;
 
-                        return(
-                            <R.RankBoxItem key={index}>
-                                <R.RankInnerBox direction="column" seq>
-                                    <R.RankText className="number" as="strong" data-number={pageIndex === 0 && index+1}>{rank}</R.RankText>
-                                    {
-                                        gameRankUpDown === '' && sharesStatus === '' ?
-                                        null
-                                        :
-                                        <R.RankStatus>
-                                            <R.RankText className="icon">{rankIconCondition(sharesStatus)}</R.RankText>
-                                            <R.RankText className="status">{gameRankUpDown}</R.RankText>
-                                        </R.RankStatus>
-                                    }
-                                </R.RankInnerBox>
-                                <R.RankInnerBox direction="row">
-                                    <Image width={64} height={64} src={''} alt={''}/>
-                                    <R.RankText as="h3" className="gameName">{title}</R.RankText>
-                                </R.RankInnerBox>
-                            </R.RankBoxItem>
-                        )})
-                })}
+                    return(
+                        <R.RankBoxItem key={loopItem.rank}>
+                            <R.RankInnerBox direction="column" seq>
+                                <R.RankText className="number" as="strong">{rank}</R.RankText>
+                                {
+                                    gameRankUpDown === '' && sharesStatus === '' ?
+                                    null
+                                    :
+                                    <R.RankStatus>
+                                        <R.RankText className="icon">{rankIconCondition(sharesStatus)}</R.RankText>
+                                        <R.RankText className="status">{gameRankUpDown}</R.RankText>
+                                    </R.RankStatus>
+                                }
+                            </R.RankInnerBox>
+                            <R.RankInnerBox direction="row">
+                                <Image width={64} height={64} src={img == null ? '' : img} alt={`${title} 이미지`}/>
+                                <R.RankText as="h3" className="gameName">{title}</R.RankText>
+                            </R.RankInnerBox>
+                        </R.RankBoxItem>
+                    )})
+                }
             </R.RankList>
             <R.RankButtonWrap>
                 <B.Button 

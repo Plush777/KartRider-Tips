@@ -56,7 +56,7 @@ export const RankInnerBox = styled.div`
 
     img{
         border-radius: 8px;
-        object-fit: scale-down;
+        /* object-fit: scale-down; */
         background-color: #fff;
     }
 

@@ -3,9 +3,8 @@ import MainTitle from 'components/title/MainTitle';
 import RankingList from 'components/ranking/RankingList';
 import VideoState from 'components/state/VideoState';
 import { lottieSrc, mainTitle } from 'cons';
-import { useInfiniteQuery, useQueries } from "@tanstack/react-query";
-import { fetchGameData, pageSize } from 'scripts/api/ranking';
-import { fetchSearchImage } from 'scripts/api/searchImage';
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { fetchGameData } from 'scripts/api/ranking';
 
 export default function RankingLayout () {
     const {
@@ -18,7 +17,7 @@ export default function RankingLayout () {
     } = useInfiniteQuery({
         queryKey: ["rankingLists"],
         queryFn: fetchGameData,
-        initialPageParam: 0,
+        initialPageParam: 1,
         staleTime: 1000 * 60 * 60 * 24, // 24시간
         gcTime: 1000 * 60 * 60 * 24 * 5, // 5일
         retry: 1,
@@ -28,22 +27,6 @@ export default function RankingLayout () {
     });
 
     console.log(ranking);
-
-    const gameName = ranking && ranking.pages.map((pageItem) => pageItem.map((list) => list.title));
-
-    const {
-        data: searchImageData,
-    } = useQueries({
-        queries: [{
-            queryKey: ["searchImage"],
-            queryFn: fetchSearchImage(gameName, pageSize),
-            staleTime: Infinity,
-            gcTime: Infinity,
-            retry: 1
-        }]
-    });
-
-    // console.log(searchImageData);
 
     return(
         <M.ContainerBox>
@@ -64,7 +47,6 @@ export default function RankingLayout () {
                         rankingFetchNextPage={rankingFetchNextPage}
                         rankingHasNextPage={rankingHasNextPage}
                         rankingFetchingNextPage={rankingFetchingNextPage}
-                        imageData={searchImageData}
                     />
                 }
             </M.MainInner>
