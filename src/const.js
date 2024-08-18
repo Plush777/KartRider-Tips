@@ -267,6 +267,5 @@ export const docsSlug = {
                 }
             }
         }
-
     }
 }

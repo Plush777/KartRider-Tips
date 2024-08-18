@@ -167,7 +167,6 @@ export const RankText = styled.span`
     `}
 
 
-
     ${({ theme }) => theme.tablet`
         ${props => props.styleProp === 'gameName' && css`
             font-size: 1.125rem;

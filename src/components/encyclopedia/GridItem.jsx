@@ -5,7 +5,7 @@ import SCMinus from 'svg/ico-collapse-minus.svg';
 import SCPlus from 'svg/ico-collapse-plus.svg';
 import NoImage from "components/layout/common/NoImage";
 import useImageLoad from "hooks/useImageLoad";
-import { noImageSrc, publicImageSrc } from "const";
+import { publicImageSrc } from "const";
 
 export default function GridItem({ 
     kartItem, 
