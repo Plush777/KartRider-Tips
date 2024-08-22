@@ -1,4 +1,4 @@
-import * as R from 'style/components/ranking/RankingList.styl';
+import * as R from 'style/components/ranking/RankingList.style';
 
 export default function RankingDataContainer({ styleType, shares, useStoreCount }) {
     return(

@@ -102,6 +102,7 @@ body{
         --blue-background: #3a67ea;
         --highlight-background: #dce2f2;
         --background2-rgb: 0, 0, 0;
+        --skeleton-background: #eee;
         --green-text: #006600;
         --yellow-text: #7F6D01;
         --purple-text: #800080;
@@ -141,6 +142,7 @@ body{
         --blue-background: #2468a2;
         --highlight-background: #004d92;
         --background2-rgb: 255,255,255;
+        --skeleton-background: #333;
         --green-text: #00ffa3;
         --yellow-text: #ffa500;
         --purple-text: #C85AC8;

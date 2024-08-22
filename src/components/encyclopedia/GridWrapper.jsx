@@ -9,7 +9,7 @@ import useSearch from "hooks/useSearch";
 import SearchItem from "components/search/SearchItem";
 import useSearchDataObject from "hooks/useSearchDataObject";
 import useSearchRenderResults from "hooks/useSearchRenderResults";
-import Skeleton from "components/layout/common/Skeleton";
+import GridSkeleton from "components/layout/skeleton/Grid";
 import { useEffect, useState } from "react";
 import NoMatch from "components/search/NoMatch";
 
@@ -92,7 +92,7 @@ export default function GridWrapper({ type }) {
         if (isLoading) {
             return (
                 Array.from({ length: 10 }, (_, i) => (
-                    <Skeleton key={i} />
+                    <GridSkeleton key={i} />
                 ))
             )
         } 

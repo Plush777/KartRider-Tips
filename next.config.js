@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const CSSManglePlugin = require("css-mangle-webpack-plugin").default;
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: process.env.ANALYZE === 'true',
     openAnalyzer: false,
@@ -31,6 +33,10 @@ const nextConfig = {
                 use: ['@svgr/webpack'],
             }
         );
+
+        if (process.env.NODE_ENV === 'production') {
+            config.plugins.push(new CSSManglePlugin());
+        }
 
         return config;
     },

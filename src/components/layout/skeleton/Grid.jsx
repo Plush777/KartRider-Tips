@@ -1,6 +1,6 @@
 import * as Sk from 'style/layout/Skeleton.style';
 
-export default function Skeleton() {
+export default function Grid () {
     return (
         <Sk.Item>
             <Sk.Top className="top"/>

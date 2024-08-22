@@ -67,7 +67,7 @@ export default function RankingBoxItem({
     }
 
     return(
-        <R.RankBoxItem >
+        <R.RankBoxItem styleType={styleType}>
             <R.RankInnerBox direction="column" seq>
                 <R.RankText styleType={styleType} styleProp="number" as={tagAs}>{rank}</R.RankText>
                 {

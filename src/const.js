@@ -269,3 +269,503 @@ export const docsSlug = {
         }
     }
 }
+
+export const styles = {
+    skeleton: {
+        ranking: {
+            wrap: {
+                properties: {
+                    position: "relative",
+                    width: "calc(100% - 14px)"
+                }
+            },
+            list: {
+                properties: {
+                    display: "flex",
+                    flexDirection: "column",
+                    rowGap: '12px',
+                    paddingBottom: "70px",
+                    maxHeight: "var(--main-scroll-height)"
+                }
+            },
+            item: {
+                properties: {
+                    flex: "1",
+                    display: "flex",
+                    alignItems: "center",
+                    padding: "20px",
+                    borderRadius: "8px",
+                    backgroundColor: "var(--background5)",
+                    columnGap: "20px",
+                    maxHeight: "100px",
+                    transition: ".3s ease-in-out",
+                    transitionProperty: "background-color",
+                },
+                pseudo: {
+                    "&:last-of-type": {
+                        borderRadius: "8px 8px 0 0"
+                    }
+                },
+                mobile: {
+                    tablet: {
+                        padding: "12px",
+                        columnGap: "12px",
+                        maxHeight: "80px"
+                    }
+                }
+            },
+            innerBox: {
+                properties: {
+                    display: "flex"
+                },
+                props: {
+                    flexDirection: {
+                        column: {
+                            noSeq: {
+                                justifyContent: "center"
+                            }
+                        }
+                    },
+                    styleType: {
+                        default: {
+                            paddingLeft: "20px"
+                        }
+                    },
+                    seq: {
+                        minWidth: "32px",
+                        alignItems: "center"
+                    },
+                    type: {
+                        gameData: {
+                            alignItems: "center",
+                            columnGap: "5px"
+                        },
+                        gameDataContainer: {
+                            columnGap: "10px"
+                        }
+                    }
+                }
+            },
+            imgBox: {
+                mobile: {
+                    tablet: {
+                        width: "52px",
+                        height: "52px"
+                    },
+                    mobile: {
+                        width: "44px",
+                        height: "44px"
+                    }
+                }
+            },
+            status: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            },
+            rankText: {
+                props: {
+                    gameName: {
+                        properties: {
+                            display: "flex",
+                            alignItems: "center",
+                            paddingBottom: "10px",
+                        },
+                        props: {
+                            bottom: {
+                                paddingBottom: "5px"
+                            }
+                        }
+                    },
+                    mobile: {
+                        mobile: {
+                            gameName: {
+                                paddingLeft: "15px"
+                            }
+                        }
+                    }
+                }
+            },
+            BottomBar: {
+                properties: {
+                    position: "absolute",
+                    left: "0",
+                    bottom: "calc(40px + 20px)",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: "20px",
+                    borderRadius: "0 0 8px 8px",
+                    backgroundColor: "var(--background1)",
+                    zIndex: "990"
+                },
+                children: {
+                    rankBoxItem: {
+                        maxHeight: "70px",
+                        borderRadius: "0 0 8px 8px"
+                    }
+                },
+                mobile: {
+                    tablet: {
+                        properties: {
+                            width: "100%"
+                        }
+                    }
+                }
+            },
+            ButtonWrap: {
+                properties: {
+                    display: "flex",
+                    alignItems: "center",
+                    marginTop: "20px"
+                }
+            },
+            propsObject: {
+                imageSize: {
+                    wide: {
+                        width: '64px',
+                        height: '64px'
+                    },
+                    small: {
+                        width: '50px',
+                        height: '50px'
+                    }
+                },
+                styleType: {
+                    list : 'list',
+                    bottom: 'bottom'
+                }
+            }
+        },
+
+        card: {
+            head: {
+                properties: {
+                    marginTop: "20px"
+                },
+                mobile: {
+                    tablet: {
+                        properties: {
+                            marginTop: "12px"
+                        }
+                    }
+                }
+            },
+            bottom: {
+                properties: {
+                    marginTop: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    rowGap: "5px"
+                },
+                mobile: {
+                    1200: {
+                        properties: {
+                            flexDirection: "column",
+                            alignItems: "flex-start"
+                        }
+                    },
+                    laptop: {
+                        properties: {
+                            flexDirection: "row",
+                            rowGap: "0"
+                        }
+                    },
+                    tablet: {
+                        properties: {
+                            marginTop: "8px"
+                        }
+                    }
+                }
+            },
+            bottomDescription: {
+                properties: {
+                    display: "flex",
+                    alignItems: "center"
+                },
+                mobile: {
+                    1200: {
+                        pseudo: {
+                            "&::after": {
+                                display: "none"
+                            }
+                        }
+                    },
+                    laptop: {
+                        pseudo: {
+                            "&::after": {
+                                display: "block",
+                                margin: "0 10px"
+                            }
+                        }
+                    },
+                    tablet: {
+                        pseudo: {
+                            "&::after": {
+                                margin: "0 10px"
+                            }
+                        }
+                    }
+                },
+                pseudo: {
+                    "&::after": {
+                        content: "''",
+                        width: "1px",
+                        height: "18px",
+                        margin: "0 15px",
+                        backgroundColor: "var(--description)"
+                    }
+                },
+                time: {
+                    pseudo: {
+                        "&::after": {
+                            display: "none"
+                        }
+                    }
+                },
+            },
+            group: {
+                properties: {
+                    display: "flex",
+                    columnGap: "20px",
+                    height: "100%"
+                },
+                adjacent: {
+                    "&+&": {
+                        marginTop: "60px"
+                    }
+                }
+            },
+            item: {
+                properties: {
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                    flex: "1"
+                },
+                mobile: {
+                    laptop: {
+                        properties: {
+                            flex: "none",
+                            width: "100%",
+                            height: "auto"
+                        }
+                    }
+                }
+            },
+            thumbnailWrapper: {
+                properties: {
+                    position: "relative",
+                    display: "flex"
+                }
+            },
+            thumbnail: {
+                properties: {
+                    position: "relative",
+                    flex: "1",
+                    paddingTop: "56.19%",
+                    borderRadius: "8px",
+                    overflow: "hidden",
+                    backgroundColor: "var(--skeleton)"
+                },
+                img: {
+                    position: "absolute",
+                    left: "0",
+                    top: "0",
+                    width: "100%",
+                    height: "auto",
+                    aspectRatio: "5.339/3",
+                    borderRadius: "8px",
+                    objectFit: "cover",
+                    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.16)"
+                }
+            },
+            link: {
+                hover: {
+                    "@media (hover: hover)": {
+                        "&:hover": {
+                            "img": {
+                                transform: "scale(1.05)"
+                            }
+                        }
+                    }
+                    
+                },
+                img: {
+                    opacity: "0",
+                    visibility: "hidden",
+                    transition: ".3s ease-in-out",
+                    transitionProperty: "opacity, visibility, transform"
+                },
+                active: {
+                    "&.active": {
+                        "img, .adultWrap": {
+                            opacity: "1",
+                            visibility: "visible"
+                        }
+                    }
+                }
+            },
+            mainComponentBox: {
+                adjacent: {
+                    "&+&": {
+                        marginTop: "var(--section-gap)"
+                    }
+                }
+            },
+            mainInner: {
+                properties: {
+                    position: "relative"
+                },
+                props: {
+                    season: {
+                        properties: {
+                            height: "100%",
+                            display: "flex",
+                            flexDirection: "column"
+                        }
+                    }
+                },
+                mobile: {
+                    tablet: {
+                        props: {
+                            ranking: {
+                                properties: {
+                                    height: "475px"
+                                }
+                            },
+                            season: {
+                                properties: {
+                                    height: "170px"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            title: {
+                titleText: {
+                    properties: {
+                        position: "relative",
+                        display: "flex",
+                        alignItems: "center",
+                    },
+                    mobile: {
+                        laptop: {
+                            pseudo: {
+                                "&::before": {
+                                    width: "32px",
+                                    height: "32px",
+                                    backgroundSize: "32px"
+                                }
+                            }
+                        },
+                        tablet: {
+                            pseudo: {
+                                "&::before": {
+                                    width: "26px",
+                                    height: "26px",
+                                    backgroundSize: "26px"
+                                }
+                            }
+                        },
+                        mobile: {
+                            properties: {
+                                flexDirection: "column"
+                            }
+                        }
+                    }
+                }
+            },
+            titleBox: {
+                properties: {
+                    position: "relative",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center"
+                }
+            },
+            headTitle: {
+                properties: {
+                    display: "-webkit-box",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    maxHeight: "87px",
+                    "-webkit-line-clamp": "3",
+                    "-webkit-box-orient": "vertical",
+                }
+            },
+            rightGroup: {
+                properties: {
+                    display: "flex",
+                    alignItems: "flex-end",
+                    columnGap: "10px"
+                },
+                mobile: {
+                    mobile: {
+                        properties: {
+                            flexDirection: "column-reverse",
+                            flexWrap: "wrap",
+                            alignItems: "flex-start",
+                            marginRight: "auto",
+                            marginTop: "10px"
+                        }
+                    }
+                }
+            },
+            buttons: {
+                btnWrap: {
+                    properties: {
+                        position: "relative",
+                        height: "40px",
+                        marginTop: "30px",
+                        zIndex: "10"
+                    }
+                },
+                btnArea: {
+                    properties: {
+                        display: "flex",
+                        justifyContent: "center",
+                        width: "100%",
+                        visibility: "hidden"
+                    }
+                }
+            },
+            videoInfo: {
+                infoBox: {
+                    properties: {
+                        position: "absolute",
+                        display: "flex",
+                        justifyContent: "center",
+                        margin: "16px",
+                        height: "20px",
+                        lineHeight: "22px",
+                        padding: "0 8px",
+                        borderRadius: "6px",
+                        backgroundColor: "var(--skeleton-background)",
+                        zIndex: "100"
+                    },
+                    
+                    mobile: {
+                        tablet: {
+                            properties: {
+                                margin: "12px",
+                                height: "18px",
+                                lineHeight: "21px",
+                                borderRadius: "4px",
+                                padding: "0 6.5px"
+                            }
+                        },
+                        mobile: {
+                            properties: {
+                                margin: "12px 10px",
+                                padding: "0 5px"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -44,8 +44,8 @@ export default function RankingList ({
                                 useStoreCount={useStoreCount} 
                                 img={publicImageSrc.static.kartApp} 
                                 tagAs="div" 
-                                imageWidth={38} 
-                                imageHeight={38}
+                                imageWidth={50} 
+                                imageHeight={50}
                                 imagesIsError={imagesIsError}
                             />
                         )
@@ -59,7 +59,7 @@ export default function RankingList ({
 
                         const rankimgImages = images?.pages.map((page) => {
                             // console.log(page);
-                            return page.images[resultIndex].items.map((item) => {
+                            return page.images[resultIndex]?.items.map((item) => {
                                 return item.thumbnail;
                             })
                         })

@@ -26,17 +26,19 @@ export const RankBoxItem = styled.li`
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 20px;
-    border-radius: 8px;
+    padding: ${props => props.styleType === 'bottom' ? '10px 20px' : '20px'};
+    border-radius: ${props => props.styleType === 'bottom' ? '0 0 8px 8px' : '8px'};
     background-color: var(--background5);
     column-gap: 20px;
-    max-height: 100px;
+    max-height: ${props => props.styleType === 'bottom' ? '70px' : '100px'};
     transition: .3s ease-in-out;
     transition-property: background-color;
 
-    &:last-of-type{
-        border-radius: 8px 8px 0 0;
-    }
+    ${props => props.styleType === 'list' && css`
+        &:last-of-type{
+            border-radius: 8px 8px 0 0;
+        }
+    `}
 
     ${({ theme }) => theme.mobile`
         padding: 12px;
@@ -105,26 +107,18 @@ export const RankStatus = styled.div`
 
 export const RankText = styled.span`
     ${props => props.styleProp === 'number' && css`
-        font-size: 1.375rem;
+        font-size: ${props => props.styleType === 'bottom' ? '1.125rem' : '1.375rem'};
         color: var(--text1);
 
         &:where([data-number="1"], [data-number="2"], [data-number="3"]){
             color: var(--active);
         }
-
-        ${props => props.styleType === 'bottom' && css`
-            font-size: 1.125rem;
-        `}
     `}
 
     ${props => props.styleProp === 'status' && css`
         margin-left: 1.5px;
-        font-size: .8125rem;
+        font-size: ${props => props.styleType === 'bottom' ? '.75rem' : '.8125rem'};
         color: var(--text1);
-
-        ${props => props.styleType === 'bottom' && css`
-            font-size: .75rem;
-        `}
     `}
 
     ${props => props.styleProp === 'icon' && css`
@@ -137,33 +131,20 @@ export const RankText = styled.span`
     ${props => props.styleProp === 'gameName' && css`
         display: flex;
         align-items: center;
-        font-size: 1.25rem;
+        font-size: ${props => props.styleType === 'bottom' ? '1rem' : '1.125rem'};
         color: var(--text1);
-        padding-bottom: 10px;
+        padding-bottom: ${props => props.styleType === 'bottom' ? '5px' : '10px'};
         font-weight: 600;
-
-        ${props => props.styleType === 'bottom' && css`
-            font-size: 1rem;
-            padding-bottom: 5px;
-        `}
     `}
 
     ${props => props.styleProp === 'gameDataTitle' && css`
-        font-size: .875rem;
+        font-size: ${props => props.styleType === 'bottom' ? '.75rem' : '.875rem'};
         color: var(--description);
-
-        ${props => props.styleType === 'bottom' && css`
-            font-size: .75rem;
-        `}
     `}
 
     ${props => props.styleProp === 'gameData' && css`
-        font-size: .875rem;
+        font-size: ${props => props.styleType === 'bottom' ? '.75rem' : '.875rem'};
         color: var(--text1);
-
-        ${props => props.styleType === 'bottom' && css`
-            font-size: .75rem;
-        `}
     `}
 
 
@@ -204,8 +185,8 @@ export const BottomBar = styled.div`
 
     ${RankBoxItem}{
         max-height: 70px;
+        padding: 10px 20px;
         border-radius: 0 0 8px 8px;
-        border-radius: 0;
     }
 
     ${({ theme }) => theme.tablet`

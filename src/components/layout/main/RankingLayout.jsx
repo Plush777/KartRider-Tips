@@ -2,6 +2,7 @@ import * as M from 'style/components/main/Main.style';
 import MainTitle from 'components/title/MainTitle';
 import RankingList from 'components/ranking/RankingList';
 import VideoState from 'components/state/VideoState';
+import RankingSkeleton from "components/layout/skeleton/Ranking";
 import { lottieSrc, mainTitle } from 'const';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { fetchGameData, fetchGameImages } from 'scripts/api/ranking';
@@ -53,7 +54,7 @@ export default function RankingLayout () {
                 {rankingIsError && <VideoState type='error'/>}
                 {
                     rankingIsLoading ? 
-                    <VideoState type='loading' styleClassName='ranking'/> 
+                    <RankingSkeleton /> 
                     :
                     <RankingList 
                         ranking={ranking} 

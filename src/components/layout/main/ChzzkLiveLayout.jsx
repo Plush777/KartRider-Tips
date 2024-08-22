@@ -110,7 +110,7 @@ export default function ChzzkLiveLayout ({ sectionName }) {
                 right={
                     <Cz.RightGroup>
                         {chzzkFetched && <Cz.LastUpdate>{`마지막 업데이트: ${formattedUpdatedAt}`}</Cz.LastUpdate>}
-                        <Cz.RefetchButton 
+                        {/* <Cz.RefetchButton 
                             type="button" 
                             disabled={disabledCondition} 
                             onClick={chzzkRefetch}>
@@ -121,7 +121,7 @@ export default function ChzzkLiveLayout ({ sectionName }) {
                             <M500>
                                 <span>새로고침</span>
                             </M500>
-                        </Cz.RefetchButton>
+                        </Cz.RefetchButton> */}
                     </Cz.RightGroup>
                 }
             />

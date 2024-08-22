@@ -26,34 +26,6 @@ export const MainComponentBox = styled.section`
     &+&{
         margin-top: var(--section-gap);
     }
-
-    +[data-section-name="recentYoutube"]{
-        margin-top: calc(var(--section-gap) / 2 + 20px);
-    }
-
-    ${({ theme }) => theme.laptop`
-        +[data-section-name="recentYoutube"]{
-            margin-top: calc(var(--section-gap) / 2 - 20px);
-        }
-    `};
-
-    ${({ theme }) => theme.tablet`
-        +[data-section-name="recentYoutube"]{
-            margin-top: calc(var(--section-gap) / 2 + 20px);
-        }
-    `};
-
-    ${({ theme }) => theme.mobile`
-        +[data-section-name="recentYoutube"]{
-            margin-top: calc(var(--section-gap) / 2 + 30px);
-        }
-    `};
-
-    ${({ theme }) => theme.small`
-        +[data-section-name="recentYoutube"]{
-            margin-top: calc(var(--section-gap) / 2);
-        }
-    `};
 `
 
 export const ContainerBox = styled.article`

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import useImageTransition from 'hooks/useImageTransition';
+import useImageTransition from 'hooks/useImageTransitio';
 import VideoInfo from 'components/video/VideoInfo';
 import Adult from 'components/live/Adult';
 import { decode } from 'html-entities';
