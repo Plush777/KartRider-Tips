@@ -8,6 +8,7 @@ import { fetchRecentLists } from 'scripts/api/rssYoutube';
 import { keyArray, getRandomKey } from 'data/recent';
 import { useState } from 'react';
 import { lottieSrc, mainTitle } from 'const';
+import CardSkeleton from 'components/layout/skeleton/Card';
 
 export default function RecentYoutubeLayout ({ sectionName }) {
     let [selectKey, setSelectKey] = useState(getRandomKey(keyArray));
@@ -36,7 +37,7 @@ export default function RecentYoutubeLayout ({ sectionName }) {
 
                 {
                     isLoading ? 
-                    <VideoState type='loading'/> 
+                    <CardSkeleton/>
                     : 
                     <RecentYoutubeList data={data} isLoading={isLoading} selectKey={selectKey} setSelectKey={setSelectKey}/>
                 }

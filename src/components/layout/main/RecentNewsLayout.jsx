@@ -1,11 +1,12 @@
 import * as M from 'style/components/main/Main.style';
-import RecentNewsList from 'components/recentNews/RecentNewsList';
+import RecentNewsList from 'components/recentNews/RecentNewsLis';
 import VideoState from 'components/state/VideoState';
 import MainTitle from 'components/title/MainTitle';
 import Tab from 'components/common/Tab';
 import { lottieSrc, mainTitle } from 'const';
 import { tabArray } from 'data/news';
 import useTab from 'hooks/useTab';
+import LoadingSpinner from 'components/loading/LoadingSpinner';
 
 export default function RecentNewsLayout ({ sectionName, data, isLoading, isError }) {
     const { tabIndex, setTabIndex, loadData, setLoadData } = useTab(data, callback);
@@ -39,7 +40,7 @@ export default function RecentNewsLayout ({ sectionName, data, isLoading, isErro
 
                 {
                     isLoading ?
-                    <VideoState type='loading' height="660px"/> : <RecentNewsList tabIndex={tabIndex} data={loadData}/>
+                    <LoadingSpinner type="news"/> : <RecentNewsList tabIndex={tabIndex} data={loadData}/>
                 }
             </M.MainInner>
         </M.MainComponentBox>

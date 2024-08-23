@@ -3,6 +3,7 @@ import VideoState from 'components/state/VideoState';
 import * as M from 'style/components/main/Main.style';
 import MainTitle from 'components/title/MainTitle';
 import { lottieSrc, mainTitle } from 'const';
+import CardSkeleton from 'components/layout/skeleton/Card';
 
 export default function RecommendLayout ({ sectionName, data, isLoading, isError }) {
     const sortedVideo = data && data.sort((a,b) => {
@@ -23,7 +24,7 @@ export default function RecommendLayout ({ sectionName, data, isLoading, isError
                 
                 {
                     isLoading ? 
-                    <VideoState type='loading'/> 
+                    <CardSkeleton length={6}/>
                     : 
                     <RecommendYoutubeList data={sortedVideo} isLoading={isLoading}/>
                 }

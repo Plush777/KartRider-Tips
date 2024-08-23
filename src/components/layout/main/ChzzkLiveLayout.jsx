@@ -7,13 +7,12 @@ import * as Cz from 'style/components/main/ChzzkLive.style';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import useImageTransition from 'hooks/useImageTransition';
 import SCarrowDown from 'svg/ico-select-arrow-down.svg';
-import SCrefresh from 'svg/ico-refresh.svg';
 import MainTitle from 'components/title/MainTitle';
 import { useState } from 'react';
 import { fetchChzzkLiveLists } from 'scripts/api/chzzkLive';
 import { format } from 'date-fns';
-import { M500, Min768 } from 'components/config/MediaQuery';
 import { lottieSrc, mainTitle, message } from 'const';
+import CardSkeleton from 'components/layout/skeleton/Card';
 
 export default function ChzzkLiveLayout ({ sectionName }) {
     let [click, setClick] = useState(false);
@@ -29,8 +28,6 @@ export default function ChzzkLiveLayout ({ sectionName }) {
         hasNextPage: chzzkHasNextPage, 
         isFetchingNextPage: chzzkFetchingNextPage,
         isError: chzzkError,
-        refetch: chzzkRefetch,
-        isRefetching: chzzkRefetching,
         isFetched: chzzkFetched,
         dataUpdatedAt: chzzkUpdatedAt,
     } = useInfiniteQuery({
@@ -51,7 +48,7 @@ export default function ChzzkLiveLayout ({ sectionName }) {
     const renderMoreButton = () => {
         if (chzzk) {
             if (chzzk.pages[0].length < 3) return;
-            if (chzzkHasNextPage && !chzzkRefetching) {
+            if (chzzkHasNextPage) {
                 return (
                     <B.BtnWrap className={!chzzkLoading && !chzzkFetchingNextPage && isShow}>
                         <B.BtnArea styleProp={'outline'}>
@@ -78,25 +75,25 @@ export default function ChzzkLiveLayout ({ sectionName }) {
 
     const renderEmpty = () => {
         if (chzzk) {
-            if (chzzk.pages[0].length === 0 && !chzzkRefetching) {
+            if (chzzk.pages[0].length === 0) {
                 return <VideoState type='empty' emptyText={message.empty}/>
             }
         }
     }
 
     const renderLiveList = () => {
-        if (chzzkLoading || chzzkRefetching) {
-            return <VideoState type='loading'/>
+        if (chzzkLoading) {
+            return <CardSkeleton type="live"/>
         } 
 
         if (chzzk) {
-            if (!chzzkLoading || !chzzkRefetching && chzzk.pages[0].length > 0) {
+            if (!chzzkLoading && chzzk.pages[0].length > 0) {
                 return <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
             }
         }
     }
 
-    const disabledCondition = chzzkLoading || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false;
+    // const disabledCondition = chzzkLoading || chzzkError || chzzk && chzzk.pages[0].length === 0 ? true : false;
     const formattedUpdatedAt = format(new Date(chzzkUpdatedAt),'yyyy-MM-dd HH:mm:ss');
     const noDataCondition = click == true && chzzk && !chzzkHasNextPage;
    
@@ -110,18 +107,6 @@ export default function ChzzkLiveLayout ({ sectionName }) {
                 right={
                     <Cz.RightGroup>
                         {chzzkFetched && <Cz.LastUpdate>{`마지막 업데이트: ${formattedUpdatedAt}`}</Cz.LastUpdate>}
-                        {/* <Cz.RefetchButton 
-                            type="button" 
-                            disabled={disabledCondition} 
-                            onClick={chzzkRefetch}>
-                            <SCrefresh width="30px" height="30px" fill="var(--text1)"/>
-                            <Min768>
-                                <span className="hidden">새로고침</span> 
-                            </Min768>
-                            <M500>
-                                <span>새로고침</span>
-                            </M500>
-                        </Cz.RefetchButton> */}
                     </Cz.RightGroup>
                 }
             />
@@ -131,7 +116,7 @@ export default function ChzzkLiveLayout ({ sectionName }) {
                
                 {renderLiveList()}
 
-                {chzzkFetchingNextPage && <LoadingSpinner/>}
+                {chzzkFetchingNextPage && <LoadingSpinner type="chzzk"/>}
 
                 {renderEmpty()}
 

@@ -174,46 +174,64 @@ export const RankButtonWrap = styled.div`
 
 /* ------------- Card Component ------------- */
 
-// MainComponentBox (Main.style.js)
-export const CardBox = styled.div`
-    ${css(styles.skeleton.card.mainComponentBox.adjacent["&+&"])}
-`   
 //MainInner (Main.style.js)
 export const CardInner = styled.div`
     ${css(styles.skeleton.card.mainInner.properties)}
     ${css(styles.skeleton.card.mainInner.props.season.properties)}
-    ${css(styles.skeleton.card.mainInner.mobile.tablet.props.season.properties)}
-    ${css(styles.skeleton.card.mainInner.mobile.tablet.props.ranking.properties)}
+
+    ${({ theme }) => theme.tablet`
+        ${css(styles.skeleton.card.mainInner.mobile.tablet.props.season.properties)}
+        ${css(styles.skeleton.card.mainInner.mobile.tablet.props.ranking.properties)}
+    `};
 `
 
 export const CardHead = styled.div`
     ${css(styles.skeleton.card.head.properties)}
-    ${css(styles.skeleton.card.head.mobile.tablet.properties)}
+    width: 70%;
+    height: 29px;
+    border-radius: 4px;
+    background-color: var(--skeleton);
+
+    ${({ theme }) => theme.tablet`
+        ${css(styles.skeleton.card.head.mobile.tablet.properties)}
+    `};
 `
 
 export const CardBottom = styled.div`
     ${css(styles.skeleton.card.bottom.properties)}
-    ${css(styles.skeleton.card.bottom.mobile[1200].properties)}
-    ${css(styles.skeleton.card.bottom.mobile.laptop.properties)}
-    ${css(styles.skeleton.card.bottom.mobile.tablet.properties)}
-`   
+    width: 50%;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--skeleton);
 
-export const BottomDescription = styled.div`
-    ${css(styles.skeleton.card.bottomDescription.properties)}
-    ${css(styles.skeleton.card.bottomDescription.mobile[1200].pseudo)}
-    ${css(styles.skeleton.card.bottomDescription.mobile.laptop.pseudo)}
-    ${css(styles.skeleton.card.bottomDescription.mobile.tablet.pseudo)}
-    ${css(styles.skeleton.card.bottomDescription.time.pseudo)}
-`
+    @media screen and (max-width: 1200px) {
+        ${css(styles.skeleton.card.bottom.mobile[1200].properties)}
+    }
+
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.card.bottom.mobile.laptop.properties)}
+    `};
+    
+
+    ${({ theme }) => theme.tablet`
+        ${css(styles.skeleton.card.bottom.mobile.tablet.properties)}
+    `};
+`   
 
 export const CardGroup = styled.div`
     ${css(styles.skeleton.card.group.properties)}
     ${css(styles.skeleton.card.group.adjacent)}
+    display: ${props => props.display};
+    grid-template-columns: ${props => props.gtc};
+    row-gap: ${props => props.rg};
 `
 
 export const CardItem = styled.div`
     ${css(styles.skeleton.card.item.properties)}
-    ${css(styles.skeleton.card.item.mobile.laptop.properties)}
+
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.card.item.mobile.laptop.properties)}
+    `};
 `
 
 export const CardThumbnailWrapper = styled.div`
@@ -222,34 +240,23 @@ export const CardThumbnailWrapper = styled.div`
 
 export const CardThumbnail = styled.div`
     ${css(styles.skeleton.card.thumbnail.properties)}
-    ${css(styles.skeleton.card.thumbnail.img)}
-`
-
-export const CardLink = styled.div`
-    ${css(styles.skeleton.card.link.hover)}
-    ${css(styles.skeleton.card.link.img)}
-    ${css(styles.skeleton.card.link.active)}
 `
 
 // Title (Title.style.js)
 export const CardTitleText = styled.div`
     ${css(styles.skeleton.card.title.titleText.properties)}
-    ${css(styles.skeleton.card.title.titleText.mobile.laptop.pseudo)}
-    ${css(styles.skeleton.card.title.titleText.mobile.tablet.pseudo)}
-    ${css(styles.skeleton.card.title.titleText.mobile.mobile.properties)}
-`
+    
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.card.title.titleText.mobile.laptop.pseudo)}
+    `};
 
-export const CardTitleBox = styled.div`
-    ${css(styles.skeleton.card.titleBox.properties)}
-`
+    ${({ theme }) => theme.tablet`
+         ${css(styles.skeleton.card.title.titleText.mobile.tablet.pseudo)}
+    `};
 
-export const CardHeadTitle = styled.div`
-    ${css(styles.skeleton.card.headTitle.properties)}
-`
-
-export const CardRightGroup = styled.div`
-    ${css(styles.skeleton.card.rightGroup.properties)}
-    ${css(styles.skeleton.card.rightGroup.mobile.mobile.properties)}
+    ${({ theme }) => theme.mobile`
+        ${css(styles.skeleton.card.title.titleText.mobile.mobile.properties)}
+    `};
 `
 
 export const CardButtonWrap = styled.div`
@@ -261,9 +268,17 @@ export const CardButtonArea = styled.div`
 `
 
 export const CardVideoInfo = styled.div`
+    width: 48px;
+
     ${css(styles.skeleton.card.videoInfo.infoBox.properties)}
-    ${css(styles.skeleton.card.videoInfo.infoBox.mobile.tablet.properties)}
-    ${css(styles.skeleton.card.videoInfo.infoBox.mobile.mobile.properties)}
+   
+    ${({ theme }) => theme.tablet`
+        ${css(styles.skeleton.card.videoInfo.infoBox.mobile.tablet.properties)}
+    `};
+
+    ${({ theme }) => theme.mobile`
+        ${css(styles.skeleton.card.videoInfo.infoBox.mobile.mobile.properties)}
+    `};
 `
 
 /* ------------- //Card Component ------------- */

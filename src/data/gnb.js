@@ -13,5 +13,10 @@ export const menus = [
         id: 3,
         name: 'faq',
         path: '/docs/faq'
+    },
+    {
+        id: 4,
+        name: '카트 룸',
+        path: '/kartroom'
     }
 ];

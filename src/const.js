@@ -479,52 +479,6 @@ export const styles = {
                     }
                 }
             },
-            bottomDescription: {
-                properties: {
-                    display: "flex",
-                    alignItems: "center"
-                },
-                mobile: {
-                    1200: {
-                        pseudo: {
-                            "&::after": {
-                                display: "none"
-                            }
-                        }
-                    },
-                    laptop: {
-                        pseudo: {
-                            "&::after": {
-                                display: "block",
-                                margin: "0 10px"
-                            }
-                        }
-                    },
-                    tablet: {
-                        pseudo: {
-                            "&::after": {
-                                margin: "0 10px"
-                            }
-                        }
-                    }
-                },
-                pseudo: {
-                    "&::after": {
-                        content: "''",
-                        width: "1px",
-                        height: "18px",
-                        margin: "0 15px",
-                        backgroundColor: "var(--description)"
-                    }
-                },
-                time: {
-                    pseudo: {
-                        "&::after": {
-                            display: "none"
-                        }
-                    }
-                },
-            },
             group: {
                 properties: {
                     display: "flex",
@@ -539,10 +493,10 @@ export const styles = {
             },
             item: {
                 properties: {
+                    flex: "1",
                     display: "flex",
                     flexDirection: "column",
-                    height: "100%",
-                    flex: "1"
+                    height: "100%"
                 },
                 mobile: {
                     laptop: {
@@ -562,56 +516,10 @@ export const styles = {
             },
             thumbnail: {
                 properties: {
-                    position: "relative",
                     flex: "1",
                     paddingTop: "56.19%",
                     borderRadius: "8px",
-                    overflow: "hidden",
                     backgroundColor: "var(--skeleton)"
-                },
-                img: {
-                    position: "absolute",
-                    left: "0",
-                    top: "0",
-                    width: "100%",
-                    height: "auto",
-                    aspectRatio: "5.339/3",
-                    borderRadius: "8px",
-                    objectFit: "cover",
-                    boxShadow: "0px 1px 4px 2px rgba(0,0,0,0.16)"
-                }
-            },
-            link: {
-                hover: {
-                    "@media (hover: hover)": {
-                        "&:hover": {
-                            "img": {
-                                transform: "scale(1.05)"
-                            }
-                        }
-                    }
-                    
-                },
-                img: {
-                    opacity: "0",
-                    visibility: "hidden",
-                    transition: ".3s ease-in-out",
-                    transitionProperty: "opacity, visibility, transform"
-                },
-                active: {
-                    "&.active": {
-                        "img, .adultWrap": {
-                            opacity: "1",
-                            visibility: "visible"
-                        }
-                    }
-                }
-            },
-            mainComponentBox: {
-                adjacent: {
-                    "&+&": {
-                        marginTop: "var(--section-gap)"
-                    }
                 }
             },
             mainInner: {
@@ -678,42 +586,6 @@ export const styles = {
                     }
                 }
             },
-            titleBox: {
-                properties: {
-                    position: "relative",
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "center"
-                }
-            },
-            headTitle: {
-                properties: {
-                    display: "-webkit-box",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    maxHeight: "87px",
-                    "-webkit-line-clamp": "3",
-                    "-webkit-box-orient": "vertical",
-                }
-            },
-            rightGroup: {
-                properties: {
-                    display: "flex",
-                    alignItems: "flex-end",
-                    columnGap: "10px"
-                },
-                mobile: {
-                    mobile: {
-                        properties: {
-                            flexDirection: "column-reverse",
-                            flexWrap: "wrap",
-                            alignItems: "flex-start",
-                            marginRight: "auto",
-                            marginTop: "10px"
-                        }
-                    }
-                }
-            },
             buttons: {
                 btnWrap: {
                     properties: {
@@ -727,8 +599,7 @@ export const styles = {
                     properties: {
                         display: "flex",
                         justifyContent: "center",
-                        width: "100%",
-                        visibility: "hidden"
+                        width: "100%"
                     }
                 }
             },
@@ -740,8 +611,6 @@ export const styles = {
                         justifyContent: "center",
                         margin: "16px",
                         height: "20px",
-                        lineHeight: "22px",
-                        padding: "0 8px",
                         borderRadius: "6px",
                         backgroundColor: "var(--skeleton-background)",
                         zIndex: "100"

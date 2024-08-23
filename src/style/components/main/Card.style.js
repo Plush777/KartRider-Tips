@@ -50,9 +50,11 @@ export const BottomDescription = styled.p`
         background-color: var(--description);
     }
 
-    +time::after{
-        display: none;
-    }
+    ${props => props.as === 'time' && `
+        &::after {
+            display: none;
+        }
+    `}
 
     ${({ theme }) => theme.laptop`
         font-size: 1.125rem;

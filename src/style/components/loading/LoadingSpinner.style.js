@@ -1,19 +1,34 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 /* https://loading.io/css/ */
 
 export const Wrap = styled.div`
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ${props => props.type === "chzzk" && css`
+        margin-top: 30px;
+    `}
+
+    ${props => props.type === "news" && css`
+        padding: 24.587% 0px;
+    `}
 `
 
 export const Ring = styled.div`
     display: inline-block;
     position: relative;
-    width: 34px;
-    height: 34px;
+
+    ${props => props.type === "chzzk" && css`
+        width: 34px;
+        height: 34px;
+    `}
+
+    ${props => props.type === "news" && css`
+        width: 44px;
+        height: 44px;
+    `}
 `
 
 export const Item = styled.div`

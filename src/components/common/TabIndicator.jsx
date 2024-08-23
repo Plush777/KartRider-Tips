@@ -8,6 +8,7 @@ export const Indicator = styled.div`
     background-color: var(--title);
     transition: .3s ease-in-out;
     transition-property: transform, width;
+    transform-origin: left;
     width: ${props => props.width}px;
     transform: translateX(${props => props.left}px);
 `

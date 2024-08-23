@@ -1,9 +1,9 @@
 import * as L from "style/components/loading/LoadingSpinner.style";
 
-export default function LoadingSpinner() {
+export default function LoadingSpinner({ type }) {
     return (
-        <L.Wrap className="loadingSpinnerWrap">
-            <L.Ring>
+        <L.Wrap type={type}>
+            <L.Ring type={type}>
                 <L.Item></L.Item>
                 <L.Item></L.Item>
                 <L.Item></L.Item>

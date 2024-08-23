@@ -32,7 +32,6 @@ export default function RecentYoutubeList ({ data, isLoading }) {
                             </C.Head>
 
                             <C.Bottom>
-                                <C.BottomDescription>By&nbsp;{list.author}</C.BottomDescription>
                                 <C.BottomDescription as="time">{dateOnlyArray[index]}</C.BottomDescription>
                             </C.Bottom>
                         </C.Link>
