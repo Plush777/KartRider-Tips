@@ -21,6 +21,19 @@ export default function RecentYoutubeLayout ({ sectionName }) {
         retry: 1
     })
 
+    const renderRecentList = () => {
+        if (isLoading && !isError) return <CardSkeleton/>
+        if (isError) return <VideoState type='error'/>
+        if (!isLoading && !isError) return (
+            <RecentYoutubeList 
+                data={data} 
+                isLoading={isLoading} 
+                selectKey={selectKey} 
+                setSelectKey={setSelectKey}
+            />
+        )
+    }
+
     return(
         <M.MainComponentBox data-section-name={sectionName}>
             <MainTitle
@@ -32,15 +45,8 @@ export default function RecentYoutubeLayout ({ sectionName }) {
                 width="190px" height="36px" />}
             />
             
-            <M.MainInner minHeight="var(--mainHeightDefault)">
-                {isError && <VideoState type='error'/>}
-
-                {
-                    isLoading ? 
-                    <CardSkeleton/>
-                    : 
-                    <RecentYoutubeList data={data} isLoading={isLoading} selectKey={selectKey} setSelectKey={setSelectKey}/>
-                }
+            <M.MainInner name="recent">
+                {renderRecentList()}
             </M.MainInner>
         </M.MainComponentBox>
     )

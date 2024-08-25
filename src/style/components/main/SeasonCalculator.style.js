@@ -44,6 +44,7 @@ export const Result = styled.div`
     padding: 0 16px;
     width: 100%;
     height: 170px;
+    border-radius: 8px;
     background-color: var(--background5);
 
     ${({ theme }) => theme.tablet`

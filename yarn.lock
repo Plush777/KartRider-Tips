@@ -1104,11 +1104,6 @@
   resolved "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@img/sharp-win32-x64@0.33.3":
-  version "0.33.3"
-  resolved "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.33.3.tgz"
-  integrity sha512-viT4fUIDKnli3IfOephGnolMzhz5VaTvDRkYqtZxOMIoMQ4MrAziO7pT1nVnOt2FAm7qW5aa+CCc13aEY6Le0g==
-
 "@jridgewell/gen-mapping@^0.3.5":
   version "0.3.5"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.5.tgz"
@@ -2310,9 +2305,9 @@ css-color-keywords@^1.0.0:
   integrity sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==
 
 css-mangle-webpack-plugin@^1.0.0-alpha2:
-  version "1.0.0-alpha2"
-  resolved "https://registry.npmjs.org/css-mangle-webpack-plugin/-/css-mangle-webpack-plugin-1.0.0-alpha2.tgz"
-  integrity sha512-poI8awiHQa81BKu7gSuIbqYPbroVjZnI7Ga6YBEMLSfx0UeDjc9oYBeG/MnsZWFeU/AI7FKtZfTvboSQSv0beA==
+  version "1.0.0-alpha6"
+  resolved "https://registry.npmjs.org/css-mangle-webpack-plugin/-/css-mangle-webpack-plugin-1.0.0-alpha6.tgz"
+  integrity sha512-cK1LHKpwUixUKiW9hfTwhNHjemi/cyn3DchJtHj0OvwFQUwcjPJKzCB7/hrkM8VZFOZJL3Sy75HjJaU/HLldwQ==
 
 css-mediaquery@^0.1.2:
   version "0.1.2"

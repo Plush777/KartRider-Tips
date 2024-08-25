@@ -12,6 +12,10 @@ export const RankList = styled.ul`
     max-height: var(--main-scroll-height);
     padding-bottom: 70px;
 
+    ${({ theme }) => theme.laptop`
+        max-height: calc(var(--main-scroll-height) - 5px);
+    `};
+
     ${({ theme }) => theme.tablet`
         &::-webkit-scrollbar {
             display: none;
@@ -29,7 +33,7 @@ export const RankBoxItem = styled.li`
     padding: ${props => props.styleType === 'bottom' ? '10px 20px' : '20px'};
     border-radius: ${props => props.styleType === 'bottom' ? '0 0 8px 8px' : '8px'};
     background-color: var(--background5);
-    column-gap: 20px;
+    column-gap: 12px;
     max-height: ${props => props.styleType === 'bottom' ? '70px' : '100px'};
     transition: .3s ease-in-out;
     transition-property: background-color;
@@ -40,10 +44,9 @@ export const RankBoxItem = styled.li`
         }
     `}
 
-    ${({ theme }) => theme.mobile`
+    ${({ theme }) => theme.laptop`
         padding: 12px;
         column-gap: 12px;
-        max-height: 80px;
     `};
 `
 
@@ -66,16 +69,21 @@ export const RankInnerBox = styled.div`
         align-items: center;
     `}
 
-    ${props => props.type === 'gameData' && css`
+    ${props => props.type === 'gameData' && props.direction === 'row' && css`
         align-items: center;
         column-gap: 5px;
     `}
 
     ${props => props.type === 'gameDataContainer' && css`
+        flex-wrap: wrap;
         column-gap: 10px;
     `}
 
-    
+    ${props => props.direction === 'column' && !props.seq && css`
+        ${({ theme }) => theme.laptop`
+            padding-left: 10px;
+        `};
+    `}
 `
 
 export const RankImgBox = styled.div`
@@ -86,16 +94,6 @@ export const RankImgBox = styled.div`
     img{
         border-radius: 8px;
     }
-
-    ${({ theme }) => theme.tablet`
-        width: 52px;
-        height: 52px;
-    `};
-
-    ${({ theme }) => theme.mobile`
-        width: 44px;
-        height: 44px;
-    `};
 `
 
 export const RankStatus = styled.div`
@@ -147,17 +145,9 @@ export const RankText = styled.span`
         color: var(--text1);
     `}
 
-
-    ${({ theme }) => theme.tablet`
-        ${props => props.styleProp === 'gameName' && css`
-            font-size: 1.125rem;
-        `}
-    `};
-
     ${({ theme }) => theme.mobile`
         ${props => props.styleProp === 'gameName' && css`
             font-size: 1rem;
-            padding-left: 15px;
         `}
 
         ${props => props.styleProp === 'number' && css`
@@ -187,25 +177,19 @@ export const BottomBar = styled.div`
         max-height: 70px;
         padding: 10px 20px;
         border-radius: 0 0 8px 8px;
+
+        ${({ theme }) => theme.laptop`
+            padding: 12px;
+        `};
     }
 
     ${({ theme }) => theme.tablet`
         width: 100%;
-
-        img{
-            width: 38px;
-            height: 38px;
-        }
     `};
 
     ${({ theme }) => theme.mobile`
         .gameName{
             font-size: .875rem;
-        }
-
-        img{
-            width: 34px;
-            height: 34px;
         }
     `};
 `

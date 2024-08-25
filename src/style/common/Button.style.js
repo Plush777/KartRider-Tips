@@ -105,7 +105,7 @@ export const Button = styled.button`
         margin-top: -40px;
         bottom: 20px;
         right: 20px;
-        z-index: 100;
+        z-index: 1000;
         opacity: ${props => props.opacity};
         visibility: ${props => props.visibility};
         transition: .3s ease-in-out;
@@ -117,6 +117,12 @@ export const Button = styled.button`
             fill: var(--text1);
         }
     }
+
+    ${({ theme }) => theme.tablet`
+        ${props => props.typeProp === 'rank' && `
+            width: 100%;
+        `}
+    `};
 `
 
 export const BtnSetting = styled.button.attrs({ type: 'button' })`

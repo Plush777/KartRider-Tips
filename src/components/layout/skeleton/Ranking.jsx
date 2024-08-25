@@ -39,15 +39,8 @@ export default function Ranking() {
                                 <Sk.RankInnerBox styleType={styleType.list} direction="column">
                                     <Sk.RankText styleType={styleType.list} styleProp="gameName" />
                                         <Sk.RankInnerBox direction="row" type="gameDataContainer">
-                                            <Sk.RankInnerBox direction="row" type="gameData">
-                                                <Sk.RankText styleType={styleType.list} styleProp='gameDataTitle' />
-                                                <Sk.RankText styleType={styleType.list} styleProp='gameData' />
-                                            </Sk.RankInnerBox>
-                                            
-                                            <Sk.RankInnerBox direction="row" type="gameData">
-                                                <Sk.RankText styleType={styleType.list} styleProp='gameDataTitle' />
-                                                <Sk.RankText styleType={styleType.list} styleProp='gameData' />
-                                            </Sk.RankInnerBox>
+                                            <Sk.RankInnerBox direction="row" type="gameData" />
+                                            <Sk.RankInnerBox direction="row" type="gameData" />
                                         </Sk.RankInnerBox>
                                 </Sk.RankInnerBox>
                             </Sk.RankInnerBox>

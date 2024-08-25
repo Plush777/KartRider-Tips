@@ -28,7 +28,9 @@ export const Bottom = styled(Top)`
 /* ------------- Rank Component ------------- */
 
 export const Wrap = styled.div`
-     ${props => props.type === 'grid' && css`
+    position: relative;
+
+    ${props => props.type === 'grid' && css`
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         grid-auto-rows: 240px;
@@ -63,8 +65,8 @@ export const RankItem = styled.div`
         padding: 10px 20px;
     `}
 
-    ${({ theme }) => theme.tablet`
-        ${css(styles.skeleton.ranking.item.mobile.tablet)}
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.ranking.item.mobile.laptop)}
     `};
 `
 
@@ -72,19 +74,23 @@ export const RankInnerBox = styled.div`
     ${css(styles.skeleton.ranking.innerBox.properties)}
     flex-direction: ${props => props.direction};
 
+    ${props => props.direction === 'row' && !props.type && css`
+        flex: 1;
+    `}
+
     ${props => props.direction === 'row' && props.type === 'gameDataContainer' && css`
         min-width: 210px;
-        height: ${props => props.styleType === 'bottom' ? '15px' : '18px'};
         border-radius: 4px;
+        flex-wrap: wrap;
         ${css(styles.skeleton.ranking.innerBox.props.type.gameDataContainer)}
     `}
 
     ${props => props.direction === 'row' && props.type === 'gameData' && css`
+        height: ${props => props.styleType === 'bottom' ? '15px' : '18px'};
+        column-gap: 5px;
         background-color: var(--skeleton-background);
-    `}
-    
-    ${props => props.direction === 'row' && !props.seq && css`
-        width: 100%;
+        flex: 1;
+        border-radius: 4px;
     `}
 
     ${props => props.direction === 'row' && !props.seq && props.styleType === 'bottom' && !props.type && css`
@@ -99,9 +105,13 @@ export const RankInnerBox = styled.div`
     ${props => props.direction === 'column' && !props.seq && css`
         ${css(styles.skeleton.ranking.innerBox.props.flexDirection.column.noSeq)}
         flex: 1;
-        height: ${props => props.styleType === 'bottom' ? '100%' : '64px'};
+        height: ${props => props.styleType === 'bottom' ? '100%' : ''};
         justify-content: space-between;
         ${css(styles.skeleton.ranking.innerBox.props.styleType.default)}
+
+        ${({ theme }) => theme.laptop`
+            padding-left: 10px;
+        `};
     `}
 `
 
@@ -110,14 +120,6 @@ export const RankImgBox = styled.div`
     height: ${props => props.height};
     border-radius: 4px;
     background-color: var(--skeleton-background);
-
-    ${({ theme }) => theme.tablet`
-        ${css(styles.skeleton.ranking.imgBox.mobile.tablet)}
-    `};
-
-    ${({ theme }) => theme.mobile`
-        ${css(styles.skeleton.ranking.imgBox.mobile.mobile)}
-    `};
 `
 
 export const RankStatus = styled.div`
@@ -137,7 +139,7 @@ export const RankText = styled.div`
     `}
     
     ${props => props.styleProp === 'gameName' && css`
-        height: ${props => props.styleType === 'bottom' ? '24px' : '34px'};
+        height: ${props => props.styleType === 'bottom' ? '24px' : '32px'};
         border-radius: 4px;
         background-color: var(--skeleton-background);
 
@@ -192,6 +194,10 @@ export const CardHead = styled.div`
     border-radius: 4px;
     background-color: var(--skeleton);
 
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.card.head.mobile.laptop.properties)}
+    `};
+
     ${({ theme }) => theme.tablet`
         ${css(styles.skeleton.card.head.mobile.tablet.properties)}
     `};
@@ -216,7 +222,7 @@ export const CardBottom = styled.div`
     ${({ theme }) => theme.tablet`
         ${css(styles.skeleton.card.bottom.mobile.tablet.properties)}
     `};
-`   
+`
 
 export const CardGroup = styled.div`
     ${css(styles.skeleton.card.group.properties)}
@@ -224,6 +230,10 @@ export const CardGroup = styled.div`
     display: ${props => props.display};
     grid-template-columns: ${props => props.gtc};
     row-gap: ${props => props.rg};
+
+    ${({ theme }) => theme.laptop`
+        ${css(styles.skeleton.card.group.mobile.laptop.properties)}
+    `};
 `
 
 export const CardItem = styled.div`

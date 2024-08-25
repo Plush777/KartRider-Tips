@@ -2,8 +2,22 @@ import styled, { css } from "styled-components";
 
 export const MainInner = styled.article`
     position: relative;
-    min-height: ${props => props.minHeight};
-    height: ${props => props.height};
+
+    ${props => props.name === 'ranking' && css`
+        min-height: var(--main-scroll-height);
+    `}
+
+    ${props => props.name === 'news' && css`
+        min-height: var(--mainHeightNews);
+    `}
+
+    ${props => props.name === 'chzzk' || props.name === 'recent' && css`
+        min-height: var(--mainHeightDefault);
+    `}
+
+    ${props => props.name === 'recommend' && css`
+        min-height: var(--mainHeightWide);
+    `}
 
     ${props => props.name === 'season' && css`
         height: 100%;
@@ -12,9 +26,7 @@ export const MainInner = styled.article`
     `}
 
     ${({ theme }) => theme.tablet`
-        ${props => props.name === 'ranking' && css` 
-            height: 475px;
-        `}
+        min-height: auto;
 
         ${props => props.name === 'season' && css`
             height: 170px;

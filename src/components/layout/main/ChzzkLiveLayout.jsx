@@ -1,7 +1,7 @@
 import ChzzkLiveList from 'components/live/ChzzkLiveList';
 import VideoState from 'components/state/VideoState';
 import LoadingSpinner from 'components/loading/LoadingSpinner';
-import * as M from 'style/components/main/Main.style';
+import * as M from 'style/components/main/Main.styl';
 import * as B from 'style/common/Button.style';
 import * as Cz from 'style/components/main/ChzzkLive.style';
 import { useInfiniteQuery } from "@tanstack/react-query";
@@ -82,12 +82,12 @@ export default function ChzzkLiveLayout ({ sectionName }) {
     }
 
     const renderLiveList = () => {
-        if (chzzkLoading) {
+        if (chzzkLoading && !chzzkError) {
             return <CardSkeleton type="live"/>
         } 
 
         if (chzzk) {
-            if (!chzzkLoading && chzzk.pages[0].length > 0) {
+            if (!chzzkLoading && chzzk.pages[0].length > 0 && !chzzkError) {
                 return <ChzzkLiveList data={chzzk} loading={chzzkLoading}/>
             }
         }
@@ -111,7 +111,7 @@ export default function ChzzkLiveLayout ({ sectionName }) {
                 }
             />
            
-            <M.MainInner minHeight="var(--mainHeightDefault)">
+            <M.MainInner name="chzzk">
                 {chzzkError && <VideoState type='error'/>}
                
                 {renderLiveList()}

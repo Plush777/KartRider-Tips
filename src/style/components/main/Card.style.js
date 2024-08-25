@@ -63,6 +63,12 @@ export const BottomDescription = styled.p`
             display: block;
             margin: 0 10px;
         }
+
+        ${props => props.as === 'time' && `
+            &::after {
+                display: none;
+            }
+        `}
     `};
 
     ${({ theme }) => theme.tablet`

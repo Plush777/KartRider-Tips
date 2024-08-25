@@ -21,12 +21,14 @@ export default function RankingLayout () {
         initialPageParam: 1,
         staleTime: 900000, // 15분
         gcTime: 1800000, // 30분
-        getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
+        getNextPageParam: (lastPage, pages) => {
+            console.log(lastPage.nextCursor);
+            return lastPage.nextCursor;
+        },
     });
 
     const {
         data: images, 
-        isLoading: imagesIsLoading, 
         isError: imagesIsError, 
         fetchNextPage: imagesFetchNextPage, 
     } = useInfiniteQuery({
@@ -35,12 +37,31 @@ export default function RankingLayout () {
         initialPageParam: 1,
         staleTime: 24 * 60 * 60 * 1000, // 24시간
         cacheTime: 7 * 24 * 60 * 60 * 1000, // 7일
-        getNextPageParam: (lastPage, pages) => lastPage.nextCursor,
+        getNextPageParam: (lastPage, pages) => {
+            console.log(lastPage.nextCursor);
+            return lastPage.nextCursor;
+        },
         enabled: !!ranking
     });
 
     // console.log(ranking);
-    // console.log(images);
+    console.log(images);
+
+    const renderRankLingList = () => {
+        if (rankingIsLoading && !rankingIsError) return <RankingSkeleton />;
+        if (rankingIsError) return <VideoState type='error'/>;
+        if (!rankingIsLoading && !rankingIsError) return (
+            <RankingList 
+                ranking={ranking} 
+                rankingFetchNextPage={rankingFetchNextPage}
+                rankingHasNextPage={rankingHasNextPage}
+                rankingFetchingNextPage={rankingFetchingNextPage}
+                images={images}
+                imagesFetchNextPage={imagesFetchNextPage}
+                imageIsError={imagesIsError}
+            />
+        )
+    }
 
     return(
         <M.ContainerBox>
@@ -50,22 +71,8 @@ export default function RankingLayout () {
                 title={mainTitle.rank}
                 marginBottom="20px"
             />
-            <M.MainInner name="ranking" minHeight="var(--main-scroll-height)">
-                {rankingIsError && <VideoState type='error'/>}
-                {
-                    rankingIsLoading ? 
-                    <RankingSkeleton /> 
-                    :
-                    <RankingList 
-                        ranking={ranking} 
-                        rankingFetchNextPage={rankingFetchNextPage}
-                        rankingHasNextPage={rankingHasNextPage}
-                        rankingFetchingNextPage={rankingFetchingNextPage}
-                        images={images}
-                        imagesFetchNextPage={imagesFetchNextPage}
-                        imageIsError={imagesIsError}
-                    />
-                }
+            <M.MainInner name="ranking">
+                {renderRankLingList()}
             </M.MainInner>
         </M.ContainerBox>
     )

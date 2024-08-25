@@ -307,10 +307,9 @@ export const styles = {
                     }
                 },
                 mobile: {
-                    tablet: {
+                    laptop: {
                         padding: "12px",
-                        columnGap: "12px",
-                        maxHeight: "80px"
+                        columnGap: "12px"
                     }
                 }
             },
@@ -346,18 +345,6 @@ export const styles = {
                     }
                 }
             },
-            imgBox: {
-                mobile: {
-                    tablet: {
-                        width: "52px",
-                        height: "52px"
-                    },
-                    mobile: {
-                        width: "44px",
-                        height: "44px"
-                    }
-                }
-            },
             status: {
                 display: "flex",
                 alignItems: "center",
@@ -369,11 +356,11 @@ export const styles = {
                         properties: {
                             display: "flex",
                             alignItems: "center",
-                            paddingBottom: "10px",
+                            marginBottom: "10px",
                         },
                         props: {
                             bottom: {
-                                paddingBottom: "5px"
+                                marginBottom: "5px"
                             }
                         }
                     },
@@ -432,7 +419,7 @@ export const styles = {
                     }
                 },
                 styleType: {
-                    list : 'list',
+                    list: 'list',
                     bottom: 'bottom'
                 }
             }
@@ -444,6 +431,11 @@ export const styles = {
                     marginTop: "20px"
                 },
                 mobile: {
+                    laptop: {
+                        properties: {
+                            height: "27px"
+                        }
+                    },
                     tablet: {
                         properties: {
                             marginTop: "12px"
@@ -468,6 +460,7 @@ export const styles = {
                     },
                     laptop: {
                         properties: {
+                            height: "22px",
                             flexDirection: "row",
                             rowGap: "0"
                         }
@@ -488,6 +481,15 @@ export const styles = {
                 adjacent: {
                     "&+&": {
                         marginTop: "60px"
+                    }
+                },
+                mobile: {
+                    laptop: {
+                        properties: {
+                            flexDirection: "column",
+                            rowGap: "40px",
+                            gridTemplateColumns: "1fr"
+                        }
                     }
                 }
             },
@@ -615,7 +617,7 @@ export const styles = {
                         backgroundColor: "var(--skeleton-background)",
                         zIndex: "100"
                     },
-                    
+
                     mobile: {
                         tablet: {
                             properties: {

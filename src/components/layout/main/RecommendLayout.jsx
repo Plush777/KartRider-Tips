@@ -19,7 +19,7 @@ export default function RecommendLayout ({ sectionName, data, isLoading, isError
                 marginBottom="20px"
             />
             
-            <M.MainInner minHeight="var(--mainHeightWide)">
+            <M.MainInner name="recommend">
                 {isError && <VideoState type='error'/>}
                 
                 {

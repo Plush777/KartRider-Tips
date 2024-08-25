@@ -64,7 +64,7 @@ body{
     --section-gap: 150px;
     --dimmed: rgba(0, 0, 0, 0.3);
     --live: #eb0400;
-    --main-scroll-height: 500px;
+    --main-scroll-height: 560px;
     --sidebar-summary-padding-left: 30px;
     --sidebar-details-height: 50px;
     --sidebar-item-text-underline-offset: 2px;

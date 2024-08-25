@@ -1,5 +1,5 @@
 import * as M from 'style/components/main/Main.style';
-import RecentNewsList from 'components/recentNews/RecentNewsLis';
+import RecentNewsList from 'components/recentNews/RecentNewsList';
 import VideoState from 'components/state/VideoState';
 import MainTitle from 'components/title/MainTitle';
 import Tab from 'components/common/Tab';
@@ -24,6 +24,14 @@ export default function RecentNewsLayout ({ sectionName, data, isLoading, isErro
         }
     }
 
+    const renderRecentNewsList = () => {
+        if (isLoading && !isError) return <LoadingSpinner type="news"/>;
+        if (isError) return <VideoState type='error'/>;
+        if (!isLoading && !isError) return (
+            <RecentNewsList tabIndex={tabIndex} data={loadData}/>
+        )
+    }
+
     return(
         <M.MainComponentBox data-section-name={sectionName}>
             <MainTitle
@@ -35,13 +43,8 @@ export default function RecentNewsLayout ({ sectionName, data, isLoading, isErro
 
             <Tab indicator={true} tabIndex={tabIndex} setTabIndex={setTabIndex} data={tabArray} styleProps="main"/>
 
-            <M.MainInner minHeight="var(--mainHeightNews)">
-                {isError && <VideoState type='error'/>}
-
-                {
-                    isLoading ?
-                    <LoadingSpinner type="news"/> : <RecentNewsList tabIndex={tabIndex} data={loadData}/>
-                }
+            <M.MainInner name="news">
+                {renderRecentNewsList()}
             </M.MainInner>
         </M.MainComponentBox>
     )
