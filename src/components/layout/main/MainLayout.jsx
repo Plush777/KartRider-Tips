@@ -1,3 +1,5 @@
+'use client';
+
 import ChzzkLiveLayout from 'components/layout/main/ChzzkLiveLayout'; 
 import RecentYoutubeLayout from 'components/layout/main/RecentYoutubeLayout';
 import RecommendLayout from 'components/layout/main/RecommendLayout';

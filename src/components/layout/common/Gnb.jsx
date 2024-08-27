@@ -1,5 +1,3 @@
-'use client';
-
 import * as G from "style/components/header/Gnb.style";
 import { menus } from "data/gnb";
 import Link from "next/link";

@@ -1,3 +1,5 @@
+"use client";
+
 import RecentYoutubeList from 'components/recentYoutube/RecentYoutubeList';
 import VideoState from 'components/state/VideoState';
 import * as M from 'style/components/main/Main.style';

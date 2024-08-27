@@ -1,21 +1,21 @@
 import ReactQueryProvider from 'providers/ReactQueryProvider';
 import ThemeProvider from 'providers/ThemeProvider';
-import HydrationProvider from 'providers/HydrationProvider';
 import GlobalProvider from 'providers/GlobalProvider';
 import AnalyticsProvider from 'providers/AnalyticsProvider';
 import Recoil from 'components/config/Recoil';
+import StyledComponentsRegistry from 'lib/registry';
 
 export default function ContextProvider({ children }) {
     return(
         <ReactQueryProvider> 
             <Recoil>
-                <HydrationProvider>
+                <StyledComponentsRegistry>
                     <ThemeProvider>
                         <AnalyticsProvider/>
                         <GlobalProvider/>
                         {children}
                     </ThemeProvider>
-                </HydrationProvider>
+                </StyledComponentsRegistry>
             </Recoil>
         </ReactQueryProvider>
     )

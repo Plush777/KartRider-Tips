@@ -29,9 +29,17 @@ const nextConfig = {
         config.module.rules.push(
             {
                 test: /\.svg$/i,
-                issuer: /\.[jt]sx?$/,
                 use: ['@svgr/webpack'],
-            }
+            },
+            // {
+            //     test: /\.(wav)$/,
+            //     use: {
+            //         loader: "file-loader",
+            //         options: {
+            //             name: "[name].[ext]",
+            //         }
+            //     }
+            // }
         );
 
         if (process.env.NODE_ENV === 'production') {

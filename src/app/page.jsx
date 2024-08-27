@@ -1,9 +1,13 @@
-import Main from 'components/pages/Main';
+import Header from 'components/wrapper/Header';
+import Main from "components/pages/Main";
+import Footer from 'components/layout/common/Footer';
 
-export const metadata = {
-    title: 'Kartrider Tips'
-}
-
-export default async function Home() {
-    return <Main/>
+export default function Home() {
+    return (
+        <>
+            <Header />
+            <Main/>
+            <Footer/>
+        </>
+    )
 }

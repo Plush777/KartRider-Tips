@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState } from "react";
 import CenterStart from "components/intro/CenterStart";
 import HeaderBackground from "components/intro/HeaderBackground";

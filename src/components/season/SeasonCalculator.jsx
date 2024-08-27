@@ -1,9 +1,10 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import { itemScore, speedScore, mode, findNextMp, renderItemIcon, renderSpeedIcon } from "data/season";
 import ToggleSelector from "components/common/ToggleSelector";
 import MainTitle from 'components/title/MainTitle';
 import { lottieSrc, mainTitle } from "const";
-import Image from "next/image";
 import * as S from "style/components/main/SeasonCalculator.style";
 
 export default function SeasonCalculator() {

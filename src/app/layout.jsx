@@ -1,8 +1,8 @@
 import ContextProvider from 'providers/ContextProvider';
-import BeforeThemeRender from 'providers/BeforeThemeRender';
-import DocumentScrollProvider from 'providers/DocumentScrollProvider';
+// import BeforeThemeRender from 'providers/BeforeThemeRender';
+// import DocumentScrollProvider from 'providers/DocumentScrollProvider';
 import localFont from "next/font/local";
-import KakaoShare from 'components/config/KakaoShare';
+// import KakaoShare from 'components/config/KakaoShare';
 import { meta } from "const";
 
 const NexonLv1 = localFont({ 
@@ -71,12 +71,12 @@ export default function RootLayout({ children }) {
             <body suppressHydrationWarning className={`${NexonLv1.className}`}>
                 <ContextProvider>
                     {children}
-                    <DocumentScrollProvider/>
+                    {/* <DocumentScrollProvider/> */}
                     <div id="modalRoot" style={{ 'pointerEvents': 'none' }}></div>
                 </ContextProvider>
-                <BeforeThemeRender/>
+                {/* <BeforeThemeRender/> */}
             </body>
-            <KakaoShare />
+            {/* <KakaoShare /> */}
         </html>
     );
 }

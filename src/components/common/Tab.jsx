@@ -1,3 +1,5 @@
+"use client";
+
 import * as T from "style/common/Tab.style";
 import TabIndicator from "./TabIndicator";
 import { useEffect } from "react";
